@@ -1,0 +1,269 @@
+\documentclass[11pt]{book}
+%%%%%% COMPILE MODE TOGGLE %%%%%%
+\newif\ifcompilelabels
+\compilelabelstrue% ← flip to \compilelabelstrue when ready
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifcompilelabels
+  % Normal behavior — do nothing
+\else
+  \renewcommand{\label}[1]{}
+  \renewcommand{\ref}[1]{[??]}
+  \renewcommand{\pageref}[1]{[p??]}
+  \renewcommand{\eqref}[1]{(??)}
+\fi
+%Packages
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathrsfs} % For \mathscr
+\usepackage{mathtools}
+\usepackage{bbm} 
+\usepackage{enumitem}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage{longtable,booktabs,array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % For wrapped columns
+% Basic Theorem Styles
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition} % Added for consistency if needed later
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{note}[theorem]{Note} % Added for consistency
+% === Macro Rationalization Policy ===
+% We preserve symbolic integrity without over-customization.
+% Macros reflect meaningful constructs only if non-trivial.
+% Verbose symbolic macro labels (e.g., \Energy) are now trimmed.
+% Classical operators are no longer redefined unless used with extended semantics.
+% =====================================
+% Math Operators
+% We are not hiding classical theorems behind renamed macros—Principia Symbolica builds a fresh, observer-relative symbolic scaffold, while explicitly preserving the interpretive integrity of foundational math.  \DeclareMathOperator{}{} commands are welcomed and promising avenues for collaborators, though are intentioally omitted here for the integrity of symbolic originality.
+
+% Custom Command
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\catS}{\mathscr{S}} % Category S
+\newcommand{\colim}{\varinjlim}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\vecD}{\vec{D}} % Proto-drift field symbol
+\usepackage{amsmath, amssymb, amsthm, mathrsfs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{float}
+\geometry{margin=1in}
+\usepackage{setspace}
+\usepackage{titlesec}
+%==============================================
+% Optional Euler Script Toggle for \mathcal
+% Uncomment the following lines for fancy symbols:
+% \usepackage[mathcal]{euscript}
+% \renewcommand{\mathcal}{\EuScript}
+%==============================================
+% Define abstract environment for use in non-article classes
+\usepackage{etoolbox}
+\usepackage[most]{tcolorbox}
+\tcbset{colback=gray!5!white, colframe=black, boxrule=0.4pt, arc=1.5mm, boxsep=4pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\newenvironment{abstract}
+  {\par\medskip\noindent\textbf{Abstract.}\hspace*{1em}}
+  {\par\medskip}
+\title{Principia Symbolica}
+\author{Paul Tiffany}
+\date{\today}
+\input{toggles.tex}
+\input{structuro.tex}
+\newtheorem{propositio}{Propositio}[chapter]
+% Define scholium environment (used in multiple files)
+\theoremstyle{remark} % Or \theoremstyle{plain} or another appropriate style
+\newtheorem*{scholium}{Scholium} % Unnumbered scholium
+%========================
+% Define demonstratio environment (used in multiple files)
+%========================
+%    TOGGLE THIS to choose your flavor:
+% 1. Minimal Flair (classic theorem style)
+% 2. Maximal Flair (conceptually curved box)
+% === MINIMAL FLAIR ===
+% Use classic plain theoremstyle — this works without error
+\theoremstyle{plain} % 'proof' style doesn't exist in amsthm
+\newtheorem*{demonstratio}{Demonstratio} % Unnumbered demonstration
+\theoremstyle{remark}
+% === MAXIMAL FLAIR ===
+% For symbolic curvature: custom visual demonstratio block
+% Uncomment below if you want conceptual visual alignment instead:
+
+% \tcbuselibrary{theorems}
+% \tcbuselibrary{skins, breakable}
+% \newtcolorbox{demonstratio}[1][]{enhanced, breakable,
+%   colback=white,
+%   colframe=gray!60!black,
+%   coltitle=black,
+%   title=Demonstratio,
+%   sharp corners=south,
+%   arc=4mm,
+%   boxrule=0.4pt,
+%   left=6pt, right=6pt, top=6pt, bottom=6pt,
+%   fonttitle=\bfseries,
+%   #1
+% }
+% Define scite command placeholder (used in Books VII, VIII, IX)
+% Replace with actual citation mechanism if needed (e.g., using biblatex)
+\newcommand{\scite}[1]{} % Simple placeholder, does nothing visually
+% Book I
+\newcommand{\Horizon}{\mathcal{H}}
+% Book II
+\newcommand{\Ord}{\mathsf{Ord}} % Class of ordinals
+% Custom Commands
+% Book III
+\newcommand{\Membrane}{\mathscr{M}} % Symbolic Membrane (stabilized structure)
+\newcommand{\CompressedRelation}{\sigma} % Compressed Relational Structure (Symbol)
+\newcommand{\ConceptualBridge}{\Sigma} % Conceptual Bridge
+\newcommand{\Network}{\mathcal{N}} % Emergent Network of Symbolic Relations
+\newcommand{\Metabolism}{\mathcal{M}_{\mathrm{meta}}} % Symbolic Metabolism (Flow under Drift)
+\newcommand{\MembraneToSymbol}{\Sigma_{\mathscr{M} \to \sigma}}
+\newcommand{\SymbolToBridge}{\Sigma_{\sigma \to \Sigma}}
+\newcommand{\BridgeToNetwork}{\Sigma_{\Sigma \to \mathcal{N}}}
+\newcommand{\NetworkToMetabolism}{\Sigma_{\mathcal{N} \to \mathcal{M}_{\mathrm{meta}}}}
+% Book IV
+\newcommand{\Identity}{\mathscr{C}} % Symbolic Identity
+\newcommand{\EmergentIdentity}{\mathscr{C}_{\mathrm{em}}} % Emergent Symbolic Identity
+\newcommand{\FuzzySubspace}{\mathscr{U}} % Fuzzy Subspace
+\newcommand{\PreservationRate}{\rho_{\mathrm{pres}}} % Identity Preservation Rate
+\newcommand{\MembraneToIdentity}{\Sigma_{\mathscr{M} \to \mathscr{C}}}
+\newcommand{\IdentityToEmergence}{\Sigma_{\mathscr{C} \to \mathscr{C}_{\mathrm{em}}}}
+\newcommand{\EmergenceToFuzzy}{\Sigma_{\mathscr{C}_{\mathrm{em}} \to \mathscr{U}}}
+\newcommand{\FuzzyToPersistence}{\Sigma_{\mathscr{U} \to \rho_{\mathrm{pres}}}}
+% Book V
+\newcommand{\symb}{\mathrm{symb}} % Symbolic norm space indicator
+\newcommand{\Energy}{\mathcal{E}_{\symb}} % Symbolic Energy
+\newcommand{\FreeEnergy}{\mathcal{F}_{\symb}} % Symbolic Free Energy
+\newcommand{\Viability}{\mathcal{V}_{\symb}} % Symbolic Viability Domain
+\newcommand{\IdentityToMetabolism}{\Sigma_{\mathscr{C} \to \mathcal{M}_{\mathrm{meta}}}}
+\newcommand{\MetabolismToEnergy}{\Sigma_{\mathcal{M}_{\mathrm{meta}} \to \mathcal{E}_{\symb}}}
+\newcommand{\EnergyToFreeEnergy}{\Sigma_{\mathcal{E}_{\symb} \to \mathcal{F}_{\symb}}}
+\newcommand{\FreeEnergyToViability}{\Sigma_{\mathcal{F}_{\symb} \to \mathcal{V}_{\symb}}}
+\newcommand{\Drift}{\mathscr{D}}
+\newcommand{\Reflect}{\mathscr{R}}
+\newcommand{\Op}{\mathcal{O}p} % Symbolic Operator Space
+\newcommand{\Fproc}{\mathcal{F}_{\text{proc}}} % Process Free Energy
+\newcommand{\Ecost}{\mathcal{E}_{\text{cost}}} % Energy Cost
+\newcommand{\Eeff}{\mathcal{E}_{\text{eff}}} % Energy Efficiency
+\newcommand{\Cohint}{\mathcal{C}_{\text{hint}}} % Coherence Integration
+\newcommand{\MC}{\mathcal{C}_{\text{meta}}} % Metabolic Capacity
+\newcommand{\Vsymb}{\mathcal{V}_{\symb}} % Symbolic Viability
+\newcommand{\Vop}{\mathcal{V}_{\text{op}}} % Viable Operators
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+% Book VI
+\newcommand{\Mutation}{\mu} % Symbolic Mutation Operator
+\newcommand{\MutationThreshold}{\theta_{\mathrm{mut}}} % Mutation Threshold
+\newcommand{\Bifurcation}{\beta_{\symb}} % Symbolic Bifurcation
+\newcommand{\AdaptiveRecombination}{\mathcal{R}_{\mathrm{adapt}}} % Adaptive Recombination Operator
+\newcommand{\MutationRate}{\rho_{\mathrm{mut}}} % Symbolic Mutation Rate
+\newcommand{\MetabolismToMutation}{\Sigma_{\mathcal{M}_{\mathrm{meta}} \to \mu}}
+\newcommand{\MutationToBifurcation}{\Sigma_{\mu \to \beta_{\symb}}}
+\newcommand{\BifurcationToRecombination}{\Sigma_{\beta_{\symb} \to \mathcal{R}_{\mathrm{adapt}}}}
+\newcommand{\RecombinationToNewIdentity}{\Sigma_{\mathcal{R}_{\mathrm{adapt}} \to \mathscr{C}_{\mathrm{new}}}}
+% Book VII
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Mt}{\tilde{\mathcal{M}}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\gt}{\tilde{\mathfrak{g}}} % Metric on M-tilde
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Dt}{\tilde{\mathcal{D}}}
+\newcommand{\Rt}{\tilde{\mathcal{R}}}
+\newcommand{\Obs}{\mathrm{Obs}} % Or \text{Obs}
+\newcommand{\Ft}{\tilde{\mathcal{F}}_S}
+\newcommand{\Ss}{\mathcal{S}_S}
+\newcommand{\St}{\tilde{\mathcal{S}}_S}
+\newcommand{\Es}{\mathcal{E}_S}
+\newcommand{\Et}{\tilde{\mathcal{E}}_S}
+\newcommand{\Ic}{\mathcal{I}_c}
+\newcommand{\Itc}{\tilde{\mathcal{I}}_c} % Observer-relative convergent identity
+\newcommand{\epsO}{\epsilon_{\Obs}}
+\newcommand{\prob}{\mathcal{P}} % Space of probability densities
+\newcommand{\dataY}{\mathbf{y}} % Observed data vector
+\newcommand{\dataX}{\mathbf{X}} % Feature matrix
+\newcommand{\modelF}{f} % Model function
+\newcommand{\ProbDist}[1]{\mathrm{Pr}(#1)} % Probability distribution
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\manifold}{\mathcal{M}}
+\newcommand{\drift}{D}
+\newcommand{\reflect}{R}
+\newcommand{\identity}{I_c} % Convergent Identity
+\newcommand{\freeenergy}{F_S}
+\newcommand{\entropy}{S_S}
+\newcommand{\energy}{E_S}
+\newcommand{\temperature}{T_S}
+\newcommand{\probspace}{\mathcal{P}} % Space of probability densities
+\newcommand{\viabilitydomain}{\mathcal{V}_{\symb}}
+\newcommand{\metric}{g}
+\newcommand{\vol}{d\mu_{\metric}}
+\newcommand{\wass}[1]{W_2^{(#1)}}
+\newcommand{\recipdomain}{\mathcal{X}} % Reciprocity Domain
+% Book VIII
+\newcommand{\identitystability}{\ensuremath{\mathcal{S}_{\mathscr{I}}}} % Symbolic Stability of Identity
+\newcommand{\loss}{\mathcal{L}}
+% Book IX
+% === Agent and Symbolic System Macros ===
+\newcommand{\AgentA}{\mathcal{A}}
+\newcommand{\AgentB}{\mathcal{B}}
+\newcommand{\Street}{\mathcal{S}}
+\newcommand{\tauAB}{\tau_{\mathcal{A}\mathcal{B}}}
+\newcommand{\tauBA}{\tau_{\mathcal{B}\mathcal{A}}}
+\newcommand{\kappaAB}{\kappa_{\mathcal{A}\mathcal{B}}}
+\newcommand{\epsilonO}{\epsilon_{\mathcal{O}}}
+\newcommand{\tildeM}{\tilde{\mathcal{M}}}
+\newcommand{\freeenergymin}{F_{S,\min}^{*}}
+\newcommand{\deltasym}{d_{\text{symb}}}
+\begin{document}
+\maketitle
+\tableofcontents
+\input{operatio} % Contains \chapter*{Operatio} and \addcontentsline
+\chapter{Book I — De Origine Driftus}
+\input{book1} % Contains content starting with \section{Axiomata Prima}
+\chapter*{Scholium Symbolicum}
+\input{scholium_symbolicum} % Grounding mirros abstracion
+\chapter{Book II — De Thermodynamica Symbolica}
+\input{book2} % Contains content starting with \section*{Axiomata}
+\chapter{Book III — De Symbiosi Symbolica}
+\input{book3} % Contains content starting with \section*{Definitiones Tertiae}
+\chapter{Book IV — De Identitate Symbolica et Emergentia}
+\input{book4} % Contains content starting with \section*{Definitiones Quartae}
+\chapter{Book V — De Vita Symbolica}
+\input{book5} % Contains content starting with \section*{Definitiones Quintae}
+\chapter{Book VI — De Mutatione Symbolica}
+\input{book6} % Contains content starting with \section*{Definitiones Sextae}
+\chapter{Book VII — De Convergentia Symbolica}
+\input{book7} % Contains content starting with \section*{Axiomata Septima}
+\chapter{Book VIII — De Projectione Symbolica}
+\input{book8} % Contains content starting with \section*{Axiomata Octava}
+\chapter{Book IX — De Libertate Cognitiva}
+\input{book9} % Contains content starting with \section*{Axiomata Nona}
+\cleardoublepage
+\input{executio} % Executio remains a final reflection chapter, *not* an appendix
+%
+\appendix
+%
+\input{appendix_symbol_dictionary}
+%
+\input{appendix_symbolic_reflexive_validation}
+%
+\input{appendix_dual_horizon}
+%
+\input{appendix_symbolic_framing}
+%
+\input{appendix_abstracts}
+\bibliographystyle{plainnat}  % or 'unsrt', 'alpha', 'apalike', etc.
+\bibliography{references}
+\end{document}

@@ -1,0 +1,54 @@
+\section*{Trace 4: Symbolic Flow Coherence}
+\label{section:trace4_symbolic_flow_coherence}
+
+\begin{figure}[htbp]
+\centering
+\caption[\textit{SRV trace (summary)}]{\textit{This SRV trace simulates symbolic behavior structurally consistent with Axiom~, Definition~, and Lemma~, showing coherent symbolic flow across drift and reflection regimes.}}
+\label{figure:trace4_flow_coherence_summary}
+\end{figure}
+
+\subsection*{1 Objective}
+\label{subsection:trace4_objective}
+
+Investigate how symbolic flow coherence evolves across varying $L^p$ norms in a high-dimensional setting, analyzing residual trends and coefficient sparsity. This trace probes the emergence of coherent symbolic structure under dimensional expansion.
+
+\subsection*{2 Validation Setup}
+\label{subsection:trace4_validation_setup}
+
+Synthetic data was generated from a sparse linear signal in $d = 20$ dimensions. Regression models were trained across a sweep of $p \in \{1.0, 1.2, \ldots, 2.0\}$ norms, minimizing the $L^p$ loss function.
+
+Metrics Recorded:
+\begin{itemize}
+    \item \textbf{Residual Error:} Sum of absolute prediction deviations.
+    \item \textbf{Sparsity:} Number of nonzero coefficients (thresholded by magnitude).
+\end{itemize}
+
+\subsection*{3 Symbolic Responses}
+\label{subsection:trace4_symbolic_responses}
+
+\begin{itemize}
+    \item Residual error increased gradually with $p$, flattening near $p = 1.8$.
+    \item Coefficient sparsity decreased steadily as $p$ increased, indicating broader but less resilient symbolic support.
+\end{itemize}
+
+\subsection*{4 Observations}
+\label{subsection:trace4_observations}
+
+Lower $p$ norms (closer to L1) favored sparser, more resilient symbolic flows — concentrating coherence along narrow emergent structures. Higher $p$ norms diffused symbolic flow across broader but less robust dimensions, corresponding to increased symbolic entropy.
+
+The transition from sparse to diffuse support was smooth, indicating a probabilistic symbolic drift rather than a sharp phase shift.
+
+\subsection*{5 Conclusion}
+\label{subsection:trace4_conclusion}
+
+Symbolic flow coherence emerges through dimensional refinement under reflective drift regulation. Lower $p$ regimes consolidate symbolic structures into sparse, resilient flows, while higher $p$ regimes admit broader but more fragile symbolic expansions.
+
+\subsection*{6 Theory Linkage}
+\label{subsection:trace4_theory_linkage}
+
+This SRV trace supports:
+\begin{itemize}
+    \item \textbf{Axiom II.6:} Parameterization under stabilized curvature (Book II — De Stabilitate Driftus).
+    \item \textbf{Theorem 7.1:} Reflective Convergence to Stable Identity (reflective dynamics stabilize symbolic flows).
+    \item \textbf{Corollary 7.3:} Stability-Innovation Equilibrium (balance between sparse innovation and reflective coherence).
+\end{itemize}
