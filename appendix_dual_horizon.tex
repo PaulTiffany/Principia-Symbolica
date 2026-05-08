@@ -1,5 +1,7 @@
 \clearpage
+\phantomsection
 \chapter*{Appendix C: Dual Horizon – A Formal Proof by Elimination}
+\label{sec:appC_dual_horizon}
 \addcontentsline{toc}{chapter}{Appendix C: Dual Horizon – A Formal Proof by Elimination}
 This appendix presents a formal philosophical proof, by elimination, for the necessary existence of a Dual Horizon structure in any symbolic system capable of sustained coherence, evolution, and bounded observation, as defined within Principia Symbolica. We contend that the very possibility of a symbolic system maintaining identity while undergoing change (Drift, \(\drift\)) and achieving internal consistency (Reflection, \(\reflect\)) within the purview of a Bounded Observer (\(\Obs\)) mandates an underlying dynamic interplay equivalent to operating at the interface of a generative horizon and a dissipative/constraining horizon.
 \subsection*{C.0.1 Methodological and Logical Framework} \label{subsec:appC_methodological_logical_framework}
@@ -15,7 +17,7 @@ Our aim is not to derive new mathematical theorems from PS here, but to demonstr
 \section{Formal Statement of the Dual Horizon Thesis} \label{sec:appC_formal_statement_dual_horizon_thesis}
 \begin{proposition}[The Dual Horizon Necessity Thesis]
 \label{proposition:appC_dual_horizon_necessity}
-Let \(\mathcal{S} = (M, g, D, R, \rho)\) be any symbolic system that exhibits:
+Let \(\mathcal{S} = (M, g, D, R, \rho)\) be any symbolic system (cf.~\ref{definition:bk1_symbolic_manifold}) that exhibits:
 \begin{enumerate}[label=(\alph*)]
     \item \textbf{Persistent Identity:} The capacity to maintain a recognizable, coherent symbolic identity (\(\identity\)) over symbolic time, despite internal or external perturbations.
     \item \textbf{Evolutionary Dynamics:} The capacity to undergo change, incorporate novelty, and adapt (i.e., it is subject to non-trivial Drift, \(\drift\)).
@@ -72,10 +74,10 @@ Specifically:
 \begin{itemize}
     \item Implication B.2.2 (Inability to Evolve or Adapt) contradicts Premise (b) (Evolutionary Dynamics). A system without a source of variation cannot evolve.
     \item Implication B.2.1 (Staticity/Collapse) also challenges Premise (b), as a system collapsed to a trivial state is not undergoing meaningful evolution.
-    \item Fundamentally, PS defines Drift (\(\drift\)) as a primordial aspect of symbolic systems (Axiom 1.1.1 "Existence is not" implies change/drift as fundamental to becoming). A system without effective Drift is not a complete symbolic system as per PS.
+    \item Fundamentally, PS defines Drift (\(\drift\)) as a primordial aspect of symbolic systems (Ax.~\ref{axiom:bk1_axiomata_prima}, "Existence is not," implies change/drift as fundamental to becoming). A system without effective Drift is not a complete symbolic system as per PS.
 \end{itemize}
 Thus, a symbolic system satisfying the conditions of Proposition  cannot operate solely under a Constraining/Dissipative Horizon-Effect. Case B leads to contradiction.
-\subsection{Elimination.3 Case C: Neither Generative nor Constraining/Dissipative Horizon-Effect} \label{subsec:appC_case_c_neither_generative_nor_constraining_dissipative}
+\subsection[Elimination.3 Case C: Neither Horizon-Effect]{Elimination.3 Case C: Neither Generative nor Constraining/Dissipative Horizon-Effect} \label{subsec:appC_case_c_neither_generative_nor_constraining_dissipative}
 \textbf{C.1. Definition of Case C:} The symbolic system \(\mathcal{S}\) lacks any discernible, structured generative dynamics (no consistent source of novelty or differentiation) AND any discernible, structured constraining/dissipative dynamics (no consistent mechanism for coherence, stabilization, or integration). The system might exhibit random fluctuations but without the directedness of Drift or the ordering influence of Reflection.
 \textbf{Elimination. Logical Implications of Case C:}
 \begin{enumerate}
@@ -107,11 +109,23 @@ Therefore, by \emph{reductio ad absurdum} and the exhaustion of alternatives, th
 \end{flushright}
 \begin{scholium}[The Two Horizons as Co-Constitutive]
 \label{scholium:appC_two_horizons_co_constitutive}
-This proof underscores that the Generative and Constraining/Dissipative horizon-effects are not merely additive features but are co-constitutive of any viable symbolic system. One cannot exist meaningfully without the other if the system is to maintain identity while evolving under observation. Drift necessitates Reflection for coherence; Reflection requires Drift for dynamism. Their interplay, at the boundary defined by the Bounded Observer, is the crucible of symbolic existence and becoming. This duality is fundamental, echoing throughout the structure of Principia Symbolica, from the emergence of manifolds to the dynamics of cognitive freedom.
+This proof underscores that the Generative and Constraining/Dissipative horizon-effects are not merely additive features but are co-constitutive of any viable symbolic system. One cannot exist meaningfully without the other if the system is to maintain identity while evolving under observation. Drift (cf.~\ref{definition:bk1_drift_field}) necessitates Reflection for coherence; Reflection requires Drift for dynamism. Their interplay — formally enacted as Symbolic Reflexive Validation (cf.~\ref{definition:bk7_symbolic_reflexive_validation_srv}) — at the boundary defined by the Bounded Observer, is the crucible of symbolic existence and becoming. This duality is fundamental, echoing throughout the structure of Principia Symbolica, from the emergence of manifolds to the dynamics of cognitive freedom.
 \end{scholium}
 \clearpage
 \section{Born Rule – A Formal Derivation}
 \label{sec:appC_born_rule}
+This derivation applies the Bounded Observer formalism (cf.~\ref{definition:bk1_bounded_observer}) to the quantum measurement problem.
+
+\begin{remark}[Derivation Structure]
+\label{remark:appC_born_rule_dependency}
+This derivation proceeds from five coherence axioms (PS-C1--C5,
+\S\ref{subsec:appC_born_axioms}) to Gleason's hypotheses, and thence to
+the Born Rule. The axioms PS-C1--C5 are themselves consequences of bounded
+observation (Def.~\ref{definition:bk1_bounded_observer}), not ad hoc
+quantum postulates: each encodes a constraint that any finite-resolution
+observer necessarily satisfies. The derivation is therefore grounded in
+the PS foundational framework, not in the Hilbert space structure it explains.
+\end{remark}
 
 \section*{Born.0 Preamble}
 \label{sec:appC_born_preamble}
@@ -124,6 +138,7 @@ only as a concrete realization of high-curvature symbolic geometry
 
 \subsection{Born.1 Observer Data Structures in the Quantum Regime}
 \label{subsec:appC_born_observer_structures}
+Observer states here are bounded by the perceptual kernel of the Bounded Observer (cf.~\ref{definition:bk1_bounded_observer}).
 Let $\Horizon$ be a complex Hilbert space with $\dim\Horizon = d \ge 2$
 and denote by
 \[
@@ -133,7 +148,7 @@ its lattice of orthogonal projectors.
 
 \begin{definition}[Frame space of $\Obs$]
 \label{definition:appC_frame_space}
-For a bounded observer $\Obs$, define
+For a bounded observer $\Obs$ (cf.~\ref{definition:bk4_bounded_observer}), define
 \[
 F_{Obs} \subseteq Proj(\Horizon)
 \]
@@ -144,7 +159,7 @@ $\epsilon_{\Obs}$.
 
 \begin{definition}[Coherence functional]
 \label{definition:appC_coherence_functional}
-The \emph{coherence assignment functional} of $\Obs$ is
+For a Bounded Observer $\Obs$ (cf.~\ref{definition:bk1_bounded_observer}), the \emph{coherence assignment functional} is
 \[
 \mathcal{C}_{Obs}: Proj(\Horizon) \times \Horizon \to [0,1], \quad
 (\Pi, \psi) \mapsto \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi),
@@ -155,21 +170,22 @@ of the external state $\psi \in \Horizon$.
 
 \subsection{Born.2 Coherence Axioms (PS–C)}
 \label{subsec:appC_born_axioms}
+The following axioms constrain the coherence functional (cf.~\ref{definition:appC_coherence_functional}) of a Bounded Observer.
 
 \begin{axiom}[PS--C1 (Boundedness)]
 \label{axiom:appC_psc1}
-$0 \leq \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi) \leq 1$
+$0 \leq \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi) \leq 1$ \quad (cf.~\ref{definition:appC_coherence_functional})
 \end{axiom}
 
 \begin{axiom}[PS--C2 (Unitary covariance)]
 \label{axiom:appC_psc2}
 $\mathcal{C}_{\Obs}(U \tilde\psi_{\Obs}, U \Pi U^\dagger)
-= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$ \quad (cf.~\ref{definition:appC_coherence_functional})
 \end{axiom}
 
 \begin{axiom}[PS--C3 (Conservation of interpretive budget)]
 \label{axiom:appC_psc3}
-For any complete orthogonal decomposition $\{\Pi_i\}$ of $\mathbbm{1}$:
+For any complete orthogonal decomposition $\{\Pi_i\}$ of $\mathbbm{1}$ (cf.~\ref{definition:appC_coherence_functional}):
 \[
 \sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i) = 1
 \]
@@ -178,13 +194,13 @@ For any complete orthogonal decomposition $\{\Pi_i\}$ of $\mathbbm{1}$:
 \begin{axiom}[PS--C4 (Ray invariance)]
 \label{axiom:appC_psc4}
 $\mathcal{C}_{\Obs}(e^{i\theta} \tilde\psi_{\Obs}, \Pi)
-= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$ \quad (cf.~\ref{definition:appC_coherence_functional})
 \end{axiom}
 
 \begin{axiom}[PS--C5 (Resolution-limited distinguishability)]
 \label{axiom:appC_psc5}
 If $\Pi_1 \perp \Pi_2$ and $\| \Pi_1 - \Pi_2 \| > \epsilon_{\Obs}$,
-then both coherence values cannot equal 1 for the same pure state.
+then both coherence values cannot equal 1 for the same pure state (cf.~\ref{definition:appC_coherence_functional}).
 \end{axiom}
 
 \subsection{Born.3 Preparatory Lemmas}
@@ -199,6 +215,9 @@ extends uniquely to a $\sigma$-additive measure over $Proj(\Horizon)$.
 \end{lemma}
 
 \begin{proof}
+\label{proof:appC_sigma_additivity}
+\leavevmode
+
 Finite additivity follows from Axiom~\ref{axiom:appC_psc3}.
 Carathéodory’s extension theorem guarantees uniqueness of $\sigma$-additive extension.
 \end{proof}
@@ -210,7 +229,17 @@ guarantee $\mu_\psi(U \Pi U^\dagger) = \mu_\psi(\Pi)$ for all unitary $U$.
 \end{lemma}
 
 \begin{proof}
-Direct from definitions.
+\label{proof:appC_unitary_invariance}
+\leavevmode
+
+By Axiom~\ref{axiom:appC_psc2} (unitary covariance),
+$\mathcal{C}_{\Obs}(U\tilde\psi_{\Obs}, U\Pi U^\dagger) = \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$.
+By Axiom~\ref{axiom:appC_psc4} (ray invariance), replacing $\tilde\psi_{\Obs}$ by
+$U\tilde\psi_{\Obs}$ leaves $\mathcal{C}_{\Obs}$ unchanged up to a global phase, which
+is absorbed. Hence $\mu_\psi(U\Pi U^\dagger)
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, U\Pi U^\dagger)
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)
+= \mu_\psi(\Pi)$.
 \end{proof}
 
 \subsection{Born.4 Main Theorem}
@@ -224,9 +253,13 @@ Then for any $|\psi\rangle \in \Horizon$ and $\Pi_a = |a\rangle \langle a|$,
 \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_a)
 = |\langle a | \psi \rangle|^2
 \]
+This result follows from the Bounded Observer structure (cf.~\ref{definition:bk4_bounded_observer}) applied in the quantum regime.
 \end{theorem}
 
 \begin{proof}
+\label{proof:appC_born_rule}
+\leavevmode
+
 By Lemma~\ref{lemma:appC_sigma_additivity},
 $\mu_\psi(\Pi) := \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$
 is a measure on projectors.
@@ -243,12 +276,12 @@ Thus:
 
 \begin{corollary}[Qubit case \texorpdfstring{$d = 2$}{d = 2}]
 \label{corollary:appC_qubit_case}
-Embed $\mathbb{C}^2$ into $\mathbb{C}^3$ to apply Gleason's result.
+Embed $\mathbb{C}^2$ into $\mathbb{C}^3$ (cf.~\ref{definition:appC_frame_space}) to apply Gleason's result.
 \end{corollary}
 
 \begin{corollary}[Mixed states]
 \label{corollary:appC_mixed_states}
-For density operator $\rho = \sum p_i |\psi_i\rangle\langle\psi_i|$,
+For density operator $\rho = \sum p_i |\psi_i\rangle\langle\psi_i|$ (cf.~\ref{definition:appC_frame_space}),
 \[
 \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_a) = tr(\rho \Pi_a)
 \]
@@ -263,6 +296,7 @@ d_F(\tilde\psi_{\Obs}, \Pi) := 1 - \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)
 Measurement minimizes symbolic free energy (Definition~\ref{definition:bk2_symbolic_free_energy}).
 Randomness emerges from projecting high-curvature symbolic states
 onto finite classical frames with finite $\epsilon_{\Obs}$.
+In this section, measurement update is an observer-context realization of \(R_\lambda\): structural in frame-preserving limits and stabilizing under recursive refinement, without introducing a second primitive reflection operator (cf.~\hyperref[dict:appA_symbolic_reflection_operator]{App.~A}, the \hyperref[sec:bk1_operatio]{Operatio}).
 
 \subsection{Born.6 Implications and Outlook}
 \label{subsec:appC_born_outlook}
@@ -275,8 +309,9 @@ For $\epsilon_{\Obs} \ll \hbar$, precision approaches quantum ideality.
 \textbf{Conclusion:} Within Principia Symbolica, the Born rule arises naturally
 from bounded observer geometry, rather than as an axiom.
 
-\section{The Arrow of Time – A Derivation from Observer-Relative Geometry}
+\section[The Arrow of Time]{The Arrow of Time – A Derivation from Observer-Relative Geometry}
 \label{sec:appC_arrow_of_time_rigorous}
+Temporal directionality emerges from the interaction of a Bounded Observer (cf.~\ref{definition:bk4_bounded_observer}) with a curved symbolic manifold (cf.~\ref{definition:bk1_symbolic_manifold}).
 
 \subsection*{Time.0 Preamble}
 \label{subsec:appC_time_preamble_rigorous}
@@ -294,20 +329,23 @@ The foundation of temporal directionality is not a property of the symbolic mani
 
 \begin{definition}[Reflective State Space \(\mathcal{S}_O\)]
 \label{definition:appC_reflective_state_space}
-A Bounded Observer \(\Obs\) does not simply perceive a state \(x \in \manifold\). It perceives a state within the context of its own history, \(H_t\). The true state space is not \(\manifold\), but the \textbf{Reflective State Space} \(\mathcal{S}_O = \manifold \times \mathcal{H}\), where \(\mathcal{H}\) is the space of possible observer histories. A state is a tuple \((x, H_t)\).
+A Bounded Observer \(\Obs\) (cf.~\ref{definition:bk4_bounded_observer}) does not simply perceive a state \(x \in \manifold\) (cf.~\ref{definition:bk1_symbolic_manifold}). It perceives a state within the context of its own history, \(H_t\). The true state space is not \(\manifold\), but the \textbf{Reflective State Space} \(\mathcal{S}_O = \manifold \times \mathcal{H}\), where \(\mathcal{H}\) is the space of possible observer histories. A state is a tuple \((x, H_t)\).
 \end{definition}
 
 \begin{axiom}[The Axiom of Memory]
 \label{axiom:appC_axiom_of_memory}
-Every act of differentiation, \(\delta^O\), by a Bounded Observer \(\Obs\) necessarily alters its history. If \(\delta^O\) maps a state \((x_0, H_{t_0})\) to \((x_1, H_{t_1})\), then \(H_{t_1} \neq H_{t_0}\). Specifically, \(H_{t_1}\) contains the trace of the operation that led from \(x_0\) to \(x_1\). This act of recording is metabolically non-zero, incurring a minimal cost in Symbolic Free Energy, \(\Delta{\freeenergy}_{\text{mem}} > 0\).
+Every act of differentiation, \(\delta^O\), by a Bounded Observer \(\Obs\) necessarily alters its history. If \(\delta^O\) maps a state \((x_0, H_{t_0})\) to \((x_1, H_{t_1})\), then \(H_{t_1} \neq H_{t_0}\). Specifically, \(H_{t_1}\) contains the trace of the operation that led from \(x_0\) to \(x_1\). This act of recording is metabolically non-zero, incurring a minimal cost in Symbolic Free Energy \(\Delta{\freeenergy}_{\text{mem}} > 0\) (cf.~\ref{definition:bk2_symbolic_free_energy}).
 \end{axiom}
 
 \begin{theorem}[Fundamental Irreversibility of Reflective Observation]
 \label{theorem:appC_fundamental_irreversibility_final}
-Any symbolic process involving a state change perceived by a Bounded Observer is fundamentally irreversible.
+Any symbolic process involving a state change perceived by a Bounded Observer (cf.~\ref{definition:bk4_bounded_observer}) is fundamentally irreversible: each observation incurs a non-recoverable cost in Symbolic Free Energy (cf.~\ref{definition:bk2_symbolic_free_energy}).
 \end{theorem}
 
 \begin{proof}
+\label{proof:appC_fundamental_irreversibility}
+\leavevmode
+
 \begin{enumerate}
     \item Consider a process that takes the system from state \(A\) to state \(B\). In the Reflective State Space, this is a transition from \((x_A, H_A)\) to \((x_B, H_B)\). By the Axiom of Memory (Axiom~\ref{axiom:appC_axiom_of_memory}), the history is updated, so \(H_B\) contains the record of the A\(\to\)B transformation.
 
@@ -325,12 +363,12 @@ Any symbolic process involving a state change perceived by a Bounded Observer is
 
 \begin{corollary}[The Emergence of the Arrow of Time]
 \label{corollary:appC_emergence_of_time_arrow_final}
-The fundamental irreversibility established in Theorem~\ref{theorem:appC_fundamental_irreversibility_final} generates a directed Arrow of Time. The system's evolution, governed by the minimization of Symbolic Free Energy \(\freeenergy\), proceeds along a path. Because every step on this path is recorded in the observer's history and cannot be erased without metabolic cost, the path itself is directional. The direction of decreasing \(\freeenergy\) becomes the direction of "forward" in time.
+The fundamental irreversibility established in Theorem~\ref{theorem:appC_fundamental_irreversibility_final} generates a directed Arrow of Time. The system's evolution, governed by the minimization of Symbolic Free Energy \(\freeenergy\) (cf.~\ref{definition:bk2_symbolic_free_energy}), proceeds along a path. Because every step on this path is recorded in the observer's history and cannot be erased without metabolic cost, the path itself is directional. The direction of decreasing \(\freeenergy\) becomes the direction of "forward" in time.
 \end{corollary}
 
 \begin{scholium}[Time as the Accumulation of Memory]
 \label{scholium:appC_time_as_memory}
-This derivation reframes the Arrow of Time. It is not about the universe expanding or entropy increasing. It is about the simple, profound fact that a system capable of knowing cannot "un-know." Every observation, every reflection, every act of differentiation leaves a trace. Time is the continuous accumulation of these traces. It is the ever-growing distinction between "what was" and "what is," a distinction that exists only for a system that remembers. The irreversibility is not in the world, but in the memory of it.
+This derivation reframes the Arrow of Time. It is not about the universe expanding or entropy increasing. It is about the simple, profound fact that a system capable of knowing cannot "un-know." Every observation, every reflection (cf.~\ref{definition:bk1_reflection_operator}), every act of differentiation leaves a trace, as required by the Axiom of Memory (cf.~\ref{axiom:appC_axiom_of_memory}). Time is the continuous accumulation of these traces. It is the ever-growing distinction between "what was" and "what is," a distinction that exists only for a system that remembers. The irreversibility is not in the world, but in the memory of it.
 \end{scholium}
 
 \section{\texorpdfstring{Structural Derivations of $\varphi$ Across Symbolic Modalities}{Structural Derivations of phi Across Symbolic Modalities}}
@@ -344,7 +382,7 @@ The golden ratio $\varphi = \frac{1 + \sqrt{5}}{2}$ emerges across multiple symb
 \label{para:appC_phi_lagrangian_derivation}
 
 \begin{definition}[Symbolic Potential Function]
-\label{def:appC_lagrangian_potential}
+\label{definition:appC_lagrangian_potential}
 Define the symbolic potential governing recursive learning as:
 \[
 V(C) = \frac{1}{2} \left(C - \frac{1}{C} \right)^2
@@ -354,7 +392,7 @@ This encodes the symbolic tension between drift (\textit{cf.} Def.~\ref{definiti
 
 \begin{theorem}[Emergence of $\varphi$ from Lagrangian Equilibrium]
 \label{theorem:appC_phi_from_lagrangian}
-Let the symbolic system evolve under the Lagrangian:
+Let the symbolic system evolve under the Lagrangian (cf.~\ref{definition:appC_lagrangian_potential}):
 \[
 \mathcal{L}(C, \dot{C}) = \frac{1}{2} \dot{C}^2 - V(C)
 \]
@@ -362,6 +400,9 @@ Then the resulting dynamics converge to a stable growth ratio $\lambda = \varphi
 \end{theorem}
 
 \begin{proof}
+\label{proof:appC_phi_from_lagrangian}
+\leavevmode
+
 The Euler--Lagrange equation gives:
 \[
 \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{C}} \right) = \frac{\partial \mathcal{L}}{\partial C}
@@ -386,10 +427,10 @@ This derivation reveals $\varphi$ as a symbolic equilibrium point: the unique at
 \end{scholium}
 
 \paragraph{Hilbert Frame Construction.}
-\label{paragraph:appC_bounded_frame_dynamics_on_hilbert_manifolds}
+\label{subsec:appC_bounded_frame_dynamics_on_hilbert_manifolds}
 
 \begin{definition}[Bounded Observation Frame]
-\label{def:appC_bounded_observation_frame}
+\label{definition:appC_bounded_observation_frame}
 Let $\mathcal{H}$ be a separable Hilbert space. Define the observer-relative frame (Def.~\ref{definition:bk4_observer_kernel_convolution_map}):
 \[
 F_\delta(t) = \{x \in \mathcal{H} : \|x - x_0(t)\| \leq \delta\}
@@ -398,7 +439,7 @@ with $x_0(t)$ the current observer state and $\delta$ their perceptual radius (s
 \end{definition}
 
 \begin{definition}[Complexity Measure]
-\label{def:appC_complexity_measure}
+\label{definition:appC_complexity_measure}
 The complexity $C(t)$ of the agent’s symbolic representation is:
 \[
 C(t) = \dim\left(\text{span}(F_\delta(t) \cap \text{learned\_basis}(t))\right)
@@ -410,7 +451,7 @@ cf. recursive emergence in Def.~\ref{definition:bk1_stage_composite_operator}.
 \label{paragraph:appC_curvature_dynamics_and_banach_embedding}
 
 \begin{definition}[Frame Curvature Operator $K_t$]
-\label{def:appC_frame_curvature_operator}
+\label{definition:appC_frame_curvature_operator}
 The curvature of evolving frames is defined symbolically as:
 \[
 K_t(v) = \lim_{h \to 0} \frac{P_{F_\delta(t+h)}(v) - P_{F_\delta(t)}(v)}{h}
@@ -419,7 +460,7 @@ This parallels the symbolic curvature tensor in Def.~\ref{definition:bk6_symboli
 \end{definition}
 
 \begin{lemma}[Banach Space of Curvature Flows]
-\label{lem:appC_banach_space_of_curvature_flows}
+\label{lemma:appC_banach_space_of_curvature_flows}
 The evolving observation frames form a Banach space $\mathcal{B}_\delta$, under operator norm $\|K_t\|_{\mathrm{op}}$, with:
 \[
 \|K_{t+dt} - K_t\|_{\text{op}} \leq C_1 \cdot \delta \cdot dt
@@ -431,7 +472,7 @@ guaranteeing symbolic convergence (cf. Thm.~\ref{theorem:bk6_symbolic_diffusion_
 \label{paragraph:appC_main_theorem_phi_as_mimiimal_growth_rate}
 
 \begin{definition}[Sustainable Growth Rate]
-\label{def:appC_sustainable_growth_rate}
+\label{definition:appC_sustainable_growth_rate}
 A growth rate $\lambda$ is sustainable if:
 \begin{enumerate}
     \item $\int_0^\infty \|K_t\|^2_{\text{op}}\,dt < \infty$ (symbolic free energy finite; Def.~\ref{definition:bk2_symbolic_free_energy})
@@ -442,11 +483,14 @@ A growth rate $\lambda$ is sustainable if:
 
 \begin{theorem}[Golden Ratio as Minimal Sustainable Growth Rate]
 \label{theorem:appC_phi_min_growth}
-Under symbolic curvature and recursive constraint, the minimum sustainable growth rate is $\varphi$.
+Under symbolic curvature and recursive constraint (cf.~\ref{definition:bk2_symbolic_free_energy}), the minimum sustainable growth rate is $\varphi$.
 \end{theorem}
 
 \begin{proof}
-Assume $\frac{dC}{dt} = \delta/C(t)$. Then:
+\label{proof:appC_phi_min_growth}
+\leavevmode
+
+Assume $\frac{dC}{dt} = \delta/C(t)$ (cf.~\ref{theorem:appC_phi_min_growth}). Then:
 \[
 C(t) = \sqrt{2\delta t + C_0^2}
 \Rightarrow C(t+1) = C(t) + \delta/C(t)
@@ -459,7 +503,7 @@ C(t) = \sqrt{2\delta t + C_0^2}
 \label{paragraph:appC_spectral_interpretation_and_banach_operator_radius}
 
 \begin{definition}[Complexity Growth Operator $G$]
-\label{def:appC_complexity_growth_operator}
+\label{definition:appC_complexity_growth_operator}
 Define $G : B_\varphi \to B_\varphi$ by:
 \[
 G(T)(v) = T(v) + \delta^{-1} \langle T(v), \text{frame\_basis} \rangle
@@ -468,7 +512,8 @@ This structure parallels the symbolic Hamiltonian (Def.~\ref{definition:bk6_symb
 \end{definition}
 
 \begin{theorem}[Spectral Radius of $G$ Equals $\varphi$]
-\label{theorem:appC_phi_as_spectral_Radius}
+\label{theorem:appC_phi_as_spectral_radius}
+For $G$ defined in Def.~\ref{definition:appC_complexity_growth_operator}:
 \[
 \rho(G) = \lim_{n \to \infty} \|G^n\|^{1/n} = \varphi
 \]
@@ -478,7 +523,7 @@ This structure parallels the symbolic Hamiltonian (Def.~\ref{definition:bk6_symb
 \label{paragraph:appC_entropic_efficiency_and_thermodynamic_link}
 
 \begin{definition}[Complexity–Entropy Tradeoff]
-\label{def:appC_complexity_entropy_tradeof}
+\label{definition:appC_complexity_entropy_tradeof}
 Let $S(t)$ be symbolic entropy (Def.~\ref{definition:bk6_symbolic_entropy_functional}). Then:
 \[
 \frac{dS}{dt} \leq \frac{\delta}{C(t)} \cdot \log C(t)
@@ -487,7 +532,7 @@ Let $S(t)$ be symbolic entropy (Def.~\ref{definition:bk6_symbolic_entropy_functi
 
 \begin{theorem}[$\varphi$ Minimizes Entropy-per-Complexity]
 \label{theorem:appC_phi_minimized_entropy_per_complexity}
-Among all $\lambda$, $\varphi$ minimizes symbolic inefficiency:
+Among all $\lambda$ (cf.~\ref{definition:appC_complexity_entropy_tradeof}), $\varphi$ minimizes symbolic inefficiency:
 \[
 \frac{S(\infty)}{C(\infty)} = \int_0^\infty \frac{\delta \log C(t)}{C(t)^2} dt
 \]
@@ -497,7 +542,7 @@ Among all $\lambda$, $\varphi$ minimizes symbolic inefficiency:
 \label{paragraph:geometric_attractor_and_phi_spiral}
 
 \begin{definition}[$\varphi$-Stable Region]
-\label{def:appC_phi_stable_region}
+\label{definition:appC_phi_stable_region}
 A region $M_\varphi$ is geodesically stable if:
 \[
 \langle K_t(v), v \rangle = \varphi^{-1} \|v\|^2
@@ -506,12 +551,12 @@ This reflects alignment of curvature with emergent symbolic inertia (cf. reflect
 \end{definition}
 
 \begin{lemma}[Geodesic Convergence to $M_\varphi$]
-\label{lem:appC_geodesic_convergence}
+\label{lemma:appC_geodesic_convergence}
 Agents constrained by observer memory (Axiom~\ref{axiom:appC_axiom_of_memory}) converge to $M_\varphi$ under entropy-minimizing reflective dynamics (cf. Thm.~\ref{theorem:appC_fundamental_irreversibility_final}).
 \end{lemma}
 
 \begin{scholium}[Symbolic–Geometric Equivalence of $\varphi$]
-\label{sch:appC_symbolic_geometric_equivalence}
+\label{scholium:appC_symbolic_geometric_equivalence}
 The golden ratio appears in symbolic thermodynamics, curvature operators, and recursive observer models. It is a structural attractor unifying symbolic emergence (cf. Scholium~\ref{scholium:appC_two_horizons_co_constitutive}) and the memory-based geometry of time (Scholium~\ref{scholium:appC_time_as_memory}).
 \end{scholium}
 
@@ -519,7 +564,7 @@ The golden ratio appears in symbolic thermodynamics, curvature operators, and re
 \label{paragraph:appC_matrix_invariant_derivation_phi}
 
 \begin{definition}[Symbolic Operator Assumptions]
-\label{def:appC_symbolic_operator_assumptions}
+\label{definition:appC_symbolic_operator_assumptions}
 Assume three fundamental symbolic operators acting on a state vector $\mathbf{s} = (s_1, s_2)^T$:
 \begin{itemize}
 \item Drift operator $\mathcal{D}$: advances symbolic state by growth parameter $\lambda$ (\emph{cf.} Def.~\ref{definition:bk6_drift_operator_complete})
@@ -529,15 +574,18 @@ Assume three fundamental symbolic operators acting on a state vector $\mathbf{s}
 \end{definition}
 
 \begin{lemma}[Matrix Representation of Symbolic Operators]
-\label{lem:appC_matrix_representation_symbolic_operators}
-Under the constraint that symbolic evolution preserves a two-dimensional state space $(s_1, s_2)$ where $s_1$ represents current symbolic complexity and $s_2$ represents previous symbolic complexity, the composed operator $T_\lambda$ has matrix representation:
+\label{lemma:appC_matrix_representation_symbolic_operators}
+Under the constraint that symbolic evolution (cf.~\ref{definition:appC_symbolic_operator_assumptions}) preserves a two-dimensional state space $(s_1, s_2)$ where $s_1$ represents current symbolic complexity and $s_2$ represents previous symbolic complexity, the composed operator $T_\lambda$ has matrix representation:
 \[
 M_\lambda = \begin{bmatrix} \lambda & -1 \\ 1 & 0 \end{bmatrix}
 \]
 \end{lemma}
 
 \begin{proof}
-The symbolic evolution rule is:
+\label{proof:appC_matrix_rep_symbolic_operators}
+\leavevmode
+
+The symbolic evolution rule (cf.~\ref{lemma:appC_matrix_representation_symbolic_operators}) is:
 \begin{align}
 s_1^{(n+1)} &= \lambda s_1^{(n)} - s_2^{(n)} \quad \text{(growth with reflection constraint)} \\
 s_2^{(n+1)} &= s_1^{(n)} \quad \text{(memory preservation)}
@@ -547,11 +595,17 @@ This corresponds to the linear transformation $\mathbf{s}^{(n+1)} = M_\lambda \m
 
 \begin{theorem}[Golden Ratio as Eigenvalue of Recursive Emergence]
 \label{theorem:appC_phi_eigenvalue_recursive_emergence}
-The golden ratio $\varphi$ emerges as the dominant eigenvalue of $M_\lambda$ when $\lambda$ satisfies the recursive emergence condition (cf. Def.~\ref{definition:bk1_stage_composite_operator}).
+\leavevmode\newline
+The golden ratio $\varphi$ emerges as the dominant eigenvalue of $M_\lambda$
+when $\lambda$ satisfies the recursive emergence condition
+(cf.~Def.~\ref{definition:bk1_stage_composite_operator}).
 \end{theorem}
 
 \begin{proof}
-The characteristic polynomial of $M_\lambda$ is:
+\label{proof:appC_phi_eigenvalue_recursive_emergence}
+\leavevmode
+
+The characteristic polynomial of $M_\lambda$ (cf.~\ref{lemma:appC_matrix_representation_symbolic_operators}) is:
 \[
 \det(M_\lambda - \mu I) = \det\begin{bmatrix} \lambda-\mu & -1 \\ 1 & -\mu \end{bmatrix} = (\lambda-\mu)(-\mu) + 1 = \mu^2 - \lambda\mu + 1
 \]
@@ -576,12 +630,15 @@ The eigenvalues are then $\mu_1 = \varphi$ and $\mu_2 = 1 - \varphi = -\frac{1}{
 \end{proof}
 
 \begin{lemma}[Fibonacci Structure via Matrix Powers]
-\label{lem:appC_fibonacci_structure_matrix_powers}
-For $M_\varphi$ with $\varphi$ satisfying $\varphi^2 = \varphi + 1$, the matrix powers generate Fibonacci-like sequences.
+\label{lemma:appC_fibonacci_structure_matrix_powers}
+For $M_\varphi$ (Def.~\ref{lemma:appC_matrix_representation_symbolic_operators}) with $\varphi$ satisfying $\varphi^2 = \varphi + 1$, the matrix powers generate Fibonacci-like sequences.
 \end{lemma}
 
 \begin{proof}
-We prove by induction that $M_\varphi^n = \begin{bmatrix} a_n & -a_{n-1} \\ a_{n-1} & a_{n-2} \end{bmatrix}$ where $a_n$ satisfies the recurrence $a_{n+1} = \varphi a_n - a_{n-1}$.
+\label{proof:appC_fibonacci_matrix_powers}
+\leavevmode
+
+We prove by induction (cf.~\ref{lemma:appC_fibonacci_structure_matrix_powers}) that $M_\varphi^n = \begin{bmatrix} a_n & -a_{n-1} \\ a_{n-1} & a_{n-2} \end{bmatrix}$ where $a_n$ satisfies the recurrence $a_{n+1} = \varphi a_n - a_{n-1}$.
 
 Base case: $M_\varphi^1 = \begin{bmatrix} \varphi & -1 \\ 1 & 0 \end{bmatrix}$ with $a_1 = \varphi, a_0 = 1, a_{-1} = 0$.
 
@@ -597,20 +654,23 @@ Since $\varphi^2 = \varphi + 1$, we have $\varphi a_{n-1} - a_{n-2} = a_n$ (from
 \end{proof}
 
 \begin{proposition}[Conditional Minimality of 2×2 Form]
-\label{prop:appC_conditional_minimality_2x2}
+\label{proposition:appC_conditional_minimality_2x2}
 Under the assumption that symbolic emergence requires encoding both current state and memory state, the 2×2 matrix form is minimal for representing the drift-reflection composition (see Axiom~\ref{axiom:appC_axiom_of_memory}).
 \end{proposition}
 
 \begin{proof}
+\label{proof:appC_conditional_minimality_2x2}
+\leavevmode
+
 A 1×1 matrix can represent only a single state transformation, insufficient to encode the memory-dependent recursion $s^{(n+1)} = f(s^{(n)}, s^{(n-1)})$. The 2×2 form is the minimal representation that can encode both current symbolic state and its immediate history simultaneously.
 \end{proof}
 
 \paragraph{Topological Derivation via Symbolic Curvature Dynamics.}
-\label{paragraph:appC_topological_derivation_symbolic_curvature}
+\label{subsec:appC_topological_derivation_symbolic_curvature}
 
 \begin{definition}[Bounded Symbolic Observer Dynamics]
-\label{def:appC_bounded_symbolic_observer_dynamics}
-Consider a symbolic observer with bounded attention radius $\delta$ navigating meaning space. The observer experiences:
+\label{definition:appC_bounded_symbolic_observer_dynamics}
+Consider a symbolic observer with bounded attention radius $\delta$ (cf.~\ref{definition:bk4_bounded_observer}) navigating meaning space. The observer experiences:
 \begin{itemize}
 \item Forward drift: tendency to explore new symbolic territory at rate $\theta$
 \item Reflective curvature: memory-based constraint pulling back with strength $1/\theta$
@@ -619,8 +679,8 @@ Consider a symbolic observer with bounded attention radius $\delta$ navigating m
 \end{definition}
 
 \begin{definition}[Symbolic Curvature Function]
-\label{def:appC_symbolic_curvature_function}
-The total symbolic curvature experienced by the observer is:
+\label{definition:appC_symbolic_curvature_function}
+The total symbolic curvature experienced by the observer (Def.~\ref{definition:appC_bounded_symbolic_observer_dynamics}) is:
 \[
 \kappa(\theta) = \theta + \frac{1}{\theta}
 \]
@@ -628,7 +688,7 @@ where $\theta > 0$ represents the ratio of forward drift to reflective strength.
 \end{definition}
 
 \begin{lemma}[Geometric Interpretation of Curvature Terms]
-\label{lem:appC_geometric_interpretation_curvature}
+\label{lemma:appC_geometric_interpretation_curvature}
 The term $\theta$ represents symbolic drift velocity, while $1/\theta$ represents the curvature penalty imposed by bounded memory. The sum $\kappa(\theta)$ measures total symbolic "effort" required to maintain coherent exploration (cf. Def.~\ref{definition:bk6_symbolic_curvature_tensor}).
 \end{lemma}
 
@@ -638,7 +698,10 @@ The parameter $\theta = \varphi$ minimizes the symbolic curvature function $\kap
 \end{theorem}
 
 \begin{proof}
-For unconstrained minimization: $\frac{d\kappa}{d\theta} = 1 - \frac{1}{\theta^2} = 0$ gives $\theta = 1$ with $\kappa(1) = 2$. However, this represents the degenerate case where forward drift equals reflective pull, resulting in symbolic stagnation.
+\label{proof:appC_phi_minimal_curvature}
+\leavevmode
+
+For the curvature $\kappa$ (Def.~\ref{definition:appC_symbolic_curvature_function}), unconstrained minimization: $\frac{d\kappa}{d\theta} = 1 - \frac{1}{\theta^2} = 0$ gives $\theta = 1$ with $\kappa(1) = 2$. However, this represents the degenerate case where forward drift equals reflective pull, resulting in symbolic stagnation.
 
 For sustained symbolic evolution, we impose the recursive constraint that each exploration step must build upon the previous step's structure:
 \[
@@ -650,11 +713,11 @@ This recursion encodes the requirement that forward exploration ($1$) must be au
 \theta^* = 1 + \frac{1}{\theta^*} \Rightarrow (\theta^*)^2 = \theta^* + 1 \Rightarrow \theta^* = \varphi
 \]
 
-The curvature at this point is $\kappa(\varphi) = \varphi + \frac{1}{\varphi} = \varphi + (2 - \varphi) = 2$, but this represents the **sustained** minimum rather than the degenerate minimum.
+The curvature at this point is $\kappa(\varphi) = \varphi + \frac{1}{\varphi} = \varphi + (2 - \varphi) = 2$, but this represents the 	extbf{sustained} minimum rather than the degenerate minimum.
 \end{proof}
 
 \begin{definition}[Symbolic Flow Stability]
-\label{def:appC_symbolic_flow_stability}
+\label{definition:appC_symbolic_flow_stability}
 A symbolic flow is stable if small perturbations in the exploration parameter $\theta$ decay exponentially. The stability condition requires:
 \[
 \left| \frac{d}{d\theta} \left( 1 + \frac{1}{\theta} \right) \right|_{\theta=\varphi} < 1
@@ -663,27 +726,33 @@ A symbolic flow is stable if small perturbations in the exploration parameter $\
 \end{definition}
 
 \begin{lemma}[Stability of $\varphi$-Flow]
-\label{lem:appC_stability_phi_flow}
-The $\varphi$-flow satisfies the stability condition.
+\label{lemma:appC_stability_phi_flow}
+The $\varphi$-flow satisfies the stability condition (cf.~\ref{definition:appC_symbolic_flow_stability}).
 \end{lemma}
 
 \begin{proof}
+\label{proof:appC_stability_phi_flow}
+\leavevmode
+
 $\frac{d}{d\theta} \left( 1 + \frac{1}{\theta} \right) = -\frac{1}{\theta^2}$. At $\theta = \varphi$: $\left| -\frac{1}{\varphi^2} \right| = \frac{1}{\varphi^2} = \frac{1}{\varphi + 1} = \varphi - 1 < 1$, confirming stability.
 \end{proof}
 
 \paragraph{Convergence of Matrix and Topological Approaches.}
-\label{paragraph:appC_convergence_matrix_topological}
+\label{subsec:appC_convergence_matrix_topological}
 
 \begin{theorem}[Unified Recursive Fixed Point]
 \label{theorem:appC_unified_recursive_fixed_point}
-Both the matrix eigenvalue approach and the topological curvature approach converge to the same fixed-point equation:
+Both the matrix eigenvalue approach (cf.~\ref{lemma:appC_matrix_representation_symbolic_operators}) and the topological curvature approach converge to the same fixed-point equation:
 \[
 \lambda = 1 + \frac{1}{\lambda} \Rightarrow \lambda^2 - \lambda - 1 = 0 \Rightarrow \lambda = \varphi
 \]
 \end{theorem}
 
 \begin{proof}
-Matrix approach: The recursive emergence condition requires $\lambda = 1 + 1/\lambda$ for the growth parameter to be self-consistent with the evolution rule.
+\label{proof:appC_unified_recursive_fixed_point}
+\leavevmode
+
+Matrix approach (cf.~\ref{theorem:appC_unified_recursive_fixed_point}): The recursive emergence condition requires $\lambda = 1 + 1/\lambda$ for the growth parameter to be self-consistent with the evolution rule.
 
 Topological approach: The minimal curvature condition under recursive constraint gives $\theta = 1 + 1/\theta$ for sustained symbolic exploration.
 
@@ -691,11 +760,11 @@ Both yield the same quadratic equation with solution $\varphi = \frac{1 + \sqrt{
 \end{proof}
 
 \begin{scholium}[Structural Universality of $\varphi$]
-\label{sch:appC_structural_universality_phi}
+\label{scholium:appC_structural_universality_phi}
 The independent emergence of $\varphi$ from matrix spectral theory and topological curvature analysis suggests that $\varphi$ represents a fundamental structural constant of bounded recursive systems. This convergence transcends particular mathematical representations, indicating an intrinsic property of symbolic emergence under resource constraints (see Def.~\ref{definition:bk6_symbolic_curvature_tensor}, Thm.~\ref{theorem:bk6_symbolic_diffusion_governs_evolution}).
 \end{scholium}
 
 \begin{remark}[Connection to Other Symbolic Modalities]
-\label{rem:appC_connection_other_modalities}
-The fixed-point equation $\lambda = 1 + 1/\lambda$ appears in multiple contexts within symbolic dynamics. The consistent emergence of $\varphi$ across matrix, topological, and (potentially) thermodynamic or spectral approaches suggests a deeper structural principle governing bounded symbolic systems.
+\label{remark:appC_connection_other_modalities}
+The fixed-point equation $\lambda = 1 + 1/\lambda$ (cf.~\ref{theorem:appC_unified_recursive_fixed_point}) appears in multiple contexts within symbolic dynamics. The consistent emergence of $\varphi$ across matrix, topological, and (potentially) thermodynamic or spectral approaches suggests a deeper structural principle governing bounded symbolic systems.
 \end{remark}

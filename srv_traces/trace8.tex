@@ -1,0 +1,140 @@
+\subsection*{SRV Trace 8: Operatio De-Parameterization Correspondence}
+\label{subsec:appB_srv_trace8}
+
+\begin{quote}
+\emph{``The Operatio is not a poem about the equations.
+It is the equations with their parameters removed.''}
+\end{quote}
+
+\noindent
+This trace demonstrates that the symbolic prelude (the \hyperref[sec:bk1_operatio]{Operatio})
+encodes the structural skeleton of PS dynamics. We proceed in two directions:
+first stripping the core equations to reveal the Operatio's symbols, then
+specializing the Operatio back to recover those equations.
+This is a \emph{reflexive validation} --- a correspondence demonstration,
+not a retroactive derivation of the axiomatic content of Books~I--IX from
+the Operatio alone.
+
+\subsubsection*{8.1 The Core Equations}
+
+The dynamical framework of PS rests on the following constructions from Book~I
+and Book~II:
+
+\begin{enumerate}
+\item \textbf{Fokker--Planck equation}
+(Thm.~\ref{theorem:bk1_fundamental_relation_fokker_plank_equation}):
+\[
+\frac{\partial \rho}{\partial s}
+= -\nabla \cdot (\rho\, D) + \sigma^2 \nabla^2 \rho
+\]
+governing the evolution of symbolic probability density $\rho$ under drift $D$
+and diffusion $\sigma^2$ on the symbolic manifold $M$.
+
+\item \textbf{Symbolic Hamiltonian}
+(Def.~\ref{definition:bk2_symbolic_hamiltonian}):
+\[
+H(x) = \frac{\kappa}{\|D(x)\|_g + \epsilon} + \lambda \cdot \mathrm{tr}(\mathcal{L}_x)
+\]
+encoding the interplay of drift magnitude and linearized reflection.
+
+\item \textbf{Drift--reflection interplay:} the drift field $D$
+(Def.~\ref{definition:bk1_drift_field}), the reflection operator $R$
+(Def.~\ref{definition:bk1_reflection_operator}), and the symbolic flow
+$\Phi_s$ (Def.~\ref{definition:bk1_symbolic_flow}) on the manifold $M$
+(Def.~\ref{definition:bk1_symbolic_manifold}).
+\end{enumerate}
+
+\subsubsection*{8.2 De-Parameterization: Equations $\to$ Operatio}
+
+We now factor out all parametric content --- the manifold $M$, metric $g$,
+density $\rho$, specific drift field $D$, reflection map $R$, and constants
+$\kappa, \lambda, \epsilon, \sigma$ --- retaining only the structural
+relations between operations. The correspondence is as follows:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}lll@{}}
+\textbf{Operatio symbol} & \textbf{Structural skeleton} & \textbf{Parametric source} \\
+\hline
+$\mathcal{U}_{\emptyset} \;\vdash\; \partial$
+& Undifferentiated ground yields differentiation
+& FP: $\rho$ evolves under $\nabla \cdot (\rho D)$ \\
+$\partial \;\nvdash\; \mathcal{U}_{\emptyset}$
+& Differentiation cannot recover the ground
+& H-theorem: $dF/ds \leq 0$ (irreversibility) \\
+$\mathbb{S} := \mathcal{R}(\partial)$
+& Stable structure via reflection on drift
+& Equilibrium: $\rho_{\mathrm{eq}} \propto e^{-\beta H}$ \\
+$\mathbb{S} \neq \emptyset$
+& Viability: stable structure is non-trivial
+& Viability domain
+(Def.~\ref{definition:bk5_viability_domain}) \\
+$\mathcal{O} := \mathcal{E}(\mathbb{S})$
+& Observer emerges as convergent identity
+& Convergent identity
+(Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}) \\
+\end{tabular}
+\end{center}
+
+\noindent
+Each line of the Operatio corresponds to a structural invariant that survives
+the removal of all parametric detail. The Operatio is the
+\emph{pre-parametric form} of PS dynamics.
+
+\subsubsection*{8.3 Re-Parameterization: Operatio $\to$ Equations}
+
+Conversely, observer specialization recovers the full equations:
+
+\begin{enumerate}
+\item \textbf{$\mathcal{U}_{\emptyset} \;\vdash\; \partial$}
+(Bounded observer on void $\to$ smooth manifold):
+A bounded observer
+(Def.~\ref{definition:bk1_bounded_observer}) encountering undifferentiated
+ground induces, through successive resolution stages $P_\lambda$, the
+colimit manifold $M$ (Thm.~\ref{theorem:bk1_manifold_emergence}).
+Differentiation $\partial$ becomes the smooth structure on $M$.
+
+\item \textbf{$\partial \;\nvdash\; \mathcal{U}_{\emptyset}$}
+(Irreversibility):
+Once differentiation has occurred, the H-theorem
+(Thm.~\ref{theorem:bk1_h_theorem_for_symbolic_evolution}) guarantees
+monotone free-energy decrease: the undifferentiated state is not recoverable.
+
+\item \textbf{$\mathbb{S} := \mathcal{R}(\partial)$}
+(Reflection stabilizes drift):
+The drift field $D$ on $M$ is regulated by the reflection operator $R: M \to M$.
+Their balance, under smoothness and boundedness, determines $H$
+(Def.~\ref{definition:bk2_symbolic_hamiltonian}). The equilibrium density
+$\rho_{\mathrm{eq}}$ satisfying $\partial \rho / \partial s = 0$ in the
+Fokker--Planck equation yields the Gibbs measure
+(Thm.~\ref{theorem:bk2_equilibrium_distribution}).
+
+\item \textbf{$\mathbb{S} \neq \emptyset$}
+(Viability):
+The viability domain
+(Def.~\ref{definition:bk5_viability_domain}) is non-empty: the system
+sustains structure under drift--reflection balance. Probability conservation
+plus drift plus diffusion recovers the full Fokker--Planck equation.
+
+\item \textbf{$\mathcal{O} := \mathcal{E}(\mathbb{S})$}
+(Convergent identity):
+The reflective convergence theorem
+(Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity})
+establishes that stable identity $\mathcal{O}$ emerges as a fixed point
+of the SRMF cycle acting on viable symbolic structure.
+\end{enumerate}
+
+\subsubsection*{8.4 Framing}
+
+This correspondence validates that the Operatio encodes the structural skeleton
+of PS dynamics. The axiomatic method of Books~I--IX remains the rigorous
+development; the Operatio is neither a substitute for it nor a derivation of it.
+This trace demonstrates reflexive consistency: the symbolic prelude and the
+formal development describe the same architecture at different levels of
+parametric resolution.
+
+\begin{flushright}
+\emph{The operation precedes the parameter.\\
+The parameter instantiates the operation.\\
+Neither is prior; both are necessary.}
+\end{flushright}

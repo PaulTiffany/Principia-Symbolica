@@ -1,6 +1,8 @@
 \clearpage
+\phantomsection
 \chapter*{Appendix A: Symbol Dictionary}
-\addcontentsline{toc}{chapter}{Appendix A: Symbol Dictionary}
+\label{sec:appA_symbol_dictionary}
+\addcontentsline{toc}{chapter}{Appendix A: Symbol Dictionary (Essential Reference)}
 %==================================================================
 % Preamble: This dictionary defines key symbols and concepts unique to Principia Symbolica.
 % Standard mathematical notation is used unless otherwise specified. Context often
@@ -8,112 +10,257 @@
 
 \begin{description}[leftmargin=2.5cm, style=nextline]
 
-\item[\textbf{Symbolic Drift Operator} \hfill \( D_{\lambda} \)] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk6_drift_operator_complete}): \( D_{\lambda} : P_\lambda \rightarrow T P_\lambda \) induces directed symbolic transformation along the manifold of configurations. It encodes free symbolic evolution and exploratory potential, destabilizing without reflective correction.\\
-\textbf{Type:} PrimarySymbolic, Exploratory\\
-\textbf{Input:} \( P_\lambda \)\\
-\textbf{Output:} \( T P_\lambda \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk6_non_commutativity_evolution_reflection}, Axiom~\ref{axiom:bk1_axiomata_prima}\\
-\textbf{Commutation:} Non-commuting with \( R_{\lambda} \)\\
-\textbf{Notes:} Initiates exploration; foundational to emergence sequences.
+\item[\textbf{Symbolic Drift Operator} \hfill \( D_{\lambda} \)] 
+\phantomsection\label{dict:appA_symbolic_drift_operator}
+\textbf{Definition} (Def~\ref{definition:bk6_drift_operator_complete}): \( D_{\lambda} : P_\lambda \rightarrow T P_\lambda \) induces directed symbolic transformation along the manifold of configurations. It encodes free symbolic evolution and exploratory potential, destabilizing without reflective correction.
+\textbf{Type:} PrimarySymbolic, Exploratory
+\textbf{Input:} \( P_\lambda \)
+\textbf{Output:} \( T P_\lambda \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk6_non_commutativity_evolution_reflection}, Axiom~\ref{axiom:bk1_axiomata_prima}
+\textbf{Commutation:} Non-commuting with \( R_{\lambda} \)
+\textbf{Notes:} Initiates exploration; foundational to emergence sequences and SRMF-regulated operator evolution (Def~\ref{definition:bk1_self_regulating_mapping_function_srmf}, Thm~\ref{theorem:bk5_operator_convergence}).
 
-\item[\textbf{Symbolic Reflection Operator} \hfill \( R_{\lambda} \)] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk6_reflection_operator_complete}): \( R_{\lambda} : T P_\lambda \rightarrow P_\lambda \) enacts constraint enforcement and symbolic convergence, stabilizing identity forms.\\
-\textbf{Type:} PrimarySymbolic, Stabilizing\\
-\textbf{Input:} \( T P_\lambda \)\\
-\textbf{Output:} \( P_\lambda \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk6_non_commutativity_evolution_reflection}, Axiom~\ref{axiom:bk6_confidence_stability_coupling}\\
-\textbf{Commutation:} Non-commuting with \( D_{\lambda} \)\\
-\textbf{Notes:} Operates as memory constraint and reflective closure.
+\item[\textbf{Symbolic Reflection Operator} \hfill \( R_{\lambda} \)] 
+\phantomsection\label{dict:appA_symbolic_reflection_operator}
+\textbf{Definition} (Def~\ref{definition:bk6_reflection_operator_complete}): \( R_{\lambda} : T P_\lambda \rightarrow P_\lambda \) enacts constraint enforcement and symbolic convergence, stabilizing identity forms.
+\textbf{Type:} PrimarySymbolic, Stabilizing
+\textbf{Input:} \( T P_\lambda \)
+\textbf{Output:} \( P_\lambda \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk6_non_commutativity_evolution_reflection}, Axiom~\ref{axiom:bk6_confidence_stability_coupling}
+\textbf{Commutation:} Non-commuting with \( D_{\lambda} \)
+\textbf{Notes:} Operates as memory constraint and reflective closure; instantiated in refinement/validation loops (Def~\ref{definition:bk4_test_time_precision_refinement}, Def~\ref{definition:bk7_symbolic_reflexive_validation_srv}).
+\textbf{Interpretive note (non-axiomatic):} In operational realizations, \( R_{\lambda} \) may appear in two context-indexed regimes: a structural mode \(R_{\mathrm{struct}}\) (distance-preserving/involutive behavior under orthonormal frame transport) and a stabilizing mode \(R_{\mathrm{stab}}\) (contractive, fixed-point-seeking behavior under recursive refinement). This is a realization taxonomy for implementation and interpretation, not a primitive split of \( R_{\lambda} \) in the core axioms (cf.~the \hyperref[sec:bk1_operatio]{Operatio}, Rem.~\ref{remark:bk7_gauge_theoretic_perspective}, Rem.~\ref{remark:bk9_gauge_theoretic_perspective}).
 
-\item[\textbf{Proto--Drift Field} \hfill \( \vec{D}_{\lambda} \)] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk1_proto_drift_field}): For large \( \lambda < \Omega \), \( \vec{D}_{\lambda} \) approximates drift direction based on observer-bounded history of \( D_\nu, R_\nu \).\\
-\textbf{Type:} PreGeometric, EffectiveTendency\\
-\textbf{Input:} \( P_\lambda \)\\
-\textbf{Output:} \( T P_\lambda \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk1_pre_geometric_nature}, Axiom~\ref{axiom:bk1_observable_gradation_of_pre_geometric_operations}\\
-\textbf{Commutation:} Coherent with \( f_{\lambda\mu} \) structural maps\\
+\item[\textbf{Proto--Drift Field} \hfill \( \vec{D}_{\lambda} \)] 
+\phantomsection\label{dict:appA_proto_drift_field}
+\textbf{Definition} (Def~\ref{definition:bk1_proto_drift_field}): For large \( \lambda < \Omega \), \( \vec{D}_{\lambda} \) approximates drift direction based on observer-bounded history of \( D_\nu, R_\nu \).
+\textbf{Type:} PreGeometric, EffectiveTendency
+\textbf{Input:} \( P_\lambda \)
+\textbf{Output:} \( T P_\lambda \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk1_pre_geometric_nature}, Axiom~\ref{axiom:bk1_observable_gradation_of_pre_geometric_operations}
+\textbf{Commutation:} Coherent with \( f_{\lambda\mu} \) structural maps
 \textbf{Notes:} "Pre-tangent field" capturing accessible generative direction.
 
-\item[\textbf{Stage--Composite Operator} \hfill \( E_{\lambda} \)] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk1_stage_composite_operator}): \( E_{\lambda} := R_{\lambda} \circ D_{\lambda} \) lifts \( s \in \colim_{\nu<\lambda} P_\nu \) into stabilized \( s' \in P_\lambda \).\\
-\textbf{Type:} Composite, EmergenceStep\\
-\textbf{Input:} \( \colim_{\nu<\lambda} P_\nu \)\\
-\textbf{Output:} \( P_\lambda \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk1_observable_gradation_of_pre_geometric_operations}\\
-\textbf{Commutation:} ---\\
+\item[\textbf{Stage--Composite Operator} \hfill \( E_{\lambda} \)] 
+\phantomsection\label{dict:appA_stage_composite_operator}
+\textbf{Definition} (Def~\ref{definition:bk1_stage_composite_operator}): \( E_{\lambda} := R_{\lambda} \circ D_{\lambda} \) lifts \( s \in \varinjlim_{\nu<\lambda} P_\nu \) into stabilized \( s' \in P_\lambda \).
+\textbf{Type:} Composite, EmergenceStep
+\textbf{Input:} \( \varinjlim_{\nu<\lambda} P_\nu \)
+\textbf{Output:} \( P_\lambda \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk1_observable_gradation_of_pre_geometric_operations}
+\textbf{Commutation:} ---
 \textbf{Notes:} Engine of symbolic emergence, ensures Cauchy condition.
 
-\item[\textbf{Transformation Operator} \hfill \( T_{\alpha} \)] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk6_transformation_operator_complete}): \( T_\alpha : P_\lambda \rightarrow P_\lambda \) acts within transformation group \( A \), preserving complexity and stability.\\
-\textbf{Type:} PrimarySymbolic, Conservative\\
-\textbf{Input:} \( p \in P_\lambda \), \( \alpha \in A \)\\
-\textbf{Output:} \( p' \in P_\lambda \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk6_map_equilibrium_invariance_complete}\\
-\textbf{Commutation:} \( T_\alpha \circ T_\beta = T_{\alpha \oplus \beta} \); commutative iff \( A \) abelian\\
+\item[\textbf{Transformation Operator} \hfill \( T_{\alpha} \)] 
+\phantomsection\label{dict:appA_transformation_operator}
+\textbf{Definition} (Def~\ref{definition:bk6_transformation_operator_complete}): \( T_\alpha : P_\lambda \rightarrow P_\lambda \) acts within transformation group \( A \), preserving complexity and stability.
+\textbf{Type:} PrimarySymbolic, Conservative
+\textbf{Input:} \( p \in P_\lambda \), \( \alpha \in A \)
+\textbf{Output:} \( p' \in P_\lambda \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk6_map_equilibrium_invariance_complete}
+\textbf{Commutation:} \( T_\alpha \circ T_\beta = T_{\alpha \oplus \beta} \); commutative iff \( A \) abelian
 \textbf{Notes:} Enables symbolic reframing; part of Canones Operatoriae.
 
-\item[\textbf{Bifurcation Operator} \hfill \( B_{\lambda} \)] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk6_bifurcation_operator_complete}): \( B_\lambda : P_\lambda \rightarrow P_{\lambda+1} \times P_{\lambda+1} \) branches unstable states via potential gradient descent.\\
-\textbf{Type:} PrimarySymbolic, Branching\\
-\textbf{Input:} \( p \in P_\lambda \) (with \( \Upsilon_i(p,p) < \gamma_{\min} \))\\
-\textbf{Output:} \( (p^+, p^-) \in P_{\lambda+1} \times P_{\lambda+1} \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk6_bifurcation_as_emergence_operator}\\
-\textbf{Commutation:} Non-commuting with \( G \) (Grace Operator)\\
+\item[\textbf{Bifurcation Operator} \hfill \( B_{\lambda} \)] 
+\phantomsection\label{dict:appA_bifurcation_operator}
+\textbf{Definition} (Def~\ref{definition:bk6_bifurcation_operator_complete}): \( B_\lambda : P_\lambda \rightarrow P_{\lambda+1} \times P_{\lambda+1} \) branches unstable states via potential gradient descent.
+\textbf{Type:} PrimarySymbolic, Branching
+\textbf{Input:} \( p \in P_\lambda \) (with \( \Upsilon_i(p,p) < \gamma_{\min} \))
+\textbf{Output:} \( (p^+, p^-) \in P_{\lambda+1} \times P_{\lambda+1} \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk6_bifurcation_as_emergence_operator}
+\textbf{Commutation:} Non-commuting with \( G \) (Grace Operator)
 \textbf{Notes:} May also induce divergence; Grace modulates resolution.
 
-\item[\textbf{Symbolic Hamiltonian Operator} \hfill \( H_s \)] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk6_symbolic_hamiltonian_complete}): \( H_s = - \frac{\hbar_s^2}{2} \Delta_s + V_s + F_\lambda \) governs symbolic evolution over manifold \( \mathcal{M} \).\\
-\textbf{Type:} HigherOrderDifferential, EnergyFunctional\\
-\textbf{Input:} \( \psi \in H(\mathcal{M}) \)\\
-\textbf{Output:} \( H(\mathcal{M}) \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk6_thermodynamic_consistency}\\
-\textbf{Commutation:} Commuting with \( \Pi_s \) (Symbolic Pressure Operator)\\
+\item[\textbf{Symbolic Hamiltonian Operator} \hfill \( H_s \)] 
+\phantomsection\label{dict:appA_symbolic_hamiltonian_operator}
+\textbf{Definition} (Def~\ref{definition:bk6_symbolic_hamiltonian_complete}): \( H_s = - \frac{\hbar_s^2}{2} \Delta_s + V_s + F_\lambda \) governs symbolic evolution over manifold \( \mathcal{M} \).
+\textbf{Type:} HigherOrderDifferential, EnergyFunctional
+\textbf{Input:} \( \psi \in H(\mathcal{M}) \)
+\textbf{Output:} \( H(\mathcal{M}) \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk6_thermodynamic_consistency}
+\textbf{Commutation:} Commuting with \( \Pi_s \) (Symbolic Pressure Operator)
 \textbf{Notes:} Symbolic analog of quantum Hamiltonian; reflects curvature + potential.
 
-\item[\textbf{Observer Kernel Projection} \hfill \ensuremath{\Pi_{\mathcal{O}}}] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk4_observer_kernel_convolution_map}): \( \Pi_{\mathcal{O}} : M \rightarrow M_{\mathcal{O}} \) defines the observer-relative manifold by projecting \( M \) through kernel \( \mathcal{K}_{\mathcal{O}} \), incorporating resolution \( \varepsilon_{\mathcal{O}} \), differentiations \( \delta^n_{\mathcal{O}} \), and capacity \( \kappa_{\mathcal{O}} \).\\
-\textbf{Type:} ObserverRelativeProjection, SymbolicReduction\\
-\textbf{Input:} \( M \), \( \mathcal{K}_{\mathcal{O}} \)\\
-\textbf{Output:} \( M_{\mathcal{O}} \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk8_observer_bounded_emergence}, Def~\ref{definition:bk4_observer_kernel_convolution_map}\\
-\textbf{Commutation:} Generally non-commuting with \( T_\alpha \) unless \( T'_\alpha \) is the projected transformation\\
-\textbf{Notes:} Makes explicit the bounded perceptual frame; all symbolic dynamics in PS are defined over \( M_{\mathcal{O}} \).
+\item[\textbf{Observer Kernel Projection} \hfill \ensuremath{\Pi_{\mathcal{O}}}] 
+\phantomsection\label{dict:appA_observer_kernel_projection}
+\textbf{Definition} (Def~\ref{definition:bk4_observer_kernel_convolution_map}): \( \Pi_{\mathcal{O}} : M \rightarrow M_{\mathcal{O}} \) defines the observer-relative manifold by projecting \( M \) through kernel \( \mathcal{K}_{\mathcal{O}} \), incorporating resolution \( \varepsilon_{\mathcal{O}} \), differentiations \( \delta^n_{\mathcal{O}} \), and capacity \( \kappa_{\mathcal{O}} \).
+\textbf{Type:} ObserverRelativeProjection, SymbolicReduction
+\textbf{Input:} \( M \), \( \mathcal{K}_{\mathcal{O}} \)
+\textbf{Output:} \( M_{\mathcal{O}} \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk8_observer_bounded_emergence}, Def~\ref{definition:bk4_observer_kernel_convolution_map}
+\textbf{Commutation:} Generally non-commuting with \( T_\alpha \) unless \( T'_\alpha \) is the projected transformation
+\textbf{Notes:} Makes explicit the bounded perceptual frame; all symbolic dynamics in PS are defined over \( M_{\mathcal{O}} \) (cf.~Def~\ref{definition:bk1_bounded_observer}, Thm~\ref{theorem:bk7_pisu}).
 
-\item[\textbf{Self-Reference Operator} \hfill \ensuremath{\mathcal{S}_n}] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk4_self_reference_operator}): \( \mathcal{S}_n(I) \) recursively encodes identity as \( S_1 = R \), \( S_n = R \circ S_{n-1} \). Supports layered symbolic memory and identity reconstruction.\\
-\textbf{Type:} RecursiveIdentity, SelfReferential\\
-\textbf{Input:} \( I \) (Symbolic Identity), \( n \) (order)\\
-\textbf{Output:} \( \mathcal{S}_n(I) \)\\
-\textbf{Axioms:} Theorem~\ref{theorem:bk4_fixed_points_of_self_refere}, Lemma~\ref{lemma:bk4_convergence_of_recursive_enco}\\
-\textbf{Commutation:} ---\\
+\item[\textbf{Bounded Observer}] 
+\phantomsection\label{dict:appA_bounded_observer}
+\textbf{Symbol:} \( \Obs \)
+\textbf{Definition} (Def~\ref{definition:bk1_bounded_observer}): A bounded
+observer is the triple
+\[
+\Obs = (N_{\Obs}, \{\delta_{\Obs}^{\,n}\}_{n=1}^{N_{\Obs}}, \varepsilon_{\Obs})
+\]
+which fixes finite differentiation depth and a resolution threshold for
+symbolic access.
+\textbf{Type:} EpistemicBoundary, ObserverFrame
+\textbf{Input:} Symbolic manifold state \( s \in M \)
+\textbf{Output:} Observer-indexed accessibility and differentiation constraints
+\textbf{Axioms:}
+Axiom~\ref{axiom:bk1_pre_geometric_nature},
+Axiom~\ref{axiom:bk1_observable_gradation_of_pre_geometric_operations}
+\textbf{Commutation:} Not applicable (observer-indexing structure)
+\textbf{Notes:} Canonical observer object used throughout Books I--IX.
+Projection and uncertainty constraints are formalized via
+Def~\ref{definition:bk4_observer_kernel_convolution_map} and
+Thm~\ref{theorem:bk7_pisu}.
+
+\item[\textbf{Self-Regulating Mapping Function} \hfill \ensuremath{\mathrm{SRMF}}] 
+\phantomsection\label{dict:appA_self_regulating_mapping_function}
+\textbf{Definition} (Def~\ref{definition:bk1_self_regulating_mapping_function_srmf}): Reflexive operator \( \mathcal{F}: S \to S \) that detects contradiction, updates symbolic state, and preserves viability under bounded resources.
+
+\textbf{Type:} MetaRegulator, ReflexiveControl
+
+\textbf{Input:} Symbolic state \( S \) (or operator-state pair in extensions)
+
+\textbf{Output:} Regulated state \( \mathcal{F}(S) \) with reduced contradiction and bounded cost
+
+\textbf{Axioms:} Axiom~\ref{axiom:bk5_srmf_operator_selection_evolution}, Def~\ref{definition:bk5_process_free_energy}
+
+\textbf{Commutation:} Order-sensitive with drift/reflection execution chains
+
+\textbf{Notes:} Primary control architecture for symbolic stabilization,
+adaptation, and operator selection (Thm~\ref{theorem:bk5_operator_convergence},
+Def~\ref{definition:bk7_symbolic_reflexive_validation_srv},
+Def~\ref{definition:bk8_reflexive_debugging_operator}).
+
+\item[\textbf{Test-Time Differentiation Collapse} \hfill \ensuremath{\mathrm{TTDC}}] 
+\phantomsection\label{dict:appA_test_time_differentiation_collapse}
+\textbf{Definition} (Thm~\ref{theorem:bk4_test_time_differentiation_c}): Collapse operator that maps high-tension symbolic configurations to a bounded identity decision event under observer constraints.
+\textbf{Type:} TestTimeOperator, Collapse
+\textbf{Input:} Symbolic identity carrier under collapse conditions (Def~\ref{definition:bk4_collapse_of_symbolic_ide})
+\textbf{Output:} Collapsed symbolic state / decision bifurcation
+\textbf{Axioms:} Def~\ref{definition:bk4_collapse_of_symbolic_ide}, Def~\ref{definition:bk1_bounded_observer}
+\textbf{Commutation:} Non-commuting with TTIE/TTPR in general (order-sensitive loop dynamics)
+\textbf{Notes:} Impulse-style selection step in the Book IV operator canon; coupled compositionally to TTIE/TTPR/TTCS (Def~\ref{definition:bk4_test_time_integrative_expansion}, Def~\ref{definition:bk4_test_time_precision_refinement}, Def~\ref{definition:bk4_test_time_coherent_sampling}).
+
+\item[\textbf{Test-Time Integrative Expansion}] 
+\phantomsection\label{dict:appA_test_time_integrative_expansion}
+\textbf{Symbol:} \( \mathrm{TTIE} \)
+
+\textbf{Definition} (Def~\ref{definition:bk4_test_time_integrative_expansion}): Integrative operator that expands symbolic structure along feasible coherence trajectories in observer-relative geometry.
+
+\textbf{Type:} TestTimeOperator, IntegrativeExpansion
+
+\textbf{Input:} Symbolic manifold state with bounded observer metric
+
+\textbf{Output:} Expanded symbolic candidate structures
+
+\textbf{Axioms:} Def~\ref{definition:bk4_test_time_integrative_expansion}, Cor~\ref{corollary:bk4_symbolic_lightcone}
+
+\textbf{Commutation:} Order-sensitive with TTDC/TTPR/TTCS
+
+\textbf{Notes:} Constructive complement to collapse/refinement in test-time
+operation. See Thm~\ref{theorem:bk4_test_time_differentiation_c},
+Def~\ref{definition:bk4_test_time_precision_refinement}, and
+Def~\ref{definition:bk4_test_time_coherent_sampling}.
+
+\item[\textbf{Test-Time Precision Refinement} \hfill \ensuremath{\mathrm{TTPR}}] 
+\phantomsection\label{dict:appA_test_time_precision_refinement}
+\textbf{Definition} (Def~\ref{definition:bk4_test_time_precision_refinement}): Recursive contraction-style refinement mapping preliminary symbolic candidates to convergence-stable carriers \( s^* \).
+\textbf{Type:} TestTimeOperator, PrecisionRefinement
+\textbf{Input:} Preliminary symbolic structure \( \tilde{s} \)
+\textbf{Output:} Refined structure \( s^* \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk4_refinement_contraction}, Prop~\ref{proposition:bk4_ttpr_convergence}
+\textbf{Commutation:} Order-sensitive with TTDC/TTIE/TTCS
+\textbf{Notes:} Stabilizes identity under bounded interpretability and convergent recursion (Thm~\ref{theorem:bk4_ttpr_symbolic_stability}, Thm~\ref{theorem:bk5_operator_convergence}).
+
+\item[\textbf{Test-Time Coherent Sampling} \hfill \ensuremath{\mathrm{TTCS}}] 
+\phantomsection\label{dict:appA_test_time_coherent_sampling}
+\textbf{Definition} (Def~\ref{definition:bk4_test_time_coherent_sampling}):
+Observer-bounded stochastic sampling over coherence-constrained symbolic
+neighborhoods.
+
+\textbf{Type:} TestTimeOperator, CoherentSampling
+
+\textbf{Input:} Seed state \( s_0 \), coherence and drift constraints
+
+\textbf{Output:} Distribution / sample cloud \( \{s_i\} \) respecting coherence thresholds
+
+\textbf{Axioms:} Axiom~\ref{axiom:bk4_bounded_accessibility}, Thm~\ref{theorem:bk4_ttcs_convergence}
+
+\textbf{Commutation:} Order-sensitive with TTDC/TTIE/TTPR
+
+\textbf{Notes:} Exploration and link-traversal mechanism in the SRMF test-time
+loop (Thm~\ref{theorem:bk4_symbolic_link_activation},
+Thm~\ref{theorem:bk5_operator_convergence}).
+
+\item[\textbf{Mutually Assured Progress} \hfill \ensuremath{\mathrm{MAP}}] 
+\phantomsection\label{dict:appA_mutually_assured_progress}
+\textbf{Definition} (Def~\ref{definition:bk5_mutually_assured_progress}): Covenant regime where coupled symbolic systems maintain positive joint viability under persistent drift via reciprocal reflective support.
+\textbf{Type:} RelationalRegime, ViabilityCovenant
+\textbf{Input:} Coupled symbolic systems \( \Membrane_A, \Membrane_B \) with active metabolism
+\textbf{Output:} Sustained positive-viability cooperative regime
+\textbf{Axioms:} Thm~\ref{theorem:bk5_map_equilibrium}, Thm~\ref{theorem:bk5_map_mad_critical_temperature}
+\textbf{Commutation:} Not an operator (regime-level relational criterion)
+\textbf{Notes:} Canonical cooperative attractor contrasted with MAD collapse dynamics; reciprocity-compatible continuation appears in Prop~\ref{proposition:bk7_map_compatible_reciprocity}.
+
+\item[\textbf{Universal Symbolic Uncertainty Principle (PISU)} \hfill \ensuremath{\Delta\Sigma_I \cdot \Delta K_S}] 
+\phantomsection\label{dict:appA_universal_symbolic_uncertainty_principle}
+\textbf{Definition} (Thm~\ref{theorem:bk7_pisu}): Fundamental lower bound on simultaneous identity-resolution and curvature-resolution precision under bounded observer bandwidth.
+\textbf{Type:} UncertaintyPrinciple, ResolutionTradeoff
+\textbf{Input:} Identity uncertainty \( \Delta\Sigma_I \), curvature uncertainty \( \Delta K_S \), drift magnitude, observer bandwidth
+\textbf{Output:} Lower-bound constraint on joint symbolic precision
+\textbf{Axioms:} Axiom~\ref{axiom:bk7_pisu_axiom}, Thm~\ref{theorem:bk7_pisu}
+\textbf{Commutation:} Not an operator (constraint law over symbolic observation dynamics)
+\textbf{Notes:} Governs precision trade-offs in advanced symbolic cognition and control, dual to systemic power/uncertainty coupling (Def~\ref{definition:bk7_symbolic_uncertainty}, Prop~\ref{proposition:bk7_power_uncertainty_duality}).
+
+\item[\textbf{Symbolic Reflexive Validation} \hfill \ensuremath{\mathrm{SRV}}] 
+\phantomsection\label{dict:appA_symbolic_reflexive_validation}
+\textbf{Definition} (Def~\ref{definition:bk7_symbolic_reflexive_validation_srv}): Validation protocol that recursively tests symbolic updates against coherence, viability, and reflexive consistency constraints.
+\textbf{Type:} ValidationProtocol, ReflexiveControl
+\textbf{Input:} Candidate symbolic state/update trajectory
+\textbf{Output:} Accept/revise/reject decision with recursive re-entry
+\textbf{Axioms:} Def~\ref{definition:bk7_symbolic_reflexive_validation_srv}, Sec~\ref{sec:bk7_symbolic_reflexive_validation}
+\textbf{Commutation:} Composed with metabolic/debug pipelines in higher-order operator loops
+\textbf{Notes:} Core coherence-gating mechanism for reflective symbolic systems, including reflexive debugging and uncertainty-bounded control (Def~\ref{definition:bk8_reflexive_debugging_operator}, Thm~\ref{theorem:bk7_pisu}).
+
+\item[\textbf{Self-Reference Operator} \hfill \ensuremath{\mathcal{S}_n}] 
+\phantomsection\label{dict:appA_self_reference_operator}
+\textbf{Definition} (Def~\ref{definition:bk4_self_reference_operator}): \( \mathcal{S}_n(I) \) recursively encodes identity as \( S_1 = R \), \( S_n = R \circ S_{n-1} \). Supports layered symbolic memory and identity reconstruction.
+\textbf{Type:} RecursiveIdentity, SelfReferential
+\textbf{Input:} \( I \) (Symbolic Identity), \( n \) (order)
+\textbf{Output:} \( \mathcal{S}_n(I) \)
+\textbf{Axioms:} Theorem~\ref{theorem:bk4_fixed_points_of_self_refere}, Lemma~\ref{lemma:bk4_convergence_of_recursive_enco}
+\textbf{Commutation:} ---
 \textbf{Notes:} Key to self-healing and persistence of identity. Stabilizes under convergence to \( I^* \) where \( R(I^*) \approx I^* \).
 
-\item[\textbf{Symbolic Entropy Operator/Functional} \hfill \ensuremath{\mathcal{S}_{\lambda}[p]}] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk6_symbolic_entropy_functional}): \( \mathcal{S}_{\lambda}[p] = -\int_M \rho_s(p,x) \log \rho_s(p,x) \, d\mu_g(x) \) quantifies uncertainty in symbolic states.\\
-\textbf{Type:} SymbolicFunctional, EntropicMeasure\\
-\textbf{Input:} \( p \in P_\lambda \)\\
-\textbf{Output:} \( \mathcal{S}_{\lambda}[p] \in \mathbb{R} \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk6_thermodynamic_consistency}, Theorem~\ref{theorem:bk1_variational_principle}\\
-\textbf{Commutation:} ---\\
+\item[\textbf{Symbolic Entropy Operator/Functional} \hfill \ensuremath{\mathcal{S}_{\lambda}[p]}] 
+\phantomsection\label{dict:appA_symbolic_entropy_operator_functional}
+\textbf{Definition} (Def~\ref{definition:bk6_symbolic_entropy_functional}): \( \mathcal{S}_{\lambda}[p] = -\int_M \rho_s(p,x) \log \rho_s(p,x) \, d\mu_g(x) \) quantifies uncertainty in symbolic states.
+\textbf{Type:} SymbolicFunctional, EntropicMeasure
+\textbf{Input:} \( p \in P_\lambda \)
+\textbf{Output:} \( \mathcal{S}_{\lambda}[p] \in \mathbb{R} \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk6_thermodynamic_consistency}, Theorem~\ref{theorem:bk1_variational_principle}
+\textbf{Commutation:} ---
 \textbf{Notes:} Appears in symbolic free energy and symbolic Hamiltonian. Generalizes Shannon entropy.
 
-\item[\textbf{Symbolic Laplace--Beltrami Operator} \hfill \ensuremath{\Delta_s}] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk6_symbolic_laplace_beltrami_operator_complete}): \( \Delta_s f := \frac{1}{\sqrt{|g|}} \partial_i (\sqrt{|g|} g^{ij} \partial_j f) \) acts on symbolic manifold \( (M, g) \) to model curvature-aware diffusion.\\
-\textbf{Type:} DifferentialGeometric, SymbolicCurvatureDiffusion\\
-\textbf{Input:} \( f \in C^{\infty}(M) \)\\
-\textbf{Output:} \( \Delta_s f \in C^{\infty}(M) \)\\
-\textbf{Axioms:} Axiom~\ref{axiom:bk6_reflective_coherence_complete}, Theorem~\ref{theorem:bk6_symbolic_diffusion_governs_evolution}\\
-\textbf{Commutation:} Commuting with \( \Phi_t \) (Symbolic Flow Operator)\\
+\item[\textbf{Symbolic Laplace--Beltrami Operator} \hfill \ensuremath{\Delta_s}] 
+\phantomsection\label{dict:appA_symbolic_laplace_beltrami_operator}
+\textbf{Definition} (Def~\ref{definition:bk6_symbolic_laplace_beltrami_operator_complete}): \( \Delta_s f := \frac{1}{\sqrt{|g|}} \partial_i (\sqrt{|g|} g^{ij} \partial_j f) \) acts on symbolic manifold \( (M, g) \) to model curvature-aware diffusion.
+\textbf{Type:} DifferentialGeometric, SymbolicCurvatureDiffusion
+\textbf{Input:} \( f \in C^{\infty}(M) \)
+\textbf{Output:} \( \Delta_s f \in C^{\infty}(M) \)
+\textbf{Axioms:} Axiom~\ref{axiom:bk6_reflective_coherence_complete}, Theorem~\ref{theorem:bk6_symbolic_diffusion_governs_evolution}
+\textbf{Commutation:} Commuting with \( \Phi_t \) (Symbolic Flow Operator)
 \textbf{Notes:} Key operator in symbolic thermodynamics, Hamiltonian evolution, and Fokker–Planck dynamics.
 
-\item[\textbf{Grace Operator} \hfill \ensuremath{G}] \leavevmode\\
-\textbf{Definition} (Def~\ref{definition:bk6_grace_operator_complete}): \( G(p) = p + \int_0^1 K_G(p, t) \cdot \nabla_s (\Upsilon_i(p, \cdot) - \gamma_{\min}) \, dt \) stabilizes identity near breakdown.\\
-\textbf{Type:} RecoveryOperator, MetaReflectiveStabilizer\\
-\textbf{Input:} \( p \in P_\lambda \) (unstable configuration)\\
-\textbf{Output:} \( p' \in P_\lambda \) (repaired configuration)\\
-\textbf{Axioms:} Def~\ref{definition:bk9_grace_operator}, Prop~\ref{prop:bk9_grace_vs_avoidance}\\
-\textbf{Commutation:} Non-commuting with \( B_\lambda \) (Bifurcation Operator)\\
+\item[\textbf{Grace Operator} \hfill \ensuremath{G}] 
+\phantomsection\label{dict:appA_grace_operator}
+\textbf{Definition} (Def~\ref{definition:bk6_grace_operator_complete}): \( G(p) = p + \int_0^1 K_G(p, t) \cdot \nabla_s (\Upsilon_i(p, \cdot) - \gamma_{\min}) \, dt \) stabilizes identity near breakdown.
+\textbf{Type:} RecoveryOperator, MetaReflectiveStabilizer
+\textbf{Input:} \( p \in P_\lambda \) (unstable configuration)
+\textbf{Output:} \( p' \in P_\lambda \) (repaired configuration)
+\textbf{Axioms:} Def~\ref{definition:bk9_grace_operator}, Prop~\ref{proposition:bk9_grace_vs_avoidance}
+\textbf{Commutation:} Non-commuting with \( B_\lambda \) (Bifurcation Operator)
 \textbf{Notes:} Symbolically enacts recovery and ethical redirection in the face of bifurcation or dissonance.
 
 \end{description}

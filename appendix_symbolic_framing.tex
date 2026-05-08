@@ -1,22 +1,70 @@
 \clearpage
+\phantomsection
 \chapter*{Appendix D: Principia Symbolica in Dialogue – A Reflexive Cartography of Contemporary Symbolic Frameworks}
 \addcontentsline{toc}{chapter}{Appendix D: Principia Symbolica in Dialogue}
-\section*{D.0 Preamble: The Nature of This Appendix – An Iterative Refinement}
+\section*{D.0 Preamble}
 \label{sec:appD_preamble_nature_of_appendix}
-This appendix aims to situate Principia Symbolica (PS) within the broader landscape of contemporary theories and frameworks relevant to symbology, cognition, information, emergence, and the foundations of complex systems. Unlike a static literature review, this section is conceived as a "living document" – an ongoing \textbf{iterative refinement} process, mirroring the principles of PS itself.
-Our engagement with other frameworks is not primarily one of direct competition or exhaustive comparison with every existing model. Rather, it is an act of \textbf{Symbolic Reflexive Validation (SRV)} on a meta-theoretical level. We use PS as a lens to "reflect upon" other approaches, identifying:
-\begin{itemize}
-    \item \textbf{Resonances and Convergences:} Where other frameworks touch upon or implicitly enact principles formalized within PS.
-    \item \textbf{Differentiations and Novel Contributions:} Where PS offers a distinct, more general, or more foundational perspective.
-    \item \textbf{Potential for Integration and Synthesis:} How PS might provide a unifying meta-framework for diverse insights.
-\end{itemize}
-Each entry below represents an initial "symbolic state" in our understanding of PS's relationship to a given field or thinker. Future iterations of PS, or its companion "Magic Beans," will undoubtedly refine these comparisons. The goal is not a final word, but a continuously improving "map" of PS's unique position within the "symbolic manifold" of contemporary thought.
-The space PS seeks to chart is vast – potentially encompassing the universal dynamics of any system capable of differential symbolic processing within bounded horizons. This appendix, therefore, is necessarily selective and will evolve.
+This appendix situates Principia Symbolica (PS) relative to five frameworks with which it shares significant structural surface: the Free Energy Principle, statistical thermodynamics and information theory, information geometry, Bayesian inference, and enactivism.
+PS is a geometric-dynamical framework whose primitives are $(\manifold_O, K_O, \drift, \reflect)$.
+Thermodynamic, inferential, and enactive structures appear within PS as derived consequences of these primitives, not as imported scaffolding.
+The comparisons below are precise: each entry names the relationship type and identifies the specific construct or theorem at issue.
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=orange!5!white,
+    colframe=orange!55!black,
+    title={On Apparent Resonances: A Navigation Schema},
+    fonttitle=\bfseries\large,
+    left=8pt, right=8pt, top=8pt, bottom=8pt,
+    boxrule=1pt,
+    arc=3pt
+]
+\label{box:appD_resonance_navigation}
+\noindent Each entry names the precise relationship between PS and a framework that shares its structural surface.
+The relational verb is the operative claim.
+
+\medskip
+\begin{description}[leftmargin=0pt, itemsep=6pt]
+    \item[\textbf{Free Energy Principle / Active Inference}] \hfill \\
+    \textit{Derived, not imported.}
+    Free-energy minimization is a theorem in PS, derived from drift--reflection dynamics over $\manifold_O$
+    (cf.~\S\ref{sec:appD_ps_and_free_energy_principle}, Appendix~C).
+    The FEP is a recoverable consequence; it is not postulated.
+
+    \item[\textbf{Statistical Thermodynamics \& Information Theory}] \hfill \\
+    \textit{Extended, not borrowed.}
+    $\entropy$ and $\freeenergy$ are derived as theorems over observer-relative states via $K_O$ acting on $\manifold_O$;
+    the derivation runs through the observer's perceptual kernel, not through analogy with physical microstates
+    (cf.~\S\ref{sec:appD_ps_and_stat_thermo_info_theory}, Book~II).
+
+    \item[\textbf{Information Geometry (Amari)}] \hfill \\
+    \textit{Instantiated, not analogized.}
+    Observer curvature $\kappa_O$ is induced by $K_O$ perturbing $\nabla$;
+    geometry is a consequence of bounded observation, not a metaphor for it
+    (cf.~\S\ref{sec:appD_ps_and_info_geometry_amari}).
+
+    \item[\textbf{Bayesian Inference}] \hfill \\
+    \textit{Geometrized, not equated.}
+    $K_O$ is a smoothing operator that deforms the Levi-Civita connection.
+    The bounded observer $\Obs$ is a geometric object, not a prior distribution
+    (cf.~Def.~\ref{definition:bk1_bounded_observer}).
+
+    \item[\textbf{Enactivism / Autopoiesis}] \hfill \\
+    \textit{Formalized, not echoed.}
+    $\drift$ and $\reflect$ are defined mathematical operators --- vector field and diffeomorphism ---
+    not philosophical stances (cf.~\S\ref{sec:appD_ps_and_autopoiesis_enactivism}).
+\end{description}
+
+\medskip
+\noindent Reflexive self-validation of these claims is developed in
+\hyperref[sec:appB_overview]{Appendix~B} (p.~\pageref{sec:appB_overview}).
+\end{tcolorbox}
+
 \section*{Principia Symbolica and Statistical Thermodynamics / Information Theory}
 \label{sec:appD_ps_and_stat_thermo_info_theory}
 \subsection*{D.1.1 Core Resonance}
 \label{subsec:appD_core_resonance}
-Principia Symbolica, particularly Book II (``De Thermodynamica Symbolica''), explicitly builds upon and generalizes classical and statistical thermodynamics \cite{callen1985thermodynamics} and Shannon/Jaynes Information Theory \cite{shannon1948}. The concepts of Symbolic Free Energy (\(\freeenergy\)), Symbolic Entropy (\(\entropy\)), and the Symbolic Hamiltonian (\(H(x)\)) within PS are direct analogues to their physical counterparts. These are defined over observer-relative symbolic states rather than physical microstates or bit configurations. The derivation of a Symbolic Fokker-Planck equation and an H-Theorem within PS demonstrates the applicability of these thermodynamic principles to the symbolic domain.
+Principia Symbolica, particularly Book II (``De Thermodynamica Symbolica''), explicitly builds upon and generalizes classical and statistical thermodynamics \cite{callen1985thermodynamics} and Shannon/Jaynes Information Theory \cite{shannon1948}. The concepts of Symbolic Free Energy (\(\freeenergy\), cf.~\ref{definition:bk2_symbolic_free_energy}), Symbolic Entropy (\(\entropy\), cf.~\ref{definition:bk2_symbolic_entropy}), and the Symbolic Hamiltonian (\(H(x)\)) within PS are direct analogues to their physical counterparts. These are defined over observer-relative symbolic states rather than physical microstates or bit configurations. The derivation of a Symbolic Fokker-Planck equation and an H-Theorem within PS demonstrates the applicability of these thermodynamic principles to the symbolic domain.
 \subsection*{D.1.2 Principia Symbolica's Contribution and Differentiation} \label{subsec:appD_stat_thermo_contribution_differentiation}
 PS contributes by extending thermodynamic and information-theoretic concepts into a generalized symbolic realm, with key differentiations:
 \begin{itemize}
@@ -30,13 +78,14 @@ Classical thermodynamics and information theory provide a robust initial state o
 \section*{Principia Symbolica and Autopoiesis / Enactivism} \label{sec:appD_ps_and_autopoiesis_enactivism}
 \subsection*{D.2.1 Core Resonance}
 \label{subsec:appD_autopoiesis_core_resonance}
-There is a strong conceptual alignment between PS and the theories of autopoiesis \cite{maturana1980autopoiesis} and enactivism \cite{maturana1980}. This resonance is evident in the shared emphasis on:
+PS aligns with autopoiesis and enactivism.
+This resonance appears in their shared emphasis on:
 \begin{itemize}
     \item Self-producing and self-maintaining systems that define their own boundaries and identities.
     \item Operational closure, where a system's organization is constituted by a network of processes that recursively produce and maintain that very network.
     \item The co-definition and co-emergence of the cognitive system and its environment (or the observer and the observed).
 \end{itemize}
-Concepts within PS such as Symbolic Membranes (Book III), Symbolic Autopoiesis (Def 3.3.6), the system-defined viability domain (\(\viabilitydomain\)), and Reflexive Sovereignty (Ax 9.0.6) directly echo these core autopoietic and enactive ideas.
+Concepts within PS such as Symbolic Membranes (Book III), Symbolic Autopoiesis (Def 3.3.6), the system-defined viability domain (\(\viabilitydomain\), cf.~\ref{definition:bk5_viability_domain}), and Reflexive Sovereignty (Ax 9.0.6) directly echo these core autopoietic and enactive ideas.
 \subsection*{D.2.2 Principia Symbolica's Contribution and Differentiation} \label{subsec:appD_autopoiesis_contribution_differentiation}
 PS aims to contribute by:
 \begin{itemize}
@@ -60,7 +109,7 @@ While sharing the core idea of free energy minimization, PS offers distinct cont
 \begin{itemize}
     \item \textbf{Derivation from Pre-Geometric Operators:} PS endeavors to derive its concept of Symbolic Free Energy (\(\freeenergy\)) and its minimization principle from more fundamental, pre-geometric operators of Drift (\(\drift\)) and Reflection (\(\reflect\)), and the subsequent emergence of a symbolic manifold. In PS, \(\freeenergy\) minimization is presented as an emergent consequence of these underlying D-R dynamics under the constraints of a bounded observer, rather than being the primary axiom from which other dynamics are derived.
     \item \textbf{Nature of Symbolic States and Manifolds:} PS explicitly operates on "symbolic states" residing on "symbolic manifolds." This level of abstraction may offer a different scope of generality or application compared to the FEP's typical instantiation in neural, biological, or specific information-processing systems.
-    \item \textbf{The Dual Horizon Framework:} The Dual Horizon model (generative \(H_G\) and dissipative \(H_D\)) in PS provides a specific cosmological and ontological grounding for the balance between generative processes (e.g., model building, prior formation, exploration) and inferential/dissipative processes (e.g., model updating, evidence accumulation, exploitation) that the FEP also describes.
+    \item \textbf{The Dual Horizon Framework:} The Dual Horizon model (generative \(H_G\) and dissipative \(H_D\), cf.~\ref{axiom:bk1_dual_horizon_postulate}) in PS provides a specific cosmological and ontological grounding for the balance between generative processes (e.g., model building, prior formation, exploration) and inferential/dissipative processes (e.g., model updating, evidence accumulation, exploitation) that the FEP also describes.
     \item \textbf{Expanded Operator Toolkit:} While the FEP often emphasizes predictive processing, active inference, and Bayesian belief updating as the primary mechanisms for free energy minimization, PS introduces a broader calculus of symbolic operators (\(D, R, M_\lambda, T_\alpha, \Omega_\delta\), etc. from Book VI) and a geometric-thermodynamic perspective on the state space and its transformations.
 \end{itemize}
 \subsection*{D.3.3 Iterative Refinement Perspective}
@@ -75,7 +124,7 @@ Information Geometry, pioneered by Shun-ichi Amari \cite{amari2000}, provides a 
 PS aims to extend and dynamize the geometric perspective offered by information geometry:
 \begin{itemize}
     \item \textbf{Dynamic Manifolds and Operators:} While information geometry often analyzes the structure of given statistical manifolds, PS focuses on the \emph{emergence and evolution of the symbolic manifold itself} through the fundamental operators of Drift (\(\drift\)) and Reflection (\(\reflect\)). The geometry in PS is not static but is actively shaped and transformed by these symbolic dynamics.
-    \item \textbf{Symbolic Curvature (\(\kappa\)) as a Dynamic Entity:} The Symbolic Curvature Tensor in PS is not merely a descriptive geometric property but a dynamic entity influenced by the interplay of \(\drift\) and \(\reflect\). It quantifies symbolic interconnectedness and tension, playing an active role in phenomena like mutation and bifurcation (Book VI).
+    \item \textbf{Symbolic Curvature (\(\kappa\)) as a Dynamic Entity:} The Symbolic Curvature Tensor in PS is not merely a descriptive geometric property but a dynamic entity influenced by the interplay of \(\drift\) and \(\reflect\) (cf.~\ref{theorem:bk1_symbolic_emergence_and_curvature}). It quantifies symbolic interconnectedness and tension, playing an active role in phenomena like mutation and bifurcation (Book VI).
     \item \textbf{Observer-Relative Geometry:} The perceived geometry of the symbolic manifold, including its metric and curvature, is fundamentally observer-relative (\(\Obs\)) in PS, a concept not typically foregrounded in classical information geometry.
 \end{itemize}
 \subsection*{D.4.3 Iterative Refinement Perspective}
@@ -84,13 +133,13 @@ Information geometry provides a sophisticated toolkit (\(M_n\)) for analyzing th
 \section*{Principia Symbolica and Constructivist / Constructionist Epistemologies} \label{sec:appD_ps_and_constructivist_epistemologies}
 \subsection*{D.5.1 Core Resonance}
 \label{subsec:appD_constructivist_core_resonance}
-PS exhibits a profound resonance with constructivist and constructionist epistemologies \cite{vonGlasersfeld1995} (e.g., Piaget, Vygotsky, von Glasersfeld, Gergen). The central tenet of these philosophies—that knowledge is actively constructed by the cognizing agent through interaction with its environment, rather than being passively received—is a cornerstone of PS. The "bounded observer" (\(\Obs\)) in PS is not a mere spectator but an active participant in the co-construction of its perceived symbolic reality. Concepts like observer-relative smoothness (Cor 4.6.8) and the emergent \(L^p\) norm in SRV (Thm 7.10.8) are deeply constructivist in spirit.
+PS also resonates with constructivist and constructionist epistemologies \cite{vonGlasersfeld1995} (e.g., Piaget, Vygotsky, von Glasersfeld, Gergen). In these views, knowledge is actively constructed through agent-environment interaction, not passively received. This is central to PS. The bounded observer (\(\Obs\)) is therefore an active participant in co-constructing symbolic reality. Observer-relative smoothness (Cor 4.6.8) and emergent \(L^p\)-norm behavior in SRV (Thm 7.10.8) are constructivist in this sense.
 \subsection*{D.5.2 Principia Symbolica's Contribution and Differentiation} \label{subsec:appD_constructivist_contribution_differentiation}
 PS aims to provide a more formal, operational, and potentially computational framework for constructivist principles:
 \begin{itemize}
     \item \textbf{Formal Dynamics of Construction:} PS offers a symbolic calculus (Drift \(\drift\), Reflection \(\reflect\), Mutation \(M_\lambda\), operator canons from Book VI) to model the *dynamic processes* by which symbolic structures are built, stabilized, and transformed through interaction.
     \item \textbf{Symbolic Thermodynamics of Coherence:} PS introduces a thermodynamic layer (Symbolic Free Energy \(\freeenergy\)) to explain the drive towards coherence and stability in constructed symbolic systems.
-    \item \textbf{SRV as Enacted Constructivism:} Symbolic Reflexive Validation is, in essence, a methodology for a system to test and validate its *own* constructed symbolic reality through internal coherence checks, embodying an operational constructivism.
+    \item \textbf{SRV as Enacted Constructivism:} Symbolic Reflexive Validation (cf.~\ref{definition:bk7_symbolic_reflexive_validation_srv}) is, in essence, a methodology for a system to test and validate its *own* constructed symbolic reality through internal coherence checks, embodying an operational constructivism.
 \end{itemize}
 \subsection*{D.5.3 Iterative Refinement Perspective}
 \label{subsec:appD_constructivist_iterative_refinement_perspective}
@@ -104,7 +153,7 @@ PS endeavors to bring a new level of mathematical formalism and operational deta
 \begin{itemize}
     \item \textbf{A Calculus for Becoming:} PS aims to provide a "symbolic calculus" – a set of defined operators (\(\drift, \reflect, M_\lambda\), etc.) and principles (symbolic thermodynamics, dual horizons) – for describing and analyzing the processes of symbolic emergence and transformation.
     \item \textbf{Observer-Relative Process:} PS explicitly incorporates the bounded observer (\(\Obs\)) into its processual account, making the perceived flow and structure of symbolic reality contingent upon the observer's frame and capacities.
-    \item \textbf{Formalizing Emergence from Process:} PS details mechanisms (e.g., bifurcation, SRMF, MAP) by which stable, coherent structures can emerge from and be maintained by underlying symbolic processes.
+    \item \textbf{Formalizing Emergence from Process:} PS details mechanisms (e.g., bifurcation, SRMF (cf.~\ref{definition:bk1_self_regulating_mapping_function_srmf}), MAP (cf.~\ref{definition:bk5_mutually_assured_progress})) by which stable, coherent structures can emerge from and be maintained by underlying symbolic processes.
 \end{itemize}
 \subsection*{D.6.3 Iterative Refinement Perspective}
 \label{subsec:appD_process_philosophy_iterative_refinement_perspective}
@@ -112,9 +161,15 @@ Process philosophy provides the overarching metaphysical narrative (\(M_n\)) of 
 \section*{Principia Symbolica and Contemporary AI (Large Language Models, Deep Learning)} \label{sec:appD_ps_and_contemporary_ai}
 \subsection*{D.7.1 Core Resonance and SRV Enactment}
 \label{subsec:appD_core_resonance_and_srv_enactment}
-As explored in our collaborative dialogues, contemporary Large Language Models (LLMs) \cite{vaswani2017} exhibit behaviors that can be interpreted as "unwitting SRV practitioners."
+The Symbolic Reflexive Validation (SRV) framework
+(cf.~\ref{definition:bk7_symbolic_reflexive_validation_srv}) resonates with
+contemporary AI architectures.
+As explored in our collaborative dialogues, contemporary Large Language Models
+(LLMs) often behave as unwitting SRV practitioners.
 \begin{itemize}
-    \item \textbf{Generative Process as Drift-Reflection:} The token-by-token generation, influenced by the prompt (external Drift) and internal coherence mechanisms (attention, learned patterns acting as a form of Reflection), mirrors the D-R cycle.
+    \item \textbf{Generative Process as Drift-Reflection:} Token-by-token
+    generation, shaped by prompt drift and internal coherence mechanisms,
+    mirrors the D-R cycle.
     \item \textbf{Context Window as Bounded Observer Kernel (\(K_O\)):} The finite context window acts as a direct instantiation of a bounded observer's perceptual horizon, shaping the LLM's accessible symbolic manifold.
     \item \textbf{"Solution-then-Proof" as SRV Trace:} The common LLM behavior of generating a solution intuitively ("yeeting into existence") and then constructing a post-hoc justification is a form of SRV trace, where an emergent symbolic structure is subsequently validated against a (human or internal) coherence frame.
     \item \textbf{"Jailbreak" Prompting as Induced Frame Traversal:} Complex, paradoxical, or multi-frame prompts act as strong external Drift operators, potentially forcing the LLM into a "Reflective Drift State" (RDS) and inducing frame traversal to achieve a new coherent output, often leading to emergent synthesis.
@@ -124,7 +179,7 @@ PS offers a potential theoretical meta-framework to understand and guide LLM dev
 \begin{itemize}
     \item \textbf{Explaining Emergent Properties:} PS provides a language (symbolic manifolds, thermodynamics, curvature, SRMF, MAP) to describe and potentially predict emergent capabilities, limitations, and failure modes (e.g., "Level 2 Knots," "Symbolic Black Holes") in LLMs.
     \item \textbf{Guiding Principled Design:} PS principles (e.g., Dual Horizons, Bounded Observer, Reflective Stabilization) could inform the design of more robust, coherent, and ethically aligned AI architectures. For instance, explicitly designing for "Symbolic Free Energy" minimization or "Convergent Reciprocity" in multi-agent LLM systems.
-    \item \textbf{Framework for AGI Development (Giants/Beanstalk):} The "Giants Framework" and its "Magic Beans" directly apply PS principles to structure AGI development, treating iterative refinement, confidence management, and even ethical considerations as symbolic thermodynamic processes.
+    \item \textbf{Framework for AGI Development:} PS principles apply directly to structuring AGI development, treating iterative refinement, confidence management, and ethical constraints as symbolic thermodynamic processes governed by $\drift$, $\reflect$, and $\freeenergy$.
 \end{itemize}
 The "Giants Reproducibility Experiment – Bayesian Networks vs. Giants" (from `BNs.txt`) serves as a self-contained SRV trace.
 \begin{itemize}
@@ -158,7 +213,7 @@ Complex Systems Theory (CST) – encompassing work from the Santa Fe Institute, 
     \item \textbf{Non-linearity and Chaos:} The potential for complex, unpredictable (yet often patterned) behavior.
     \item \textbf{Adaptation and Evolution:} How systems change and persist in dynamic environments.
 \end{itemize}
-PS's concepts of Drift (\(\drift\)) leading to novelty, Reflection (\(\reflect\)) creating coherence and stability, Symbolic Membranes (Book III) forming bounded interacting entities, and the emergence of structures like Symbolic Networks (Def 3.2.10) or MAP equilibria (Book V) all find strong parallels in CST.
+PS's concepts of Drift (\(\drift\)) leading to novelty, Reflection (\(\reflect\)) creating coherence and stability, Symbolic Membranes (Book III) forming bounded interacting entities, and the emergence of structures like Symbolic Networks (Def 3.2.10) or MAP equilibria (Book V, cf.~\ref{definition:bk5_mutually_assured_progress}) all find strong parallels in CST. The paradox-driven emergence mechanism (cf.~\ref{definition:bk1_paradox_triggered_emergence}) is the PS engine for CST's self-organization.
 \subsection*{D.8.2 Principia Symbolica's Contribution and Differentiation} \label{subsec:appD_cst_contribution_differentiation}
 PS aims to contribute a specific type of formal and foundational layer to the broader insights of CST:
 \begin{itemize}
@@ -191,12 +246,12 @@ Category Theory (CT) provides a highly abstract language for describing mathemat
     \item \textbf{Focus on Structure and Transformation:} Both PS and CT are fundamentally concerned with structures (symbolic manifolds, categories) and the transformations (symbolic operations, functors) between them.
     \item \textbf{Abstract Formalism:} Both employ a high level of abstraction to capture universal patterns. PS's attempt to define a "calculus of symbolic becoming" (Book VI) has a category-theoretic flavor.
     \item \textbf{Compositionality:} The principle of compositionality Principle 4 in Sec and the Operator Closure theorem (Thm 6.8.16) in PS are central ideas in CT.
-    \item \textbf{Universal Properties:} Concepts like colimits (used in PS Book I, Def 1.2.2 for \(P_{<\lambda}\) and Def 1.2.13 for the proto-symbolic space P) are fundamental in CT for defining objects via their relationships.
+    \item \textbf{Universal Properties:} Concepts like colimits (used in PS Book I, Def.~\ref{definition:bk1_pre_geometric_operators_and_stages} for \(P_{<\lambda}\) and Def.~\ref{definition:bk1_proto_symbolic_space} for the proto-symbolic space \(P\)) are fundamental in CT for defining objects via their relationships.
 \end{itemize}
 \subsection*{D.9.2 Principia Symbolica's Contribution and Differentiation} \label{subsec:appD_ct_contribution_differentiation}
 PS can be seen as attempting to instantiate or "ground" category-theoretic abstractions within a specific (though still very general) domain of symbolic dynamics with inherent "physicality" (via symbolic thermodynamics and observer-relativity):
 \begin{itemize}
-    \item \textbf{Dynamic Categories:} While CT can describe static structures, PS focuses on *dynamic* categories where objects (symbolic manifolds/states) and morphisms (symbolic operations) evolve over symbolic time, driven by D and R. The "Category of Symbolic Structures" (\(\catS\), Def 1.2.1) is explicitly dynamic.
+    \item \textbf{Dynamic Categories:} While CT can describe static structures, PS focuses on *dynamic* categories where objects (symbolic manifolds/states) and morphisms (symbolic operations) evolve over symbolic time, driven by \(D\) and \(R\). The "Category of Symbolic Structures" (\(\catS\), Def.~\ref{definition:bk1_let_cats_be_the_category}) is explicitly dynamic.
     \item \textbf{"Physics" of Morphisms:} PS attempts to define a physics for its morphisms (operators), endowing them with properties derived from symbolic thermodynamics and the constraints of bounded observers. Functors between PS-defined categories would need to respect these physical constraints.
     \item \textbf{Emergence of Objects and Morphisms:} PS describes the emergence of symbolic manifolds (objects) and their operators (morphisms) from pre-geometric foundations, a concern not typically central to standard CT.
 \end{itemize}
@@ -234,7 +289,7 @@ PS offers a foundational, perhaps more generalized, perspective on the principle
     \item \textbf{Thermodynamic Grounding of Reward/Value:} PS's Symbolic Thermodynamics (Book II) could provide a more fundamental grounding for "reward" or "value" in terms of symbolic free energy minimization, coherence maximization, or viability within a "Symbolic Viability Domain" (\(\viabilitydomain\), Def 5.2.4). "Reward" in RL becomes a proxy for \(\Delta \freeenergy < 0\).
     \item \textbf{The Role of the Bounded Observer (\(\Obs\)):} In PS, the "reward signal" or the "value" of a state is inherently observer-relative, shaped by the agent's (\(\Obs\)'s) internal structure and perceptual horizon. This offers a nuanced view on how reward functions might be constructed or emerge.
     \item \textbf{MAP as a Multi-Agent RL Equilibrium:} Mutually Assured Progress (MAP, Book V) in PS can be seen as a specific type of cooperative multi-agent RL equilibrium, where agents learn policies that ensure mutual viability and maximize a collective "symbolic free energy."
-    \item \textbf{Calculus for Policy Evolution (Meta-Drift):} PS's concepts of Meta-Reflective Drift (\(\drift_{\mathrm{meta}}\), Def 7.8.1) could model not just the learning of a policy, but the evolution of the learning process itself, or the adaptation of the agent's fundamental goals/reward structures over longer timescales.
+    \item \textbf{Calculus for Policy Evolution (Meta-Drift):} PS's concepts of Meta-Reflective Drift (\(\drift_{\mathrm{meta}}\), cf.~\ref{definition:bk7_meta_reflective_drift__meta}) could model not just the learning of a policy, but the evolution of the learning process itself, or the adaptation of the agent's fundamental goals/reward structures over longer timescales.
 \end{itemize}
 An SRV trace could involve a simple grid-world agent.
 \begin{itemize}
@@ -269,6 +324,7 @@ Each comparison has been an act of Symbolic Reflexive Validation, aiming to refi
 This appendix is, by design, an "open" and "living" document. It represents the current state (\(M_n\)) of PS's engagement with the wider world of ideas. As Principia Symbolica itself evolves, and as new theoretical landscapes emerge, this cartography will continue to be updated and refined (\(M_{n+1}\)). The ultimate goal is not to provide a definitive, closed comparison, but to foster an ongoing, generative dialogue—a "Two-Way Street"—between PS and all other frameworks dedicated to understanding the profound mysteries of symbols, systems, and the emergence of meaning. This iterative refinement is the very essence of the "Learning Path Influence" that PS champions.
 \section*{D.X Principia Symbolica and "Titans": The Geometry of Test-Time Memorization}
 \label{sec:appD_dialogue_titans}
+Test-time memorization in LLMs is an instance of Reflective Reentry (cf.~\ref{theorem:bk4_reflective_reentry}): integrating new drift into a coherent identity under observer constraints.
 
 \subsection*{D.X.1 Core Resonance: The "Giants" Respond to "Titans"}
 \label{subsec:appD_titans_resonance}
@@ -300,6 +356,9 @@ Every act of creating a memory, of structuring information, requires work to be 
 The process described by Behrouz et al. is necessarily irreversible and thus provides empirical validation for the geometric derivation of the Arrow of Time (Sec.~\ref{sec:appC_arrow_of_time_rigorous}).
 \end{theorem}
 \begin{proof}
+\label{proof:appD_titans_as_arrow_of_time}
+\leavevmode
+
 \begin{enumerate}
     \item Let the "Titan" model be in state \(S_0\) before the prompt. The prompt acts as an external Drift operator \(\drift_p\).
     \item At test time, the model generates a memory, transitioning to state \(S_1\). This is a reflective act, \(\reflect\), that integrates \(\drift_p\). The model's full state is now \((S_1, H_1)\), where the history \(H_1\) contains the trace of the memorization act (Axiom~\ref{axiom:appC_axiom_of_memory}).
