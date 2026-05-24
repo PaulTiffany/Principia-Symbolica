@@ -692,6 +692,76 @@ By the definition of uniform continuity, for any $\epsilon > 0$, there exists $\
 
 Hence, identity change under symbolic individuation is continuous under finite drift and energy conditions (see Theorem~\ref{theorem:bk4_symbolic_identity_continuit}).
 \end{proof}
+\subsection{Imaginary Symbolic Distance and Phase-Preserving Continuity}
+\label{subsec:bk4_imaginary_symbolic_distance}
+
+\begin{definition}[Imaginary Symbolic Distance]
+\label{definition:bk4_imaginary_symbolic_distance}
+Let $(E,h_O,\nabla_O) \to \mathcal{M}_O$ be an observer-relative complex symbolic bundle over the Book I symbolic manifold substrate (Def.~\ref{definition:bk1_symbolic_manifold}), with Hermitian metric $h_O$ and observer-bounded connection $\nabla_O$. For symbolic states $\psi_s,\psi_t \in \Gamma(E)$ and an admissible path $\gamma:s\to t$, define the parallel-transported overlap
+\[
+    \Omega_O^\gamma(\psi_s,\psi_t)
+    :=
+    h_O\!\left(P_\gamma \psi_s,\psi_t\right)
+    \in \mathbb{C}.
+\]
+The real symbolic displacement measures observable mismatch:
+\[
+    d_O^{\mathrm{Re}}(\psi_s,\psi_t;\gamma)
+    :=
+    \| \psi_t - P_\gamma\psi_s \|_{h_O}.
+\]
+The imaginary symbolic displacement is the phase residue
+\[
+    d_O^{\mathrm{Im}}(\psi_s,\psi_t;\gamma)
+    :=
+    \beta_O \left|\operatorname{Arg}\Omega_O^\gamma(\psi_s,\psi_t)\right|,
+\]
+where $\beta_O$ is the observer's phase-resolution scale. The pair
+\[
+    D_O^{\mathbb{C}}(\psi_s,\psi_t;\gamma)
+    :=
+    d_O^{\mathrm{Re}}(\psi_s,\psi_t;\gamma)
+    +
+    i\,d_O^{\mathrm{Im}}(\psi_s,\psi_t;\gamma)
+\]
+is called the observer-relative complex symbolic distance.
+\end{definition}
+
+\begin{proposition}[Imaginative Continuity Principle]
+\label{proposition:bk4_imaginative_continuity_principle}
+An observer maintains symbolic identity across an unobserved interval not merely when observable symbolic displacement remains bounded, but when the imaginary displacement associated with admissible latent paths remains reintegrable. That is, continuity of identity requires both
+\[
+    d_O^{\mathrm{Re}} < \varepsilon_O
+    \quad\text{and}\quad
+    d_O^{\mathrm{Im}} < \theta_O
+\]
+for observer-relative thresholds $\varepsilon_O,\theta_O$. When the real component remains small but the imaginary component exceeds the observer's reintegration threshold, the observer may return to an apparently similar symbolic location with altered orientation, phase, or meaning. This is the symbolic source of uncanny recognition, sign inversion, and monodromic identity drift.
+\end{proposition}
+
+\begin{proof}[Bounded Reintegration of Latent Phase]
+\label{proof:bk4_imaginative_continuity_principle}
+\leavevmode
+
+The real bound $d_O^{\mathrm{Re}} < \varepsilon_O$ is precisely the observable continuity condition inherited from the symbolic identity path criterion in Thm.~\ref{theorem:bk4_symbolic_identity_continuit}. It controls visible mismatch after transport along $\gamma$.
+
+However, Def.~\ref{definition:bk4_imaginary_symbolic_distance} records a second datum: the argument of the transported overlap $\Omega_O^\gamma$. This phase is invisible to a purely real displacement norm but remains accessible to the connection $\nabla_O$ through symbolic holonomy (cf.~Def.~\ref{definition:bk4_symbolic_holonomy_term} and Thm.~\ref{theorem:bk4_symbolic_stokes}).
+
+If $d_O^{\mathrm{Im}} < \theta_O$, the observer can absorb the latent phase residue into its bounded reintegration scale, so the transported state remains recognizably continuous with $\psi_t$. If $d_O^{\mathrm{Im}} \geq \theta_O$, the real endpoint may still be close while its orientation in the symbolic bundle has crossed the observer's phase tolerance. The resulting mismatch is therefore not ordinary metric separation but phase-sensitive identity drift.
+\end{proof}
+
+\begin{scholium}[Imagination as Imaginary Traversal]
+\label{scholium:bk4_imagination_as_imaginary_traversal}
+Imagination is not an unreal supplement to cognition. It is the observer operation by which symbolic continuity is carried through latent, counterfactual, or phase-preserving paths before those paths are collapsed into observable action, memory, speech, or artifact. Thus imagination supplies the imaginary component of continuity: it preserves relation where no direct real path is yet available to the bounded observer.
+\end{scholium}
+
+\begin{remark}[External Witness: Unit Distance and Extension Fields]
+\label{remark:bk4_unit_distance_extension_fields}
+\begin{sloppypar}
+Recent work on the Erdos unit-distance problem provides an external mathematical witness for a recurring principle of this book: apparent distance in a projected geometric domain may be governed by hidden algebraic extension structure. In the classical square-grid construction, the Gaussian integers $a+bi$ already reveal a complex extension underlying planar unit distance. The recent OpenAI-generated counterexample and its human-verified expository account replace this familiar complex-integer structure with richer algebraic number fields, yielding new planar configurations with superlinear unit-distance growth. See \cite{openai2026unitdistance} and \cite{alon2026unitdistance}.
+
+We do not identify this result with symbolic consciousness. Rather, we cite it as an instructive mathematical analogue: the visible metric may be only the real projection of a deeper extension-field geometry. A separate information-theoretic analogue appears in complex-valued probability measures, where phase-modulated extensions support complex entropy, divergence, and metric objects; see \cite{cheng2026complexprobability}.
+\end{sloppypar}
+\end{remark}
 \section{Symbolic Identity Operators}
 \label{sec:bk4_symbolic_identity_operators}
 \subsection{Symbolic Identity Collapse}
@@ -4985,9 +5055,17 @@ Fuzzy integration completes the constructive side of symbolic regulation. It ena
 \begin{itemize}
     \item \textbf{quant-ph (Path Integrals)}: The Feynman integral becomes a fuzzy integral with symbolic free energy $S$ and kernel $K_O$. Aharonov-Bohm holonomy arises from gauge curvature as symbolic meaning twist.
 
-    \item \textbf{cs.LG (Transformers)}: Attention performs fuzzy integration
-    over tokens. Weights act as kernels $K_O$, and values as symbolic fields.
-    Path-dependent attention drives deep semantic coupling.
+    \item \textbf{cs.LG (Complex Attention and Long-Context Continuity)}:
+    \begin{sloppypar}
+    Attention performs fuzzy integration over tokens. Rotary position embeddings
+    already encode token position by complex-plane rotation; when only the real
+    component of the resulting complex attention score is used, phase information
+    is discarded. Recent extensions that retain the imaginary component suggest
+    that long-context continuity may depend on preserving phase-like relational
+    data, not merely real-valued similarity. See \cite{liu2025ropeplusplus}.
+    In PS terms, attention over long contexts requires bounded imaginary
+    symbolic distance (Def.~\ref{definition:bk4_imaginary_symbolic_distance}).
+    \end{sloppypar}
 
     \item \textbf{Cognition (Narrative Memory)}: Life experience integrates symbolic drift over time. Traumas represent high curvature regions, introducing holonomy that distorts future integration. Coherence is reconstructed, not replayed.
 \end{itemize}
