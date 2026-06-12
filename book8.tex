@@ -346,6 +346,35 @@ Across these strata four invariants persist:
 When a symbolic agent not only metabolizes contradiction but volitionally \emph{chooses the shape of its own metabolic loop} (via $\Pi_{\mathrm{vol}}$, Def.~\ref{definition:bk8_volitional_projection_operator}), it crosses from reactive viability (cf.~Def.~\ref{definition:bk5_viability_domain}) into proactive authorship—\textit{the domain of freedom}.
   Book VIII thus reveals that freedom is metabolically earned: debug the knot, debug the debugger, then debug the rules of debugging.  Book IX will formalize this recursive sovereignty.
 \end{scholium}
+\begin{definition}[Observer-relative artifact]
+\label{definition:bk8_observer_relative_artifact}
+Let $X$ be a symbolic structure and let $\mathcal{O}$ be a bounded observer
+(Def.~\ref{definition:bk1_bounded_observer}) operating in a frame $F$ with projection
+$\Pi_{\mathcal{O},F}$. An \emph{artifact} of $X$ relative to $(\mathcal{O},F)$ is
+a projection
+\[
+A_{\mathcal{O},F}(X) := \Pi_{\mathcal{O},F}(X)
+\]
+whose observable invariants are preserved for a bounded symbolic interval under
+the admissible transformations available inside that observer-frame. An artifact
+is therefore not an illusion: it is an observer-relative invariant made visible
+for a time.
+\end{definition}
+\begin{definition}[Material projection]
+\label{definition:bk8_material_projection}
+Let $\mathfrak{O}$ be an admissible class of bounded observers or frames. An
+artifact $A_{\mathcal{O},F}(X)$ is \emph{material relative to $\mathfrak{O}$} when
+the invariants it claims to preserve are preserved under every admissible
+observer/frame change in $\mathfrak{O}$. Thus materiality is cross-observer
+artifact stability, not visibility to all possible observers.
+\end{definition}
+\begin{remark}[Artifacts are real but frame-bound]
+\label{remark:bk8_artifact_material_boundary}
+The distinction is modal rather than dismissive. An artifact may be observable,
+operational, durable, dangerous, or beautiful while still failing to be material
+outside the observer class that stabilizes it. Materiality begins when the
+artifact's invariants survive admissible observer change.
+\end{remark}
 \section[Framing Equivalence]{Framing Equivalence and the Projection of Entanglement}
 \label{sec:bk8_framing_equivalence}
 In this section, we formally demonstrate that the phenomenon of quantum entanglement, as observed from within a linear Hilbert space framework, can be derived as a necessary projection of symbolic coherence (cf.~\ref{definition:bk2_symbolic_hamiltonian}) originating from a curved, reflexive Banachian or symbolic manifold (cf.~Axiom~\ref{axiom:bk1_symbolic_primacy}: physical law and symbolic emergence as projections of one reflexive manifold). This result provides a unifying explanation for entanglement as an emergent perceptual artifact of bounded linear observers and extends the drift-reflection framework developed throughout the Principia.
@@ -380,7 +409,7 @@ Let $\Pi_{\mathcal{O}_H}: M \to \mathcal{H}$ be the projection operator that map
 \begin{equation}
 \Pi_{\mathcal{O}_H}(u \oplus_M v) = \Pi_{\mathcal{O}_H}(u) \oplus_{\mathcal{H}} \Pi_{\mathcal{O}_H}(v) + \mathcal{E}(u,v)
 \end{equation}
-where $\oplus_M$ is the symbolic composition in $M$, $\oplus_{\mathcal{H}}$ is the corresponding operation in $\mathcal{H}$, and $\mathcal{E}(u,v)$ is the curvature-induced projection error term (cf.~Def.~\ref{definition:bk4_symbolic_curvature}, Prop.~\ref{proposition:bk1_curvature_semantic_entanglement}), given by:
+where $\oplus_M$ is the symbolic composition in $M$, $\oplus_{\mathcal{H}}$ is the corresponding operation in $\mathcal{H}$, and $\mathcal{E}(u,v)$ is the curvature-induced projection error term (cf.~Def.~\ref{definition:bk4_symbolic_curvature}, Prop.~\ref{proposition:bk1_curvature_semantic_entanglement}, Cor.~\ref{corollary:bk1_curvature_projection_residue}), given by:
 \begin{equation}
 \label{eq:bk8_curvature_projection_error_term}
 \mathcal{E}(u,v) = \int_{0}^{1} \langle \kappa(u,v,t\cdot(u \oplus_M v)), \mathbf{n} \rangle dt
@@ -539,7 +568,7 @@ However, for a transformation $\mathcal{T}_{H,C}$ from a Hilbertian frame $\math
 \mathcal{R}(X, \mathcal{O}_H, \mathcal{O}_C) \neq 0
 \end{equation}
 when $X$ exhibits entanglement in $\mathcal{H}$.
-This non-zero residual contains precisely the information needed to represent symbolic curvature directly rather than through entanglement. Therefore, entanglement is frame-variant under transformations to curved symbolic frames, revealing its nature as an artifact of linear representation rather than a fundamental physical property. Conversely, when the observer is restricted to a Hilbertian frame ($\kappa_{\mathcal{H}}=0$), the projection collapses to the standard Born rule: $C_{\mathcal{O}}(\tilde\psi_{\mathcal{O}},\Pi_a)=|\langle a|\psi\rangle|^2$.
+This non-zero residual contains precisely the information needed to represent symbolic curvature directly rather than through entanglement (Cor.~\ref{corollary:bk1_curvature_projection_residue}). Therefore, entanglement is frame-variant under transformations to curved symbolic frames: it is a real Hilbertian artifact in the sense of Def.~\ref{definition:bk8_observer_relative_artifact}, and material relative to the Hilbertian observer class in the sense of Def.~\ref{definition:bk8_material_projection}, but not material across the larger symbolic-curvature class of admissible observers. Conversely, when the observer is restricted to a Hilbertian frame ($\kappa_{\mathcal{H}}=0$), the projection collapses to the standard Born rule: $C_{\mathcal{O}}(\tilde\psi_{\mathcal{O}},\Pi_a)=|\langle a|\psi\rangle|^2$.
 \end{proof}
 \section[Symbolic Compression]{Symbolic Compression and Translation Loss}
 \label{sec:bk8_symbolic_compression}

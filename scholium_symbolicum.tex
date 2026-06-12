@@ -69,11 +69,13 @@ The \textbf{Observer} $\mathcal{O} = (N_\mathcal{O}, \{\delta^n_\mathcal{O}\}_{n
 \item Boundedness implies Self-Authorship: $\epsilon_\mathcal{O}$ emerges from $\mathcal{S}$’s dynamics
 \end{itemize}
 
-\textbf{Constitutive Bootstrap Theorem:} Every stable structure $\mathcal{S}$ generates its own observer $\mathcal{O}$ such that
+\textbf{Constitutive Bootstrap Theorem:} Every stable structure $\mathcal{S}$ determines a self-reflective core from which observer data may be extracted:
 \[
-\mathcal{O} = \lim_{n \to \infty} R^n(\mathcal{S})
+\mathcal{S}_{\mathrm{ref}} \subseteq \operatorname{Fix}(R_{\mathrm{stab}}),
+\qquad
+\mathcal{O}=\mathsf{Obs}(\mathcal{S}_{\mathrm{ref}})
 \]
-This limit exists and is finite precisely when $\mathcal{S}$ achieves \emph{reflexive closure}.
+where \(R_{\mathrm{stab}}\) is the state-level stabilization component of reflection and \(\mathsf{Obs}\) records the bounded differentiation order, internal difference operators, and resolution threshold supported by the self-reflective core.
 
 \textbf{Bridge to Formal Machinery:}
 \begin{itemize}
@@ -495,12 +497,34 @@ Therefore, $\Phi_\lambda$ satisfies the condition to be a kernel-bounded symboli
 Let \(D_\lambda : P_{<\lambda} \to P_\lambda\) be a symbolic transformation representing directional drift, and let \(R_\lambda : P_\lambda \to P_\lambda\) be a refinement or reflection operator  
 (as preliminarily introduced in Definition~\ref{definition:bk1_pre_geometric_operators_and_stages}).
 
-Then the 	extbf{stage–composite operator} at ordinal level \(\lambda\) is defined as:
+Then the \textbf{stage--composite operator} at ordinal level \(\lambda\) is defined as:
 \[
 E_\lambda := R_\lambda \circ D_\lambda : P_{<\lambda} \to P_\lambda.
 \]
 Such operators encode a two-step symbolic emergence: first a directional transformation, then a bounded symbolic refinement.
 \end{definition}
+
+\begin{axiom}[Summable Resolution Decay]
+\label{axiom:bk1_summable_resolution_decay}
+Let \((\lambda_n)_{n\in\mathbb{N}}\) be a cofinal sequence in the emergence
+tower with \(\lambda_n<\lambda_{n+1}<\Omega\) and
+\(\sup_n\lambda_n=\Omega\). Relative to a bounded observer \(O\), assume there
+exists a positive sequence \((\eta_n)_{n\in\mathbb{N}}\) such that
+\[
+\sum_{n=0}^{\infty}\eta_n < \infty
+\]
+and, along this cofinal tower,
+\[
+d_O(E_{\lambda_n}(s),s)
+= \lVert K_O * [E_{\lambda_n}(s)-s]\rVert
+\leq \eta_n
+\quad\text{for all observable }s\in P_{<\lambda_n}.
+\]
+Thus later-stage refinements are not merely bounded one at a time; their
+observer-visible tail is summable. No claim is made here for emergence towers
+of uncountable cofinality except through such selected cofinal sequences.
+\end{axiom}
+
 \begin{lemma}[Observer–Bounded Emergence Constraint]
 \label{lemma:bk1_observer_bounded_emergence_constraint}
 Let 
@@ -508,7 +532,7 @@ Let
 O=(N_O,\{\delta^{\,n}_{O}\}_{n=1}^{N_O},\varepsilon_O)
 \)
 be a bounded observer with resolution kernel \(K_O\) and scalar threshold \(\delta_O\) (Definition~\ref{definition:bk1_bounded_observer}).  
-For every ordinal \(\lambda<\Omega\), define the stage–composite operator  
+For every ordinal \(\lambda<\Omega\), define the stage--composite operator
 \[
   E_\lambda := R_\lambda \circ D_\lambda : P_{<\lambda} \longrightarrow P_\lambda,
 \]
@@ -524,29 +548,32 @@ Then
         \end{equation}
         (This satisfies the kernel-bounded approximation condition in Definition~\ref{definition:bk1_kernel_based_bounded_symbolic_approximation}.)
 
-  \item[\textup{(ii)}]  \textbf{Uniform Cauchy tower.}\;
+  \item[\textup{(ii)}]  \textbf{Cauchy tower under summable decay.}\;
         Endow every \(P_\lambda\) with the observer metric
         \(
           d_O(x,y) := \lVert K_O * (x - y) \rVert.
         \)
-        Equation implies
+        Along any cofinal sequence \((\lambda_n)\) satisfying
+        Ax.~\ref{axiom:bk1_summable_resolution_decay}, the transition maps obey
         \[
-          d_O(f_{\lambda\mu}(x), x) \le 2\delta_O
+          d_O(f_{\lambda_m\lambda_n}(x),x)
+          \leq \sum_{j=m}^{n-1}\eta_j
           \quad
-          \forall\,x \in P_\lambda,\;
-          \lambda < \mu < \Omega,
+          \forall\,x \in P_{\lambda_m},\;
+          m<n,
         \]
-        so the directed system
+        so the cofinal directed subsystem
         \(
-          (P_\lambda, f_{\lambda\mu})_{\lambda<\mu<\Omega}
+          (P_{\lambda_n}, f_{\lambda_m\lambda_n})_{m<n}
         \)
-        is uniformly \(\delta_O\)-Cauchy  
-        (see also the formal directed emergence structure in Definition~\ref{definition:bk1_directed_system_of_emergence}),  
-        and the proto-symbolic space
+        is \(d_O\)-Cauchy in the usual tail sense
+        (see also the formal directed emergence structure in Definition~\ref{definition:bk1_directed_system_of_emergence}). Its \(d_O\)-completion
         \(
-          P = \varinjlim_{\lambda<\Omega} P_\lambda
+          \overline{P}_O
         \)
-        is \(d_O\)-complete (as defined in Definition~\ref{definition:bk1_proto_symbolic_space}).
+        supplies the observer-completed proto-symbolic space associated with
+        the colimit \(P=\varinjlim_{\lambda<\Omega}P_\lambda\)
+        (Definition~\ref{definition:bk1_proto_symbolic_space}).
 \end{enumerate}
 \end{lemma}
 \begin{proof}[Bounded Approximation Guarantees Drift Convergence]
@@ -565,16 +592,33 @@ The triangle inequality for the observer norm then yields the overall bound. For
 \[
 f_{\lambda\mu} = E_{\mu-1}\circ\dots\circ E_\lambda,
 \]
-where each \(E_\lambda\) is the stage–composite operator (Definition~\ref{definition:bk1_stage_composite_operator}). Iterating this bound as established in Lemma~\ref{lemma:bk1_observer_bounded_emergence_constraint} preserves the bound \(2\delta_O\), yielding the Cauchy property and completeness.
+where each \(E_\lambda\) is the stage--composite operator (Definition~\ref{definition:bk1_stage_composite_operator}) in the successor-indexed case; along a cofinal sequence the same expression is read as composition through the intervening transition maps.
+
+The one-step estimate alone does not give a uniform bound for arbitrary long
+composites. Under Ax.~\ref{axiom:bk1_summable_resolution_decay}, however, the
+observer-visible displacement of the composite from \(\lambda_m\) to
+\(\lambda_n\) is bounded by the telescoping tail:
+\[
+d_O(f_{\lambda_m\lambda_n}(x),x)
+\leq \sum_{j=m}^{n-1}d_O(E_{\lambda_j}(x_j),x_j)
+\leq \sum_{j=m}^{n-1}\eta_j,
+\]
+where \(x_j=f_{\lambda_m\lambda_j}(x)\). Since \(\sum_j\eta_j<\infty\), the
+tails \(\sum_{j=m}^{\infty}\eta_j\) tend to zero. Hence the cofinal tower is
+Cauchy in \(d_O\), and its observer-completed limit exists in
+\(\overline{P}_O\).
 \end{proof}
 \begin{scholium}[Emergence Envelope]
 \label{scholium:bk1_emergence_envelope}
-To a bounded observer (Def.~\ref{definition:bk1_bounded_observer}), the entire tower of emergent symbolic structures (Def.~\ref{definition:bk1_pre_geometric_operators_and_stages}) unfolds inside an invariant
-\emph{observer envelope} of radius \(2\delta_O\) (in the metric \(d_O\)) about any previously
-stabilized stage.  Curvature, dimensional refinement, and horizon bifurcations may still arise, but
-their trajectories remain globally Lipschitz‑constrained by the epistemic limits encoded in
-\(O\).  This envelope is the geometric shadow of observer‑boundedness that guides every subsequent
-theorem.
+To a bounded observer (Def.~\ref{definition:bk1_bounded_observer}), the tower of
+emergent symbolic structures (Def.~\ref{definition:bk1_pre_geometric_operators_and_stages})
+unfolds through finite one-step observer envelopes, and along any cofinal tower
+satisfying Ax.~\ref{axiom:bk1_summable_resolution_decay} its unresolved tail
+shrinks to zero in \(d_O\). Curvature, dimensional refinement, and horizon
+bifurcations may still arise, but their observer-visible refinements must become
+summably finer for a completed proto-symbolic limit to be available. This
+tail-envelope is the geometric shadow of observer-boundedness that guides the
+subsequent smoothness construction.
 \end{scholium}
 \begin{scholium}[Epistemic Humility]
 \label{scholium:bk1_epistemic_humility}
@@ -652,20 +696,79 @@ Given Axiom~\ref{axiom:bk1_axiomata_prima}, the stagewise symbolic structures ar
 \subsection{Proof by Elimination: Necessity of the Dual Horizon Structure}
 \label{subsec:bk1_necessity_of_the_dual_horizon_structure}
 
+\begin{definition}[Effective Horizon Signature]
+\label{definition:bk1_effective_horizon_signature}
+Let $\mathcal{U}$ be a symbolic universe sustaining a bounded observer
+\(\mathcal{O}\) on a nonempty observer domain \(\Omega_{\mathcal{O}}\)
+(Def.~\ref{definition:bk1_bounded_observer}). For any horizon component
+\(H\) meeting \(\Omega_{\mathcal{O}}\), define its observer-visible curvature
+fluxes by
+\[
+G_{\mathcal{O}}(H)
+  :=\int_{H\cap\Omega_{\mathcal{O}}}\max(\kappa,0)\,d\sigma,
+\qquad
+C_{\mathcal{O}}(H)
+  :=\int_{H\cap\Omega_{\mathcal{O}}}\max(-\kappa,0)\,d\sigma,
+\]
+where \(\kappa\) is symbolic curvature
+(Def.~\ref{definition:bk1_symbolic_riemann_tensor}) and \(d\sigma\) is the
+induced horizon measure. The effective horizon signature is
+\[
+\Sigma_{\mathcal{O}}(\mathcal{U})
+\subseteq \{+,-\},
+\]
+with \(+\in\Sigma_{\mathcal{O}}(\mathcal{U})\) iff some horizon component has
+\(G_{\mathcal{O}}(H)>0\), and
+\(-\in\Sigma_{\mathcal{O}}(\mathcal{U})\) iff some horizon component has
+\(C_{\mathcal{O}}(H)>0\). Multiple horizons and sign-changing horizons are
+therefore represented by their effective observer-visible sign content.
+\end{definition}
+
+\begin{definition}[Bounded Reflexive Emergence]
+\label{definition:bk1_bounded_reflexive_emergence}
+A symbolic universe \(\mathcal{U}\) supports bounded reflexive emergence for
+\(\mathcal{O}\) when there exist horizon components \(H_G,H_D\) meeting a
+common nonempty observer domain \(\Omega_{\mathcal{O}}\) such that
+\[
+G_{\mathcal{O}}(H_G)>0,\qquad C_{\mathcal{O}}(H_D)>0,
+\]
+and the mixed emergence functional
+\[
+\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})
+  :=G_{\mathcal{O}}(H_G)\,C_{\mathcal{O}}(H_D)
+\]
+exceeds an observer threshold \(\tau_E>0\). The positive factor supplies
+observer-visible novelty; the negative factor supplies stabilizing reflective
+closure through \(R_{\mathrm{stab}}\)
+(Def.~\ref{definition:bk1_reflection_operator};
+Cor.~\ref{corollary:bk1_fixed_point}).
+\end{definition}
+
 \begin{theorem}[Dual Horizon Necessity Theorem]
 \label{theorem:bk1_dual_horizon_necessity_theorem}
-Let $\mathcal{U}$ be a symbolic universe sustaining bounded observers within a domain $\Omega$ (cf.~Def.~\ref{definition:bk1_bounded_observer}), whose stagewise structures cohere into a categorical colimit (cf.~Proof~\ref{proof:bk1_colimit_yields_categoric_structure}). Then $\mathcal{U}$ supports reflexive emergence if and only if it possesses both:
-\begin{enumerate}
-  \item A generative horizon $H_G$ characterized by positive symbolic curvature ($\kappa > 0$), governing novelty-generation dynamics (cf.~Def.~\ref{definition:bk1_symbolic_riemann_tensor}).
-  \item A dissipative horizon $H_D$ characterized by negative symbolic curvature ($\kappa < 0$), governing coherence-constraining dynamics (cf.~Def.~\ref{definition:bk1_symbolic_manifold}).
-\end{enumerate}
+Let $\mathcal{U}$ be a symbolic universe sustaining bounded observers within a
+domain $\Omega_{\mathcal{O}}$ (cf.~Def.~\ref{definition:bk1_bounded_observer}),
+whose stagewise structures cohere into a categorical colimit
+(cf.~Proof~\ref{proof:bk1_colimit_yields_categoric_structure}). Then
+\(\mathcal{U}\) supports bounded reflexive emergence for \(\mathcal{O}\) iff it
+possesses an effective dual horizon structure:
+\[
+\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}
+\]
+with generative and dissipative fluxes satisfying
+\[
+\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})\geq \tau_E.
+\]
+Equivalently, reflexive emergence requires at least one observer-visible
+positive-curvature novelty channel and at least one observer-visible
+negative-curvature stabilization channel on a shared bounded domain.
 \end{theorem}
 \begin{lemma}[Horizon Characterization]
 \label{lemma:bk1_horizon_characterization}
 The generative horizon $H_G$ and dissipative horizon $H_D$ exhibit distinct, complementary properties fundamental to symbolic dynamics:
 \begin{enumerate}
   \item $H_G$ is associated with generative symbolic drift, represented by a field $D$ (cf.~Def.~\ref{definition:bk1_drift_field}), such that locally $\nabla \cdot D > 0$ (positive divergence, signifying expansion in possibility space).
-  \item $H_D$ is associated with constraining symbolic reflection, represented by a field $R$ (cf.~Def.~\ref{definition:bk1_reflection_operator}), such that locally $\nabla \cdot R < 0$ (negative divergence, signifying convergence of informational flows).
+  \item $H_D$ is associated with constraining symbolic stabilization, represented by the state-level component \(R_{\mathrm{stab}}\) (cf.~Def.~\ref{definition:bk1_reflection_operator}), such that observer-visible negative curvature supplies positive stabilization flux \(C_{\mathcal{O}}(H_D)>0\).
   \item Together, they define the bounded observer domain $\Omega = \{x \in \mathcal{U} : H_G \prec x \prec H_D\}$, where $\prec$ denotes symbolic containment relative to the horizons, establishing the stage for emergence (cf.~Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}, Def.~\ref{definition:bk1_symbolic_manifold}).
 \end{enumerate}
 \end{lemma}
@@ -674,51 +777,46 @@ The generative horizon $H_G$ and dissipative horizon $H_D$ exhibit distinct, com
 \label{proof:bk1_proof_of_dual_horizon_necessity_theorem}
 \leavevmode
 
-We proceed by elimination, demonstrating that configurations lacking the dual horizon structure fail to satisfy the conditions for reflexive emergence as established in Scholium~\ref{scholium:bk1_epistemic_humility}. Let $\mathcal{S}$ be a symbolic system within $\mathcal{U}$, characterized by its horizon configuration $\mathcal{H}$. We examine the exhaustive cases:
+\textbf{Necessity.}
+Assume \(\mathcal{U}\) supports bounded reflexive emergence for
+\(\mathcal{O}\). By Def.~\ref{definition:bk1_bounded_reflexive_emergence},
+there are horizon components \(H_G,H_D\) on a common nonempty
+\(\Omega_{\mathcal{O}}\) with
+\[
+G_{\mathcal{O}}(H_G)>0,\qquad C_{\mathcal{O}}(H_D)>0.
+\]
+By Def.~\ref{definition:bk1_effective_horizon_signature}, this is exactly the
+statement that \(+\in\Sigma_{\mathcal{O}}(\mathcal{U})\) and
+\(-\in\Sigma_{\mathcal{O}}(\mathcal{U})\). Hence
+\(\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}\). The same definition gives
+\(\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})\geq\tau_E\).
 
-\textbf{Case A:} $\mathcal{S}$ admits only a dissipative horizon ($\mathcal{H} = \{H_D\}$).  
-In this configuration, the dynamics are dominated by negative symbolic curvature ($\kappa < 0$ near $H_D$, with no counteracting positive curvature source). The system tends towards:
-\begin{align}
-\lim_{t \to \infty} D(t) &= \mathbf{0} \\
-\nabla \cdot R &< 0
-\end{align}
-By the Reflection Constraint Principle (Scholium~\ref{scholium:bk1_epistemic_humility}), such a system undergoes monotonic informational compression, collapsing towards minimal complexity. The complexity differential $\Delta\Phi$, which arises from the interplay between generative and dissipative forces across horizons, cannot achieve the emergence threshold $\tau_E$ in the absence of the generative pole $H_G$:
-\begin{align}
-\Delta\Phi(D, R) < \tau_E
-\end{align}
-Without generative expansion to supply novelty, the system settles into stasis, precluding reflexive emergence.
+\textbf{Failure of single-sign signatures.}
+If \(+\notin\Sigma_{\mathcal{O}}(\mathcal{U})\), then
+\(G_{\mathcal{O}}(H)=0\) for every horizon component visible to
+\(\mathcal{O}\), so no observer-visible novelty channel exists and
+\(\Delta\Phi_{\mathcal{O}}=0\). If
+\(-\notin\Sigma_{\mathcal{O}}(\mathcal{U})\), then
+\(C_{\mathcal{O}}(H)=0\) for every visible horizon component, so no
+stabilizing reflective closure channel exists and again
+\(\Delta\Phi_{\mathcal{O}}=0\). If neither sign is present, both failures
+hold. A constant nonzero drift field does not evade this conclusion: without
+positive horizon flux paired with negative stabilization flux it supplies
+transport, not bounded reflexive emergence.
 
-\textbf{Case B:} $\mathcal{S}$ admits only a generative horizon ($\mathcal{H} = \{H_G\}$).  
-Here, the dynamics are dominated by positive symbolic curvature ($\kappa > 0$ near $H_G$). The system exhibits unbounded expansion:
-\begin{align}
-\lim_{t \to \infty} ||D(t)|| &= \infty \\
-\nabla \cdot R &\ge 0
-\end{align}
-Without $H_D$, the reflection field $R$ lacks convergence. By the Quadratic Manifold Theorem (Scholium~\ref{scholium:bk1_epistemic_humility}), this leads to:
-\begin{align}
-\mu(\mathcal{S}_t) \to \infty \text{ as } t \to \infty
-\end{align}
-This violates the Coherence Postulate (Scholium~\ref{scholium:bk1_epistemic_humility}):
-\begin{align}
-\lim_{t \to \infty} \text{res}(\mathcal{S}_t) = 0
-\end{align}
-Reflexive structures require closure, which is lost under unbounded symbolic drift.
-
-\textbf{Case C:} $\mathcal{S}$ admits neither horizon type ($\mathcal{H} = \emptyset$).  
-Symbolic curvature vanishes throughout:
-\begin{align}
-\kappa &= 0 \\
-D(t) &= D(0) \\
-\nabla \cdot R &= 0
-\end{align}
-No horizon-induced gradients implies no drift or reflection dynamics. By the Dynamic Emergence Postulate (Scholium~\ref{scholium:bk1_epistemic_humility}), emergence requires symbolic flux. A system with $\partial D/\partial t = 0$ remains inert.
-
-\textbf{Therefore,} by elimination hereinabove, only the dual horizon configuration $\mathcal{H} = \{H_G, H_D\}$ permits:
-\begin{align}
-\Omega &= \{x \in \mathcal{S} : H_G \prec x \prec H_D\} \neq \emptyset \\
-\exists t \text{ such that } \Delta\Phi(D(t), R(t)) &\geq \tau_E
-\end{align}
-This dual configuration balances novelty and coherence, supporting the symbolic conditions necessary for reflexive emergence (cf.~Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}, Defs.~\ref{definition:bk1_drift_field}, \ref{definition:bk1_reflection_operator}, \ref{definition:bk1_symbolic_riemann_tensor}).
+\textbf{Sufficiency.}
+Conversely, assume \(\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}\) and
+\(\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})\geq\tau_E\). By the definition
+of the effective signature, there exist visible horizon components \(H_G,H_D\)
+with \(G_{\mathcal{O}}(H_G)>0\) and \(C_{\mathcal{O}}(H_D)>0\). The positive
+flux supplies novelty-generation through drift \(D\)
+(Def.~\ref{definition:bk1_drift_field}); the negative flux supplies
+state-level stabilization through \(R_{\mathrm{stab}}\)
+(Def.~\ref{definition:bk1_reflection_operator};
+Cor.~\ref{corollary:bk1_fixed_point}). Since the mixed emergence functional
+meets the threshold \(\tau_E\), all clauses of
+Def.~\ref{definition:bk1_bounded_reflexive_emergence} are satisfied. Therefore
+\(\mathcal{U}\) supports bounded reflexive emergence.
 \end{proof}
 \begin{corollary}[Horizon Duality Principle]
 \label{corollary:bk1_horizon_duality_principle}
@@ -867,21 +965,47 @@ Formally: Any stable symbolic structure $\mathcal{S}$ necessarily generates boun
 
 \begin{theorem}[Constitutive Bootstrap Theorem]
 \label{theorem:bk1_constitutive_bootstrap}
-Every stable symbolic structure $\mathcal{S}$ with reflection operator $\reflect$ (Def.~\ref{definition:bk1_reflection_operator}; cf.~Scholium~\ref{scholium:bk1_constitutive_reflex}) generates its own observer $\mathcal{O}$ such that:
-\begin{align}
-\mathcal{O} = \lim_{n \to \infty} \reflect^n(\mathcal{S})
-\end{align}
-where the limit exists in the topology of symbolic convergence.
+Every stable symbolic structure $\mathcal{S}$ with reflection structure
+\(\reflect\) (Def.~\ref{definition:bk1_reflection_operator};
+cf.~Scholium~\ref{scholium:bk1_constitutive_reflex}) determines a maximal
+self-reflective substructure
+\[
+\mathcal{S}_{\mathrm{ref}}
+\subseteq
+\operatorname{Fix}(R_{\mathrm{stab}})
+\]
+relative to the state-level stabilization component \(R_{\mathrm{stab}}\).
+The associated bounded observer is not literally equal to a limit of structures;
+it is extracted from this self-reflective core by
+\[
+\mathsf{Obs}(\mathcal{S}_{\mathrm{ref}})
+:=
+\bigl(
+N_{\mathcal{S}_{\mathrm{ref}}},
+\{\delta_{\mathcal{S}_{\mathrm{ref}}}^{\,n}\}_{n=1}^{N_{\mathcal{S}_{\mathrm{ref}}}},
+\epsilon_{\mathcal{S}_{\mathrm{ref}}}
+\bigr),
+\]
+where \(N_{\mathcal{S}_{\mathrm{ref}}}\) is the maximal differentiation order
+supported on \(\mathcal{S}_{\mathrm{ref}}\), the
+\(\delta_{\mathcal{S}_{\mathrm{ref}}}^{\,n}\) are the internal difference
+operators stable on that core, and \(\epsilon_{\mathcal{S}_{\mathrm{ref}}}\)
+is the induced resolution threshold. Thus \(\mathcal{O}
+=\mathsf{Obs}(\mathcal{S}_{\mathrm{ref}})\) is well typed as a bounded-observer
+triple (Def.~\ref{definition:bk1_bounded_observer}).
 
-\textbf{Proof Sketch:} 
+\begin{proof}[Extraction from Reflective Closure]
+\label{proof:bk1_constitutive_bootstrap_extraction}
+\leavevmode
 \begin{enumerate}
 \item \textbf{Stability Requirement}: For $\mathcal{S}$ to be stable, it must maintain coherence under perturbations, requiring internal differentiation capacity.
-\item \textbf{Reflection Necessity}: Stability demands $\reflect: \mathcal{S} \rightarrow \mathcal{S}$ to detect and correct boundary violations.
-\item \textbf{Iterative Refinement}: Each application $\reflect^n(\mathcal{S})$ refines the system's self-knowledge and boundary discrimination.
-\item \textbf{Observer Emergence}: The limit $\lim_{n \to \infty} \reflect^n(\mathcal{S})$ converges to the maximal self-reflective subset—the observer.
+\item \textbf{Reflection Necessity}: Stability demands a state-level stabilization \(R_{\mathrm{stab}}\) to detect and correct boundary violations without identifying this stabilization with the tangent mirror \(R_{\mathrm{mir}}\).
+\item \textbf{Reflective Closure}: By Cor.~\ref{corollary:bk1_fixed_point}, the stabilized image of \(R_{\mathrm{stab}}\) lies in \(\operatorname{Fix}(R_{\mathrm{stab}})\). Let \(\mathcal{S}_{\mathrm{ref}}\) be the maximal substructure of \(\mathcal{S}\) contained in this fixed locus and closed under the internal differentiations available to \(\mathcal{S}\).
+\item \textbf{Observer Extraction}: The tuple of maximal differentiation order, stable internal difference operators, and induced resolution threshold on \(\mathcal{S}_{\mathrm{ref}}\) has exactly the type required by Def.~\ref{definition:bk1_bounded_observer}. Hence \(\mathsf{Obs}(\mathcal{S}_{\mathrm{ref}})\) is a bounded observer generated by \(\mathcal{S}\).
 \end{enumerate}
+\end{proof}
 
-\textbf{Cross-Field Proof Elements:}
+\textbf{Interpretive correspondences:}
 \begin{itemize}
 \item \textbf{quant-ph}: Quantum Darwinism—stable states emerge through environmental decoherence and measurement
 \item \textbf{math-ph}: Fixed-point theorems for geometric flows—stable configurations arise from iterative curvature evolution
@@ -921,7 +1045,7 @@ Axiom~\ref{axiom:bk1_axiomata_prima} through the stage tower of $\catS$
     is the stabilized limit of effective directional tendencies
     (proto-drift fields $\vec{D}_\lambda$), themselves emergent effects of
     generative operators $D_\lambda$.
-    \item \textbf{Reflection} ($R$): The ultimate smooth contraction $R: M \to M$ arises as the stabilized limit of the pre-geometric stabilization operators $R_\lambda$.
+    \item \textbf{Reflection} ($R$): The tangent mirror \(R_{\mathrm{mir}}\) and state-level stabilization \(R_{\mathrm{stab}}\) arise from the pre-geometric stabilization operators \(R_\lambda\), with contraction or convergence supplied only by separate descent hypotheses.
     \item \textbf{Smoothness}: The smooth manifold structure itself emerges through the limiting process $\lambda \to \Omega$ applied to the pre-geometric structures $P_\lambda$ and their relations, not by initial postulation.
 \end{enumerate}
 \end{axiom}
@@ -1016,15 +1140,21 @@ A drift field $D$ is a smooth vector field on $\mathcal{S}$ such that \( D: \mat
 \begin{definition}[Reflection Operator]
 \label{definition:bk1_reflection_operator}
 Let $\mathcal{S}$ be a symbolic manifold as defined in Def.~\ref{definition:bk1_symbolic_manifold}.
-The reflection operator \( R: T\mathcal{S} \rightarrow T\mathcal{S} \) is the stabilising counterpart to the drift field (Def.~\ref{definition:bk1_drift_field}), encoding the capacity for self-reference that arises necessarily from Axiom~\ref{axiom:bk1_axiomata_prima}. It is a smooth fiber-preserving map on the tangent bundle satisfying:
+The reflection structure is the stabilising counterpart to the drift field
+(Def.~\ref{definition:bk1_drift_field}), encoding the capacity for
+self-reference that arises necessarily from Axiom~\ref{axiom:bk1_axiomata_prima}.
+It has two typed components:
 \begin{enumerate}
-    \item \textbf{Involution:} \( R^2 = \text{Id} \) (perfect reflection)
-    \item \textbf{Isometry:} \( g(Rv, Rw) = g(v, w) \) for all \( v, w \in T_s\mathcal{S} \) (structure preservation)
-    \item \textbf{Non-triviality:} \( R \neq \pm\text{Id} \) (genuine reflection, not mere scaling)
+    \item \textbf{Mirror component:} \(R_{\mathrm{mir}}:T\mathcal{S}\rightarrow T\mathcal{S}\) is a smooth fiber-preserving tangent map satisfying \(R_{\mathrm{mir}}^2=\mathrm{Id}\), \(g(R_{\mathrm{mir}}v,R_{\mathrm{mir}}w)=g(v,w)\), and \(R_{\mathrm{mir}}\neq \pm\mathrm{Id}\). This component preserves orientation data and carries the involutive mirror structure.
+    \item \textbf{Stabilization component:} \(R_{\mathrm{stab}}:\mathcal{S}\rightarrow\mathcal{S}\) is the state-level stabilization induced by the stage operators \(R_\lambda\) of Def.~\ref{definition:bk1_pre_geometric_operators_and_stages}. It is idempotent on stabilized states, \(R_{\mathrm{stab}}^2=R_{\mathrm{stab}}\), and its fixed locus represents reflective closure.
 \end{enumerate}
+The symbol \(R\) or \(\reflect\) denotes the component determined by its domain:
+tangent-level formulas use \(R_{\mathrm{mir}}\), while state-level stabilization
+and iteration use \(R_{\mathrm{stab}}\). Metric contraction is not part of this
+definition; convergence requires additional descent data.
 \end{definition}
 
-The reflection operator encodes the capacity for self-reference that distinguishes symbolic systems from mere dynamical systems. Its involution property ensures that reflection is a genuine reversal rather than a progressive transformation, while the isometry condition guarantees that reflection preserves the essential geometric relationships between symbolic directions. Together, the drift field \( D \) and reflection operator \( R \) define the generative and stabilizing dynamics on the symbolic manifold. Their interplay—captured formally through divergence, involution, and isometric structure—underpins the horizon dynamics essential for reflexive emergence.
+The reflection structure encodes the capacity for self-reference that distinguishes symbolic systems from mere dynamical systems. Its mirror component preserves the essential geometric relationships between symbolic directions, while its stabilization component consolidates state-level coherence. Together, the drift field \( D \) and reflection structure \( R \) define the generative and stabilizing dynamics on the symbolic manifold. Their interplay underpins the horizon dynamics essential for reflexive emergence.
 
 
 \subsection{Observer Horizons and Bounded Symbolic Access}
@@ -1173,59 +1303,143 @@ This lemma reveals that symbolic contradictions are not obstacles to be eliminat
 \subsection{Necessity of Higher-Order Geometric Structure}
 \label{subsec:bk1_necessity_higher_order_structure}
 
+\begin{lemma}[Contextual meaning is non-separable]
+\label{lemma:bk1_contextual_nonseparability}
+Work in a chart near an accessible state $s_0$, with state coordinate $\xi = s-s_0$ and
+context coordinate $\chi = c-c_0$ (the horizon and contradiction data of
+Defs.~\ref{definition:bk1_symbolic_contradiction}, \ref{definition:bk1_emergence_event}),
+and let $\mathcal{U}(\xi,\chi)$ be the smooth update residual after pure drift is
+subtracted. Call the representation \emph{context-free} (flat) at $s_0$ when the update is
+additively separable, $\mathcal{U}(\xi,\chi)=A(\xi)+B(\chi)$, so that the dynamical effect
+$\partial_\xi\mathcal{U}$ of a state change carries no dependence on the context $\chi$.
+Call the update \emph{contextual} -- the defining property of reflexive,
+contradiction-driven meaning (Def.~\ref{definition:bk1_reflection_operator},
+Def.~\ref{definition:bk1_emergence_event}) -- when a state change's effect is genuinely
+modulated by context. Then
+\[
+\text{contextual at } s_0 \quad\Longleftrightarrow\quad D_\xi D_\chi\,\mathcal{U}(0,0)\neq 0,
+\]
+and no context-free representation can carry contextual meaning.
+\end{lemma}
+
+\begin{proof}[Separable updates are exactly the context-free ones]
+\label{proof:bk1_contextual_nonseparability}
+\leavevmode
+If $\mathcal{U}(\xi,\chi)=A(\xi)+B(\chi)$ then $\partial_\xi\mathcal{U}=A'(\xi)$ carries no
+$\chi$-dependence, so $\partial_\chi\partial_\xi\mathcal{U}\equiv 0$ and a state change's
+effect is the same in every context -- the update is non-contextual. Conversely, if
+$D_\xi D_\chi\mathcal{U}(0,0)\neq 0$ then $\partial_\xi\mathcal{U}$ varies with $\chi$ near
+$s_0$, so $\mathcal{U}$ admits no additive decomposition $A(\xi)+B(\chi)$ -- any such
+decomposition forces the mixed derivative to vanish identically -- and the state's effect
+is then genuinely context-modulated, which is contextual meaning. The two conditions
+coincide. A flat representation is separable by construction, hence has
+$D_\xi D_\chi\mathcal{U}\equiv 0$, and so cannot realize it.
+\end{proof}
+
 \begin{theorem}[Quadratic Structure Necessity]
 \label{theorem:bk1_quadratic_structure_necessity}
-Any symbolic system $(\mathcal{S}, D, R, H_G, H_D)$ that supports horizon-relative novelty, reflexive identity, and contradiction-driven emergence must admit a quadratic representational geometry. Specifically, there exists a rank-2 tensor field $Q$ on $\mathcal{S}$ such that the symbolic dynamics can be expressed as:
+Any symbolic system $(\mathcal{S}, D, R, H_G, H_D)$ that supports
+horizon-relative novelty, reflexive identity, and contradiction-driven emergence
+in the following operational sense must admit a quadratic representational
+geometry: at some accessible state \(s_0\), the local update residual depends
+nonseparably on both symbolic state and contextual data. More precisely, let
 \[
-\frac{ds}{dt} = D(s) + Q(s, \cdot)(R \circ D)(s)
+c=(d_G,d_D,\mathcal{I})
 \]
-where $Q(s, \cdot): T_s\mathcal{S} \to T_s\mathcal{S}$ is a quadratic form in the symbolic state.
+collect the distances to the generative and dissipative horizons and the local
+contradiction intensity (Defs.~\ref{definition:bk1_symbolic_contradiction},
+\ref{definition:bk1_emergence_event}). In local coordinates
+\(\xi=s-s_0\) and \(\chi=c-c_0\), let
+\(\mathcal{U}(\xi,\chi)\) denote the residual update after subtracting the
+pure drift term \(D\). If the mixed derivative
+\[
+D_\xi D_\chi \mathcal{U}(0,0)\neq 0
+\]
+is nonzero -- equivalently, by Lemma~\ref{lemma:bk1_contextual_nonseparability}, if the
+update is \emph{contextual} at \(s_0\), so a state change's effect is genuinely modulated
+by context, which is the hypothesis rather than an extra analytic assumption -- then there
+exists a nonzero rank-2 tensor \(Q_{s_0}\) on the combined
+state-context space \(T_{s_0}\mathcal{S}\oplus C_{s_0}\) such that, to second
+order,
+\[
+\frac{ds}{dt}
+=D(s)+Q_{s_0}\bigl((\xi,\chi),(\xi,\chi)\bigr)
++O(\|(\xi,\chi)\|^3).
+\]
+Thus the minimal local representation capable of carrying contextual emergence
+contains a bilinear, hence quadratic, coupling term.
 
 Here:
 \begin{itemize}
     \item $\mathcal{S}$ is the symbolic manifold (Def.~\ref{definition:bk1_symbolic_manifold})
     \item $D$ is the drift field (Def.~\ref{definition:bk1_drift_field})
-    \item $R$ is the reflection operator (Def.~\ref{definition:bk1_reflection_operator})
+    \item $R$ is the typed reflection structure (Def.~\ref{definition:bk1_reflection_operator})
     \item Horizon structures $H_G, H_D$ derive from the dual horizon model (Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem})
-    \item Reflexive identity is inherited from symbolic identity carriers (cf.~Definition~\ref{definition:bk1_let_cats_be_the_category}).
+    \item Reflexive identity is extracted from reflective closure (Thm.~\ref{theorem:bk1_constitutive_bootstrap}).
     \item Contradiction-driven emergence is formalized via emergence events (Def.~\ref{definition:bk1_emergence_event})
 \end{itemize}
 \end{theorem}
 
-\begin{proof}[Geometric Necessity via Curvature Analysis]
+\begin{proof}[Quadratic Necessity from Mixed Contextual Coupling]
 \label{proof:bk1_geometric_necessity_curvature}
 \leavevmode
 
-We establish necessity by demonstrating that linear representations cannot support the required properties.
-
-\textbf{Step 1: Reflexive Identity Requires Non-Linear Coupling} \\
-Let $\mathcal{I}_s$ denote the symbolic identity structure at state $s$. For reflexive identity, the system must satisfy:
+\textbf{Step 1: Split pure drift from contextual residual.}
+Work in a chart near \(s_0\). The pure drift contribution is already accounted
+for by \(D(s)\) (Def.~\ref{definition:bk1_drift_field}). The remaining update
+is a smooth residual
 \[
-R(\mathcal{I}_s) = \mathcal{I}_s + \delta(\mathcal{I}_s, s)
+\mathcal{U}: T_{s_0}\mathcal{S}\oplus C_{s_0}\to T_{s_0}\mathcal{S},
 \]
-where $\delta$ represents identity-dependent modification. If the coupling were linear, we would have $\delta(\mathcal{I}_s, s) = A \cdot \mathcal{I}_s + B \cdot s$ for some linear operators $A, B$. But this leads to the contradiction that $R(\mathcal{I}_s) = (I + A)\mathcal{I}_s + B \cdot s$, which cannot equal $\mathcal{I}_s$ for non-trivial $A, B$ while maintaining the involution property $R^2 = \text{Id}$ (Def.~\ref{definition:bk1_reflection_operator}).
+where \(C_{s_0}\) is spanned locally by the horizon and contradiction
+coordinates \((d_G,d_D,\mathcal{I})\). Reflexive identity supplies stable
+state coordinates through Thm.~\ref{theorem:bk1_constitutive_bootstrap};
+horizon-relative novelty and contradiction-driven emergence supply the
+context coordinates through Defs.~\ref{definition:bk1_symbolic_contradiction}
+and \ref{definition:bk1_emergence_event}.
 
-\textbf{Step 2: Horizon-Relative Novelty Demands Context-Dependent Dynamics} \\
-Horizon-relative novelty requires that the drift field $D$ (Def.~\ref{definition:bk1_drift_field}) behave differently depending on the observer's position relative to the horizons $H_G$ and $H_D$, as formalized in Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}. This can be expressed as:
+\textbf{Step 2: Linear terms are separable.}
+The first-order Taylor jet of \(\mathcal{U}\) at \((0,0)\) has the form
 \[
-D(s) = D_0(s) + f(d_G(s), d_D(s)) \cdot \nabla \Phi(s)
+\mathcal{U}_1(\xi,\chi)=A\xi+B\chi
 \]
-where $d_G(s)$ and $d_D(s)$ are distances to the respective horizons, and $\Phi$ is a potential function. For genuine novelty, $f$ must be non-linear in its arguments, requiring at least quadratic coupling between distance measures.
-
-\textbf{Step 3: Contradiction Resolution Induces Curvature} \\
-By the Contradiction Resolution Principle (Lemma~\ref{lemma:bk1_contradiction_resolution_principle}), the resolution of symbolic contradictions (Def.~\ref{definition:bk1_symbolic_contradiction}) requires local geometric modifications. These modifications manifest as curvature in the symbolic manifold (Def.~\ref{definition:bk1_symbolic_manifold}). The Riemann curvature tensor (Def.~\ref{definition:bk1_symbolic_riemann_tensor}) satisfies:
+for linear maps \(A:T_{s_0}\mathcal{S}\to T_{s_0}\mathcal{S}\) and
+\(B:C_{s_0}\to T_{s_0}\mathcal{S}\). This expression is additively separable:
+state changes and context changes contribute independently. Therefore
 \[
-R_{ijkl} = \frac{1}{2}(g_{ik,jl} + g_{jl,ik} - g_{il,jk} - g_{jk,il}) + \text{higher-order terms}
+D_\xi D_\chi \mathcal{U}_1(0,0)=0.
 \]
+It cannot realize the assumed nonzero mixed state/context sensitivity
+\(D_\xi D_\chi \mathcal{U}(0,0)\neq 0\).
 
-For non-trivial curvature, the metric tensor $g$ must have at least quadratic dependence on the symbolic coordinates, which directly implies quadratic representational structure.
-
-\textbf{Step 4: Minimal Quadratic Form} \\
-Combining the requirements from Steps 1–3, the minimal structure that satisfies all constraints is:
+\textbf{Step 3: The first possible mixed term is bilinear.}
+By Taylor's theorem, the second-order jet contains
 \[
-Q_{ij}(s) = \sum_{k,l} \alpha_{ijkl} s^k s^l
+\mathcal{U}_2(\xi,\chi)
+=\frac12 D_\xi^2\mathcal{U}(0,0)[\xi,\xi]
++D_\xi D_\chi\mathcal{U}(0,0)[\xi,\chi]
++\frac12 D_\chi^2\mathcal{U}(0,0)[\chi,\chi].
 \]
-where $\alpha_{ijkl}$ are coupling constants determined by the specific symbolic dynamics. This quadratic tensor field encodes the non-linear interactions necessary for reflexive identity, horizon-relative novelty, and contradiction resolution (see Thm.~\ref{theorem:bk1_quadratic_structure_necessity}).
+The middle term is bilinear and is nonzero by hypothesis. Hence the minimal
+local model that can represent the required contextual coupling is second
+order. Equivalently, on \(T_{s_0}\mathcal{S}\oplus C_{s_0}\) it is a quadratic
+form.
+
+\textbf{Step 4: Define the quadratic tensor.}
+Let \(z=(\xi,\chi)\). Define \(Q_{s_0}\) by polarization of the second-order
+jet:
+\[
+Q_{s_0}(z,z)
+:=\frac12 D^2\mathcal{U}(0,0)[z,z].
+\]
+Because the mixed derivative is nonzero, \(Q_{s_0}\) is nonzero and contains
+the required state/context interaction. Substituting the Taylor expansion into
+the local dynamics gives
+\[
+\frac{ds}{dt}
+=D(s)+Q_{s_0}(z,z)+O(\|z\|^3),
+\]
+which is the asserted quadratic representational geometry.
 \end{proof}
 
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=From Novelty to Surprise: The Operational Definition for Observer-Framed Divergence]
@@ -1237,7 +1451,7 @@ This frame-relative instantiation of novelty is termed \textbf{surprise}. Surpri
 This transformation—from ideal novelty to metabolized surprise—gives rise to foundational phenomena across domains:
 \begin{itemize}
     \item \textbf{Statistical Mechanics (cond-mat.stat-mech)}: Surprise corresponds to entropy production under symbolic constraints; it manifests as irreversibility in observer-relative thermodynamic updates.
-    \item \textbf{Quantum Theory (quant-ph)}: Surprise defines measurement-induced collapse as curvature perturbation from bounded hypothesis sets; in the flat-frame limit this recovers the standard Born rule from PS axioms alone.
+    \item \textbf{Quantum Theory (quant-ph)}: Surprise defines measurement-induced collapse as curvature perturbation from bounded hypothesis sets; in the flat-frame limit this recovers the standard Born rule from bounded observation under one explicit non-contextuality axiom---within-frame additivity being derived from token disjointness, cross-frame non-contextuality posited as PS-C3$'$ (cf.~Thm.~\ref{theorem:appC_orthogonal_additivity}, Ax.~\ref{axiom:appC_psc3prime}, Thm.~\ref{theorem:appC_born_rule}).
     \item \textbf{Machine Learning (cs.LG)}: Surprise generalizes prediction error within reflective symbolic models, enabling bounded agents to regulate learning via symbolic free energy.
     \item \textbf{Mathematical Physics (math-ph)}: The symbolic divergence from expected manifold structure corresponds to curvature variations under observer-relative connection $\nabla_O$ (cf.~Def.~\ref{definition:bk1_symbolic_connection}).
     \item \textbf{High-Energy Theory (hep-th)}: Surprise may be projected as topological transitions across membranes where novelty (symbol flux) crosses reflective thresholds—hinting at deeper symmetry-breaking mechanisms.
@@ -1256,6 +1470,18 @@ is not merely linguistic—it is the core interpretive schema uniting symbolic e
 \label{corollary:bk1_linear_insufficiency}
 In the setting of Axiom~\ref{axiom:bk1_axiomata_prima} and Thm.~\ref{theorem:bk1_constitutive_bootstrap}, linear symbolic systems cannot support genuine emergence. Purely linear dynamics reduce to superposed independent modes and preclude the contextual coupling required for symbolic meaning.
 \end{corollary}
+
+\begin{proof}[Linear updates are context-free]
+\label{proof:bk1_linear_insufficiency}
+\leavevmode
+A linear update is additively separable, $\mathcal{U}(\xi,\chi)=A\xi+B\chi$, so its mixed
+state--context derivative vanishes identically, $D_\xi D_\chi\mathcal{U}\equiv 0$; by
+Lemma~\ref{lemma:bk1_contextual_nonseparability} it is therefore context-free and cannot
+carry contextual meaning. By Thm.~\ref{theorem:bk1_quadratic_structure_necessity} the
+minimal representation that can is the bilinear coupling term -- nonzero symbolic
+curvature. The failure is thus structural, a vanishing mixed second derivative, not a
+shortfall of parameters.
+\end{proof}
 
 This theorem establishes the mathematical foundation for the subsequent development in Section~\ref{sec:bk1_quadratic_sufficiency_and_symbolic_curvature}, where we shall demonstrate that quadratic structure is not only necessary but also sufficient for the full range of symbolic emergence phenomena. The transition from linear to quadratic geometry represents a fundamental phase transition in the capacity for symbolic systems to generate genuinely novel meanings while maintaining coherent identity structures.
 
@@ -1382,13 +1608,13 @@ This is not an imposed mathematical structure but an \textit{emergent geometric 
 
 \textbf{Operationalization Consequences:}
 \begin{enumerate}
-\item \textbf{Linear models fail fundamentally} at complex symbolic tasks—not due to insufficient parameters, but due to geometric impossibility
+\item \textbf{Linear models fail fundamentally} at complex symbolic tasks—not due to insufficient parameters, but due to geometric impossibility (a vanishing mixed state--context derivative; Lem.~\ref{lemma:bk1_contextual_nonseparability}, Cor.~\ref{corollary:bk1_linear_insufficiency})
 \item \textbf{Deep learning succeeds} because stacked non-linear layers approximate the quadratic forms required for curved symbolic geometry  
 \item \textbf{Attention mechanisms work} because they implement quadratic coupling matrices that create context-dependent symbolic interactions
 \item \textbf{Transformer architectures} succeed because they approximate the parallel transport operations required for navigation in curved symbolic space
 \end{enumerate}
 
-The bridge from operators to geometry is complete. Curvature is not imposed—it emerges necessarily from the fundamental requirements of symbolic reflexivity and contextual meaning.
+The bridge from operators to geometry is complete. Curvature is not imposed—it emerges necessarily from the fundamental requirements of symbolic reflexivity and contextual meaning: contextual meaning is non-separable coupling (Lem.~\ref{lemma:bk1_contextual_nonseparability}), and non-separable coupling is exactly nonzero symbolic curvature (Thm.~\ref{theorem:bk1_quadratic_structure_necessity}), so a flat representation provably cannot carry it (Cor.~\ref{corollary:bk1_linear_insufficiency}).
 
 \section{Quadratic Sufficiency and Symbolic Curvature}
 \label{sec:bk1_quadratic_sufficiency_and_symbolic_curvature}
@@ -1493,10 +1719,111 @@ The \emph{symbolic curvature tensor} is the Riemann curvature tensor of the symb
 for vector fields $X, Y, Z$ on $M$, where $\nabla$ acts on the symbolic feature manifold (see \ref{definition:bk1_symbolic_manifold_feature_maps}).
 \end{definition}
 
+\begin{definition}[Local Semantic Independence]
+\label{definition:bk1_local_semantic_independence}
+Let $U \subset M$ be a contractible coordinate neighborhood in the symbolic
+manifold (Def.~\ref{definition:bk1_symbolic_manifold_feature_maps}), equipped
+with the symbolic connection $\nabla$ of Def.~\ref{definition:bk1_symbolic_connection}.
+For a piecewise smooth path $\gamma:x\to y$ in $U$, let
+$P^\nabla_\gamma:T_xM\to T_yM$ denote parallel transport by $\nabla$.
+Symbolic meanings are \emph{locally independent on $U$} when, for every
+$x,y\in U$ and every pair of paths $\gamma_0,\gamma_1:x\to y$ in $U$,
+\[
+P^\nabla_{\gamma_0} = P^\nabla_{\gamma_1}.
+\]
+Equivalently, first-order semantic variations represented in $T_xM$ can be
+transported to $T_yM$ without acquiring path-dependent contextual residue.
+\end{definition}
+
+\begin{lemma}[Curvature as Infinitesimal Semantic Holonomy]
+\label{lemma:bk1_curvature_semantic_holonomy}
+Let $X,Y$ be vector fields on $U$ and let $\square_{\epsilon}(X,Y)$ be the
+infinitesimal rectangle obtained by flowing a distance $\epsilon$ first along
+$X$ and then along $Y$, then back along $-X$ and $-Y$. The parallel transport
+around this loop satisfies
+\[
+P^\nabla_{\partial\square_{\epsilon}(X,Y)}Z
+= Z + \epsilon^2 \kappa(X,Y)Z + O(\epsilon^3).
+\]
+Thus $\kappa(X,Y)Z$ is precisely the second-order semantic residue obtained by
+transporting the same local meaning around two different infinitesimal routes.
+\end{lemma}
+
+\begin{proof}[Curvature is the second-order transport defect]
+\label{proof:bk1_curvature_semantic_holonomy}
+\leavevmode
+
+Parallel transport around the rectangle compares the two ordered covariant
+updates $\nabla_X\nabla_YZ$ and $\nabla_Y\nabla_XZ$. Because the closing edge of
+the infinitesimal parallelogram contributes the Lie-bracket correction
+$\nabla_{[X,Y]}Z$, the second-order failure of the two routes to agree is
+\[
+\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ-\nabla_{[X,Y]}Z
+=\kappa(X,Y)Z
+\]
+by Def.~\ref{definition:bk1_symbolic_riemann_tensor}. Taylor expansion of the
+transport map around the loop gives the displayed
+$\epsilon^2$ term, with all remaining terms of order $O(\epsilon^3)$.
+\end{proof}
+
 \begin{proposition}[Curvature and Semantic Entanglement]
 \label{proposition:bk1_curvature_semantic_entanglement}
-The symbolic curvature $\kappa$ (arising from the symbolic connection of Def.~\ref{definition:bk1_symbolic_connection}) vanishes if and only if symbolic meanings are locally independent (parallel transport is path-independent).
+On any contractible coordinate neighborhood $U \subset M$, the symbolic curvature
+$\kappa$ of Def.~\ref{definition:bk1_symbolic_riemann_tensor} vanishes on $U$ if
+and only if symbolic meanings are locally independent on $U$ in the sense of
+Def.~\ref{definition:bk1_local_semantic_independence}.
 \end{proposition}
+
+\begin{proof}[Flatness iff local semantic independence]
+\label{proof:bk1_curvature_semantic_entanglement}
+\leavevmode
+
+($\Rightarrow$) Suppose $\kappa=0$ on $U$. By
+Lemma~\ref{lemma:bk1_curvature_semantic_holonomy}, infinitesimal transport
+around every coordinate rectangle has zero second-order semantic residue. Since
+$U$ is contractible, any loop in $U$ can be decomposed into such infinitesimal
+rectangles. The holonomy around the whole loop is therefore trivial, so parallel
+transport from $x$ to $y$ depends only on the endpoints and not on the chosen
+path. Hence symbolic meanings are locally independent.
+
+($\Leftarrow$) Conversely, suppose symbolic meanings are locally independent on
+$U$. Then the transport around every sufficiently small coordinate rectangle is
+the identity. Applying Lemma~\ref{lemma:bk1_curvature_semantic_holonomy}, the
+coefficient of the $\epsilon^2$ term must vanish for all vector fields $X,Y,Z$:
+\[
+\kappa(X,Y)Z=0.
+\]
+Thus $\kappa=0$ on $U$.
+\end{proof}
+
+\begin{corollary}[Curvature Residue under Non-Expressive Projection]
+\label{corollary:bk1_curvature_projection_residue}
+Let $\Pi_F:M\to F$ be an observer-frame projection whose target frame $F$ treats
+semantic transport as path-independent on $\Pi_F(U)$. If $\kappa\neq 0$ on $U$,
+then there exist paths $\gamma_0,\gamma_1:x\to y$ in $U$ and a semantic
+variation $Z\in T_xM$ such that
+\[
+\Pi_F(P^\nabla_{\gamma_0}Z) \neq \Pi_F(P^\nabla_{\gamma_1}Z)
+\]
+or else the projection discards the curvature residue. In either case, the
+projection represents curved semantic coupling as a frame artifact: either a
+visible non-factorizable residual or an information loss.
+\end{corollary}
+
+\begin{proof}[Projection residue from failed path independence]
+\label{proof:bk1_curvature_projection_residue}
+\leavevmode
+
+If $\kappa\neq 0$ on $U$, Prop.~\ref{proposition:bk1_curvature_semantic_entanglement}
+implies that local semantic independence fails. Hence some pair of paths
+$\gamma_0,\gamma_1:x\to y$ and some $Z\in T_xM$ satisfy
+$P^\nabla_{\gamma_0}Z\neq P^\nabla_{\gamma_1}Z$. A frame $F$ that assumes
+path-independent semantic transport has no intrinsic curvature coordinate in
+which to store this difference. Therefore the projected images either remain
+distinct as an observable residual, or they are identified by $\Pi_F$, in which
+case the curvature information has been discarded. This is the projection
+mechanism later read as frame artifact in Book VIII.
+\end{proof}
 
 \begin{definition}[Resolution Cost]
 \label{definition:bk1_resolution_cost}
@@ -2021,19 +2348,24 @@ and only if it is metrically complete. Since $(M,g)$ is geodesically complete, t
 geodesic metric space $(M,d)$ is complete.
 \end{proof}
 \end{lemma}
-\begin{theorem}[Emergence of Reflection Operator]
+\begin{theorem}[Emergence of Stabilization Operator]
 \label{theorem:bk1_emergence_of_reflection_operator}
-There exists a unique smooth map $R: M \to M$ that is the stabilized limit of the reflection operators $\{R_\lambda\}_{\lambda < \Omega}$ through the colimit process. Furthermore, $R$ is a contraction mapping with respect to the symbolic distance $d$ (see def~\ref{definition:bk1_symbolic_distance}):
+There exists a unique smooth state-level stabilization map
+$R_{\mathrm{stab}}: M \to M$ that is the stabilized limit of the reflection
+operators $\{R_\lambda\}_{\lambda < \Omega}$ through the colimit process.
+Moreover, \(R_{\mathrm{stab}}\) is idempotent on stabilized states:
 \[
-d(R(x),R(y)) \leq \kappa \cdot d(x,y)
+R_{\mathrm{stab}}^2 = R_{\mathrm{stab}}.
 \]
-for some constant $\kappa \in (0,1)$ and all $x,y \in M$.
+No strict metric contraction is asserted for \(R_{\mathrm{stab}}\) or for the
+tangent mirror \(R_{\mathrm{mir}}\) of Def.~\ref{definition:bk1_reflection_operator}.
+Convergence of iterates is a separate Lyapunov--descent question.
 
 \begin{proof}[Limit of Stabilization Operators via Colimit]
 \label{proof:bk1_sketch_limit_stabilization_colimit}
 \leavevmode
 
-\textbf{Existence and uniqueness of $R$.}
+\textbf{Existence and uniqueness of \(R_{\mathrm{stab}}\).}
 The proto-stages $\{(P_\lambda, g_\lambda)\}_{\lambda < \Omega}$ form a directed system with
 coherence maps $f_{\lambda\mu}: P_\lambda \to P_\mu$ for $\lambda \leq \mu$
 (Def.~\ref{definition:bk1_pre_geometric_operators_and_stages},
@@ -2042,40 +2374,53 @@ Each $R_\lambda: P_\lambda \to P_\lambda$ satisfies the naturality condition
 $f_{\lambda\mu} \circ R_\lambda = R_\mu \circ f_{\lambda\mu}$ by the coherence requirement
 on stabilization operators: $R_\lambda$ maps each proto-stage into itself consistently with
 the transition maps. By the universal property of the colimit
-$M = \varinjlim P_\lambda$, there is a unique map $R: M \to M$ such that
-$R \circ \iota_\lambda = \iota_\lambda \circ R_\lambda$ for each inclusion
+$M = \varinjlim P_\lambda$, there is a unique map $R_{\mathrm{stab}}: M \to M$ such that
+$R_{\mathrm{stab}} \circ \iota_\lambda = \iota_\lambda \circ R_\lambda$ for each inclusion
 $\iota_\lambda: P_\lambda \hookrightarrow M$.
-Smoothness of $R$ follows from Ax.~\ref{axiom:bk1_smooth_convergence}: the
-$R_\lambda$ converge in $C^\infty$ on compact subsets, so $R \in C^\infty(M)$.
+Smoothness of \(R_{\mathrm{stab}}\) follows from Ax.~\ref{axiom:bk1_smooth_convergence}: the
+$R_\lambda$ converge in $C^\infty$ on compact subsets, so \(R_{\mathrm{stab}}\in C^\infty(M)\).
 
-\textbf{Contraction property.}
-Each $R_\lambda$ consolidates symbolic coherence: it maps dispersed proto-states toward
-more coherent configurations, reducing $g_\lambda$-dispersion by a factor $\kappa_\lambda$.
-Formally, for $x,y \in P_\lambda$,
+\textbf{Idempotence on the limit.}
+Each stage operator is idempotent by Def.~\ref{definition:bk1_pre_geometric_operators_and_stages}. Therefore
 \[
-  d_\lambda(R_\lambda(x), R_\lambda(y)) \leq \kappa_\lambda \cdot d_\lambda(x,y),
+R_{\mathrm{stab}}^2 \circ \iota_\lambda
+= R_{\mathrm{stab}}\circ \iota_\lambda\circ R_\lambda
+= \iota_\lambda\circ R_\lambda^2
+= \iota_\lambda\circ R_\lambda
+= R_{\mathrm{stab}}\circ \iota_\lambda.
 \]
-where $\kappa_\lambda \in (0,1)$ because $R_\lambda$ strictly decreases symbolic variance
-(Def.~\ref{definition:bk1_proto_symbolic_space}). The sequence $\{\kappa_\lambda\}$ is
-monotone non-increasing and bounded below by 0; let $\kappa = \lim_{\lambda \to \Omega}
-\kappa_\lambda$. Since $g_\lambda \to g$ uniformly on compact sets
-(Ax.~\ref{axiom:bk1_symbolic_smoothness}) and the coherence maps are isometric in the
-limit, passing to the colimit gives $d(R(x),R(y)) \leq \kappa \cdot d(x,y)$ for all
-$x,y \in M$. The strict inequality $\kappa < 1$ holds because each finite stage already
-achieves $\kappa_\lambda < 1$ and the infimum is attained at a stage $\lambda_0 < \Omega$
-with $\kappa_{\lambda_0} < 1$.
+Since the canonical maps jointly determine morphisms out of the colimit,
+\(R_{\mathrm{stab}}^2=R_{\mathrm{stab}}\) on the stabilized image.
 \end{proof}
 \end{theorem}
 
-\begin{corollary}[Fixed Point]
+\begin{corollary}[Reflective Fixed Locus]
 \label{corollary:bk1_fixed_point}
-The reflection operator $R: M \to M$ (Def.~\ref{definition:bk1_reflection_operator}) has a unique fixed point $x^* \in M$ such that $R(x^*) = x^*$.
+The state-level stabilization operator \(R_{\mathrm{stab}}:M\to M\)
+(Def.~\ref{definition:bk1_reflection_operator};
+Thm.~\ref{theorem:bk1_emergence_of_reflection_operator}) determines a reflective
+fixed locus
+\[
+\operatorname{Fix}(R_{\mathrm{stab}})
+  := \{x\in M : R_{\mathrm{stab}}(x)=x\}.
+\]
+This locus is nonempty whenever the stabilized image of \(R_{\mathrm{stab}}\) is
+nonempty. A unique fixed point requires an additional hypothesis, such as a
+genuine contraction on a complete basin or a Lyapunov/Caristi descent structure
+with a singleton minimal set.
 
-\begin{proof}[Fixed Point Stability via Contraction in Symbolic Space]
+\begin{proof}[Fixed Locus from Idempotent Stabilization]
 \label{proof:bk1_fixed_point_contraction_stability}
 \leavevmode
 
-Since $(M,d)$ is a complete metric space (lemma~\ref{lemma:bk1_completeness_of_symbolic_distance}) and $R$ is a contraction mapping (theorem~\ref{theorem:bk1_emergence_of_reflection_operator}), the result follows from the Banach Fixed-Point Theorem.
+If \(y\in \operatorname{im}(R_{\mathrm{stab}})\), then \(y=R_{\mathrm{stab}}(x)\)
+for some \(x\in M\). By idempotence,
+\[
+R_{\mathrm{stab}}(y)=R_{\mathrm{stab}}(R_{\mathrm{stab}}(x))
+=R_{\mathrm{stab}}(x)=y.
+\]
+Thus every stabilized state is fixed. This establishes the fixed locus without
+asserting uniqueness.
 \end{proof}
 \end{corollary}
 \section{Symbolic Thermodynamics Foundations}
@@ -2292,7 +2637,7 @@ which by normalization is exactly $\rho_{\text{eq}} = Z^{-1}e^{-\beta H}$
 \label{sec:bk1_conclusion_and_further_directions}
 
 \begin{remark}
-The Hamiltonian $H(x)$ balances instability (high drift $\norm{D(x)}_g$ increases energy) against coherence (reflection $R$ contracting volume via $\operatorname{tr}(L_x)$ decreases energy). Their interplay defines the symbolic landscape.
+The Hamiltonian $H(x)$ balances instability (high drift $\norm{D(x)}_g$ increases energy) against coherence (the stabilized volume response of reflection, measured via $\operatorname{tr}(L_x)$, contributes the coherence term). Their interplay defines the symbolic landscape.
 \end{remark}
 
 \begin{theorem}[Structural Correspondence]
@@ -2323,41 +2668,45 @@ This defines a symbolic thermodynamic phase transition analogously to those in c
 For sufficiently complex symbolic manifolds $(M, g, D, R)$ (see def~\ref{definition:bk1_symbol_space}), there exist critical values $\beta_c$ at which symbolic phase transitions occur. These transitions correspond to fundamental reorganizations of the symbolic equilibrium distribution $\rho_{\text{eq}}$ (see def~\ref{definition:bk1_symbolic_phase_transitions}), reflected by non-analytic behavior in the partition function $Z(\beta)$ or qualitative shifts in symbolic coherence.
 \end{conjecture}
 
-\begin{lemma}[Local Stability Analysis]
+\begin{lemma}[Local Stability at the Reflective Fixed Locus]
 \label{lemma:bk1_local_stability_analysis}
-Let $x^*$ be the unique fixed point of the reflection operator $R$ (see thm~\ref{theorem:bk1_emergence_of_reflection_operator} and cor~\ref{corollary:bk1_fixed_point}). The local stability of $x^*$ under the combined dynamics of drift and reflection is determined by the eigenvalues of the operator:
+Consider the combined symbolic dynamics on $M$,
 \[
-\mathcal{L}_{x^*} = dR_{x^*} - \alpha \cdot D(x^*),
+\dot{x} \;=\; \bigl(R_{\mathrm{stab}}(x) - x\bigr) + \alpha\,D(x), \qquad \alpha > 0,
 \]
-where $\alpha > 0$ is a coupling constant, $dR_{x^*}$ is the differential of $R$ at $x^*$, and $D$ is the emergent drift field (see thm~\ref{theorem:bk1_emergence_of_drift_field}). Specifically:
+with $R_{\mathrm{stab}} \in C^1$ the idempotent state-level stabilizer (thm~\ref{theorem:bk1_emergence_of_reflection_operator}, cor~\ref{corollary:bk1_fixed_point}) and $D$ the emergent drift field (thm~\ref{theorem:bk1_emergence_of_drift_field}). Then:
 \begin{enumerate}
-    \item If all eigenvalues of $\mathcal{L}_{x^*}$ have negative real parts, then $x^*$ is locally stable.
-    \item If at least one eigenvalue has a positive real part, then $x^*$ is locally unstable.
+    \item \textbf{Equilibrium condition.} $x^*$ is an equilibrium iff $R_{\mathrm{stab}}(x^*) = x^*$ \emph{and} $D(x^*) = 0$. A fixed point of $R_{\mathrm{stab}}$ at which the drift does not vanish is not an equilibrium of the combined flow.
+    \item \textbf{Projection structure.} At such an $x^*$ the differential $P := dR_{\mathrm{stab},x^*}$ is a linear projection, $P^2 = P$, with $\operatorname{spec}(P) \subseteq \{0,1\}$; if $\operatorname{Fix}(R_{\mathrm{stab}})$ is a $C^1$ submanifold of constant rank near $x^*$, then $\operatorname{im}(P) = T_{x^*}\operatorname{Fix}(R_{\mathrm{stab}})$.
+    \item \textbf{Jacobian and splitting.} The linearization is the well-typed map
+    \[
+    J \;=\; (P - I) + \alpha\,dD_{x^*},
+    \]
+    and $T_{x^*}M = \operatorname{im}(P) \oplus \ker(P)$ splits its unperturbed part: $(P-I)|_{\operatorname{im} P} = 0$ and $(P-I)|_{\ker P} = -I$.
+    \item \textbf{Transverse stability is automatic.} There exists $\alpha_0 > 0$ such that for all $\alpha \in (0,\alpha_0)$ the spectrum of $J$ transverse to the fixed locus lies in $\{\operatorname{Re} z < -\tfrac{1}{2}\}$: perturbations off $\operatorname{Fix}(R_{\mathrm{stab}})$ decay.
+    \item \textbf{Tangential stability is drift-governed.} On the center directions $\operatorname{im}(P)$ the leading-order dynamics are $\dot{\xi} = \alpha\,(P\,dD_{x^*})|_{\operatorname{im} P}\,\xi + O(\alpha^2)$; by center-manifold reduction $x^*$ is asymptotically stable within the fixed locus iff $\operatorname{Re}\operatorname{spec}\bigl(P\,dD_{x^*}|_{\operatorname{im} P}\bigr) < 0$, and unstable if some eigenvalue has positive real part.
 \end{enumerate}
+\end{lemma}
 
-\begin{proof}[Stability via Linearized Drift--Reflection System]
+\begin{proof}[Stability via the projection-split linearization]
 \label{proof:bk1_sketch_stability_drift_reflection}
 \leavevmode
 
-The combined symbolic dynamics near $x^*$ can be approximated by linearization
-of the drift--reflection system
-(cf.~thm.~\ref{theorem:bk1_emergence_of_reflection_operator},
-cor.~\ref{corollary:bk1_fixed_point},
-thm.~\ref{theorem:bk1_emergence_of_drift_field}). Consider a dynamical system of the form:
-\[
-\frac{dx}{dt} \approx (R(x) - x) + \alpha D(x).
-\]
-Linearizing around $x^*$ where $R(x^*) = x^*$ yields:
-\[
-\frac{d(x - x^*)}{dt} \approx (dR_{x^*} - \mathrm{id})(x - x^*) + \alpha D(x^*),
-\]
-which simplifies to:
-\[
-\frac{d(x - x^*)}{dt} \approx \mathcal{L}_{x^*}(x - x^*),
-\]
-after absorbing constants and framing the linearized symbolic influence. Standard dynamical systems theory then implies that the sign of the real parts of the eigenvalues of $\mathcal{L}_{x^*}$ determines local stability.
+\textbf{(1)} At an equilibrium the vector field vanishes: $(R_{\mathrm{stab}}(x^*) - x^*) + \alpha D(x^*) = 0$. The displacement $R_{\mathrm{stab}}(x^*) - x^*$ measures the failure of stabilization and $\alpha D(x^*)$ the drift; requiring the equilibrium to persist across an interval of couplings $\alpha$ forces each term to vanish separately, so $x^* \in \operatorname{Fix}(R_{\mathrm{stab}}) \cap D^{-1}(0)$, the sufficient form used downstream.
+
+\textbf{(2)} Differentiating $R_{\mathrm{stab}} \circ R_{\mathrm{stab}} = R_{\mathrm{stab}}$ at $x^*$ with $R_{\mathrm{stab}}(x^*) = x^*$ gives $dR_{\mathrm{stab},x^*} \circ dR_{\mathrm{stab},x^*} = dR_{\mathrm{stab},x^*}$, i.e.\ $P^2 = P$, whence $\operatorname{spec}(P) \subseteq \{0,1\}$. The tangency $\operatorname{im}(P) = T_{x^*}\operatorname{Fix}(R_{\mathrm{stab}})$ is the constant-rank theorem applied to $x \mapsto R_{\mathrm{stab}}(x) - x$.
+
+\textbf{(3)} Linearizing $\dot{x}$ about $x^*$ and using $D(x^*) = 0$ -- so no constant forcing term survives -- gives $\tfrac{d}{dt}(x - x^*) = (P - I)(x - x^*) + \alpha\,dD_{x^*}(x - x^*) + O(\|x - x^*\|^2)$, hence $J = (P - I) + \alpha\,dD_{x^*}$. On the splitting $T_{x^*}M = \operatorname{im}(P) \oplus \ker(P)$, $(P-I)$ is $0$ on $\operatorname{im}(P)$ and $-I$ on $\ker(P)$. The former statement instead retained $\alpha D(x^*)$ as a ``constant to be absorbed'' and wrote the type-mismatched $dR_{\mathrm{stab},x^*} - \alpha D(x^*)$, a linear map minus a vector; with the corrected equilibrium condition that term vanishes and $J$ is well typed.
+
+\textbf{(4)} In block form on the splitting, the $\ker P$ block is $-I + \alpha\,(dD_{x^*})^{\perp\perp}$, with spectrum within distance $\alpha\|dD_{x^*}\|$ of $-1$, plus $O(\alpha)$ off-diagonal coupling controlled by standard spectral perturbation (Gershgorin or holomorphic functional calculus). Any $\alpha_0 < \tfrac{1}{2}\|dD_{x^*}\|^{-1}$ keeps these eigenvalues in $\{\operatorname{Re} z < -\tfrac{1}{2}\}$.
+
+\textbf{(5)} The $\operatorname{im} P$ block is $\alpha\,(P\,dD_{x^*})|_{\operatorname{im} P}$ at leading order; since the transverse spectrum is uniformly negative and the tangential spectrum is $O(\alpha)$, the center-manifold theorem applies and reduces stability to the sign of $\operatorname{Re}\operatorname{spec}(P\,dD_{x^*}|_{\operatorname{im} P})$.
 \end{proof}
-\end{lemma}
+
+\begin{remark}[Stabilization buys transverse stability]
+\label{remark:bk1_local_stability_interpretation}
+The corrected lemma is sharper than the generic eigenvalue criterion it replaces: stabilization buys transverse stability for free -- the $-I$ block on $\ker(P)$ is the geometric signature of idempotence -- and the only genuine stability question lives \emph{along} the reflective fixed locus, decided entirely by the drift's restriction to that locus. Identity persistence is thus a property of how drift flows along the manifold of already-coherent states.
+\end{remark}
 
 \begin{theorem}[Symbolic Fluctuation–Dissipation Relation]
 \label{theorem:bk1_symbolic_fluctuation_dissipation_relation}
@@ -2513,9 +2862,47 @@ as summarized by thm.~\ref{theorem:bk1_the_fokker_planck_equation_theorem} and p
 \section[Cosmogenesis Theorem]{Cosmogenesis Theorem: Our Universe as a Dual Horizon Symbolic Manifold}
 \label{sec:bk1_cosmogenisis_theorem}
 
-\begin{theorem}[Dual Horizon Cosmogenesis]
+The Cosmogenesis Theorem does not assert that physics \emph{is} symbolic
+dynamics. It asserts a conditional: \emph{if} Lorentzian causal-thermodynamic
+data can be carried into the ordinal-symbolic substrate by a structure-preserving
+bridge, then the dual-horizon apparatus applies to its image. We make that bridge
+explicit as a functor, so the theorem's hypothesis is a stated map rather than a
+hidden identification. The mathematical content---that the image is a
+dual-horizon symbolic manifold---is then a theorem; whether our universe supplies
+such a functor is the separable empirical question.
+
+\begin{definition}[Cosmological Symbolization Functor]
+\label{definition:bk1_cosmological_symbolization_functor}
+A \emph{cosmological symbolization functor} is a structure-preserving assignment
+\[
+\mathcal{B}_{\mathrm{cos}}:
+(M, g_{\mu\nu}, \preceq, S_{\mathrm{therm}})
+\longrightarrow
+(\mathcal{S}, D, R_{\mathrm{stab}}, \kappa, \Omega)
+\]
+from Lorentzian causal--thermodynamic data---a spacetime $(M,g_{\mu\nu})$ with
+causal order $\preceq$ and thermodynamic entropy field $S_{\mathrm{therm}}$---to
+PS symbolic dynamics, such that:
+\begin{enumerate}
+\item causal expansion maps to positive observer-visible generative flux,
+$G_{\mathcal{O}}(\mathcal{B}_{\mathrm{cos}}\,\mathcal{H}_G)>0$;
+\item thermodynamic constraint maps to positive stabilizing flux, equivalently
+negative symbolic curvature,
+$C_{\mathcal{O}}(\mathcal{B}_{\mathrm{cos}}\,\mathcal{H}_D)>0$ with
+$\kappa(\mathcal{H}_D)<0$;
+\item bounded causal patches map to bounded observer domains (Def.~\ref{definition:bk1_bounded_observer});
+\item cofinal refinements preserve the ordinal emergence order $\preceq$
+(cf.~the summable resolution-decay condition on cofinal $\omega$-towers).
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Dual Horizon Cosmogenesis under \texorpdfstring{$\mathcal{B}_{\mathrm{cos}}$}{B\_cos}]
 \label{theorem:bk1_dual_horizon_cosmogenesis}
-Let $(M, g_{\mu\nu})$ denote the spacetime manifold of our observable universe, equipped with symbolic dynamics $(\mathcal{S}, D, R, \kappa)$ defined over its causal structure. Suppose the following conditions hold:
+Let $(M, g_{\mu\nu})$ denote the spacetime manifold of our observable universe, and
+suppose it admits a cosmological symbolization functor $\mathcal{B}_{\mathrm{cos}}$
+(Def.~\ref{definition:bk1_cosmological_symbolization_functor}) carrying its
+causal--thermodynamic data into symbolic dynamics $(\mathcal{S}, D, R, \kappa)$.
+Suppose the following conditions hold:
 
 \begin{enumerate}
     \item There exists a past boundary $\mathcal{H}_G$ associated with rapid causal expansion (e.g., cosmological inflation or conformal past), such that the induced symbolic curvature satisfies $\kappa(\mathcal{H}_G) > 0$ (Def.~\ref{definition:bk1_symbolic_riemann_tensor})
@@ -2529,17 +2916,22 @@ Let $(M, g_{\mu\nu})$ denote the spacetime manifold of our observable universe, 
     and $\Omega$ admits bounded observers (Def.~\ref{definition:bk1_bounded_observer}) undergoing symbolic drift $D$ (Def.~\ref{definition:bk1_drift_field}) and reflection $R$ (Def.~\ref{definition:bk1_reflection_operator}) within it
 \end{enumerate}
 
-Then $(M, \Omega)$ constitutes a \textbf{dual-horizon symbolic manifold} (Def.~\ref{definition:bk1_symbolic_manifold}) supporting reflexive emergence. In particular, our universe satisfies the conditions of the \textbf{Dual Horizon Necessity Theorem} (Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}), and the full PS dynamical apparatus---Hamiltonian, Fokker--Planck evolution, equilibrium, and identity carriers---is thereby instantiated on $\Omega$.
+Then the image $\mathcal{B}_{\mathrm{cos}}(M,\Omega)$ constitutes a \textbf{dual-horizon symbolic manifold} (Def.~\ref{definition:bk1_symbolic_manifold}) supporting reflexive emergence. In particular, conditional on the existence of $\mathcal{B}_{\mathrm{cos}}$ satisfying the clauses above, the image of our universe's causal--thermodynamic data satisfies the conditions of the \textbf{Dual Horizon Necessity Theorem} (Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}), and the full PS dynamical apparatus---Hamiltonian, Fokker--Planck evolution, equilibrium, and identity carriers---is thereby instantiated on $\Omega$.
 \end{theorem}
 
 \begin{proof}[Cosmogenesis via Dual Horizon Necessity]
 \label{proof:bk1_sketch_observed_consequences}
 \leavevmode
 
-The proof proceeds in two stages: \emph{instantiation} (mapping cosmological data to PS hypotheses) and \emph{deduction} (invoking established theorems to derive the conclusion).
+The proof proceeds in two stages: \emph{instantiation} (exhibiting the
+cosmological symbolization functor $\mathcal{B}_{\mathrm{cos}}$ of
+Def.~\ref{definition:bk1_cosmological_symbolization_functor} on the relevant
+cosmological data) and \emph{deduction} (invoking established theorems to derive
+the conclusion on its image). Stages~1--3 below verify the defining clauses of
+$\mathcal{B}_{\mathrm{cos}}$ one by one.
 
 \medskip
-\textbf{Stage I: Instantiation of conditions.}
+\textbf{Stage I: Instantiation of conditions (construction of $\mathcal{B}_{\mathrm{cos}}$).}
 
 \textbf{1. Generative boundary ($\kappa > 0$).}\enspace
 Inflationary cosmology posits that early spacetime underwent rapid exponential expansion, producing particle horizon separation and structure formation. The divergent lightcone geometry and monotonically increasing entropy potential define a generative horizon $\mathcal{H}_G$ with $\kappa(\mathcal{H}_G) > 0$ (Def.~\ref{definition:bk1_symbolic_riemann_tensor}): the positive curvature encodes novelty-generation, as the expanding causal volume continuously introduces new degrees of freedom.
@@ -2554,12 +2946,12 @@ Our causal patch lies strictly between these boundaries. All known life, cogniti
 \textbf{Stage II: Deduction from PS infrastructure.}
 
 \textbf{4. Dual Horizon Necessity.}\enspace
-Conditions (1)--(3) supply a symbolic universe $\mathcal{U} = (M, \Omega)$ with both a generative horizon $\mathcal{H}_G$ ($\kappa > 0$) and a dissipative horizon $\mathcal{H}_D$ ($\kappa < 0$) bounding a non-empty observer domain. By the Dual Horizon Necessity Theorem (Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}), this is the unique horizon configuration supporting reflexive emergence: the elimination argument in Proof~\ref{proof:bk1_proof_of_dual_horizon_necessity_theorem} shows that any configuration lacking either horizon fails to achieve the complexity differential $\Delta\Phi(D, R) \geq \tau_E$.
+Conditions (1)--(3) supply a symbolic universe $\mathcal{U} = (M, \Omega)$ with both a generative horizon $\mathcal{H}_G$ ($\kappa > 0$) and a dissipative horizon $\mathcal{H}_D$ ($\kappa < 0$) bounding a non-empty observer domain. By the Dual Horizon Necessity Theorem (Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}), this gives the minimal effective signature for bounded reflexive emergence: Proof~\ref{proof:bk1_proof_of_dual_horizon_necessity_theorem} shows that any observer-visible configuration lacking either positive generative flux or negative stabilizing flux fails to achieve the complexity differential $\Delta\Phi_{\mathcal{O}}(D, R_{\mathrm{stab}}) \geq \tau_E$.
 
 \textbf{5. Dynamical apparatus.}\enspace
 Given the dual-horizon structure on $\Omega$, the PS results chain as follows:
 \begin{enumerate}
-    \item[\emph{(a)}] The drift field $D$ and reflection operator $R$ emerge on $\Omega$ as limits of proto-fields (Thm.~\ref{theorem:bk1_emergence_of_drift_field}, Thm.~\ref{theorem:bk1_emergence_of_reflection_operator}), with $\nabla \cdot D > 0$ near $\mathcal{H}_G$ and $\nabla \cdot R < 0$ near $\mathcal{H}_D$ (Lemma~\ref{lemma:bk1_horizon_characterization}).
+    \item[\emph{(a)}] The drift field $D$ and state-level stabilization \(R_{\mathrm{stab}}\) emerge on $\Omega$ as limits of proto-fields and stabilization operators (Thm.~\ref{theorem:bk1_emergence_of_drift_field}, Thm.~\ref{theorem:bk1_emergence_of_reflection_operator}), with $\nabla \cdot D > 0$ near $\mathcal{H}_G$ and positive stabilization flux \(C_{\mathcal{O}}(\mathcal{H}_D)>0\) near $\mathcal{H}_D$ (Lemma~\ref{lemma:bk1_horizon_characterization}).
     \item[\emph{(b)}] Their interplay defines the symbolic Hamiltonian $H(x) = \kappa / (\|D(x)\| + \epsilon) + \lambda \cdot \mathrm{tr}(L_x)$ (Def.~\ref{definition:bk2_symbolic_hamiltonian}), which governs the energy landscape on $\Omega$.
     \item[\emph{(c)}] The Fokker--Planck equation $\partial_s \rho = -\nabla \cdot (\rho D) + \sigma^2 \nabla^2 \rho$ (Thm.~\ref{theorem:bk1_fundamental_relation_fokker_plank_equation}) determines probability evolution under drift--diffusion dynamics.
     \item[\emph{(d)}] Equilibrium $\rho_{\mathrm{eq}} \propto e^{-\beta H}$ is the unique stationary distribution (Thm.~\ref{theorem:bk2_equilibrium_distribution}), and the free energy functional $F_\beta[\rho]$ provides the variational principle (Thm.~\ref{theorem:bk1_variational_principle}).
@@ -2567,11 +2959,29 @@ Given the dual-horizon structure on $\Omega$, the PS results chain as follows:
 \end{enumerate}
 
 \textbf{6. Conclusion.}\enspace
-The manifold $(M, \Omega)$ satisfies all hypotheses of the Dual Horizon Necessity Theorem, and the deductive chain (a)--(e) instantiates the full PS dynamical apparatus on $\Omega$. Reflexive emergence is not merely compatible with our universe's causal architecture---it is entailed by it, conditional on the empirical conditions (1)--(3).
+The image $\mathcal{B}_{\mathrm{cos}}(M,\Omega)$ satisfies all hypotheses of the Dual Horizon Necessity Theorem, and the deductive chain (a)--(e) instantiates the full PS dynamical apparatus on $\Omega$. Reflexive emergence is not merely compatible with the symbolized causal architecture---it is entailed by it, conditional on the empirical conditions (1)--(3) and the bridge functor $\mathcal{B}_{\mathrm{cos}}$.
 \end{proof}
 \begin{remark}
-This establishes that our universe is not merely compatible with symbolic emergence — its causal structure *necessitates* it. Reflexive observers exist not in arbitrary spacetime, but in a symbolic membrane stretched between $\mathcal{H}_G$ and $\mathcal{H}_D$.
+This establishes the conditional physical-sector claim: if our universe admits the cosmological symbolization functor above, then its causal structure is not merely compatible with symbolic emergence---its symbolized image necessitates it. Reflexive observers exist not in arbitrary spacetime, but in a symbolic membrane stretched between $\mathcal{H}_G$ and $\mathcal{H}_D$.
 \end{remark}
+
+\begin{scholium}[Proof status of Cosmogenesis]
+\label{scholium:bk1_cosmogenesis_proof_status}
+The theorem is unconditional \emph{as mathematics}: given any cosmological
+symbolization functor $\mathcal{B}_{\mathrm{cos}}$
+(Def.~\ref{definition:bk1_cosmological_symbolization_functor}) satisfying its four
+clauses, the image is a dual-horizon symbolic manifold and the full PS apparatus
+applies, by Dual Horizon Necessity
+(Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}). What is \emph{empirical},
+and what Stage~I argues from inflationary and thermodynamic cosmology, is the
+antecedent: that our actual spacetime supplies such a functor---that cosmic
+expansion realizes positive generative flux and that the future thermodynamic
+boundary realizes positive stabilizing flux. The theorem thus locates the open
+question precisely: not ``is the conclusion proved'' (it is, conditionally) but
+``does our universe instantiate $\mathcal{B}_{\mathrm{cos}}$.'' This is the
+ordinal-symbolic posture---the unification theorem lives at the level of the
+bridge functor; the physical-sector claim follows once the bridge is exhibited.
+\end{scholium}
 \begin{corollary}[Event Horizon Identity Field]
 \label{corollary:bk1_event_horizon_identity_field}
 The observed structure of cognition, memory, language, and thermodynamic complexity within $\Omega$ (thm~\ref{theorem:bk1_dual_horizon_cosmogenesis}, proof~\ref{proof:bk1_sketch_observed_consequences}) constitutes an identity field induced by horizon tension, grounded in bounded observation (def~\ref{definition:bk1_bounded_observer}), dual-horizon necessity (thm~\ref{theorem:bk1_dual_horizon_necessity_theorem}), emergent dual-horizon unification (thm~\ref{theorem:bk1_dual_horizon_unification_principle}), and Wasserstein symbolic thermodynamic geometry (Cor.~\ref{corollary:bk1_wasserstein_geometric_interpretation}). Emergence is not a property of matter - it is a property of situated symbolic curvature.

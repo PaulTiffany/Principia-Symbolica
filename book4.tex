@@ -754,6 +754,231 @@ If $d_O^{\mathrm{Im}} < \theta_O$, the observer can absorb the latent phase resi
 Imagination is not an unreal supplement to cognition. It is the observer operation by which symbolic continuity is carried through latent, counterfactual, or phase-preserving paths before those paths are collapsed into observable action, memory, speech, or artifact. Thus imagination supplies the imaginary component of continuity: it preserves relation where no direct real path is yet available to the bounded observer.
 \end{scholium}
 
+\subsection{The Event Horizon Wheel}
+\label{subsec:bk4_event_horizon_wheel}
+The complex symbolic distance of
+Def.~\ref{definition:bk4_imaginary_symbolic_distance} carries one datum more than a
+metric: the transported overlap $\Omega_O^\gamma$ is a \emph{complex} number, so it
+has a phase as well as a magnitude. Reading the dual-horizon decomposition through
+that phase converts a static fourfold classification of differentiation
+modes---generation versus constraint, structure versus noise---into a continuous
+\emph{wheel}. The four modes are not bins; they are the cardinal quadrants of one
+circle, joined by spiral transitions and bridged, where no real path is available,
+by imaginative (imaginary) traversal. We make the wheel, its quotient to the
+effective signature, its spiral dynamics, and its transfer to the chromatic wheel
+explicit.
+
+\begin{definition}[Event Horizon Wheel]
+\label{definition:bk4_event_horizon_wheel}
+For symbolic states $\psi_s,\psi_t\in\Gamma(E)$ and admissible path $\gamma$ with
+transported overlap
+$\Omega_O^\gamma=|\Omega_O^\gamma|\,e^{i\vartheta}\in\mathbb{C}$
+(Def.~\ref{definition:bk4_imaginary_symbolic_distance}), the \emph{event-horizon
+phase} is $\vartheta:=\operatorname{Arg}\Omega_O^\gamma\in(-\pi,\pi]$ and the
+\emph{event horizon wheel} is the phase circle $S^1=\{e^{i\vartheta}\}$ on which a
+transition is located. The real part $\operatorname{Re}\Omega_O^\gamma$ carries the
+generative/constraining polarity (alignment versus opposition of the transported
+state with $\psi_t$); the imaginary part $\operatorname{Im}\Omega_O^\gamma$ carries
+the source/operation polarity (accrued phase residue). The four \emph{Event Horizon
+modes} are the open quadrants cut by the sign pair
+$\big(\operatorname{sign}\operatorname{Re}\Omega_O^\gamma,\
+\operatorname{sign}\operatorname{Im}\Omega_O^\gamma\big)$:
+deterministic ($+,0$ neighbourhood), probabilistic, theoretical, and experiential,
+read counterclockwise around the wheel.
+\end{definition}
+
+\begin{proposition}[The wheel refines the effective horizon signature]
+\label{proposition:bk4_wheel_refines_signature}
+The quadrant map
+$\Omega_O^\gamma\mapsto
+\big(\operatorname{sign}\operatorname{Re}\Omega_O^\gamma,
+\operatorname{sign}\operatorname{Im}\Omega_O^\gamma\big)$
+sends the event horizon wheel onto the four classes of the dual-horizon effective
+signature (Def.~\ref{definition:bk1_effective_horizon_signature}). Hence the
+Event Horizon Tetrad is the quadrant quotient of the wheel: the fourfold partition
+is the image of a continuous phase circle under sign-extraction, not an independent
+primitive.
+\end{proposition}
+
+\begin{proof}[Quadrant quotient of the phase circle]
+\label{proof:bk4_wheel_refines_signature}
+\leavevmode
+
+The effective horizon signature
+(Def.~\ref{definition:bk1_effective_horizon_signature}) records two observer-visible
+signs: a generative/constraining sign, positive when transport increases
+observable coherence with the target and negative when it opposes it, and a
+source/operation sign, distinguishing whether the dominant contribution is
+drift-like or reflection-like. By Def.~\ref{definition:bk4_event_horizon_wheel}
+these are exactly $\operatorname{sign}\operatorname{Re}\Omega_O^\gamma$ and
+$\operatorname{sign}\operatorname{Im}\Omega_O^\gamma$, since
+$\operatorname{Re}\Omega_O^\gamma=|\Omega_O^\gamma|\cos\vartheta$ measures aligned
+overlap and $\operatorname{Im}\Omega_O^\gamma=|\Omega_O^\gamma|\sin\vartheta$ is the
+phase residue accrued under holonomy
+(Def.~\ref{definition:bk4_symbolic_holonomy_term}). The map
+$e^{i\vartheta}\mapsto(\operatorname{sign}\cos\vartheta,\operatorname{sign}\sin\vartheta)$
+is constant on each open quadrant of $S^1$ and assumes all four sign pairs, so its
+image is precisely the four signature classes, and its fibres are the quadrant
+arcs. The tetrad is therefore the set of connected components of the wheel minus the
+axis crossings, i.e.\ the quadrant quotient, and the phase $\vartheta$ is the
+continuous coordinate the signature discards.
+\end{proof}
+
+\begin{proposition}[Spiral transition between modes]
+\label{proposition:bk4_spiral_transition}
+Let the self-regulating mapping function
+(Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}) act on the
+transported overlap by one emergence step as multiplication by
+$\mu=\rho\,e^{i\alpha}$, where $\rho>0$ is the drift/reflection magnitude gain and
+$\alpha$ the holonomy phase increment (Thm.~\ref{theorem:bk4_symbolic_stokes}). Then
+the iterated overlap $\Omega_n=\mu^{n}\Omega_0$ traces a logarithmic spiral
+$|\Omega_n|=\rho^{n}|\Omega_0|$, $\vartheta_n=\vartheta_0+n\alpha$, so the system
+moves between Event Horizon modes by combined rotation and scaling rather than by
+discontinuous jumps; the modes are adjacent on the wheel exactly when $\alpha$ is
+within one quadrant.
+\end{proposition}
+
+\begin{proof}[Logarithmic spiral of the SRMF orbit]
+\label{proof:bk4_spiral_transition}
+\leavevmode
+
+Writing $\Omega_n=\mu^n\Omega_0$ with $\mu=\rho e^{i\alpha}$ and
+$\Omega_0=|\Omega_0|e^{i\vartheta_0}$ gives
+$\Omega_n=\rho^{n}|\Omega_0|\,e^{i(\vartheta_0+n\alpha)}$, whence the stated modulus
+and argument. In polar coordinates $(r,\vartheta)$ the relation
+$r=|\Omega_0|\rho^{\,(\vartheta-\vartheta_0)/\alpha}$ holds along the orbit, which is
+the equation of a logarithmic spiral with growth rate $\log\rho$ per radian-scaled
+step. The argument advances by the fixed increment $\alpha$ each step, so successive
+overlaps cross a quadrant boundary only after $\lceil(\pi/2)/|\alpha|\rceil$ steps;
+when $|\alpha|<\pi/2$ consecutive iterates lie in the same or adjacent quadrants, so
+transition between modes is continuous on the wheel rather than a jump.
+\end{proof}
+
+\begin{proposition}[Imagination bridges the wheel]
+\label{proposition:bk4_imagination_bridges_wheel}
+A transition between modes separated by event-horizon phase gap $\Delta\vartheta$
+cannot in general be realized by real symbolic displacement alone, since
+$d_O^{\mathrm{Re}}$ is blind to $\operatorname{Arg}\Omega_O^\gamma$. The gap is
+crossed by imaginary traversal
+(Scholium~\ref{scholium:bk4_imagination_as_imaginary_traversal}), realized
+operationally as bounded internal simulation
+(TTCS, Def.~\ref{definition:bk4_test_time_coherent_sampling}), and the destination
+mode is reintegrable into identity if and only if the accrued imaginary distance
+stays within tolerance, $\beta_O\,|\Delta\vartheta|<\theta_O$
+(Prop.~\ref{proposition:bk4_imaginative_continuity_principle}).
+\end{proposition}
+
+\begin{proof}[Phase gaps are imaginary, not real, distance]
+\label{proof:bk4_imagination_bridges_wheel}
+\leavevmode
+
+The real displacement $d_O^{\mathrm{Re}}=\|\psi_t-P_\gamma\psi_s\|_{h_O}$ depends
+only on the magnitude of the mismatch after transport and is invariant under a pure
+phase rotation $\Omega_O^\gamma\mapsto e^{i\phi}\Omega_O^\gamma$; hence no amount of
+real displacement registers, or supplies, a change of $\operatorname{Arg}$. A change
+of event-horizon phase by $\Delta\vartheta$ is therefore an imaginary displacement,
+$d_O^{\mathrm{Im}}=\beta_O|\Delta\vartheta|$ in the units of
+Def.~\ref{definition:bk4_imaginary_symbolic_distance}. By the Imaginative Continuity
+Principle (Prop.~\ref{proposition:bk4_imaginative_continuity_principle}) such a
+residue is reintegrable into continuous identity precisely when
+$d_O^{\mathrm{Im}}<\theta_O$, i.e.\ $\beta_O|\Delta\vartheta|<\theta_O$. The traversal
+that accrues this residue without first committing a real, irreversible move is the
+bounded internal simulation of TTCS
+(Def.~\ref{definition:bk4_test_time_coherent_sampling}), which is the operational
+form of imaginative traversal.
+\end{proof}
+
+\begin{corollary}[Chromatic transference of the wheel]
+\label{corollary:bk4_chromatic_transference_of_wheel}
+The phase-to-hue assignment $\vartheta\mapsto\mathrm{hue}(\vartheta)$ is a modal
+transference map (Def.~\ref{definition:appC_modal_transference_map}): it preserves
+cyclic order and adjacency on $S^1$. By the Modal Transference Theorem
+(Thm.~\ref{theorem:appC_modal_transference}) the Event Horizon Wheel transfers
+intact to the Newtonian chromatic wheel, with diametric opposition
+$\vartheta\mapsto\vartheta+\pi$ carried to complementary colour and the
+generative/constraining dipole carried to the warm/cool hue axis. The wheel is thus
+preserved as an invariant of the symbolic structure, not of any one carrier.
+\end{corollary}
+
+\begin{scholium}[The wheel is SRMF turned on itself]
+\label{scholium:bk4_wheel_is_srmf_on_itself}
+The Event Horizon Wheel is not a construct laid beside the self-regulating mapping
+function; it is that function applied to its own operators. The generative and
+convergent operations SRMF regulates are themselves the poles whose transported
+overlap traces the wheel; the spiral of
+Prop.~\ref{proposition:bk4_spiral_transition} is SRMF iterating on its own operator
+pair; the imaginative bridging of
+Prop.~\ref{proposition:bk4_imagination_bridges_wheel} is SRMF sampling its own latent
+phase before collapse. The orbit therefore both \emph{winds}---because the mapping is
+recursive---and \emph{closes}---because the mapping refers to itself: a self-map of
+the complex symbolic plane has, generically, a rotational part, and a rotational
+self-map foliates its domain into circles. That the dual-horizon tetrad turns out to
+be a wheel is not decoration; it is the signature of self-reference. \qed
+\end{scholium}
+
+\begin{theorem}[Golden Event Horizon Spiral]
+\label{theorem:bk4_golden_event_horizon_spiral}
+Suppose the SRMF emergence step on the wheel
+(Prop.~\ref{proposition:bk4_spiral_transition}) advances the event-horizon phase by
+one quadrant, $\alpha=\pi/2$, and its magnitude gain equals the Perron root of the
+balanced two-step memory closure, $\rho=\varphi$
+(Def.~\ref{definition:bk5_balanced_two_step_memory_closure},
+Thm.~\ref{theorem:bk5_golden_ratio_spectral_invariant} via
+Lemma~\ref{lemma:bk5_balanced_observer_normalization}). Then the orbit
+$\Omega_n=(\varphi\,e^{i\pi/2})^{n}\Omega_0$ is the golden logarithmic spiral
+\[
+r(\vartheta)=r_0\,\varphi^{\,2(\vartheta-\vartheta_0)/\pi},
+\]
+growing by the factor $\varphi$ per quadrant (per mode-transition) and by
+$\varphi^{4}$ per full revolution of the four Event Horizon modes; equivalently the
+polar growth coefficient is $b=\varphi^{2/\pi}$. Moreover the radial magnitudes
+$r_n=\varphi^{n}r_0$ obey the balanced two-step recurrence
+$r_{n+1}=r_n+r_{n-1}$ with companion matrix
+$\big(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\big)$; hence the wheel's radius is
+the balanced-memory (Fibonacci) sequence and $r_{n+1}/r_n\to\varphi$.
+\end{theorem}
+
+\begin{proof}[Golden spiral from balanced closure on the wheel]
+\label{proof:bk4_golden_event_horizon_spiral}
+\leavevmode
+
+By Prop.~\ref{proposition:bk4_spiral_transition} the orbit is
+$\Omega_n=\mu^{n}\Omega_0$ with $\mu=\rho e^{i\alpha}$; setting $\rho=\varphi$ and
+$\alpha=\pi/2$ gives $r_n=\varphi^{n}r_0$ and
+$\vartheta_n=\vartheta_0+n\pi/2$. Eliminating the step index through
+$n=2(\vartheta-\vartheta_0)/\pi$ yields
+$r(\vartheta)=r_0\,\varphi^{\,2(\vartheta-\vartheta_0)/\pi}$, a logarithmic spiral;
+a quarter turn $\Delta\vartheta=\pi/2$ multiplies $r$ by $\varphi$ and a full turn
+$\Delta\vartheta=2\pi$ by $\varphi^{4}$, and writing $r=r_0 b^{\vartheta-\vartheta_0}$
+identifies $b=\varphi^{2/\pi}$. For the radial recurrence, the balanced closure root
+satisfies $\varphi^{2}=\varphi+1$
+(Thm.~\ref{theorem:bk5_golden_ratio_spectral_invariant}); multiplying by
+$\varphi^{\,n-1}r_0$ gives $\varphi^{\,n+1}r_0=\varphi^{\,n}r_0+\varphi^{\,n-1}r_0$,
+that is $r_{n+1}=r_n+r_{n-1}$, whose companion matrix is
+$\big(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\big)$
+(Lemma~\ref{lemma:bk5_balanced_observer_normalization}); the dominant-eigenvalue
+limit then gives $r_{n+1}/r_n\to\varphi$. The wheel's spiral is therefore the golden
+spiral, and its discrete radial trace is the balanced-memory sequence.
+\end{proof}
+
+\begin{scholium}[The cut wheel and its non-orientable seam]
+\label{scholium:bk4_cut_wheel_nonorientable}
+A bounded observer cannot occupy the whole wheel at once; to traverse the four
+Event Horizon modes it must cut the cycle into a path. The cut $4$-cycle is a CW
+structure of four vertices (the modes), three edges (the mode-transitions), and one
+identifying seam restoring the closed loop---the decomposition $4+3+1$. The seam is
+not an ordinary gluing. By Symbolic Monodromy
+(Scholium~\ref{scholium:bk4_symbolic_monodromy}) and the $4\pi$ double-rotation
+periodicity of the recursive identity bundle
+(Def.~\ref{definition:bk1_spinor_like_structure}: $R_{2n}(\psi)=\psi$ but
+$R_{n}(\psi)\neq\psi$), one circuit of the wheel returns the transported state with
+reversed orientation, and only a double circuit restores it. The seam therefore
+identifies the path ends with an orientation reversal: the wheel taken together with
+its reflection fibre is non-orientable---a M\"obius/Klein-type identification---and
+symbolic identity closes only on the $4\pi$ double cover. The wheel is single-valued
+in magnitude but double-valued in orientation: twist is the price of closure. \qed
+\end{scholium}
+
 \begin{remark}[External Witness: Unit Distance and Extension Fields]
 \label{remark:bk4_unit_distance_extension_fields}
 \begin{sloppypar}
@@ -1618,6 +1843,25 @@ d_{\mathcal{O}}(s_m, s_n) \le \sum_{i=n}^{m-1} d_{\mathcal{O}}(s_{i+1}, s_i) \le
 
 Since $\kappa < 1$, this shows $\{s_k\}$ is Cauchy. Observer completeness is guaranteed by the directed Cauchy tower (cf. Lemma~\ref{lemma:bk1_observer_bounded_emergence_constraint} and Proposition~\ref{proposition:bk1_stage_composite_operators_are_interpretable}), ensuring convergence to the unique fixed point $s^*$.
 \end{proof}
+
+\begin{remark}[Contraction is sufficient, not necessary: the descent route]
+\label{remark:bk4_ttpr_descent_route}
+Axiom~\ref{axiom:bk4_refinement_contraction} posits a strict contraction, which is a
+strong hypothesis: a bounded-observer refinement operator need not be globally
+Lipschitz with constant below one. It suffices that refinement \emph{descend} the
+observer-relative symbolic entropy -- the ``annealing'' of the preceding remark --
+forming a free-energy descent pair in the sense of
+Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}: if there is a
+bounded-below, lower semicontinuous potential $\Phi$ with
+$d_{\mathcal{O}}(s, \mathcal{R}(s)) \le \Phi(s) - \Phi(\mathcal{R}(s))$, the refinement
+orbit has summable increments and converges to a fixed point by the telescoping
+argument, with no contraction constant required. The contraction of
+Axiom~\ref{axiom:bk4_refinement_contraction} is then the special case in which $\Phi$
+is comparable to $d_{\mathcal{O}}(\cdot, s^*)$, and it additionally certifies the
+geometric rate $\kappa^{n}/(1-\kappa)$ derived above. Stating the weaker descent
+condition keeps TTPR convergence from resting on a contraction the bounded observer
+may not supply.
+\end{remark}
 
 The preservation of interpretability during refinement is crucial for maintaining the semantic coherence of symbolic structures. The following lemma establishes that bounded refinement operators preserve the observer's ability to interpret symbolic content.
 
@@ -2553,16 +2797,30 @@ is available.
 
 \textbf{($\Rightarrow$) Self-authorship implies convergence.}
 The sequence $\mathcal{L}_{n+1} = \mathcal{D}_i(\mathcal{L}_n, g_n)$ is a self-referential
-iteration in the space of constraint maps. By the self-authorship definition, each update
+iteration in the complete metric space of bounded constraint operators under the
+operator norm. By the self-authorship definition, each update
 (1) preserves coherence under symbolic flow (Def.~\ref{definition:bk4_symbolic_autonomy}),
 (2) expands or stabilizes the accessible symbolic space $A_i$, and
 (3) is generated by goal-directed symbolic reasoning internal to $\mathcal{I}$.
-Conditions (1) and (2) together ensure that $\mathcal{L}_n$ does not oscillate:
-coherence preservation bounds the rate of change of $\mathcal{L}_n$ in the operator
-norm, and the expansion condition guarantees the sequence is non-retrograde.
-By the Banach Fixed-Point Theorem applied in the complete metric space of
-bounded constraint operators (with the operator norm), the sequence converges:
-$\lim_{n\to\infty}\mathcal{L}_n = \mathcal{L}_\infty$.
+Conditions (1) and (2) bound the rate of change of $\mathcal{L}_n$ and make the
+sequence non-retrograde, but bounded rate and non-retrogression do not by themselves
+furnish a contraction, so the Banach Fixed-Point Theorem does not apply here.
+Convergence instead follows by free-energy descent. Let $\Phi$ be the
+constraint-incoherence potential -- the bounded-below, lower semicontinuous functional
+measuring the residual incoherence of a constraint map relative to the identity's
+goals -- which goal-directed self-authorship reduces, each admissible update paying for
+its displacement,
+\[
+\|\mathcal{L}_n - \mathcal{L}_{n+1}\| \;\le\; \Phi(\mathcal{L}_n) - \Phi(\mathcal{L}_{n+1}),
+\]
+the Caristi descent inequality. The pair $(\mathcal{D}_i(\cdot, g), \Phi)$ is therefore
+a free-energy descent pair, and by the convergence mechanism of
+Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity} -- the telescoping
+summable-increment argument, instantiated in the complete operator space rather than in
+$(\prob(\manifold), \wass)$ -- the orbit has summable increments, is Cauchy, and
+converges to $\mathcal{L}_\infty$; closure of the graph of $\mathcal{D}_i(\cdot, g_n)$
+gives $\mathcal{D}_i(\mathcal{L}_\infty, g) = \mathcal{L}_\infty$, and the limit is the
+unique self-determined fixed point when the stall set of $\Phi$ is a singleton.
 The fixed-point set $\mathcal{U}(\mathcal{I}) = \mathrm{Fix}(\mathcal{L}_\infty)$
 is the identity's self-determined constraint domain.
 

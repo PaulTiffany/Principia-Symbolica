@@ -55,6 +55,7 @@
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{assumption}[theorem]{Assumption}
 
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
@@ -85,7 +86,7 @@
 % Geometric quantities
 \newcommand{\metric}{g}                  % Riemannian metric tensor
 \newcommand{\vol}{d\mu_{\metric}}        % Riemannian volume form
-\newcommand{\wass}[1]{W_2^{(#1)}}       % Wasserstein-2 distance
+\newcommand{\wass}{W_2}                  % Wasserstein-2 distance (use as \wass(\rho,\sigma))
 
 % PS domains and spaces
 \newcommand{\symb}{\mathrm{symb}}        % Symbolic norm space indicator
@@ -137,8 +138,10 @@
 \input{book3}
 \chapter{Book IV — De Identitate Symbolica et Emergentia}
 \input{book4}
+\input{integratio}
 \chapter{Book V — De Vita Symbolica}
 \input{book5}
+\input{temperatio}
 \chapter{Book VI — De Mutatione Symbolica}
 \input{book6}
 \chapter{Book VII — De Convergentia Symbolica}

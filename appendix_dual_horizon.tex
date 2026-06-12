@@ -118,13 +118,21 @@ This derivation applies the Bounded Observer formalism (cf.~\ref{definition:bk1_
 
 \begin{remark}[Derivation Structure]
 \label{remark:appC_born_rule_dependency}
-This derivation proceeds from five coherence axioms (PS-C1--C5,
-\S\ref{subsec:appC_born_axioms}) to Gleason's hypotheses, and thence to
-the Born Rule. The axioms PS-C1--C5 are themselves consequences of bounded
-observation (Def.~\ref{definition:bk1_bounded_observer}), not ad hoc
-quantum postulates: each encodes a constraint that any finite-resolution
-observer necessarily satisfies. The derivation is therefore grounded in
-the PS foundational framework, not in the Hilbert space structure it explains.
+This derivation proceeds from the coherence constraints PS-C1--C5
+(\S\ref{subsec:appC_born_axioms}) to Gleason's hypotheses, and thence to
+the Born Rule. The structural constraints PS-C1, PS-C2, PS-C4, PS-C5 are
+consequences of bounded observation (Def.~\ref{definition:bk1_bounded_observer}),
+not ad hoc quantum postulates: each encodes a constraint that any
+finite-resolution observer necessarily satisfies. The additivity once carried as
+PS-C3 splits in two: its \emph{within-frame} content is \emph{proved} in
+\S\ref{subsec:appC_born_additivity_derivation}
+(Thm.~\ref{theorem:appC_orthogonal_additivity}) from observer-token disjointness,
+while its cross-frame content---non-contextuality---is isolated and posited as
+PS-C3$'$ (Ax.~\ref{axiom:appC_psc3prime}). The derivation thus reduces Gleason's
+additivity hypothesis to finite-budget bookkeeping plus a single, explicitly
+labelled non-contextuality axiom, and is grounded in the PS foundational framework
+rather than in the Hilbert space structure it explains; the Born conclusion is
+conditional on PS-C3$'$.
 \end{remark}
 
 \section*{Born.0 Preamble}
@@ -168,9 +176,176 @@ where $\tilde\psi_{\Obs}$ is the observer’s internal (fuzzy) representation
 of the external state $\psi \in \Horizon$.
 \end{definition}
 
+\subsection{Born.1b Interpretive-Budget Additivity from Bounded Discernibility}
+\label{subsec:appC_born_additivity_derivation}
+The coherence axiom PS--C3 (additivity over a complete orthogonal decomposition) is
+the only one that does interpretive work which could be mistaken for an assumed
+probability rule. We separate its two parts. Its \emph{within-frame} content --
+additivity of the budget over an orthogonal family resolved inside one complete
+frame -- is \emph{derived} below from observer-token disjointness, a purely
+combinatorial fact. Its genuinely physical content -- that the budget a resolvable
+question consumes depends only on the question (the projector) and not on the
+complete frame in which the observer poses it -- is \emph{non-contextuality}, which
+we isolate and posit as PS--C3$'$ (Ax.~\ref{axiom:appC_psc3prime}). This is an honest
+reduction, not an elimination: it locates exactly where the Born rule's substance
+enters the bounded-observer framework. Throughout this subsection the observer
+satisfies the following standing condition.
+
+\begin{assumption}[Bounded discernibility]
+\label{assumption:appC_bounded_discernibility}
+A single resolved observer token is assigned to at most one of any two mutually
+orthogonal (hence mutually exclusive) outcome subspaces: orthogonal resolved outcomes
+receive distinct tokens. This is the content later codified, at the resolution scale,
+as PS--C5 (Ax.~\ref{axiom:appC_psc5}).
+\end{assumption}
+
+\begin{definition}[Observer token space for a projective frame]
+\label{definition:appC_observer_token_space}
+Let $\dim\Horizon < \infty$ and let
+\[
+\mathfrak{F} = \{\Pi_i\}_{i=1}^{n} \subseteq Proj(\Horizon),
+\qquad \Pi_i \Pi_j = 0\ (i \neq j),\qquad \sum_i \Pi_i = \mathbbm{1},
+\]
+be a complete orthogonal frame discernible to the Bounded Observer $\Obs$
+(cf.~\ref{definition:appC_frame_space}). Let $\mathcal{T}_\Obs(\mathfrak{F})$ denote
+the finite set of \emph{observer-resolvable outcome tokens} produced when $\Obs$
+applies its collapse/refinement map (the observer-context realization of $R_\lambda$,
+cf.~\ref{subsec:appC_born_interpretation_ps}) to $\mathfrak{F}$. For any projector
+$\Pi$ obtained by coarse-graining elements of $\mathfrak{F}$, set
+\[
+T_\Obs(\Pi) := \{\, t \in \mathcal{T}_\Obs(\mathfrak{F}) :
+\text{the outcome resolved by } t \text{ lies in } \operatorname{im}(\Pi) \,\}.
+\]
+\end{definition}
+
+\begin{definition}[Observer coherence budget]
+\label{definition:appC_observer_coherence_budget}
+A Bounded Observer $\Obs$ in state $\tilde\psi_{\Obs}$ carries a finite
+\emph{coherence budget}
+\[
+\mu_{\Obs,\tilde\psi} : \mathcal{P}\big(\mathcal{T}_\Obs(\mathfrak{F})\big) \to [0,1],
+\qquad
+\mu_{\Obs,\tilde\psi}(\varnothing) = 0,\quad
+\mu_{\Obs,\tilde\psi}\big(\mathcal{T}_\Obs(\mathfrak{F})\big) = 1,
+\]
+which is finitely additive on disjoint token sets:
+$A \cap B = \varnothing \Rightarrow
+\mu_{\Obs,\tilde\psi}(A \sqcup B) = \mu_{\Obs,\tilde\psi}(A) + \mu_{\Obs,\tilde\psi}(B)$.
+This is not a quantum-probability axiom but finite symbolic-budget conservation:
+disjoint resolved tokens cannot consume the same bounded interpretive resource twice.
+The coherence functional (cf.~\ref{definition:appC_coherence_functional}) admits the
+token-budget representation
+\[
+\mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi) = \mu_{\Obs,\tilde\psi}\big(T_\Obs(\Pi)\big).
+\]
+\end{definition}
+
+\begin{lemma}[Orthogonal token separation]
+\label{lemma:appC_orthogonal_token_separation}
+If $\Pi\,\Xi = 0$ then $T_\Obs(\Pi) \cap T_\Obs(\Xi) = \varnothing$.
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_orthogonal_token_separation}
+Orthogonality gives $\operatorname{im}(\Pi) \cap \operatorname{im}(\Xi) = \{0\}$.
+Were a token $t$ to lie in both $T_\Obs(\Pi)$ and $T_\Obs(\Xi)$, the single outcome
+resolved by $t$ would simultaneously be a $\Pi$-outcome and an $\Xi$-outcome,
+i.e.\ the observer would assign one resolved token to two mutually orthogonal
+(hence mutually exclusive) subspaces. This violates bounded discernibility
+(Assumption~\ref{assumption:appC_bounded_discernibility}). Hence the token sets are disjoint.
+\end{proof}
+
+\begin{lemma}[Coarse-graining of orthogonal tokens]
+\label{lemma:appC_coarse_graining_tokens}
+If $\Pi_i \Pi_j = 0$ for $i \neq j$, then
+$T_\Obs\!\big(\sum_i \Pi_i\big) = \bigsqcup_i T_\Obs(\Pi_i)$.
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_coarse_graining_tokens}
+The projector $\sum_i \Pi_i$ encodes the coarse-grained question
+``did the resolved outcome fall in $\bigcup_i \operatorname{im}(\Pi_i)$?'' A token
+answers affirmatively exactly when it lies in some $T_\Obs(\Pi_i)$, so
+$T_\Obs(\sum_i \Pi_i) = \bigcup_i T_\Obs(\Pi_i)$. By
+Lemma~\ref{lemma:appC_orthogonal_token_separation} the $T_\Obs(\Pi_i)$ are pairwise
+disjoint, so the union is disjoint.
+\end{proof}
+
+\begin{theorem}[Orthogonal additivity from bounded discernibility]
+\label{theorem:appC_orthogonal_additivity}
+Let $\Obs$ be a Bounded Observer with finite coherence budget
+$\mu_{\Obs,\tilde\psi}$. For any finite mutually orthogonal family
+$\{\Pi_i\}_{i=1}^n \subseteq Proj(\Horizon)$,
+\[
+\mathcal{C}_{\Obs}\!\Big(\tilde\psi_{\Obs}, \sum_i \Pi_i\Big)
+= \sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i).
+\]
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_orthogonal_additivity}
+By the token-budget representation (Def.~\ref{definition:appC_observer_coherence_budget}),
+$\mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \sum_i \Pi_i)
+= \mu_{\Obs,\tilde\psi}\big(T_\Obs(\sum_i \Pi_i)\big)$. By
+Lemma~\ref{lemma:appC_coarse_graining_tokens},
+$T_\Obs(\sum_i \Pi_i) = \bigsqcup_i T_\Obs(\Pi_i)$. Finite additivity of the budget
+over disjoint token sets gives
+$\mu_{\Obs,\tilde\psi}(\bigsqcup_i T_\Obs(\Pi_i))
+= \sum_i \mu_{\Obs,\tilde\psi}(T_\Obs(\Pi_i))$, and applying the representation once
+more yields $\sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i)$.
+\end{proof}
+
+\begin{axiom}[PS--C3$'$ (Non-contextual token budget)]
+\label{axiom:appC_psc3prime}
+Let $\mathfrak{F}, \mathfrak{F}'$ be complete orthogonal frames discernible to $\Obs$,
+and let $\Pi \in Proj(\Horizon)$ be obtained by coarse-graining elements of
+$\mathfrak{F}$ and also of $\mathfrak{F}'$, with token realizations
+$T^{\mathfrak{F}}_\Obs(\Pi)$ and $T^{\mathfrak{F}'}_\Obs(\Pi)$. Then the budget
+assigns them equal measure,
+\[
+\mu_{\Obs,\tilde\psi}\big(T^{\mathfrak{F}}_\Obs(\Pi)\big)
+= \mu_{\Obs,\tilde\psi}\big(T^{\mathfrak{F}'}_\Obs(\Pi)\big);
+\]
+equivalently, $\mathcal{C}_{\Obs}(\tilde\psi_\Obs,\Pi)$ is well defined independently of
+the complete frame within which $\Obs$ poses the question $\Pi$.
+\end{axiom}
+
+\begin{remark}[What is proved, and what is posited]
+\label{remark:appC_born_honest_reduction}
+Lemma~\ref{lemma:appC_orthogonal_token_separation},
+Lemma~\ref{lemma:appC_coarse_graining_tokens}, and
+Theorem~\ref{theorem:appC_orthogonal_additivity} establish additivity of the budget
+\emph{within any single frame}; this is bookkeeping, derived from token disjointness.
+The frame-independence of the representation
+$\mathcal{C}_{\Obs}(\tilde\psi_\Obs,\Pi) = \mu_{\Obs,\tilde\psi}(T_\Obs(\Pi))$ across
+frames -- PS--C3$'$ -- is the PS form of non-contextuality and is posited, not derived.
+The Born derivation therefore reduces Gleason's additivity hypothesis to two
+ingredients: finite-budget conservation on disjoint tokens
+(Def.~\ref{definition:appC_observer_coherence_budget}, a bookkeeping principle) and
+non-contextuality of the budget (PS--C3$'$, the physical content).
+\end{remark}
+
+\begin{remark}[Open derivation route for PS--C3$'$]
+\label{remark:appC_psc3prime_open_route}
+A future derivation could proceed through resolution-limited frame distinguishability
+(PS--C5, Ax.~\ref{axiom:appC_psc5}): if two discernible frames agree on $\Pi$ up to the
+observer threshold $\epsilon_\Obs$, the budgets they assign $\Pi$ must agree up to a
+modulus controlled by $\epsilon_\Obs$, and a continuity-plus-density argument over the
+frame manifold -- connected for $\dim\Horizon \ge 3$ -- might then force exact equality
+in the $\epsilon_\Obs \to 0$ refinement limit. We record this as open. That
+$\dim\Horizon \ge 3$ enters in the same place it enters Gleason's theorem
+(Thm.~\ref{theorem:appC_born_rule}) is structural evidence the route is the right one;
+until it is completed, PS--C3$'$ stands as an axiom and the Born conclusion is
+conditional on it.
+\end{remark}
+
 \subsection{Born.2 Coherence Axioms (PS–C)}
 \label{subsec:appC_born_axioms}
-The following axioms constrain the coherence functional (cf.~\ref{definition:appC_coherence_functional}) of a Bounded Observer.
+The following axioms constrain the coherence functional (cf.~\ref{definition:appC_coherence_functional}) of a Bounded Observer. The structural constraints
+PS--C1, PS--C2, PS--C4, PS--C5, together with the non-contextuality axiom PS--C3$'$
+(Ax.~\ref{axiom:appC_psc3prime}), are posited; the \emph{within-frame} additivity once
+carried as PS--C3 is now the \emph{theorem} of
+\S\ref{subsec:appC_born_additivity_derivation} and is recorded below as a corollary.
 
 \begin{axiom}[PS--C1 (Boundedness)]
 \label{axiom:appC_psc1}
@@ -183,13 +358,26 @@ $\mathcal{C}_{\Obs}(U \tilde\psi_{\Obs}, U \Pi U^\dagger)
 = \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$ \quad (cf.~\ref{definition:appC_coherence_functional})
 \end{axiom}
 
-\begin{axiom}[PS--C3 (Conservation of interpretive budget)]
+\begin{corollary}[PS--C3 (Conservation of interpretive budget)]
 \label{axiom:appC_psc3}
 For any complete orthogonal decomposition $\{\Pi_i\}$ of $\mathbbm{1}$ (cf.~\ref{definition:appC_coherence_functional}):
 \[
-\sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i) = 1
+\sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i) = 1.
 \]
-\end{axiom}
+\end{corollary}
+
+\begin{proof}
+\label{proof:appC_psc3}
+Apply Theorem~\ref{theorem:appC_orthogonal_additivity} to the complete frame
+$\sum_i \Pi_i = \mathbbm{1}$:
+$\sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i)
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \mathbbm{1})
+= \mu_{\Obs,\tilde\psi}\big(T_\Obs(\mathbbm{1})\big)
+= \mu_{\Obs,\tilde\psi}\big(\mathcal{T}_\Obs(\mathfrak{F})\big) = 1$,
+using the token-budget representation
+(Def.~\ref{definition:appC_observer_coherence_budget}) and the normalization
+$\mu_{\Obs,\tilde\psi}(\mathcal{T}_\Obs(\mathfrak{F})) = 1$.
+\end{proof}
 
 \begin{axiom}[PS--C4 (Ray invariance)]
 \label{axiom:appC_psc4}
@@ -208,8 +396,9 @@ then both coherence values cannot equal 1 for the same pure state (cf.~\ref{defi
 
 \begin{lemma}[Finite \texorpdfstring{$\Rightarrow$}{⇒} $\sigma$-additivity]
 \label{lemma:appC_sigma_additivity}
-Axioms~\ref{axiom:appC_psc1} and \ref{axiom:appC_psc3}
-imply that for fixed $\psi$,
+Boundedness (PS-C1, \ref{axiom:appC_psc1}) together with finite additivity
+(PS-C3, \ref{axiom:appC_psc3}, established as
+Thm.~\ref{theorem:appC_orthogonal_additivity}) imply that for fixed $\psi$,
 $\mu_\psi(\Pi) := \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$
 extends uniquely to a $\sigma$-additive measure over $Proj(\Horizon)$.
 \end{lemma}
@@ -218,7 +407,7 @@ extends uniquely to a $\sigma$-additive measure over $Proj(\Horizon)$.
 \label{proof:appC_sigma_additivity}
 \leavevmode
 
-Finite additivity follows from Axiom~\ref{axiom:appC_psc3}.
+Finite additivity is Thm.~\ref{theorem:appC_orthogonal_additivity} (PS-C3).
 Carathéodory’s extension theorem guarantees uniqueness of $\sigma$-additive extension.
 \end{proof}
 
@@ -766,5 +955,110 @@ The independent emergence of $\varphi$ from matrix spectral theory and topologic
 
 \begin{remark}[Connection to Other Symbolic Modalities]
 \label{remark:appC_connection_other_modalities}
-The fixed-point equation $\lambda = 1 + 1/\lambda$ (cf.~\ref{theorem:appC_unified_recursive_fixed_point}) appears in multiple contexts within symbolic dynamics. The consistent emergence of $\varphi$ across matrix, topological, and (potentially) thermodynamic or spectral approaches suggests a deeper structural principle governing bounded symbolic systems.
+The fixed-point equation $\lambda = 1 + 1/\lambda$ (cf.~\ref{theorem:appC_unified_recursive_fixed_point}) appears in multiple contexts within symbolic dynamics. The consistent emergence of $\varphi$ across matrix, topological, and (potentially) thermodynamic or spectral approaches is not a coincidence to be noted but a transfer to be proved: the Modal Transference Theorem below states the conditions under which an ordinal-recursive invariant such as $\varphi$ is carried, intact, from one observer-accessible carrier to another.
 \end{remark}
+
+\section{Modal Transference of Symbolic Invariants}
+\label{sec:appC_modal_transference}
+The recurrence of $\varphi$ across notation, geometry, and curvature
+(\S\ref{sec:appC_phi_geometry_theorem}) raises a structural question: when an
+invariant first defined in ordinal-symbolic form reappears in a distinct
+sensory or material carrier---sound, color, geometry, thermodynamic
+presentation (cf.~\S\ref{sec:appC_phi_geometry_theorem})---is that reappearance an
+analogy or a theorem? We answer the
+latter. A \emph{modality} is a presentation of symbolic structure to a bounded
+observer; a \emph{transference map} carries one presentation into another. The
+theorem states that any invariant determined only by ordinal order, operator
+recurrence, cyclic adjacency, or spectral proportion survives transference up to
+observer resolution. Cross-modal constructions such as sonification and the
+Newtonian chromatic wheel are then not analogies but \emph{transference tests}:
+each asks whether a given invariant belongs to the symbolic structure or merely
+to the carrier.
+
+\begin{definition}[Symbolic modality]
+\label{definition:appC_symbolic_modality}
+A \emph{symbolic modality} is a tuple
+\[
+\mathfrak{M} = (X_\mathfrak{M},\ \preceq_\mathfrak{M},\ d_{\Obs,\mathfrak{M}},\
+E_\mathfrak{M},\ \mathcal{I}_\mathfrak{M}),
+\]
+where $X_\mathfrak{M}$ is a space of modal presentations, $\preceq_\mathfrak{M}$
+is an observer-resolved emergence order, $d_{\Obs,\mathfrak{M}}$ is the
+observer-relative modal distance, $E_\mathfrak{M}$ is the stage-composite
+emergence operator (cf.~Def.~\ref{definition:bk1_stage_composite_operator}) in
+the modality, and $\mathcal{I}_\mathfrak{M}$ is a family of structural invariants
+(cyclic order, adjacency, recurrence spectrum, proportion, curvature signature).
+\end{definition}
+
+\begin{definition}[Modal transference map]
+\label{definition:appC_modal_transference_map}
+Let $\mathfrak{M}_A,\mathfrak{M}_B$ be symbolic modalities. A \emph{modal
+transference map} is an observer-bounded map
+$T_{A\to B}:X_{\mathfrak{M}_A}\to X_{\mathfrak{M}_B}$ satisfying:
+\begin{enumerate}
+\item \emph{Ordinal preservation:}
+$x\preceq_{\mathfrak{M}_A}y \Rightarrow T_{A\to B}(x)\preceq_{\mathfrak{M}_B}T_{A\to B}(y)$.
+\item \emph{Observer-bounded distortion:} there exist $L<\infty$ and
+$\varepsilon_\Obs\ge 0$ with
+\[
+d_{\Obs,\mathfrak{M}_B}\!\big(T_{A\to B}x,\,T_{A\to B}y\big)
+\le L\, d_{\Obs,\mathfrak{M}_A}(x,y) + \varepsilon_\Obs.
+\]
+\item \emph{Operator semi-conjugacy:}
+$T_{A\to B}\circ E_{\mathfrak{M}_A} \sim_\Obs E_{\mathfrak{M}_B}\circ T_{A\to B}$,
+equality holding up to observer resolution $\varepsilon_\Obs$.
+\item \emph{Invariant preservation:} for each $I\in\mathcal{I}_{\mathfrak{M}_A}$
+transferred by $T_{A\to B}$ there is $T_*I\in\mathcal{I}_{\mathfrak{M}_B}$ with
+$I(x)=T_*I(T_{A\to B}x)$ up to $\varepsilon_\Obs$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Modal Transference]
+\label{theorem:appC_modal_transference}
+Let $T_{A\to B}$ be a modal transference map between symbolic modalities
+$\mathfrak{M}_A$ and $\mathfrak{M}_B$. Then any invariant determined only by
+ordinal order, operator recurrence, cyclic adjacency, or spectral proportion is
+preserved across the transfer up to observer resolution. In particular, if a
+recurrence invariant $\lambda$ is fixed in $\mathfrak{M}_A$ by the balanced
+two-step closure $a_{n+1}=a_n+a_{n-1}$
+(cf.~book V, Def.~\ref{definition:bk5_balanced_two_step_memory_closure}), then its
+transferred presentation in $\mathfrak{M}_B$ carries the same positive spectral
+invariant $\lambda=\varphi$.
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_modal_transference}
+By ordinal preservation, $T_{A\to B}$ preserves the emergence order of the source
+modality; by observer-bounded distortion, differences below the observer
+threshold in $\mathfrak{M}_A$ remain below threshold in $\mathfrak{M}_B$. By
+operator semi-conjugacy the transferred system follows the same emergence
+dynamics up to resolution: $T_{A\to B}\circ E_{\mathfrak{M}_A} \sim_\Obs
+E_{\mathfrak{M}_B}\circ T_{A\to B}$. An invariant fixed solely by the recurrence
+or adjacency structure of $E_{\mathfrak{M}_A}$ cannot change when $E_{\mathfrak{M}_A}$
+is replaced by its semi-conjugate presentation $E_{\mathfrak{M}_B}$ except below
+threshold. For the balanced two-step closure the companion matrix is
+$A=\big(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\big)$, with characteristic
+equation $\lambda^2-\lambda-1=0$ and positive root $\varphi$. Since transference
+preserves the recurrence structure, the same spectral invariant appears in the
+target modality. Hence $\varphi$ is not tied to a sensory carrier; it is an
+ordinal-recursive invariant transferred through modal presentation.
+\end{proof}
+
+\begin{scholium}[Sonification and the Chromatic Wheel as Transference Tests]
+\label{scholium:appC_transference_tests}
+The sonification and chromatic-wheel constructions are not offered as analogies.
+They are modal transference tests. Each asks whether an invariant first defined
+in ordinal-symbolic form survives transfer into a distinct observer-accessible
+carrier. Sonification is the transference map
+$T_{\mathrm{symbolic}\to\mathrm{audio}}$ carrying symbolic order into pitch,
+interval, rhythm, and phase; the Newtonian color wheel is the map
+$T_{\mathrm{symbolic}\to\mathrm{chromatic}}$ carrying cyclic adjacency,
+opposition, and return into visual structure. When cyclic order, recurrence
+spectrum, and bounded adjacency are preserved under
+Def.~\ref{definition:appC_modal_transference_map}, the invariant belongs to the
+symbolic structure rather than to the particular sensory modality. This is the
+precise sense in which domains are modal presentations of shared ordinal-symbolic
+invariants---not the claim that everything is the same substance, but the claim
+that distinct modalities preserve the same emergence grammar when the
+transference map respects ordinal order, observer bounds, and operator recurrence.
+\end{scholium}

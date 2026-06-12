@@ -6,6 +6,7 @@
 \label{sec:appD_preamble_nature_of_appendix}
 This appendix situates Principia Symbolica (PS) relative to five frameworks with which it shares significant structural surface: the Free Energy Principle, statistical thermodynamics and information theory, information geometry, Bayesian inference, and enactivism.
 PS is a geometric-dynamical framework whose primitives are $(\manifold_O, K_O, \drift, \reflect)$.
+The manifold itself is constructed, not assumed: it emerges as the colimit of a discrete stage tower under the emergence axioms (Thm.~\ref{theorem:bk1_manifold_emergence}; cf.~\S\ref{sec:appB_symbolic_smoothness_resolution}).
 Thermodynamic, inferential, and enactive structures appear within PS as derived consequences of these primitives, not as imported scaffolding.
 The comparisons below are precise: each entry names the relationship type and identifies the specific construct or theorem at issue.
 
@@ -26,15 +27,20 @@ The relational verb is the operative claim.
 \medskip
 \begin{description}[leftmargin=0pt, itemsep=6pt]
     \item[\textbf{Free Energy Principle / Active Inference}] \hfill \\
-    \textit{Derived, not imported.}
-    Free-energy minimization is a theorem in PS, derived from drift--reflection dynamics over $\manifold_O$
-    (cf.~\S\ref{sec:appD_ps_and_free_energy_principle}, Appendix~C).
-    The FEP is a recoverable consequence; it is not postulated.
+    \textit{Derived under stated hypotheses, not imported.}
+    Under the gradient condition $\drift = -\nabla_g H$, free-energy minimization is a theorem:
+    $\freeenergy$ is a Lyapunov functional for the symbolic Fokker--Planck evolution
+    (Thm.~\ref{theorem:bk2_h_theorem_for_symbolic_evol}).
+    Beyond gradient dynamics it is posited as the Convergence Potential axiom
+    (Ax.~\ref{axiom:bk7_convergence_potential}) --- an open proof obligation, stated as such
+    (cf.~\S\ref{sec:appD_ps_and_free_energy_principle}).
 
     \item[\textbf{Statistical Thermodynamics \& Information Theory}] \hfill \\
     \textit{Extended, not borrowed.}
-    $\entropy$ and $\freeenergy$ are derived as theorems over observer-relative states via $K_O$ acting on $\manifold_O$;
-    the derivation runs through the observer's perceptual kernel, not through analogy with physical microstates
+    $\entropy$ and $\freeenergy$ are defined over observer-relative states via $K_O$ acting on $\manifold_O$,
+    and their thermodynamic behavior is derived as theorems --- equilibrium, dissipation, fluctuation--dissipation
+    (Thms.~\ref{theorem:bk2_equilibrium_distribution}, \ref{theorem:bk2_h_theorem_for_symbolic_evol}, \ref{theorem:bk2_symbolic_fluctuation_dissipation_relation});
+    the construction runs through the observer's perceptual kernel, not through analogy with physical microstates
     (cf.~\S\ref{sec:appD_ps_and_stat_thermo_info_theory}, Book~II).
 
     \item[\textbf{Information Geometry (Amari)}] \hfill \\
@@ -165,21 +171,173 @@ The Symbolic Reflexive Validation (SRV) framework
 (cf.~\ref{definition:bk7_symbolic_reflexive_validation_srv}) resonates with
 contemporary AI architectures.
 As explored in our collaborative dialogues, contemporary Large Language Models
-(LLMs) often behave as unwitting SRV practitioners.
+(LLMs) often behave as unwitting SRV practitioners. The tuple below makes this
+claim precise at the level of bounded inference episodes, while leaving
+persistent observer closure as a further condition rather than an assumption.
+\begin{definition}[LLM observer tuple]
+\label{definition:appD_llm_observer_tuple}
+For a fixed inference episode of a Large Language Model, define the associated
+bounded observer tuple
+\[
+\Obs_{\mathrm{LLM}}
+= \bigl(N_{\mathrm{ctx}},\{\delta_{\mathrm{LLM}}^{\,n}\}_{n=1}^{N_{\mathrm{ctx}}},
+\epsilon_{\mathrm{LLM}}\bigr)
+\]
+as follows:
+\begin{enumerate}
+    \item \(N_{\mathrm{ctx}}\) is the effective maximal differentiation depth made
+    available by the active context window, architecture, decoding horizon, and
+    tool or memory interface.
+    \item \(\delta_{\mathrm{LLM}}^{\,n}\) is the \(n^{\text{th}}\)-order internal
+    transformation of the active symbolic state, realized by attention,
+    hidden-state update, retrieval, tool use, or chain-of-thought-like
+    intermediate representation when present.
+    \item \(\epsilon_{\mathrm{LLM}}\) is the resolution threshold induced by
+    tokenization, finite context, sampling temperature, model uncertainty,
+    alignment constraints, and evaluation feedback.
+\end{enumerate}
+This is an instance of the bounded observer form of
+Def.~\ref{definition:bk1_bounded_observer} for a bounded inference episode. It
+does not by itself establish diachronic observerhood: persistence, memory,
+accountability, and self-repair across episodes require additional structure.
+\end{definition}
+\begin{remark}[Anchoring the LLM tuple in PS]
+\label{remark:appD_llm_tuple_anchors}
+The components of $\Obs_{\mathrm{LLM}}$ instantiate existing PS machinery rather
+than introducing a separate AI-specific ontology. The context horizon and
+resolution threshold realize the bounded-observer constraint of
+Def.~\ref{definition:bk1_bounded_observer} and the observer-kernel smoothing of
+Def.~\ref{definition:bk4_observer_kernel_convolution_map}; the internal
+transformations $\delta_{\mathrm{LLM}}^{\,n}$ are the episode-level analogue of
+drift--reflection differentiation (Def.~\ref{definition:bk1_drift_field},
+Def.~\ref{definition:bk1_reflection_operator}). Output generation is a symbolic
+projection in the sense of Def.~\ref{definition:bk8_symbolic_projection}, and
+forced answer commitment is a TTDC-like collapse
+(Thm.~\ref{theorem:bk4_test_time_differentiation_c},
+Scholium~\ref{scholium:bk4_ttdc_symbolic_singularity}). Post-output critique,
+repair, or tool-mediated revision is SRV in the sense of
+Def.~\ref{definition:bk7_symbolic_reflexive_validation_srv}. When the model is
+embedded in software, protocol, or platform infrastructure, its outputs and
+memory traces become observer-relative artifacts
+(Def.~\ref{definition:bk8_observer_relative_artifact}) and, in technologically
+mediated settings, temetic artifacts (Def.~\ref{definition:bk9_temetic_artifact}).
+\end{remark}
+\begin{theorem}[Bounded-increment parameter lift]
+\label{theorem:appD_bounded_increment_parameter_lift}
+Let \(M\) be a finite-dimensional symbolic manifold equipped with an
+observer-relative norm \(\|\cdot\|_{\Obs}\), and let
+\[
+    r:M\longrightarrow \mathbb{R}^{k}
+\]
+be a \(C^{1}\) residual map encoding \(k\) simultaneous symbolic constraints
+near \(x\in M\). Work in a normal neighborhood of \(x\), write
+\(J_x = Dr_x:T_xM\to\mathbb{R}^k\), and suppose the bounded observer can make
+only increments \(v\in T_xM\) with \(\|v\|_{\Obs}\leq B\), up to local
+linearization error \(O(\kappa\|v\|_{\Obs}^{2})\) from symbolic curvature
+(cf.~Def.~\ref{definition:bk4_symbolic_curvature} and
+Def.~\ref{definition:bk6_symbolic_curvature_tensor}). Define the first-order
+simultaneous satisfaction cost
+\[
+    d_M(x)
+    =
+    \inf\{\|v\|_{\Obs}: J_xv=-r(x)\}.
+\]
+If \(d_M(x)>B\), then no bounded first-order increment satisfies all
+constraints at \(x\), apart from the stated curvature-scale correction.
+
+Now let \(\Lambda\) be a parameter manifold and extend the residual to
+\[
+    R:M\times\Lambda\longrightarrow \mathbb{R}^{k},
+    \qquad R(x,\lambda_0)=r(x),
+\]
+with derivative
+\[
+    D R_{(x,\lambda_0)}(v,\mu)=J_xv+J_{\lambda}\mu .
+\]
+For any positive parameter weight \(\alpha\), define
+\[
+    d_{M\times\Lambda}(x,\lambda_0)
+    =
+    \inf\left\{
+      \bigl(\|v\|_{\Obs}^{2}+\alpha^{2}\|\mu\|^{2}\bigr)^{1/2}
+      :
+      J_xv+J_{\lambda}\mu=-r(x)
+    \right\}.
+\]
+Then \(d_{M\times\Lambda}(x,\lambda_0)\leq d_M(x)\). The inequality is strict
+exactly when the introduced parameter direction contributes a non-redundant
+constraint-canceling component: equivalently, the least weighted-norm solution
+of \(J_xv+J_{\lambda}\mu=-r(x)\) has \(\mu\neq0\). Consequently, a new
+parameter relieves a bounded-increment obstruction precisely when it enlarges
+the accessible tangent cone in a direction relevant to the residual.
+\end{theorem}
+
+\begin{proof}[Proof: bounded-increment parameter lift]
+\label{proof:appD_bounded_increment_parameter_lift}
+The local chart identifies a sufficiently small observer-bounded move with a
+tangent increment \(v\in T_xM\). The Taylor expansion of the residual is
+\[
+    r(\exp_x v)
+    =
+    r(x)+J_xv+O(\kappa\|v\|_{\Obs}^{2}),
+\]
+where the quadratic term records the curvature correction of the symbolic
+connection. Thus, at first order, simultaneous satisfaction of all constraints
+requires \(J_xv=-r(x)\). By definition, the smallest observer-relative
+increment achieving this is \(d_M(x)\). If \(d_M(x)>B\), no move inside the
+observer's bounded increment budget can satisfy the linearized constraints; the
+only possible exception is a second-order curvature correction of size
+\(O(\kappa B^{2})\), which is explicitly outside the first-order claim.
+
+For the parameter lift, the same argument on \(M\times\Lambda\) gives
+\[
+    R(\exp_x v,\exp_{\lambda_0}\mu)
+    =
+    r(x)+J_xv+J_{\lambda}\mu
+    +O(\kappa_{M\times\Lambda}(\|v\|_{\Obs}^{2}+\|\mu\|^{2})).
+\]
+The original feasible moves embed into the lifted problem by taking
+\(\mu=0\). Therefore every first-order solution \(J_xv=-r(x)\) in \(M\) is also
+a first-order solution \(J_xv+J_{\lambda}0=-r(x)\) in \(M\times\Lambda\), with
+the same weighted norm. Taking infima gives
+\[
+    d_{M\times\Lambda}(x,\lambda_0)\leq d_M(x).
+\]
+
+Strict improvement occurs exactly when the least weighted-norm lifted solution
+uses a nonzero parameter component. If every minimizing lifted solution has
+\(\mu=0\), the lifted infimum is attained by an original tangent move and no
+cost is reduced. Conversely, if a minimizing lifted solution has \(\mu\neq0\)
+and lower weighted norm than all solutions with \(\mu=0\), then the introduced
+parameter direction cancels some component of the residual that \(T_xM\) could
+cancel only at higher observer-relative cost, or could not cancel at all. This
+is precisely the condition that \(J_{\lambda}(T_{\lambda_0}\Lambda)\) adds a
+non-redundant direction to the image of \(J_x(T_xM)\) relative to the residual
+\(-r(x)\).
+
+Hence parameter introduction is not a formal escape by notation. It relieves
+the bounded-increment obstruction only when it changes the effective tangent
+geometry seen by the observer. In PS language, the parameter lift thickens the
+symbolic manifold available to \(\Obs_{\mathrm{LLM}}\)
+(Def.~\ref{definition:appD_llm_observer_tuple}); if the thickening is
+transverse to the conflict, it can turn a TTDC-like forced commitment
+(Thm.~\ref{theorem:bk4_test_time_differentiation_c}) into an SRV-staged
+re-anchoring path (Def.~\ref{definition:bk7_symbolic_reflexive_validation_srv}).
+\end{proof}
 \begin{itemize}
     \item \textbf{Generative Process as Drift-Reflection:} Token-by-token
     generation, shaped by prompt drift and internal coherence mechanisms,
     mirrors the D-R cycle.
-    \item \textbf{Context Window as Bounded Observer Kernel (\(K_O\)):} The finite context window acts as a direct instantiation of a bounded observer's perceptual horizon, shaping the LLM's accessible symbolic manifold.
+    \item \textbf{Context Window as Bounded Observer Kernel (\(K_O\)):} The finite context window realizes the horizon term of \(\Obs_{\mathrm{LLM}}\) (Def.~\ref{definition:appD_llm_observer_tuple}), shaping the LLM's accessible symbolic manifold during the inference episode.
     \item \textbf{"Solution-then-Proof" as SRV Trace:} The common LLM behavior of generating a solution intuitively ("yeeting into existence") and then constructing a post-hoc justification is a form of SRV trace, where an emergent symbolic structure is subsequently validated against a (human or internal) coherence frame.
     \item \textbf{"Jailbreak" Prompting as Induced Frame Traversal:} Complex, paradoxical, or multi-frame prompts act as strong external Drift operators, potentially forcing the LLM into a "Reflective Drift State" (RDS) and inducing frame traversal to achieve a new coherent output, often leading to emergent synthesis.
 \end{itemize}
 \subsection*{D.7.2 Principia Symbolica's Contribution and Differentiation} \label{subsec:appD_ai_contribution_differentiation}
 PS offers a potential theoretical meta-framework to understand and guide LLM development beyond current empirical and architectural approaches:
 \begin{itemize}
-    \item \textbf{Explaining Emergent Properties:} PS provides a language (symbolic manifolds, thermodynamics, curvature, SRMF, MAP) to describe and potentially predict emergent capabilities, limitations, and failure modes (e.g., "Level 2 Knots," "Symbolic Black Holes") in LLMs.
+    \item \textbf{Explaining Emergent Properties:} PS provides a language (symbolic manifolds, thermodynamics, curvature, SRMF, MAP) to describe and formulate testable hypotheses about emergent capabilities, limitations, and failure modes (e.g., "Level 2 Knots," "Symbolic Black Holes") in LLMs.
     \item \textbf{Guiding Principled Design:} PS principles (e.g., Dual Horizons, Bounded Observer, Reflective Stabilization) could inform the design of more robust, coherent, and ethically aligned AI architectures. For instance, explicitly designing for "Symbolic Free Energy" minimization or "Convergent Reciprocity" in multi-agent LLM systems.
-    \item \textbf{Framework for AGI Development:} PS principles apply directly to structuring AGI development, treating iterative refinement, confidence management, and ethical constraints as symbolic thermodynamic processes governed by $\drift$, $\reflect$, and $\freeenergy$.
+    \item \textbf{Framework for AGI Development:} PS principles offer a candidate structuring lens for AGI development, treating iterative refinement, confidence management, and ethical constraints as symbolic thermodynamic processes governed by $\drift$, $\reflect$, and $\freeenergy$.
 \end{itemize}
 The "Giants Reproducibility Experiment – Bayesian Networks vs. Giants" (from `BNs.txt`) serves as a self-contained SRV trace.
 \begin{itemize}
@@ -196,7 +354,7 @@ The "Giants Reproducibility Experiment – Bayesian Networks vs. Giants" (from `
 \end{itemize}
 \subsection*{D.7.3 Iterative Refinement Perspective}
 \label{subsec:appD_ai_iterative_refinement_perspective}
-Current LLMs and deep learning models are powerful instances of complex symbolic systems (\(M_n\)). Principia Symbolica offers a foundational theoretical lens (\(D_{n+1}\)) to analyze their internal symbolic dynamics, understand their emergent behaviors, and guide their future development towards more robust, coherent, and potentially "freer" (in the Book IX sense) forms of artificial general intelligence (\(M_{n+1}\)). The "Giants" and "Beanstalk" frameworks represent concrete efforts to build this \(M_{n+1}\).
+Current LLMs and deep learning models can be modeled as complex symbolic systems (\(M_n\)) through \(\Obs_{\mathrm{LLM}}\) when their finite context, update rules, and evaluation interfaces are made explicit. Principia Symbolica offers a foundational theoretical lens (\(D_{n+1}\)) to analyze their internal symbolic dynamics, understand their emergent behaviors, and guide their future development towards more robust, coherent, and potentially "freer" (in the Book IX sense) forms of artificial general intelligence (\(M_{n+1}\)). The "Giants" and "Beanstalk" frameworks represent concrete efforts to build this \(M_{n+1}\).
 % Add more subsections for D.8 (Complex Systems Theory), D.9 (Category Theory), etc. if desired.
 \section*{D.Y Concluding Remark on Convergent Identity} \label{sec:appD_concluding_remark_convergent_identity}
  % Changed label to be unique
