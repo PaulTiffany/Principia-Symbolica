@@ -213,9 +213,10 @@ $k\in(0,1]$. Then:
 \item \emph{(Ultimate bound.)} Consequently
 $\limsup_{n\to\infty}|e_n|\le \tau+\dfrac{W}{k}$, and when $W=0$ the residual
 converges to the resolution floor, $|e_n|\to\tau$.
-\item \emph{(Finite hitting time.)} For $W=0$ the band $|e|\le\tau$ is reached in
-at most
-$N=\big\lceil \log\!\big(|e_0|/\tau\big)\big/\log\!\big(1/(1-k)\big)\big\rceil$
+\item \emph{(Finite hitting time.)} For $W=0$ the band $|e|\le\tau$ is reached in at most
+\[
+N=\big\lceil \log\!\big(|e_0|/\tau\big)\big/\log\!\big(1/(1-k)\big)\big\rceil
+\]
 steps (for $k<1$; one step if $k=1$).
 \item \emph{(Confidence ascent.)} $S_n=\exp(-\lambda|e_n|)$ is non-decreasing while
 $|e_n|>\tau+W/k$ and converges to $S_\infty\ge\exp\!\big(-\lambda(\tau+W/k)\big)$.
@@ -471,7 +472,7 @@ Let $(S, \drift, \reflect)$ be a symbolic manifold governed by drift and reflect
 \end{equation}
 where $\mathcal{B}(\mathcal{H}_{\Obs})$ is a symbolic basin of attraction defined relative to the observer's interpretive kernel $K_\Obs$.
 \textbf{Interpretive Significance.} In this view, the hypothesis manifold is not fixed, but \emph{emergent} from repeated reflective iteration. It arises as the \textit{limit set} of a recursive symbolic flow -- a stable epistemic structure that pulls drifting meaning back into interpretable orbit.
-\textbf{Symbolic Inhalation.} Just as biological respiration cycles air into the lungs and back out, symbolic convergence involves alternating pulses of divergence (drift) and stabilization (reflection). Hypotheses are the symbolic alveoli -- folded submanifolds that optimize the surface-area-to-volume ratio of interpretive capacity.
+\textbf{Symbolic Inhalation.} Divergence opens the basin: \(\drift\) loosens a state into excess, alternatives, and unspent meaning. Reflection draws it in. \(\reflect\) compresses the manifold, binds curvature to utility, and lets the hypothesis take breath as an attractor. Hypotheses are the symbolic alveoli -- folded submanifolds where interpretive surface is maximized without losing volume.
 \textbf{Scientific Method Reframed.} In this formulation, scientific inquiry emerges as the limit behavior of symbolic convergence flows across hypothesis manifolds. Testing a hypothesis corresponds to measuring the convergence basin $\mathcal{B}(\mathcal{H}_{\Obs})$ under modified drift fields; falsification becomes curvature repulsion; refinement corresponds to reweaving the attractor geometry itself.
 \end{scholium}
 \section{Reflective Fixed Point theorem}
@@ -504,7 +505,9 @@ is $W_2$-Cauchy, and converges to a stable symbolic identity $\identity \in B(\i
 \]
 where recursive stability~(ii) keeps every $\rho_m$ in the basin on which $\freeenergy$ is bounded below. The partial sums are nondecreasing and bounded, hence convergent.
 
-\textbf{Cauchy and convergence.} For $m > n$ the triangle inequality gives $\wass(\rho_n,\rho_m) \le \sum_{j=n}^{m-1}\wass(\rho_j,\rho_{j+1})$, a tail of a convergent series, so $\wass(\rho_n,\rho_m) \to 0$ as $n \to \infty$: the orbit is Cauchy. Completeness of $\overline{B(\identity)}$ (cf.~\ref{definition:bk2_symbolic_wasserstein_met}) yields a limit $\identity \in B(\identity)$, and the descent inequality with $\wass \ge 0$ makes $\freeenergy[\rho_n]$ nonincreasing, converging to $\freeenergy[\identity]$ by lower semicontinuity.
+\textbf{Cauchy and convergence.} For $m > n$ the triangle inequality gives
+\[\wass(\rho_n,\rho_m) \le \sum_{j=n}^{m-1}\wass(\rho_j,\rho_{j+1}),\]
+a tail of a convergent series, so $\wass(\rho_n,\rho_m) \to 0$ as $n \to \infty$: the orbit is Cauchy. Completeness of $\overline{B(\identity)}$ (cf.~\ref{definition:bk2_symbolic_wasserstein_met}) yields a limit $\identity \in B(\identity)$, and the descent inequality with $\wass \ge 0$ makes $\freeenergy[\rho_n]$ nonincreasing, converging to $\freeenergy[\identity]$ by lower semicontinuity.
 
 \textbf{Fixed point.} Under the closed-graph hypothesis, $\rho_n \to \identity$ and $\reflect(\rho_n) = \rho_{n+1} \to \identity$ force $(\identity,\identity) \in \operatorname{graph}(\reflect)$, i.e.\ $\reflect(\identity) = \identity$. Any fixed point satisfies $\freeenergy[\reflect(\rho)] = \freeenergy[\rho]$ and so lies in the stall set $\mathcal{S}$; if $\mathcal{S} = \{\identity\}$, every orbit limit coincides with $\identity$, giving basin-wide uniqueness. The converged state is the thermodynamically stable symbolic identity within $B(\identity)$, balancing minimal coherence energy $E[\identity]$ (cf.~\ref{definition:bk2_symbolic_energy}) against controlled entropy $S[\identity]$ (cf.~\ref{definition:bk2_symbolic_entropy}).
 
@@ -1159,7 +1162,7 @@ The trade-off arises from the bounded observer's finite reflective bandwidth
 (Def.~\ref{definition:bk1_bounded_observer},
 Def.~\ref{definition:bk1_reflection_operator},
 Def.~\ref{definition:bk5_reflective_drift_coupling_tensor}).
-\begin{scholium}[Constrained Symbolic Uncertainty: motivation]
+\begin{scholium}[Constrained Symbolic Uncertainty]
 \label{scholium:bk7_constrained_uncertainty_motivation}
 Let $\Obs$ be a bounded observer (cf.~\ref{definition:bk1_bounded_observer}) interacting with an evolving symbolic system $S = (\manifold, \metric, \drift, \reflect, \rho)$ (cf.~Def.~\ref{definition:bk6_symbolic_system}). One expects an irreducible trade-off in the simultaneous resolution of:
 \begin{enumerate}
@@ -1554,8 +1557,8 @@ large $\xi$ marks a system hot relative to its frame (coarsely resolved).
 
 \begin{lemma}[Frame-temperature/exponent correspondence]
 \label{lemma:bk7_frame_temperature_exponent_correspondence}
-Fix $T(\tilde\rho)>0$. Under Def.~\ref{definition:bk7_frame_temperature_quotient},
-the quotient $\epsilon\mapsto\xi(\tilde\rho,\epsilon)$ is continuous and strictly
+For $T(\tilde\rho)>0$, the quotient $\epsilon\mapsto\xi(\tilde\rho,\epsilon)$ of
+Def.~\ref{definition:bk7_frame_temperature_quotient} is continuous and strictly
 increasing, with $\xi\to 0^{+}$ as $\epsilon\to 0^{+}$ and $\xi\to\infty$ as
 $\epsilon\to\infty$. Consequently the emergent exponent
 $p$ of Thm.~\ref{theorem:bk7_emergent_lp_norm} is a continuous, strictly
@@ -1617,10 +1620,11 @@ norm-robust, no inner product) and the Hilbert regime ($p=2$ at $\xi^{\ast}$:
 inner product, orthogonal projection, phase and spectral observables) without
 discontinuity.
 \item \emph{(Hilbert observables are a single cross-section.)} The
-inner-product/phase structure---parallelogram identity, orthogonal projection,
-well-defined relative phase---holds exactly on the level set
-$\{\xi:p(\xi)=2\}=\{\xi^{\ast}\}$; off it, projection is replaced by the smooth
-$L^{p(\xi)}$ reweighting of symbolic coherence from part~(i).
+inner-product and phase structure holds exactly on the level set
+$\{\xi:p(\xi)=2\}=\{\xi^{\ast}\}$---parallelogram identity, orthogonal
+projection, well-defined relative phase---while off it, projection is
+replaced by the smooth $L^{p(\xi)}$ reweighting of symbolic coherence
+from part~(i).
 \item \emph{(Phase shift only at threshold.)} A genuine phase shift---a
 discontinuity of $\xi\mapsto$ effective geometry, equivalently a loss of $C^{1}$
 regularity of $\xi\mapsto p$---occurs only when the smoothing-kernel support or the
@@ -1772,11 +1776,13 @@ satisfies the coherence constraints PS-C1, C2, C4, C5 and, since
 $\Phi_{\mathrm{nc}}(\xi^{\ast})=0$, the non-contextuality axiom PS-C3$'$
 (Ax.~\ref{axiom:appC_psc3prime}). For $\dim\Horizon\ge3$ Gleason's theorem applies,
 giving
-$\mathcal{C}_{\Obs}(\tilde\psi,\Pi)=\operatorname{Tr}\!\big(|\tilde\psi\rangle\langle\tilde\psi|\,\Pi\big)=\langle\tilde\psi|\Pi|\tilde\psi\rangle$
+\[
+\mathcal{C}_{\Obs}(\tilde\psi,\Pi)=\operatorname{Tr}\!\big(|\tilde\psi\rangle\langle\tilde\psi|\,\Pi\big)=\langle\tilde\psi|\Pi|\tilde\psi\rangle
+\]
 (App.~C, Thm.~\ref{theorem:appC_born_rule}).
 \end{proof}
 
-\begin{remark}[PS-C3$'$ relocated: from axiom to attractor; the $L^{p}$-sweep instrument]
+\begin{remark}[PS-C3$'$ relocated: from axiom to attractor; the $L^{p}$ sweep]
 \label{remark:bk7_born_collapse_psc3prime}
 Thm.~\ref{theorem:bk7_born_collapse} recasts the one posited ingredient of the Born
 derivation. Non-contextuality (PS-C3$'$) is not an arbitrary axiom imposed on the

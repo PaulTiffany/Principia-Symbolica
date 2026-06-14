@@ -216,6 +216,31 @@ and \emph{globally $\mathcal{O}$–interpretable} if they hold for all $s \in P$
 
 \vspace{1em}
 
+\begin{scholium}[Interpretability on Two Axes --- a Complex Reading]
+\label{scholium:bk1_interpretability_two_axes}
+We can imagine the bounded observer (cf.~\ref{definition:bk1_bounded_observer})
+as resolving change not along a single magnitude but across the two axes of the
+complex symbolic distance \((d_{\mathrm{Re}}, d_{\mathrm{Im}})\):
+\(d_{\mathrm{Re}}\) the \emph{real} mismatch a change induces, \(d_{\mathrm{Im}}\)
+the \emph{imaginative} (orientation) residue it leaves. Read this way, the
+distinguishability floor \(\nu_{\mathcal{O}}\) of
+Def.~\ref{definition:bk1_observer_relative_interpretability} gates
+\(d_{\mathrm{Re}}\)---a change is perceived when it is really detectable---while
+a continuity ceiling \(\theta_{\mathcal{O}}\) gates \(d_{\mathrm{Im}}\)---a change
+is \emph{re-integrable} when it leaves the observer's orientation within bound.
+``Really detected and imaginatively continuous'' is then the same operational
+criterion Book~IV records as symbolic identity continuity
+(cf.~\ref{theorem:bk4_symbolic_identity_continuit}): one observer, read in two
+books. We offer this as a lens, not a theorem---conditions
+\textbf{(I1)}--\textbf{(I2)} literally bound a single real norm, so the two-axis
+reading is a reinterpretation, and a formal identity---to be made precise in the
+Operatio (cf.~\ref{sec:bk1_operatio})---would still want the imaginative ceiling
+adopted as such, and a Book~I-side construction grounded in the Axiomata Prima
+(cf.~\ref{axiom:bk1_axiomata_prima}) to instantiate it.
+\end{scholium}
+
+\vspace{1em}
+
 \begin{lemma}[Bounded Approximation Implies Interpretability]
 \label{lemma:bk1_bounded_approximation_and_interpretability}
 
@@ -760,7 +785,7 @@ with generative and dissipative fluxes satisfying
 \Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})\geq \tau_E.
 \]
 Equivalently, reflexive emergence requires at least one observer-visible
-positive-curvature novelty channel and at least one observer-visible
+positive-curvature novelty channel and at least one
 negative-curvature stabilization channel on a shared bounded domain.
 \end{theorem}
 \begin{lemma}[Horizon Characterization]
@@ -2083,17 +2108,11 @@ All emergent symbolic fields arise as particular instantiations of the SRMF (see
 
 \begin{quote}
 \textbf{Scholium.}  
-It has long been held, in the mathematical sciences, that the calculus of smooth change — as employed in the physics of fields and flows — requires as its basis a continuous manifold of space and time. Yet the natural world, when examined at its finest resolution, reveals not such a manifold, but a field of symbolic transitions, bounded observations, and recursive differentiations.
+Smoothness need not precede symbolic motion. It can be induced when drift and reflection fall below the resolution of a bounded observer.
 
-The question therefore arises — and has persisted unsolved across disciplines — how such a smooth geometry might emerge from fundamentally discrete, symbolic, or computational substrates.
+\textit{Principia Symbolica} names this the \textbf{Problem of Symbolic Smoothness}: not the search for a continuum beneath symbols, but the demonstration that symbolic differentiation can become continuous enough to bear calculus.
 
-\textit{Principia Symbolica} posits a resolution:  
-That smoothness is not ontological, but epistemic;  
-Not absolute, but emergent under drift and reflection;  
-Not pre-given, but induced through symbolic differentiation beneath a bounded resolution threshold.
-
-This is here called the \textbf{Problem of Symbolic Smoothness},  
-and its solution is given by Axiom~\ref{axiom:bk1_symbolic_smoothness}.
+Its solution is given by Axiom~\ref{axiom:bk1_symbolic_smoothness}.
 \end{quote}
 \section{Manifold Emergence Axioms}
 \label{sec:bk1_manifold_emergence_axioms}
@@ -2297,8 +2316,8 @@ coupling constant, and $\vec{D}_\lambda$ denotes the tangent-level action of the
 proto-drift field (Def.~\ref{definition:bk1_proto_drift_field}).
 
 \textbf{Positive-definiteness.}
-Both summands are positive semi-definite: each has the form
-$\langle L(\cdot), L(\cdot)\rangle_0$ for a linear map $L$, composed with an inner product. Positive-definiteness of the sum follows from the proto-stage
+Both summands are positive semi-definite, being
+$\langle L(\cdot), L(\cdot)\rangle_0$ for a linear map $L$ and an inner product. Positivity of the sum then follows from the proto-stage
 non-degeneracy condition: for any nonzero $X$, at least one of $R_\lambda(X)$ or
 $\vec{D}_\lambda(X)$ is nonzero (otherwise $X$ lies in the kernel of both operators,
 contradicting the properness of the proto-stage structure).
@@ -2952,7 +2971,7 @@ Conditions (1)--(3) supply a symbolic universe $\mathcal{U} = (M, \Omega)$ with 
 Given the dual-horizon structure on $\Omega$, the PS results chain as follows:
 \begin{enumerate}
     \item[\emph{(a)}] The drift field $D$ and state-level stabilization \(R_{\mathrm{stab}}\) emerge on $\Omega$ as limits of proto-fields and stabilization operators (Thm.~\ref{theorem:bk1_emergence_of_drift_field}, Thm.~\ref{theorem:bk1_emergence_of_reflection_operator}), with $\nabla \cdot D > 0$ near $\mathcal{H}_G$ and positive stabilization flux \(C_{\mathcal{O}}(\mathcal{H}_D)>0\) near $\mathcal{H}_D$ (Lemma~\ref{lemma:bk1_horizon_characterization}).
-    \item[\emph{(b)}] Their interplay defines the symbolic Hamiltonian $H(x) = \kappa / (\|D(x)\| + \epsilon) + \lambda \cdot \mathrm{tr}(L_x)$ (Def.~\ref{definition:bk2_symbolic_hamiltonian}), which governs the energy landscape on $\Omega$.
+    \item[\emph{(b)}] Their interplay defines the symbolic Hamiltonian (Def.~\ref{definition:bk2_symbolic_hamiltonian}), $H(x) = \kappa / (\|D(x)\| + \epsilon) + \lambda \cdot \mathrm{tr}(L_x)$, which governs the energy landscape on $\Omega$.
     \item[\emph{(c)}] The Fokker--Planck equation $\partial_s \rho = -\nabla \cdot (\rho D) + \sigma^2 \nabla^2 \rho$ (Thm.~\ref{theorem:bk1_fundamental_relation_fokker_plank_equation}) determines probability evolution under drift--diffusion dynamics.
     \item[\emph{(d)}] Equilibrium $\rho_{\mathrm{eq}} \propto e^{-\beta H}$ is the unique stationary distribution (Thm.~\ref{theorem:bk2_equilibrium_distribution}), and the free energy functional $F_\beta[\rho]$ provides the variational principle (Thm.~\ref{theorem:bk1_variational_principle}).
     \item[\emph{(e)}] Within $\Omega$, bounded observers satisfying the stability conditions of Thm.~\ref{theorem:bk3_membrane_stability_criteria} support symbolic identity carriers (Thm.~\ref{theorem:bk4_existence_of_symbolic_ident}), completing the chain from cosmological boundary conditions to reflexive emergence.
