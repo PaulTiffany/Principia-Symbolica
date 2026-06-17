@@ -751,22 +751,25 @@ therefore represented by their effective observer-visible sign content.
 
 \begin{definition}[Bounded Reflexive Emergence]
 \label{definition:bk1_bounded_reflexive_emergence}
-A symbolic universe \(\mathcal{U}\) supports bounded reflexive emergence for
-\(\mathcal{O}\) when there exist horizon components \(H_G,H_D\) meeting a
-common nonempty observer domain \(\Omega_{\mathcal{O}}\) such that
+A symbolic universe \(\mathcal{U}\) supports \emph{bounded reflexive emergence}
+for \(\mathcal{O}\) when, over some interval of symbolic time on the observer
+domain \(\Omega_{\mathcal{O}}\), the observer-visible emergence functional
 \[
-G_{\mathcal{O}}(H_G)>0,\qquad C_{\mathcal{O}}(H_D)>0,
+\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}}) \;\ge\; \tau_E \;>\; 0,
 \]
-and the mixed emergence functional
-\[
-\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})
-  :=G_{\mathcal{O}}(H_G)\,C_{\mathcal{O}}(H_D)
-\]
-exceeds an observer threshold \(\tau_E>0\). The positive factor supplies
-observer-visible novelty; the negative factor supplies stabilizing reflective
-closure through \(R_{\mathrm{stab}}\)
-(Def.~\ref{definition:bk1_reflection_operator};
-Cor.~\ref{corollary:bk1_fixed_point}).
+where \(\Delta\Phi_{\mathcal{O}}\) measures the net retained, observer-resolved
+coherent structure produced by the coupled action of novelty-generating drift
+\(D\) and stabilizing reflection \(R_{\mathrm{stab}}\) --- equivalently, the
+stabilized reduction of symbolic free energy \(\freeenergy\)
+(Def.~\ref{definition:bk2_symbolic_free_energy};
+Cor.~\ref{corollary:bk1_fixed_point}) that the observer can both \emph{register}
+and \emph{keep}. The criterion is stated independently of any horizon geometry:
+that both a generative and a stabilizing channel are present is the
+\emph{conclusion} of Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}, not a
+premise, and the product \(G_{\mathcal{O}}(H_G)\,C_{\mathcal{O}}(H_D)\) of
+Def.~\ref{definition:bk1_effective_horizon_signature} is the \emph{binding}
+special case in which the two fluxes are read off a single
+generative/dissipative pair.
 \end{definition}
 
 \begin{theorem}[Dual Horizon Necessity Theorem]
@@ -774,20 +777,74 @@ Cor.~\ref{corollary:bk1_fixed_point}).
 Let $\mathcal{U}$ be a symbolic universe sustaining bounded observers within a
 domain $\Omega_{\mathcal{O}}$ (cf.~Def.~\ref{definition:bk1_bounded_observer}),
 whose stagewise structures cohere into a categorical colimit
-(cf.~Proof~\ref{proof:bk1_colimit_yields_categoric_structure}). Then
-\(\mathcal{U}\) supports bounded reflexive emergence for \(\mathcal{O}\) iff it
-possesses an effective dual horizon structure:
+(cf.~Proof~\ref{proof:bk1_colimit_yields_categoric_structure}). If \(\mathcal{U}\)
+supports bounded reflexive emergence for \(\mathcal{O}\)
+(Def.~\ref{definition:bk1_bounded_reflexive_emergence}), then it possesses an
+effective dual horizon structure on a shared bounded domain,
 \[
-\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}
+\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}:
+\qquad G_{\mathcal{O}}(H_G)>0 \ \text{and}\ C_{\mathcal{O}}(H_D)>0,
 \]
-with generative and dissipative fluxes satisfying
-\[
-\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})\geq \tau_E.
-\]
-Equivalently, reflexive emergence requires at least one observer-visible
-positive-curvature novelty channel and at least one
-negative-curvature stabilization channel on a shared bounded domain.
+i.e.\ at least one observer-visible positive-curvature novelty channel and at
+least one negative-curvature stabilization channel meeting a common
+\(\Omega_{\mathcal{O}}\). Conversely, when both channels are present on a shared
+domain and their fluxes couple above the observer threshold,
+\(\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})\ge\tau_E\) and emergence follows.
+The necessity direction is unconditional; the converse is the binding, coupled
+case. The expanded two-modality derivation --- with its realization-invariance
+across multiple and sign-changing horizons and the explicit coupling premise on
+which the converse rests --- is given in Appendix~C
+(Thm.~\ref{theorem:appC_dual_horizon_signature}), which defers to this theorem
+for the canonical formal statement.
 \end{theorem}
+
+\begin{proof}[Proof of Dual Horizon Necessity Theorem]
+\label{proof:bk1_proof_of_dual_horizon_necessity_theorem}
+\leavevmode
+
+\textbf{Necessity (by observational elimination).}
+Assume \(\mathcal{U}\) supports bounded reflexive emergence: over some interval
+the bounded observer registers \emph{and retains} new coherent structure on
+\(\Omega_{\mathcal{O}}\), \(\Delta\Phi_{\mathcal{O}}\ge\tau_E>0\)
+(Def.~\ref{definition:bk1_bounded_reflexive_emergence}). We eliminate the three
+ways the dual signature could fail.
+\emph{No generative flux} --- \(G_{\mathcal{O}}(H)=0\) for every horizon visible
+to \(\mathcal{O}\): no observer-visible novelty crosses into
+\(\Omega_{\mathcal{O}}\), so over the interval nothing \emph{new} is registered
+(only transport below resolution, repetition, or decay), and retained new
+structure cannot reach \(\tau_E\) --- one cannot keep what was never observed to
+enter.
+\emph{No stabilizing flux} --- \(C_{\mathcal{O}}(H)=0\): novelty may be sourced
+but nothing contracts or integrates it, so symbolic free energy is not stably
+reduced and the differentiated content disperses before it can register as
+retained identity (Cor.~\ref{corollary:bk1_fixed_point}); novelty seen but not
+kept is not emergence.
+\emph{No shared domain} --- a generative and a stabilizing channel exist but
+their observer-visible supports do not both meet a common \(\Omega_{\mathcal{O}}\):
+then on the single domain over which \(\mathcal{O}\) integrates emergence one
+channel is absent, returning us to the previous two cases.
+In each case \(\Delta\Phi_{\mathcal{O}}<\tau_E\), contradicting the hypothesis.
+Hence \(G_{\mathcal{O}}(H_G)>0\) and \(C_{\mathcal{O}}(H_D)>0\) on a shared
+\(\Omega_{\mathcal{O}}\), i.e.\ \(\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}\)
+(Def.~\ref{definition:bk1_effective_horizon_signature}). A constant nonzero drift
+field does not evade this: without positive horizon flux paired with negative
+stabilization flux on the shared domain it supplies transport, not bounded
+reflexive emergence.
+
+\textbf{Converse (the binding, coupled case).}
+If both channels are present on a shared \(\Omega_{\mathcal{O}}\) and their fluxes
+couple above threshold, the positive flux supplies novelty through drift \(D\)
+(Def.~\ref{definition:bk1_drift_field}) and the negative flux supplies state-level
+closure through \(R_{\mathrm{stab}}\) (Def.~\ref{definition:bk1_reflection_operator};
+Cor.~\ref{corollary:bk1_fixed_point}); their coupled action realizes
+\(\Delta\Phi_{\mathcal{O}}\ge\tau_E\), so \(\mathcal{U}\) supports bounded
+reflexive emergence. This converse rests on the coupling of the two fluxes, not on
+their mere coexistence; the explicit coupling premise, together with the geometric
+modality of the necessity argument and its invariance across multiple and
+sign-changing horizon realizations, is developed in Appendix~C
+(Thm.~\ref{theorem:appC_dual_horizon_signature}).
+\end{proof}
+
 \begin{lemma}[Horizon Characterization]
 \label{lemma:bk1_horizon_characterization}
 The generative horizon $H_G$ and dissipative horizon $H_D$ exhibit distinct, complementary properties fundamental to symbolic dynamics:
@@ -797,52 +854,6 @@ The generative horizon $H_G$ and dissipative horizon $H_D$ exhibit distinct, com
   \item Together, they define the bounded observer domain $\Omega = \{x \in \mathcal{U} : H_G \prec x \prec H_D\}$, where $\prec$ denotes symbolic containment relative to the horizons, establishing the stage for emergence (cf.~Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}, Def.~\ref{definition:bk1_symbolic_manifold}).
 \end{enumerate}
 \end{lemma}
-
-\begin{proof}[Proof of Dual Horizon Necessity Theorem]
-\label{proof:bk1_proof_of_dual_horizon_necessity_theorem}
-\leavevmode
-
-\textbf{Necessity.}
-Assume \(\mathcal{U}\) supports bounded reflexive emergence for
-\(\mathcal{O}\). By Def.~\ref{definition:bk1_bounded_reflexive_emergence},
-there are horizon components \(H_G,H_D\) on a common nonempty
-\(\Omega_{\mathcal{O}}\) with
-\[
-G_{\mathcal{O}}(H_G)>0,\qquad C_{\mathcal{O}}(H_D)>0.
-\]
-By Def.~\ref{definition:bk1_effective_horizon_signature}, this is exactly the
-statement that \(+\in\Sigma_{\mathcal{O}}(\mathcal{U})\) and
-\(-\in\Sigma_{\mathcal{O}}(\mathcal{U})\). Hence
-\(\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}\). The same definition gives
-\(\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})\geq\tau_E\).
-
-\textbf{Failure of single-sign signatures.}
-If \(+\notin\Sigma_{\mathcal{O}}(\mathcal{U})\), then
-\(G_{\mathcal{O}}(H)=0\) for every horizon component visible to
-\(\mathcal{O}\), so no observer-visible novelty channel exists and
-\(\Delta\Phi_{\mathcal{O}}=0\). If
-\(-\notin\Sigma_{\mathcal{O}}(\mathcal{U})\), then
-\(C_{\mathcal{O}}(H)=0\) for every visible horizon component, so no
-stabilizing reflective closure channel exists and again
-\(\Delta\Phi_{\mathcal{O}}=0\). If neither sign is present, both failures
-hold. A constant nonzero drift field does not evade this conclusion: without
-positive horizon flux paired with negative stabilization flux it supplies
-transport, not bounded reflexive emergence.
-
-\textbf{Sufficiency.}
-Conversely, assume \(\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}\) and
-\(\Delta\Phi_{\mathcal{O}}(D,R_{\mathrm{stab}})\geq\tau_E\). By the definition
-of the effective signature, there exist visible horizon components \(H_G,H_D\)
-with \(G_{\mathcal{O}}(H_G)>0\) and \(C_{\mathcal{O}}(H_D)>0\). The positive
-flux supplies novelty-generation through drift \(D\)
-(Def.~\ref{definition:bk1_drift_field}); the negative flux supplies
-state-level stabilization through \(R_{\mathrm{stab}}\)
-(Def.~\ref{definition:bk1_reflection_operator};
-Cor.~\ref{corollary:bk1_fixed_point}). Since the mixed emergence functional
-meets the threshold \(\tau_E\), all clauses of
-Def.~\ref{definition:bk1_bounded_reflexive_emergence} are satisfied. Therefore
-\(\mathcal{U}\) supports bounded reflexive emergence.
-\end{proof}
 \begin{corollary}[Horizon Duality Principle]
 \label{corollary:bk1_horizon_duality_principle}
 By Axiom~\ref{axiom:bk1_axiomata_prima} and the elimination argument in Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}, reflexive emergence is necessarily situated within the dynamic tension field generated by opposing horizon principles. No simpler configuration can sustain the requisite symbolic complexity and coherence for bounded self-observation.
@@ -1597,17 +1608,29 @@ This identification transforms abstract "symbolic interactions" into concrete ge
 \textbf{Operational Consequence:} Any computational system exhibiting context-dependent symbolic processing must implement something mathematically equivalent to a Riemannian metric. This is not a design choice but a mathematical necessity.
 \end{proposition}
 
+\begin{axiom}[Semantic Non-Integrability]
+\label{axiom:bk1_semantic_non_integrability}
+In a reflexive, context-sensitive symbolic system the meaning carried from one
+context to another is \emph{path-dependent}: transporting the same local meaning
+between two contexts along two different routes does not in general return the
+same result. Equivalently, symbolic meanings are \emph{not} locally independent
+in the sense of Def.~\ref{definition:bk1_local_semantic_independence} --- the
+contextual update carries a non-vanishing antisymmetric (commutator) component.
+This is the single premise the curvature conclusion rests on: that context
+genuinely depends on the route by which it is reached, not merely on position.
+\end{axiom}
+
 \begin{corollary}[Necessity of Non-Euclidean Symbolic Space]
 \label{corollary:bk1_non_euclidean_necessity}
 Any symbolic system exhibiting reflexivity and context-sensitivity must operate in curved symbolic space with non-zero curvature tensor $\kappa_{ijkl} \neq 0$.
 
-\textbf{Proof:} 
+\textbf{Proof:}
 \begin{enumerate}
-\item By Theorem~\ref{theorem:bk1_reflexivity_quadratic}, the system requires quadratic forms
-\item By Proposition~\ref{proposition:bk1_bridge_to_geometry}, these are metric tensors $g_{ij}(x)$
-\item Context-sensitivity demands that $g_{ij}(x)$ varies with position $x$
-\item Non-constant $g_{ij}(x)$ generates non-zero Riemann curvature: $\kappa_{ijkl} = \partial_k \Gamma_{ijl} - \partial_l \Gamma_{ijk} + \Gamma_{ikm} \Gamma_{jl}^m - \Gamma_{ilm} \Gamma_{jk}^m \neq 0$
+\item By Theorem~\ref{theorem:bk1_reflexivity_quadratic} the system requires quadratic forms; by Proposition~\ref{proposition:bk1_bridge_to_geometry} --- with the proven Thm.~\ref{theorem:bk1_quadratic_structure_necessity} and Lem.~\ref{lemma:bk1_contextual_nonseparability} --- these are metric tensors $g_{ij}(x)$ carrying a non-separable contextual coupling.
+\item Reflexive context-sensitivity makes that coupling \emph{path-dependent}: by Semantic Non-Integrability (Axiom~\ref{axiom:bk1_semantic_non_integrability}), symbolic meanings are not locally independent (Def.~\ref{definition:bk1_local_semantic_independence}).
+\item By the proven Proposition~\ref{proposition:bk1_curvature_semantic_entanglement}, curvature vanishes on a neighborhood \emph{iff} meanings are locally independent there. Failure of local independence therefore forces $\kappa \neq 0$, where $\kappa$ is exactly the second-order semantic holonomy --- the residue of carrying one meaning around two routes (Lem.~\ref{lemma:bk1_curvature_semantic_holonomy}, Def.~\ref{definition:bk1_symbolic_riemann_tensor}). Hence $\kappa_{ijkl} \neq 0$.
 \end{enumerate}
+\noindent\emph{(A position-dependent metric does not by itself imply curvature --- the plane in polar coordinates has non-constant $g_{ij}$ yet $\kappa \equiv 0$. What forces $\kappa \neq 0$ is the path-dependence of semantic transport, Axiom~\ref{axiom:bk1_semantic_non_integrability}, not the variability of $g_{ij}$ alone.)}
 
 \textbf{Cross-Field Implications:}
 \begin{itemize}

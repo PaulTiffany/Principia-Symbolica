@@ -395,6 +395,19 @@ where \(\identity\) is a convergent symbolic identity.
 \label{remark:bk7_unnamed_remark_02}
 This axiom posits reflection \(\reflect\) as the fundamental counter-force to drift-induced dissolution. It guarantees that systems capable of reflection can bound the entropic effects of drift, enabling persistence and the formation of stable structures (\(\identity\)). The recursive application \(\reflect^n\) highlights the iterative, self-correcting nature of coherence maintenance against perpetual perturbation. Without such a stabilizing operator, symbolic systems subject to drift would inevitably dissipate (cf.~Ax.~\ref{axiom:bk7_reflective_stabilization}, Def.~\ref{definition:bk7_reflective_operator}).
 \end{remark}
+\begin{axiom}[Caristi Descent of Reflection]
+\label{axiom:bk7_caristi_descent_for_reflection}
+The canonical reflective operator \(\reflect\) (Def.~\ref{definition:bk7_reflective_operator}) does not merely lower symbolic free energy --- it pays for every step. On the basin of attraction \(B(\identity)\) of Reflective Stabilization (Axiom~\ref{axiom:bk7_reflective_stabilization}), where \(\freeenergy\) is bounded below (Axiom~\ref{axiom:bk7_convergence_potential}), each reflective update spends free energy at least equal to the symbolic distance it travels:
+\[
+\wass(\rho, \reflect(\rho)) \;\le\; \freeenergy[\rho] - \freeenergy[\reflect(\rho)]
+\qquad \text{for all } \rho \in B(\identity).
+\]
+This is the quantitative strengthening of Reflective Stabilization: stabilization fixes the \emph{destination} (\(\freeenergy \to F_{\min}\)); descent fixes the \emph{exchange rate} between displacement and the free energy actually spent. It is precisely the Caristi inequality of Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}(i), now posited of the operator itself rather than assumed of an abstract map.
+\end{axiom}
+\begin{remark}
+\label{remark:bk7_caristi_descent_note}
+Why descent and not mere monotonicity? Because monotone free energy alone does not converge (cf.~Demonstratio~\ref{demonstratio:bk7_convergence_within_reflective_basin}): an orbit can spend ever less while travelling ever farther. Descent binds the two. We posit it of \(\reflect\) as a thermodynamic property of bounded reflection --- a premise still owed a derivation from the metabolic cost of a single reflective step (cf.~Ax.~\ref{axiom:bk7_convergence_potential}), and discharged here as a named, auditable axiom rather than a hidden gloss inside the theorem's hypothesis.
+\end{remark}
 \begin{axiom}[Emergence of Coherence via Convergence]
 \label{axiom:bk7_emergence_of_coherence_via_convergence}
 The asymptotic limit of recursive reflective dynamics \(\reflect^n\) applied to any initial state \(\rho_0\) within the basin of attraction \(B(\identity)\) of a convergent symbolic identity \(\identity\) converges uniquely to \(\identity\):
@@ -513,6 +526,15 @@ a tail of a convergent series, so $\wass(\rho_n,\rho_m) \to 0$ as $n \to \infty$
 
 \textbf{Why descent, not contraction.} Monotone free energy alone -- $\freeenergy[\reflect(\rho)] \le \freeenergy[\rho]$, the hypothesis of the former statement -- does not force convergence: an orbit with increments $\wass(\rho_n,\rho_{n+1}) = 1/n$ and free-energy drops $1/n^2$ diverges (harmonic series) while its energy converges. The Caristi inequality of~(i), bounding displacement by the free energy actually spent, is the exact strengthening that closes this gap without assuming $\reflect$ contractive, and it supplies the mathematical substrate for observer-relative identity formation (cf.~\ref{definition:bk1_bounded_observer}, \ref{axiom:bk1_dual_horizon_postulate}) and higher-order symbolic emergence (cf.~\ref{theorem:bk1_symbolic_emergence_and_curvature}, \ref{definition:bk1_paradox_triggered_emergence}). \qed
 \end{demonstratio}
+
+\begin{corollary}[The Observer converges into being]
+\label{corollary:bk7_observer_converges}
+The canonical reflective operator \(\reflect\) (Def.~\ref{definition:bk7_reflective_operator}) satisfies hypothesis~(i) of Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity} by Caristi Descent of Reflection (Axiom~\ref{axiom:bk7_caristi_descent_for_reflection}), and hypothesis~(ii) by the basin clause of Reflective Stabilization (Axiom~\ref{axiom:bk7_reflective_stabilization}). The theorem therefore applies to \(\reflect\) without further hypothesis: every initial state in \(B(\identity)\) converges under recursive reflection to the stable symbolic identity \(\identity\). The convergence of the bounded observer into being is thus not conditional on an abstract descent assumption --- it follows from the posited thermodynamics of reflection itself.
+\end{corollary}
+\begin{proof}
+\label{proof:bk7_observer_converges}
+Immediate from the cited axioms: Axiom~\ref{axiom:bk7_caristi_descent_for_reflection} \emph{is} hypothesis~(i), and the basin clause of Axiom~\ref{axiom:bk7_reflective_stabilization} \emph{is} hypothesis~(ii); apply Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity} to \(\reflect\) on \(B(\identity)\).
+\end{proof}
 
 \begin{corollary}[Geometric energy decay gives exponential convergence]
 \label{corollary:bk7_geometric_convergence_rate}
