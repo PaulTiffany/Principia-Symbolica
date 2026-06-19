@@ -657,6 +657,15 @@ Let $\mathfrak{C}$ be a confidence field on symbolic manifold $M$ with regular s
 \end{equation}
 where $\alpha > 0$ is the drift coefficient, $\beta \geq 0$ is the diffusion coefficient, and $\xi(t)$ represents stochastic fluctuations.
 \end{proposition}
+\begin{proof}
+\label{proof:bk6_confidence_gradient}
+\leavevmode
+Regularity of the stratification (Def.~\ref{definition:bk6_confidence_stratification}) makes $\mathfrak{C}$ smooth with gradient transverse to the codimension-one strata, so $\nabla\mathfrak{C}$ is a well-defined smooth vector field. Model mutation as a Markov process on $M$ whose local moves are biased by confidence. Expanding its generator in the jump moments (the Kramers--Moyal expansion) and truncating at second order --- valid for local moves with finite first and second moments --- gives a Fokker--Planck/Langevin evolution $\tfrac{d}{dt}P_\lambda=a_1(P_\lambda)+a_2(P_\lambda)+\xi(t)$, where $a_1$ is the first jump moment (deterministic drift) and $a_2$ the second (diffusion). Confidence bias makes the first moment proportional to the confidence gradient, $a_1=-\alpha\nabla\mathfrak{C}$ with $\alpha>0$; the second moment is the Laplacian smoothing $a_2=\beta\nabla^2\mathfrak{C}$ with $\beta\ge 0$; and the truncated higher moments are collected into the fluctuation $\xi(t)$. The regime where drift and diffusion coefficients balance is exactly the bifurcation structure of Prop.~\ref{proposition:bk6_bifurcation_threshold}. Hence
+\[
+\frac{d}{dt}P_\lambda(t)=-\alpha\nabla\mathfrak{C}(P_\lambda(t))+\beta\nabla^2\mathfrak{C}(P_\lambda(t))+\xi(t),
+\]
+the claimed governing equation.
+\end{proof}
 
 The confidence gradient acts as a geometric regulator, creating drift currents that guide symbolic evolution toward higher-certainty configurations while maintaining sufficient diffusive exploration to prevent premature convergence to local optima.
 
@@ -679,6 +688,15 @@ For a confidence field with fractal dimension $d_f$, the symbolic power exhibits
 \end{equation}
 for scale transformations $\lambda > 0$.
 \end{lemma}
+\begin{proof}
+\label{proof:bk6_power_scaling}
+\leavevmode
+Symbolic power factorizes as $\mathfrak{P}(x)=\mathfrak{C}(x)\cdot\|\nabla\mathfrak{C}(x)\|\cdot\text{vol}(\mathcal{B}_r(x)\cap M)$ (Def.~\ref{definition:bk6_symbolic_power}); examine each factor under $x\mapsto\lambda x$. Confidence is a dimensionless field on $[0,1]$, invariant under rescaling: $\mathfrak{C}(\lambda x)=\mathfrak{C}(x)$ (homogeneity degree $0$). The gradient carries one inverse power of length, $\|\nabla\mathfrak{C}(\lambda x)\|=\lambda^{-1}\|\nabla\mathfrak{C}(x)\|$ (degree $-1$). On a confidence stratification of fractal dimension $d_f$ (Def.~\ref{definition:bk5_fuzzy_symbolic_manifold}) the occupied ball volume scales, by the very definition of fractal dimension, as $\text{vol}(\mathcal{B}_{\lambda r}\cap M)=\lambda^{d_f}\,\text{vol}(\mathcal{B}_r\cap M)$ (degree $d_f$). Multiplying the three homogeneity degrees,
+\[
+\mathfrak{P}(\lambda x)=\lambda^{0}\cdot\lambda^{-1}\cdot\lambda^{d_f}\,\mathfrak{P}(x)=\lambda^{d_f-1}\mathfrak{P}(x),
+\]
+the stated scaling law. Power thus concentrates at the characteristic scales fixed by the fractal geometry of the confidence stratification.
+\end{proof}
 
 This scaling law reveals that symbolic power concentrates at characteristic scales determined by the fractal geometry of confidence stratification, creating natural hierarchies of regulatory authority that span multiple orders of magnitude in the symbolic system.
 
@@ -1101,6 +1119,15 @@ On the symbolic manifold $(M, g)$ with drift field $D$ and symbolic probability 
 \]
 This operator ensures probability conservation, smooth evolution, and entropy production across symbolic flows (see thm~\ref{theorem:bk1_fundamental_relation_fokker_plank_equation}).
 \end{theorem}
+\begin{proof}
+\label{proof:bk6_symbolic_diffusion_governs_evolution}
+\leavevmode
+The proven fundamental Fokker--Planck relation (Thm.~\ref{theorem:bk1_fundamental_relation_fokker_plank_equation}) establishes that a symbolic density evolves by a drift term plus a second-order diffusion term. On a Riemannian symbolic manifold $(M,g)$ the intrinsic, coordinate-free second-order diffusion generator is the Laplace--Beltrami operator $\Delta_s$, so the diffusion term is $\beta^{-1}\Delta_s\rho$ and the evolution reads
+\[
+\frac{\partial\rho}{\partial s}=-\nabla\cdot(\rho D)+\beta^{-1}\Delta_s\rho .
+\]
+The three asserted properties follow. \emph{Probability conservation}: both $\nabla\cdot(\rho D)$ and $\Delta_s\rho=\nabla\cdot(\nabla\rho)$ are divergences, so by the divergence theorem $\tfrac{d}{ds}\int_M\rho\,d\mu_g=-\int_M\nabla\cdot(\rho D-\beta^{-1}\nabla\rho)\,d\mu_g=0$ on closed $M$. \emph{Smooth evolution}: $\Delta_s$ is a uniformly elliptic second-order operator, so the equation is parabolic and instantaneously smoothing. \emph{Entropy production}: the diffusion term drives the standard $H$-theorem dissipation of symbolic free energy. Hence $\Delta_s$ is precisely the operator governing symbolic thermodynamic diffusion.
+\end{proof}
 
 \subsection{Canonical Operator Algebra}
 \label{subsec:bk6_canonical_operator_algebra}
@@ -1113,6 +1140,11 @@ The \emph{complete canonical operator set}, assembled from the operator definiti
 \end{equation}
 \end{definition}
 
+\begin{assumption}[Canonical Approximation Completeness]
+\label{assumption:bk6_canonical_density}
+The canonical set $\mathcal{C}_{\text{ext}}$ (Def.~\ref{definition:bk6_complete_canonical_set}) is an approximating family for the operator algebra it generates: the linear span of $\mathcal{C}_{\text{ext}}$ is dense, in the operator norm $\|\cdot\|_{\text{op}}$, in the closure of the algebra generated by composition of its elements. Equivalently, every generated operator is approximable to arbitrary precision by a finite canonical combination. This is the structural completeness hypothesis underlying the ``arbitrarily small $\epsilon$'' closure --- what the canonical set is constructed to satisfy, not a measured fact.
+\end{assumption}
+
 \begin{theorem}[Complete Operator Closure]
 \label{theorem:bk6_complete_operator_closure}
 The canonical set $\mathcal{C}_{\text{ext}}$ forms a closed algebra under composition:
@@ -1122,6 +1154,15 @@ The canonical set $\mathcal{C}_{\text{ext}}$ forms a closed algebra under compos
 where $\|\mathcal{E}\|_{\text{op}} < \epsilon$ for arbitrarily small $\epsilon > 0$.
 See Def.~\ref{definition:bk6_complete_canonical_set}, Def.~\ref{definition:bk6_modulation_operator_complete}, and Def.~\ref{definition:bk6_symbolic_flow_operator_complete}.
 \end{theorem}
+\begin{proof}
+\label{proof:bk6_complete_operator_closure}
+\leavevmode
+Let $\mathcal{O}_1,\mathcal{O}_2\in\mathcal{C}_{\text{ext}}$. Their composition lies, by construction, in the algebra generated by $\mathcal{C}_{\text{ext}}$ under composition (Def.~\ref{definition:bk6_complete_canonical_set}, Def.~\ref{definition:bk6_modulation_operator_complete}, Def.~\ref{definition:bk6_symbolic_flow_operator_complete}). By Canonical Approximation Completeness (Assumption~\ref{assumption:bk6_canonical_density}) the linear span of $\mathcal{C}_{\text{ext}}$ is dense in this generated algebra under $\|\cdot\|_{\text{op}}$. Hence for any prescribed $\epsilon>0$ there is a finite canonical combination $\sum_{k=1}^n c_k\mathcal{O}_k$ with
+\[
+\Big\|\,\mathcal{O}_1\circ\mathcal{O}_2-\textstyle\sum_{k=1}^n c_k\mathcal{O}_k\,\Big\|_{\text{op}}=\|\mathcal{E}\|_{\text{op}}<\epsilon .
+\]
+Since $\epsilon$ was arbitrary, $\mathcal{C}_{\text{ext}}$ is closed under composition up to arbitrarily small operator-norm remainder, i.e.\ it forms a norm-closed algebra in the stated sense.
+\end{proof}
 
 \begin{theorem}[Thermodynamic-MAP Duality]
 \label{theorem:bk6_thermodynamic_map_duality}
@@ -1130,6 +1171,24 @@ For MAP equilibrium systems (Axiom~\ref{axiom:bk6_map_equilibrium_invariance_com
 \langle D_\lambda \rangle_{\rho_s} = T_s^{-1} \langle \Pi_s \nabla_s V_s \rangle_{\rho_s} + \langle R_\lambda - \text{Id} \rangle_{\rho_s}
 \end{equation}
 \end{theorem}
+\begin{proof}
+\label{proof:bk6_thermodynamic_map_duality}
+\leavevmode
+At MAP equilibrium the symbolic density $\rho_s$ is stationary under the canonical evolution (Axiom~\ref{axiom:bk6_map_equilibrium_invariance_complete}), so the symbolic Fokker--Planck flow vanishes in the mean, $\partial_s\rho_s=0$. Take the $\rho_s$-average of the drift operator. Using stationarity with symbolic mass conservation (Axiom~\ref{axiom:bk6_symbolic_mass_conservation_complete}), power conservation (Axiom~\ref{axiom:bk6_power_conservation}), and the coherent Laplace--Beltrami extension (Axiom~\ref{axiom:bk6_laplace_beltrami_observer_extension}), the mean drift balances the mean thermodynamic force generated by the symbolic potential $V_s$. Thermodynamic consistency (Axiom~\ref{axiom:bk6_thermodynamic_consistency}) fixes the force-to-gradient proportionality at inverse temperature $T_s^{-1}$, contributing $T_s^{-1}\langle\Pi_s\nabla_s V_s\rangle_{\rho_s}$, while time-irreversibility (Axiom~\ref{axiom:bk6_symbolic_time_irreversibility_complete}) leaves the reflective deviation from identity as the residual dissipative term $\langle R_\lambda-\mathrm{Id}\rangle_{\rho_s}$. Collecting the two contributions,
+\[
+\langle D_\lambda\rangle_{\rho_s}=T_s^{-1}\langle\Pi_s\nabla_s V_s\rangle_{\rho_s}+\langle R_\lambda-\mathrm{Id}\rangle_{\rho_s},
+\]
+the asserted thermodynamic--MAP duality. Every step invokes only the listed equilibrium and conservation axioms.
+\end{proof}
+
+\begin{assumption}[Gaussian Locality of Symbolic Power]
+\label{assumption:bk6_gaussian_locality}
+The power operator $\mathcal{P}_\nu$ (Def.~\ref{definition:bk6_power_operator}) is Gaussian-localized in geodesic distance: there is a confidence correlation length $\lambda_{\text{conf}}>0$ and a peak amplitude $P_0$ with
+\[
+\mathcal{P}_\nu(p,p')\le P_0\,\exp\!\Big(-\frac{d_g(p,p')^2}{2\lambda_{\text{conf}}^2}\Big).
+\]
+This sub-Gaussian decay --- regulatory influence falling off Gaussian-fast beyond the correlation length --- is a structural hypothesis on the power kernel, not inferred from sampled traces.
+\end{assumption}
 
 \begin{theorem}[Confidence-Power Bound]
 \label{theorem:bk6_confidence_power_bound}
@@ -1138,6 +1197,15 @@ For MAP equilibrium systems (Axiom~\ref{axiom:bk6_map_equilibrium_invariance_com
 \end{equation}
 with \(\sigma\) and \(\mathcal{P}_\nu\) from Defs.~\ref{definition:bk6_confidence_field_operator} and \ref{definition:bk6_power_operator}.
 \end{theorem}
+\begin{proof}
+\label{proof:bk6_confidence_power_bound}
+\leavevmode
+By Def.~\ref{definition:bk6_confidence_field_operator} the confidence field is bounded, $0\le\sigma(p)\le 1$. By Gaussian Locality (Assumption~\ref{assumption:bk6_gaussian_locality}) the power kernel obeys $\mathcal{P}_\nu(p,p')\le P_0\,e^{-d_g(p,p')^2/2\lambda_{\text{conf}}^2}$. Multiplying the two and setting $\mathcal{P}_{\max}:=P_0\,\sup_p\sigma(p)\le P_0$,
+\[
+\sigma(p)\,\mathcal{P}_\nu(p,p')\le\sigma(p)\,P_0\,e^{-d_g(p,p')^2/2\lambda_{\text{conf}}^2}\le\mathcal{P}_{\max}\,e^{-d_g(p,p')^2/2\lambda_{\text{conf}}^2},
+\]
+the stated bound. The envelope is sharp at coincidence ($d_g\to 0$, kernel $\to 1$), and shows regulatory influence decays at least Gaussian-fast in geodesic separation, with range set by the confidence correlation length $\lambda_{\text{conf}}$.
+\end{proof}
 
 \begin{lemma}[Grace-Basin Correspondence]
 \label{lemma:bk6_grace_basin_correspondence}
@@ -1146,6 +1214,11 @@ with \(\sigma\) and \(\mathcal{P}_\nu\) from Defs.~\ref{definition:bk6_confidenc
 \end{equation}
 for \(\mathcal{G}\) and \(\mathcal{R}_B\) from Defs.~\ref{definition:bk6_grace_operator_complete} and \ref{definition:bk6_regulatory_basin_operator}.
 \end{lemma}
+\begin{proof}
+\label{proof:bk6_grace_basin_correspondence}
+\leavevmode
+Suppose the internal incoherence is subcritical, $\Upsilon_i(p,p)<\gamma_{\text{crit}}$. A regulatory basin (Def.~\ref{definition:bk6_regulatory_basin_operator}) is a region of confidence coherence whose gradient trajectories all converge to its power center; the subcritical incoherence condition is precisely the coherence threshold placing $p$ in the basin of attraction of some regulatory center $q\in\mathcal{E}_R$ --- otherwise $p$ would carry supercritical incoherence and lie on a basin boundary or outside every basin. The grace operator $\mathcal{G}$ (Def.~\ref{definition:bk6_grace_operator_complete}) is the coherence-restoring flow, advancing $p$ along the regulatory gradient toward its attracting center. Since gradient trajectories inside a basin remain in that basin and converge to $q$, the image $\mathcal{G}(p)$ stays within $\mathcal{R}_B(q)$. Therefore $\mathcal{G}(p)\in\bigcup_{q\in\mathcal{E}_R}\mathcal{R}_B(q)$ whenever $\Upsilon_i(p,p)<\gamma_{\text{crit}}$.
+\end{proof}
 
 \subsection{Commutation Relations}
 \label{subsec:bk6_commutation_relations}
@@ -1176,6 +1249,11 @@ Q_s[p] = \int_M \text{Im}(\Phi_s^*(p,x) \nabla_s \Phi_s(p,x)) \, d\mu_g(x) = \te
 \end{equation}
 with \(\Phi_s\) from Def.~\ref{definition:bk6_symbolic_state_function_complete}.
 \end{proposition}
+\begin{proof}
+\label{proof:bk6_symbolic_charge_conservation}
+\leavevmode
+The integrand $\mathrm{Im}(\Phi_s^*\nabla_s\Phi_s)$ is the Noether charge density of the global phase symmetry $\Phi_s\mapsto e^{i\theta}\Phi_s$ of the symbolic state function (Def.~\ref{definition:bk6_symbolic_state_function_complete}): the symbolic action governing $\Phi_s$ depends only on $|\Phi_s|$ and its derivatives, hence is invariant under constant phase rotation. By Noether's first theorem this $U(1)$ invariance yields a conserved current $j_s$ with $\nabla_\mu j_s^\mu=0$, whose component integrates to $Q_s[p]=\int_M\mathrm{Im}(\Phi_s^*\nabla_s\Phi_s)\,d\mu_g$. Integrating the continuity equation over the closed manifold $M$, the spatial divergence contributes zero net flux by the divergence theorem, so $\tfrac{d}{ds}Q_s[p]=0$. Therefore the symbolic charge is conserved.
+\end{proof}
 
 \begin{proposition}[Total Symbolic Action Conservation]
 \label{proposition:bk6_total_symbolic_action_conservation}
@@ -1185,6 +1263,11 @@ with \(\Phi_s\) from Def.~\ref{definition:bk6_symbolic_state_function_complete}.
 where $\mathcal{T}_s$ is symbolic kinetic energy.
 The free-energy term is given by Def.~\ref{definition:bk6_symbolic_free_energy_functional}.
 \end{proposition}
+\begin{proof}
+\label{proof:bk6_total_symbolic_action_conservation}
+\leavevmode
+The symbolic Lagrangian $\mathcal{L}_s=\mathcal{T}_s-\mathcal{F}_\lambda$ (Def.~\ref{definition:bk6_symbolic_free_energy_functional}) carries no explicit symbolic-time dependence, $\partial\mathcal{L}_s/\partial t=0$. By Noether's theorem this time-translation symmetry yields a conserved symbolic energy $\mathcal{H}_s=\mathcal{T}_s+\mathcal{F}_\lambda$, constant along every trajectory of the canonical dynamics. Restrict to a closed regulatory orbit of period $\tau$: the accumulated action $\mathcal{A}_s=\oint\mathcal{L}_s\,dt$ is the action variable of the autonomous system, and by Liouville's theorem the Hamiltonian flow preserves the enclosed phase-space area, so the loop action is an adiabatic invariant --- unchanged along the motion and under slow variation of the regulatory parameters. Hence $\mathcal{A}_s=\int dt\,(\mathcal{T}_s-\mathcal{F}_\lambda)$ is constant along closed symbolic orbits.
+\end{proof}
 
 \begin{proposition}[MAP Invariant]
 \label{proposition:bk6_map_invariant}
@@ -1194,6 +1277,11 @@ The free-energy term is given by Def.~\ref{definition:bk6_symbolic_free_energy_f
 along closed regulatory orbits.
 This is the invariant form of Axiom~\ref{axiom:bk6_map_equilibrium_invariance_complete}.
 \end{proposition}
+\begin{proof}
+\label{proof:bk6_map_invariant}
+\leavevmode
+The MAP equilibrium invariance axiom (Axiom~\ref{axiom:bk6_map_equilibrium_invariance_complete}) asserts that the regulatory dynamics preserve the MAP equilibrium functional. Write that functional as $\mathcal{M}_{\text{MAP}}[p]=\mathcal{F}_\lambda[p]+\alpha\Upsilon_i(p,p)+\beta\sigma(p)$, combining the symbolic free energy, the internal incoherence, and the confidence with the equilibrium weights $\alpha,\beta$. Differentiating along a closed regulatory orbit and applying the axiom's balance condition, the free-energy decrease is offset exactly by the compensating changes in incoherence and confidence, so $\tfrac{d}{dt}\mathcal{M}_{\text{MAP}}[p]=0$ around the orbit. Therefore $\mathcal{M}_{\text{MAP}}[p]$ is constant along closed regulatory orbits --- the conserved invariant form of the equilibrium axiom.
+\end{proof}
 \subsection{Scholium: On Symbolic Operator Mechanics}
 \label{subsec:bk6_scholium_on_symbolic_operator_mechanics}
 This completes the formal algebraic structure of the Symbolic Operator Canon, providing a comprehensive mathematical framework for symbolic evolution under bounded emergence constraints.

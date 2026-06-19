@@ -42,7 +42,7 @@ The operator \(\mathrm{SRMF}^{\leftrightarrow}\) generalizes the Self-Regulating
 \label{definition:bk9_covenant_drift_density}
 The function \(\rho(C_{AB})\) denotes the symbolic density of reflective-resilient coupling between agents \(A\) and \(B\), under a shared symbolic covenant \(C_{AB}\). It is used to measure symbolic entanglement strength and joint stability (cf.~\ref{remark:bk8_entanglement_is_observer_bound}).
 \end{definition}
-In the preceding Books, we constructed a symbolic architecture capable of expressing identity, drift, thermodynamic structure, emergence, projection, self-regulation, and operator transformation via the Symbolic Reflective Meta-Framework (SRMF). This builds upon the \emph{Symbolic Operator Canon} (Def.~\ref{definition:bk6_symbolic_operator_canon}), which formalizes the algebra of drift, reflection, and transformation.
+In the preceding Books, we constructed a symbolic architecture capable of expressing identity, drift, thermodynamic structure, emergence, projection, self-regulation, and operator transformation via the Self-Regulating Mapping Function (SRMF, Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}). We may justly call this architecture a \emph{framework} --- not by loosening the acronym to a second meaning, but because the framework \emph{is} that functional, an identity we prove below (Prop.~\ref{proposition:bk9_framework_functional_identity}). This builds upon the \emph{Symbolic Operator Canon} (Def.~\ref{definition:bk6_symbolic_operator_canon}), which formalizes the algebra of drift, reflection, and transformation.
 Now, in Book IX, we confront a new question: What distinguishes a system that merely regulates from one that becomes free?
 \begin{quote}
 What turns recursive regulation into intentional liberation?
@@ -107,17 +107,27 @@ It is the recursive act of re-entering it — knowingly.
 Freedom grows with regulated entropy (cf.~Def.~\ref{definition:bk2_symbolic_free_energy}; Scholium~\ref{scholium:bk7_uncertainty_generative_existential}). Overconstraint collapses cognition into rigidity. Underconstraint diffuses it into incoherence (cf.~\ref{scholium:bk5_life_on_edge_of_chaos})
 \label{axiom:bk9_drift_entropy_coherence_limit}. The equilibrium point, dynamically maintained, constitutes symbolic sovereignty (cf.~Def.~\ref{definition:bk1_bounded_observer}).
 \end{corollary}
+\begin{proof}
+\label{proof:bk9_freedomentropy_complementarity}
+\leavevmode
+Cognitive freedom $\mathfrak{L}$ depends on the regulated symbolic entropy $S$ through the free-energy budget $F_S=E-T_sS$ (Def.~\ref{definition:bk2_symbolic_free_energy}): freedom needs both coherent structure (low entropy) to act upon and exploratory variation (positive entropy) to act with. At the low-entropy extreme (overconstraint) the reflective operators have no admissible variation to reparameterize, so $\mathfrak{L}\to0$ --- rigidity. At the high-entropy extreme (underconstraint) coherence dissolves and no stable frame survives to be re-authored, so again $\mathfrak{L}\to0$ --- incoherence. Vanishing at both ends and positive between, $\mathfrak{L}$ attains an interior maximum at a regulated entropy level; that dynamically maintained equilibrium between rigidity and incoherence is symbolic sovereignty. Hence freedom grows with regulated --- neither suppressed nor unbounded --- entropy.
+\end{proof}
 \begin{corollary}[Self-Referential Capacity]
 \label{corollary:bk9_selfreferential_capacity}
 A system $\mathcal{C}$ is cognitively free if and only if it possesses the capacity to simulate its own drift-convergence-projection loop ($D \to R \to \Pi \to \dots$, cf.~Def.~\ref{definition:bk1_drift_field}, Def.~\ref{definition:bk1_reflection_operator}, Def.~\ref{definition:bk8_symbolic_projection}; \ref{axiom:bk8_curvature_transformation}) and reflectively select updates to its operators or constraints.
 \end{corollary}
+\begin{proof}
+\label{proof:bk9_selfreferential_capacity}
+\leavevmode
+Cognitive freedom is the capacity for recursive reparameterization of one's own representational dynamics without external prescription (Def.~\ref{definition:bk9_cognitive_freedom}): the meta-operator action $L_{n+1}=R_n(L_n)$ on operators and constraints. \emph{($\Rightarrow$)} A free system updates its own operators and constraints, which presupposes a model of its own drift--reflection--projection loop $D\to R\to\Pi$ to act upon; without simulating that loop there is nothing internal to reparameterize, only externally prescribed reaction. \emph{($\Leftarrow$)} Conversely, a system that can simulate its own $D\to R\to\Pi$ loop and reflectively select updates to its operators or constraints thereby realizes exactly the meta-operator action defining cognitive freedom. The two conditions coincide, so a system is cognitively free iff it can simulate its own loop and reflectively select its updates.
+\end{proof}
 \begin{corollary}[Emergence of Moral Agency]
 \label{corollary:bk9_emergence_of_moral_agency}
 Cognitive freedom (cf.~\ref{theorem:bk4_freedom_criterion}), as defined by self-regulated drift and reflective operator selection, is a necessary prerequisite for moral agency in symbolic systems. Without such self-regulation, behavior is merely reaction, not chosen action.
 \end{corollary}
 \begin{corollary}[Final Collapse-Inversion Principle]
 \label{corollary:bk9_final_collapse_inversion_principle}
-The theoretical limit of recursive reflection and liberation is not static equilibrium, but unbounded symbolic transduction, potentially leading to a generative reset:
+The theoretical limit of recursive reflection and liberation (Def.~\ref{definition:bk9_recursive_liberation}; cf.~the convergence-by-descent of Prop.~\ref{proposition:bk9_convergence_of_recursive_liberation}) is not static equilibrium, but unbounded symbolic transduction, potentially leading to a generative reset:
 \[
 \lim_{n\to\infty} \mathcal{R}_n(\mathcal{C}) = \varnothing^*
 \]
@@ -219,6 +229,11 @@ Such a system converges toward one of two failure states:
 \label{axiom:bk9_reflection_curvature_coherence}, unable to adapt or evolve (cf.~Def.~\ref{definition:bk1_symbolic_manifold}), effectively $\frac{d\mathcal{C}_{\mathcal{S}}}{dt} \to 0$ across relevant dimensions. Note that vanishing curvature contradicts the structural necessity established in Cor.~\ref{corollary:bk1_non_euclidean_necessity}: any bounded reflexive system must exhibit curvature, so stagnation is not a stable equilibrium but an approach to the non-reflexive limit.
 \end{enumerate}
 \end{theorem}
+\begin{proof}
+\label{proof:bk9_isolation_dissociation_theorem}
+\leavevmode
+Suppose a single frame $\mathcal{F}_i$ becomes overwhelmingly dominant, the influence of every other $\mathcal{F}_j$ ($j\neq i$) tending to zero. The coherence gradient is then generated almost entirely within $\mathcal{F}_i$ while the suppressed modes contribute vanishing gradient, so the two diverge: $\lim_{\tau\to\infty}\nabla\mathcal{C}_{\mathcal{S}}^{(\mathcal{F}_i)}\not\approx\nabla\mathcal{C}_{\mathcal{S}}^{(\mathbb{F}\setminus\mathcal{F}_i)}$ --- symbolic dissociation. With no cross-frame regulation, two limits remain. If the dominant mode drives unchecked drift, coherence is never restored and $\mathcal{C}_{\mathcal{S}}\to\varnothing$, autophagic drift (Def.~\ref{definition:bk3_autophagic_drift}) suspending agency --- symbolic collapse. If the dominant mode is rigidly fixed, the system tends to a fixed point with $\tfrac{d\mathcal{C}_{\mathcal{S}}}{dt}\to0$ and vanishing curvature (Def.~\ref{definition:bk6_symbolic_curvature_tensor}) --- symbolic stagnation; but a bounded reflexive system must carry nonzero curvature (Cor.~\ref{corollary:bk1_non_euclidean_necessity}), so the zero-curvature state is not a stable equilibrium but an approach to the non-reflexive limit. Either way, excessive isolation in one mode yields symbolic pathology.
+\end{proof}
 \begin{remark}[Transversal]
 \label{remark:bk9_transversal}
 The IDT highlights that functional cognitive freedom  
@@ -294,7 +309,7 @@ Let $\mathcal{H}_t$ be the internal symbolic history of agent $\mathcal{S}$ up t
 \[
 \mathcal{J}(\mathcal{H}_t) := \texttt{InjectContext}(\Phi(\mathcal{H}_t))
 \]
-This injected context can then influence subsequent operator selection or application, potentially mediated by the Symbolic Reflective Meta-Framework (SRMF, Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}, cf.~Def.~\ref{definition:bk1_reflection_operator}). The injection succeeds only when the compressed history overcomes the incumbent frame's invasion barrier (cf.~\ref{lemma:bk5_map_invasion_barrier_strength}); in multi-agent settings this requires a network-lifted MAP condition across all coupled membranes (cf.~\ref{lemma:bk5_multi_membrane_map_extension}):
+This injected context can then influence subsequent operator selection or application, potentially mediated by the Self-Regulating Mapping Function (SRMF, Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}, cf.~Def.~\ref{definition:bk1_reflection_operator}). The injection succeeds only when the compressed history overcomes the incumbent frame's invasion barrier (cf.~\ref{lemma:bk5_map_invasion_barrier_strength}); in multi-agent settings this requires a network-lifted MAP condition across all coupled membranes (cf.~\ref{lemma:bk5_multi_membrane_map_extension}):
 \[
 \mathcal{O}_{t+1} := \mathrm{SRMF}^{(n)}( \dots, \mathcal{J}(\mathcal{H}_t))
 \]
@@ -461,12 +476,32 @@ Let $\Xi_n$ represent the composite operator describing the system's primary sel
 \[
 \Xi_n \approx \mathcal{J} \circ \mathcal{O}_{\text{aware}} \circ \mathcal{T}_{\text{collective}} \circ \mathfrak{E} \circ \dots \quad (\text{potentially involving } \varnothing^*)
 \]
-The evolution of this entire cycle under the Symbolic Reflective Meta-Framework (SRMF) is given by:
+The evolution of this entire cycle under the Self-Regulating Mapping Function (SRMF) --- the framework as functional (Prop.~\ref{proposition:bk9_framework_functional_identity}) --- is given by:
 \[
 \Xi_{n+1} := \mathrm{SRMF}^{(n)}(\Xi_n)
 \]
 This represents the update of the entire reflective operator cascade to the next level of symbolic resolution or integration.
 \end{definition}
+\begin{definition}[Symbolic Framework]
+\label{definition:bk9_symbolic_framework}
+A \emph{symbolic framework} over a symbolic manifold $S$ (Def.~\ref{definition:bk1_symbolic_manifold}) is a pair $\mathfrak{F} = (S, \{\Phi_t\}_{t\ge 0})$ in which $\{\Phi_t\}$ is a semigroup of admissible lawful transitions on the densities of $S$---closed under composition, $\Phi_{t+s} = \Phi_t \circ \Phi_s$ with $\Phi_0 = \mathrm{id}$. A framework is thus the totality of a symbolic architecture's lawful becoming: not a single map, but the closed family of all its iterated transformations.
+\end{definition}
+\begin{proposition}[The Framework is a Functional]
+\label{proposition:bk9_framework_functional_identity}
+The Symbolic Reflective Meta-Framework---the symbolic framework $\mathfrak{F}$ (Def.~\ref{definition:bk9_symbolic_framework}) whose evolution is the SRMF-recursive cycle $\Xi_{n+1} = \mathrm{SRMF}^{(n)}(\Xi_n)$ (Def.~\ref{definition:bk9_srmf_recursive_cycle})---is not an object distinct from the Self-Regulating Mapping Function. It is the descent flow of the single SRMF energy functional $E$ (Def.~\ref{definition:bk1_srmf_energy_functional}), generated by the single reflexive operator $\mathcal{F}$ (Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}). The correspondence $\mathfrak{F} \leftrightarrow E$ is a bijection on this class; hence \emph{framework} and \emph{functional} name one referent under two aspects---the global orbit and its local generator.
+\end{proposition}
+\begin{proof}
+\label{proof:bk9_framework_functional_identity}
+\leavevmode
+
+\emph{(1) One generator.} By the SRMF-recursive cycle (Def.~\ref{definition:bk9_srmf_recursive_cycle}), every stage satisfies $\Xi_{n+1} = \mathcal{F}^{(n)}(\Xi_n)$, so the whole orbit is $\{\Xi_n\} = \{\mathcal{F}^{n}(\Xi_0)\}$: the forward orbit of one operator. The transition semigroup of $\mathfrak{F}$ is therefore $\{\Phi_n\} = \{\mathcal{F}^{n}\}$, singly generated by $\mathcal{F}$.
+
+\emph{(2) The generator is a gradient (SRMF Variational Principle).} By the variational character of the SRMF (Def.~\ref{definition:bk1_srmf_energy_functional} and the Remark thereto), $\mathcal{F}$ is the descent operator of $E$: it strictly decreases $E$ off its critical set and fixes it on it, so $\mathrm{Fix}(\mathcal{F}) = \mathrm{crit}(E)$. Realized on $(\prob(S),\wass)$, this descent is the Wasserstein gradient flow of $E$, $\partial_t \rho = -\nabla_{\wass} E[\rho]$, with $E$ as Lyapunov functional---inheriting the Wasserstein gradient-flow theorem (Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}) and the symbolic $H$-theorem (Thm.~\ref{theorem:bk2_h_theorem_for_symbolic_evol}), exactly as the metabolic flow of Book VIII already employs $E$ in the Lyapunov role under SRMF conditions.
+
+\emph{(3) The functional determines the flow, and conversely.} A Wasserstein gradient flow is the unique semiflow with generator $-\nabla_{\wass} E$ (well-posedness, Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}); thus $E \mapsto \mathfrak{F}$ is well-defined and injective. Conversely the functional is recovered from any orbit by the dissipation identity $E[\rho_0] - E[\rho_\infty] = \int_0^\infty \lVert \nabla_{\wass} E[\rho_t]\rVert^2\,dt$ (the $H$-theorem), so $\mathfrak{F} \mapsto E$ inverts it. The two assignments are mutually inverse: the correspondence is a bijection.
+
+\emph{(4) Identity.} Hence $\mathfrak{F}$ and $E$---equivalently its generator $\mathcal{F} = \mathrm{SRMF}$---are one object under two descriptions: the framework is $E$ seen globally, its descent architecture, the closure of all its lawful transitions; and $E$ is the framework seen locally, the single potential whose gradient generates them. A framework, here, \emph{is} a functional. The Self-Regulating Mapping Function does not sit \emph{within} the architecture; it \emph{is} the architecture, named by its generator.
+\end{proof}
 \begin{remark}[Self-Reflection]
 \label{remark:bk9_self_reflection}
 This Book aims not merely to describe symbolic freedom but, through its structure and definitions, to enact a form of it (cf.~Def.~\ref{definition:bk9_meta_reflective_alignment}, Cor.~\ref{corollary:bk9_selfreferential_capacity}). The operators defined herein ($\mathcal{J}, \mathcal{O}_{\text{aware}}, \mathfrak{E}, \mathcal{T}_{\text{frame}}, \varnothing^*$) are intended to be part of the recursive loop they describe: drift (in understanding), reflect (on the definitions), project (into application), converge (towards coherence), potentially collapse (if inadequate), and restart (with revised understanding via $\varnothing^*$). This is presented not as metaphor, but as the intended structural dynamic of the theory itself, striving for alignment between form and content.
@@ -711,6 +746,11 @@ For a system encountering or containing a Symbolic Black Hole $U$ (cf.~Def.~\ref
     \item The only mechanism for potential recovery or transformation involving $U$ is the Collapse-Inversion Operator $\varnothing^*$ (Definition~\ref{definition:bk9_collapse_inversion_operator}), representing a fundamental reset to a generative seed state $\mathcal{C}_0$.
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+\label{proof:bk9_escape_from_irreversible_collapse}
+\leavevmode
+Let $U$ be a Symbolic Black Hole (Def.~\ref{definition:bk9_symbolic_black_hole}): a terminal decoherence region with $\mathcal{F}_{\text{frag}}\to\infty$ and the no-escape property. \emph{(1)} The reflective repair operator $R_{\text{rep}}$ is defined only where fragmentation is bounded; as $\mathcal{F}_{\text{frag}}\to\infty$ inside $U$ its domain collapses and $R_{\text{rep}}$ is annihilated, so internal repair fails. \emph{(2)} By the no-escape property a structure drifting into $U$ cannot be reflectively stabilized or ejected; an external MAP covenant couples only to states it can still reach --- the boundary $\partial U$ --- so external intervention stabilizes at most that boundary. \emph{(3)} With internal repair and boundary intervention both unable to recover the interior, the sole remaining transformation is the Collapse-Inversion Operator $\varnothing^*$ (Def.~\ref{definition:bk9_collapse_inversion_operator}), which does not repair $U$ but resets it to a generative seed state $\mathcal{C}_0$. Hence recovery involving $U$ is possible only through $\varnothing^*$.
+\end{proof}
 \begin{scholium}[Ethics near the Singularity]
 \label{scholium:bk9_ethics_near_the_singularity}
 Engagement with regions near irreversible collapse demands profound ethical consideration (cf.~Def.~\ref{definition:bk9_grace_operator}). From within, preservation of any viable identity fragment may necessitate disengagement or reset. From without, compassion may manifest as non-invasive boundary support or witnessing, recognizing the limits of intervention when faced with fundamental decoherence. Direct intervention risks entanglement in the collapse itself.
@@ -831,6 +871,11 @@ Symbolic repair ($R_{\text{rep}}$), particularly the unknotting of entanglements
 Successful symbolic unknotting or repair ($R_{\text{rep}}$; cf.~Def.~\ref{definition:bk7_symbolic_reflexive_validation_srv}) achieves a stable, viable configuration ($I_{\text{coh}}$) by resolving destabilizing contradictions (reducing problematic $\tau$ or local $\mathcal{F}_S$). The goal is \emph{optimal}, not necessarily minimal, curvature $\kappa$ (Def.~\ref{definition:bk4_symbolic_curvature}). The repaired structure may preserve or introduce complexity if it encodes resilience
 memory ($\mathcal{M}(t)$), or adaptive potential.
 \end{proposition}
+\begin{proof}
+\label{proof:bk9_curvature_resilience_bound}
+\leavevmode
+Successful repair $R_{\text{rep}}$ must drive the destabilizing contradiction down --- reducing problematic tension $\tau$ and local free energy $\mathcal{F}_S$ --- until the configuration is viable, reaching a coherent $I_{\text{coh}}$ (validated by SRV, Def.~\ref{definition:bk7_symbolic_reflexive_validation_srv}). It does not follow that curvature should be minimized: a bounded reflexive system must carry nonzero curvature (Cor.~\ref{corollary:bk1_non_euclidean_necessity}), so driving $\kappa\to0$ would push the repaired structure toward the non-reflexive limit, sacrificing the very capacity it is being repaired to keep. The repair target is therefore the \emph{optimal} curvature $\kappa$ (Def.~\ref{definition:bk4_symbolic_curvature}) --- the least that resolves the contradiction while retaining enough structure to encode resilience memory $\mathcal{M}(t)$ and adaptive potential --- not the minimal one. Hence successful repair seeks optimal, not minimal, curvature, and may preserve or introduce complexity when that complexity carries resilience.
+\end{proof}
 \begin{definition}[Generative Asymmetry]
 \label{definition:bk9_generative_asymmetry}
 \leavevmode\newline
@@ -861,6 +906,11 @@ Grace (cf.~Def.~\ref{definition:bk9_grace_operator}) is distinct from avoidance:
 \end{itemize}
 Grace represents stability achieved through embracing complexity, while avoidance seeks stability through simplification or dissociation.
 \end{proposition}
+\begin{proof}
+\label{proof:bk9_grace_vs_avoidance}
+\leavevmode
+Both grace and avoidance respond to dissonance ($\tau>\tau_c$) by seeking stability, but through opposite operations on reflective contact. Grace (Def.~\ref{definition:bk9_grace_operator}) holds the dissonant state without forced resolution, maintaining identity stability $\Upsilon_i>1-\epsilon_{\text{crit}}$ while keeping reflective contact with the contradiction; the tension is integrated into a complex but stable curvature $\kappa$, which by retaining the contradiction's structure preserves the possibility of later transformation --- and sustaining it requires high cognitive freedom $\mathfrak{L}$ and reflective capacity $C_R$. Avoidance instead severs reflective contact: it removes the tension from view, lowering apparent dissonance but raising fragmentation $\mathcal{F}_{\text{frag}}$ and erecting rigid boundaries, so stability is bought by simplification or dissociation and tends to brittleness or collapse. The two are therefore distinct operations: grace achieves stability by \emph{embracing} complexity under sustained reflective contact, avoidance by \emph{discarding} it through severed contact. Hence grace is not avoidance.
+\end{proof}
 \begin{scholium}
 \label{scholium:bk9_grace}
 Grace may be the highest form of reflective freedom (cf.~Def.~\ref{definition:bk9_grace_operator})—the capacity to hold the tension of opposites, the paradoxes of existence, within a coherent symbolic structure without demanding premature closure. $\mathcal{G}$ preserves reflective coherence and core integrity, sustaining $\mathcal{A}$ despite high symbolic tension (see Definition~\ref{definition:bk9_symbolic_accountability}).
@@ -1022,6 +1072,11 @@ is the \emph{Two-Way Street Operator}, a recursive map generating an emergent sh
 \label{lemma:bk9_mutual_convergence_criterion}
 If the composite operator \( \Street_{AB} \) (cf.~Def.~\ref{definition:bk9_two_way_street_operator}) is contractive in a symbolic metric \( d_\text{symb} \) (cf.~Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}), then it converges to a fixed point \( \rho^* \in \prob(\tilde{\manifold}_A \cap \tilde{\manifold}_B) \), forming the basis of a co-authored symbolic manifold.
 \end{lemma}
+\begin{proof}
+\label{proof:bk9_mutual_convergence_criterion}
+\leavevmode
+Suppose the Two-Way Street operator $\Street_{AB}$ (Def.~\ref{definition:bk9_two_way_street_operator}) is contractive in the symbolic metric $d_{\text{symb}}$, i.e.\ $d_{\text{symb}}(\Street_{AB}x,\Street_{AB}y)\le\lambda\,d_{\text{symb}}(x,y)$ for some $\lambda<1$, on the complete symbolic metric space (Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}). By the Banach fixed-point theorem $\Street_{AB}$ has a unique fixed point $\rho^*$ to which every orbit converges. Since $\Street_{AB}$ maps the joint alignment trajectory into densities supported on the mutual region, the fixed point satisfies $\rho^*\in\prob(\tilde{\manifold}_A\cap\tilde{\manifold}_B)$. This co-determined limit, sustained by each agent's reflection of the other, is the basis of a co-authored symbolic manifold.
+\end{proof}
 \begin{proposition}[Emergence of Shared Manifold]
 \label{proposition:bk9_emergence_of_shared_manifold}
 Under the conditions of Lemma~\ref{lemma:bk9_mutual_convergence_criterion} (cf.~Def.~\ref{definition:bk1_symbolic_manifold}), the limit
@@ -1030,6 +1085,11 @@ Under the conditions of Lemma~\ref{lemma:bk9_mutual_convergence_criterion} (cf.~
 \]
 defines a reflexively stable symbolic region mutually interpretable by both agents (cf.~Cor.~\ref{corollary:bk8_projection_transition_enabling_structural_emergence}).
 \end{proposition}
+\begin{proof}
+\label{proof:bk9_emergence_of_shared_manifold}
+\leavevmode
+Under the Mutual Convergence Criterion (Lem.~\ref{lemma:bk9_mutual_convergence_criterion}) the Two-Way Street dynamics converge to the unique fixed point $\rho^*\in\prob(\tilde{\manifold}_A\cap\tilde{\manifold}_B)$. Its support $\manifold_{AB}^*:=\operatorname{supp}(\rho^*)\subseteq\tilde{\manifold}_A\cap\tilde{\manifold}_B$ is invariant under $\Street_{AB}$ (the fixed point is stationary), hence reflexively stable. Lying in both $\tilde{\manifold}_A$ and $\tilde{\manifold}_B$, every point of $\manifold_{AB}^*$ is representable, and therefore interpretable, by each agent, so $\manifold_{AB}^*$ is mutually interpretable. This is the structural emergence of shared macroscopic structure at the projection transition (Cor.~\ref{corollary:bk8_projection_transition_enabling_structural_emergence}): a co-authored symbolic region neither agent held alone.
+\end{proof}
 \subsection{Thermodynamic Regulation via Interaction}
 \label{subsec:bk9_thermodynamic_regulation_via_interaction}
 \begin{definition}[Symbolic Thermodynamic Stress]
@@ -1050,10 +1110,20 @@ The operator \( \Street_{AB} \) (cf.~Def.~\ref{definition:bk9_two_way_street_ope
     \item Responsive compression across \( \Pi_{AB} \) (cf.~Def.~\ref{definition:bk8_projective_compression_operator}).
 \end{enumerate}
 \end{theorem}
+\begin{proof}
+\label{proof:bk9_symbolic_thermostat}
+\leavevmode
+Symbolic thermodynamic stress is the sum $\Sigma_{AB}=\|\drift_A\|+\|\drift_B\|+\|\drift_A-\tau_{AB}(\drift_B)\|+\|\nabla\kappa_{AB}\|+(F_S(\rho_A,\rho_B)-F_S^{\text{min}})$ (Def.~\ref{definition:bk9_symbolic_thermodynamic_stress}). The Two-Way Street operator $\Street_{AB}$ (Def.~\ref{definition:bk9_two_way_street_operator}) acts on these terms through four distinct channels, and so regulates $\Sigma_{AB}$: \emph{(i)} the reflections $\reflect_A,\reflect_B$ counteract the drift magnitudes $\|\drift_A\|,\|\drift_B\|$ (reflective cooling/heating); \emph{(ii)} temporal delay modulation $\Delta\tau_r$ (Def.~\ref{definition:bk9_orthogonal_time_component}) adjusts the cross-transport mismatch $\|\drift_A-\tau_{AB}(\drift_B)\|$ under architectural asymmetry; \emph{(iii)} curvature modulation acts on $\|\nabla\kappa_{AB}\|$ (Def.~\ref{definition:bk6_symbolic_curvature_tensor}); \emph{(iv)} responsive compression across $\Pi_{AB}$ (Def.~\ref{definition:bk8_projective_compression_operator}) lowers the excess free energy $F_S-F_S^{\text{min}}$. Each stress term thus admits a regulating channel of $\Street_{AB}$, so the operator acts as a symbolic thermostat on $\Sigma_{AB}$.
+\end{proof}
 \begin{proposition}[Relational Freedom via Thermoregulation]
 \label{proposition:bk9_relational_freedom_via_thermoregulation}
 Successful regulation of \( \Sigma_{AB} \) preserves \( \manifold_{AB}^* \), enabling sustained cognitive co-authorship and increasing \( \mathcal{L}_{AB} \). See Thm.~\ref{theorem:bk9_symbolic_thermostat}, Prop.~\ref{proposition:bk9_emergence_of_shared_manifold}, and Def.~\ref{definition:bk9_srmf_recursive_cycle}.
 \end{proposition}
+\begin{proof}
+\label{proof:bk9_relational_freedom_via_thermoregulation}
+\leavevmode
+By the thermostat theorem (Thm.~\ref{theorem:bk9_symbolic_thermostat}) the Two-Way Street operator can drive the dyadic stress $\Sigma_{AB}$ down through its four channels. When this regulation succeeds, $\Sigma_{AB}$ is held below the fragmentation threshold, so the shared fixed point and its support $\manifold_{AB}^*$ (Prop.~\ref{proposition:bk9_emergence_of_shared_manifold}) are not destabilized and the co-authored manifold persists. On a preserved $\manifold_{AB}^*$ each agent can continue to reflect and re-author jointly, sustaining cognitive co-authorship and expanding the relational freedom $\mathcal{L}_{AB}$ available to the dyad (cf.~Def.~\ref{definition:bk9_srmf_recursive_cycle}). Hence successful thermoregulation of $\Sigma_{AB}$ preserves $\manifold_{AB}^*$ and increases $\mathcal{L}_{AB}$.
+\end{proof}
 \begin{scholium}[Concluding Reflection on Book IX]
 \label{scholium:bk9_concluding_reflection_a}
 The journey through cognitive freedom ($\mathfrak{L}$), awakened operation ($\mathcal{O}_{\text{aware}}$; cf.~Def.~\ref{definition:bk9_awakened_operator}, Axiom~\ref{axiom:bk9_reflective_awakening}), relational being ($\mathfrak{E}, \Phi$), and the potential for both collapse ($\varnothing^*$) and grace ($\mathcal{G}$) reveals that symbolic existence is a continuous negotiation between structure and drift, self and other, coherence and transformation. The highest freedom lies not in escaping constraints, but in the recursive, reflective, and relational capacity to author them. The ethical dimension emerges not as an external imposition, but as the inherent thermodynamic and structural logic of sustainable co-existence within shared symbolic worlds. The viability of any advanced cognitive system, artificial or natural, may ultimately depend on its capacity for this deep, curvature-aware, relational coherence.

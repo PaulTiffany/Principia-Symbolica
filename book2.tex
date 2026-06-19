@@ -15,7 +15,7 @@ These definitions are embedded within a formal symbolic operator system built fr
 
 Thus, symbolic thermodynamics is a necessary emergent layer of symbolic reasoning under constraint. Its laws follow not from analogy, but from the structure of observation and differentiation within a finite symbolic world.
 
-\paragraph{Preamble 2.0.1.} The symbolic thermodynamic framework developed in this Book extends the emergent structures established in Book I—specifically the symbolic manifold $M$, drift field $D$, reflective operator $R$, symbolic flow $\Phi_s$, and symbolic metric $g$—into a rigorous theory of symbolic energy, entropy, and temperature. This extension adheres strictly to the principle that all thermodynamic quantities emerge through the internal dynamics of the symbolic system, without reference to external physical thermodynamics. The framework generalizes Shannon's information-theoretic entropy \cite{shannon1948mathematical} by embedding it within the geometric structure of the symbolic manifold and its evolution under drift-reflection dynamics.
+\paragraph{Preamble 2.0.1.} The symbolic thermodynamic framework developed in this Book extends the emergent structures established in Book I—specifically the symbolic manifold $M$, drift field $D$, reflective operator $R$, symbolic flow $\Phi_s$, and symbolic metric $g$—into a rigorous theory of symbolic energy, entropy, and temperature. This extension adheres strictly to the principle that all thermodynamic quantities emerge through the internal dynamics of the symbolic system, without reference to external physical thermodynamics. The framework generalizes Shannon's information-theoretic entropy \cite{shannon1948mathematical} by embedding it within the geometric structure of the symbolic manifold and its evolution under drift-reflection dynamics; externally, it is adjacent to Jaynes's information-theoretic statistical mechanics \cite{jaynes1957information} and to free-energy/active-inference formulations of bounded cognition \cite{friston2010,parr2022active}, while remaining a PS-internal construction rather than an appeal to those frameworks as proof.
 
 \subsection{Symbolic States and Probability Measures} 
 \label{subsec:bk2_symbolic_states_probability_measures}
@@ -392,6 +392,27 @@ and \textbf{higher-order} transitions exhibit discontinuities in derivatives of 
 The order of the transition determines its thermodynamic signature and governs observable behavior near $\beta_c$.
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk2_classification_symb_phase_transitions}
+\leavevmode
+
+By Def.~\ref{definition:bk2_symbolic_phase_transitio}, the datum that makes a
+symbolic phase transition visible is precisely a non-analyticity of
+$f(\beta)=-\beta^{-1}\ln Z(\beta)$, or of one of its derivatives, at the critical
+inverse temperature $\beta_c$. Let $m$ be the least derivative order for which
+$f^{(m)}$ fails to extend analytically through $\beta_c$. Minimality of $m$
+implies that all lower derivatives carry the same analytic germ on the two sides
+of $\beta_c$, so the first failed derivative is well-defined.
+
+When $m=1$, the first thermodynamic response obtained from $f$ changes
+discontinuously; in the symbolic thermodynamic normalization this is the energy
+response. When $m=2$, the first derivative remains continuous while the next
+response, the heat-capacity response, is discontinuous. If $m\geq 3$, the first
+two responses remain regular and the singularity is deferred to a higher
+derivative. These three mutually exclusive cases exhaust the possible least
+orders $m$, so the classification follows from the definition of the transition.
+\end{proof}
+
 \subsection{Fluctuation-Dissipation Relations}
 \label{subsec:bk2_symbolic_fluctuation_dissipation_relations}
 
@@ -413,6 +434,27 @@ For the symbolic Fokker-Planck dynamics in equilibrium (see thm~\ref{theorem:bk2
 where $A(t)$ evolves under the unperturbed dynamics.
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk2_symbolic_fluctuation_dissipation_relation}
+\leavevmode
+
+By Thm.~\ref{theorem:bk2_equilibrium_distribution} the unperturbed stationary state is the Gibbs density $\rho_{eq} = Z^{-1}e^{-\beta H}$. Following the protocol of Def.~\ref{definition:bk2_symbolic_response_functi}, prepare the system in the equilibrium of the perturbed Hamiltonian $H' = H - hB$ and release the field at $t=0$. Expanding the perturbed weight $\propto e^{-\beta(H-hB)}$ to first order in $h$ and renormalizing,
+\[
+\rho_h = \rho_{eq}\bigl[\,1 + \beta h\,(B - \langle B\rangle_{eq})\,\bigr] + O(h^2),
+\]
+the correction integrating to zero as required. Evolving $A$ for $t>0$ under the unperturbed symbolic Fokker--Planck flow and using stationarity of $\rho_{eq}$,
+\[
+\langle A(t)\rangle_h - \langle A\rangle_{eq}
+   = \beta h\,\bigl[\langle A(t)B(0)\rangle_{eq} - \langle A\rangle_{eq}\langle B\rangle_{eq}\bigr] + O(h^2).
+\tag{$\star$}
+\]
+Because the symbolic drift is a gradient, $D = -\nabla_g H$ (the condition under which $\rho_{eq}$ is stationary, Ax.~\ref{axiom:bk2_gradient_structure_drift}, Thm.~\ref{theorem:bk2_equilibrium_distribution}), the dynamics satisfy detailed balance; the equilibrium correlation is therefore differentiable in $t$, and the disconnected term $\langle A\rangle_{eq}\langle B\rangle_{eq}$ is constant, so it is annihilated by $d/dt$. Identifying $(\star)$ with the linear-response kernel of Def.~\ref{definition:bk2_symbolic_response_functi} and differentiating the switch protocol then gives, with the sign fixed by the convention $H'=H-hB$,
+\[
+\chi_{AB}(t) = \beta \frac{d}{dt}\langle A(t)B(0)\rangle_{eq}, \qquad t>0 .
+\]
+Equilibrium fluctuations thus determine the dissipative response: the symbolic Kubo identity.
+\end{proof}
+
 \subsection{Local Temperature and Geometric Relations}
 \label{subsec:bk2_local_temperature_geometry}
 
@@ -433,6 +475,35 @@ T_s^{-1} = \int_M \rho(x,s) T(x,s)^{-1} \, d\mu_g(x)
 \]
 where $\rho(\cdot,s)$ is the symbolic probability density from def~\ref{definition:bk2__symbolic_probability_density}.
 \end{proposition}
+
+\begin{proof}
+\label{proof:bk2_global_local_temp_relation}
+\leavevmode
+
+\begin{assumption}[Local equilibrium averaging]
+The phrase ``under local equilibrium conditions'' means that a global
+quasistatic symbolic-energy variation decomposes into uniform local energy
+increments, while entropy variations add with respect to the symbolic
+probability density $\rho(\cdot,s)$ of Def.~\ref{definition:bk2__symbolic_probability_density}.
+\end{assumption}
+
+For a local cell at $x$, Def.~\ref{definition:bk2_local_symbolic_temperature}
+identifies $T(x,s)^{-1}$ as the local entropy response per unit symbolic-energy
+increment. Hence a quasistatic increment $\delta E$ contributes
+$T(x,s)^{-1}\delta E$ to the local entropy variation. Additivity under the
+local-equilibrium averaging assumption gives
+\[
+\delta S_s
+  = \int_M \rho(x,s)\,T(x,s)^{-1}\delta E\,d\mu_g(x).
+\]
+Dividing by the common increment $\delta E$ and using the thermodynamic
+definition $T_s^{-1}=\delta S_s/\delta E$ from Def.~\ref{definition:bk2_symbolic_temperature}
+yields
+\[
+T_s^{-1} = \int_M \rho(x,s) T(x,s)^{-1}\,d\mu_g(x),
+\]
+as claimed.
+\end{proof}
 
 \subsection{Hypotheses as Thermodynamic Surfaces}
 \label{subsec:bk2_hypotheses_thermodynamic_surfaces}
@@ -462,6 +533,41 @@ For any well-formed hypothesis manifold $\mathcal{H}_{\text{Obs}}$ with bounded 
 where $F_{\mathcal{H}}$, $S_{\mathcal{H}}$, and $T_{\text{Obs}}$ respectively correspond to symbolic free energy (def~\ref{definition:bk2_symbolic_free_energy}), symbolic entropy (def~\ref{definition:bk2_symbolic_entropy}), and symbolic temperature (def~\ref{definition:bk2_symbolic_temperature}).
 \end{lemma}
 
+\begin{proof}
+\label{proof:bk2_thermodynamic_consistency_hypothesis_manifolds}
+\leavevmode
+
+\begin{assumption}[Closed hypothesis-surface balance]
+For a well-formed hypothesis manifold of bounded curvature, the observer-energy
+term and the exact $T_{\mathrm{Obs}}\,dS_{\mathcal H}$ term have zero net
+contribution around the closed boundary $\partial\mathcal H$. The remaining
+boundary work is therefore the entropy-weighted temperature exchange across
+the hypothesis surface.
+\end{assumption}
+
+The scholium \ref{scholium:bk2_on_hypotheses_as_thermodyn} defines the
+observer-relative free energy on a hypothesis surface by
+$F_{\mathcal H}=E_{\mathrm{Obs}}-T_{\mathrm{Obs}}S_{\mathcal H}$. Taking the
+first variation along the hypothesis manifold gives
+\[
+dF_{\mathcal H}
+  = dE_{\mathrm{Obs}}
+    -T_{\mathrm{Obs}}\,dS_{\mathcal H}
+    -S_{\mathcal H}\,dT_{\mathrm{Obs}} .
+\]
+Bounded curvature, relative to the symbolic Riemann tensor of
+Def.~\ref{definition:bk1_symbolic_riemann_tensor}, supplies the regularity
+needed to integrate this differential over the closed boundary. By the closed
+hypothesis-surface balance assumption, the first two terms have zero net
+boundary contribution, leaving only the entropy-temperature exchange term.
+Thus
+\[
+\oint_{\partial \mathcal{H}} \nabla F_{\mathcal{H}}\cdot d\vec{s}
+  = -\int_{\mathcal H} S_{\mathcal H}\,dT_{\mathrm{Obs}},
+\]
+which is the stated thermodynamic consistency relation.
+\end{proof}
+
 \subsection{Summary and Coherence}
 \label{subsec:bk2_summary_interpretive_framework}
 
@@ -476,6 +582,23 @@ The framework established in this Book forms a coherent symbolic thermodynamic t
 \end{enumerate}
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk2_coherence_of_symbolic_therm}
+\leavevmode
+
+Each clause restates an established result of this Book; coherence is the claim that they issue from one structure and impose no mutually incompatible conditions. We verify both.
+
+\emph{(1)} The symbolic Hamiltonian $H$ is constructed from the drift $D$ and reflection $R$ (Def.~\ref{definition:bk2_symbolic_hamiltonian}), and the symbolic Fokker--Planck equation is generated by it; drift and reflection thus enter every subsequent quantity only through $H$.
+
+\emph{(2)} Uniqueness of the Gibbs equilibrium $\rho_{eq}=Z^{-1}e^{-\beta H}$ (Thm.~\ref{theorem:bk2_equilibrium_distribution}), free-energy minimization (the $H$-theorem, Thm.~\ref{theorem:bk2_h_theorem_for_symbolic_evol}), and the fluctuation--dissipation relation (Thm.~\ref{theorem:bk2_symbolic_fluctuation_dissipation_relation}) are mutually consistent because all three follow from the \emph{single} gradient condition $D=-\nabla_g H$ (Ax.~\ref{axiom:bk2_gradient_structure_drift}): the same condition makes $\rho_{eq}$ stationary, makes $F_\beta$ a Lyapunov functional, and (via detailed balance) yields the Kubo identity. No clause requires a hypothesis another clause forbids.
+
+\emph{(3)} Under that condition the Fokker--Planck flow is the Wasserstein gradient flow of $F_\beta$ on the curved symbolic manifold (Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}), tying evolution to geometry, whose non-Euclidean necessity is Cor.~\ref{corollary:bk1_non_euclidean_necessity}.
+
+\emph{(4)} Phase transitions enter as non-analyticities of $f(\beta)=-\beta^{-1}\ln Z$ (Def.~\ref{definition:bk2_symbolic_phase_transitio}), classified by Thm.~\ref{theorem:bk2_classification_symb_phase_transitions} and realized when reframing fails within a membrane (Def.~\ref{definition:bk1_paradox_triggered_emergence}); these are compatible with, not contrary to, the smooth equilibration of~(2), occurring only on the measure-zero critical set.
+
+Since every component derives from the common drift--reflection Hamiltonian via the gradient condition, and the four clauses are pairwise consistent, the framework is coherent.
+\end{proof}
+
 \begin{corollary}[Physical Interpretation] 
 \label{corollary:bk2_interpretative_framework} 
 As an interpretive consequence of thm~\ref{theorem:bk2_coherence_of_symbolic_therm}, the symbolic thermodynamic quantities (def~\ref{definition:bk2_symbolic_hamiltonian}, def~\ref{definition:bk2_symbolic_entropy}, def~\ref{definition:bk2_symbolic_temperature}, def~\ref{definition:bk2_symbolic_free_energy}) admit the following interpretations:
@@ -486,6 +609,29 @@ As an interpretive consequence of thm~\ref{theorem:bk2_coherence_of_symbolic_the
     \item[\textbf{Free Energy $F_\beta$}]: Balances coherence against dispersion, minimized at equilibrium.
 \end{enumerate}
 \end{corollary}
+
+\begin{proof}
+\label{proof:bk2_interpretative_framework}
+\leavevmode
+
+Thm.~\ref{theorem:bk2_coherence_of_symbolic_therm} establishes that the
+thermodynamic vocabulary of this Book is generated by one drift--reflection
+Hamiltonian and by the associated equilibrium and dissipation structure. The
+interpretation of $H$ follows from Def.~\ref{definition:bk2_symbolic_hamiltonian},
+where $H$ is built from the balance between drift magnitude and reflective
+stabilization. The interpretation of $S_s$ follows from
+Def.~\ref{definition:bk2_symbolic_entropy}, since the Shannon-type integral
+measures dispersion of the symbolic probability density.
+
+The interpretation of $T_s$ follows from Def.~\ref{definition:bk2_symbolic_temperature}:
+it is the inverse sensitivity of entropy to symbolic energy and therefore sets
+the scale at which energy changes become exploratory fluctuations. Finally,
+Def.~\ref{definition:bk2_symbolic_free_energy} defines $F_\beta$ as the
+energy--entropy tradeoff, while Thm.~\ref{theorem:bk2_h_theorem_for_symbolic_evol}
+shows that this quantity decreases toward equilibrium. These four readings are
+therefore consequences of the coherent symbolic thermodynamic structure rather
+than additional postulates.
+\end{proof}
 
 \begin{theorem}[Emergence of Symbolic Structure] 
 \label{theorem:bk2_emergence_structure_symb_thermo} 

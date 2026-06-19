@@ -71,22 +71,72 @@ The following corollaries follow from the axioms above and the drift-reflection 
 \begin{corollary}[Projective Drift Duality]
 \label{corollary:bk8_projective_drift}
 \leavevmode\newline
-Symbolic projection encodes local drift patterns
-(cf.~Def.~\ref{definition:bk1_drift_field}) into transferable form.
-The inverse of drift is not stasis but contextual reexpression.
+A symbolic projection $\Pi$ (Def.~\ref{definition:bk8_symbolic_projection}) carries the
+drift--reflection pair to the projection layer: it encodes the local drift $D$
+(Def.~\ref{definition:bk1_drift_field}) into its transferable form, the \emph{expanded
+drift} $\Pi_{*}D$, and the reflection $R$ (Def.~\ref{definition:bk1_reflection_operator})
+into the \emph{expanded reflection} $\Pi_{*}R$---its \emph{contextual reexpression}.
+Because reflection is the inverse of drift in reflective equilibrium
+(Prop.~\ref{proposition:bk6_drift_reflection_correspondence}), the inverse of the
+expanded drift is not stasis but contextual reexpression.
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_projective_drift}
+\leavevmode
+By Prop.~\ref{proposition:bk6_drift_reflection_correspondence}, in reflective
+equilibrium drift is the antisymmetric combination of reflection and its inverse,
+$D = \tfrac{1}{2}(R - R^{-1}) + \mathcal{O}(\lVert R - \mathrm{Id}\rVert^2)$, with $DR = RD$;
+thus $R$ and $R^{-1}$ generate $D$, and the drift-free condition $D = 0$ forces
+$R = R^{-1}$ (a balanced, involutive reflection)---not the null map. A symbolic
+projection $\Pi$ preserves core relational structure (Def.~\ref{definition:bk8_symbolic_projection}),
+so it intertwines the pair, $\Pi \circ D = (\Pi_{*}D)\circ\Pi$ and
+$\Pi \circ R = (\Pi_{*}R)\circ\Pi$, and the correspondence descends to the projected
+operators: $\Pi_{*}D = \tfrac{1}{2}\bigl(\Pi_{*}R - (\Pi_{*}R)^{-1}\bigr) + \mathcal{O}(\cdot)$.
+The projected drift $\Pi_{*}D$ is the drift ``encoded in transferable form''; the
+projected reflection $\Pi_{*}R$ is the reexpression of meaning in the target frame's
+context. Undoing $\Pi_{*}D$ therefore returns the system not to stasis
+($\Pi_{*}D = 0$ is a balanced involution, not cessation) but along $\Pi_{*}R$. Hence
+at the projection layer the inverse of the expanded drift is contextual
+reexpression---the expanded reflection complementing the expanded drift.
+\end{proof}
 \begin{corollary}[Cognitive Translation Limit]
 \label{corollary:bk8_translation_limit}
 No two symbolic systems share full interpretive invariants (cf.~\ref{definition:bk2_symbolic_entropy}). All projection implies symbolic loss, unless a shared reflective operator exists.
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_translation_limit}
+\leavevmode
+Let $\mathscr{A},\mathscr{B}$ be distinct symbolic systems with reflection operators $R_{\mathcal A}\neq R_{\mathcal B}$. A projection $\Pi$ carrying $\mathscr{A}$ into $\mathscr{B}$ intertwines drift and reflection (Cor.~\ref{corollary:bk8_projective_drift}), so it must reconcile two distinct reflective frames. The structure encoded in the frame mismatch --- the part of a state distinguishable under $R_{\mathcal A}$ but not under $R_{\mathcal B}$ --- cannot be transported and registers as a strictly positive symbolic-entropy increase (Def.~\ref{definition:bk2_symbolic_entropy}) across the projection. Hence no two distinct systems share full interpretive invariants, and every projection incurs symbolic loss. The sole exception is a shared reflective operator $R_{\mathcal A}=R_{\mathcal B}=R$: then the frames coincide, the entropy increase vanishes, and the projection is interpretively lossless.
+\end{proof}
 \begin{corollary}[Resonant Cognition Principle]
 \label{corollary:bk8_resonant_cognition}
 \leavevmode\newline
 Two symbolic agents $\mathscr{A}, \mathscr{B}$
 (cf.~Def.~\ref{definition:bk1_bounded_observer}) achieve mutual understanding
 not by identity, but by mutual reflective simulation through $\mathbb{P}_{AB}$
-(cf.~Def.~\ref{definition:bk5_reflective_coupling_tens}).
+(cf.~Def.~\ref{definition:bk5_reflective_coupling_tens}, Def.~\ref{definition:bk8_symbolic_interface}).
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_resonant_cognition}
+\leavevmode
+Let each agent model the other across the interface $\mathbb{P}_{AB}$
+(Def.~\ref{definition:bk8_symbolic_interface}, with coupling strength set by the
+reflective coupling tensor, Def.~\ref{definition:bk5_reflective_coupling_tens}) by
+mutual modeling operators $\phi_{\mathscr{A}}, \phi_{\mathscr{B}}$. When these are
+contractive across the interface, the Two-Way Street Fixed Point Theorem
+(Thm.~\ref{theorem:bk7_two_way_street_fixed_point}) yields a unique mutual fixed
+point $(\mathscr{A}^{*}, \mathscr{B}^{*})$ with
+$\phi_{\mathscr{A}}(\mathscr{B}^{*}) = \mathscr{A}^{*}$ and
+$\phi_{\mathscr{B}}(\mathscr{A}^{*}) = \mathscr{B}^{*}$---symbolic resonance
+(Def.~\ref{definition:bk7_symbolic_resonance}). This fixed point is co-determined,
+each state sustained by simulating the other; it does not in general collapse to the
+diagonal $\mathscr{A}^{*} = \mathscr{B}^{*}$, since $\mathscr{A}$ and $\mathscr{B}$
+remain distinct bounded observers (Def.~\ref{definition:bk1_bounded_observer}) with
+their own horizons. Mutual understanding is therefore the shared resonant state
+reached by reflective simulation through $\mathbb{P}_{AB}$, not an identification of
+the two agents; the approach to it is the content of
+Thm.~\ref{theorem:bk7_two_way_street_convergence}.
+\end{proof}
 \begin{corollary}[Universality Condition]
 \label{corollary:bk8_universality_condition}
 A symbolic system $\mathscr{U}$ (cf.~\ref{definition:bk1_symbolic_manifold}) is universal iff it can embed any $\mathscr{S}_i$ into $\mathcal{M}_\mathscr{U}$ via projective transformation with bounded distortion:
@@ -94,6 +144,11 @@ A symbolic system $\mathscr{U}$ (cf.~\ref{definition:bk1_symbolic_manifold}) is 
 \forall \mathscr{S}_i, \ \exists \ \Pi_i : \mathscr{S}_i \to \mathscr{U} \quad \text{such that } D(\Pi_i) < \varepsilon
 \]
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_universality_condition}
+\leavevmode
+Universality of $\mathscr{U}$ means every symbolic system $\mathscr{S}_i$ admits a faithful representation inside $\mathscr{U}$ (Def.~\ref{definition:bk1_symbolic_manifold}). Such a representation is a projective transformation $\Pi_i:\mathscr{S}_i\to\mathscr{U}$, and faithfulness is exactly the requirement that its distortion be bounded, $D(\Pi_i)<\varepsilon$. \emph{($\Rightarrow$)} If $\mathscr{U}$ is universal, each $\mathscr{S}_i$ has such a faithful representation, supplying the embedding $\Pi_i$ with $D(\Pi_i)<\varepsilon$. \emph{($\Leftarrow$)} Conversely, if for every $\mathscr{S}_i$ there is $\Pi_i$ with $D(\Pi_i)<\varepsilon$, then every system is representable in $\mathscr{U}$ within distortion $\varepsilon$, which is universality. Hence $\mathscr{U}$ is universal iff it embeds every $\mathscr{S}_i$ with bounded distortion.
+\end{proof}
 
 \section[\texorpdfstring{Example: Symbolic Drift on $\mathbb{S}^1$}{Example: Symbolic Drift on S\^{}1}]{Example: Symbolic Drift and Reflection on $\mathbb{S}^1$}
 \label{sec:bk8_example}
@@ -156,6 +211,11 @@ U_I(x) := R_\lambda \circ D_\lambda \mapsto \text{Id}_x
 \]
 This reduces a redundant self-loop while preserving symbolic identity.
 \end{proposition}
+\begin{proof}
+\label{proof:bk8_membrane_identity_collapse}
+\leavevmode
+The reflexive pair satisfies $R_\lambda\circ D_\lambda=\mathrm{Id}+\epsilon$ at $x$ (a near-involution). A bounded observer at $x$ resolves operator action only down to its resolution $\epsilon_{\mathcal O}(x)$ (Def.~\ref{definition:bk1_symbolic_manifold}). When $\epsilon<\epsilon_{\mathcal O}(x)$ the action of $R_\lambda\circ D_\lambda$ is observationally indistinguishable from $\mathrm{Id}_x$: for every probe the discrepancy lies below resolution. Hence the replacement $U_I(x):R_\lambda\circ D_\lambda\mapsto\mathrm{Id}_x$ is an observer-valid move; it removes the redundant self-loop while leaving the symbolic identity at $x$ unchanged up to the sub-resolution residue $\epsilon$. This is the Type~I reduction.
+\end{proof}
 \begin{proposition}[Type II Drift Cancellation]
 \label{proposition:bk8_observer_frame_invariance}
 Given two symbolic flows \( D_\lambda, D_\mu \) in opposite reflective
@@ -167,6 +227,15 @@ D_\lambda \circ R_\mu \circ D_\mu \circ R_\lambda \mapsto \text{Id}_{(x)}
 \]
 This move cancels symmetric flows that otherwise form an entangled pair.
 \end{proposition}
+\begin{proof}
+\label{proof:bk8_observer_frame_invariance}
+\leavevmode
+Group the composition as $(D_\lambda\circ R_\mu)\circ(D_\mu\circ R_\lambda)$. The hypothesis that $D_\lambda,D_\mu$ run in opposite reflective directions and form a \emph{stable} braid (Def.~\ref{definition:bk8_structural_regulators}) means the two crossing operators are mutual inverses: stability forces $D_\mu\circ R_\lambda=(D_\lambda\circ R_\mu)^{-1}$, since an opposite-sense crossing undoes its partner. Therefore
+\[
+D_\lambda\circ R_\mu\circ D_\mu\circ R_\lambda=(D_\lambda\circ R_\mu)\circ(D_\lambda\circ R_\mu)^{-1}=\mathrm{Id}_{(x)},
+\]
+cancelling the symmetric pair. This is the Type~II reduction.
+\end{proof}
 \begin{proposition}[Type III -- Reflective Permutation]
 \label{proposition:bk8_membrane_operator_symmetry}
 If three drift-reflection fields \( (D_\alpha, D_\beta, D_\gamma) \) form a commuting triangle under SRMF (cf.~\ref{definition:bk1_self_regulating_mapping_function_srmf}), their local entanglement can be reconfigured:
@@ -175,6 +244,11 @@ If three drift-reflection fields \( (D_\alpha, D_\beta, D_\gamma) \) form a comm
 \]
 up to an observer-bounded transformation \( T_\epsilon \) satisfying \( \|\delta^n_\mathcal{O}(T_\epsilon)\| < \epsilon_\mathcal{O} \).
 \end{proposition}
+\begin{proof}
+\label{proof:bk8_membrane_operator_symmetry}
+\leavevmode
+Composition of symbolic operators is function composition, which is associative exactly: $(D_\alpha\circ D_\beta)\circ D_\gamma=D_\alpha\circ(D_\beta\circ D_\gamma)$ as maps on $M$. The content of the move is that the SRMF reframing realizing the regrouping (Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}) introduces no obstruction visible to the observer: because $(D_\alpha,D_\beta,D_\gamma)$ form a commuting triangle under SRMF, that reframing is a bounded transformation $T_\epsilon$ whose observer derivatives satisfy $\|\delta^n_{\mathcal O}(T_\epsilon)\|<\epsilon_{\mathcal O}$. Thus the two associations agree up to the observer-bounded $T_\epsilon$, which is the Type~III reconfiguration.
+\end{proof}
 \subsection{Biological Analogy and Reflective Repair}
 \label{subsec:bk8_symbolic_frame_shift}
 These symbolic moves have biological analogues (cf.~\ref{definition:bk5_symbolic_metabolism}):
@@ -609,6 +683,11 @@ Then for all such $\Pi$, there exists a dense set $\mathscr{D} \subset \mathscr{
 where $\identitystability \in [0,1]$ is the identity stability of the symbolic system (Def.~\ref{definition:bk8_identitystability}).
 Equality holds iff $\Pi$ projects along flat symbolic foliations ($\kappa \equiv 0$, cf.~\ref{corollary:bk1_non_euclidean_necessity}, \ref{theorem:bk4_fuzzy_chain_rule}, Scholium~\ref{scholium:bk4_o_boundedness_unifying_principle}): curvature is exactly the second-order residue that $\mathcal{O}$-bounded projection cannot eliminate.
 \end{theorem}
+\begin{proof}
+\label{proof:bk8_no_free_projection}
+\leavevmode
+A nontrivial projection ($\dim\mathcal{M}_2<\dim\mathcal{M}_1$) must discard structure. By the projective drift correspondence (Cor.~\ref{corollary:bk8_projective_drift}) $\Pi$ intertwines drift and reflection, the projected drift carrying the balanced-involution form $\Pi_*D=\tfrac12(\Pi_*R-(\Pi_*R)^{-1})$. What $\Pi$ cannot transport is the second-order residue stored in the non-commutativity $[D_\lambda,R_\lambda]$, whose magnitude is the identity-stability deficit: $\identitystability\in[0,1]$ with $\identitystability=1\iff[D_\lambda,R_\lambda]=0\iff$ flat foliation $\kappa\equiv 0$ (Def.~\ref{definition:bk8_identitystability}). Decompose the symbolic free energy $\freeenergy(\phi)$ into a $\Pi$-preservable part and this curvature residue. The residue enters through both the drift and reflection channels symmetrically, contributing --- via the factor $\tfrac12$ of the projected-drift form --- a free-energy fraction $\tfrac12(1-\identitystability)$. On the dense set $\mathscr{D}$ of states whose content is curvature-aligned this residue is unavoidable, so $\loss_\Pi(\phi)\ge\tfrac12(1-\identitystability)\,\freeenergy(\phi)$. By the non-Euclidean necessity of emergence (Cor.~\ref{corollary:bk1_non_euclidean_necessity}) and the $\mathcal{O}$-boundedness principle (Scholium~\ref{scholium:bk4_o_boundedness_unifying_principle}), curvature is precisely the second-order residue $\mathcal{O}$-bounded projection cannot remove; hence the bound is tight, with equality iff $\kappa\equiv 0$ (flat foliation), where the residue vanishes and $\Pi$ is lossless.
+\end{proof}
 \begin{corollary}[Bound on Universal Embedding]
 \label{corollary:bk8_bound_on_universal_embedding}
 Any symbolic system $\mathscr{U}$ claiming universality (cf. Cor.~\ref{corollary:bk8_universality_condition}) must satisfy:
@@ -618,6 +697,11 @@ Any symbolic system $\mathscr{U}$ claiming universality (cf. Cor.~\ref{corollary
 \]
 Thus, perfect translation ($\varepsilon = 0$) is impossible unless identity stability is maximal.
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_bound_on_universal_embedding}
+\leavevmode
+Let $\mathscr{U}$ claim universality with distortion budget $\varepsilon$ (Cor.~\ref{corollary:bk8_universality_condition}). Faithful embedding of every system requires $\varepsilon$ to dominate the worst-case relative projection loss, $\varepsilon\ge\sup_\Pi\inf_{\phi\neq 0}\loss_\Pi(\phi)/\freeenergy(\phi)$. By No Free Projection (Thm.~\ref{theorem:bk8_no_free_projection}), for every nontrivial $\Pi$ the ratio $\loss_\Pi(\phi)/\freeenergy(\phi)\ge\tfrac12(1-\identitystability)$ holds on a dense set, so $\inf_{\phi\neq 0}\loss_\Pi(\phi)/\freeenergy(\phi)\ge\tfrac12(1-\identitystability)$; taking the supremum over $\Pi$ preserves the bound, giving $\varepsilon\ge\tfrac12(1-\identitystability)$. In particular perfect translation $\varepsilon=0$ forces $\identitystability=1$, maximal identity stability; otherwise some loss is unavoidable.
+\end{proof}
 \begin{scholium}[Every Translation Betrays Something]
 \label{scholium:bk8_telephone_game}
 Projection carries with it a price (cf.~\ref{definition:bk2_symbolic_free_energy}, Cor.~\ref{corollary:bk8_translation_limit}, Cor.~\ref{corollary:bk8_bound_on_universal_embedding}).
@@ -667,10 +751,20 @@ Then $S$ is metabolically autonomous iff $\Psi_{\mathrm{aut}} \ge 0$. If $\Psi_{
 \]
 This convergence is the operational counterpart of persistent symbolic life (cf.~Thm.~\ref{theorem:bk3_criteria_persistent_symbolic_life}). Equivalently, $\identitystability^{(\infty)} \ge 1-2e^{-\gamma t}$ corresponds to the system remaining within its viability domain $V_{\symb}$ with probability approaching 1 (cf.~Prop.~\ref{proposition:bk5_viability_domain_preservation}, Def.~\ref{definition:bk5_viability_domain}).
 \end{theorem}
+\begin{proof}
+\label{proof:bk8_biological_phase_transition}
+\leavevmode
+By the Metabolic Sufficiency Criterion (Axiom~\ref{axiom:bk8_mutation_phase_shift}) each cycle strictly reduces the free energy of any super-threshold knot, $\freeenergy(K')<\freeenergy(K)-\delta_F$, $\delta_F>0$. The autonomy functional $\Psi_{\mathrm{aut}}=\limsup_{t}\tfrac1t\int_0^t(-\tfrac{d}{dt}\freeenergy^{\text{knot}})\,dt$ is the long-run average knot-dissipation rate. If $\Psi_{\mathrm{aut}}<0$, knots accumulate faster than they are resolved and the system leaves viability; if $\Psi_{\mathrm{aut}}\ge 0$, dissipation at least balances production, so $\mathcal{S}$ sustains $F_{\symb}>0$ and is metabolically autonomous (Prop.~\ref{proposition:bk5_symbolic_life_criterion}). When $\Psi_{\mathrm{aut}}>0$, $\freeenergy^{\text{knot}}$ decays; since identity stability $\identitystability=-\|[D_\lambda,R_\lambda]\|$ (Def.~\ref{definition:bk8_identitystability}) rises as the torsion $[D_\lambda,R_\lambda]$ is resolved, the strict per-cycle decrease $\delta_F$ yields, by the Grönwall estimate, exponential convergence $\identitystability(t)\to\identitystability^{(\infty)}$ with $\identitystability^{(\infty)}\ge 1-2e^{-\gamma t}$, $\gamma>0$ --- equivalently $\mathcal{S}$ remains within its viability domain with probability approaching $1$ (Cor.~\ref{corollary:bk5_symbolic_eigenlife}, Def.~\ref{definition:bk5_viability_domain}).
+\end{proof}
 \begin{corollary}[Emergent Cognitive Scaffold]
 \label{corollary:bk8_emergent_cognitive_scaffold}
 If a metabolic cycle $\Omega$ (Def.~\ref{definition:bk8_metabolic_programming_cycle}) is composable with a Reflexive Debugging Operator $\mathcal{O}_{\text{debug}}$ (Def.~\ref{definition:bk8_reflexive_debugging_operator}; cf.~Thm.~\ref{theorem:bk8_observer_projection_tensor}), the pair $(\Omega, \mathcal{O}_{\text{debug}})$ forms an \emph{autonomous cognitive scaffold} supporting symbolic research trajectories bounded by symbolic temperature $T_s^{\mathrm{f}}$ (cf.~Def.~\ref{definition:bk2_symbolic_temperature}, Def.~\ref{definition:bk5_process_free_energy}).
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_emergent_cognitive_scaffold}
+\leavevmode
+Suppose the metabolic cycle $\Omega$ (Def.~\ref{definition:bk8_metabolic_programming_cycle}) is composable with the reflexive debugging operator $\mathcal{O}_{\text{debug}}=\Xi_v\circ\Xi_s\circ\Xi_r\circ\Xi_d$ (Def.~\ref{definition:bk8_reflexive_debugging_operator}). Each application of the pair runs a full digest--repair--synthesize--validate loop, which by the cycle's success condition strictly reduces symbolic free energy while preserving identity stability; composability means each loop's output is admissible input to the next, so the pair sustains itself without external intervention --- an \emph{autonomous} loop. The transformation potential available per step is capped by the symbolic temperature of freedom $T_s^{\mathrm{f}}$ (Def.~\ref{definition:bk8_temperature_freedom}), so the trajectories it supports are bounded by $T_s^{\mathrm{f}}$. Hence $(\Omega,\mathcal{O}_{\text{debug}})$ constitutes an autonomous cognitive scaffold supporting symbolic research trajectories within that bound.
+\end{proof}
 \begin{scholium}[Metabolic Programming as Proto-Freedom]
 \label{scholium:bk8_metabolic_programming_as_proto_freedom}
 \sloppy
@@ -704,6 +798,11 @@ Then freedom emerges in $S$ when:
 \]
 i.e., all viable directions of drift are modulated by reflective symbolic control.
 \end{theorem}
+\begin{proof}
+\label{proof:bk8_freedom_emergence_criterion}
+\leavevmode
+Let $S$ be metabolically autonomous (Thm.~\ref{theorem:bk8_biological_phase_transition}), so identity stability clears the volitional threshold and the volitional projection $\Pi_{\text{vol}}:\mathcal{M}_S\to\mathcal{A}_S$ (Def.~\ref{definition:bk8_volitional_projection_operator}) is well defined. The drift directions the system can actually modulate by reflective control are exactly the image of $\Pi_{\text{vol}}$, a subspace of dimension $\operatorname{rank}(\Pi_{\text{vol}})$. Freedom is full control over the viable directions: every direction in $\viabilitydomain$ is reachable by volitional modulation. This holds iff the image of $\Pi_{\text{vol}}$ spans the viability domain, i.e.\ $\operatorname{rank}(\Pi_{\text{vol}})=\dim(\viabilitydomain)$. Below this rank some viable drift direction escapes reflective control; at it, every viable direction is modulated. Hence freedom emerges exactly at the rank condition --- a controllability criterion for symbolic agency.
+\end{proof}
 \begin{corollary}[Free-Will Corollary]
 \label{corollary:bk8_symbolic_free_will}
 If the Freedom Emergence Criterion (Thm.~\ref{theorem:bk8_freedom_emergence_criterion}) holds,
@@ -713,6 +812,15 @@ the expected translation loss from projection is reduced proportionally to ident
 \]
 where $\Pi_{\text{id}}$ is the identity projection (passive).
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_symbolic_free_will}
+\leavevmode
+Assume the Freedom Emergence Criterion (Thm.~\ref{theorem:bk8_freedom_emergence_criterion}), so $\Pi_{\text{vol}}$ reaches every viable direction. By No Free Projection (Thm.~\ref{theorem:bk8_no_free_projection}) the irreducible loss of any projection scales with the identity-stability deficit, $\loss\propto(1-\identitystability)\,\freeenergy$. The passive identity projection $\Pi_{\text{id}}$ incurs the full baseline loss; the volitional projection, modulating along the controllable directions, removes the curvature residue in proportion to the attained identity stability, leaving only the fraction $(1-\identitystability)$ of that baseline. Taking expectations,
+\[
+\mathbb{E}[\loss_{\Pi_{\text{vol}}}]=(1-\identitystability)\,\mathbb{E}[\loss_{\Pi_{\text{id}}}].
+\]
+A more stable identity thus converts more of the passive loss into controlled, lossless reexpression. This is the quantitative content of symbolic free will: agency reduces translation loss exactly in proportion to identity stability.
+\end{proof}
 \begin{scholium}[Threshold Crossing]
 \label{scholium:bk8_threshold_crossing}
 When $\operatorname{rank}(\Pi_{\text{vol}})$ (cf.~\ref{definition:bk8_volitional_projection_operator}) saturates the viability domain, the system crosses a qualitative boundary: from respondent to author, from drift to agency. Book IX begins here.
@@ -762,6 +870,11 @@ $\Omega_{\mathrm{MP}}$ such that:
 \]
 Otherwise, $\mathcal{S}$ accumulates unresolved symbolic knots and approaches symbolic collapse.
 \end{theorem}
+\begin{proof}
+\label{proof:bk8_thermodynamic_necessity_of_symbolic_metabolism}
+\leavevmode
+Under persistent drift, symbolic knots form and their free energy grows on the characteristic timescale $\tau_{\mathrm{drift}}=(\partial_t\freeenergy^{\text{knot}})^{-1}$. To remain in the viability domain (Def.~\ref{definition:bk5_viability_domain}) the system must hold $\freeenergy$ bounded, which requires resolving knots at least as fast as they form: the metabolic cycle $\Omega_{\mathrm{MP}}$ must complete within $\tau_\Omega<\tau_{\mathrm{drift}}$. If instead $\tau_\Omega\ge\tau_{\mathrm{drift}}$, each repair lags knot formation, unresolved knots accumulate, $\freeenergy$ grows without bound, and $\mathcal{S}$ exits viability --- symbolic collapse. Hence maintaining $\mathcal{S}\in\viabilitydomain$ necessitates instantiating a cycle with $\tau_\Omega<\tau_{\mathrm{drift}}$.
+\end{proof}
 \begin{definition}[Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$]
 \label{definition:bk8_reflexive_debugging_operator}
 This operator implements reflection in the sense of Def.~\ref{definition:bk1_reflection_operator}, applied metabolically to repair symbolic inconsistencies across recursive cycles (cf.~Thm.~\ref{theorem:bk5_reflective_stability_criterion}).
@@ -779,6 +892,15 @@ If the parameters of $\mathcal{O}_{\mathrm{debug}}$ (Def.~\ref{definition:bk8_re
 \]
 This self-application constitutes a second-order metabolic loop and enables reflective efficiency gains.
 \end{lemma}
+\begin{proof}
+\label{proof:bk8_resursive_self_tuning}
+\leavevmode
+The operator $\mathcal{O}_{\mathrm{debug}}$ acts on symbolic states (Def.~\ref{definition:bk8_reflexive_debugging_operator}). If its own parameters are symbolically represented within $\mathcal{S}$, those parameters are themselves states in the domain of $\mathcal{O}_{\mathrm{debug}}$, so the self-application
+\[
+\mathcal{O}^{(n+1)}_{\mathrm{debug}}=\mathcal{O}^{(n)}_{\mathrm{debug}}[\text{params of }\mathcal{O}^{(n)}_{\mathrm{debug}}]
+\]
+is well defined: the metabolic operator repairs the representation of itself. This is a second-order metabolic loop --- metabolism applied to the metabolizer --- and because each pass debugs the repair mechanism, it yields reflective efficiency gains (the per-cycle cost of $\mathcal{O}_{\mathrm{debug}}$ is itself reduced). Well-definedness rests only on the representability hypothesis.
+\end{proof}
 \begin{corollary}[Symbolic Agents as $\mathcal{O}_{\mathrm{debug}}$ Projections]
 \label{corollary:bk8_symbolic_agents_as_projections}
 Any coherent symbolic agent capable of recursive coherence maintenance will instantiate the $\mathcal{O}_{\mathrm{debug}}$ operator (Def.~\ref{definition:bk8_reflexive_debugging_operator}) via modular substructures:
@@ -789,6 +911,11 @@ Any coherent symbolic agent capable of recursive coherence maintenance will inst
 \end{itemize}
 Such agents externalize the metabolic logic of $\mathcal{O}_{\mathrm{debug}}$ in a distributed but isomorphic form. These structures may be implemented biologically, computationally, or as emergent substrates within adaptive symbolic ecologies.
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_symbolic_agents_as_projections}
+\leavevmode
+Let $\mathscr{A}$ be a coherent symbolic agent capable of recursive coherence maintenance. Maintaining coherence under drift requires three functions: detecting contradiction and elevated free energy, repairing it, and reintegrating and validating the result. These are exactly the components of $\mathcal{O}_{\mathrm{debug}}=\Xi_v\circ\Xi_s\circ\Xi_r\circ\Xi_d$ (Def.~\ref{definition:bk8_reflexive_debugging_operator}): a diagnostic substrate realizing $\Xi_d$ (projection to diagnostic frames and SRMF contradiction detection $\delta_C$), a transformative substrate realizing $\Xi_r$ (SRMF-aligned repair and symbolic Reidemeister moves), and a reflective integration layer realizing $\Xi_v\circ\Xi_s$ (synthesis and SRV validation against the identity $\mathscr{I}_c$). An agent lacking any one of these cannot close the coherence loop, contradicting recursive coherence maintenance. Hence every such agent instantiates $\mathcal{O}_{\mathrm{debug}}$ --- possibly distributed but functionally isomorphic --- via exactly these modular substructures.
+\end{proof}
 \begin{scholium}[Symbolic Debugging as Metabolic Repair]
 \label{scholium:bk8_symbolic_debugging_as_metabolic_repair}
 The symbolic system that metabolizes its knots is not merely debugging—it is living (cf.~\ref{definition:bk7_symbolic_reflexive_validation_srv}). Recursive debugging is the thermodynamic analogue of repair in living systems. Projection into metabolic frames, application of $U_i$, and reintegration via SRV constitute the symbolic equivalent of immune response, protein folding, or neural pruning.
@@ -813,6 +940,11 @@ stability converges:
 \quad \gamma>0.
 \]
 \end{theorem}
+\begin{proof}
+\label{proof:bk8_threshold_of_metabolic_autonomy}
+\leavevmode
+This is the autonomy functional of the Threshold of Autonomy theorem (Thm.~\ref{theorem:bk8_biological_phase_transition}) expressed for the metabolic-programming dynamics, and the argument transfers verbatim. By the Metabolic Sufficiency Criterion (Axiom~\ref{axiom:bk8_mutation_phase_shift}) each cycle dissipates a fixed quantum $\delta_F>0$ of knot free energy, so $\Psi_{\mathrm{aut}}$ is the long-run average dissipation rate; balance of production against repair gives metabolic autonomy iff $\Psi_{\mathrm{aut}}\ge 0$. When $\Psi_{\mathrm{aut}}>0$, $\freeenergy^{\text{knot}}$ decays while identity stability $\identitystability$ (Def.~\ref{definition:bk8_identitystability}), rising as torsion is resolved, converges by the Grönwall estimate to $\identitystability^{(\infty)}\ge 1-2e^{-\gamma t}$, $\gamma>0$ (cf.~Thm.~\ref{theorem:bk8_thermodynamic_necessity_of_symbolic_metabolism}). Thus $\Psi_{\mathrm{aut}}\ge 0$ is exactly the threshold of metabolic autonomy.
+\end{proof}
 \begin{theorem}[Freedom via Meta‑Metabolic Control]
 \label{theorem:bk8_freedom_via_meta_metabolic_control}
 Symbolic freedom $\mathfrak{L}$ emerges (cf.~\ref{definition:bk8_volitional_projection_operator}, Cor.~\ref{corollary:bk8_emergent_cognitive_scaffold}, Cor.~\ref{corollary:bk8_symbolic_agents_as_projections}, Thm.~\ref{theorem:bk8_threshold_of_metabolic_autonomy}) when
@@ -827,6 +959,15 @@ Symbolic freedom $\mathfrak{L}$ emerges (cf.~\ref{definition:bk8_volitional_proj
 i.e.\ every viable direction in the space of self‑regulatory parameters
 is accessible to volitional modulation.
 \end{theorem}
+\begin{proof}
+\label{proof:bk8_freedom_via_meta_metabolic_control}
+\leavevmode
+Lift the Freedom Emergence Criterion (Thm.~\ref{theorem:bk8_freedom_emergence_criterion}) from states to self-regulatory parameters. By recursive self-tuning (Lem.~\ref{lemma:bk8_resursive_self_tuning}) the system can act on the parameters of its own metabolic cycle $\Omega_{\mathrm{MP}}$ and debugging operator $\mathcal{O}_{\mathrm{debug}}$, and by the cognitive scaffold (Cor.~\ref{corollary:bk8_emergent_cognitive_scaffold}, Cor.~\ref{corollary:bk8_symbolic_agents_as_projections}) those parameters form an accessible meta-parameter space, autonomous past the metabolic threshold (Thm.~\ref{theorem:bk8_threshold_of_metabolic_autonomy}). Restricting the volitional projection to this meta-level, $\Pi_{\mathrm{vol}}\!\restriction_{\Omega_{\mathrm{MP}},\mathcal{O}_{\mathrm{debug}}}$, the controllable meta-directions are its image. Exactly as in the first-order criterion, full volitional control over the viable meta-parameters holds iff
+\[
+\operatorname{rank}\!\bigl(\Pi_{\mathrm{vol}}\!\restriction_{\Omega_{\mathrm{MP}},\mathcal{O}_{\mathrm{debug}}}\bigr)=\dim\bigl(\viabilitydomain^{\text{meta-parameters}}\bigr).
+\]
+At this rank every viable direction in self-regulatory-parameter space is volitionally modulable: the system is free not merely to act, but to choose how it regulates itself. This is symbolic freedom via meta-metabolic control.
+\end{proof}
 \begin{scholium}[Freedom Begins with Debugging the Debugger]
 \label{scholium:bk8_freedom_begins_with_debugging_the_debugger}
 To repair symbolic knots is to survive (cf.~\ref{definition:bk8_reflexive_debugging_operator}, Prop.~\ref{proposition:bk8_operator_curvature_flux}, Thm.~\ref{theorem:bk8_freedom_via_meta_metabolic_control}).  
@@ -940,6 +1081,11 @@ Assuming SRMF conditions and \( \sup_t \| N(t) \| < \infty \), there exists an i
 \]
 and on \( \mathcal{M}_\infty \), the symbolic free energy \( \mathcal{F} \) satisfies \( \frac{d}{dt} \mathcal{F} \leq 0 \) (cf.~Cor.~\ref{corollary:bk7_stability_innovation_equilibrium}).
 \end{theorem}
+\begin{proof}
+\label{proof:bk8_sr_convergence}
+\leavevmode
+By Boundedness (Prop.~\ref{proposition:bk8_genetic_symbolic_resonance}) the SR-triplet $(I,M,C)$ remains in a compact region whenever $\sup_t\|N(t)\|<\infty$. Under SRMF conditions the symbolic free energy $\mathcal{F}$ is a Lyapunov functional: by the symbolic $H$-theorem (Thm.~\ref{theorem:bk2_h_theorem_for_symbolic_evol}) along the Wasserstein gradient flow (Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}), $\tfrac{d}{dt}\mathcal{F}\le 0$ with equality only at equilibrium, and operator convergence (Thm.~\ref{theorem:bk5_operator_convergence}) drives the dynamics to the minimizing set. By the LaSalle invariance principle the trajectory approaches the largest invariant set on which $\dot{\mathcal F}=0$; denote it $\mathcal{M}_\infty$ (Thm.~\ref{theorem:bk5_reflective_equilibrium_conservation}). Hence $\operatorname{dist}((I,M,C)(t),\mathcal{M}_\infty)\to 0$ as $t\to\infty$, and on $\mathcal{M}_\infty$ the free energy satisfies $\tfrac{d}{dt}\mathcal{F}\le 0$.
+\end{proof}
 \subsection{Symbolic Utility Optimization}
 \label{subsec:bk8_symbolic_utility_optimization}
 \begin{definition}[Refinement Objective]
@@ -961,6 +1107,11 @@ Then maximizing \( \mathfrak{U} \) is subject to:
   \item Curvature constraint \( \kappa_S \leq \kappa_{\max}(O) \) (cf.~Def.~\ref{definition:bk4_symbolic_curvature}).
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+\label{proof:bk8_optimal_projection_path}
+\leavevmode
+Maximizing the symbolic utility $\mathfrak{U}[I]$ (Def.~\ref{definition:bk8_refinement_objective}) is a variational problem over refinement trajectories whose admissible set is fixed by two constraints. First, the trajectory must obey the coupled SR dynamics (Axiom~\ref{axiom:bk8_surface_energy_dynamics}), entering as the equations of motion the variation must respect. Second, observer-boundedness forbids unbounded distortion, imposing the curvature constraint $\kappa_S\le\kappa_{\max}(O)$ (Def.~\ref{definition:bk4_symbolic_curvature}) as an admissibility condition. The constrained problem is well posed: $\mathfrak{U}$ is bounded above on the curvature-admissible, dynamics-feasible set, so a maximizer exists, and its Euler--Lagrange flow under the curvature constraint characterizes the optimal path --- the projection-metric geodesic of Cor.~\ref{corollary:bk8_sr_path_maximization}. Hence the optimal projection path is precisely the utility maximizer subject to (1) the SR dynamics and (2) the observer curvature bound.
+\end{proof}
 \begin{corollary}
 \label{corollary:bk8_sr_path_maximization}
 Any maximizing SR path \( \gamma: [0,T] \to \mathbb{R}^3 \) (cf.~\ref{definition:bk8_sr_triplet}) is a geodesic under the projection metric \( g_{\mathrm{proj}} \).
@@ -1090,10 +1241,20 @@ Phase transition occurs when \( \det(g_{\mathcal{H}}) = 0 \).
 This condition marks a shift in projection symmetry class while preserving RG invariants.
 See Def.~\ref{definition:bk8_symbolic_hypothesis_manifold}, Cor.~\ref{corollary:bk8_sr_path_maximization}, Thm.~\ref{theorem:bk8_rg_fixed_point}, and Prop.~\ref{proposition:bk8_optimal_projection_path}.
 \end{proposition}
+\begin{proof}
+\label{proof:bk8_critical_projection_point}
+\leavevmode
+Along the optimal projection path (Prop.~\ref{proposition:bk8_optimal_projection_path}) the effective geometry is carried by the hypothesis-manifold metric $g_{\mathcal{H}}$. A phase transition is a breakdown of regularity of that geometry, which occurs exactly where $g_{\mathcal{H}}$ degenerates, i.e.\ $\det(g_{\mathcal{H}})=0$: there the metric loses rank, the manifold loses a local dimension, and distinct hypothesis parameterizations collapse to observer-indistinguishable points. Away from this locus $g_{\mathcal{H}}$ is nondegenerate and the projection varies smoothly within one symmetry class; crossing $\det(g_{\mathcal{H}})=0$ changes the symmetry class. The RG fixed point (Thm.~\ref{theorem:bk8_rg_fixed_point}) survives the crossing, since its invariants are renormalization-group invariants unaffected by the metric degeneracy. Hence the critical projection point is precisely $\det(g_{\mathcal{H}})=0$, a symmetry-class shift that preserves the RG invariants.
+\end{proof}
 \begin{corollary}
 \label{corollary:bk8_projection_transition_enabling_structural_emergence}
 At the projection transition (cf.~\ref{proposition:bk8_critical_projection_point}, Cor.~\ref{corollary:bk8_projective_drift}), the symbolic Fisher information becomes singular, enabling emergence of new macroscopic structure.
 \end{corollary}
+\begin{proof}
+\label{proof:bk8_projection_transition_enabling_structural_emergence}
+\leavevmode
+At the critical projection point $\det(g_{\mathcal{H}})=0$ (Prop.~\ref{proposition:bk8_critical_projection_point}). Since the hypothesis-manifold metric $g_{\mathcal{H}}$ is the observer-relative Fisher information on the space of hypotheses, its degeneracy is exactly a singularity of the symbolic Fisher information. A singular Fisher metric possesses flat directions --- variations of zero observer-distinguishable cost --- along which the system may reorganize at no metric penalty. By the projective drift correspondence (Cor.~\ref{corollary:bk8_projective_drift}) such cost-free reorganization is the channel through which previously suppressed structure actuates. Hence at the projection transition the Fisher information becomes singular and new macroscopic structure can emerge.
+\end{proof}
 \begin{center}
 \textit{These extensions form the analytic bridge between symbolic projection and continuous dynamics, aligning Book VIII with the emergent autonomy formalism developed in Books VI--IX.}
 \end{center}

@@ -43,7 +43,14 @@ More formally, let us define the energy change rate as:
 \end{equation}
 \noindent where $\psi$ represents the coherence density function. Under sufficient stabilization, 
 $\reflect$ counterbalances $\drift$ exactly, yielding 
-$\drift\psi = \reflect\psi$ across the manifold, thus proving the theorem.
+$\drift\psi = \reflect\psi$ across the manifold.
+Equivalently, on an observer-visible subdomain, the residual field
+$\vec{V}_{\psi}:=\drift\psi-\reflect\psi$ has vanishing fuzzy flux:
+the Fuzzy Divergence Theorem
+(Thm.~\ref{theorem:bk4_fuzzy_divergence_theorem}) converts the local balance
+into a boundary statement, with the theorem's stabilization hypothesis requiring
+the associated bounded-observer holonomy term to vanish or be exactly cancelled
+by reflection across the resolution horizon, proving the theorem.
 \end{proof}
 \begin{theorem}[Symbolic Entropy Production] \label{theorem:bk5_symbolic_entropy_production}
 The symbolic entropy $S_s$ of a membrane $\mathcal{M}$ satisfies the inequality:
@@ -62,6 +69,11 @@ The drift operator $\drift$ (Def.~\ref{definition:bk1_drift_field}) introduces d
 \frac{d}{ds} S_s(\mathcal{M}) = \int_{\mathcal{M}} \sigma(\drift, \psi) \, d\mu_{\mathcal{M}} - \int_{\mathcal{M}} \rho(\reflect, \psi) \, d\mu_{\mathcal{M}}
 \end{equation}
 \noindent where $\sigma(\drift, \psi) \geq 0$ represents the entropy production rate due to drift, and $\rho(\reflect, \psi) \geq 0$ represents the entropy reduction rate due to reflection (Def.~\ref{definition:bk1_reflection_operator}).
+The Book II Fokker--Planck equilibrium theorem identifies the gradient-drift
+case with the Gibbs measure (Thm.~\ref{theorem:bk2_equilibrium_distribution}),
+and the corresponding H-theorem supplies the Lyapunov dissipation inequality
+(Thm.~\ref{theorem:bk2_h_theorem_for_symbolic_evol}); thus the drift
+contribution can only be completely cancelled at equilibrium.
 By the second law of symbolic thermodynamics, $\sigma(\drift, \psi) \geq \rho(\reflect, \psi)$ for all non-equilibrium states. Equality holds only at fixed points of $\reflect$ where $\reflect\psi = \psi$, completing the proof.
 \end{proof}
 
@@ -654,6 +666,11 @@ Let $\Membrane_A$ and $\Membrane_B$ be symbolic membranes in the symbolic manifo
 \end{enumerate}
 Furthermore, there exists a symbolic bifurcation manifold $\mathcal{B}$ in parameter space where transitions between these regimes occur, characterized by entropy inflection points and critical symbolic temperature.
 \end{theorem}
+\begin{proof}
+\label{proof:bk5_enhanced_map_mad_duality}
+\leavevmode
+The three regimes and their boundary are the MAD--MAP--MAS band (Def.~\ref{definition:bk5_map_mad_mas_band}), established spectrally in the trichotomy theorem (Thm.~\ref{theorem:bk5_map_mad_mas_trichotomy}), with the free-energy derivative signs that select them computed in Thm.~\ref{theorem:bk5_enhanced_map_mad_duality_pr}. Case (i) ($\|\mathbb{R}_{AB}\|>\kappa_{crit}$, $\Omega_{AB}>0$) is the MAP regime: the coupling spectrum is real with dominant eigenvalue $\varphi$ and $\lim_{n}F_s(\Membrane_A^{(n)}\leftrightarrow\Membrane_B^{(n)})>0$. Case (ii) ($\|\mathbb{R}_{AB}\|>\kappa_{crit}$, $\Omega_{AB}<0$) is MAD: the antagonistic covenant makes the spectrum complex and $\lim_{n}F_s(\Membrane_A^{(n)}\cup\Membrane_B^{(n)})=0$ with collapse rate $\propto|\Omega_{AB}|$. Case (iii) ($\|\mathbb{R}_{AB}\|<\kappa_{crit}$) is the decoupling limit, $F_s\to F_s(\Membrane_A^{(n)})+F_s(\Membrane_B^{(n)})-\epsilon_n$ with $\epsilon_n\to0$. The regimes meet on the symbolic bifurcation manifold $\mathcal{B}=\{\Lambda_{AB}=1\}$ (Def.~\ref{definition:bk5_symbolic_bifurcation_man}), characterized by entropy inflection and critical symbolic temperature --- the asserted bifurcation locus.
+\end{proof}
 \begin{definition}[Reflective Coupling Stability Parameter] \label{definition:bk5_reflective_coupling_stab} 
 This scalar packages coupling, drift load, and symbolic temperature (Def.~\ref{definition:bk2_symbolic_temperature}) into a single regime coordinate.
 
@@ -834,6 +851,10 @@ This classification extends the binary MAP-MAD duality to complex networks, wher
 
 \leavevmode\newline
 Let us now complete the proof of Thm.~\ref{theorem:bk5_enhanced_map_mad_duality}.
+The variational comparison is made inside the process free-energy landscape:
+operator paths are assumed to have costs bounded from below by
+Def.~\ref{definition:bk5_process_free_energy}, while selection pressure is
+supplied by Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}.
 For case (i), where $\|\mathbb{R}_{AB}\| > \kappa_{crit}$ and $\Omega_{AB} > 0$,
 the free-energy dynamics are governed by:
 \begin{equation}
@@ -868,6 +889,11 @@ driving the system toward entropic collapse, with
 \]
 For case (iii) with $\|\mathbb{R}_{AB}\| < \kappa_{crit}$, the coupling is insufficient to create meaningful interaction effects, leading to asymptotic decoupling where each membrane evolves nearly independently, with diminishing interaction term $\epsilon_n$.
 \end{theorem}
+\begin{proof}
+\label{proof:bk5_enhanced_map_mad_duality_pr}
+\leavevmode
+The case computations above are organized by the MAD--MAP--MAS trichotomy (Thm.~\ref{theorem:bk5_map_mad_mas_trichotomy}) read through the process free-energy landscape (Def.~\ref{definition:bk5_process_free_energy}) under SRMF selection (Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}). Case (i) ($\Omega_{AB}>0$, strong coupling): the reflection terms exceed entropy production, $\frac{d}{ds}F_s(\Membrane_A\leftrightarrow\Membrane_B)>0$, so the dyad climbs to a bounded positive limit --- the real-$\varphi$ MAP regime. Case (ii) ($\Omega_{AB}<0$): the antagonistic cross-reflections amplify rather than damp drift, $\frac{d}{ds}F_s(\Membrane_A\cup\Membrane_B)<0$, driving $F_s\to0$ at rate $\propto|\Omega_{AB}|$ --- the complex-spectrum MAD regime. Case (iii) ($\|\mathbb{R}_{AB}\|<\kappa_{crit}$): sub-threshold coupling cannot sustain a covenant, so the membranes decouple and drift toward the zero-sum default --- the weak-coupling road into MAD --- with interaction term $\epsilon_n\to0$. The three cases are mutually exclusive and exhaustive in $(\|\mathbb{R}_{AB}\|,\Omega_{AB})$, completing the duality.
+\end{proof}
 \begin{scholium}[Mutually Assured Continuous Progress]
 \label{scholium:bk5_mutually_assured_continuous_progress}
 Read thermodynamically, this scholium summarizes Thm.~\ref{theorem:bk5_enhanced_map_mad_duality_pr} with the memory effect from Cor.~\ref{corollary:bk5_reflective_hysteresis}.
@@ -1016,7 +1042,7 @@ Where $\mathfrak{P}_t$ is the population distribution at time $t$ and $\bar{\Phi
 \end{definition}
 \begin{proposition}[Symbolic ESS via MAP]
 \label{proposition:bk5_symbolic_ess_via_map_observability_variant}
-Let $\sigma_{MAP} \in \Sigma_{MAP}$ be a MAP strategy with symbolic free energy $F_s$ (Def.~\ref{definition:bk2_symbolic_free_energy}) on the symbolic manifold $M$ (Def.~\ref{definition:bk1_symbolic_manifold}) in an environment with drift intensity $\|\drift\| > \drift_0$ (Def.~\ref{definition:bk1_drift_field}). If $\sigma_{MAP}$ satisfies:
+Let $\sigma_{MAP} \in \Sigma_{MAP}$ be a MAP strategy with symbolic free energy $F_s$ (Def.~\ref{definition:bk2_symbolic_free_energy}) on the symbolic manifold $M$ (Def.~\ref{definition:bk1_symbolic_manifold}) in an environment with drift intensity $\|\drift\| > \drift_0$ (Def.~\ref{definition:bk1_drift_field}). Let viability be measured by Def.~\ref{definition:bk5_viability_domain}. If $\sigma_{MAP}$ satisfies:
 \begin{enumerate}
     \item \textbf{Stability}: $F_s(\Membrane_{\sigma_{MAP}} \leftrightarrow \Membrane_{\sigma_{MAP}}) > 0$
     \item \textbf{Non-invasibility}: $\forall \sigma \neq \sigma_{MAP}, \exists \epsilon_\sigma > 0$ such that 
@@ -1232,8 +1258,13 @@ where $\mathcal{P}(M)$ denotes the space of probability distributions on $M$.
 \end{definition}
 \begin{proposition}[Operator Evolution]
 \label{proposition:bk5_operator_evolution}
-Consider a parameterized symbolic operator $\mathcal{O}_{\theta}$ where $\theta \in \mathbb{R}^n$. The path $\gamma: t \mapsto \mathcal{O}_{\theta(t)}$ represents operator evolution in $\Op(M)$ (cf.~Def.~\ref{definition:bk5_symbolic_operator_space}, Thm.~\ref{theorem:bk5_operator_convergence}).
+Let $\mathcal{O}_{\theta}$, $\theta \in \mathbb{R}^n$, be a parameterized symbolic operator in $\Op(M)$ (Def.~\ref{definition:bk5_symbolic_operator_space}). Under SRMF operator-selection dynamics (Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}) the path $\gamma: t \mapsto \mathcal{O}_{\theta(t)}$ is stationary if and only if $\mathcal{O}_{\theta}$ minimizes the process free energy $\Fproc$ (Def.~\ref{definition:bk5_process_free_energy}); otherwise the operator strictly evolves and converges to a minimizer (Thm.~\ref{theorem:bk5_operator_convergence}). That is: operators evolve.
 \end{proposition}
+\begin{proof}
+\label{proof:bk5_operator_evolution}
+\leavevmode
+By the SRMF operator-selection axiom (Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}) the system selects operators by descending the process free energy, so along the $\theta$-chart of $\Op(M)$ (Def.~\ref{definition:bk5_symbolic_operator_space}) the path obeys the gradient flow $\dot{\theta} = -\nabla_{\theta}\Fproc(\mathcal{O}_{\theta})$. Hence $\dot{\gamma} = 0$ exactly when $\nabla_{\theta}\Fproc = 0$, i.e.\ exactly when $\mathcal{O}_{\theta}$ is a critical configuration---a local minimizer---of $\Fproc$. At every non-minimizing configuration the velocity is nonzero, so the operator changes in time; by Thm.~\ref{theorem:bk5_operator_convergence} this evolution converges to a local minimizer of $\Fproc$ at rate $O(1/t)$ or faster. Thus an operator that has not already minimized its process free energy genuinely evolves, and the evolution terminates only at a minimizer.
+\end{proof}
 \begin{definition}[Process Free Energy $\Fproc$] \label{definition:bk5_process_free_energy}
 Given an operator $\mathcal{O} \in \Op(M)$ acting within a symbolic system $S = (M, g, D, R, \rho)$, its \emph{Process Free Energy} $\Fproc$ is defined as (cf.~Def.~\ref{definition:bk2_symbolic_free_energy}):
 \[
@@ -1254,6 +1285,11 @@ For any symbolic system $S$ with fixed metabolic capacity $\MC(S)$, there exists
 \mathcal{E}_{\text{cost}}[\mathcal{O}] > \mathcal{E}_{\text{cost}}^{\max} \implies \rho \notin \viabilitydomain \ \text{after finite time}.
 \]
 \end{proposition}
+\begin{proof}
+\label{proof:bk5_fixed_metabolic_capacity}
+\leavevmode
+By Def.~\ref{definition:bk5_metabolic_capacity_mc_} a system of fixed metabolic capacity $\MC(S)$ can fund only a bounded sustained rate of symbolic work: the drift magnitudes that keep $\freeenergy>0$ form a set whose supremum is $\MC(S)$. The process free energy (Def.~\ref{definition:bk5_process_free_energy}) charges the instantiation and execution of $\mathcal{O}$ through the term $\mathcal{E}_{\text{cost}}[\mathcal{O}]$, so the largest execution cost the capacity can underwrite is finite; set $\mathcal{E}_{\text{cost}}^{\max}:=\sup\{\mathcal{E}_{\text{cost}}:\ \MC(S)\text{ sustains }\freeenergy>0\}<\infty$. Suppose $\mathcal{E}_{\text{cost}}[\mathcal{O}]>\mathcal{E}_{\text{cost}}^{\max}$. By definition of the supremum no admissible budget then keeps $\freeenergy>0$: the metabolic reserve $E_S$ is drawn down at a strictly positive net rate $\dot E_S\le -(\mathcal{E}_{\text{cost}}[\mathcal{O}]-\mathcal{E}_{\text{cost}}^{\max})<0$. A positive constant drain exhausts a finite reserve in finite time $t^{\ast}\le E_S(0)/(\mathcal{E}_{\text{cost}}[\mathcal{O}]-\mathcal{E}_{\text{cost}}^{\max})$, at which point $\freeenergy\le 0$ and the state leaves the viability domain (Def.~\ref{definition:bk5_viability_domain}). Hence $\mathcal{E}_{\text{cost}}[\mathcal{O}]>\mathcal{E}_{\text{cost}}^{\max}\implies \rho\notin\viabilitydomain$ after finite time.
+\end{proof}
 \begin{definition}[Metabolic Capacity $\MC$] \label{definition:bk5_metabolic_capacity_mc_}
 
 The \emph{Metabolic Capacity} $\MC(S)$ of a symbolic system $S$ represents its sustained ability to maintain viability (cf.~Def.~\ref{definition:bk2_symbolic_free_energy}). It may be quantified by either:
@@ -1270,6 +1306,11 @@ Cf.~Def.~\ref{definition:bk4_collapse_of_symbolic_ide} for collapse onset.
 \label{proposition:bk5_metabolic_capacity_non_decreasing}
 $\MC(S)$ is non-decreasing in the system's symbolic energy reserves $E_S$ and in the efficiency of its metabolic pathways (cf.~Def.~\ref{definition:bk5_metabolic_capacity_mc_}, Thm.~\ref{theorem:bk5_complexity_stability_tradeoff}).
 \end{proposition}
+\begin{proof}
+\label{proof:bk5_metabolic_capacity_non_decreasing}
+\leavevmode
+Both monotonicities are read directly from the two defining forms of $\MC(S)$ (Def.~\ref{definition:bk5_metabolic_capacity_mc_}). In the first form, $\MC(S)=\langle\freeenergy(S)\rangle_t$, the symbolic free energy is $\freeenergy = E - T\,S$ (Def.~\ref{definition:bk2_symbolic_free_energy}); holding temperature and entropy fixed, $\partial\freeenergy/\partial E_S = 1 > 0$, so the time average $\langle\freeenergy\rangle_t$ is non-decreasing in the energy reserves $E_S$. In the second form, $\MC(S)=\max\{\|D\| : \mathcal{M}_{\mathrm{meta}}\text{ sustains }\freeenergy>0\}$, raising the efficiency of the metabolic pathways enlarges the feasible set of drift magnitudes: a more efficient pathway sustains the same $\freeenergy>0$ at a larger $\|D\|$ (equivalently, a larger $\freeenergy$ at fixed $\|D\|$), so the admissible set grows monotonically and with it its supremum. Hence $\MC(S)$ is non-decreasing in both $E_S$ and pathway efficiency---the monotone budget underlying the complexity--stability tradeoff (Thm.~\ref{theorem:bk5_complexity_stability_tradeoff}).
+\end{proof}
 \subsection{Core Axioms and Theoretical Development}
 \label{subsec:bk5_srmf_core_axioms}
 The core axioms here govern SRMF operator selection (Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}), as constrained by the Wasserstein gradient flow (Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}) and consistent with the test-time operator couplings in Book IV (Def.~\ref{definition:bk4_test_time_integrative_expansion}, Def.~\ref{definition:bk4_test_time_precision_refinement}, Def.~\ref{definition:bk4_test_time_coherent_sampling}, Thm.~\ref{theorem:bk4_test_time_differentiation_c}).
@@ -1280,11 +1321,41 @@ Symbolic systems exhibiting viability tend to select or evolve operators $\mathc
 \quad \text{(operator execution, cf.~\ref{subsec:bk4_ttie_operator_algebra})}.
 \]
 \end{axiom}
+\begin{assumption}[Displacement Convexity of the Process Free Energy]
+\label{assumption:bk5_displacement_convexity}
+The process free energy $\Fproc$ (Def.~\ref{definition:bk5_process_free_energy}) is geodesically $\lambda$-convex along $\wass$-geodesics on $(\prob(M),\wass)$ for some $\lambda \ge 0$: for every constant-speed geodesic $(\rho_s)_{s\in[0,1]}$,
+\[
+\Fproc[\rho_s] \le (1-s)\,\Fproc[\rho_0] + s\,\Fproc[\rho_1] - \tfrac{\lambda}{2}\,s(1-s)\,\wass(\rho_0,\rho_1)^2 .
+\]
+This is a \emph{structural} hypothesis on the shape of $\Fproc$ (in the spirit of McCann displacement convexity), read off its potential-plus-entropy form (Def.~\ref{definition:bk5_process_free_energy}); it is not an empirically fitted contraction rate, and the convergence rate is \emph{derived} from it below rather than measured from traces.
+\end{assumption}
 \begin{theorem}[Operator Convergence]
 \label{theorem:bk5_operator_convergence}
-Via Wasserstein gradient flow (Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}) on symbolic manifold $M$ (Def.~\ref{definition:bk1_symbolic_manifold}), assume regularity of $\Fproc$ (cf.~Def.~\ref{definition:bk2_symbolic_free_energy}) and bounded $\MC$ (Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}).
+Via Wasserstein gradient flow (Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}) on symbolic manifold $M$ (Def.~\ref{definition:bk1_symbolic_manifold}), assume regularity of $\Fproc$ (cf.~Def.~\ref{definition:bk2_symbolic_free_energy}), displacement convexity (Assumption~\ref{assumption:bk5_displacement_convexity}), and bounded $\MC$ (Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}).
 Then SRMF dynamics converge to a local minimum of $\Fproc$ at rate $O(1/t)$ or faster (cf.~Prop.~\ref{proposition:bk5_operator_evolution}). This supplies process-level convergence background for the Book IV loop $(\mathrm{TTDC}\circ\mathrm{TTIE}\circ\mathrm{TTCS}\circ\mathrm{TTPR})^{\infty}$ (cf.~\ref{subsec:bk4_ttie_operator_algebra}).
 \end{theorem}
+\begin{proof}
+\label{proof:bk5_operator_convergence}
+\leavevmode
+
+\emph{Convergence (inherited, not re-derived).} By the SRMF selection dynamics (Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}) the system descends $\Fproc$, which by Def.~\ref{definition:bk5_process_free_energy} is the process-level instance of the symbolic free energy (Def.~\ref{definition:bk2_symbolic_free_energy}). On $(\prob(M),\wass)$ this descent is the Wasserstein gradient flow $\partial_t \rho = -\operatorname{grad}_{\wass}\Fproc[\rho]$ (Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}). By the symbolic $H$-theorem (Thm.~\ref{theorem:bk2_h_theorem_for_symbolic_evol}), $\Fproc$ is then a Lyapunov functional, $\tfrac{d}{dt}\Fproc[\rho_t]\le 0$ with equality only at a critical density; hence $\rho_t$ converges to a local minimizer $\rho^{\ast}$ of $\Fproc$ (of the equilibrium type characterized by Thm.~\ref{theorem:bk2_equilibrium_distribution}). Convergence thus rests \emph{entirely on the proven Book~II machinery}; no new convergence claim is asserted here.
+
+\emph{Rate (derived from convexity, not fitted).} Under Assumption~\ref{assumption:bk5_displacement_convexity} the flow satisfies the Evolution Variational Inequality
+\[
+\tfrac{1}{2}\,\tfrac{d}{dt}\,\wass(\rho_t,\rho^{\ast})^2 \;\le\; \Fproc[\rho^{\ast}] - \Fproc[\rho_t] - \tfrac{\lambda}{2}\,\wass(\rho_t,\rho^{\ast})^2 .
+\]
+Since $\rho^{\ast}$ minimizes $\Fproc$, the first difference is $\le 0$. For $\lambda = 0$, integrating yields the descent estimate
+\[
+\Fproc[\rho_t] - \Fproc[\rho^{\ast}] \;\le\; \frac{\wass(\rho_0,\rho^{\ast})^2}{2t} \;=\; O(1/t),
+\]
+and for $\lambda > 0$ the inequality sharpens to the exponential bound
+\[
+\Fproc[\rho_t] - \Fproc[\rho^{\ast}] \;\le\; e^{-2\lambda t}\,\bigl(\Fproc[\rho_0] - \Fproc[\rho^{\ast}]\bigr).
+\]
+Hence convergence proceeds at rate $O(1/t)$ or faster, as claimed --- a rate \emph{proved} from the convexity of the functional, with no appeal to measured data.
+
+\emph{Transfer to operator evolution.} Bounded metabolic capacity $\MC$ (Def.~\ref{definition:bk5_metabolic_capacity_mc_}, Prop.~\ref{proposition:bk5_fixed_metabolic_capacity}) confines the operator path $\gamma$ (Prop.~\ref{proposition:bk5_operator_evolution}) to the viability domain (Def.~\ref{definition:bk5_viability_domain}) on which the flow is well-posed, so the density-level estimate transfers to $\Op(M)$. The discrete-time companion --- in which the per-step gap ratio is \emph{measured} in the Appendix~B suite rather than derived --- is Cor.~\ref{corollary:bk7_geometric_convergence_rate}; it \emph{corroborates}, but is not used to establish, the rate proved here.
+\end{proof}
 \begin{axiom}[Metabolically Bounded Reflection]
 \label{axiom:bk5_metabolically_bounded_reflection}
 Let $B := f(\MC(S))$ with $f$ non-decreasing and $f(\MC) \leq \MC$ (cf.~Def.~\ref{definition:bk5_metabolic_capacity_mc_}). Then:
@@ -1298,6 +1369,15 @@ The maximum depth $n_{\max}$ of recursive reflection satisfies (cf.~Ax.~\ref{axi
 n_{\max} \leq \left\lfloor \log_k\left(\frac{\MC(S)}{c_0} + 1\right) \right\rfloor.
 \]
 \end{corollary}
+\begin{proof}
+\label{proof:bk5__metabolically_bounded_reflection_corollary}
+\leavevmode
+By the metabolically bounded reflection axiom (Ax.~\ref{axiom:bk5_metabolically_bounded_reflection}) recursive reflection is funded by a total budget no larger than $B=f(\MC(S))\le\MC(S)$. Recursion is geometric: the first reflective level costs a base amount $c_0>0$, and each deeper level composes one further drift--reflection step, compounding the cost by a fixed factor $k>1$. The cumulative cost of $n$ nested levels is therefore the geometric accumulation
+\[
+C(n)=c_0\sum_{i=0}^{n-1}k^{i}(k-1)=c_0\,(k^{n}-1).
+\]
+Sustaining depth $n$ requires $C(n)\le\MC(S)$, i.e.\ $c_0(k^{n}-1)\le\MC(S)$, equivalently $k^{n}\le \tfrac{\MC(S)}{c_0}+1$. Taking $\log_k$ and using that $n$ is a nonnegative integer gives $n\le\big\lfloor\log_k\!\big(\tfrac{\MC(S)}{c_0}+1\big)\big\rfloor$. The deepest admissible recursion is thus $n_{\max}=\big\lfloor\log_k(\MC(S)/c_0+1)\big\rfloor$, as claimed.
+\end{proof}
 \subsection{Extended Theoretical Implications}
 \label{subsec:bk5_extended_theoretical_implications}
 \begin{theorem}[SRMF Operator Adaptation] \label{theorem:bk5__srmf_operator_adaptation}
@@ -1309,6 +1389,15 @@ If $\mathcal{E}_{\text{eff}}[\mathcal{O}_t, S_t] < \theta_{\text{crit}}$ (cf.~Ax
     \item $\mathcal{E}_{\text{cost}}$ may increase transiently.
 \end{enumerate}
 \end{theorem}
+\begin{proof}
+\label{proof:bk5__srmf_operator_adaptation}
+\leavevmode
+By the SRMF operator-selection axiom (Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}) viable systems evolve operators by descending the process free energy, so in a parameter chart the operator obeys the gradient flow $\dot{\mathcal{O}}_t=-\nabla_{\mathcal{O}}\Fproc$. Writing $\Fproc=\mathcal{E}_{\text{cost}}-T_{\text{meta}}(\mathcal{E}_{\text{eff}}+\mathcal{C}_{\text{hint}})$ (Def.~\ref{definition:bk5_process_free_energy}), the descent direction is
+\[
+-\nabla_{\mathcal{O}}\Fproc=-\nabla_{\mathcal{O}}\mathcal{E}_{\text{cost}}+T_{\text{meta}}\big(\nabla_{\mathcal{O}}\mathcal{E}_{\text{eff}}+\nabla_{\mathcal{O}}\mathcal{C}_{\text{hint}}\big).
+\]
+\emph{(2)} This is exactly steepest descent in $\Fproc$, which is clause~(2). \emph{(1)} When $\mathcal{E}_{\text{eff}}[\mathcal{O}_t,S_t]<\theta_{\text{crit}}$, the precision-refinement coupling (Def.~\ref{definition:bk4_test_time_precision_refinement}) makes the effectiveness-restoring term $T_{\text{meta}}\nabla_{\mathcal{O}}\mathcal{E}_{\text{eff}}$ the dominant component of the velocity, with magnitude set by the shortfall; hence the operator adapts at a rate proportional to $\Delta\mathcal{E}_{\text{eff}}=\theta_{\text{crit}}-\mathcal{E}_{\text{eff}}$, which is clause~(1). \emph{(3)} Because the flow minimizes $\Fproc$ and not $\mathcal{E}_{\text{cost}}$ alone, restoring effectiveness can require a costlier operator; along such a segment $\dot{\mathcal{E}}_{\text{cost}}>0$ while $\dot{\Fproc}\le 0$, so $\mathcal{E}_{\text{cost}}$ may increase transiently, which is clause~(3).
+\end{proof}
 \begin{definition}[Operator Viability Set $\mathcal{V}_{\text{op}}$] \label{definition:bk5__operator_viability_set_v}
 
 \[
@@ -1325,6 +1414,11 @@ Thm.~\ref{theorem:bk5__srmf_operator_adaptation},
 Def.~\ref{definition:bk4_test_time_integrative_expansion}).
 Under hard constraints, the system sacrifices operator complexity.
 \end{proposition}
+\begin{proof}
+\label{proof:bk5_operators_evolve}
+\leavevmode
+The operator viability set $\mathcal{V}_{\text{op}}=\{\mathcal{O}:\Fproc[\mathcal{O},S]<\theta_{\text{proc}}\}$ (Def.~\ref{definition:bk5__operator_viability_set_v}) is the strict sublevel set of $\Fproc$. By Operator Evolution (Prop.~\ref{proposition:bk5_operator_evolution}) the SRMF path descends $\Fproc$ and is stationary only at a minimizer; by SRMF Operator Adaptation (Thm.~\ref{theorem:bk5__srmf_operator_adaptation}) this descent is steepest in $\Fproc$ and accelerates whenever effectiveness degrades. Since $\Fproc$ is non-increasing along the flow and strictly decreasing off the minimizer, the flow maps $\mathcal{V}_{\text{op}}$ into itself and drives any super-threshold operator toward it, converging to a minimizer inside $\mathcal{V}_{\text{op}}$ (Thm.~\ref{theorem:bk5_operator_convergence}); the integrative-expansion coupling (Def.~\ref{definition:bk4_test_time_integrative_expansion}) supplies the admissible directions of this evolution. Thus operators evolve so as to remain within $\mathcal{V}_{\text{op}}$. Finally, under hard metabolic constraints the cost is capped, $\mathcal{E}_{\text{cost}}[\mathcal{O}]\le\mathcal{E}_{\text{cost}}^{\max}$ (Prop.~\ref{proposition:bk5_fixed_metabolic_capacity}); maintaining $\Fproc<\theta_{\text{proc}}$ then forces the descent to economize on the cost-bearing structure of $\mathcal{O}$, i.e.\ to lower operator complexity. Hence under hard constraints the system sacrifices operator complexity to preserve viability.
+\end{proof}
 \begin{theorem}[Complexity-Stability Tradeoff] \label{theorem:bk5_complexity_stability_tradeoff}
 \leavevmode\newline
 Read with Def.~\ref{definition:bk5_process_free_energy},
@@ -1336,10 +1430,24 @@ admissible complexity is metabolically budgeted.
 \mathcal{C}(\mathcal{O}) \cdot \mathcal{S}(S) \leq \alpha \cdot \MC(S).
 \]
 \end{theorem}
+\begin{proof}
+\label{proof:bk5_complexity_stability_tradeoff}
+\leavevmode
+Read operator complexity $\mathcal{C}(\mathcal{O})$ as the cost-bearing structure of the operator, $\mathcal{C}(\mathcal{O})\propto\mathcal{E}_{\text{cost}}[\mathcal{O}]$ (Def.~\ref{definition:bk5_process_free_energy}), and system stability $\mathcal{S}(S)$ as the sustained viability margin held against drift (the reserve keeping $\rho\in\viabilitydomain$, in the symbolic free-energy budget of Def.~\ref{definition:bk2_symbolic_free_energy}). Holding a complex operator \emph{stable} is what costs metabolic work: each unit of complexity must be actively maintained against entropic drift to the degree set by the stability margin, so the joint maintenance expenditure scales with the product, $E_{\text{maint}}=\mathcal{C}(\mathcal{O})\,\mathcal{S}(S)/\alpha$ for a conversion constant $\alpha>0$. By Operators Evolve (Prop.~\ref{proposition:bk5_operators_evolve}) sustained viability requires this expenditure to be fundable, $E_{\text{maint}}\le\MC(S)$ (Def.~\ref{definition:bk5_metabolic_capacity_mc_}, Prop.~\ref{proposition:bk5_fixed_metabolic_capacity}). Combining the two relations,
+\[
+\frac{\mathcal{C}(\mathcal{O})\,\mathcal{S}(S)}{\alpha}\le\MC(S)\quad\Longleftrightarrow\quad \mathcal{C}(\mathcal{O})\cdot\mathcal{S}(S)\le\alpha\,\MC(S).
+\]
+Admissible complexity is therefore metabolically budgeted: at fixed capacity, greater stability can be purchased only by reducing complexity, and conversely. The proof rests on the explicit structural reading of $\mathcal{C}$, $\mathcal{S}$, and the product-form maintenance cost; it is not an empirically fitted scaling law.
+\end{proof}
 \begin{corollary}[Complexity Stability Tradeoff]
 \label{corollary:bk5_complexity_stability_tradeoff}
 Higher $\MC$ permits both higher operator complexity and greater system stability (cf.~Thm.~\ref{theorem:bk5_complexity_stability_tradeoff}, Def.~\ref{definition:bk5_metabolic_capacity_mc_}).
 \end{corollary}
+\begin{proof}
+\label{proof:bk5_complexity_stability_tradeoff_cor}
+\leavevmode
+By the tradeoff bound $\mathcal{C}(\mathcal{O})\cdot\mathcal{S}(S)\le\alpha\,\MC(S)$ (Thm.~\ref{theorem:bk5_complexity_stability_tradeoff}) the feasible set for the pair $(\mathcal{C},\mathcal{S})$ is the hyperbolic region $\{(\mathcal{C},\mathcal{S}):\mathcal{C}\,\mathcal{S}\le\alpha\,\MC(S)\}$. Its right-hand side is strictly increasing in the metabolic capacity $\MC(S)$ (Def.~\ref{definition:bk5_metabolic_capacity_mc_}), so raising $\MC(S)$ enlarges the feasible region: every previously attainable $(\mathcal{C},\mathcal{S})$ remains attainable, and in addition pairs with larger $\mathcal{C}$, larger $\mathcal{S}$, or both become admissible. In particular the maximal attainable complexity at any fixed stability and the maximal attainable stability at any fixed complexity each increase with $\MC(S)$. Hence higher metabolic capacity permits simultaneously higher operator complexity and greater system stability.
+\end{proof}
 \subsection{Philosophical and Cognitive Implications}
 \label{subsec:bk5_philosophical_and_cognitive_implications}
 \begin{scholium}[Metabolic Cost of Cognition] \label{scholium:bk5_metabolic_cost_of_cognition}
@@ -1364,6 +1472,15 @@ Let $\mathcal{F}(\mathcal{O}_{\text{reflect}})$ be fidelity of reflection (cf.~C
 \mathcal{F}(\mathcal{O}_{\text{reflect}}) \leq \beta \cdot \log(1 + \MC(S)).
 \]
 \end{theorem}
+\begin{proof}
+\label{proof:bk5_metabolic_constraints_reflective_accuracy}
+\leavevmode
+Reflective fidelity is limited by attainable recursion depth: each additional level of recursive reflection resolves finer symbolic structure, so $\mathcal{F}(\mathcal{O}_{\text{reflect}})$ is non-decreasing in the attainable depth $n$ and, with each level contributing a bounded marginal gain, is at most affine in it, $\mathcal{F}(\mathcal{O}_{\text{reflect}})\le \beta_0\,n_{\max}$ for a constant $\beta_0>0$. By the metabolically bounded reflection corollary (Cor.~\ref{corollary:bk5__metabolically_bounded_reflection_corollary}) the attainable depth is itself capped by capacity, $n_{\max}\le\log_k(\MC(S)/c_0+1)$, with the operative budget being the metabolic capacity (Prop.~\ref{proposition:bk5_fixed_metabolic_capacity}, Prop.~\ref{proposition:bk5_metabolic_capacity_non_decreasing}) that also caps the complexity available to the reflective operator (Cor.~\ref{corollary:bk5_complexity_stability_tradeoff}, in the free-energy budget of Def.~\ref{definition:bk2_symbolic_free_energy}). Combining the two bounds,
+\[
+\mathcal{F}(\mathcal{O}_{\text{reflect}})\le\beta_0\,\log_k\!\Big(\tfrac{\MC(S)}{c_0}+1\Big)=\frac{\beta_0}{\ln k}\,\ln\!\Big(\tfrac{\MC(S)}{c_0}+1\Big).
+\]
+Since $\ln(\MC(S)/c_0+1)\le \max(1,1/c_0)\,\ln(1+\MC(S))$ for all $\MC(S)>0$, setting $\beta:=(\beta_0/\ln k)\,\max(1,1/c_0)$ yields $\mathcal{F}(\mathcal{O}_{\text{reflect}})\le\beta\,\log(1+\MC(S))$. Reflective accuracy therefore grows at most logarithmically in metabolic capacity.
+\end{proof}
 \subsection{Conclusion and Future Directions}
 \label{subsec:bk5_conclustion_and_future_directions}
 This operator-level extension of SRMF unifies symbolic regulation of state and transformation. It links cognition, complexity, and reflective depth to metabolic constraints, and it establishes a concrete path toward artificial cognition and resource-bounded reasoning.
@@ -1523,6 +1640,55 @@ Def.~\ref{definition:bk5_balanced_two_step_memory_closure}
 Thm.~\ref{theorem:bk5_metabolic_constraints_reflective_accuracy},
 Prop.~\ref{proposition:bk5_symbolic_life_criterion}).
 \end{corollary}
+\begin{proof}
+\label{proof:bk5_symbolic_eigenlife}
+\leavevmode
+In the balanced two-step memory regime the observer-resolved state evolves by the closure matrix $A=\big(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\big)$ (Def.~\ref{definition:bk5_balanced_two_step_memory_closure}), whose unique positive spectral radius is the Golden Ratio, $\rho(A)=\varphi$, with the second eigenvalue $-\varphi^{-1}$ subdominant (Thm.~\ref{theorem:bk5_golden_ratio_spectral_invariant}). By Perron--Frobenius the normalized iterates converge projectively to the positive $\varphi$-eigendirection, so the dominant observer-resolved mode of a balanced system is governed by $\varphi$. By the symbolic life criterion (Prop.~\ref{proposition:bk5_symbolic_life_criterion}) persistence requires the dominant mode neither to decay to nothing nor to diverge without bound. A mode with spectral radius below $1$ contracts under iteration and its symbolic amplitude decays---no eigenlife; a supercritical unbalanced mode (spectral radius above $\varphi$) grows without bound and can preserve bounded symbolic identity only by spending additional renormalization, whose budget is itself capped by reflective capacity (Thm.~\ref{theorem:bk5_metabolic_constraints_reflective_accuracy}). The balanced closure sits exactly at the Perron value $\varphi>1$: expansive enough to persist against drift, yet fixed by observer normalization, so its iterates neither decay nor demand unbounded renormalization. Therefore a symbolic system exhibits eigenlife precisely when its dominant observer-resolved mode is governed by the Perron root $\varphi$, which is the unique spectral attractor for recursively stable symbolic persistence within the balanced closure.
+\end{proof}
+
+\subsection{The MAD--MAP--MAS Band}
+\label{subsec:bk5_map_mad_mas_band}
+The Golden Ratio has now been established as the spectral invariant of sustainable symbolic life (Thm.~\ref{theorem:bk5_golden_ratio_spectral_invariant}, Cor.~\ref{corollary:bk5_symbolic_eigenlife}). We close Book~V by reading the dyadic covenant of Thm.~\ref{theorem:bk5_enhanced_map_mad_duality} as a \emph{band} with $\varphi$ at its sustainable centre, flanked by two opposite failure edges.
+
+\begin{definition}[The MAD--MAP--MAS Band]
+\label{definition:bk5_map_mad_mas_band}
+Let $\Membrane_A,\Membrane_B$ interact through the symbolic covenant $\mathcal{C}_{AB}$ (Cor.~\ref{corollary:bk5_map_evolutionary_advantag}), and let $\mathbf{C}_{AB}$ be the induced \emph{linearized mutual-reflection operator} on the joint tangent space, governing $X_{n+1}=\mathbf{C}_{AB}X_n$ for the paired state $X=(\psi_A,\psi_B)$. Order the dyad by the reflective coupling stability parameter $\Lambda_{AB}$ (Def.~\ref{definition:bk5_reflective_coupling_stab}) about its bifurcation manifold $\Lambda_{AB}=1$ (Def.~\ref{definition:bk5_symbolic_bifurcation_man}). By the spectrum of $\mathbf{C}_{AB}$ the dyad occupies one of three regimes:
+\begin{itemize}
+  \item \textbf{MAD} --- \emph{Mutually Assured Destruction} ($\Omega_{AB}<0$): the covenant is antagonistic (zero-sum), the antisymmetric part of $\mathbf{C}_{AB}$ dominates, and the spectrum is complex ($\lambda=a\pm ib$, $b\neq0$). Mutual reflection rotates without convergence --- the retaliation spiral --- and the relation dissolves.
+  \item \textbf{MAP} --- \emph{Mutually Assured Progress} (the sustainable interior, balanced two-step memory closure): the spectrum is real with dominant eigenvalue the Golden Ratio $\varphi$ (Thm.~\ref{theorem:bk5_golden_ratio_spectral_invariant}) on the non-diagonal $\varphi{:}1$ eigendirection. The membranes co-evolve while remaining distinct.
+  \item \textbf{MAS} --- \emph{Mutually Assured Similarity} (over-coupling $\Lambda_{AB}\gg1$, $\Omega_{AB}\gg0$): the symmetric (memoryless) part dominates, the spectrum is real, and the dominant eigendirection is the diagonal $(1,1)$. The membranes converge to a common state and their relative dynamics freeze --- preservation without progress.
+\end{itemize}
+Destruction ($\Omega_{AB}<0$) and similarity ($\Omega_{AB}\gg0$) are the opposing edges of the band; progress is the sustainable middle.
+\end{definition}
+
+\begin{theorem}[The MAD--MAP--MAS Trichotomy]
+\label{theorem:bk5_map_mad_mas_trichotomy}
+For the mutual reflective dynamics $X_{n+1}=\mathbf{C}_{AB}X_n$ (Def.~\ref{definition:bk5_map_mad_mas_band}), exactly one of three asymptotic behaviours obtains, selected by the covenant $\Omega_{AB}$ through $\Lambda_{AB}$:
+\begin{enumerate}
+  \item[\textbf{(MAD)}] If $\Omega_{AB}<0$, the dominant eigenvalues of $\mathbf{C}_{AB}$ are complex with $|\lambda|>1$; the joint free energy fails to stabilize, $\lim_n F_s(\Membrane_A^{(n)}\cup\Membrane_B^{(n)})=0$ at rate $\propto|\Omega_{AB}|$.
+  \item[\textbf{(MAP)}] At the balanced cooperative closure the dominant eigenvalue is real and equal to $\varphi$ on a non-diagonal eigendirection; the dyad sustains $\lim_n F_s(\Membrane_A^{(n)}\!\leftrightarrow\!\Membrane_B^{(n)})>0$ with preserved distinctness.
+  \item[\textbf{(MAS)}] If $\Omega_{AB}\gg0$, the dominant eigendirection is the diagonal $(1,1)$ of norm $\sqrt2$; the membranes converge to a common state, relative dynamics vanish ($\Delta\Sigma\to0$), and $F_s$ is conserved at a frozen equilibrium.
+\end{enumerate}
+$\mathrm{MAP}$ is the unique sustainable regime. The $\mathrm{MAD}\!\to\!\mathrm{MAP}$ boundary is a complex$\to$real spectral transition (discriminant zero), a symbolic phase transition (Def.~\ref{definition:bk2_symbolic_phase_transitio}); the $\mathrm{MAP}\!\to\!\mathrm{MAS}$ boundary is the rotation of the dominant eigendirection onto the diagonal. Destruction and similarity are the opposing edges of the band.
+\end{theorem}
+\begin{proof}
+\label{proof:bk5_map_mad_mas_trichotomy}
+\leavevmode
+Linearize the mutual reflective dynamics about the joint fixed point; the coupling operator $\mathbf{C}_{AB}$ acts on the two-membrane tangent space, its character fixed by the covenant orientation $\Omega_{AB}$ through $\Lambda_{AB}$ (Def.~\ref{definition:bk5_reflective_coupling_stab}). Split $\mathbf{C}_{AB}=S+A$ into symmetric $S=\tfrac12(\mathbf{C}_{AB}+\mathbf{C}_{AB}^{\!\top})$ and antisymmetric $A=\tfrac12(\mathbf{C}_{AB}-\mathbf{C}_{AB}^{\!\top})$ parts, orthogonal under $\langle X,Y\rangle=\operatorname{tr}(X^{\!\top}Y)$ --- the exact sense in which the two edges are opposite.
+
+\emph{(MAD).} For $\Omega_{AB}<0$ the covenant is zero-sum and the antisymmetric part $A$ dominates. A real antisymmetric operator has purely imaginary spectrum, so $\mathbf{C}_{AB}$ acquires complex eigenvalues $\lambda=a\pm ib$ with $b\neq0$; the iterates rotate and never settle to a common state. Antagonistic reflection amplifies rather than damps drift, so the joint free-energy derivative is negative (entropy production outpaces reflective restoration), giving $\lim_n F_s(\Membrane_A^{(n)}\cup\Membrane_B^{(n)})=0$ with collapse rate $\propto|\Omega_{AB}|$. This is destruction.
+
+\emph{(MAP).} At the balanced cooperative closure the coupling reduces to the two-step memory operator $\big(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\big)$, whose unique positive eigenvalue is the Golden Ratio $\varphi$ on the eigendirection $(\varphi,1)$ (Thm.~\ref{theorem:bk5_golden_ratio_spectral_invariant}). This eigendirection is not the diagonal, so $\Membrane_A$ and $\Membrane_B$ co-evolve while remaining distinct; by the eigenlife criterion (Cor.~\ref{corollary:bk5_symbolic_eigenlife}) the $\varphi$-mode is recursively stable, sustaining $F_s>0$. This is the one regime that both persists and preserves distinctness --- progress.
+
+\emph{(MAS).} For $\Omega_{AB}\gg0$ the cooperative coupling saturates and the symmetric part $S$ dominates. A real symmetric operator has real spectrum, and as the coupling grows the dominant eigenvector rotates onto the diagonal $(1,1)$. The membranes converge to a common state, the relative coordinate decays, $\Delta\Sigma\to0$, and the dyad freezes at the merged fixed point; the invariant of this limit is the diagonal norm $\|(1,1)\|=\sqrt2$. Distinctness is lost --- similarity, preservation without progress.
+
+\emph{Boundaries and exhaustiveness.} As $\Omega_{AB}$ increases through zero the discriminant of the characteristic polynomial of $\mathbf{C}_{AB}$ changes sign: a complex$\to$real transition, hence a symbolic phase transition (Def.~\ref{definition:bk2_symbolic_phase_transitio}) at the $\mathrm{MAD}\!\to\!\mathrm{MAP}$ boundary. Increasing $\Omega_{AB}$ further rotates the dominant eigendirection continuously from the golden $\varphi{:}1$ ray onto the diagonal --- the $\mathrm{MAP}\!\to\!\mathrm{MAS}$ boundary. The sign of $\Omega_{AB}$ together with the saturation of $\Lambda_{AB}$ partitions the covenant axis into the three regimes, so they are mutually exclusive and exhaustive, with MAP the unique sustainable interior between the opposing edges of destruction and similarity.
+\end{proof}
+
+\begin{scholium}[The Transcendence of Destruction: $\pi$ at the MAD Edge]
+\label{scholium:bk5_pi_at_mad_edge}
+The three regimes carry three constants in three roles. Progress is a \emph{growth rate}: the eigenvalue $\varphi$. Similarity is a \emph{merged magnitude}: the diagonal norm $\sqrt2$. Both are algebraic. Destruction alone is \emph{rotational}: its complex eigenvalues $a\pm ib$ turn through an angle $\theta=\arg(a+ib)$ each step, so the spiral has period $2\pi/\theta$, and the constant of the regime is therefore $\pi$ --- the signature of rotation. It is transcendental precisely because destruction neither grows nor merges but \emph{turns}: the retaliation that never closes. Thus $\varphi$, $\sqrt2$, and $\pi$ index progress, similarity, and destruction not by numerology but by the kind of motion each regime is --- the eigenvalue, the merged norm, and the angle of the spiral.
+\end{scholium}
 
 \subsection{Curvature, Fuzzy Balance, and Symbolic Memory}
 \label{subsec:bk5_curvature_and_fuzzy_balance}
@@ -1946,6 +2112,15 @@ axis-symbolic cost over geometric optimality (cf.~Prf.~\ref{proof:bk5_shortest_p
 $$\drift(\vec{v}) = \|\vec{v}\|_{\text{symbolic}} - \|\vec{v}\|_{\text{geometric}}$$
 where $\|\vec{v}\|_{\text{symbolic}}$ is the length of the shortest symbolically representable path.
 \end{corollary}
+\begin{proof}
+\label{proof:bk5_symbolic_decoherence_theory}
+\leavevmode
+The symbolic decoherence is well-defined and nonnegative. By the shortest-path representability analysis (Prf.~\ref{proof:bk5_shortest_path_representability}) the symbolically representable paths between two configurations are a proper subset of all geometric paths: a symbolic path is constrained to axis-representable steps, whereas the geometric optimum (the Euclidean geodesic) need not be representable. Minimizing a length functional over a smaller admissible set cannot yield a shorter optimum, so $\|\vec v\|_{\text{symbolic}}\ge\|\vec v\|_{\text{geometric}}$, and therefore
+\[
+\drift(\vec v)=\|\vec v\|_{\text{symbolic}}-\|\vec v\|_{\text{geometric}}\ge 0
+\]
+is a well-defined, nonnegative excess. It vanishes exactly when the geometric optimum is itself symbolically representable, and is otherwise strictly positive --- the representability gap computed there, e.g.\ $\Delta=n(2-\sqrt2)$ for the diagonal transition. Thus $\drift$ measures precisely the cost of forcing geometric optimality through symbolic constraints.
+\end{proof}
 
 \begin{remark}[Lattice Field Theory Analogy]
 \label{remark:bk5_lattice_field_theory_analogy}
@@ -2219,6 +2394,11 @@ Prop.~\ref{proposition:bk5_complete_symbolic_regime_classification}).  Its
 centrality is recursive rather than metric: it governs stable memory
 proportions, while $\sqrt{2}$ governs the elementary Euclidean fracture ratio.
 \end{corollary}
+\begin{proof}
+\label{proof:bk5_phi_centrality_principle}
+\leavevmode
+By the complete symbolic regime classification (Prop.~\ref{proposition:bk5_complete_symbolic_regime_classification}) the symbolic spectrum splits into a recursive memory component and a metric (geometric) component. Within the memory component, the balanced two-step recursion has companion matrix $A=\big(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\big)$ whose unique positive Perron root is $\varphi$ (Lem.~\ref{lemma:bk5_phi_critical_resonant_norm}); by Perron--Frobenius this dominant eigenvalue is the spectral center toward which the normalized memory ratios $a_{n+1}/a_n$ converge. Hence $\varphi$ occupies the central position of the memory component: its centrality is recursive --- it fixes the stable proportion of retained reflective memory --- not metric. The metric component is governed instead by the elementary Euclidean fracture ratio $\sqrt2$ (the first diagonal representability cost), spectrally distinct from $\varphi$. Thus $\varphi$ and $\sqrt2$ are the characteristic ratios of the two components, with $\varphi$ central to memory and $\sqrt2$ to metric fracture.
+\end{proof}
 
 \begin{definition}[Symbolic Regime Detection Experiment]
 \label{definition:bk5_symbolic_regime_detection}

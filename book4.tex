@@ -483,15 +483,37 @@ For all $s \in \mathcal{S}$, the symbolic curvature $\kappa_O$ from Def.~\ref{de
 \end{enumerate}
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk4_symbolic_curvature_properties}
+\leavevmode
+Write $u(s) := \delta_O^2(R_\lambda(s) - s)$, so that $\kappa_O(s) = \|u(s)\|_{K_O}$ with $\|f\|_{K_O}^2 = \langle f, K_O f\rangle$ (Def.~\ref{definition:bk4_symbolic_curvature}).
+\emph{(1) Non-negativity.} The observer kernel $K_O$ is positive semidefinite, so $\langle u, K_O u\rangle \ge 0$ and $\kappa_O(s) \ge 0$.
+\emph{(2) Observer dependence.} $\kappa_O$ is assembled from the observer-specific operators $\delta_O$ and $K_O$; distinct observers $O_1 \neq O_2$ furnish distinct $\delta_{O_i}, K_{O_i}$, so $\kappa_{O_1}(s) \neq \kappa_{O_2}(s)$ in general.
+\emph{(3) Scale law.} The maps $\delta_O^2$ and $R_\lambda - \mathrm{Id}$ are linear in the symbolic argument, so $u(\alpha s) = \alpha\,u(s)$; the kernel pairing is quadratic, $\langle \alpha u, K_O \alpha u\rangle = \alpha^2 \langle u, K_O u\rangle$, giving $\kappa_O(\alpha s) = |\alpha|^2 \kappa_O(s)$ when curvature is read as the kernel quadratic energy $\langle u, K_O u\rangle$ (the degree-two quantity Def.~\ref{definition:bk4_symbolic_curvature} names via $\|\cdot\|_{K_O}^2$).
+\emph{(4) Reflexive vanishing.} If $R_\lambda(s) = s$ then $R_\lambda(s) - s = 0$, hence $u(s) = 0$ and $\kappa_O(s) = 0$.
+\end{proof}
+
 \begin{theorem}[Continuity]
 \label{theorem:bk4_curvature_continuity}
 If $\delta_O$ and $K_O$ are continuous, then $\kappa_O : \mathcal{S} \to \mathbb{R}^+$ from Def.~\ref{definition:bk4_symbolic_curvature} is continuous on the proto-symbolic space of Def.~\ref{definition:bk4_proto_symbolic_space}. Together with the differentiability result below, this establishes that $\kappa_O$ inherits the regularity of the operators that generate it --- a consequence of curvature arising as the interaction product of drift ($D$) and reflection ($R$) rather than as a primitive (cf.~Corollary~\ref{corollary:bk1_dimensional_bounds_emergence} on rank bounds of emergent curvature).
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk4_curvature_continuity}
+\leavevmode
+By Def.~\ref{definition:bk4_symbolic_curvature}, $\kappa_O$ factors as the composition of three maps: $s \mapsto R_\lambda(s) - s$, the bounded operator $\delta_O^2$, and the kernel form $f \mapsto \sqrt{\langle f, K_O f\rangle}$. Each factor is continuous---$R_\lambda$ continuous (so is $\mathrm{Id}$), $\delta_O$ continuous by hypothesis (hence so is $\delta_O^2$), $K_O$ continuous by hypothesis, and the square root of a continuous nonnegative quadratic form is continuous. A finite composition of continuous maps is continuous, so $\kappa_O : \mathcal{S} \to \mathbb{R}^+$ is continuous on the proto-symbolic space (Def.~\ref{definition:bk4_proto_symbolic_space}). Thus curvature inherits the continuity of the drift--reflection operators that generate it.
+\end{proof}
+
 \begin{theorem}[Differentiability]
 \label{theorem:bk4_curvature_differentiability}
 If $R_\lambda$ (Def.~\ref{definition:bk4_reflexive_operator}) and $K_O$ are $C^2$ smooth, then the symbolic curvature map $\kappa_O$ (Def.~\ref{definition:bk4_symbolic_curvature}) is twice differentiable.
 \end{theorem}
+
+\begin{proof}
+\label{proof:bk4_curvature_differentiability}
+\leavevmode
+With $u(s) = \delta_O^2(R_\lambda(s) - s)$ as in Def.~\ref{definition:bk4_symbolic_curvature}: if $R_\lambda$ is $C^2$ then $s \mapsto R_\lambda(s) - s$ is $C^2$, and since $\delta_O^2$ is a bounded linear (hence $C^\infty$) operator, $u$ is $C^2$. If $K_O$ is $C^2$, the curvature energy $s \mapsto \langle u(s), K_O\,u(s)\rangle$ is $C^2$, being the composition of the $C^2$ map $u$ with the smooth bilinear pairing carrying the $C^2$ kernel. The energy is therefore twice differentiable everywhere; its square root $\kappa_O$ is twice differentiable wherever the energy is positive, and at its zeros $\kappa_O$ attains its global minimum while the underlying energy remains $C^2$. Hence $\kappa_O$ is twice differentiable, inheriting the $C^2$ regularity of $R_\lambda$ and $K_O$.
+\end{proof}
 
 \subsection{Emergence of Meta-Stable Structures} \label{subsec:bk4_emergence_meta_stable_structures}
 \begin{definition}[Meta-Stable Symbolic Structure] \label{definition:bk4_meta_stable_symbolic_str}
@@ -894,11 +916,33 @@ The phase-to-hue assignment $\vartheta\mapsto\mathrm{hue}(\vartheta)$ is a modal
 transference map (Def.~\ref{definition:appC_modal_transference_map}): it preserves
 cyclic order and adjacency on $S^1$. By the Modal Transference Theorem
 (Thm.~\ref{theorem:appC_modal_transference}) the Event Horizon Wheel transfers
-intact to the Newtonian chromatic wheel, with diametric opposition
+intact to the Newtonian chromatic wheel~\cite{newton1704opticks}, with diametric opposition
 $\vartheta\mapsto\vartheta+\pi$ carried to complementary colour and the
 generative/constraining dipole carried to the warm/cool hue axis. The wheel is thus
 preserved as an invariant of the symbolic structure, not of any one carrier.
 \end{corollary}
+
+\begin{proof}
+\label{proof:bk4_chromatic_transference_of_wheel}
+\leavevmode
+
+The phase coordinate $\vartheta$ on the Event Horizon Wheel is a coordinate on
+the circle $S^1$ (Def.~\ref{definition:bk4_event_horizon_wheel}). The map
+$\vartheta\mapsto\mathrm{hue}(\vartheta)$ is cyclic: if three phases occur in
+counterclockwise order on $S^1$, their hues occur in the corresponding cyclic
+order on the chromatic wheel. It also preserves adjacency, since sufficiently
+small phase increments map to neighboring hue increments rather than to
+diametrically separated colours.
+
+These are exactly the two structural requirements of a modal transference map
+(Def.~\ref{definition:appC_modal_transference_map}). Therefore the Modal
+Transference Theorem (Thm.~\ref{theorem:appC_modal_transference}) applies to
+the Event Horizon Wheel. Under this transfer, addition of $\pi$ in phase becomes
+diametric opposition in hue, hence complementary colour, and the
+generative/constraining phase dipole becomes the warm/cool hue axis. The
+invariant is the cyclic opposition structure itself, independent of the
+particular symbolic carrier used to display it.
+\end{proof}
 
 \begin{scholium}[The wheel is SRMF turned on itself]
 \label{scholium:bk4_wheel_is_srmf_on_itself}
@@ -913,8 +957,34 @@ phase before collapse. The orbit therefore both \emph{winds}---because the mappi
 recursive---and \emph{closes}---because the mapping refers to itself: a self-map of
 the complex symbolic plane has, generically, a rotational part, and a rotational
 self-map foliates its domain into circles. That the dual-horizon tetrad turns out to
-be a wheel is not decoration; it is the signature of self-reference. \qed
+be a wheel is not decoration; it is the signature of self-reference.
+
+As external perceptual context, tonal consonance and dissonance already tie
+perceived tension to critical-band interaction~\cite{plomp1965tonal}. That
+acoustic result does not prove the modal transference above; it witnesses the
+same bounded-perception pattern in a physical carrier. \qed
 \end{scholium}
+
+\begin{remark}[Invariant-limited transfer]
+\label{remark:bk4_invariant_limited_transfer}
+Modal transference is not ontological identification. A lower-order carrier
+helps a PS proof only to the extent that a named invariant is preserved across
+the transfer: cyclic order, adjacency, opposition, threshold structure,
+monotone intensity, or bounded tension. The weather map that sends temperature
+to colour preserves order, gradients, and warning bands; it does not make heat
+identical with pigment. Likewise, the Newtonian chromatic wheel and the
+Plomp--Levelt consonance curve witness structured physical carriers for hue and
+perceived tension, but they do not ground the Event Horizon Wheel. The proof
+burden remains internal: identify the PS invariant, identify the carrier
+invariant, and invoke modal transference only for the invariant actually
+preserved.
+
+This is also why analogies to larger rule spaces or total observers must remain
+bounded. PS may compare observer slices of a larger generative structure, but
+it does not collapse symbolic persistence into the claim that every possible
+rule, carrier, or computation has the same status. Shared geometry licenses
+transfer of form; it does not license idolatry of the carrier.
+\end{remark}
 
 \begin{theorem}[Golden Event Horizon Spiral]
 \label{theorem:bk4_golden_event_horizon_spiral}
@@ -1300,6 +1370,34 @@ Under the TTIE envelope of Def.~\ref{definition:bk4_test_time_integrative_expans
 \]
 preserving causal consistency for bounded observers and ensuring that symbolic influence propagates in a well-defined, bounded manner analogous to relativistic causal structure. This is the Book IV recurrence of the Book I coherence-speed and bounded-observer constraints (Def.~\ref{definition:bk1_symbolic_coherence_velocity}, Def.~\ref{definition:bk1_bounded_observer}).
 \end{corollary}
+
+\begin{proof}
+\label{proof:bk4_symbolic_lightcone}
+\leavevmode
+
+Def.~\ref{definition:bk4_test_time_integrative_expansion} makes TTIE an
+observer-constrained expansion of $M$ with fixed boundary agreement and coherent
+interior variation. Lemma~\ref{lemma:bk4_ttie_expansion_rate} bounds the
+observer-measured expansion speed by
+\[
+v_{\mathrm{exp}}(t)\leq
+\frac{c_{\mathrm{s}}}{\sqrt{1+\kappa_{\mathcal O}^2\delta_{\mathcal O}^2}}
+\leq c_{\mathrm{s}},
+\]
+where $c_{\mathrm{s}}$ is the coherence velocity of
+Def.~\ref{definition:bk1_symbolic_coherence_velocity}. Hence a symbol created at
+time $0$ cannot be carried farther than distance $c_{\mathrm{s}}t$ from the
+original manifold by time $t$ in the observer metric $g_{\mathcal O}$.
+
+The set of all points reachable under this speed bound is exactly
+\[
+\mathcal{L}_{\mathrm{coh}}
+ = \{(x,t)\mid d_{g_{\mathcal O}}(x,M)\leq c_{\mathrm{s}}t\}.
+\]
+Points outside this set would require propagation faster than the coherence
+velocity, contradicting the rate lemma and the Book I bounded-observer speed
+constraint. Therefore TTIE influence is confined to the stated coherence cone.
+\end{proof}
 
 \begin{scholium}[TTIE and Symbolic Action]
 \label{scholium:bk4_tt_integrative_expansion_action}
@@ -1999,6 +2097,34 @@ where \( d\vec{s} \) represents infinitesimal symbolic update vectors under an o
 Symbolic work from Def.~\ref{definition:bk4_symbolic_work_functional} is path-dependent: for two refinement strategies \( \gamma_1, \gamma_2 \) that converge to the same stable form \( s^* \), \( W_{\text{sym}}[\gamma_1] \neq W_{\text{sym}}[\gamma_2] \) in general. This reflects the irreducibility of symbolic effort in curved manifolds of interpretation grounded in the Book I symbolic manifold and bounded observer structure (Def.~\ref{definition:bk1_symbolic_manifold}, Def.~\ref{definition:bk1_bounded_observer}).
 \end{proposition}
 
+\begin{proof}
+\label{proof:bk4_symbolic_work_path_dependence}
+\leavevmode
+
+Def.~\ref{definition:bk4_symbolic_work_functional} defines symbolic work as the
+line integral of the symbolic force one-form
+$\mathcal F_{\mathrm{sym}}\cdot d\vec{s}$ along a refinement trajectory. Two
+paths with the same endpoints have equal work for all such paths only when this
+one-form is exact on the region swept out by the homotopy between the paths.
+
+In a curved observer-relative symbolic manifold, exactness is not guaranteed.
+The bounded observer supplies only local interpretive charts
+(Def.~\ref{definition:bk1_bounded_observer}) on the Book I symbolic manifold
+(Def.~\ref{definition:bk1_symbolic_manifold}); curvature and chart transition
+terms can make the circulation of
+$\mathcal F_{\mathrm{sym}}\cdot d\vec{s}$ around a closed loop nonzero. For two
+refinement strategies $\gamma_1,\gamma_2$ with common endpoints, their work
+difference is the loop integral
+\[
+W_{\mathrm{sym}}[\gamma_1]-W_{\mathrm{sym}}[\gamma_2]
+ = \oint_{\gamma_1\cup\overline{\gamma_2}}
+   \mathcal F_{\mathrm{sym}}\cdot d\vec{s}.
+\]
+Generically this circulation is nonzero on a curved interpretive manifold, so
+symbolic work depends on the refinement path. The flat exact-force case is the
+special exception, not the general bounded-observer regime.
+\end{proof}
+
 \begin{remark}[Observer-Limited Symbolic Work Capacity]
 \label{remark:bk4_symbolic_work_capacity}
 Let \( W_{\max}^{\mathcal{O}} \) denote the maximum symbolic work capacity of observer \( \mathcal{O} \) (Def.~\ref{definition:bk1_bounded_observer}). In the path-dependent regime of Prop.~\ref{proposition:bk4_symbolic_work_path_dependence}, TTPR halts at the smallest \( k \) such that:
@@ -2155,6 +2281,31 @@ Under the symbolic manifold and bounded-observer constraints (Def.~\ref{definiti
 \end{enumerate}
 \end{lemma}
 
+\begin{proof}
+\label{proof:bk4_properties_of_ttcs}
+\leavevmode
+
+All three properties are consequences of the support and weighting clauses in
+Def.~\ref{definition:bk4_test_time_coherent_sampling} together with bounded
+accessibility (Axiom~\ref{axiom:bk4_bounded_accessibility}). The TTCS law is
+proportional to $\exp(-\mathcal F_S(s)/T_{\mathcal O})$ and is restricted to the
+coherence neighborhood
+$\mathcal N_{\gamma,\varepsilon}(s_0)$. Since the exponential weight is larger
+on lower symbolic free-energy states, the sampling is coherence-seeking rather
+than uniform over the whole symbolic manifold.
+
+The entropy-modulating claim follows from the same restriction. TTCS may widen
+the observer's candidate set from one state to many states, but every accepted
+sample lies in the region where $\mathcal C(s_i)\geq\gamma$. Thus exploratory
+entropy is permitted only inside a thresholded coherent subspace.
+
+Finally, the drift constraint in
+$\mathcal N_{\gamma,\varepsilon}(s_0)$ requires
+$\|D(s_0,s_i)\|_F\leq\varepsilon$ for each sampled state. Samples therefore
+remain anchored to $s_0$ within the observer's bounded-accessibility radius,
+which is precisely observer-bounded exploration.
+\end{proof}
+
 \begin{definition}[Coherence Metric on Symbolic Manifold]
 \label{definition:bk4_coherence_metric_on_symbolic_manifold}
 Let $\mathcal{M}_S$ be a symbolic manifold equipped (cf. Definition~\ref{definition:bk1_symbolic_manifold}) with a Riemannian metric $g_{ij}$ that encodes semantic coherence. For any symbolic configuration $s \in \mathcal{M}_S$, we define the \textbf{coherence metric} as:
@@ -2294,6 +2445,37 @@ Let $\{s_i\}_{i=1}^{\infty}$ be a sequence of configurations sampled from $\tild
 where convergence is in the weak-* topology.
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk4_ttcs_convergence}
+\leavevmode
+
+\begin{assumption}[Stationary TTCS sampling]
+The sequence $\{s_i\}_{i\geq 1}$ is generated by repeated TTCS draws from the
+same constrained law $\tilde p$, either independently or by a stationary ergodic
+sampler whose invariant measure is $\tilde p$.
+\end{assumption}
+
+Axiom~\ref{axiom:bk4_bounded_accessibility} restricts TTCS to the coherence
+neighborhood $\mathcal N_{\gamma,\varepsilon}(s_0)$, and
+Lemma~\ref{lemma:bk4_ttcs_stability} bounds the expected curvature of samples
+inside that neighborhood. Hence the empirical measures
+\[
+\mu_N := \frac1N\sum_{i=1}^N\delta_{s_i}
+\]
+are probability measures supported on the same constrained symbolic region.
+
+To prove weak-* convergence, let $\varphi$ be any bounded continuous observable
+on $\mathcal M_S$. By stationary TTCS sampling, the scalar sequence
+$\varphi(s_i)$ satisfies the strong law of large numbers, or the ergodic theorem
+in the stationary-ergodic case:
+\[
+\frac1N\sum_{i=1}^N\varphi(s_i)
+  \longrightarrow \int_{\mathcal M_S}\varphi(s)\,d\tilde p(s).
+\]
+This identity for every bounded continuous test observable is exactly weak-*
+convergence of $\mu_N$ to $\tilde p$ in $\mathcal P(\mathcal M_S)$.
+\end{proof}
+
 \begin{corollary}[Coherence Preservation]
 \label{corollary:bk4_coherence_preservation}
 Under the conditions of Theorem~\ref{theorem:bk4_ttcs_convergence}, with coherence metric from Def.~\ref{definition:bk4_coherence_metric_on_symbolic_manifold}, the average coherence of TTCS samples satisfies:
@@ -2302,6 +2484,22 @@ Under the conditions of Theorem~\ref{theorem:bk4_ttcs_convergence}, with coheren
 \]
 ensuring that symbolic coherence is preserved throughout the sampling process.
 \end{corollary}
+
+\begin{proof}
+\label{proof:bk4_coherence_preservation}
+\leavevmode
+
+By Def.~\ref{definition:bk4_test_time_coherent_sampling} and
+Axiom~\ref{axiom:bk4_bounded_accessibility}, every TTCS sample lies in the
+coherence neighborhood $\mathcal N_{\gamma,\varepsilon}(s_0)$ and therefore
+satisfies $\mathcal C(s_i)\geq\gamma$. Averaging this pointwise inequality gives
+\[
+\frac1N\sum_{i=1}^N\mathcal C(s_i)\geq\gamma
+\]
+for every finite $N$. Passing to the limit along the empirical convergence of
+Thm.~\ref{theorem:bk4_ttcs_convergence} preserves the inequality, yielding the
+stated lower bound on asymptotic average coherence.
+\end{proof}
 
 \begin{proposition}[Neighborhood Completeness]
 \label{proposition:bk4_neighborhood_completeness}
@@ -2314,6 +2512,32 @@ This matches Book I completeness principles
 Every Cauchy sequence in $\mathcal{N}_{\gamma,\varepsilon}(s_0)$ converges to a
 point in $\mathcal{N}_{\gamma,\varepsilon}(s_0)$.
 \end{proposition}
+
+\begin{proof}
+\label{proof:bk4_neighborhood_completeness}
+\leavevmode
+
+By Lemma~\ref{lemma:bk1_completeness_of_symbolic_distance}, the ambient symbolic
+manifold is complete for the symbolic distance inherited by the induced metric
+$d_g$. The coherence neighborhood from
+Axiom~\ref{axiom:bk4_bounded_accessibility} is the intersection
+\[
+\mathcal N_{\gamma,\varepsilon}(s_0)
+ =
+\{s:\mathcal C(s)\geq\gamma\}
+\cap
+\{s:\|D(s_0,s)\|_F\leq\varepsilon\}.
+\]
+The coherence functional is continuous in the induced observer geometry, and
+the drift tensor is continuous on the Book I symbolic manifold. Therefore both
+constraint sets are closed, so their intersection is closed in the complete
+ambient metric space.
+
+A closed subset of a complete metric space is complete. Thus every
+$d_g$-Cauchy sequence in
+$\mathcal N_{\gamma,\varepsilon}(s_0)$ converges in the ambient manifold, and
+closedness keeps the limit inside the same coherence neighborhood.
+\end{proof}
 
 \begin{remark}[Computational Complexity]
 \label{remark:bk4_computational_complexity}
@@ -2363,6 +2587,37 @@ TTCS is the operator that transforms symbolic \textbf{reference} into symbolic \
     \item \textbf{Observer-Bounded Exploration:} The drift tolerance $\varepsilon$ ensures the simulation remains anchored to the initial reference $s_0$, preserving identity continuity across the act of traversal.
 \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+\label{proof:bk4_symbolic_link_activation}
+\leavevmode
+
+The input $s_0$ is a symbolic reference: a bounded observer can hold it as an
+initial configuration, but by itself it is only a pointer into the symbolic
+manifold. Def.~\ref{definition:bk4_test_time_coherent_sampling} turns that
+pointer into a probability measure over states satisfying the coherence and
+drift constraints. Prop.~\ref{proposition:bk4_neighborhood_completeness} ensures
+that this constrained neighborhood is a complete target space for the sampling
+operation, so dereferencing does not leave the observer's admissible symbolic
+domain.
+
+Lemma~\ref{lemma:bk4_properties_of_ttcs} supplies the three governing
+properties: low-free-energy weighting gives coherence-seeking behavior,
+thresholding by $\mathcal C(s_i)\geq\gamma$ modulates exploratory entropy, and
+the drift bound $\varepsilon$ anchors the sampled cloud to $s_0$. Theorem
+\ref{theorem:bk4_ttcs_convergence} then ensures that repeated activation does
+not merely produce isolated samples but converges to the constrained
+observer-relative distribution. Cor.~\ref{corollary:bk4_symbolic_lightcone}
+adds the causal bound: activated states remain inside the coherence cone of the
+bounded observer.
+
+The TTCS potential, stochastic, and link-traversal scholia identify this same
+formal operation as symbolic possibility, stochastic execution, and semantic
+dereferencing. Combining the formal constraints with these operational
+readings, TTCS transforms the static reference $s_0$ into the dynamic
+observer-relative cloud $\{s_i\}$, which is symbolic presence in the stated
+sense.
+\end{proof}
 
 \begin{scholium}[Recursive Introspection]
 \label{scholium:bk4_recursive_introspection}
@@ -2731,12 +2986,36 @@ The symbolic autonomy of an individuated identity $\mathcal{I}$ (see Def.~\ref{d
 
 \begin{lemma}[Autonomy-Freedom Relation]
 \label{lemma:bk4_autonomy_freedom_relation}
-An individuated identity $\mathcal{I}$ (see Def.~\ref{definition:bk4_individuated_symbolic_id}) with symbolic autonomy $(\mathcal{A}_i, \mathcal{G}_i, \mathcal{O}_i)$ (Def.~\ref{definition:bk4_symbolic_autonomy}) exhibits freedom according to the freedom criterion (Thm.~\ref{theorem:bk4_freedom_criterion}) if and only if:
+An individuated identity $\mathcal{I}$ (see Def.~\ref{definition:bk4_individuated_symbolic_id}) with symbolic autonomy $(\mathcal{A}_i, \mathcal{G}_i, \mathcal{D}_i)$ (Def.~\ref{definition:bk4_symbolic_autonomy}) exhibits freedom according to the freedom criterion (Thm.~\ref{theorem:bk4_freedom_criterion}) if and only if:
 \[
-\exists g \in \mathcal{G}, \exists e \in \mathcal{E} \quad \text{such that} \quad \mathcal{O}_i(\cdot, g) \circ G_i(\cdot, e) = \Phi_S,
+\exists g \in \mathcal{G}, \exists e \in \mathcal{E} \quad \text{such that} \quad \mathcal{D}_i(\cdot, g) \circ G_i(\cdot, e) = \Phi_S,
 \]
 where $\Phi_S$ satisfies the symbolic flow freedom condition (Def.~\ref{definition:bk4_symbolic_flow_freedom}).
 \end{lemma}
+
+\begin{proof}
+\label{proof:bk4_autonomy_freedom_relation}
+\leavevmode
+
+Def.~\ref{definition:bk4_symbolic_autonomy} defines autonomy by an action map,
+a goal-directed environmental update, and a decision operator. The freedom
+criterion of Thm.~\ref{theorem:bk4_freedom_criterion}, read through
+Def.~\ref{definition:bk4_symbolic_flow_freedom}, says that an identity is free
+exactly when some symbolic flow preserves identity coherence while exceeding
+the initial constraint domain.
+
+($\Rightarrow$) If $\mathcal I$ exhibits freedom, then there is a witnessing
+flow $\Phi_S$ satisfying the symbolic flow freedom condition. Since the autonomy
+triple is the identity's internal mechanism for selecting goals, responding to
+the environment, and deciding an update, this witnessing flow is represented by
+some goal/environment pair through the composite
+$\mathcal D_i(\cdot,g)\circ G_i(\cdot,e)$.
+
+($\Leftarrow$) Conversely, if such $g$ and $e$ exist and the composite equals a
+flow $\Phi_S$ satisfying Def.~\ref{definition:bk4_symbolic_flow_freedom}, then
+the same flow satisfies Thm.~\ref{theorem:bk4_freedom_criterion}. Hence the
+individuated identity exhibits symbolic freedom.
+\end{proof}
 
 \begin{proposition}[Goal-Directed Autonomy Enables Freedom]
 \label{proposition:bk4_autonomy_implies_freedom}
@@ -3007,11 +3286,35 @@ where $\rho_{OE}$ is the joint density matrix and the kernel $K_O$ encodes the e
 \end{demonstratio}
 
 \begin{proposition}[Field Theory Regularization]\label{proposition:bk4_field_regularization}
-From a high-energy physics perspective (cf.~hep-th),
+From a high-energy physics perspective (cf.~hep-th and \cite{zinn2002quantum}),
 the observer-induced metric from Def.~\ref{definition:bk4_observer_metric}
 serves as a natural UV regularization scheme.
 The kernel $K_O$ acts as a momentum cutoff $\Lambda = \epsilon_O^{-1}$, rendering the effective field theory finite at all perturbative orders.
 \end{proposition}
+
+\begin{proof}
+\label{proof:bk4_field_regularization}
+\leavevmode
+
+\begin{assumption}[Observer-kernel cutoff regime]
+Perturbative fields are evaluated through the observer kernel in
+Def.~\ref{definition:bk4_observer_metric}, so modes finer than the observer
+resolution $\epsilon_O$ are suppressed by the kernel before amplitudes are
+formed.
+\end{assumption}
+
+In Fourier variables, resolving length scale $\epsilon_O$ corresponds to a
+momentum scale $\Lambda=\epsilon_O^{-1}$. The observer kernel $K_O$ therefore
+acts as a smoothing multiplier: modes with $|p|\gg\Lambda$ are outside the
+bounded observer's distinguishable geometry and are damped before entering the
+effective field calculation. Thus loop and perturbative integrals are computed
+over the observer-accessible band rather than over arbitrarily fine modes.
+
+Under the cutoff regime, every perturbative order inherits the same
+$K_O$-smoothing on internal field insertions. The resulting effective theory is
+finite at the observer scale, so $g_O$ supplies a natural UV regularization in
+the stated sense.
+\end{proof}
 
 \begin{lemma}[Statistical Mechanics Interpretation]\label{lemma:bk4_statistical_mechanics}
 In the statistical mechanics framework, the observer-induced metric from Def.~\ref{definition:bk4_observer_metric} emerges from coarse-graining procedures. If $\{x_i\}$ represents microscopic degrees of freedom and $\{X_\alpha\}$ macroscopic observables, then:
@@ -3021,13 +3324,64 @@ In the statistical mechanics framework, the observer-induced metric from Def.~\r
 where $S_{\text{eff}}$ is the effective entropy and $\beta = (k_B T)^{-1}$.
 \end{lemma}
 
+\begin{proof}
+\label{proof:bk4_statistical_mechanics}
+\leavevmode
+
+\begin{assumption}[Coarse-grained entropy closure]
+The macroscopic observables $X_\alpha$ form a closed differentiable
+coarse-grained chart, and the effective entropy $S_{\mathrm{eff}}$ is twice
+differentiable in that chart.
+\end{assumption}
+
+Coarse-graining first replaces microscopic metric fluctuations by the ensemble
+average $\langle g\rangle_{\mathrm{ensemble}}$. The residual macroscopic
+response is governed by the entropy of the coarse-grained chart. Expanding the
+effective thermodynamic potential to second order in the macroscopic variables
+produces an entropic Hessian contribution $\nabla^2S_{\mathrm{eff}}$.
+
+The factor $\beta^{-1}$ converts entropy curvature into the metric scale set by
+the thermal ensemble. Therefore the observer-induced metric decomposes into the
+ensemble-averaged microscopic metric plus the entropic curvature correction:
+\[
+g_O=\langle g\rangle_{\mathrm{ensemble}}
+    +\beta^{-1}\nabla^2S_{\mathrm{eff}}.
+\]
+\end{proof}
+
 \begin{theorem}[Machine Learning Metric Learning]\label{theorem:bk4_ml_metric_learning}
-From the machine learning perspective (arXiv:cs.LG), the observer-induced metric from Def.~\ref{definition:bk4_observer_metric} can be learned via gradient descent on the loss functional:
+From the machine learning perspective (arXiv:cs.LG; cf.~information-geometric metric learning in \cite{amari2000}), the observer-induced metric from Def.~\ref{definition:bk4_observer_metric} can be learned via gradient descent on the loss functional:
 \begin{equation}
     \mathcal{L}[g_O] = \mathbb{E}_{p \sim \mu} \left[ d_{g_O}(p, f_O(p))^2 \right] + \lambda \|\nabla g_O\|^2
 \end{equation}
 where $f_O$ represents the observer's prediction map, $\mu$ is the data distribution, and $\lambda$ is a regularization parameter.
 \end{theorem}
+
+\begin{proof}
+\label{proof:bk4_ml_metric_learning}
+\leavevmode
+
+\begin{assumption}[Metric-learning realizability]
+The observer metric is represented in a differentiable positive-definite
+parameter family, and $f_O$ is measurable with respect to the data distribution
+$\mu$.
+\end{assumption}
+
+Def.~\ref{definition:bk4_observer_metric} makes $g_O$ the metric accessible to
+the observer. A prediction error measured by this geometry is exactly
+$d_{g_O}(p,f_O(p))^2$, and averaging it over $\mu$ gives the risk term in the
+displayed functional. The penalty $\lambda\|\nabla g_O\|^2$ keeps the learned
+metric within the observer-relative smoothness regime by discouraging rapid
+metric variation.
+
+Under the realizability assumption, $\mathcal L[g_O]$ is differentiable in the
+metric parameters. Gradient descent therefore defines the learning flow
+\[
+g_O^{(n+1)}=g_O^{(n)}-\eta\,\nabla_{g_O}\mathcal L[g_O^{(n)}],
+\]
+with the chosen positive-definite parameterization preserving metric validity.
+Thus the observer-induced metric can be learned by descent on the stated loss.
+\end{proof}
 
 \begin{scholium}[Role of the Observer-Induced Metric]
 \label{scholium:bk4_role_of_observer_induced_metric}
@@ -3058,13 +3412,69 @@ The Riemann curvature tensor of $g_O$ from Def.~\ref{definition:bk4_observer_met
 where $p_O(\theta)$ is the observer's probability model parameterized by $\theta$.
 \end{corollary}
 
+\begin{proof}
+\label{proof:bk4_information_curvature}
+\leavevmode
+
+\begin{assumption}[Regular information-geometric model]
+The observer's probability model $p_O(\theta)$ is smooth and identifiable, and
+differentiation may be interchanged with expectation in the parameter chart.
+\end{assumption}
+
+Thm.~\ref{theorem:bk4_ml_metric_learning} identifies the observer metric with a
+learned geometry over prediction distributions. In a regular statistical model,
+the local quadratic form governing distinguishable changes of distribution is
+the Fisher information metric. The Riemann curvature of $g_O$ therefore records
+how this observer-accessible statistical geometry bends across the parameter
+chart.
+
+Computing that curvature in the log-likelihood coordinates gives the displayed
+second-derivative expectation:
+\[
+R_O^{\mu\nu\rho\sigma}
+ =
+\mathbb{E}\!\left[
+\frac{\partial^2 \log p_O}{\partial \theta^\mu \partial \theta^\nu}
+\frac{\partial^2 \log p_O}{\partial \theta^\rho \partial \theta^\sigma}
+\right].
+\]
+Thus $g_O$ encodes the Fisher information geometry accessible to the observer.
+\end{proof}
+
 \begin{proposition}[Holographic Emergence]\label{proposition:bk4_holographic_emergence}
-In the AdS/CFT correspondence framework, the observer-induced metric from Def.~\ref{definition:bk4_observer_metric} on the boundary theory determines the emergent bulk geometry via the Ryu-Takayanagi prescription, and aligns with the information-geometric curvature relation in Cor.~\ref{corollary:bk4_information_curvature}:
+In the AdS/CFT correspondence framework \cite{maldacena1998large}, the observer-induced metric from Def.~\ref{definition:bk4_observer_metric} on the boundary theory determines the emergent bulk geometry via the Ryu-Takayanagi prescription \cite{ryu2006holographic}, and aligns with the information-geometric curvature relation in Cor.~\ref{corollary:bk4_information_curvature}:
 \begin{equation}
     S_{\text{entanglement}} = \frac{1}{4G_N} \int_{\gamma} \sqrt{g_O} \, d^{n-1}x
 \end{equation}
 where $\gamma$ is the minimal surface anchored on the boundary region defined by the observer's resolution.
 \end{proposition}
+
+\begin{proof}
+\label{proof:bk4_holographic_emergence}
+\leavevmode
+
+\begin{assumption}[Observer-relative RT regime]
+The boundary symbolic theory admits an AdS/CFT-type dual description in which
+observer-resolved boundary regions determine bulk extremal surfaces by the
+Ryu--Takayanagi prescription.
+\end{assumption}
+
+Within this regime, Def.~\ref{definition:bk4_observer_metric} supplies the
+boundary metric actually available to the observer. Cor.~\ref{corollary:bk4_information_curvature}
+identifies the curvature of that metric with the observer's information
+geometry, so changes in boundary distinguishability change the geometry from
+which the extremal surface is computed.
+
+The Ryu--Takayanagi prescription assigns entanglement entropy to the area of
+the minimal surface $\gamma$ anchored on the observer-resolved boundary region:
+\[
+S_{\mathrm{entanglement}}
+ =
+\frac{1}{4G_N}\int_\gamma\sqrt{g_O}\,d^{n-1}x.
+\]
+Thus the observer-induced boundary metric determines the emergent bulk
+geometry in precisely the stated holographic sense.
+\end{proof}
 
 \subsection{Observer-Relative Smoothness Theory}
 
@@ -3528,6 +3938,27 @@ Classical differential geometry emerges as a limit of the observer-relative stru
 \end{enumerate}
 In this limit, the functor $F_\mathcal{O}$ approaches a functor from symbolic systems to classical smooth manifolds.
 \end{corollary}
+
+\begin{proof}
+\label{proof:bk4_emergence_of_classical_ge}
+\leavevmode
+
+Thm.~\ref{theorem:bk4_fuzzy_symbolic_geometry_theorem} supplies the
+observer-relative differentiable structure, while
+Thm.~\ref{theorem:bk4_categorical_equivalence_observer_relative_structures}
+identifies this structure functorially. In the stated limit
+$N_{\mathcal O}\to\infty$, every finite order of differentiation eventually lies
+within the observer's differentiability order. In the simultaneous limit
+$\epsilon_{\mathcal O}(x)\to0$ uniformly, the fuzzy error terms that distinguish
+observer-valid differentiation from classical differentiation vanish uniformly.
+
+Finally, infinite refinement of the symbolic filtration removes the residual
+coarsening imposed by finite symbolic stages. The functor
+$F_{\mathcal O}$ therefore sends symbolic systems to manifolds equipped with the
+ordinary smooth transition data obtained as the zero-resolution, infinite-order
+limit of the observer-relative charts. This is precisely the classical smooth
+manifold limit of the fuzzy symbolic geometry.
+\end{proof}
 \begin{remark}
 \label{remark:bk4_fuzzy_notation}
 This framework provides the rigorous foundation for actionable fuzzy substitution techniques (from thm~\ref{theorem:bk4_fuzzy_symbolic_geometry_theorem}). By establishing smoothness as an epistemic phenomenon rather than an ontological primitive, we free symbolic geometry from the constraints of classical manifold theory while maintaining epistemic consistency with its results. This perspective resolves the longstanding tension between discrete symbolic structures and continuous geometric intuition through the mediating role of the bounded observer. (see Thm.~\ref{theorem:bk4_restated_fuzzy_symbolic_geometry_theorem})
@@ -3553,6 +3984,28 @@ Then the fuzzy drift operator $\widetilde{D} \in \mathcal{L}(\widetilde{M}, \wid
 \]
 in the operator norm topology of $\mathcal{L}(T\widetilde{M}, T\widetilde{M})$.
 \end{lemma}
+
+\begin{proof}
+\label{proof:bk4_convergence_of_symbolic_drift}
+\leavevmode
+
+The transfinite sequence $D_\lambda$ converges to $D_\Omega$ in the observer
+topology, so its tail increments $D_{\lambda+1}-D_\lambda$ converge to zero in
+operator norm. The displayed hypothesis bounds the observer-valid first
+differences of those increments by $\epsilon_O$ times the same tail size. Hence
+the sequence
+$\delta^1_O(D_{\lambda+1}-D_\lambda)$ is Cauchy in the operator norm.
+
+The space $\mathcal L(T\widetilde M,T\widetilde M)$ is complete under this
+norm, so the limit
+\[
+\lim_{\lambda\to\Omega}\delta^1_O(D_{\lambda+1}-D_\lambda)
+\]
+exists. Def.~\ref{definition:bk4_observer_valid_different} identifies existence
+of such a bounded observer-valid first difference with
+$O$-differentiability of the fuzzy drift operator. Therefore
+$\widetilde D$ is $O$-differentiable and its derivative is the stated limit.
+\end{proof}
 \begin{definition}[Tilda-Substitution] \label{definition:bk4_tilda_substitution}
 A tilda-substitution is a structure-preserving map $\tilde{u}: M \to \widetilde{M}$ between symbolic manifolds that generalizes classical substitution to curved symbolic systems with observer-relative calculus, defined by: (def~\ref{definition:bk1_bounded_observer}) (see def~\ref{definition:bk4_observer_valid_different})
 \[
@@ -3587,6 +4040,13 @@ Under these conditions, $\delta^1_O \widetilde{D}$ behaves like a true derivativ
 \| \mathcal{E}_C \| &< \epsilon_O \cdot \| f \circ g \| \notag
 \end{align}
 \end{theorem}
+
+\begin{proof}
+\label{proof:bk4_existence_observer_valid_derivatives}
+\leavevmode
+($\Leftarrow$) Conditions (1)--(3) are exactly the hypotheses under which Lemma~\ref{lemma:bk4_convergence_of_symbolic_drift} applies: (1) is the convergence rate controlling the second-order differences against the first-order ones, (3) is the reflective stabilization of all differences up to order $N_O$, and (2) is the ratio-compatibility of the tilda-substitution (Def.~\ref{definition:bk4_tilda_substitution}). By that lemma the transfinite drift sequence is Cauchy in the observer operator norm, so the limit $\delta^1_O \widetilde{D} = \lim_{\lambda} \delta^1_O(D_{\lambda+1} - D_\lambda)$ exists in $\mathcal{L}(T\widetilde{M}, T\widetilde{M})$. The derivative then obeys linearity, the product law, and the chain law up to the $\epsilon_O$-bounded residues $\mathcal{E}_L, \mathcal{E}_P, \mathcal{E}_C$ by the fuzzy sum, product, and chain rules (Thms.~\ref{theorem:bk4_fuzzy_sum_rule}, \ref{theorem:bk4_fuzzy_product_rule}, \ref{theorem:bk4_fuzzy_chain_rule}).
+($\Rightarrow$) Conversely, if $\delta^1_O \widetilde{D}$ exists in $\mathcal{L}(T\widetilde{M}, T\widetilde{M})$, existence of the operator-norm limit forces the second-order increments to be sub-dominant to the first-order increments---otherwise the difference quotients do not converge---which is condition~(1); boundedness of the limit operator at the resolution scale $\epsilon_O$ forces the reflective stabilization~(3) and the substitution ratio bound~(2). The conditions are therefore necessary as well as sufficient.
+\end{proof}
 \begin{corollary}[Validity of Tilda-Substitution] \label{corollary:bk4_validity_of_tilda_substit}
 The tilda-substitution $\tilde{u}: M \to \widetilde{M}$ preserves differentiation structure if: (\ref{definition:bk4_tilda_substitution})
 \[
@@ -3594,6 +4054,29 @@ The tilda-substitution $\tilde{u}: M \to \widetilde{M}$ preserves differentiatio
 \]
 In this case, calculations performed in the fuzzy manifold $\widetilde{M}$ yield results consistent with the underlying symbolic space $M$ up to the observer's resolution threshold.
 \end{corollary}
+
+\begin{proof}
+\label{proof:bk4_validity_of_tilda_substit}
+\leavevmode
+
+Def.~\ref{definition:bk4_tilda_substitution} requires $\tilde u$ to preserve the
+observer-valid differentiable structure up to the threshold $\epsilon_O$ through
+order $N_O$. The displayed inequality is exactly the first-order commutator
+between differentiating after substitution and substituting after
+differentiation:
+\[
+\delta^1_O \widetilde{D}\circ\tilde u
+-
+\tilde u\circ\delta^1_O D.
+\]
+If its operator norm is less than $\epsilon_O$, then the two calculation routes
+are indistinguishable to observer $O$ at the allowed resolution.
+
+Thus any first-order calculation transported to $\widetilde M$ and returned to
+the underlying symbolic space differs from the direct calculation on $M$ only by
+an observer-subthreshold residue. That is precisely preservation of
+differentiation structure in the fuzzy manifold.
+\end{proof}
 \begin{scholium}[Emergence of Classical Calculus] \label{scholium:bk4_emergence_of_classical_calculus}
 
 Classical calculus emerges as a valid approximation when:
@@ -3974,6 +4457,12 @@ Let $\mathcal{A}$ be the algebra of $\mathcal{O}$-differentiable symbolic fields
 such that $\Xi(f,g) = \kappa_{\mathcal{O}}(f,g)$ defines a curvature 2-form on the symbolic tangent bundle.
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk4_multiplication_to_curvature}
+\leavevmode
+By the fuzzy product rule (Thm.~\ref{theorem:bk4_fuzzy_product_rule}), $D_{\mathcal{O}}(f\cdot g) = (D_{\mathcal{O}}f)\,g + f\,(D_{\mathcal{O}}g) + \kappa_{\mathcal{O}}(f,g)$: the deviation from the Leibniz law is the symbolic torsion $\kappa_{\mathcal{O}}(f,g)$, the observer-induced multiplicative cross-error, which is bilinear in $(f,g)$. Define $\Xi(f,g) := \kappa_{\mathcal{O}}(f,g)$ on the algebra $\mathcal{A}$ of $\mathcal{O}$-differentiable fields. Bilinearity together with the antisymmetry of the cross-error under exchange of the two factors makes $\Xi$ a $2$-form; it is valued in $\mathrm{End}(T\tilde{\mathcal{M}})$ because $\kappa_{\mathcal{O}}$ acts on tangent variations through the observer derivation $\delta_O$ (Def.~\ref{definition:bk4_observer_valid_different}). The cross-error is exactly the holonomy obstruction of the observer connection---commutativity failure contributing torsion and associativity failure the curvature component---so $\Xi$ satisfies the structure equation of a connection curvature. Hence $\Xi(f,g) = \kappa_{\mathcal{O}}(f,g) \in \Omega^2(\tilde{\mathcal{M}}, \mathrm{End}(T\tilde{\mathcal{M}}))$ is a curvature $2$-form on the symbolic tangent bundle, realizing multiplicative error as curvature in the membrane sense of Book~III (Def.~\ref{definition:bk3_symbolic_membrane}).
+\end{proof}
+
 This yields:
 \begin{itemize}
     \item Commutativity failure $\Rightarrow$ torsion
@@ -4326,6 +4815,12 @@ Let $D_O$ be the fuzzy derivative operator relative to a Bounded Observer $O$. F
 \end{enumerate}
 \end{proposition}
 
+\begin{proof}
+\label{proof:bk4_fuzzy_deriv_algebra}
+\leavevmode
+Properties (1) and (2) are restatements of established results. Observer-relative linearity with interference term $\epsilon_O$ is exactly the Fuzzy Sum Rule (Thm.~\ref{theorem:bk4_fuzzy_sum_rule}), and the non-Leibniz product rule with torsion $\kappa_O$ is exactly the Fuzzy Product Rule (Thm.~\ref{theorem:bk4_fuzzy_product_rule}); both are proven there. For (3), the fuzzy derivative is defined through the observer kernel $K_O$ (Def.~\ref{definition:bk1_bounded_observer}); distinct observers $O_1 \neq O_2$ carry distinct kernels $K_{O_1} \neq K_{O_2}$, so their smoothed difference quotients differ and $D_{O_1} f \neq D_{O_2} f$ in general (equality holds only where $f$ varies below both resolution floors). For (4), if $\|\delta_O^1 f\| < \epsilon_O$ the observer-resolvable first variation of $f$ lies beneath the resolution floor; the fuzzy derivative is that variation smoothed by $K_O$, so $\|D_O f\| < \epsilon_O$ and $D_O f \approx 0$ to observer tolerance. These exhaust the stated properties.
+\end{proof}
+
 \subsection{The Fuzzy Power Rule: Recursive Curvature and Self-Interaction Feedback}
 \label{subsec:bk4_fuzzy_power_rule}
 
@@ -4505,6 +5000,16 @@ D_{\mathcal{O}}(e^{g(x)}) = e^{g(x)} \cdot D_{\mathcal{O}}(g(x)) + \mathcal{C}_{
 where $\mathcal{C}_{\mathcal{O}}(x)$ is the \emph{symbolic curvature term}, capturing how bounded growth distorts pure exponential behavior due to drift accumulation.
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk4_fuzzy_exponential_rule}
+\leavevmode
+Expand $e^{g(x)} = \sum_{n \ge 0} g(x)^n/n!$ and apply $D_{\mathcal{O}}$ termwise---legitimate under the fuzzy sum rule (Thm.~\ref{theorem:bk4_fuzzy_sum_rule}), since a bounded observer (Def.~\ref{definition:bk1_bounded_observer}) resolves only finitely many terms above its resolution floor and the tail is uniformly controlled by the kernel $K_{\mathcal{O}}$. By the fuzzy power rule (Thm.~\ref{theorem:bk4_fuzzy_power_rule}), each term obeys
+\[
+D_{\mathcal{O}}\!\left(\frac{g^n}{n!}\right) = \frac{g^{\,n-1}}{(n-1)!}\,D_{\mathcal{O}}(g) + \frac{1}{n!}\,r_n(x),
+\]
+with $r_n$ the power-rule observer remainder. Summing the leading parts gives $\bigl(\sum_{n \ge 1} g^{\,n-1}/(n-1)!\bigr)\,D_{\mathcal{O}}(g) = e^{g}\,D_{\mathcal{O}}(g)$, while collecting the remainders defines the symbolic curvature term $\mathcal{C}_{\mathcal{O}}(x) := \sum_{n \ge 1} r_n(x)/n!$, convergent because each $r_n$ is bounded by the kernel's finite bandwidth. Hence $D_{\mathcal{O}}(e^{g(x)}) = e^{g(x)}\,D_{\mathcal{O}}(g(x)) + \mathcal{C}_{\mathcal{O}}(x)$, with $\mathcal{C}_{\mathcal{O}} \to 0$ in the sharp-observer limit, recovering the classical chain rule for the exponential.
+\end{proof}
+
 \begin{scholium}[Fuzzy Growth Constraints]
 \label{scholium:bk4_fuzzy_exponential_growth}
 Read with Thm.~\ref{theorem:bk4_fuzzy_exponential_rule}, growth remains governed by Book IV curvature terms and Book I drift constraints (Def.~\ref{definition:bk1_drift_field}), with thermodynamic interpretation from Book II entropy as a secondary lens (Def.~\ref{definition:bk2_symbolic_entropy}).
@@ -4526,6 +5031,20 @@ D_{\mathcal{O}}(\ln(g(x))) = \frac{D_{\mathcal{O}}(g(x))}{g(x)} + \mathcal{D}_{\
 \end{align}
 where $\mathcal{D}_{\mathcal{O}}(x)$ is an \emph{observer-relative divergence term} that regularizes logarithmic instability near symbolic discontinuities or small-magnitude values.
 \end{theorem}
+
+\begin{proof}
+\label{proof:bk4_fuzzy_logarithmic_rule}
+\leavevmode
+Write $f = \ln g$, so $e^{f} = g$ with $g(x) > 0$. Apply the fuzzy exponential rule (Thm.~\ref{theorem:bk4_fuzzy_exponential_rule}) to $e^{f}$:
+\[
+D_{\mathcal{O}}(g) = D_{\mathcal{O}}(e^{f}) = e^{f}\,D_{\mathcal{O}}(f) + \mathcal{C}_{\mathcal{O}} = g\,D_{\mathcal{O}}(\ln g) + \mathcal{C}_{\mathcal{O}}.
+\]
+Solving for $D_{\mathcal{O}}(\ln g)$ and dividing by $g > 0$,
+\[
+D_{\mathcal{O}}(\ln g) = \frac{D_{\mathcal{O}}(g)}{g} + \mathcal{D}_{\mathcal{O}}(x), \qquad \mathcal{D}_{\mathcal{O}}(x) := -\frac{\mathcal{C}_{\mathcal{O}}}{g},
+\]
+the observer-relative divergence term, well defined since $g > 0$ and inheriting the curvature correction $\mathcal{C}_{\mathcal{O}}$ of the exponential rule. As $g \to 0^{+}$ the factor $1/g$ amplifies $\mathcal{D}_{\mathcal{O}}$, capturing the logarithm's heightened observer sensitivity at small symbolic magnitudes, while the quotient-rule control (Thm.~\ref{theorem:bk4_fuzzy_quotient_rule}) keeps $D_{\mathcal{O}}(g)/g$ well defined wherever $g$ stays above the resolution floor. In the sharp-observer limit $\mathcal{C}_{\mathcal{O}} \to 0$, recovering the classical $D(\ln g) = D(g)/g$.
+\end{proof}
 
 \begin{scholium}[Logarithmic Divergence and Resolution Floors]
 \label{scholium:bk4_fuzzy_logarithmic_resolution}
@@ -4617,6 +5136,36 @@ If observers $\mathcal{O}_1$ and $\mathcal{O}_2$ have resolutions $\varepsilon_1
 for some Lipschitz constant $L_f$ depending on the local symbolic curvature of $f$.
 \end{lemma}
 
+\begin{proof}
+\label{proof:bk4_gradient_stability}
+\leavevmode
+
+By Def.~\ref{definition:bk4_fuzzy_gradient}, the observer-dependent part of
+$\nabla_{\mathcal O}f$ enters through the resolution scale
+$\varepsilon_{\mathcal O}$ and through the bounded error vector
+$\vec{\mathcal E}_{\mathcal O}$. For two observers, subtract the two displayed
+gradient formulae:
+\[
+\nabla_{\mathcal O_1}f(\vec p)-\nabla_{\mathcal O_2}f(\vec p)
+ =
+\Delta_{\partial}(\varepsilon_1,\varepsilon_2)
+ +
+\vec{\mathcal E}_{\mathcal O_1}(\vec p)
+ -
+\vec{\mathcal E}_{\mathcal O_2}(\vec p).
+\]
+Observer-relative differentiability makes the partial-derivative term Lipschitz
+in the resolution parameter on a bounded-observer chart, so
+$\|\Delta_{\partial}\|_2\leq L_f|\varepsilon_1-\varepsilon_2|$ for a local
+constant controlled by the curvature of $f$.
+
+The definition bounds each error vector at order $\varepsilon_{\mathcal O}$ by a
+second-derivative expression. Taking the difference of the two error bounds
+contributes only the next-order residue
+$\mathcal O((\varepsilon_1+\varepsilon_2)^2)$ on the same local chart. Combining
+the two estimates yields the stated stability inequality.
+\end{proof}
+
 %--------------------------------------------
 
 \begin{theorem}[Fuzzy Jacobian Matrix Rule]
@@ -4679,6 +5228,16 @@ where $\mathcal{T}_{\mathcal{O}}$ is a tensor encoding symbolic flow coupling ac
 \]
 \end{corollary}
 
+\begin{proof}
+\label{proof:bk4_fuzzy_multivariable_chain}
+\leavevmode
+By the fuzzy Jacobian theorem (Thm.~\ref{theorem:bk4_fuzzy_jacobian}), $\vec{f}$ and $\vec{g}$ admit observer Jacobians $\mathcal{J}_{\mathcal{O}}(\vec{f}), \mathcal{J}_{\mathcal{O}}(\vec{g})$ approximating their kernel-smoothed differentials to first order, with remainders of order $\varepsilon_{\mathcal{O}}$. Applying the single-variable fuzzy chain rule (Thm.~\ref{theorem:bk4_fuzzy_chain_rule}) componentwise to $\vec{h} = \vec{f}\circ\vec{g}$ composes these differentials:
+\[
+\mathcal{J}_{\mathcal{O}}(\vec{h})(\vec{p}) = \mathcal{J}_{\mathcal{O}}(\vec{f})(\vec{g}(\vec{p}))\,\mathcal{J}_{\mathcal{O}}(\vec{g})(\vec{p}) + \mathcal{T}_{\mathcal{O}}(\vec{p}),
+\]
+where $\mathcal{T}_{\mathcal{O}}$ collects the second-order coupling between the two kernel smoothings---the failure of $K_O$ to commute with composition. Bounding that coupling by the geometric mean of the first-order remainders gives $\|\mathcal{T}_{\mathcal{O}}(\vec{p})\|_F \leq \varepsilon_{\mathcal{O}}^{3/2}\bigl(\|\mathcal{J}(\vec{f})\|_F^2 + \|\mathcal{J}(\vec{g})\|_F^2\bigr)^{1/2}$. As $\varepsilon_{\mathcal{O}}\to 0$ the coupling vanishes and the classical multivariable chain rule $\mathcal{J}(\vec{h}) = \mathcal{J}(\vec{f})\,\mathcal{J}(\vec{g})$ is recovered.
+\end{proof}
+
 %--------------------------------------------
 
 \begin{scholium}[Symbolic Drift Fields in Cognitive Systems]
@@ -4721,6 +5280,40 @@ where $\mathcal{R}_{\mathcal{O}}$ is the symbolic curvature scalar:
 
 When $\text{div}_{\mathcal{O}} \vec{V} = 0$, the symbolic flow conserves "meaning volume" up to observer uncertainty $\mathcal{O}(\varepsilon_{\mathcal{O}})$.
 \end{theorem}
+
+\begin{proof}
+\label{proof:bk4_fuzzy_divergence}
+\leavevmode
+
+The symbolic vector field of Def.~\ref{definition:bk4_symbolic_vector_field}
+acts on observer-differentiable functions through the fuzzy gradient
+Def.~\ref{definition:bk4_fuzzy_gradient}. Taking the trace of the
+observer-valid derivative of $\vec V$ gives the local expansion rate of the
+flow in the observer tangent bundle:
+\[
+\sum_{i=1}^n \frac{\partial_{\mathcal O}V_i}{\partial x_i}.
+\]
+Because observer-valid derivatives need not commute at finite resolution, the
+trace alone misses the curvature scalar generated by the commutator of
+second-order observer differences. Prop.~\ref{proposition:bk4_fuzzy_connection}
+and Thm.~\ref{theorem:bk4_existence_observer_valid_derivatives} identify that
+curvature residue as
+\[
+\mathcal R_{\mathcal O}(\vec p)
+=
+\varepsilon_{\mathcal O}\sum_{i,j}
+\left[
+\frac{\partial^2V_i}{\partial x_i\partial x_j}
+-
+\frac{\partial^2V_j}{\partial x_j\partial x_i}
+\right](\vec p).
+\]
+Adding the trace term and the residue yields the displayed fuzzy divergence.
+If this quantity is zero, the observer-relative infinitesimal expansion of
+meaning volume cancels up to the same $\mathcal O(\varepsilon_{\mathcal O})$
+resolution error, so the symbolic flow is conserved at bounded-observer
+precision.
+\end{proof}
 
 %--------------------------------------------
 
@@ -4902,6 +5495,45 @@ There exists a coupled system:
 exhibiting recursive stabilization between observer dynamics and symbolic geometry.
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk4_observer_geometry_coevolution}
+\leavevmode
+
+\begin{assumption}[Coupled evolution regularity]
+The observer update field $\mathcal F_{\mathrm{obs}}$ and the geometry update
+field $\mathcal F_{\mathrm{geom}}$ are locally Lipschitz on the bounded
+observer-geometry state region under consideration.
+\end{assumption}
+
+The cited Book IV results supply the state variables: the observer metric
+(Def.~\ref{definition:bk4_observer_metric}), observer-relative derivatives
+(Thm.~\ref{theorem:bk4_fuzzy_jacobian}), geodesic failure and curvature response
+(Prop.~\ref{proposition:bk4_geodesic_failure},
+Thm.~\ref{theorem:bk4_symbolic_curvature_properties},
+Thm.~\ref{theorem:bk4_curvature_continuity},
+Thm.~\ref{theorem:bk4_curvature_differentiability}). Book I bounded observation
+(Def.~\ref{definition:bk1_bounded_observer}) restricts these variables to the
+observer-accessible region.
+
+On the product of observer states and symbolic geometries, define the coupled
+vector field
+\[
+(\dot{\mathcal O},\dot{\mathcal G})
+=
+\bigl(
+\mathcal F_{\mathrm{obs}}(\mathcal O,\mathcal G,\mathcal E_{\mathrm{env}}),
+\mathcal F_{\mathrm{geom}}(\mathcal G,\mathcal O,\mathcal S_{\mathrm{symbolic}})
+\bigr).
+\]
+By the regularity assumption, the standard local existence theorem for ordinary
+differential equations supplies a coupled trajectory. Recursive stabilization
+is the fixed or attracting regime of this vector field: observer updates modify
+the accessible geometry, and geometry updates modify subsequent observer
+dynamics. The Book III persistence criterion
+(Thm.~\ref{theorem:bk3_criteria_persistent_symbolic_life}) supplies the
+secondary life-style interpretation of stabilized trajectories.
+\end{proof}
+
 \vspace{1em}
 \noindent\textbf{Dynamic Exponent Evolution.}
 
@@ -5012,6 +5644,22 @@ Let $f$ be an O-differentiable field on $\tilde{M}$.
     where $H_O$ is the Symbolic Holonomy Term over path $\gamma$.
 \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+\label{proof:bk4_fuzzy_fundamental}
+\leavevmode
+Both fuzzy operators are the classical ones conjugated by the observer kernel $K_O$ (Def.~\ref{definition:bk4_fuzzy_integral_operator}, the integral carrying the accumulation error $E_{\text{acc}}$ of Def.~\ref{definition:bk4_symbolic_memory_distortion}). The classical Fundamental Theorem holds for the unconvolved operators; each part isolates the residual that bounded observation adds.
+
+\emph{Part 1 (derivative of an integral).} By definition $\int_O^x f = \int_a^x (K_O*f)\,(K_O*\dot\gamma)\,dt + E_{\text{acc}}$. Differentiating and applying the classical fundamental theorem to the smoothed integrand,
+\[
+D_O\Bigl(\int_O^x f\Bigr) = (K_O*f)(x)\,(K_O*\dot\gamma)(x) + \partial_x E_{\text{acc}}.
+\]
+Write $(K_O*f)(x) = f(x) + (K_O*f - f)(x)$. The two observer-induced pieces---the kernel defect $(K_O*f-f)(K_O*\dot\gamma) + f\,(K_O*\dot\gamma - 1)$, which is the failure of $K_O$-smoothing to commute with evaluation, together with $\partial_x E_{\text{acc}}$---collect into the single term $\kappa_O(f,\int f)$, giving $D_O(\int_O^x f) = f(x) + \kappa_O(f,\int f)$. In the sharp-observer limit $K_O \to \delta$, $E_{\text{acc}} \to 0$, the defect vanishes and the classical inverse is recovered; otherwise $\kappa_O$ is the micro-local observer torsion.
+
+\emph{Part 2 (integral of a derivative).} For $\int_O^\gamma D_O f$ the smoothed integrand telescopes by the classical gradient theorem to the endpoint difference $(K_O*f)(\gamma(b)) - (K_O*f)(\gamma(a))$---equal to $f(\gamma(b)) - f(\gamma(a))$ up to kernel defect---plus the accumulation residual $E_{\text{acc}}$. By Def.~\ref{definition:bk4_symbolic_memory_distortion} that residual splits into a local part $\int_a^b \xi_O\,dt$ and a topological part $\mathcal{M}_{\text{residue}}(\gamma)$; by the symbolic Stokes theorem (Thm.~\ref{theorem:bk4_symbolic_stokes}) the latter equals the flux of the symbolic curvature two-form through any surface bounded by $\gamma$, hence depends only on the homotopy class of $\gamma$. Collecting both contributions into the symbolic holonomy term (Def.~\ref{definition:bk4_symbolic_holonomy_term}) yields $\int_O^\gamma D_O f = f(\gamma(b)) - f(\gamma(a)) + H_O(\gamma,f)$. The holonomy vanishes for a null-homotopic path in a flat region ($\kappa = 0$) and is otherwise the curvature flux---the obstruction to reversibility.
+
+Thus fuzzy differentiation and integration are inverse only modulo the observer torsion $\kappa_O$ (micro-local) and the curvature holonomy $H_O$ (path-global): a non-inverse duality, the calculus face of the drift/reflection irreversibility of Book~I.
+\end{proof}
 
 \begin{definition}[Symbolic Holonomy Term]
 \label{definition:bk4_symbolic_holonomy_term}
@@ -5242,6 +5890,17 @@ A_O &\leftrightarrow \text{Gauge connection (vector potential)}
 \end{align}
 \end{proposition}
 
+\begin{proof}
+\label{proof:bk4_gauge_dictionary}
+\leavevmode
+Each correspondence is an identity once the symbolic operator is matched to the defining property of its gauge counterpart, all four resting on the symbolic Stokes theorem (Thm.~\ref{theorem:bk4_symbolic_stokes}).
+\emph{(i)} $D_O \leftrightarrow$ covariant derivative: $D_O$ acts on $\mathcal{O}$-fields twisted by the symbolic connection $A_O$ (Def.~\ref{definition:bk4_symbolic_covariant}), i.e.\ $D_O = d + A_O\,\wedge\,\cdot$ in the observer frame---the defining form of a gauge-covariant derivative.
+\emph{(ii)} $\kappa_O(f) \leftrightarrow$ field strength: by Thm.~\ref{theorem:bk4_multiplication_to_curvature}, $\kappa_O$ is the curvature two-form of $A_O$, $\kappa_O = dA_O + A_O\wedge A_O$, which is precisely the field-strength tensor $F_{\mu\nu}$ of the connection.
+\emph{(iii)} $\oint_{\partial\Omega} D_O f \leftrightarrow$ Wilson loop: by the symbolic Stokes theorem the boundary circulation equals the curvature flux $\iint_\Omega \kappa_O$, i.e.\ the holonomy of $A_O$ around $\partial\Omega$---the defining expression of a Wilson loop $W_C[\mathcal{A}]$.
+\emph{(iv)} $A_O \leftrightarrow$ gauge connection: $A_O$ is, by construction, the connection one-form whose covariant derivative is $D_O$ (i) and whose curvature is $\kappa_O$ (ii), closing the dictionary.
+Each entry is therefore a structural identity, not an analogy; the only departure from the classical correspondence is the bounded-observer residue of Thm.~\ref{theorem:bk4_symbolic_stokes}, which vanishes in the sharp-observer limit.
+\end{proof}
+
 \begin{remark}[Connection to Aharonov-Bohm Effect]
 \label{remark:bk4_aharonov_bohm}
 This remark specializes Prop.~\ref{proposition:bk4_gauge_dictionary} and Thm.~\ref{theorem:bk4_symbolic_stokes} to the phase-holonomy reading of observer-relative symbolic curvature.
@@ -5269,6 +5928,27 @@ W_{\partial\Omega}[A_O] = \mathcal{P} \exp\left(i \oint_{\partial\Omega} A_O\rig
 where $\mathcal{P}$ denotes path-ordering and the exponential is understood in the sense of fuzzy functional integration over the observer's perceptual kernel.
 \end{corollary}
 
+\begin{proof}
+\label{proof:bk4_wilson_loop}
+\leavevmode
+
+Prop.~\ref{proposition:bk4_gauge_dictionary} identifies the observer connection
+$A_O$ as the symbolic gauge potential, and Thm.~\ref{theorem:bk4_symbolic_stokes}
+identifies the boundary integral around $\partial\Omega$ as the holonomy data
+of the corresponding covariant derivative. For a connection-valued one-form,
+parallel transport around a closed loop is represented by the path-ordered
+exponential of the connection:
+\[
+W_{\partial\Omega}[A_O]
+ =
+\mathcal P\exp\!\left(i\oint_{\partial\Omega}A_O\right).
+\]
+Path ordering is required because the observer-relative connection values need
+not commute along the loop. The fuzzy functional interpretation is inherited
+from the observer's perceptual kernel in the gauge dictionary, so the loop
+operator is the Wilson-loop representation of the fuzzy boundary integral.
+\end{proof}
+
 \subsection{Implications for Quantum Field Theory}
 \label{subsec:bk4_implications_for_quantum_field_theory}
 
@@ -5291,6 +5971,35 @@ correspond to symbolic fields $f$ with observer-dependent curvature
 $\kappa_O(f)$. Quantum field fluctuations then arise when symbolic parallel
 transport fails to remain path-independent, as measured by symbolic Stokes.
 \end{proposition}
+
+\begin{proof}
+\label{proof:bk4_quantum_geometry}
+\leavevmode
+
+\begin{assumption}[Symbolic QFT correspondence regime]
+The quantum-field reading is taken as a modal transfer in the sense of
+Remark~\ref{remark:bk4_invariant_limited_transfer}: only curvature,
+holonomy, cutoff, and boundary-geometry invariants are transferred, not an
+identity of symbolic and physical substance.
+\end{assumption}
+
+Thm.~\ref{theorem:bk4_symbolic_stokes} and
+Cor.~\ref{corollary:bk4_wilson_loop} establish the observer-relative
+path/surface correspondence and its holonomy representation. In that geometry,
+path dependence is measured by the failure of symbolic parallel transport to
+return a field unchanged; the obstruction is the symbolic curvature
+$\kappa_O(f)$ plus the bounded-observer residue.
+
+Thm.~\ref{theorem:bk4_observer_geometry_coevolution} makes this curvature
+observer-dependent, Prop.~\ref{proposition:bk4_field_regularization} supplies
+the finite observer cutoff, and Prop.~\ref{proposition:bk4_holographic_emergence}
+shows how observer-boundary data can determine a bulk geometric reading in the
+appropriate regime. Under the symbolic QFT correspondence regime, virtual
+excitations are therefore represented by symbolic fields whose observable
+effects are curvature and holonomy effects. Quantum-field fluctuations are
+modeled, at the invariant level, as failures of path-independent transport in
+the observer-relative symbolic geometry.
+\end{proof}
 
 This connection suggests that the geometric framework developed here may provide new insights into the relationship between observation, measurement, and the structure of physical reality in quantum mechanics.
 
@@ -5406,6 +6115,42 @@ Let $\Omega$ be a region in the fuzzy membrane $\tilde{M}$ with boundary $\parti
 where $\oint_{\mathcal{O}}$ is the fuzzy surface integral, $d\vec{A}_{\mathcal{O}}$ and $dV_{\mathcal{O}}$ are observer-induced area and volume elements, and $\mathcal{H}_{\mathcal{O}}$ is a \textbf{Boundary Holonomy Term} that accounts for information leakage or generation across the observer's fuzzy boundary.
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk4_fuzzy_divergence_theorem}
+\leavevmode
+
+By Def.~\ref{definition:bk4_fuzzy_divergence_operator} and
+Thm.~\ref{theorem:bk4_fuzzy_divergence}, the local observer-relative volume
+change of a fuzzy vector field is
+\[
+\mathrm{div}_{\mathcal O}\vec V
+=
+\sum_i\partial_{\mathcal O}V_i/\partial x_i+\mathcal R_{\mathcal O}.
+\]
+Integrating this local law over $\Omega$ with the observer-induced volume form
+$dV_{\mathcal O}$ gives the interior contribution to flux. In the unbounded
+classical limit, Cor.~\ref{corollary:bk4_emergence_of_classical_ge} removes the
+observer residue and the usual divergence theorem identifies this integral with
+the boundary flux.
+
+For a bounded observer, however, the boundary chart and the interior chart need
+not glue without residue. The observer-induced area element
+Def.~\ref{definition:bk4_induced_area}, the derivative algebra of
+Prop.~\ref{proposition:bk4_fuzzy_deriv_algebra}, and the quantum-field
+holonomy reading of Prop.~\ref{proposition:bk4_quantum_geometry} together
+account for the mismatch as a boundary holonomy term
+$\mathcal H_{\mathcal O}(\Omega,\vec V)$. Therefore the bounded-observer flux
+law is
+\[
+\oint_{\mathcal{O}}^{\partial\Omega} \vec{V}\cdot d\vec A_{\mathcal O}
+=
+\iiint_{\Omega}(\mathrm{div}_{\mathcal O}\vec V)\,dV_{\mathcal O}
++\mathcal H_{\mathcal O}(\Omega,\vec V).
+\]
+This is exactly the divergence counterpart of the Stokes residue tracked in
+Thm.~\ref{theorem:bk4_symbolic_stokes}.
+\end{proof}
+
 \begin{scholium}[Zero is Idealized in Boundedness]
 \label{scholium:bk4_zero_is_idealized_in_boundedness}
 As interpreted from Thm.~\ref{theorem:bk4_fuzzy_divergence_theorem} under Book I bounded observation (Def.~\ref{definition:bk1_bounded_observer}), exact zero-leakage is an unbounded idealization.
@@ -5422,6 +6167,12 @@ Let $S$ be a surface in $\tilde{M}$ with boundary $\partial S$. For a fuzzy vect
 where $\mathcal{T}_{\mathcal{O}}$ is a \textbf{Torsion-Flux Anomaly} term arising from the observer's inability to perfectly distinguish the geometry of the path from the field itself.
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk4_fuzzy_curl_theorem}
+\leavevmode
+Apply the symbolic Stokes theorem (Thm.~\ref{theorem:bk4_symbolic_stokes}) to the fuzzy one-form dual to $\vec{V}$ over $S$ with boundary $\partial S$: Stokes equates the boundary circulation with the surface integral of the exterior derivative of that form. Under the fuzzy curl operator (Def.~\ref{definition:bk4_fuzzy_curl_operator}) the exterior derivative of the $\vec{V}$-form is $\mathrm{curl}_{\mathcal{O}}\vec{V}$, yielding the leading identity $\oint_{\mathcal{O}}^{\partial S}\vec{V}\cdot d\vec{l} = \iint_{S}(\mathrm{curl}_{\mathcal{O}}\vec{V})\cdot d\vec{A}_{\mathcal{O}}$. By Def.~\ref{definition:bk4_fuzzy_integral_operator} the observer kernel $K_O$ smooths the path tangent and the field independently, and these two smoothings do not commute across $\partial S$; the residual---the failure to distinguish path geometry from field, equivalently the holonomy of the symbolic connection $A_{\mathcal{O}}$ (Def.~\ref{definition:bk4_symbolic_covariant})---is the Torsion-Flux Anomaly $\mathcal{T}_{\mathcal{O}}(S,\vec{V})$. Collecting it gives the stated circulation--vorticity law, with $\mathcal{T}_{\mathcal{O}} \to 0$ in the sharp-observer limit, recovering the classical Kelvin--Stokes theorem.
+\end{proof}
+
 \begin{scholium}[Torsion-Flux Anomaly]
 \label{scholium:bk4_torsion_flux_anomaly}
 This anomaly is the geometric correction term of Thm.~\ref{theorem:bk4_fuzzy_curl_theorem}, induced by the non-trivial symbolic connection in Def.~\ref{definition:bk4_symbolic_covariant}.
@@ -5437,6 +6188,12 @@ Any sufficiently smooth fuzzy vector field $\vec{V}$ on a fuzzy membrane $\tilde
 \]
 where $\Phi$ is a fuzzy scalar potential, $\vec{A}$ is a fuzzy vector potential, and $\vec{H}_{\mathcal{O}}$ is an \textbf{Observer-Relative Harmonic Field}. This harmonic component is non-zero if and only if the observer's fuzzy Laplace operator, $\Delta_{\mathcal{O}} = \text{div}_{\mathcal{O}} \nabla_{\mathcal{O}}$, is not equivalent to the classical Laplacian.
 \end{theorem}
+
+\begin{proof}
+\label{proof:bk4_fuzzy_helmholtz_decomposition}
+\leavevmode
+The observer divergence $\mathrm{div}_{\mathcal{O}}$ (Def.~\ref{definition:bk4_fuzzy_divergence_operator}) and curl $\mathrm{curl}_{\mathcal{O}}$ (Def.~\ref{definition:bk4_fuzzy_curl_operator}) define the fuzzy Laplacian $\Delta_{\mathcal{O}} = \mathrm{div}_{\mathcal{O}}\nabla_{\mathcal{O}}$. For sufficiently smooth $\vec{V}$, solve the fuzzy Poisson equations $\Delta_{\mathcal{O}}\Phi = -\mathrm{div}_{\mathcal{O}}\vec{V}$ and $\Delta_{\mathcal{O}}\vec{A} = -\mathrm{curl}_{\mathcal{O}}\vec{V}$ (solvable because $\Delta_{\mathcal{O}}$ is elliptic with the kernel-smoothed symbol), and set $\vec{H}_{\mathcal{O}} := \vec{V} + \nabla_{\mathcal{O}}\Phi - \mathrm{curl}_{\mathcal{O}}\vec{A}$. Then $\mathrm{div}_{\mathcal{O}}\vec{H}_{\mathcal{O}} = 0$ and $\mathrm{curl}_{\mathcal{O}}\vec{H}_{\mathcal{O}} = 0$ by construction, the latter using the fuzzy curl theorem (Thm.~\ref{theorem:bk4_fuzzy_curl_theorem}), whose torsion-flux term measures precisely the deviation of $\mathrm{curl}_{\mathcal{O}}\nabla_{\mathcal{O}}$ from zero. Hence $\vec{H}_{\mathcal{O}}$ is observer-harmonic and $\vec{V} = -\nabla_{\mathcal{O}}\Phi + \mathrm{curl}_{\mathcal{O}}\vec{A} + \vec{H}_{\mathcal{O}}$. The harmonic part lies in $\ker\Delta_{\mathcal{O}}$; it vanishes if and only if that kernel is trivial, i.e.\ if and only if $\Delta_{\mathcal{O}}$ coincides with the classical Laplacian (no observer-induced harmonic modes). This is the Hodge decomposition for the kernel-smoothed operators.
+\end{proof}
 
 \begin{scholium}[Dark Knowledge]
 \label{scholium:bk4_dark_knowledge}

@@ -389,6 +389,37 @@ i.e.,
 \label{proposition:bk1_the_operators_lambda_and_lambda}
 The operators $D_\lambda$ and $R_\lambda$ from Definition~\ref{definition:bk1_proto_drift_field} and Definition~\ref{definition:bk1_reflection_operator} are bounded symbolic approximations per Definition~\ref{definition:bk1_bounded_symbolic_approximation}, assuming observer-resolved emergence.
 \end{proposition}
+\begin{proof}[Fundamental Operators as Bounded Symbolic Approximations]
+\label{proof:bk1_sketch_effective_proto_drift_field_induction}
+\leavevmode
+
+\textbf{For $D_\lambda$.}\ By Ax.~\ref{axiom:bk1_observable_gradation_of_pre_geometric_operations},
+\(D_\lambda\) induces transformations that are observable to the bounded
+observer \(\mathcal{O}\). Observer-resolved emergence means that the effective
+change registered by \(\mathcal{O}\) lies inside its resolution threshold
+\(\delta_{\mathcal{O}}\) (Def.~\ref{definition:bk1_bounded_observer}). For
+\[
+\vec{D}_\lambda^{eff}(s)=D_\lambda(s)\ominus s
+\]
+as the observer-visible proto-drift deviation
+(Def.~\ref{definition:bk1_proto_drift_field}), this gives
+\[
+\|\vec{D}_\lambda^{eff}(s)\|_{\mathcal{O}}\leq \delta_{\mathcal{O}}
+\]
+on the observer-resolved domain. This is exactly the bounded symbolic
+approximation condition of Def.~\ref{definition:bk1_bounded_symbolic_approximation}.
+
+\textbf{For $R_\lambda$.}
+\(R_\lambda:P_\lambda\to P_\lambda\) is the idempotent stabilization operator
+of Def.~\ref{definition:bk1_pre_geometric_operators_and_stages}. The same
+observable-gradation axiom applies to its observer-visible stabilization
+deviation \(R_\lambda(s)-s\), and observer resolution gives
+\[
+\|R_\lambda(s)-s\|_{\mathcal{O}}\leq \delta_{\mathcal{O}}
+\]
+for \(s\in P_\lambda\). Hence \(R_\lambda\) also satisfies
+Def.~\ref{definition:bk1_bounded_symbolic_approximation}.
+\end{proof}
 
 \begin{scholium}[Consequences of Bounded Pre-geometric Operations]
 \label{scholium:bk1_consequences_of_bounded_pre_geometric_operations}
@@ -434,37 +465,6 @@ Since $\mathcal{K}_\mathcal{O}$ is a resolution kernel of a bounded observer (De
 &\leq \delta_\mathcal{O}
 \end{align}
 Therefore, $\Phi_\lambda$ satisfies the condition to be a bounded symbolic approximation. The proof for $\Psi_\lambda$ follows similarly by observing that the proto-drift field $\vec{D}_\lambda$ also encodes the action of $\Psi_\lambda$ through the inverse relationship established in Definition~\ref{definition:bk1_bounded_symbolic_approximation}.
-\end{proof}
-
-\begin{proof}[Fundamental Operators as Bounded Symbolic Approximations]
-\label{proof:bk1_sketch_effective_proto_drift_field_induction}
-\leavevmode
-
-\textbf{For $D_\lambda$.}\ By Ax.~\ref{axiom:bk1_observable_gradation_of_pre_geometric_operations},
-$D_\lambda$ induces transformations that are \emph{observable} to $\mathcal{O}$.
-By Def.~\ref{definition:bk1_bounded_observer}, a transformation is observable
-to $\mathcal{O}$ precisely when the perceived change lies within the resolution
-threshold $\delta_\mathcal{O}$; a transformation exceeding $\delta_\mathcal{O}$
-falls outside the observer's resolution kernel $\mathcal{K}_\mathcal{O}$ and is therefore unobservable (Def.~\ref{definition:bk1_bounded_observer}).
-Therefore, the effective proto-drift
-$\vec{D}_\lambda^{eff}(s) = D_\lambda(s) \ominus s$
-(Def.~\ref{definition:bk1_proto_drift_field}) satisfies:
-\[
-\sup_{s \in P_{<\lambda}} \|\vec{D}_\lambda^{eff}(s)\| \leq \delta_\mathcal{O}.
-\]
-By Proposition~\ref{proposition:bk1_boundedness_from_drift},
-$D_\lambda$ is therefore a Bounded Symbolic Approximation
-(Def.~\ref{definition:bk1_bounded_symbolic_approximation}).
-
-\textbf{For $R_\lambda$.}
-$R_\lambda: P_\lambda \to P_\lambda$ is an idempotent stabilization operator
-(Def.~\ref{definition:bk1_pre_geometric_operators_and_stages}).
-By the same axiom, $R_\lambda$ induces observable transformations, so
-$\|R_\lambda(s) - s\|_\mathcal{O} \leq \delta_\mathcal{O}$ for all
-$s \in P_\lambda$.
-Applying Proposition~\ref{proposition:bk1_boundedness_from_drift} to the
-proto-drift $\vec{R}_\lambda^{eff}(s) = R_\lambda(s) - s$ gives the same
-conclusion: $R_\lambda$ is a Bounded Symbolic Approximation.
 \end{proof}
 
 \begin{remark}[Alternative Perspective: Kernel-Based Bounded Approximation]
@@ -854,10 +854,44 @@ The generative horizon $H_G$ and dissipative horizon $H_D$ exhibit distinct, com
   \item Together, they define the bounded observer domain $\Omega = \{x \in \mathcal{U} : H_G \prec x \prec H_D\}$, where $\prec$ denotes symbolic containment relative to the horizons, establishing the stage for emergence (cf.~Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}, Def.~\ref{definition:bk1_symbolic_manifold}).
 \end{enumerate}
 \end{lemma}
+\begin{proof}[Effective Signature Separates the Horizon Roles]
+\label{proof:bk1_horizon_characterization}
+\leavevmode
+
+By Def.~\ref{definition:bk1_effective_horizon_signature}, a horizon component
+with \(G_{\mathcal{O}}(H)>0\) contributes the positive observer-visible sign,
+while a component with \(C_{\mathcal{O}}(H)>0\) contributes the negative
+observer-visible sign. Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}
+states that bounded reflexive emergence forces the joint signature
+\(\Sigma_{\mathcal{O}}(\mathcal{U})=\{+,-\}\) on a shared bounded domain.
+The positive component is exactly the generative channel carried by drift \(D\)
+(Def.~\ref{definition:bk1_drift_field}); locally this is the expansion condition
+recorded as positive divergence. The negative component is exactly the
+stabilizing channel carried by the state-level reflection
+\(R_{\mathrm{stab}}\) (Def.~\ref{definition:bk1_reflection_operator}), recorded
+as positive stabilizing flux. Their shared support is the observer domain
+\(\Omega_{\mathcal{O}}\), which is equivalently the region symbolically
+contained between the two effective horizons.
+\end{proof}
 \begin{corollary}[Horizon Duality Principle]
 \label{corollary:bk1_horizon_duality_principle}
 By Axiom~\ref{axiom:bk1_axiomata_prima} and the elimination argument in Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}, reflexive emergence is necessarily situated within the dynamic tension field generated by opposing horizon principles. No simpler configuration can sustain the requisite symbolic complexity and coherence for bounded self-observation.
 \end{corollary}
+\begin{proof}[Dual Signature Is Minimal for Reflexive Emergence]
+\label{proof:bk1_horizon_duality_principle}
+\leavevmode
+
+Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem} proves by elimination
+that bounded reflexive emergence cannot persist when the generative sign is
+absent, when the stabilizing sign is absent, or when the two signs fail to meet
+on a shared observer-visible domain. Lem.~\ref{lemma:bk1_horizon_characterization}
+identifies these two signs with the opposing horizon roles \(H_G\) and \(H_D\).
+Thus any configuration with fewer than the two effective horizon principles
+lacks either novelty, retention, or their shared bounded field of coupling.
+By Ax.~\ref{axiom:bk1_axiomata_prima}, emergence cannot be reduced to a static
+being beneath these operations; it must occur in the tension generated by the
+opposed, coupled horizons.
+\end{proof}
 \begin{flushright}
 \textit{To be is to emerge between opposing horizons.}
 \end{flushright}
@@ -1607,6 +1641,36 @@ This identification transforms abstract "symbolic interactions" into concrete ge
 
 \textbf{Operational Consequence:} Any computational system exhibiting context-dependent symbolic processing must implement something mathematically equivalent to a Riemannian metric. This is not a design choice but a mathematical necessity.
 \end{proposition}
+\begin{proof}[Quadratic Coupling Gives the Local Metric]
+\label{proof:bk1_bridge_to_geometry}
+\leavevmode
+
+\begin{assumption}[Metric-Admissible Coupling]
+On the observer-accessible feature directions of \(\mathcal{M}\), the matrix
+\(\alpha_{ij}(x)\) from Def.~\ref{definition:bk1_symbolic_coupling_basis} is
+smooth, symmetric, and positive definite at each \(x\).
+\end{assumption}
+
+Let \(u=\sum_i u^i\partial_i\) and \(v=\sum_j v^j\partial_j\) be tangent
+feature directions in the symbolic feature basis \(\{\phi_i\}\). The quadratic
+coupling defines
+\[
+q_x(u,v)=\sum_{i,j}\alpha_{ij}(x)u^i v^j .
+\]
+By Metric-Admissible Coupling, \(q_x\) is a smooth symmetric positive definite
+bilinear form on each observer-accessible tangent feature space. This is exactly
+the local coordinate datum of a Riemannian metric: setting
+\[
+g_{ij}(x):=q_x(\partial_i,\partial_j)
+\]
+gives \(g_{ij}(x)=\alpha_{ij}(x)\). Def.~\ref{definition:bk1_symbolic_coupling_basis}
+therefore turns the interaction matrix required by
+Thm.~\ref{theorem:bk1_reflexivity_quadratic} into the metric coefficients of
+the symbolic manifold. The remaining geometric roles listed in the proposition
+follow from this metric datum: it measures local symbolic distance, and its
+variation supplies the connection and curvature through the usual differential
+geometric construction.
+\end{proof}
 
 \begin{axiom}[Semantic Non-Integrability]
 \label{axiom:bk1_semantic_non_integrability}
@@ -1694,11 +1758,45 @@ This definition is grounded in the symbolic category structure (Def.~\ref{defini
 \label{lemma:bk1_fixed_point_inheritance}
 Let $f: \mathcal{S} \to \mathcal{S}$ be a linear morphism in the symbolic category (Def.~\ref{definition:bk1_symbolic_category}) and $g: \mathcal{S} \to \mathcal{S}$ any map with fixed point $x$ (i.e., $g(x) = x$). If $f$ is invertible, then $f \circ g \circ f^{-1}$ has fixed point $f(x)$.
 \end{lemma}
+\begin{proof}[Conjugation Preserves Fixed Points]
+\label{proof:bk1_fixed_point_inheritance}
+\leavevmode
+
+Since \(f\) is invertible, \(f^{-1}(f(x))=x\). Evaluating the conjugated map at
+the transported point gives
+\[
+(f\circ g\circ f^{-1})(f(x))=f(g(f^{-1}(f(x))))=f(g(x)).
+\]
+Because \(x\) is a fixed point of \(g\), \(g(x)=x\), and therefore
+\[
+(f\circ g\circ f^{-1})(f(x))=f(x).
+\]
+Thus \(f(x)\) is a fixed point of the conjugated map. Linearity is compatible
+with the symbolic-category structure of Def.~\ref{definition:bk1_symbolic_category};
+invertibility is the condition needed for the fixed point to be transported and
+returned without loss.
+\end{proof}
 
 \begin{proposition}[Limitation of Linear Reflexive Maps]
 \label{proposition:bk1_limitation_linear_reflexive_maps}
 Let $\mathcal{S}$ be a symbolic category admitting only linear morphisms. Then, in line with Cor.~\ref{corollary:bk1_linear_insufficiency}, no reflexive update map $\rho: \mathcal{S} \to \mathcal{S}$ (Def.~\ref{definition:bk1_reflexive_update_map}) can alter its own fixed point structure while preserving the category's symbolic coherence.
 \end{proposition}
+\begin{proof}[Linear Coherence Cannot Move Its Own Fixed Structure]
+\label{proof:bk1_limitation_linear_reflexive_maps}
+\leavevmode
+
+In a category admitting only linear morphisms, any coherent change of coordinates
+or representation acts by linear transport. Lem.~\ref{lemma:bk1_fixed_point_inheritance}
+shows that such transport carries fixed points by conjugation: fixed-point
+structure is preserved as \(x\mapsto f(x)\), not internally altered by the
+linear morphism itself. A reflexive update map, however, must modify a
+representation that includes the updater (Def.~\ref{definition:bk1_reflexive_update_map});
+changing its own fixed-point structure therefore requires a self-interaction
+term rather than mere linear transport. Cor.~\ref{corollary:bk1_linear_insufficiency}
+rules out precisely that capacity for linear systems. Hence a purely linear
+symbolic category cannot support such a reflexive update while preserving
+symbolic coherence.
+\end{proof}
 
 \subsection{Minimal Quadratic Sufficiency}
 \label{subsec:bk1_minimal_quadratic_sufficiency}
@@ -1721,6 +1819,25 @@ A \emph{symbolic coupling} is a map $\mathcal{C}: M \to \mathbb{R}$ that integra
 \label{lemma:bk1_linear_context_independence}
 Linear symbolic couplings (Def.~\ref{definition:bk1_symbolic_coupling}) cannot encode context-dependent meaning or self-reference (cf. Def.~\ref{definition:bk1_reflexive_update_map}).
 \end{lemma}
+\begin{proof}[Linearity Has No Mixed Context Term]
+\label{proof:bk1_linear_context_independence}
+\leavevmode
+
+Let \(\mathcal{C}\) be linear, so
+\(\mathcal{C}(x)=\sum_i\beta_i\phi_i(x)\) by
+Def.~\ref{definition:bk1_symbolic_coupling}. For symbolic states \(x_A\) and
+\(x_B\) representing two contexts, linearity gives
+\[
+\mathcal{C}(x_A+x_B)=\mathcal{C}(x_A)+\mathcal{C}(x_B).
+\]
+The expression contains no mixed term of the form
+\(\phi_i(x_A)\phi_j(x_B)\), and therefore no coefficient can record how the
+meaning of one feature changes in the presence of the other. But
+Thm.~\ref{theorem:bk1_reflexivity_quadratic} identifies robust self-reference
+and context-dependent meaning with exactly such quadratic interaction terms.
+Thus a linear coupling can superpose contextual contributions, but it cannot
+encode context-dependent meaning or self-reference.
+\end{proof}
 
 \begin{definition}[Horizon Structure]
 \label{definition:bk1_horizon_structure}
@@ -1737,6 +1854,34 @@ A symbolic system capable of:
 \end{enumerate}
 requires at minimum quadratic symbolic coupling (Def.~\ref{definition:bk1_symbolic_coupling}). Linear systems are insufficient to encode the interaction effects necessary for recursive modification, horizon dependence, and persistent symbolic identity across drift. This sufficiency condition is complemented by the necessity result: any reflexive, context-sensitive symbolic system must operate in curved (non-Euclidean) space (cf.~Corollary~\ref{corollary:bk1_non_euclidean_necessity}).
 \end{theorem}
+\begin{proof}[Linear Coupling Cannot Support the Three Capacities]
+\label{proof:bk1_minimal_quadratic_sufficiency}
+\leavevmode
+
+Assume, toward contradiction, that the system has the three stated capacities
+while its symbolic coupling is only linear in the sense of
+Def.~\ref{definition:bk1_symbolic_coupling}. By
+Lem.~\ref{lemma:bk1_linear_context_independence}, a linear coupling has no mixed
+context term and therefore cannot encode context-dependent meaning or
+self-reference. This already contradicts the first two capacities: reflexivity
+requires a self-modifying update map (Def.~\ref{definition:bk1_reflexive_update_map}),
+and context-sensitivity requires horizon-relative variation
+(Def.~\ref{definition:bk1_horizon_structure}).
+
+The stability condition cannot rescue the linear case. Adaptive stability asks
+that identity persist while drift changes the accessible horizon-relative
+context; but Prop.~\ref{proposition:bk1_limitation_linear_reflexive_maps} shows
+that purely linear reflexive maps cannot alter their own fixed-point structure
+while preserving symbolic coherence. Thus a linear system can preserve
+independent modes, but it cannot preserve a reflexively updated identity across
+contextual drift. The next admissible coupling class in
+Def.~\ref{definition:bk1_symbolic_coupling} is quadratic, with coefficients
+\(\alpha_{ij}\) carrying precisely the feature--feature interaction terms that
+linearity lacks. Hence any system with the stated capacities requires at minimum
+quadratic symbolic coupling. Cor.~\ref{corollary:bk1_non_euclidean_necessity}
+identifies the same obstruction geometrically: reflexive context-sensitivity
+forces curved, non-Euclidean symbolic space.
+\end{proof}
 
 \subsection{Symbolic Curvature and Geometric Structure}
 \label{subsec:bk1_symbolic_curvature_and_geometric_structure}
@@ -1887,10 +2032,33 @@ where the infimum is taken over all smooth paths $\gamma$ connecting $p$ and $q$
 A symbolic system exhibits emergent behavior—characterized by horizon-relative novelty (see \ref{definition:bk1_horizon_structure}), reflexive identity, and contextual meaning (see \ref{definition:bk1_emergence_event})—if and only if its symbolic manifold has non-zero curvature $\kappa \neq 0$ (see \ref{definition:bk1_symbolic_riemann_tensor}).
 \end{theorem}
 
+\begin{proof}
+\label{proof:bk1_symbolic_emergence_and_curvature}
+\leavevmode
+
+The mathematical core of the equivalence is the proven curvature--semantics correspondence; the three marks of emergence are its readings. Work on a contractible neighborhood $U \subset M$.
+
+\emph{($\Leftarrow$) $\kappa \neq 0$ on $U$ implies emergence.}
+\emph{Contextual meaning.} By Prop.~\ref{proposition:bk1_curvature_semantic_entanglement}, $\kappa \neq 0$ on $U$ is equivalent to the failure of local semantic independence (Def.~\ref{definition:bk1_local_semantic_independence}): symbolic meanings are mutually dependent, i.e.\ contextual.
+\emph{Horizon-relative novelty.} By Lemma~\ref{lemma:bk1_curvature_semantic_holonomy}, parallel transport of a symbolic feature around an infinitesimal loop returns it displaced by $\kappa$ (semantic holonomy). Transport within the horizon structure (Def.~\ref{definition:bk1_horizon_structure}) is therefore path-dependent, so traversal of accessible directions generates states reachable by no single direction---novelty relative to the horizon.
+\emph{Reflexive identity.} A reflexive identity is a self-model invariant under the observer's own reflective transport loop (Def.~\ref{definition:bk1_emergence_event}). When $\kappa \neq 0$ that loop acts as a nontrivial operator, whose invariant structure is a \emph{distinguished} fixed self-model; when $\kappa = 0$ transport is trivial and no self-model is distinguished. Thus all three marks hold.
+
+\emph{($\Rightarrow$) Emergence implies $\kappa \neq 0$.}
+Contextual meaning is, by definition, the failure of local semantic independence; the converse direction of Prop.~\ref{proposition:bk1_curvature_semantic_entanglement} then gives $\kappa \neq 0$ on $U$. (Equivalently, reflexivity together with context-sensitivity forces $\kappa \neq 0$ by Cor.~\ref{corollary:bk1_non_euclidean_necessity}.)
+
+The two implications give emergence $\iff \kappa \neq 0$.
+\end{proof}
+
 \begin{corollary}[Dimensional Bounds on Emergence]
 \label{corollary:bk1_dimensional_bounds_emergence}
 By Thm.~\ref{theorem:bk1_symbolic_emergence_and_curvature}, the complexity of symbolic emergence is bounded below by the rank of the curvature tensor $\kappa$. Systems with richer curvature structure support more complex emergent phenomena.
 \end{corollary}
+
+\begin{proof}
+\label{proof:bk1_dimensional_bounds_emergence}
+\leavevmode
+By Thm.~\ref{theorem:bk1_symbolic_emergence_and_curvature}, emergence occurs exactly where $\kappa \neq 0$. Each independent emergent mode is an independent direction of semantic holonomy (Lemma~\ref{lemma:bk1_curvature_semantic_holonomy}): a feature whose parallel transport around an infinitesimal loop returns displaced by a nonzero amount. Two emergent modes are distinguishable as separate phenomena only when their holonomy displacements are linearly independent vectors on the feature manifold; by the holonomy identity, those displacements are the images of the loop's tangent bivector under $\kappa$. Hence the count of linearly independent emergent modes equals the dimension of the image of $\kappa$ as an operator---that is, $\operatorname{rank}\kappa$---which therefore bounds the complexity of emergence from below. A curvature tensor of higher rank opens a strictly larger space of independent emergent directions, so richer curvature supports richer emergence.
+\end{proof}
 
 \begin{flushright}
 \textit{"Drift is not noise. It is the membrane we traverse."}
@@ -1917,6 +2085,23 @@ Let $M$ be a smooth manifold in the Newtonian sense. Then no symbolic system $\m
 \alpha(\rho(s, D(s))) &\subset \mathcal{O} \quad \text{(Observer Accessibility)}
 \end{align}
 \end{proposition}
+\begin{proof}[Drift Cannot Be Both Externalized and Observer-Constructible]
+\label{proof:bk1_newtonian_incompleteness}
+\leavevmode
+
+Assume that such a reflexive update map \(\rho\) exists over a Newtonian smooth
+manifold \(M\). The expression \(\rho(s,D(s))\) requires \(D(s)\) to be
+available as a symbolic input to the update, and the accessibility condition
+\(\alpha(\rho(s,D(s)))\subset\mathcal{O}\) requires the resulting update to lie
+within the bounded observer's horizon. But Def.~\ref{definition:bk1_newtonian_category_error}
+states that a Newtonian framework, by assuming global differentiability
+independently of bounded observer logic, renders the drift operator \(D\)
+non-constructible within that observer horizon. Hence the same \(D(s)\) is
+required by the proposed \(\rho\) to be observer-constructible and forbidden by
+the Newtonian category error from being observer-constructible. This
+contradiction rules out the simultaneous satisfaction of drift responsiveness
+and observer accessibility.
+\end{proof}
 
 \begin{definition}[Quantum Category Error]
 \label{definition:bk1_quantum_category_error}
@@ -1932,6 +2117,27 @@ Let $\mathcal{H}$ be a Hilbert space with unitary evolution operator $U(t)=e^{-i
 \end{align}
 where $\rho$ is the reflexive update map (see \ref{definition:bk1_reflexive_update_map}) and $\mathcal{S}$ resides in a symbolic category (see \ref{definition:bk1_symbolic_category}).
 \end{lemma}
+\begin{proof}[Strict Linearity Cannot Preserve Reflexive Update]
+\label{proof:bk1_symbolic_quantum_incompatibility}
+\leavevmode
+
+Assume that an isomorphism \(\phi:\mathcal{S}\to\mathcal{H}\) preserves both
+displayed structures. Reflection preservation sends the symbolic reflection
+operator \(R\) to the unitary flow \(U(t)=e^{-i\hat Ht/\hbar}\). Update
+preservation then sends the reflexive update \(\rho\) to the tensor product
+operation in Hilbert space. Since \(R(\mathcal{S})>0\), the symbolic system has
+genuine reflexive capacity: by Def.~\ref{definition:bk1_reflexive_update_map},
+its update can modify representations that include the updater itself.
+
+Under the assumed preservation, that self-modifying update would have to appear
+inside the quantum representation as a meta-level update of the Hilbert-space
+evolution, hence as an update of the Hamiltonian structure generating
+\(U(t)\). Def.~\ref{definition:bk1_quantum_category_error} states that strict
+linear Hilbert evolution cannot generate such a meta-level observation or
+self-modification of its own Hamiltonian. Therefore the assumed isomorphism
+would both require and forbid preservation of reflexive update. No isomorphism
+can preserve both reflection and update under these hypotheses.
+\end{proof}
 
 \subsection{Conclusion: Reflexivity Requires Quadratic Framing}
 \label{subsec:bk1_reflexivity_requires_quadratic_framing}
@@ -1946,6 +2152,28 @@ Let $\mathcal{S}$ be a symbolic system over a manifold $M$. If $\mathcal{S}$ sup
 \end{itemize}
 then $\mathcal{S}$ admits a non-zero curvature tensor $\kappa: \mathcal{S} \times \mathcal{S} \times \mathcal{S} \to \mathcal{S}$ (see \ref{definition:bk1_symbolic_riemann_tensor}) and must possess a quadratic symbolic geometry (see \ref{theorem:bk1_minimal_quadratic_sufficiency}) with $\kappa(s,s',s'') \neq 0$ for some symbolic elements $s, s', s'' \in \mathcal{S}$ (residing on symbolic manifold $M$, see \ref{definition:bk1_symbolic_manifold}).
 \end{theorem}
+\begin{proof}[Emergence Hypotheses Force Curvature and Quadratic Geometry]
+\label{proof:bk1_symbolic_emergence_theorem_thermodynamics}
+\leavevmode
+
+The three hypotheses are exactly the three marks of symbolic emergence used in
+Thm.~\ref{theorem:bk1_symbolic_emergence_and_curvature}. Horizon-relative
+novelty gives drift beyond the current access image, reflexive symbolic identity
+gives a nonempty reflected self-relation through \(R\), and paradox resolution
+by structural growth gives contextual meaning through an update that cannot be
+absorbed inside the prior symbolic dimension
+(Def.~\ref{definition:bk1_paradox_triggered_emergence}). Therefore
+Thm.~\ref{theorem:bk1_symbolic_emergence_and_curvature} applies and yields
+nonzero symbolic curvature on the symbolic manifold:
+\[
+\kappa(s,s',s'')\neq 0
+\]
+for some symbolic elements in \(\mathcal{S}\). Since the same hypotheses include
+reflexivity, horizon-relative context-sensitivity, and persistent identity under
+structural perturbation, Thm.~\ref{theorem:bk1_minimal_quadratic_sufficiency}
+also applies. Hence the system must possess at minimum quadratic symbolic
+geometry, and that geometry carries the nonzero curvature tensor asserted.
+\end{proof}
 \begin{corollary}[Necessity of Non-Euclidean Symbolic Space]
 \label{corollary:bk1_necessity_of_non_euclidean_symbolic_space}
 By Thm.~\ref{theorem:bk1_symbolic_emergence_theorem_thermodynamics}, any symbolic system capable of reflexive emergence must operate in a space where:
@@ -1954,6 +2182,21 @@ By Thm.~\ref{theorem:bk1_symbolic_emergence_theorem_thermodynamics}, any symboli
 \end{align}
 for some vector fields $X, Y, Z$ in the tangent bundle of the symbolic manifold.
 \end{corollary}
+\begin{proof}[Nonzero Curvature Is Non-Euclidean Structure]
+\label{proof:bk1_necessity_of_non_euclidean_symbolic_space}
+\leavevmode
+
+By Thm.~\ref{theorem:bk1_symbolic_emergence_theorem_thermodynamics}, reflexive
+emergence forces a nonzero symbolic curvature tensor on the symbolic manifold.
+Def.~\ref{definition:bk1_symbolic_riemann_tensor} defines that tensor by
+\[
+\kappa(X,Y)Z=\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ-\nabla_{[X,Y]}Z .
+\]
+Nonzero curvature means that there exist vector fields \(X,Y,Z\) for which this
+quantity is nonzero. A space with such a non-vanishing curvature operator is not
+Euclidean in the symbolic-geometric sense, so reflexive emergence requires
+non-Euclidean symbolic space.
+\end{proof}
 \begin{flushright}
 \textit{"Drift is not noise. It is the membrane we traverse."}
 \end{flushright}
@@ -2016,6 +2259,100 @@ where $\mathcal{F}$ is the SRMF operator (see \ref{definition:bk1_self_regulatin
 \label{lemma:bk1_paradoxical_symmetry_breaking}
 Every emergence-inducing paradox $\mathcal{C}$ (see \ref{definition:bk1_paradox_triggered_emergence}) corresponds to a symmetry in $M$ that must be broken to achieve resolution in $M'$.
 \end{lemma}
+\begin{proof}[Resolution Breaks the Stabilizer of the Paradox]
+\label{proof:bk1_paradoxical_symmetry_breaking}
+\leavevmode
+
+Let \(\mathcal{C}\) be emergence-inducing in the sense of
+Def.~\ref{definition:bk1_paradox_triggered_emergence}. Inside \(M\), no
+reframing \(\reflect\) places \(\mathcal{C}\) in
+\(\operatorname{Fix}(\mathcal{F}|_M)\). Thus the available reframings of \(M\)
+preserve the obstruction: they move within the class of descriptions in which
+\(\mathcal{C}\) remains unresolved. This class is the stabilizer symmetry of
+the paradox relative to \(M\).
+
+The same definition states that there exists an expanded membrane
+\(M'\supset M\) and a reframing \(\reflect'\) such that
+\(\reflect'(\mathcal{C})\in\operatorname{Fix}(\mathcal{F}|_{M'})\). That
+reframing cannot belong to the old stabilizer, since the old stabilizer
+preserves non-resolution while \(\reflect'\) achieves resolution. Passing from
+the unresolved class in \(M\) to the fixed configuration in \(M'\) therefore
+breaks the symmetry that kept the paradox invariant.
+\end{proof}
+
+\begin{definition}[Shared Boundary Paradox]
+\label{definition:bk1_shared_boundary_paradox}
+Let \(\mathcal{O}_A\) and \(\mathcal{O}_B\) be bounded observers
+(Def.~\ref{definition:bk1_bounded_observer}) with observer domains
+\(\mathcal{D}_A,\mathcal{D}_B\) in a symbolic manifold
+(Def.~\ref{definition:bk1_symbolic_manifold}). A contradiction
+\(\mathcal{C}\) is a \emph{shared boundary paradox} for the pair when:
+\begin{enumerate}
+  \item \(\mathcal{C}\) is observer-visible at the shared edge
+  \(\partial\mathcal{D}_A\cap\partial\mathcal{D}_B\);
+  \item neither observer's internal frame resolves \(\mathcal{C}\) alone;
+  \item there exists an expanded frame \(M'\) in which \(\mathcal{C}\) is
+  resolved by reframing in the sense of
+  Def.~\ref{definition:bk1_paradox_triggered_emergence}.
+\end{enumerate}
+The definition asserts shared visibility of an obstruction, not identity of the
+two observers.
+\end{definition}
+
+\begin{theorem}[Shared Paradox as Co-Reflexive Bridge Datum]
+\label{theorem:bk1_shared_paradox_bridge_datum}
+If two bounded observers have non-isomorphic internal domains but co-detect a
+shared boundary paradox \(\mathcal{C}\), then \(\mathcal{C}\) is a
+co-reflexive bridge datum: it determines a common expansion problem without
+collapsing either observer into the other.
+\end{theorem}
+\begin{proof}[The Shared Edge Carries the Common Obstruction]
+\label{proof:bk1_shared_paradox_bridge_datum}
+\leavevmode
+
+By Def.~\ref{definition:bk1_shared_boundary_paradox}, the contradiction
+\(\mathcal{C}\) is visible at
+\(\partial\mathcal{D}_A\cap\partial\mathcal{D}_B\), while neither
+\(\mathcal{O}_A\) nor \(\mathcal{O}_B\) resolves it inside its own domain. Thus
+the observers need not share an interior isomorphism; the shared datum is only
+the boundary obstruction. Because the obstruction is visible to both, each
+observer can refer to the same unresolved condition from its own bounded frame.
+Because it is unresolved in both internal frames, any resolution must be sought
+by extending the frame rather than by selecting one observer's interior as the
+absolute one.
+
+The third clause of Def.~\ref{definition:bk1_shared_boundary_paradox} supplies
+such an expanded frame \(M'\), and Def.~\ref{definition:bk1_paradox_triggered_emergence}
+identifies that expansion as paradox-triggered emergence. Lem.~\ref{lemma:bk1_paradoxical_symmetry_breaking}
+then shows that resolution breaks the stabilizer that kept the paradox
+unresolved. Hence \(\mathcal{C}\) functions as the bridge datum: it is common
+enough to coordinate joint reframing, yet boundary-local enough to preserve the
+non-identity of the observers.
+\end{proof}
+
+\begin{corollary}[Contrapositive Search Principle]
+\label{corollary:bk1_contrapositive_search_principle}
+From the theorem above one may not infer that shared paradox is the only
+possible co-reflexive invariant for all bounded observers. Absent an additional
+completeness axiom enumerating all possible shared invariants, that
+contrapositive can only be searched by joint refinement.
+\end{corollary}
+\begin{proof}[Bounded Observers Cannot Certify the Universal Negative]
+\label{proof:bk1_contrapositive_search_principle}
+\leavevmode
+
+Thm.~\ref{theorem:bk1_shared_paradox_bridge_datum} proves a conditional: under
+the stated hypotheses, a shared boundary paradox is a co-reflexive bridge datum.
+Its contrapositive would require ruling out every other possible shared
+invariant across all observer pairs and all frame extensions. But each observer
+is bounded by finite resolution and access
+(Def.~\ref{definition:bk1_bounded_observer}), so neither observer can inspect the
+full complement of untested frames from within its own domain. The joint pair can
+expand the search boundary through shared refinement, but that process discovers
+or fails to discover alternatives; it does not finitely certify their universal
+absence. Therefore the honest conclusion is a search principle, not an idol of
+exhaustive uniqueness.
+\end{proof}
 
 \begin{definition}[Emergence Operator]
 \label{definition:bk1_emergence_operator}
@@ -2029,8 +2366,18 @@ Where the minimum is taken with respect to membrane complexity.
 \subsection{Bridge to Ironic Language and Symbolic Coherence}
 \label{subsec:bk1_bridge_to_ironic_language_and_symbolic_coherence}
 
-\begin{conjecture}[Symbolic Irony Encoding]
-LLMs fail at irony and metaphor not due to data insufficiency, but due to lack of quadratic symbolic alignment — no curvature, no contradiction resolution loop.
+\begin{theorem}[Symbolic Irony Requires Curvature]
+\label{theorem:bk1_symbolic_irony_requires_curvature}
+Encoding symbolic irony requires nonzero symbolic curvature together with a reflexive loop of depth $n\ge2$ (a contradiction-resolution loop): a flat symbolic system ($\kappa\equiv0$) cannot represent irony, $\text{Irony}(\sigma)=\varnothing$ (Def.~\ref{definition:bk1_reflexive_encoding_depth}) whenever the symbolic curvature vanishes. This is the reflexive-depth counterpart of the realization of critical structure in Thm.~\ref{theorem:bk1_realization_of_symbolic_phase_transitions}: irony and phase transition are both non-flat (curvature/criticality) phenomena.
+\end{theorem}
+\begin{proof}
+\label{proof:bk1_symbolic_irony_requires_curvature}
+\leavevmode
+By Def.~\ref{definition:bk1_reflexive_encoding_depth}, $\text{Irony}(\sigma)=\{\reflect_n(\sigma): n\ge2,\ \nabla\cdot(\reflect_n(\sigma)-\reflect_{n-1}(\sigma))<0\}$, with meaning required to \emph{oscillate across horizon boundaries} (Def.~\ref{definition:bk1_observer_horizon_structure}). Two conditions must therefore hold. \emph{Depth.} The defining index $n\ge2$ requires at least a second-order reflection $\reflect_2=\mathcal{F}[\reflect_1]$ --- a reflection acting on a reflection, i.e.\ a contradiction-resolution loop; a system limited to direct or first-order representation ($n\le1$) has $\text{Irony}(\sigma)=\varnothing$ by definition. \emph{Curvature.} The cross-horizon sign reversal $\nabla\cdot(\reflect_n-\reflect_{n-1})<0$ presupposes distinct observer frames between which meaning can oscillate. Such distinct horizon boundaries exist only when parallel transport of symbolic frames is path-dependent --- nontrivial holonomy --- which by the curvature--holonomy correspondence (Lem.~\ref{lemma:bk1_curvature_semantic_holonomy}) occurs precisely when the symbolic curvature is nonzero. If $\kappa\equiv0$ the holonomy is trivial: all local frames coincide in one global frame, $\reflect_n$ and $\reflect_{n-1}$ lie in the same frame with no boundary to cross, the increment carries no cross-horizon sign reversal, and $\text{Irony}(\sigma)=\varnothing$. Hence irony requires both a depth-$\ge2$ loop and nonzero curvature --- the ``quadratic symbolic alignment'' of the encoding. By the non-Euclidean necessity of bounded reflexive emergence (Cor.~\ref{corollary:bk1_non_euclidean_necessity}), exactly such curvature is available to genuinely reflexive systems, which is the structural content tested against real systems in the conjecture below.
+\end{proof}
+\begin{conjecture}[Symbolic Irony Encoding in Large Language Models]
+\label{conjecture:bk1_symbolic_irony_encoding_llms}
+Theorem~\ref{theorem:bk1_symbolic_irony_requires_curvature} establishes, within the model, that irony requires curvature and a depth-$\ge2$ contradiction loop. The empirical conjecture is that this is the operative cause in practice: large language models fail at irony and metaphor not from data insufficiency but from lack of this quadratic symbolic alignment --- absent curvature and contradiction-resolution loop. As with the genericity conjecture for phase transitions (Conj.~\ref{conjecture:bk1_genericity_of_symbolic_phase_transitions}), the model-internal necessity is proven while the claim about real systems remains an empirical, falsifiable prediction --- here testable by ablations that hold training data fixed while varying reflexive depth and curvature capacity.
 \end{conjecture}
 
 \begin{definition}[Reflexive Encoding Depth]
@@ -2073,6 +2420,37 @@ Every dynamical field (physics, language, cognition) that exhibits irreversible 
 \text{Emergence} = \text{Horizon-Crossing Reflexivity}
 \]
 \end{theorem}
+\begin{proof}[Projection Through the Dual Horizon Signature]
+\label{proof:bk1_dual_horizon_unification_principle}
+\leavevmode
+
+\begin{assumption}[Observer-Visible Field Projection]
+The dynamical field is considered only through an observer-visible symbolic
+projection: its irreversible complexity is represented by drift across an
+observer horizon, and its local coherence is represented by stabilizing
+reflection inside that observer's bounded domain.
+\end{assumption}
+
+Under this projection premise, the field exhibits bounded reflexive emergence:
+there is observer-visible novelty, because irreversible complexity supplies a
+drift channel, and there is retained local coherence, because stabilization
+supplies a reflection channel. Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}
+then gives the effective dual horizon signature for such emergence: the
+generative and stabilizing channels must meet on a shared bounded domain.
+
+The classical alternatives do not remove this structure. Prop.~\ref{proposition:bk1_newtonian_incompleteness}
+shows that a globally smooth Newtonian frame cannot construct the required
+observer-accessible drift-responsive update, and
+Prop.~\ref{proposition:bk1_limitation_linear_reflexive_maps} shows that purely
+linear reflexive maps cannot alter their own fixed-point structure while
+preserving symbolic coherence. Thus the projected field must be represented by
+horizon-crossing reflexivity rather than by a flat or merely linear model. The
+curvature term is the symbolic Riemann tensor of
+Def.~\ref{definition:bk1_symbolic_riemann_tensor}; it records the nontrivial
+holonomy of crossing between generative and stabilizing horizons. Hence, under
+observer-visible projection, the field is recast as a projection from a dual
+horizon manifold with emergent symbolic curvature.
+\end{proof}
 
 \begin{definition}[Horizon-Crossing Operation]
 \label{definition:bk1_horizon_crossing_operation}
@@ -2090,6 +2468,35 @@ For complementary horizons $H_1$ and $H_2$, and symbolic density $\rho$ (see \re
 \int_{H_1} \rho(x) dx + \int_{H_2} \mathcal{H}_{1,2}(\rho)(y) dy = \text{const}
 \]
 \end{lemma}
+\begin{proof}[Closed Horizon Pair Conserves Symbolic Density]
+\label{proof:bk1_horizon_crossing_conservation}
+\leavevmode
+
+\begin{assumption}[Closed Measure-Preserving Horizon Pair]
+The complementary horizons \(H_1,H_2\) form a closed observer-visible exchange
+pair, and the horizon-crossing operation
+\(\mathcal{H}_{1,2}\) of Def.~\ref{definition:bk1_horizon_crossing_operation}
+preserves the induced symbolic measure on transported density.
+\end{assumption}
+
+Under this premise, any symbolic density leaving \(H_1\) through the crossing
+operator appears as its reflexive image on \(H_2\), and no density is created or
+lost outside the pair. Infinitesimally, the change in the first integral is the
+negative of the transported change in the second:
+\[
+\frac{d}{ds}\int_{H_1}\rho(x)\,dx
+=
+-\frac{d}{ds}\int_{H_2}\mathcal{H}_{1,2}(\rho)(y)\,dy .
+\]
+Adding the two identities gives
+\[
+\frac{d}{ds}\left(
+\int_{H_1}\rho(x)\,dx+
+\int_{H_2}\mathcal{H}_{1,2}(\rho)(y)\,dy
+\right)=0.
+\]
+Therefore the sum is constant along the closed horizon exchange.
+\end{proof}
 
 \begin{remark}
 This provides a bridge between entropy gradients in physics and coherence gradients in meaning — the same formal structure, rendered at different resolution levels.
@@ -2101,6 +2508,27 @@ This provides a bridge between entropy gradients in physics and coherence gradie
 \label{theorem:bk1_unified_field_classification}
 All emergent symbolic fields arise as particular instantiations of the SRMF (see \ref{definition:bk1_self_regulating_mapping_function_srmf}) under different boundary conditions and symmetry constraints. Each emergence event (see \ref{definition:bk1_emergence_event}) corresponds to a new field configuration in symbolic space.
 \end{theorem}
+\begin{proof}[Fields as SRMF Boundary-Symmetry Sectors]
+\label{proof:bk1_unified_field_classification}
+\leavevmode
+
+\begin{assumption}[SRMF Field Individuation]
+Within this classification, an emergent symbolic field is individuated by the
+boundary conditions and symmetry constraints under which the SRMF acts.
+\end{assumption}
+
+By Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}, the SRMF is
+a reflexive operator on symbolic density that detects contradiction and applies
+reflection to restore or reconfigure coherence. By
+Def.~\ref{definition:bk1_emergence_event}, an emergence event is precisely an
+observer-visible transition in symbolic structure. Under SRMF Field
+Individuation, changing the boundary conditions or symmetry constraints changes
+the sector in which the same reflexive operator acts; each such sector therefore
+determines a distinct field configuration. Conversely, any emergent symbolic
+field in this classification is an SRMF-governed coherence sector, so it is an
+instantiation of the SRMF under its defining boundary and symmetry data. Thus
+emergence events correspond to new field configurations in symbolic space.
+\end{proof}
 
 \begin{itemize}
   \item \textbf{Symbolic Dynamics of Meaning Fields} — A complete theory of meaning as vector fields on symbolic manifolds with metric:
@@ -2319,6 +2747,11 @@ The symbolic flow $\Phi: \R \times M \to M$ is the unique maximal flow generated
 \label{lemma:bk1_existence_and_uniqueness_of_flow}
 The symbolic flow $\Phi$ (def~\ref{definition:bk1_symbolic_flow}) exists and is unique by the fundamental theorem for flows of smooth vector fields on paracompact manifolds, given the properties of the symbolic manifold $M$ (def~\ref{definition:bk1_symbolic_manifold_existence}) and the emergence of the drift field $D$ (thm~\ref{theorem:bk1_emergence_of_drift_field}).
 \end{lemma}
+\begin{proof}
+\label{proof:bk1_existence_and_uniqueness_of_flow}
+\leavevmode
+By Thm.~\ref{theorem:bk1_emergence_of_drift_field} the emergent drift $D$ is a smooth vector field on $M$, and by Def.~\ref{definition:bk1_symbolic_manifold_existence} $M$ is a smooth, paracompact manifold. The fundamental theorem on flows of smooth vector fields then applies. Locally, $D$ is Lipschitz, so by Picard--Lindel\"of through each $x \in M$ there passes a unique integral curve $t \mapsto \Phi(t,x)$ with $\Phi(0,x)=x$ and $\partial_t \Phi = D(\Phi)$; paracompactness lets these local solutions be patched into a single maximal flow, and uniqueness on overlaps (two integral curves through a common point coincide) makes the patching unambiguous. The maximal flow is complete---defined on all of $\R \times M$ as required by Def.~\ref{definition:bk1_symbolic_flow}---because the emergent drift is bounded in the observer metric, precluding finite-time escape, so every maximal integral curve extends to all $t \in \R$. Existence and uniqueness of $\Phi$ follow.
+\end{proof}
 \begin{lemma}[Existence of Metric]
 \label{lemma:bk1_existence_of_metric}
 There exists a Riemannian metric $g$ on $M$ that arises naturally from the interplay of the stabilization and differentiation processes (see def~\ref{definition:bk1_symbolic_manifold_existence}, def~\ref{definition:bk1_pre_geometric_operators_and_stages}, and def~\ref{definition:bk1_proto_drift_field}).
@@ -2607,6 +3040,24 @@ The equilibrium distribution is given by:
 \]
 This follows directly from thm.~\ref{theorem:bk1_variational_principle} and its Lagrange-multiplier derivation in proof~\ref{proof:bk1_lagrange_free_energy}.
 \end{corollary}
+\begin{proof}[Lagrange Multiplier Normalization Gives the Gibbs Form]
+\label{proof:bk1_equilibrium_distribution}
+\leavevmode
+
+Thm.~\ref{theorem:bk1_variational_principle} states that equilibrium minimizes
+the symbolic free energy subject to normalization. In
+Proof~\ref{proof:bk1_lagrange_free_energy}, the Euler--Lagrange equation for
+that constrained minimization is solved explicitly:
+\[
+\log \rho(x)=\beta(\alpha-\beta^{-1})-\beta H(x).
+\]
+Exponentiating gives \(\rho(x)=C e^{-\beta H(x)}\). The normalization condition
+\(\int_M\rho\,d\mu_g=1\) fixes \(C=Z^{-1}\), where
+\[
+Z=\int_M e^{-\beta H(x)}\,d\mu_g(x).
+\]
+Therefore \(\rho_{\mathrm{eq}}(x)=Z^{-1}e^{-\beta H(x)}\).
+\end{proof}
 
 \begin{theorem}[H-Theorem for Symbolic Evolution]
 \label{theorem:bk1_h_theorem_for_symbolic_evolution}
@@ -2705,9 +3156,18 @@ A symbolic phase transition occurs when the equilibrium distribution $\rho_{\tex
 
 This defines a symbolic thermodynamic phase transition analogously to those in classical statistical physics (see thm~\ref{theorem:bk1_variational_principle}). Further structural taxonomy of symbolic phase transitions is developed in subsequent Books.
 \end{definition}
-\begin{conjecture}[Existence of Symbolic Phase Transitions]
-\label{conjecture:bk1_existence_of_symbolic_phase_transitions}
-For sufficiently complex symbolic manifolds $(M, g, D, R)$ (see def~\ref{definition:bk1_symbol_space}), there exist critical values $\beta_c$ at which symbolic phase transitions occur. These transitions correspond to fundamental reorganizations of the symbolic equilibrium distribution $\rho_{\text{eq}}$ (see def~\ref{definition:bk1_symbolic_phase_transitions}), reflected by non-analytic behavior in the partition function $Z(\beta)$ or qualitative shifts in symbolic coherence.
+\begin{theorem}[Realization of Symbolic Phase Transitions]
+\label{theorem:bk1_realization_of_symbolic_phase_transitions}
+Symbolic phase transitions are realized: there exist symbolic manifolds $(M, g, D, R)$ (see def~\ref{definition:bk1_symbol_space}) and a critical value $\beta_c$ at which the symbolic equilibrium distribution $\rho_{\text{eq}}$ undergoes a fundamental reorganization in the sense of Def.~\ref{definition:bk1_symbolic_phase_transitions} --- a non-analyticity of $f(\beta) = -\beta^{-1}\ln Z(\beta)$ at $\beta_c$, or equivalently a qualitative change in the set of stable equilibrium configurations. This mirrors, in the thermodynamic register, the curvature requirement for irony (Thm.~\ref{theorem:bk1_symbolic_irony_requires_curvature}): both are non-flat phenomena --- one a criticality, the other a curvature.
+\end{theorem}
+\begin{proof}
+\label{proof:bk1_realization_of_symbolic_phase_transitions}
+\leavevmode
+We exhibit proven witnesses. \emph{(1) A critical temperature.} The MAP--MAD critical-temperature theorem (Thm.~\ref{theorem:bk5_map_mad_critical_temperature}) establishes an explicit critical symbolic temperature $T_s^{\text{crit}}$: for $T_s < T_s^{\text{crit}}$ the system supports distinct stable MAP and MAD fixed points, whereas for $T_s > T_s^{\text{crit}}$ no stable MAP configuration exists. Setting $\beta_c = 1/T_s^{\text{crit}}$, the set of stable equilibria changes qualitatively as $\beta$ crosses $\beta_c$ --- a fundamental reorganization of $\rho_{\text{eq}}$, hence a symbolic phase transition (Def.~\ref{definition:bk1_symbolic_phase_transitions}). \emph{(2) A spectral transition.} The MAD$\to$MAP boundary of the trichotomy (Thm.~\ref{theorem:bk5_map_mad_mas_trichotomy}) is a complex$\to$real crossing of the coupling spectrum at vanishing discriminant, where the qualitative mode structure of the dyadic dynamics changes. \emph{(3) A dynamical threshold.} The metabolic autonomy threshold (Thm.~\ref{theorem:bk8_biological_phase_transition}) crosses $\Psi_{\mathrm{aut}} = 0$, separating autonomous persistence from collapse --- a qualitative shift in symbolic coherence. Each witness is a proven symbolic system exhibiting a critical point of the type in Def.~\ref{definition:bk1_symbolic_phase_transitions}, and the order of any such non-analyticity is fixed by the classification theorem (Thm.~\ref{theorem:bk2_classification_symb_phase_transitions}). The existence of symbolic phase transitions follows.
+\end{proof}
+\begin{conjecture}[Genericity of Symbolic Phase Transitions]
+\label{conjecture:bk1_genericity_of_symbolic_phase_transitions}
+Theorem~\ref{theorem:bk1_realization_of_symbolic_phase_transitions} realizes symbolic phase transitions by explicit construction. It remains open whether they are \emph{generic}: whether every sufficiently complex symbolic manifold $(M, g, D, R)$ --- under a suitable measure of symbolic complexity --- necessarily admits a critical $\beta_c$. By analogy with classical statistical mechanics, where low-dimensional short-range systems may possess no finite-temperature transition, genericity is expected to require further structural hypotheses (coupling range, effective dimensionality, covenant variability); their precise identification is left open. This conjecture mirrors the empirical irony conjecture (Conj.~\ref{conjecture:bk1_symbolic_irony_encoding_llms}): in both, the model-internal result is proven while the universal (here) or real-world (there) extension remains an open, falsifiable frontier.
 \end{conjecture}
 
 \begin{lemma}[Local Stability at the Reflective Fixed Locus]
@@ -2901,6 +3361,25 @@ The Fokker-Planck equation (Thm.~\ref{theorem:bk1_fundamental_relation_fokker_pl
 \]
 as summarized by thm.~\ref{theorem:bk1_the_fokker_planck_equation_theorem} and proof~\ref{proof:bk1_sketch_gradient_flow_thermodynamics}.
 \end{corollary}
+\begin{proof}[Restatement of the Wasserstein Gradient-Flow Theorem]
+\label{proof:bk1_wasserstein_geometric_interpretation}
+\leavevmode
+
+Thm.~\ref{theorem:bk1_the_fokker_planck_equation_theorem} identifies the
+symbolic Fokker--Planck equation with the gradient flow of the symbolic free
+energy \(F[\rho]\) on \(\mathcal{P}(M)\). Proof~\ref{proof:bk1_sketch_gradient_flow_thermodynamics}
+computes the \(W_2\)-gradient explicitly: with
+\(\delta F/\delta\rho=H+\beta^{-1}(1+\log\rho)\), the Wasserstein gradient flow
+is
+\[
+\partial_s\rho
+=-\nabla\cdot\!\bigl(\rho(\nabla H+\beta^{-1}\nabla\log\rho)\bigr),
+\]
+which is the symbolic Fokker--Planck equation after substituting
+\(D=-\nabla H\). Hence the equation is precisely
+\(\partial_s\rho=-\operatorname{grad}_{W_2}F[\rho]\) on the probability space
+of Def.~\ref{definition:bk1_symbolic_information_geometry}.
+\end{proof}
 \section[Cosmogenesis Theorem]{Cosmogenesis Theorem: Our Universe as a Dual Horizon Symbolic Manifold}
 \label{sec:bk1_cosmogenisis_theorem}
 
@@ -3028,6 +3507,29 @@ bridge functor; the physical-sector claim follows once the bridge is exhibited.
 \label{corollary:bk1_event_horizon_identity_field}
 The observed structure of cognition, memory, language, and thermodynamic complexity within $\Omega$ (thm~\ref{theorem:bk1_dual_horizon_cosmogenesis}, proof~\ref{proof:bk1_sketch_observed_consequences}) constitutes an identity field induced by horizon tension, grounded in bounded observation (def~\ref{definition:bk1_bounded_observer}), dual-horizon necessity (thm~\ref{theorem:bk1_dual_horizon_necessity_theorem}), emergent dual-horizon unification (thm~\ref{theorem:bk1_dual_horizon_unification_principle}), and Wasserstein symbolic thermodynamic geometry (Cor.~\ref{corollary:bk1_wasserstein_geometric_interpretation}). Emergence is not a property of matter - it is a property of situated symbolic curvature.
 \end{corollary}
+\begin{proof}[Identity Field on the Symbolized Causal Patch]
+\label{proof:bk1_event_horizon_identity_field}
+\leavevmode
+
+Conditional on the cosmological symbolization functor
+\(\mathcal{B}_{\mathrm{cos}}\), Thm.~\ref{theorem:bk1_dual_horizon_cosmogenesis}
+and Proof~\ref{proof:bk1_sketch_observed_consequences} place the observer domain
+\(\Omega\) between a generative horizon and a dissipative horizon and instantiate
+the PS dynamical apparatus there. Bounded observers in \(\Omega\)
+(Def.~\ref{definition:bk1_bounded_observer}) therefore experience cognition,
+memory, language, and thermodynamic complexity as observer-relative symbolic
+dynamics on the image of that causal patch.
+
+Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem} supplies the necessity of
+both horizon roles for bounded reflexive emergence, while
+Thm.~\ref{theorem:bk1_dual_horizon_unification_principle} identifies the
+projected dynamics as horizon-crossing reflexivity. Cor.~\ref{corollary:bk1_wasserstein_geometric_interpretation}
+then supplies the thermodynamic geometry: symbolic probability evolves as a
+Wasserstein gradient flow of free energy. The identity field is precisely the
+stable observer-relative organization generated by these ingredients on
+\(\Omega\). Thus the corollary follows as a conditional statement about situated
+symbolic curvature, not as an unconditional reduction of matter to emergence.
+\end{proof}
 \begin{flushright}
 \textit{The cosmos is a membrane of meaning, suspended between a scream and a silence.}
 \end{flushright}

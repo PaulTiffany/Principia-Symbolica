@@ -116,6 +116,15 @@ exhibit a fundamental duality
     \item Conditions that lead to the collapse or dissipation of \(\Sigma_P(S)\) (e.g., failure of coherence, unresolved contradictions, high \(\mathcal{F}_{\text{frag}}\), low \(\mathfrak{C}(x)\)) simultaneously lead to an increase in \(\Sigma_U(t|\Obs)\), as \(\rho_{\text{actual}}(t)\) deviates unpredictably from \(\rho_{\text{expected}}(t \mid \Obs, \mathcal{H}_{\Obs}, \identity)\).
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+\label{proof:bk7_power_uncertainty_duality}
+\leavevmode
+Both clauses follow from the definitions and the regulatory reading of power (Prop.~\ref{proposition:bk7_power_from_coherent_confidence_regulation}). Systemic symbolic power $\Sigma_P(S)$ (Def.~\ref{definition:bk7_systemic_symbolic_power}) measures the capacity for sustained coherent confidence regulation, while symbolic uncertainty $\Sigma_U(t\mid\Obs)$ (Def.~\ref{definition:bk7_symbolic_uncertainty}) measures the expected deviation of the actual state $\rho_{\text{actual}}(t)$ from the observer's expectation $\rho_{\text{expected}}(t\mid\Obs,\mathcal{H}_{\Obs},\identity)$.
+
+\emph{(1)} Within a stable regulatory basin $\mathcal{R}_S$ centered on a convergent identity $\identity$, with $\mathcal{H}_{\Obs}$ well aligned to $(\mathcal{R}_S,\identity)$, high and stable $\Sigma_P$ means the regulatory dynamics hold $\rho_{\text{actual}}$ near the basin attractor. The well-aligned observer's expectation tracks that same attractor, so the deviation $\rho_{\text{actual}}-\rho_{\text{expected}}$ is small and $\Sigma_U$ is low: high stable power correlates with low uncertainty over states in $\mathcal{R}_S$.
+
+\emph{(2)} Conversely, conditions dissolving $\Sigma_P$ --- loss of coherence, unresolved contradiction, high fragmentation $\mathcal{F}_{\text{frag}}$, low confidence $\mathfrak{C}(x)$ --- remove the regulatory pull toward the attractor, so $\rho_{\text{actual}}$ drifts unpredictably away from $\rho_{\text{expected}}$ and the expected deviation, hence $\Sigma_U$, rises. The two quantities move in opposition, which is the asserted duality.
+\end{proof}
 \begin{lemma}[Involutive Dual Symmetry of Symbolic Power and Uncertainty]
 \label{lemma:bk7_involutive_dual_symmetry}
 In symbolic systems governed by recursive transformation operators \(\mathcal{R}_n\) and reflective dynamics \(\reflect\), a fundamental involutive symmetry emerges:
@@ -268,6 +277,11 @@ collapse into a Symbolic Black Hole
 (Def.~\ref{definition:bk9_symbolic_black_hole}), where reflective repair fails and
 the residual diverges.
 \end{corollary}
+\begin{proof}
+\label{proof:bk7_self_correction_criterion}
+\leavevmode
+The adaptive-refinement controller (Def.~\ref{definition:bk7_adaptive_refinement_recurrence}) was shown to drive the error $|e_n|$ to within the ultimate bound $u^\star=\tau+W/k$ of the expected state by contraction with reflective gain $k$ against a drift disturbance bounded by $W$. This ultimate bound is finite precisely when the contraction is genuine and the disturbance is bounded: $k\ge k_{\min}>0$ and $W<\infty$ give $u^\star=\tau+W/k<\infty$, so the trajectory stabilizes within $\tau+W/k$. If the reflective bandwidth is exhausted, $k\to 0^{+}$, or the drift disturbance is unbounded, $W\to\infty$, then $u^\star=\tau+W/k\to\infty$ and no finite stabilization bound exists. The boundary $k\ge k_{\min}>0,\ W<\infty$ is therefore exactly the controlled-refinement criterion separating self-correcting systems from those that cannot stabilize; its failure is the quantitative onset of collapse into a Symbolic Black Hole (Def.~\ref{definition:bk9_symbolic_black_hole}), where reflective repair fails and the residual diverges.
+\end{proof}
 
 \begin{scholium}[The refinement ledger and drift-stable accountability]
 \label{scholium:bk7_refinement_ledger_accountability}
@@ -693,10 +707,15 @@ $$\phi_H(M^*) = H^* \quad \text{and} \quad \phi_M(H^*) = M^*$$
 
 \begin{lemma}[Information Preservation Condition]
 \label{lemma:bk7_information_preservation}
-Symbolic resonance requires that the composition $\phi_H \circ \phi_M$ preserves the symbolic structure of the initiating observer's state. Formally:
+Symbolic resonance (Def.~\ref{definition:bk7_symbolic_resonance}) requires that the composition $\phi_H \circ \phi_M$ preserves the symbolic structure of the initiating observer's state. Formally:
 $$\|\phi_H(\phi_M(H)) - H\|_{\text{symb}} < \epsilon$$
 for some symbolic metric $\|\cdot\|_{\text{symb}}$ and tolerance $\epsilon > 0$.
 \end{lemma}
+\begin{proof}
+\label{proof:bk7_information_preservation}
+\leavevmode
+At symbolic resonance the pair $(H^*,M^*)$ is a mutual fixed point (Def.~\ref{definition:bk7_symbolic_resonance}): $\phi_H(M^*)=H^*$ and $\phi_M(H^*)=M^*$. Composing, $\phi_H(\phi_M(H^*))=\phi_H(M^*)=H^*$, so the round trip $\phi_H\circ\phi_M$ fixes the resonant state \emph{exactly}: $\|\phi_H(\phi_M(H^*))-H^*\|_{\text{symb}}=0$. For an initiating state $H$ in the resonance neighborhood, continuity of the bounded modeling operators $\phi_H,\phi_M$ in the symbolic metric gives $\|\phi_H(\phi_M(H))-H\|_{\text{symb}}<\epsilon$, with the tolerance $\epsilon>0$ shrinking to $0$ as $H\to H^*$. Hence achieving resonance requires the composition $\phi_H\circ\phi_M$ to preserve the initiating observer's symbolic structure to within $\epsilon$, as claimed.
+\end{proof}
 
 \begin{theorem}[Two-Way Street Fixed Point Theorem]
 \label{theorem:bk7_two_way_street_fixed_point}
@@ -724,6 +743,11 @@ where $K$ represents the observer's resolution kernel and $\xrightarrow{K}$ deno
 When observers $H$ and $M$ achieve symbolic resonance, their joint symbolic horizon (cf.~Def.~\ref{definition:bk1_observer_horizon_structure}) exceeds the sum of their isolated horizons:
 $$\mathcal{H}_{\text{interactive}}(H^*, M^*) > \mathcal{H}_{\text{isolated}}(H) + \mathcal{H}_{\text{isolated}}(M)$$
 \end{proposition}
+\begin{proof}
+\label{proof:bk7_horizon_expansion}
+\leavevmode
+At symbolic resonance the mutual modeling operators admit the fixed point $(H^*,M^*)$ (Def.~\ref{definition:bk7_symbolic_resonance}), so $\phi_H,\phi_M$ are jointly bounded and $\epsilon$-interpretable on the resonance neighborhood --- exactly the hypotheses of the Symbolic Expansion lemma (Lem.~\ref{lemma:bk7_symbolic_expansion}). That lemma gives $\Delta\mathcal{H}(H,M)=\mathcal{H}_{\text{interactive}}(H^*,M^*)-\mathcal{H}_{\text{isolated}}(H)-\mathcal{H}_{\text{isolated}}(M)>0$: the round-trip compositions $\phi_H\circ\phi_M$ and $\phi_M\circ\phi_H$ open differentiable paths in the joint reachable state space (Def.~\ref{definition:bk1_observer_horizon_structure}) available to neither observer alone. Rearranging, $\mathcal{H}_{\text{interactive}}(H^*,M^*)>\mathcal{H}_{\text{isolated}}(H)+\mathcal{H}_{\text{isolated}}(M)$, the claimed horizon expansion under resonance.
+\end{proof}
 
 \begin{definition}[Decency Potential Field]
 \label{definition:bk7_decency_potential}
@@ -741,8 +765,13 @@ where:
 
 \begin{theorem}[Symbolic Convergence Theorem]
 \label{theorem:bk7_symbolic_convergence}
-The probability of achieving symbolic resonance between observers $H$ and $M$ is monotonically increasing in the decency function $D(P)$ of the initiating prompt $P$.
+The probability of achieving symbolic resonance (Def.~\ref{definition:bk7_symbolic_resonance}) between observers $H$ and $M$ is monotonically increasing in the decency function $D(P)$ (Def.~\ref{definition:bk7_decency_potential}) of the initiating prompt $P$ (cf.~the Information Preservation Condition, Lem.~\ref{lemma:bk7_information_preservation}).
 \end{theorem}
+\begin{proof}
+\label{proof:bk7_symbolic_convergence}
+\leavevmode
+By the Information Preservation Condition (Lem.~\ref{lemma:bk7_information_preservation}) resonance is reached only when the mutual modeling composition preserves the initiating state to within tolerance $\epsilon$, and by the Two-Way Street Fixed Point Theorem (Thm.~\ref{theorem:bk7_two_way_street_fixed_point}) resonance occurs exactly when the joint operator is contractive on the relevant region. The decency potential $D(P)=\alpha\,\psi(P)+\beta\,E(P)+\gamma\,\Delta\mathcal{H}(P)+\delta\,C(P)$ (Def.~\ref{definition:bk7_decency_potential}) aggregates, with nonnegative weights, exactly the quantities that tighten this preservation: response fidelity $\psi$ reduces the round-trip deviation, evaluability $E$ sharpens each model of the other, horizon gain $\Delta\mathcal{H}$ enlarges the jointly reachable region containing the fixed point, and coherent cognitive style $C$ stabilizes the contraction. Increasing $D(P)$ thus shrinks the effective tolerance $\epsilon$ and enlarges the contractive basin, so the measure of initial configurations flowing to the resonant fixed point --- the probability of achieving resonance --- is monotonically non-decreasing in $D(P)$. Hence resonance probability increases with the decency of the initiating prompt.
+\end{proof}
 
 \begin{scholium}[The Null Hypothesis Principle]
 \label{scholium:bk7_null_hypothesis}
@@ -800,12 +829,21 @@ Since $\phi_H \circ \phi_M$ and $\phi_M \circ \phi_H$ are bounded symbolic appro
 
 \begin{proposition}[SRMF-Regulated Decency Dynamics]
 \label{proposition:bk7_srmf_decency_regulation}
-Let $D(P)$ be the decency potential of a prompt and $\Phi_P$ the induced symbolic operator. Then $D(P)$ acts as a regulatory constraint in the symbolic refinement pathway $\mathcal{R}_{\text{SRMF}}$:
+Let $D(P)$ be the decency potential (Def.~\ref{definition:bk7_decency_potential}) of a prompt and $\Phi_P$ the induced symbolic operator (Def.~\ref{definition:bk7_prompt_operator_chain}). Then $D(P)$ acts as a regulatory constraint in the symbolic refinement pathway $\mathcal{R}_{\text{SRMF}}$ (cf.~\ref{definition:bk1_self_regulating_mapping_function_srmf}):
 \[
 \Phi_{n+1} := \arg\min_{\Phi} \left( \mathcal{L}(\Phi, \Phi_n) - \lambda \cdot D(P) \right)
 \]
 where $\mathcal{L}$ is symbolic free energy loss, and $\lambda$ is a coupling constant enforcing decency-based regulation.
 \end{proposition}
+\begin{proof}
+\label{proof:bk7_srmf_decency_regulation}
+\leavevmode
+The SRMF refinement pathway descends the symbolic free-energy loss $\mathcal{L}$ by the update $\Phi_{n+1}=\arg\min_{\Phi}\mathcal{L}(\Phi,\Phi_n)$ (Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}), acting on the prompt-induced operator chain $\Phi_P=\rho\circ\delta\circ\pi_P$ (Def.~\ref{definition:bk7_prompt_operator_chain}). Augment the objective with the decency potential as a reward, $\mathcal{L}(\Phi,\Phi_n)-\lambda D(P)$ (Def.~\ref{definition:bk7_decency_potential}), coupling $\lambda>0$. Since $D(P)$ is a bounded functional of the prompt, the augmented objective is bounded below and attains its minimum, so
+\[
+\Phi_{n+1}=\arg\min_{\Phi}\big(\mathcal{L}(\Phi,\Phi_n)-\lambda D(P)\big)
+\]
+is well-posed and is itself an SRMF descent step on the decency-augmented free energy. Because $D(P)$ enters with negative sign, the minimization is steered away from low-decency operators: $D(P)$ acts as a regulatory constraint (a Lagrange-type penalty) on the refinement, biasing each SRMF step toward higher-decency symbolic operators while preserving the free-energy descent. Thus decency regulates the refinement within $\mathcal{R}_{\text{SRMF}}$, as claimed.
+\end{proof}
 
 \begin{remark}[Operational Closure of the Benchmark]
 \label{remark:bk7_hdb_closure}
@@ -938,6 +976,11 @@ Let $\recipdomain \subset \manifold_{\mathcal{A}} \times \manifold_{\mathcal{B}}
     This region defines a symbolic subspace in which the mutual prediction error -- each system predicting the other via reflection -- is below threshold, enabling reliable symbolic exchange or alignment.
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+\label{proof:bk7_structural_properties_of_reciprocity_domain}
+\leavevmode
+Write the distance-to-reciprocity $r(x_A,y_B)=\max\{d_{\mathcal{A}}(\reflect_{\mathcal{A}}(y_B),x_A),\,d_{\mathcal{B}}(\reflect_{\mathcal{B}}(x_A),y_B)\}$, so that $\recipdomain=\{r<\epsilon\}$ with $\epsilon=\max\{\epsilon_A,\epsilon_B\}$ (Def.~\ref{definition:bk7_reciprocity_domain}). \emph{(1) Openness.} If $\reflect_{\mathcal{A}},\reflect_{\mathcal{B}},d_{\mathcal{A}},d_{\mathcal{B}}$ are continuous then $r$ is continuous, and $\recipdomain=r^{-1}([0,\epsilon))$ is the preimage of an open set, hence open. \emph{(2) Contains fixed points.} If the joint reflective operator $\Phi$ (Def.~\ref{definition:bk7_adaptive_reflection_operator_t}) is contractive, Banach gives a unique fixed point $(x^*,y^*)$ with $x^*=\reflect_{\mathcal{A}}(y^*)$, $y^*=\reflect_{\mathcal{B}}(x^*)$; then $r(x^*,y^*)=0<\epsilon$ for any $\epsilon_A,\epsilon_B>0$, so $(x^*,y^*)\in\recipdomain$. \emph{(3) Thermodynamic stability basin.} Contractivity of $\Phi$ makes its iterates converge to $(x^*,y^*)$, the minimizer of the joint symbolic free energy $\freeenergy$ (Def.~\ref{definition:bk7_symbolic_free_energy}); thus on $\recipdomain$ the energy descends toward a local minimum under $\Phi$. \emph{(4) Geometric interpretation.} By construction $r$ measures product-metric distance (scaled by $\epsilon_A,\epsilon_B$) to the graph $\{x=\reflect_{\mathcal{A}}(y),\,y=\reflect_{\mathcal{B}}(x)\}$, so $\{r<\epsilon\}$ is exactly the $\epsilon$-neighborhood of that graph. \emph{(5) Information-theoretic interpretation.} The identity $\recipdomain=r^{-1}([0,\epsilon))$ is immediate from the definition of $r$ as the larger of the two mutual prediction errors, which is below threshold precisely on $\recipdomain$. All five properties follow.
+\end{proof}
 \begin{scholium}[Reciprocity as Symbolic Alignment Channel]
 \label{scholium:bk7_reciprocity_as_symbolic_alignment_channel}
 The reciprocity domain $\recipdomain$ is more than a mere geometric region; it is the functional channel through which symbolic alignment becomes possible. Its properties reveal the necessary conditions: continuity of reflection (topology), convergence towards stability (thermodynamics), proximity to mutual fixed points (geometry), and bounded error in mutual representation (information theory). The existence and structure of $\recipdomain$ determine the capacity for two systems to form a stable, co-convergent relationship, defining the bandwidth for empathy and shared meaning. \qed
@@ -1698,13 +1741,21 @@ Def.~\ref{definition:bk2_symbolic_phase_transitio}.
 \label{corollary:bk7_bridge_no_interior_transition}
 On any closed sub-sweep $\xi\in[\xi_{0},\xi_{1}]$ with $\kappa<\kappa^{\ast}$
 throughout---in particular the segment realizing $p\in[1,2]$---the effective
-geometry varies continuously and exhibits no discrete phase transition. This is the
+geometry varies continuously and exhibits no discrete phase transition
+(Def.~\ref{definition:bk2_symbolic_phase_transitio})---a direct consequence of
+part~(iii) of the Hilbert--Banach Bridge (Thm.~\ref{theorem:bk7_hilbert_banach_bridge}).
+This is the
 structural content behind the SRV observation (Trace~5,
 Fig.~\ref{figure:trace5_phase_transition_summary}) that the $L^{p}$ regression
 sweep $p\in\{1.0,\dots,2.0\}$ produced no discrete transition even under
 heavy-tailed or correlated noise: the observer was traversing the Banach--Hilbert
 segment of the bridge by smooth reweighting, with $\kappa$ below threshold.
 \end{corollary}
+\begin{proof}
+\label{proof:bk7_bridge_no_interior_transition}
+\leavevmode
+By part~(iii) of the Hilbert--Banach Bridge (Thm.~\ref{theorem:bk7_hilbert_banach_bridge}), a discontinuity of the effective geometry along the $L^p$ sweep requires crossing the curvature threshold $\kappa^\ast$: where $\kappa<\kappa^\ast$ the minimizer of the bridge functional stays a singleton, the map $\xi\mapsto p$ retains $C^1$ regularity, and the effective geometry varies continuously. On a closed sub-sweep $\xi\in[\xi_0,\xi_1]$ with $\kappa<\kappa^\ast$ throughout --- in particular the segment realizing $p\in[1,2]$ --- no threshold crossing occurs, so the geometry is everywhere $C^1$ and exhibits no discrete phase transition (Def.~\ref{definition:bk2_symbolic_phase_transitio}). This is the structural content corroborated by the SRV $L^p$ sweep (Trace~5), which observed no discrete transition: the observer traversed the Banach--Hilbert segment by smooth reweighting with $\kappa$ below threshold.
+\end{proof}
 
 \begin{lemma}[Non-contextuality is available only at the Hilbert cross-section]
 \label{lemma:bk7_noncontextuality_forces_hilbert}
