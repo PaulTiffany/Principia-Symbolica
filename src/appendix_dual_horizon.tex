@@ -1,0 +1,1531 @@
+\clearpage
+\phantomsection
+\chapter*{Appendix C: Dual Horizon – A Formal Proof by Elimination}
+\label{sec:appC_dual_horizon}
+\addcontentsline{toc}{chapter}{Appendix C: Dual Horizon – A Formal Proof by Elimination}
+This appendix is the expanded dialectical proof-by-elimination behind the canonical \emph{Dual Horizon Necessity Theorem} of Book~I (Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}), to which it defers for the formal statement of record. Its task is to defend, in slow motion, why a \emph{Dual Horizon} structure is necessary for any symbolic system that sustains bounded reflexive emergence under a Bounded Observer (\(\Obs\), cf.~\ref{definition:bk4_bounded_observer}). The claim is sharpened from its earlier metaphysical reading. ``Dual Horizon'' does not assert that two literal horizons exist; it asserts that the \emph{observer-visible flux} of a viable system carries a \emph{dual effective signature} --- a positive, novelty-producing (generative) part sourced by Drift (\(\drift\), cf.~\ref{definition:bk6_drift_operator_complete}) and a negative, structure-stabilizing (dissipative) part sourced by stabilizing Reflection (\(R_{\mathrm{stab}}\), cf.~\ref{definition:bk6_reflection_operator_complete}) --- both present on a \emph{shared} bounded-observer domain \(\Omega\). What the theorem constrains is the signature, not its geometric realization; the result is therefore stable under realization by a single horizon pair, by several same-sign horizons, by a single sign-changing curvature field, or by a delocalized horizon-effect with no isolated horizon at all. We prove this necessity \emph{twice} --- in the observational modality (elimination by what a bounded observer can register, \S\ref{sec:appC_proof_observational}) and in the geometric modality (the flux signature on the manifold, \S\ref{sec:appC_proof_by_elimination}). Because both proofs rest on the single root of observer finitude, their agreement is itself a transference test of the result against its own presentation (Scholium~\ref{scholium:appC_two_modalities_one_root}).
+
+\subsection*{C.0.1 Method: two eliminations, one root} \label{subsec:appC_methodological_logical_framework}
+The necessity is established by elimination --- exhausting the ways the dual signature could fail --- in two modalities. The \emph{observational} elimination (\S\ref{sec:appC_proof_observational}) proceeds from Bounded Observability: it rules out each failure by what a bounded observer can register and retain across an interval \(I\), and needs no quantitative premise beyond finite resolution \(\epsilon_{\Obs}\). The \emph{geometric} elimination (\S\ref{sec:appC_proof_by_elimination}) attaches to \(\Omega\) two scalar fluxes --- a generative flux \(G_{\Obs}\) and a stabilizing flux \(C_{\Obs}\) --- and a single structural premise, \emph{Emergence Domination} (Assumption~\ref{assumption:appC_emergence_domination}), bounding emergence above by the binding flux. As in the Born derivation (\S\ref{sec:appC_born_rule}), we prove exactly what each premise forces and isolate what must be posited rather than smuggled: the \emph{sufficiency} of the dual signature requires an explicit coupling lower bound (Assumption~\ref{assumption:appC_emergence_coupling}), and Domination itself is owed a derivation from finite observer bandwidth (Remark~\ref{remark:appC_domination_open_route}). The two proofs share that single root --- the finitude of the observer --- which is why their agreement is a transference test rather than a coincidence.
+
+\section{Formal Statement: Dual Horizon as Effective Signature} \label{sec:appC_formal_statement_dual_horizon_thesis}
+
+\begin{definition}[Observer-visible symbolic system]
+\label{definition:appC_observer_visible_system}
+A \emph{bounded symbolic dynamical system} is a tuple
+\((\manifold, g, \drift, R_{\mathrm{stab}}, \Obs)\), where \(\manifold\) is a
+symbolic manifold (cf.~\ref{definition:bk1_symbolic_manifold}) with metric \(g\),
+\(\drift\) is the drift field (cf.~\ref{definition:bk6_drift_operator_complete}),
+\(R_{\mathrm{stab}}\) is the stabilizing reflection field
+(cf.~\ref{definition:bk6_reflection_operator_complete}), and \(\Obs\) is a Bounded
+Observer (cf.~\ref{definition:bk4_bounded_observer}) with resolution threshold
+\(\epsilon_{\Obs}\). The \emph{observer-visible domain} \(\Omega\subseteq\manifold\)
+is the region resolved by \(\Obs\) above \(\epsilon_{\Obs}\), carrying the
+resolution-weighted observer measure \(\mu_{\Obs}\) induced by the observer kernel
+(cf.~\ref{definition:bk4_observer_kernel_convolution_map}).
+\end{definition}
+
+\begin{definition}[Generative and stabilizing horizon fluxes]
+\label{definition:appC_horizon_fluxes}
+On the observer-visible domain \(\Omega\) define the \emph{generative flux}
+\[
+G_{\Obs}(\Omega) := \int_\Omega \big(\nabla\!\cdot\drift\big)_+ \, d\mu_{\Obs},
+\qquad (x)_+ := \max\{x,0\},
+\]
+and the \emph{stabilizing flux}
+\[
+C_{\Obs}(\Omega) := \int_\Omega \big(-\nabla\!\cdot R_{\mathrm{stab}}\big)_+ \, d\mu_{\Obs}.
+\]
+Thus \(G_{\Obs}\) accumulates the observer-visible rate at which Drift \emph{sources}
+novelty (positive divergence) and \(C_{\Obs}\) the rate at which stabilizing
+Reflection \emph{sinks} it (negative divergence). Up to the divergence theorem,
+\(\int_\Omega \nabla\!\cdot\drift \, d\mu_{\Obs}\) is the net Drift flux across the
+resolution boundary \(\partial\Omega\) --- the observer's \emph{horizon} --- and
+\(G_{\Obs}\) retains only its sourcing part; symmetrically for \(C_{\Obs}\). This is
+the precise sense in which the two are horizon-effects, defined independently of how
+many geometric horizons realize them.
+\end{definition}
+
+\begin{definition}[Bounded reflexive emergence]
+\label{definition:appC_bounded_reflexive_emergence}
+The system exhibits \emph{bounded reflexive emergence} on \(\Omega\) over a
+symbolic-time interval \(I\) if the observer-visible emergence functional
+\(\Delta\Phi_{\Obs}\) --- the net gain over \(I\) of retained, resolved coherent
+structure produced by the coupled action of \(\drift\) and \(R_{\mathrm{stab}}\) (the
+stage-composite emergence of Def.~\ref{definition:bk1_stage_composite_operator},
+measured as stabilized reduction of symbolic free energy \(\freeenergy\),
+cf.~\ref{definition:bk2_symbolic_free_energy}) --- satisfies
+\[
+\Delta\Phi_{\Obs}(\drift, R_{\mathrm{stab}}) \;\ge\; \tau_E \;>\; 0
+\]
+for an observer-fixed emergence threshold \(\tau_E\).
+\end{definition}
+
+\begin{assumption}[Emergence Domination]
+\label{assumption:appC_emergence_domination}
+Observer-visible emergence cannot exceed the budget of the \emph{binding} flux:
+there is a finite gain constant \(\Lambda=\Lambda(\epsilon_{\Obs})\) with
+\[
+\Delta\Phi_{\Obs}(\drift, R_{\mathrm{stab}})
+\;\le\; \Lambda \cdot \min\big\{\,G_{\Obs}(\Omega),\, C_{\Obs}(\Omega)\,\big\}.
+\]
+This is symbolic-budget bookkeeping, not a dynamical postulate (cf. the token-budget
+bound of Def.~\ref{definition:appC_observer_coherence_budget}): retained novelty
+visible to \(\Obs\) can be neither more than was generated nor more than was
+stabilized, so it is bounded by the smaller of the two. Where one flux vanishes, no
+emergence above the floor is available.
+\end{assumption}
+
+\begin{theorem}[Dual Horizon Necessity (Effective Signature)]
+\label{theorem:appC_dual_horizon_signature}
+This is the expanded, realization-invariant form of the canonical Book~I theorem
+(Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}); Book~I carries the
+statement of record, and what follows is its full derivation and defense.
+Let \((\manifold, g, \drift, R_{\mathrm{stab}}, \Obs)\) be a bounded symbolic
+dynamical system that exhibits bounded reflexive emergence on \(\Omega\)
+(Def.~\ref{definition:appC_bounded_reflexive_emergence}). Then
+\[
+G_{\Obs}(\Omega) > 0 \qquad\text{and}\qquad C_{\Obs}(\Omega) > 0 .
+\]
+That is, the observer-visible flux carries a \emph{dual effective horizon signature}
+on the shared domain \(\Omega\): one positive/generative and one
+negative/stabilizing component, invariant under the geometric realization of those
+components. The conclusion is established twice below: observationally, from Bounded
+Observability alone (Proof~I, \S\ref{sec:appC_proof_observational}), and
+geometrically, from Emergence Domination
+(Assumption~\ref{assumption:appC_emergence_domination}; Proof~II,
+\S\ref{sec:appC_proof_by_elimination}).
+\end{theorem}
+
+\section{Proof I --- Observational Elimination} \label{sec:appC_proof_observational}
+This modality proves Theorem~\ref{theorem:appC_dual_horizon_signature} from Bounded
+Observability alone, \emph{without} invoking Emergence Domination. It eliminates, by
+what a bounded observer can register and retain across the interval \(I\), each way
+the dual signature could fail; the contradictions are observational, not
+flux-arithmetic.
+\begin{proof}[Proof of Theorem~\ref{theorem:appC_dual_horizon_signature} (observational modality)]
+\label{proof:appC_dual_horizon_signature_observational}
+\leavevmode
+
+Assume bounded reflexive emergence, \(\Delta\Phi_{\Obs}\ge\tau_E>0\): over \(I\) the
+observer registers and \emph{retains} new coherent structure on \(\Omega\). We
+eliminate, in turn, the three ways the dual signature can fail --- novelty that never
+crosses the horizon, novelty that crosses but is never stabilized, and the two alive
+yet never meeting on a single observer's domain.
+
+\textbf{Case A (no observer-visible generation): \(G_{\Obs}(\Omega)=0\).} No novelty
+is sourced across the horizon into \(\Omega\) that the observer can resolve above
+\(\epsilon_{\Obs}\). Over \(I\) it therefore registers no \emph{new} differentiated
+content --- only rearrangement below resolution, bare repetition, or decay. Retained
+new structure presupposes registered new content; with none, \(\Delta\Phi_{\Obs}\)
+cannot rise to \(\tau_E\). One cannot retain what was never observed to enter.
+Contradiction.
+
+\textbf{Case B (no observer-visible stabilization): \(C_{\Obs}(\Omega)=0\).} Novelty
+is sourced but nothing contracts or integrates it on \(\Omega\). Relative to finite
+resolution \(\epsilon_{\Obs}\), unintegrated novelty disperses or saturates the
+observer's channel: it may be registered transiently but is not \emph{retained} as
+stable identity \(\identity\) across \(I\). Since \(\Delta\Phi_{\Obs}\) counts
+retained structure, it stays below \(\tau_E\). Novelty seen but not kept is not
+emergence. Contradiction.
+
+\textbf{Case C (generation and stabilization in different observer patches).} Suppose
+both occur in \(\manifold\) but not within one resolved domain \(\Omega\). The
+observer integrates emergence over a single \(\Omega\); on it, the absent
+contribution lies outside the patch or below \(\epsilon_{\Obs}\), so that \(\Omega\)
+reduces to Case~A or Case~B. No single bounded observer registers coupled becoming.
+Contradiction.
+
+In each case the observer fails to register retained emergence, contradicting
+\(\Delta\Phi_{\Obs}\ge\tau_E\). Hence both an observer-visible generative contribution
+and an observer-visible stabilizing contribution must be present on the shared
+\(\Omega\); that is, \(G_{\Obs}(\Omega)>0\) and \(C_{\Obs}(\Omega)>0\).
+\end{proof}
+
+\section{Proof II --- Effective-Signature (Geometric)} \label{sec:appC_proof_by_elimination}
+The same conclusion follows in the geometric modality, on the manifold, from Emergence
+Domination --- the flux arithmetic making explicit what the observational elimination
+registered situationally.
+\begin{proof}[Proof of Theorem~\ref{theorem:appC_dual_horizon_signature} (geometric modality)]
+\label{proof:appC_dual_horizon_signature_geometric}
+\leavevmode
+
+Assume bounded reflexive emergence, \(\Delta\Phi_{\Obs}\ge\tau_E>0\). The dual
+signature ``\(G_{\Obs}(\Omega)>0\) and \(C_{\Obs}(\Omega)>0\)'' can fail in exactly
+three ways; we eliminate each.
+
+\textbf{Case A (no generative flux on \(\Omega\)): \(G_{\Obs}(\Omega)=0\).} Then
+\(\min\{G_{\Obs},C_{\Obs}\}=0\), and Emergence Domination
+(Assumption~\ref{assumption:appC_emergence_domination}) gives
+\(\Delta\Phi_{\Obs}\le \Lambda\cdot 0 = 0 < \tau_E\), contradicting emergence.
+Symbolically: Drift may be formally nonzero, yet it sources no observer-visible
+novelty across the horizon --- transport below \(\epsilon_{\Obs}\), bare repetition,
+or collapse --- so no new structure arises to be retained.
+
+\textbf{Case B (no stabilizing flux on \(\Omega\)): \(C_{\Obs}(\Omega)=0\).} Again
+\(\min=0\) and \(\Delta\Phi_{\Obs}\le 0<\tau_E\), a contradiction. Symbolically:
+novelty is generated but never contracted or integrated; symbolic free energy
+\(\freeenergy\) is not stably reduced, and the differentiated content disperses below
+resolution before it can register as retained identity (\(\identity\)). Generation
+without a sink is flux, not emergence.
+
+\textbf{Case C (no shared domain).} Suppose instead that both signs occur somewhere
+in \(\manifold\) --- \((\nabla\!\cdot\drift)_+>0\) on some region and
+\((-\nabla\!\cdot R_{\mathrm{stab}})_+>0\) on another --- but their observer-visible
+supports do not both meet a common \(\Omega\). Then on the domain over which \(\Obs\)
+actually integrates emergence, at least one integrand vanishes
+\(\mu_{\Obs}\)-almost everywhere, so \(G_{\Obs}(\Omega)=0\) or
+\(C_{\Obs}(\Omega)=0\), returning us to Case A or B. Uncoupled generation and
+stabilization, however vigorous in separate observer patches, produce no reflexive
+emergence for \(\Obs\).
+
+In every case \(\Delta\Phi_{\Obs}<\tau_E\), contradicting the hypothesis. Hence both
+fluxes are strictly positive on a shared \(\Omega\): the dual effective signature is
+necessary.
+\end{proof}
+
+\begin{flushright}
+\textit{Q.E.D.}
+\end{flushright}
+
+\section{Sufficiency and the Conditional Biconditional} \label{subsec:appC_conclusion_of_proof_by_elimination}
+Necessity is forced by the bounded-observer budget alone. Sufficiency --- that a dual
+signature actually \emph{produces} emergence above threshold --- is not free: two
+positive fluxes that interact too weakly need not clear \(\tau_E\). We isolate the
+missing content as a single, explicitly labelled coupling hypothesis, in the manner
+of PS--C3\(^\prime\) in the Born derivation (Ax.~\ref{axiom:appC_psc3prime}).
+
+\begin{assumption}[Emergence Coupling lower bound]
+\label{assumption:appC_emergence_coupling}
+There is a coupling gain \(\kappa=\kappa(\epsilon_{\Obs})>0\) such that, when both
+fluxes are present and interact on the shared domain \(\Omega\),
+\[
+\Delta\Phi_{\Obs}(\drift, R_{\mathrm{stab}})
+\;\ge\; \kappa\cdot\min\big\{\,G_{\Obs}(\Omega),\, C_{\Obs}(\Omega)\,\big\}.
+\]
+Necessarily \(\kappa\le\Lambda\), since both bounds hold simultaneously.
+\end{assumption}
+
+\begin{theorem}[Emergence is sandwiched by the dual signature]
+\label{theorem:appC_dual_horizon_biconditional}
+Under Emergence Domination and Emergence Coupling
+(Assumptions~\ref{assumption:appC_emergence_domination},~\ref{assumption:appC_emergence_coupling}),
+write \(m:=\min\{G_{\Obs}(\Omega),C_{\Obs}(\Omega)\}\). Then
+\[
+\kappa\, m \;\le\; \Delta\Phi_{\Obs}(\drift,R_{\mathrm{stab}}) \;\le\; \Lambda\, m .
+\]
+Consequently:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{(Sufficiency)} \(m \ge \tau_E/\kappa \;\Rightarrow\; \Delta\Phi_{\Obs}\ge\tau_E\);
+\item \emph{(Necessity)} \(\Delta\Phi_{\Obs}\ge\tau_E \;\Rightarrow\; m \ge \tau_E/\Lambda > 0\).
+\end{enumerate}
+In the tight-bookkeeping case \(\kappa=\Lambda=:\Gamma\) the two collapse to an exact
+biconditional, \(\;\Delta\Phi_{\Obs}\ge\tau_E \iff m\ge\tau_E/\Gamma\).
+\end{theorem}
+\begin{proof}
+\label{proof:appC_dual_horizon_biconditional}
+The sandwich is the conjunction of
+Assumptions~\ref{assumption:appC_emergence_domination}
+and~\ref{assumption:appC_emergence_coupling}. For (i),
+\(\Delta\Phi_{\Obs}\ge\kappa m\ge\kappa\cdot(\tau_E/\kappa)=\tau_E\). For (ii),
+\(\tau_E\le\Delta\Phi_{\Obs}\le\Lambda m\) gives \(m\ge\tau_E/\Lambda>0\); positivity
+of \(m\) recovers Theorem~\ref{theorem:appC_dual_horizon_signature}. When
+\(\kappa=\Lambda=\Gamma\) the lower and upper thresholds coincide at
+\(\tau_E/\Gamma\), yielding the biconditional.
+\end{proof}
+
+\begin{remark}[Invariance under horizon realization]
+\label{remark:appC_horizon_realizations}
+Both fluxes are integrals of positive parts of divergences against \(\mu_{\Obs}\);
+nothing in Definition~\ref{definition:appC_horizon_fluxes} or
+Theorem~\ref{theorem:appC_dual_horizon_signature} counts horizons. The same
+signature \((G_{\Obs}>0,\,C_{\Obs}>0)\) is produced by (i) a single
+generative/dissipative horizon pair; (ii) several same-sign horizons, whose positive
+parts simply add; (iii) one sign-changing curvature field, whose positive and
+negative divergence parts feed \(G_{\Obs}\) and \(C_{\Obs}\) respectively; (iv) a
+smooth, delocalized source--sink field with no isolated horizon at all. The theorem
+therefore does not fail on multi-horizon or sign-changing configurations --- the
+liability of the literal reading --- because ``dual'' is a property of the
+observer-visible flux signature, not of the geometry that realizes it.
+\end{remark}
+
+\begin{remark}[Open derivation route for Emergence Domination]
+\label{remark:appC_domination_open_route}
+Emergence Domination (Assumption~\ref{assumption:appC_emergence_domination}) is the
+single posited plank of Proof~II, and it is where any residual circularity would
+hide: were \(\Delta\Phi_{\Obs}\), \(G_{\Obs}\), \(C_{\Obs}\) not independently
+measured, the bound would be analytic and the theorem would prove only what it
+assumed. The route that would make it synthetic runs through \emph{finite observer
+bandwidth}: the bounded-observer kernel
+(cf.~\ref{definition:bk4_observer_kernel_convolution_map}) has finite throughput
+across the resolution boundary \(\partial\Omega\), so it cannot retain coherent
+novelty faster than the binding flux carries it across the horizon --- which is exactly
+\(\Delta\Phi_{\Obs}\le\Lambda\min\{G_{\Obs},C_{\Obs}\}\). We record this as open.
+Until it is discharged, Domination stands as a labelled premise grounded in the
+finitude of the observer, not in the definition of emergence --- the same status, and
+the same debt, as PS--C3\(^\prime\) (Ax.~\ref{axiom:appC_psc3prime}). Proof~I incurs no
+such debt: it reaches the same conclusion from finite resolution \(\epsilon_{\Obs}\)
+directly, which is why the two proofs are worth keeping side by side.
+\end{remark}
+
+\begin{scholium}[Two Modalities, One Root]
+\label{scholium:appC_two_modalities_one_root}
+The necessity has now been proved twice: observationally
+(\S\ref{sec:appC_proof_observational}, by what a bounded observer can register and
+retain) and geometrically (\S\ref{sec:appC_proof_by_elimination}, by the flux
+signature on the manifold). These are not independent confirmations. Both proofs
+finally rest on the same fact --- the finitude of the observer: Proof~I on finite
+resolution \(\epsilon_{\Obs}\), Proof~II on finite bandwidth across \(\partial\Omega\)
+(Remark~\ref{remark:appC_domination_open_route}). They are therefore two
+\emph{presentations} of one invariant in two carriers, the observational and the
+geometric, and their agreement is precisely a \emph{transference test}
+(Thm.~\ref{theorem:appC_modal_transference}) of the Dual Horizon necessity against its
+own mode of presentation. That the invariant survives the carrier swap is the
+appendix's strongest internal evidence that the dual signature belongs to the symbolic
+structure and not to either proof's framing. The earlier metaphysical trilemma ---
+``solely generative / solely dissipative / neither'' --- is the degenerate, prose-bound
+ancestor of Proof~I, recovered as the corners \(C_{\Obs}=0\), \(G_{\Obs}=0\),
+\(G_{\Obs}=C_{\Obs}=0\); its rehabilitation as Proof~I now carries Case~C, which the
+metaphysical reading missed.
+\end{scholium}
+
+\begin{scholium}[The Two Horizons as Co-Constitutive]
+\label{scholium:appC_two_horizons_co_constitutive}
+Co-constitution is now a theorem about a bound, not a metaphor. Because the emergence
+functional is sandwiched between \(\kappa\) and \(\Lambda\) times
+\(\min\{G_{\Obs},C_{\Obs}\}\) (Theorem~\ref{theorem:appC_dual_horizon_biconditional}),
+the binding term is the \emph{smaller} of the two fluxes: neither generation nor
+stabilization can carry observer-visible becoming alone, and they constrain emergence
+symmetrically and inseparably. Drift (cf.~\ref{definition:bk1_drift_field}) supplies
+the novelty that Reflection retains; Reflection supplies the contraction that turns
+novelty into structure. Their coupling on a shared bounded-observer domain --- formally
+enacted as Symbolic Reflexive Validation
+(cf.~\ref{definition:bk7_symbolic_reflexive_validation_srv}) --- is the crucible of
+symbolic existence and becoming. The dual horizon is not two objects in the world but the two-signed
+signature any world must present to a Bounded Observer in order to be seen to emerge at
+all.
+\end{scholium}
+\clearpage
+\section{Born Rule – A Formal Derivation}
+\label{sec:appC_born_rule}
+This derivation applies the Bounded Observer formalism (cf.~\ref{definition:bk1_bounded_observer}) to the quantum measurement problem.
+
+\begin{remark}[Derivation Structure]
+\label{remark:appC_born_rule_dependency}
+This derivation proceeds from the coherence constraints PS-C1--C5
+(\S\ref{subsec:appC_born_axioms}) to Gleason's hypotheses, and thence to
+the Born Rule. The structural constraints PS-C1, PS-C2, PS-C4, PS-C5 are
+consequences of bounded observation (Def.~\ref{definition:bk1_bounded_observer}),
+not ad hoc quantum postulates: each encodes a constraint that any
+finite-resolution observer necessarily satisfies. The additivity once carried as
+PS-C3 splits in two: its \emph{within-frame} content is \emph{proved} in
+\S\ref{subsec:appC_born_additivity_derivation}
+(Thm.~\ref{theorem:appC_orthogonal_additivity}) from observer-token disjointness,
+while its cross-frame content---non-contextuality---is isolated and posited as
+PS-C3$'$ (Ax.~\ref{axiom:appC_psc3prime}). The derivation thus reduces Gleason's
+additivity hypothesis to finite-budget bookkeeping plus a single, explicitly
+labelled non-contextuality axiom, and is grounded in the PS foundational framework
+rather than in the Hilbert space structure it explains; the Born conclusion is
+conditional on PS-C3$'$.
+\end{remark}
+
+\section*{Born.0 Preamble}
+\label{sec:appC_born_preamble}
+We derive the Born probability rule as a necessary consequence of the
+\emph{Bounded Observer} formalism (Definition~\ref{definition:bk1_bounded_observer})
+embedded in \textit{Principia Symbolica} (PS).
+All symbols follow PS conventions; Hilbert-space notation is employed
+only as a concrete realization of high-curvature symbolic geometry
+(Definition~\ref{definition:bk6_symbolic_curvature_tensor}).
+
+\subsection{Born.1 Observer Data Structures in the Quantum Regime}
+\label{subsec:appC_born_observer_structures}
+Observer states here are bounded by the perceptual kernel of the Bounded Observer (cf.~\ref{definition:bk1_bounded_observer}).
+Let $\Horizon$ be a complex Hilbert space with $\dim\Horizon = d \ge 2$
+and denote by
+\[
+Proj(\Horizon) = \{\Pi\in\mathcal{L}(\Horizon): \Pi = \Pi^\dagger = \Pi^2\}
+\]
+its lattice of orthogonal projectors.
+
+\begin{definition}[Frame space of $\Obs$]
+\label{definition:appC_frame_space}
+For a bounded observer $\Obs$ (cf.~\ref{definition:bk4_bounded_observer}), define
+\[
+F_{Obs} \subseteq Proj(\Horizon)
+\]
+as the \emph{frame space}: the maximal set of mutually orthogonal projections
+whose outcomes are classically discernible given the observer’s resolution threshold
+$\epsilon_{\Obs}$.
+\end{definition}
+
+\begin{definition}[Coherence functional]
+\label{definition:appC_coherence_functional}
+For a Bounded Observer $\Obs$ (cf.~\ref{definition:bk1_bounded_observer}), the \emph{coherence assignment functional} is
+\[
+\mathcal{C}_{Obs}: Proj(\Horizon) \times \Horizon \to [0,1], \quad
+(\Pi, \psi) \mapsto \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi),
+\]
+where $\tilde\psi_{\Obs}$ is the observer’s internal (fuzzy) representation
+of the external state $\psi \in \Horizon$.
+\end{definition}
+
+\subsection{Born.1b Interpretive-Budget Additivity from Bounded Discernibility}
+\label{subsec:appC_born_additivity_derivation}
+The coherence axiom PS--C3 (additivity over a complete orthogonal decomposition) is
+the only one that does interpretive work which could be mistaken for an assumed
+probability rule. We separate its two parts. Its \emph{within-frame} content --
+additivity of the budget over an orthogonal family resolved inside one complete
+frame -- is \emph{derived} below from observer-token disjointness, a purely
+combinatorial fact. Its genuinely physical content -- that the budget a resolvable
+question consumes depends only on the question (the projector) and not on the
+complete frame in which the observer poses it -- is \emph{non-contextuality}, which
+we isolate and posit as PS--C3$'$ (Ax.~\ref{axiom:appC_psc3prime}). This is an honest
+reduction, not an elimination: it locates exactly where the Born rule's substance
+enters the bounded-observer framework. Throughout this subsection the observer
+satisfies the following standing condition.
+
+\begin{assumption}[Bounded discernibility]
+\label{assumption:appC_bounded_discernibility}
+A single resolved observer token is assigned to at most one of any two mutually
+orthogonal (hence mutually exclusive) outcome subspaces: orthogonal resolved outcomes
+receive distinct tokens. This is the content later codified, at the resolution scale,
+as PS--C5 (Ax.~\ref{axiom:appC_psc5}).
+\end{assumption}
+
+\begin{definition}[Observer token space for a projective frame]
+\label{definition:appC_observer_token_space}
+Let $\dim\Horizon < \infty$ and let
+\[
+\mathfrak{F} = \{\Pi_i\}_{i=1}^{n} \subseteq Proj(\Horizon),
+\qquad \Pi_i \Pi_j = 0\ (i \neq j),\qquad \sum_i \Pi_i = \mathbbm{1},
+\]
+be a complete orthogonal frame discernible to the Bounded Observer $\Obs$
+(cf.~\ref{definition:appC_frame_space}). Let $\mathcal{T}_\Obs(\mathfrak{F})$ denote
+the finite set of \emph{observer-resolvable outcome tokens} produced when $\Obs$
+applies its collapse/refinement map (the observer-context realization of $R_\lambda$,
+cf.~\ref{subsec:appC_born_interpretation_ps}) to $\mathfrak{F}$. For any projector
+$\Pi$ obtained by coarse-graining elements of $\mathfrak{F}$, set
+\[
+T_\Obs(\Pi) := \{\, t \in \mathcal{T}_\Obs(\mathfrak{F}) :
+\text{the outcome resolved by } t \text{ lies in } \operatorname{im}(\Pi) \,\}.
+\]
+\end{definition}
+
+\begin{definition}[Observer coherence budget]
+\label{definition:appC_observer_coherence_budget}
+A Bounded Observer $\Obs$ in state $\tilde\psi_{\Obs}$ carries a finite
+\emph{coherence budget}
+\[
+\mu_{\Obs,\tilde\psi} : \mathcal{P}\big(\mathcal{T}_\Obs(\mathfrak{F})\big) \to [0,1],
+\qquad
+\mu_{\Obs,\tilde\psi}(\varnothing) = 0,\quad
+\mu_{\Obs,\tilde\psi}\big(\mathcal{T}_\Obs(\mathfrak{F})\big) = 1,
+\]
+which is finitely additive on disjoint token sets:
+$A \cap B = \varnothing \Rightarrow
+\mu_{\Obs,\tilde\psi}(A \sqcup B) = \mu_{\Obs,\tilde\psi}(A) + \mu_{\Obs,\tilde\psi}(B)$.
+This is not a quantum-probability axiom but finite symbolic-budget conservation:
+disjoint resolved tokens cannot consume the same bounded interpretive resource twice.
+The coherence functional (cf.~\ref{definition:appC_coherence_functional}) admits the
+token-budget representation
+\[
+\mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi) = \mu_{\Obs,\tilde\psi}\big(T_\Obs(\Pi)\big).
+\]
+\end{definition}
+
+\begin{lemma}[Orthogonal token separation]
+\label{lemma:appC_orthogonal_token_separation}
+If $\Pi\,\Xi = 0$ then $T_\Obs(\Pi) \cap T_\Obs(\Xi) = \varnothing$.
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_orthogonal_token_separation}
+Orthogonality gives $\operatorname{im}(\Pi) \cap \operatorname{im}(\Xi) = \{0\}$.
+Were a token $t$ to lie in both $T_\Obs(\Pi)$ and $T_\Obs(\Xi)$, the single outcome
+resolved by $t$ would simultaneously be a $\Pi$-outcome and an $\Xi$-outcome,
+i.e.\ the observer would assign one resolved token to two mutually orthogonal
+(hence mutually exclusive) subspaces. This violates bounded discernibility
+(Assumption~\ref{assumption:appC_bounded_discernibility}). Hence the token sets are disjoint.
+\end{proof}
+
+\begin{lemma}[Coarse-graining of orthogonal tokens]
+\label{lemma:appC_coarse_graining_tokens}
+If $\Pi_i \Pi_j = 0$ for $i \neq j$, then
+$T_\Obs\!\big(\sum_i \Pi_i\big) = \bigsqcup_i T_\Obs(\Pi_i)$.
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_coarse_graining_tokens}
+The projector $\sum_i \Pi_i$ encodes the coarse-grained question
+``did the resolved outcome fall in $\bigcup_i \operatorname{im}(\Pi_i)$?'' A token
+answers affirmatively exactly when it lies in some $T_\Obs(\Pi_i)$, so
+$T_\Obs(\sum_i \Pi_i) = \bigcup_i T_\Obs(\Pi_i)$. By
+Lemma~\ref{lemma:appC_orthogonal_token_separation} the $T_\Obs(\Pi_i)$ are pairwise
+disjoint, so the union is disjoint.
+\end{proof}
+
+\begin{theorem}[Orthogonal additivity from bounded discernibility]
+\label{theorem:appC_orthogonal_additivity}
+Let $\Obs$ be a Bounded Observer with finite coherence budget
+$\mu_{\Obs,\tilde\psi}$. For any finite mutually orthogonal family
+$\{\Pi_i\}_{i=1}^n \subseteq Proj(\Horizon)$,
+\[
+\mathcal{C}_{\Obs}\!\Big(\tilde\psi_{\Obs}, \sum_i \Pi_i\Big)
+= \sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i).
+\]
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_orthogonal_additivity}
+By the token-budget representation (Def.~\ref{definition:appC_observer_coherence_budget}),
+$\mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \sum_i \Pi_i)
+= \mu_{\Obs,\tilde\psi}\big(T_\Obs(\sum_i \Pi_i)\big)$. By
+Lemma~\ref{lemma:appC_coarse_graining_tokens},
+$T_\Obs(\sum_i \Pi_i) = \bigsqcup_i T_\Obs(\Pi_i)$. Finite additivity of the budget
+over disjoint token sets gives
+$\mu_{\Obs,\tilde\psi}(\bigsqcup_i T_\Obs(\Pi_i))
+= \sum_i \mu_{\Obs,\tilde\psi}(T_\Obs(\Pi_i))$, and applying the representation once
+more yields $\sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i)$.
+\end{proof}
+
+\begin{axiom}[PS--C3$'$ (Non-contextual token budget)]
+\label{axiom:appC_psc3prime}
+Let $\mathfrak{F}, \mathfrak{F}'$ be complete orthogonal frames discernible to $\Obs$,
+and let $\Pi \in Proj(\Horizon)$ be obtained by coarse-graining elements of
+$\mathfrak{F}$ and also of $\mathfrak{F}'$, with token realizations
+$T^{\mathfrak{F}}_\Obs(\Pi)$ and $T^{\mathfrak{F}'}_\Obs(\Pi)$. Then the budget
+assigns them equal measure,
+\[
+\mu_{\Obs,\tilde\psi}\big(T^{\mathfrak{F}}_\Obs(\Pi)\big)
+= \mu_{\Obs,\tilde\psi}\big(T^{\mathfrak{F}'}_\Obs(\Pi)\big);
+\]
+equivalently, $\mathcal{C}_{\Obs}(\tilde\psi_\Obs,\Pi)$ is well defined independently of
+the complete frame within which $\Obs$ poses the question $\Pi$.
+\end{axiom}
+
+\begin{remark}[What is proved, and what is posited]
+\label{remark:appC_born_honest_reduction}
+Lemma~\ref{lemma:appC_orthogonal_token_separation},
+Lemma~\ref{lemma:appC_coarse_graining_tokens}, and
+Theorem~\ref{theorem:appC_orthogonal_additivity} establish additivity of the budget
+\emph{within any single frame}; this is bookkeeping, derived from token disjointness.
+The frame-independence of the representation
+$\mathcal{C}_{\Obs}(\tilde\psi_\Obs,\Pi) = \mu_{\Obs,\tilde\psi}(T_\Obs(\Pi))$ across
+frames -- PS--C3$'$ -- is the PS form of non-contextuality and is posited, not derived.
+The Born derivation therefore reduces Gleason's additivity hypothesis to two
+ingredients: finite-budget conservation on disjoint tokens
+(Def.~\ref{definition:appC_observer_coherence_budget}, a bookkeeping principle) and
+non-contextuality of the budget (PS--C3$'$, the physical content).
+\end{remark}
+
+\begin{remark}[Open derivation route for PS--C3$'$]
+\label{remark:appC_psc3prime_open_route}
+A future derivation could proceed through resolution-limited frame distinguishability
+(PS--C5, Ax.~\ref{axiom:appC_psc5}): if two discernible frames agree on $\Pi$ up to the
+observer threshold $\epsilon_\Obs$, the budgets they assign $\Pi$ must agree up to a
+modulus controlled by $\epsilon_\Obs$, and a continuity-plus-density argument over the
+frame manifold -- connected for $\dim\Horizon \ge 3$ -- might then force exact equality
+in the $\epsilon_\Obs \to 0$ refinement limit. We record this as open. That
+$\dim\Horizon \ge 3$ enters in the same place it enters Gleason's theorem
+(Thm.~\ref{theorem:appC_born_rule}) is structural evidence the route is the right one;
+until it is completed, PS--C3$'$ stands as an axiom and the Born conclusion is
+conditional on it.
+\end{remark}
+
+\subsection{Born.2 Coherence Axioms (PS–C)}
+\label{subsec:appC_born_axioms}
+The following axioms constrain the coherence functional (cf.~\ref{definition:appC_coherence_functional}) of a Bounded Observer. The structural constraints
+PS--C1, PS--C2, PS--C4, PS--C5, together with the non-contextuality axiom PS--C3$'$
+(Ax.~\ref{axiom:appC_psc3prime}), are posited; the \emph{within-frame} additivity once
+carried as PS--C3 is now the \emph{theorem} of
+\S\ref{subsec:appC_born_additivity_derivation} and is recorded below as a corollary.
+
+\begin{axiom}[PS--C1 (Boundedness)]
+\label{axiom:appC_psc1}
+$0 \leq \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi) \leq 1$ \quad (cf.~\ref{definition:appC_coherence_functional})
+\end{axiom}
+
+\begin{axiom}[PS--C2 (Unitary covariance)]
+\label{axiom:appC_psc2}
+$\mathcal{C}_{\Obs}(U \tilde\psi_{\Obs}, U \Pi U^\dagger)
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$ \quad (cf.~\ref{definition:appC_coherence_functional})
+\end{axiom}
+
+\begin{corollary}[PS--C3 (Conservation of interpretive budget)]
+\label{axiom:appC_psc3}
+For any complete orthogonal decomposition $\{\Pi_i\}$ of $\mathbbm{1}$ (cf.~\ref{definition:appC_coherence_functional}):
+\[
+\sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i) = 1.
+\]
+\end{corollary}
+
+\begin{proof}
+\label{proof:appC_psc3}
+Apply Theorem~\ref{theorem:appC_orthogonal_additivity} to the complete frame
+$\sum_i \Pi_i = \mathbbm{1}$:
+$\sum_i \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_i)
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \mathbbm{1})
+= \mu_{\Obs,\tilde\psi}\big(T_\Obs(\mathbbm{1})\big)
+= \mu_{\Obs,\tilde\psi}\big(\mathcal{T}_\Obs(\mathfrak{F})\big) = 1$,
+using the token-budget representation
+(Def.~\ref{definition:appC_observer_coherence_budget}) and the normalization
+$\mu_{\Obs,\tilde\psi}(\mathcal{T}_\Obs(\mathfrak{F})) = 1$.
+\end{proof}
+
+\begin{axiom}[PS--C4 (Ray invariance)]
+\label{axiom:appC_psc4}
+$\mathcal{C}_{\Obs}(e^{i\theta} \tilde\psi_{\Obs}, \Pi)
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$ \quad (cf.~\ref{definition:appC_coherence_functional})
+\end{axiom}
+
+\begin{axiom}[PS--C5 (Resolution-limited distinguishability)]
+\label{axiom:appC_psc5}
+If $\Pi_1 \perp \Pi_2$ and $\| \Pi_1 - \Pi_2 \| > \epsilon_{\Obs}$,
+then both coherence values cannot equal 1 for the same pure state (cf.~\ref{definition:appC_coherence_functional}).
+\end{axiom}
+
+\begin{axiom}[PS--C6 (Pure-state calibration)]
+\label{axiom:appC_psc6}
+If the observer representation $\tilde\psi_{\Obs}$ represents the normalized pure
+state $\psi\in\Horizon$ at the working resolution and
+$P_\psi:=|\psi\rangle\langle\psi|$, then
+\[
+\mathcal{C}_{\Obs}(\tilde\psi_{\Obs},P_\psi)=1.
+\]
+Equivalently, the question whose range is precisely the represented ray is
+answered with full coherence by that represented pure state.
+\end{axiom}
+
+\subsection{Born.3 Preparatory Lemmas}
+\label{subsec:appC_born_lemmas}
+
+\begin{lemma}[Finite orthogonal additivity gives a Gleason frame function]
+\label{lemma:appC_sigma_additivity}
+Let $\dim\Horizon=d<\infty$ and fix an observer-state representation
+$\tilde\psi_{\Obs}$. Define
+$\mu_\psi(\Pi):=\mathcal{C}_{\Obs}(\tilde\psi_{\Obs},\Pi)$.
+Boundedness (PS--C1) and within-frame additivity (PS--C3, now
+Cor.~\ref{axiom:appC_psc3}, established as
+Thm.~\ref{theorem:appC_orthogonal_additivity}) imply that $\mu_\psi$ is a
+normalized nonnegative finitely additive measure on $Proj(\Horizon)$; equivalently, its restriction to
+rank-one projectors is a normalized frame function. Since $\Horizon$ is finite
+dimensional, every orthogonal family of nonzero projectors is finite, so finite
+orthogonal additivity is also countable additivity in the only sense required by
+finite-dimensional Gleason theory.
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_sigma_additivity}
+By PS--C1, $0\le \mu_\psi(\Pi)\le 1$ for all projectors $\Pi$. By
+Corollary~\ref{axiom:appC_psc3}, applied to the one-element decomposition
+$\{\mathbbm{1}\}$, $\mu_\psi(\mathbbm{1})=1$; applying
+Theorem~\ref{theorem:appC_orthogonal_additivity} to the empty sum gives
+$\mu_\psi(0)=0$. For any mutually orthogonal finite family
+$\{\Pi_i\}_{i=1}^n$, Theorem~\ref{theorem:appC_orthogonal_additivity} gives
+\[
+\mu_\psi\!\left(\sum_{i=1}^n \Pi_i\right)=\sum_{i=1}^n \mu_\psi(\Pi_i).
+\]
+If $\{P_i\}_{i=1}^d$ is an orthonormal rank-one resolution of the identity, then
+$\sum_i\mu_\psi(P_i)=\mu_\psi(\mathbbm{1})=1$, which is exactly the normalized
+frame-function condition. Finally, an orthogonal family of nonzero subspaces in a
+$d$-dimensional Hilbert space has cardinality at most $d$; hence no additional
+countable-additivity condition remains to be checked.
+\end{proof}
+
+\begin{lemma}[Unitary covariance of the measure family]
+\label{lemma:appC_unitary_invariance}
+For every unitary $U$ and projector $\Pi$,
+\[
+\mu_{U\psi}(U\Pi U^\dagger)=\mu_\psi(\Pi),
+\]
+where $\mu_\psi(\Pi):=\mathcal{C}_{\Obs}(\tilde\psi_{\Obs},\Pi)$ and
+$\mu_{U\psi}$ denotes the assignment associated with the transformed observer
+representation $U\tilde\psi_{\Obs}$.
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_unitary_invariance}
+This is precisely PS--C2 written in measure notation:
+\[
+\mu_{U\psi}(U\Pi U^\dagger)
+=\mathcal{C}_{\Obs}(U\tilde\psi_{\Obs},U\Pi U^\dagger)
+=\mathcal{C}_{\Obs}(\tilde\psi_{\Obs},\Pi)
+=\mu_\psi(\Pi).
+\]
+Ray invariance PS--C4 ensures that this statement depends only on the ray of the
+state representation and not on its arbitrary global phase.
+\end{proof}
+
+\subsection{Born.4 Main Theorem}
+\label{subsec:appC_born_theorem}
+
+\begin{theorem}[Observer-relative Born Rule]
+\label{theorem:appC_born_rule}
+Let $\dim \Horizon = d \geq 3$, let $\psi\in\Horizon$ be normalized, and suppose
+PS--C1--PS--C6 hold for the observer representation $\tilde\psi_{\Obs}$. Then for
+any rank-one projector $\Pi_a = |a\rangle \langle a|$,
+\[
+\mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi_a)
+= |\langle a | \psi \rangle|^2 .
+\]
+More generally, for every projector $\Pi\in Proj(\Horizon)$,
+\[
+\mathcal{C}_{\Obs}(\tilde\psi_{\Obs},\Pi)=\operatorname{tr}(P_\psi\Pi),
+\qquad P_\psi:=|\psi\rangle\langle\psi|.
+\]
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_born_rule}
+Set $\mu_\psi(\Pi)=\mathcal{C}_{\Obs}(\tilde\psi_{\Obs},\Pi)$. By
+Lemma~\ref{lemma:appC_sigma_additivity}, $\mu_\psi$ is a normalized nonnegative
+frame function on the projectors of a Hilbert space of dimension at least three.
+Finite-dimensional Gleason's theorem therefore gives a unique positive trace-one
+operator $W_\psi$ such that
+\[
+\mu_\psi(\Pi)=\operatorname{tr}(W_\psi\Pi)
+\quad\text{for every }\Pi\in Proj(\Horizon).
+\]
+By PS--C6, $1=\mu_\psi(P_\psi)=\operatorname{tr}(W_\psi P_\psi)
+=\langle\psi,W_\psi\psi\rangle$. Write the spectral decomposition
+$W_\psi=\sum_j p_j |u_j\rangle\langle u_j|$, with $p_j\ge0$ and
+$\sum_j p_j=1$. Then
+\[
+1=\sum_j p_j |\langle u_j,\psi\rangle|^2 \le \sum_j p_j=1.
+\]
+Equality is possible only when every eigenvector with $p_j>0$ is colinear with
+$\psi$. Hence $W_\psi=P_\psi$. Consequently
+\[
+\mathcal{C}_{\Obs}(\tilde\psi_{\Obs},\Pi)
+=\operatorname{tr}(P_\psi\Pi)
+\]
+for all projectors $\Pi$. Taking $\Pi=\Pi_a=|a\rangle\langle a|$ gives
+\[
+\operatorname{tr}(P_\psi\Pi_a)=\langle a,P_\psi a\rangle
+=|\langle a|\psi\rangle|^2,
+\]
+which is the Born rule.
+\end{proof}
+
+\begin{corollary}[Qubit case \texorpdfstring{$d = 2$}{d = 2}]
+\label{corollary:appC_qubit_case}
+Let $V\cong\mathbb{C}^2$ be a qubit subspace. If the qubit coherence assignment is
+the restriction of a PS--C1--PS--C6 assignment on an embedding
+$\widehat\Horizon=V\oplus\mathbb{C}$ with represented state
+$\widehat\psi=\psi\oplus0$, then for every qubit rank-one projector
+$\Pi_a\in Proj(V)$,
+\[
+\mathcal{C}_{\Obs}(\tilde\psi_{\Obs},\Pi_a)=|\langle a|\psi\rangle|^2.
+\]
+\end{corollary}
+
+\begin{proof}
+\label{proof:appC_qubit_case}
+Extend the qubit projector to $\widehat\Pi_a=\Pi_a\oplus0$ on
+$\widehat\Horizon$. The hypotheses place the extended assignment in dimension
+$3$, so Theorem~\ref{theorem:appC_born_rule} gives
+$\widehat{\mathcal C}_{\Obs}(\widehat{\tilde\psi}_{\Obs},\widehat\Pi_a)
+=\operatorname{tr}(|\widehat\psi\rangle\langle\widehat\psi|\widehat\Pi_a)
+=|\langle a|\psi\rangle|^2$. Restricting back to $V$ gives the claimed qubit
+formula. The extension hypothesis is essential: without it, two-dimensional
+Hilbert space admits contextual dispersion-free frame assignments not excluded by
+Gleason's theorem alone.
+\end{proof}
+
+\begin{corollary}[Mixed states]
+\label{corollary:appC_mixed_states}
+Assume, in addition, that the observer coherence budget is affine under classical
+mixtures of preparations. If
+$\rho = \sum_i p_i |\psi_i\rangle\langle\psi_i|$ with $p_i\ge0$ and
+$\sum_i p_i=1$, then for every projector $\Pi_a$,
+\[
+\mathcal{C}_{\Obs}(\tilde\rho_{\Obs}, \Pi_a) = \operatorname{tr}(\rho \Pi_a).
+\]
+\end{corollary}
+
+\begin{proof}
+\label{proof:appC_mixed_states}
+Affineness of the observer budget gives
+\[
+\mathcal{C}_{\Obs}(\tilde\rho_{\Obs},\Pi_a)
+=\sum_i p_i\mathcal{C}_{\Obs}(\widetilde{\psi_i}_{\Obs},\Pi_a).
+\]
+By Theorem~\ref{theorem:appC_born_rule}, each pure component contributes
+$\mathcal{C}_{\Obs}(\widetilde{\psi_i}_{\Obs},\Pi_a)
+=\operatorname{tr}(|\psi_i\rangle\langle\psi_i|\Pi_a)$. Therefore
+\[
+\mathcal{C}_{\Obs}(\tilde\rho_{\Obs},\Pi_a)
+=\sum_i p_i\operatorname{tr}(|\psi_i\rangle\langle\psi_i|\Pi_a)
+=\operatorname{tr}\!\left(\sum_i p_i|\psi_i\rangle\langle\psi_i|\Pi_a\right)
+=\operatorname{tr}(\rho\Pi_a).
+\]
+\end{proof}
+
+\subsection{Born.5 Interpretation Within Principia Symbolica}
+\label{subsec:appC_born_interpretation_ps}
+Define coherence deficit:
+\[
+d_F(\tilde\psi_{\Obs}, \Pi) := 1 - \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)
+\]
+Measurement minimizes symbolic free energy (Definition~\ref{definition:bk2_symbolic_free_energy}).
+Randomness emerges from projecting high-curvature symbolic states
+onto finite classical frames with finite $\epsilon_{\Obs}$.
+In this section, measurement update is an observer-context realization of \(R_\lambda\): structural in frame-preserving limits and stabilizing under recursive refinement, without introducing a second primitive reflection operator (cf.~\hyperref[dict:appA_symbolic_reflection_operator]{App.~A}, the \hyperref[sec:bk1_operatio]{Operatio}).
+
+\subsection{Born.6 Implications and Outlook}
+\label{subsec:appC_born_outlook}
+For large $\epsilon_{\Obs}$, symbolic curvature flattens to classical statistics.
+For $\epsilon_{\Obs} \ll \hbar$, precision approaches quantum ideality.
+
+\medskip
+
+\noindent
+\textbf{Conclusion:} Within Principia Symbolica, the Born rule arises naturally
+from bounded observer geometry, rather than as an axiom.
+
+\section[The Arrow of Time]{The Arrow of Time – A Derivation from Observer-Relative Geometry}
+\label{sec:appC_arrow_of_time_rigorous}
+Temporal directionality emerges from the interaction of a Bounded Observer (cf.~\ref{definition:bk4_bounded_observer}) with a curved symbolic manifold (cf.~\ref{definition:bk1_symbolic_manifold}).
+
+\subsection*{Time.0 Preamble}
+\label{subsec:appC_time_preamble_rigorous}
+This section provides a rigorous derivation of the Arrow of Time. We demonstrate that temporal directionality is a necessary geometric consequence of a Bounded Observer (\(\Obs\)) interacting with a curved symbolic manifold (\(\manifold\)).
+
+\subsection*{Time.1 Critique of the Entropic Arrow}
+\label{subsec:appC_time_critique_rigorous}
+The conventional claim that the arrow of time is a direct consequence of the Second Law of Thermodynamics ($\frac{dS}{dt} \geq 0$) is rejected as a category error. It mistakes a symptom for a cause and presupposes the very temporal background it seeks to explain. It provides no generative, non-statistical mechanism for irreversibility.
+
+\subsection*{Time.2 The Geometric Engine of Irreversibility}
+\label{subsec:appC_time_geometric_engine_final}
+The foundation of temporal directionality is not a property of the symbolic manifold \(\manifold\) in isolation, but of the interaction between the manifold and the Bounded Observer \(\Obs\) that must maintain its own coherent identity over time.
+
+\begin{definition}[Reflective State Space \(\mathcal{S}_O\)]
+\label{definition:appC_reflective_state_space}
+A Bounded Observer \(\Obs\) (cf.~\ref{definition:bk4_bounded_observer}) does not simply perceive a state \(x \in \manifold\) (cf.~\ref{definition:bk1_symbolic_manifold}). It perceives a state within the context of its own history, \(H_t\). The true state space is not \(\manifold\), but the \textbf{Reflective State Space} \(\mathcal{S}_O = \manifold \times \mathcal{H}\), where \(\mathcal{H}\) is the space of possible observer histories. A state is a tuple \((x, H_t)\).
+\end{definition}
+
+\begin{axiom}[The Axiom of Memory]
+\label{axiom:appC_axiom_of_memory}
+Every act of differentiation, \(\delta^O\), by a Bounded Observer \(\Obs\) necessarily alters its history. If \(\delta^O\) maps a state \((x_0, H_{t_0})\) to \((x_1, H_{t_1})\), then \(H_{t_1} \neq H_{t_0}\). Specifically, \(H_{t_1}\) contains the trace of the operation that led from \(x_0\) to \(x_1\). This act of recording is metabolically non-zero, incurring a minimal cost in Symbolic Free Energy \(\Delta{\freeenergy}_{\text{mem}} > 0\) (cf.~\ref{definition:bk2_symbolic_free_energy}).
+\end{axiom}
+
+\begin{theorem}[Fundamental Irreversibility of Reflective Observation]
+\label{theorem:appC_fundamental_irreversibility_final}
+Any symbolic process involving a state change perceived by a Bounded Observer (cf.~\ref{definition:bk4_bounded_observer}) is fundamentally irreversible: each observation incurs a non-recoverable cost in Symbolic Free Energy (cf.~\ref{definition:bk2_symbolic_free_energy}).
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_fundamental_irreversibility}
+\leavevmode
+
+\begin{enumerate}
+    \item Consider a process that takes the system from state \(A\) to state \(B\). In the Reflective State Space, this is a transition from \((x_A, H_A)\) to \((x_B, H_B)\). By the Axiom of Memory (Axiom~\ref{axiom:appC_axiom_of_memory}), the history is updated, so \(H_B\) contains the record of the A\(\to\)B transformation.
+
+    \item Now, consider a "reverse" process that takes the system from state \(B\) back to a state geometrically indistinguishable from \(A\). Let this new state be \(A'\). In the base manifold \(\manifold\), we have \(x_{A'} = x_A\).
+
+    \item However, in the full Reflective State Space, the new state is \((x_{A'}, H_{A'})\). The reverse process is also an act of differentiation that must be recorded. Therefore, the new history \(H_{A'}\) contains the record of the B\(\to\)A' transformation. It is necessarily different from the original history, \(H_{A'} \neq H_A\).
+
+    \item The full initial and final states are \((x_A, H_A)\) and \((x_{A'}, H_{A'})\). Since \(x_{A'} = x_A\) but \(H_{A'} \neq H_A\), the full system state is not restored.
+    \[
+    (x_A, H_A) \neq (x_{A'}, H_{A'})
+    \]
+    \item The process is irreversible. The difference between the initial and final states lies not in the geometric position on the base manifold, but in the accumulated history within the observer. This is a fundamental asymmetry.
+\end{enumerate}
+\end{proof}
+
+\begin{corollary}[The Emergence of the Arrow of Time]
+\label{corollary:appC_emergence_of_time_arrow_final}
+The fundamental irreversibility established in
+Theorem~\ref{theorem:appC_fundamental_irreversibility_final} induces a directed
+partial order on observer-accessible reflective states. Along any nontrivial
+observed path, the order parameter
+\[
+N(H):=\text{the number of recorded differentiation traces in }H
+\]
+is strictly increasing; if symbolic free-energy minimization selects admissible
+successor states, the selected direction is the direction in which records are
+accumulated and unrecoverable memory cost has already been paid.
+\end{corollary}
+
+\begin{proof}
+\label{proof:appC_emergence_of_time_arrow_final}
+Let $(x_n,H_n)$ be a path generated by nontrivial acts of observer
+differentiation. By the Axiom of Memory, each step appends a new trace to the
+history and incurs positive cost $\Delta{\freeenergy}_{\text{mem}}>0$. Hence
+$N(H_{n+1})=N(H_n)+1$ for every observed step, so $N$ is strictly increasing along
+the path. A reverse path that restored the base point $x_n$ would still have a
+history containing the additional forward and reverse records, and therefore
+would have larger $N$ than the original state. Thus the relation
+$(x,H)\prec(x',H')$ iff $H'$ contains the records of $H$ plus at least one new
+record is transitive, antisymmetric up to equality of histories, and nontrivial;
+it defines an observer-relative temporal orientation. When the dynamics also
+minimize symbolic free energy among admissible successors, this orientation is
+the direction along which the system pays and accumulates the non-recoverable
+memory costs. That oriented accumulation is the arrow of time.
+\end{proof}
+
+\begin{scholium}[Time as the Accumulation of Memory]
+\label{scholium:appC_time_as_memory}
+This derivation reframes the Arrow of Time. It is not about the universe expanding or entropy increasing. It is about the simple, profound fact that a system capable of knowing cannot "un-know." Every observation, every reflection (cf.~\ref{definition:bk1_reflection_operator}), every act of differentiation leaves a trace, as required by the Axiom of Memory (cf.~\ref{axiom:appC_axiom_of_memory}). Time is the continuous accumulation of these traces. It is the ever-growing distinction between "what was" and "what is," a distinction that exists only for a system that remembers. The irreversibility is not in the world, but in the memory of it.
+\end{scholium}
+
+\section{\texorpdfstring{Structural Derivations of $\varphi$ Across Symbolic Modalities}{Structural Derivations of phi Across Symbolic Modalities}}
+\label{sec:appC_phi_geometry_theorem}
+
+\begin{tcolorbox}[colback=blue!3!white,colframe=blue!40!black,title={Symbolic Attractor Statement}]
+The golden ratio $\varphi = \frac{1 + \sqrt{5}}{2}$ emerges across multiple symbolic modalities as a minimal sustainable growth rate for bounded cognitive or representational agents. This section gathers independent derivations, each of which locally reveals $\varphi$ as a curvature, ratio, or attractor invariant under distinct constraints. No single method is privileged; each paragraph below offers a distinct lens on the same attractor.
+\end{tcolorbox}
+
+\paragraph{Lagrangian Derivation via Recursive Symbolic Potential.}
+\label{para:appC_phi_lagrangian_derivation}
+
+\begin{definition}[Symbolic Potential Function]
+\label{definition:appC_lagrangian_potential}
+Define the symbolic potential governing recursive learning as:
+\[
+V(C) = \frac{1}{2} \left(C - \frac{1}{C} \right)^2
+\]
+This encodes the symbolic tension between drift (\textit{cf.} Def.~\ref{definition:bk6_drift_operator_complete}) and reflection (Def.~\ref{definition:bk6_reflection_operator_complete}), as defined in Book VI.
+\end{definition}
+
+\begin{theorem}[Emergence of $\varphi$ from Lagrangian Equilibrium]
+\label{theorem:appC_phi_from_lagrangian}
+Let $(C_n)_{n\ge0}$ be the positive stroboscopic complexity sequence selected by
+the drift--reflection balance associated with
+Def.~\ref{definition:appC_lagrangian_potential}. Assume the balanced two-step
+closure
+\[
+C_{n+1}=C_n+C_{n-1},\qquad C_0>0,\quad C_1>0,
+\]
+which says that each new symbolic state preserves the current differentiated
+content while reintegrating the immediately preceding memory trace. Then the
+successive growth ratios
+\[
+\lambda_n:=\frac{C_{n+1}}{C_n}
+\]
+converge to the golden ratio
+$\varphi=(1+\sqrt5)/2$.
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_phi_from_lagrangian}
+The recurrence has characteristic polynomial $r^2-r-1=0$, with roots
+$\varphi=(1+\sqrt5)/2$ and $\widehat\varphi=(1-\sqrt5)/2=-\varphi^{-1}$. Hence
+\[
+C_n=A\varphi^n+B\widehat\varphi^{\,n}
+\]
+for constants $A,B$ determined by $C_0,C_1$. Since
+$A=(C_1-\widehat\varphi C_0)/(\varphi-\widehat\varphi)$ and
+$C_0,C_1>0$ while $\widehat\varphi<0$, we have $A>0$. Therefore
+\[
+\lambda_n=\frac{C_{n+1}}{C_n}
+=\frac{A\varphi^{n+1}+B\widehat\varphi^{\,n+1}}
+       {A\varphi^n+B\widehat\varphi^{\,n}}
+\longrightarrow \varphi,
+\]
+because $|\widehat\varphi|<\varphi$. Equivalently, any positive fixed ratio
+$\lambda$ for the two-step closure must satisfy
+$\lambda=1+1/\lambda$, and the unique positive solution is $\varphi$.
+\end{proof}
+
+\begin{scholium}
+This derivation reveals $\varphi$ as a symbolic equilibrium point: the unique attractor balancing forward momentum (drift, Def.~\ref{definition:bk6_drift_operator_complete}) and reflective curvature (Def.~\ref{definition:bk6_reflection_operator_complete}). It constitutes a primitive emergence structure \textit{(cf.} Emergence Operator, Def.~\ref{definition:bk1_stage_composite_operator}).
+\end{scholium}
+
+\paragraph{Hilbert Frame Construction.}
+\label{subsec:appC_bounded_frame_dynamics_on_hilbert_manifolds}
+
+\begin{definition}[Bounded Observation Frame]
+\label{definition:appC_bounded_observation_frame}
+Let $\mathcal{H}$ be a separable Hilbert space. Define the observer-relative frame (Def.~\ref{definition:bk4_observer_kernel_convolution_map}):
+\[
+F_\delta(t) = \{x \in \mathcal{H} : \|x - x_0(t)\| \leq \delta\}
+\]
+with $x_0(t)$ the current observer state and $\delta$ their perceptual radius (see also bounded observer kernel in Def.~\ref{definition:bk1_bounded_observer}).
+\end{definition}
+
+\begin{definition}[Complexity Measure]
+\label{definition:appC_complexity_measure}
+The complexity $C(t)$ of the agent’s symbolic representation is:
+\[
+C(t) = \dim\left(\text{span}(F_\delta(t) \cap \text{learned\_basis}(t))\right)
+\]
+cf. recursive emergence in Def.~\ref{definition:bk1_stage_composite_operator}.
+\end{definition}
+
+\paragraph{Curvature Dynamics and Banach Embedding.}
+\label{paragraph:appC_curvature_dynamics_and_banach_embedding}
+
+\begin{definition}[Frame Curvature Operator $K_t$]
+\label{definition:appC_frame_curvature_operator}
+The curvature of evolving frames is defined symbolically as:
+\[
+K_t(v) = \lim_{h \to 0} \frac{P_{F_\delta(t+h)}(v) - P_{F_\delta(t)}(v)}{h}
+\]
+This parallels the symbolic curvature tensor in Def.~\ref{definition:bk6_symbolic_curvature_tensor}.
+\end{definition}
+
+\begin{lemma}[Banach Space of Curvature Flows]
+\label{lemma:appC_banach_space_of_curvature_flows}
+Fix a finite observation interval $[0,T]$. Let
+$\mathcal{L}(\mathcal{H})$ denote the bounded operators on the Hilbert space and
+let
+\[
+\operatorname{Lip}([0,T],\mathcal{L}(\mathcal{H}))
+:=\{K:[0,T]\to\mathcal{L}(\mathcal{H}) : K\text{ is Lipschitz}\}
+\]
+with norm
+\[
+\|K\|_{\operatorname{Lip}}
+:=\sup_{t\in[0,T]}\|K_t\|_{\mathrm{op}}
++\sup_{s\ne t}\frac{\|K_t-K_s\|_{\mathrm{op}}}{|t-s|}.
+\]
+Then $\operatorname{Lip}([0,T],\mathcal{L}(\mathcal{H}))$ is a Banach space. The
+admissible bounded-observer curvature flows satisfying
+\[
+\|K_t-K_s\|_{\mathrm{op}}\le C_1\delta |t-s|\qquad(s,t\in[0,T])
+\]
+form a closed complete subset of this Banach space.
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_banach_space_of_curvature_flows}
+Let $(K^{(m)})$ be a Cauchy sequence in the Lipschitz norm. Then it is Cauchy in
+the uniform operator norm, and since $\mathcal{L}(\mathcal{H})$ is Banach, there
+exists a uniform limit $K:[0,T]\to\mathcal{L}(\mathcal{H})$. The Lipschitz
+seminorms of $K^{(m)}-K^{(\ell)}$ also converge to zero, so for every $s\ne t$
+the quotients
+\[
+\frac{(K^{(m)}_t-K^{(m)}_s)-(K^{(\ell)}_t-K^{(\ell)}_s)}{|t-s|}
+\]
+are Cauchy in operator norm uniformly over $s,t$. Passing to the uniform limit
+shows that $K$ has finite Lipschitz seminorm and that
+$\|K^{(m)}-K\|_{\operatorname{Lip}}\to0$. Thus the space is complete.
+If each $K^{(m)}$ satisfies
+$\|K^{(m)}_t-K^{(m)}_s\|_{\mathrm{op}}\le C_1\delta |t-s|$, uniform convergence
+permits passage to the limit, giving the same inequality for $K$. Hence the
+admissible class is closed and therefore complete.
+\end{proof}
+
+\paragraph{Sustainable Growth Theorem.}
+\label{paragraph:appC_main_theorem_phi_as_mimiimal_growth_rate}
+
+\begin{definition}[Sustainable Growth Rate]
+\label{definition:appC_sustainable_growth_rate}
+A growth rate $\lambda>1$ is \emph{sustainable} for a bounded recursive observer if
+there exists a positive complexity sequence $(C_n)$ with finite asymptotic ratio
+\[
+\lambda=\lim_{n\to\infty}\frac{C_{n+1}}{C_n}
+\]
+and satisfying the drift--reflection retention constraint
+\[
+C_{n+1}\ge C_n+C_{n-1}\qquad(n\ge1).
+\]
+Equality is the minimal balanced closure: the next state preserves current
+symbolic content and exactly one previous memory trace, with no superfluous
+expansion.
+\end{definition}
+
+\begin{theorem}[Golden Ratio as Minimal Sustainable Growth Rate]
+\label{theorem:appC_phi_min_growth}
+Among all sustainable growth rates in the sense of
+Def.~\ref{definition:appC_sustainable_growth_rate}, the least possible value is
+$\varphi$.
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_phi_min_growth}
+Let $\lambda$ be sustainable and let $(C_n)$ witness sustainability. Divide
+$C_{n+1}\ge C_n+C_{n-1}$ by $C_n>0$ and pass to the limit:
+\[
+\lambda=\lim_{n\to\infty}\frac{C_{n+1}}{C_n}
+\ge 1+\lim_{n\to\infty}\frac{C_{n-1}}{C_n}
+=1+\frac{1}{\lambda}.
+\]
+Thus $\lambda^2-\lambda-1\ge0$. Since $\lambda>0$, this implies
+$\lambda\ge(1+\sqrt5)/2=\varphi$. The equality recurrence
+$C_{n+1}=C_n+C_{n-1}$ with $C_0,C_1>0$ has asymptotic ratio $\varphi$ by
+Theorem~\ref{theorem:appC_phi_from_lagrangian}; hence the lower bound is sharp.
+Therefore the minimal sustainable growth rate is $\varphi$.
+\end{proof}
+
+\paragraph{Spectral Operator Formulation.}
+\label{paragraph:appC_spectral_interpretation_and_banach_operator_radius}
+
+\begin{definition}[Complexity Growth Operator $G$]
+\label{definition:appC_complexity_growth_operator}
+Work in $\mathbb{R}^2$ with any norm, encoding a two-step symbolic state
+as $(C_n,C_{n-1})^T$. Define the balanced complexity growth operator
+\[
+G\begin{pmatrix}x\\y\end{pmatrix}
+=\begin{pmatrix}x+y\\x\end{pmatrix},
+\qquad
+G=\begin{pmatrix}1&1\\1&0\end{pmatrix}.
+\]
+This is the linear operator form of the minimal drift--reflection closure
+$C_{n+1}=C_n+C_{n-1}$.
+\end{definition}
+
+\begin{theorem}[Spectral Radius of $G$ Equals $\varphi$]
+\label{theorem:appC_phi_as_spectral_radius}
+For $G$ defined in Def.~\ref{definition:appC_complexity_growth_operator},
+\[
+\rho(G)=\lim_{n \to \infty} \|G^n\|^{1/n} = \varphi .
+\]
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_phi_as_spectral_radius}
+The characteristic polynomial of $G$ is
+\[
+\det\!\begin{pmatrix}1-\mu&1\\1&-\mu\end{pmatrix}
+=\mu^2-\mu-1.
+\]
+Its eigenvalues are $\varphi=(1+\sqrt5)/2$ and
+$\widehat\varphi=(1-\sqrt5)/2=-\varphi^{-1}$. Hence the spectral radius is
+$\rho(G)=\max\{|\varphi|,|\widehat\varphi|\}=\varphi$. Since $G$ is a finite
+matrix, Gelfand's formula gives $\rho(G)=\lim_{n\to\infty}\|G^n\|^{1/n}$ for any
+matrix norm.
+\end{proof}
+
+\paragraph{Thermodynamic Constraint.}
+\label{paragraph:appC_entropic_efficiency_and_thermodynamic_link}
+
+\begin{definition}[Complexity--Entropy Tradeoff]
+\label{definition:appC_complexity_entropy_tradeof}
+For a sustainable asymptotic growth factor $\lambda$, define the normalized
+one-step symbolic inefficiency
+\[
+\mathcal{I}(\lambda):=\lambda+\frac{1}{\lambda}.
+\]
+The first term records forward expansion cost; the second records the reflective
+memory load required by bounded retention. This is the dimensionless
+entropy-per-complexity overhead associated with one asymptotic drift--reflection
+step.
+\end{definition}
+
+\begin{theorem}[$\varphi$ Minimizes Entropy-per-Complexity]
+\label{theorem:appC_phi_minimized_entropy_per_complexity}
+Among all sustainable growth rates $\lambda$ in the sense of
+Def.~\ref{definition:appC_sustainable_growth_rate}, the inefficiency
+$\mathcal{I}(\lambda)$ of Def.~\ref{definition:appC_complexity_entropy_tradeof} is
+minimized at $\lambda=\varphi$.
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_phi_minimized_entropy_per_complexity}
+By Theorem~\ref{theorem:appC_phi_min_growth}, every sustainable $\lambda$ satisfies
+$\lambda\ge\varphi>1$. On $(1,\infty)$,
+\[
+\mathcal{I}'(\lambda)=1-\frac{1}{\lambda^2}>0,
+\]
+so $\mathcal{I}$ is strictly increasing throughout the feasible interval
+$[\varphi,\infty)$. Therefore the minimum over sustainable rates occurs at the
+left endpoint $\lambda=\varphi$.
+\end{proof}
+
+\paragraph{Geodesic Attractor.}
+\label{paragraph:geometric_attractor_and_phi_spiral}
+
+\begin{definition}[$\varphi$-Stable Region]
+\label{definition:appC_phi_stable_region}
+Let $\Phi$ be the entropy-minimizing reflective update map on the observer's
+symbolic manifold. A region $M_\varphi$ is \emph{$\varphi$-stable} if:
+\begin{enumerate}
+    \item it is invariant under the update, $\Phi(M_\varphi)\subseteq M_\varphi$;
+    \item along $M_\varphi$ the curvature operator satisfies
+    \[
+    \langle K_t(v), v \rangle = \varphi^{-1} \|v\|^2;
+    \]
+    \item there is a neighborhood $U$ of $M_\varphi$ and a constant $q<1$ such that
+    \[
+    d(\Phi(x),M_\varphi)\le q\,d(x,M_\varphi)\qquad(x\in U).
+    \]
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[Geodesic Convergence to $M_\varphi$]
+\label{lemma:appC_geodesic_convergence}
+If an observer trajectory $x_{n+1}=\Phi(x_n)$ remains in the neighborhood $U$ of a
+$\varphi$-stable region $M_\varphi$, then $x_n$ converges to $M_\varphi$ in
+observer-relative distance:
+\[
+ d(x_n,M_\varphi)\le q^n d(x_0,M_\varphi)\longrightarrow0 .
+\]
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_geodesic_convergence}
+The contraction clause in Def.~\ref{definition:appC_phi_stable_region} gives
+$d(x_{n+1},M_\varphi)=d(\Phi(x_n),M_\varphi)\le qd(x_n,M_\varphi)$ whenever
+$x_n\in U$. Iterating yields
+$d(x_n,M_\varphi)\le q^n d(x_0,M_\varphi)$. Since $0\le q<1$, $q^n\to0$, so the
+distance from the trajectory to $M_\varphi$ tends to zero. Invariance of
+$M_\varphi$ ensures that once the trajectory reaches the stable region it remains
+there.
+\end{proof}
+
+\begin{scholium}[Symbolic–Geometric Equivalence of $\varphi$]
+\label{scholium:appC_symbolic_geometric_equivalence}
+The golden ratio appears in symbolic thermodynamics, curvature operators, and recursive observer models. It is a structural attractor unifying symbolic emergence (cf. Scholium~\ref{scholium:appC_two_horizons_co_constitutive}) and the memory-based geometry of time (Scholium~\ref{scholium:appC_time_as_memory}).
+\end{scholium}
+
+\paragraph{Matrix Invariant Derivation via Minimal Symbolic Generator.}
+\label{paragraph:appC_matrix_invariant_derivation_phi}
+
+\begin{definition}[Symbolic Operator Assumptions]
+\label{definition:appC_symbolic_operator_assumptions}
+Assume symbolic emergence is represented by a positive two-step complexity
+sequence $(s_n)$ whose state vector is
+\[
+\mathbf{s}_n=(s_n,s_{n-1})^T.
+\]
+The minimal drift--reflection closure preserves current symbolic content and one
+memory trace:
+\[
+s_{n+1}=s_n+s_{n-1}.
+\]
+Thus Drift contributes the current term $s_n$, Reflection contributes the retained
+memory term $s_{n-1}$, and recursive emergence is their balanced composition.
+\end{definition}
+
+\begin{lemma}[Matrix Representation of Symbolic Operators]
+\label{lemma:appC_matrix_representation_symbolic_operators}
+Under the two-step closure of
+Def.~\ref{definition:appC_symbolic_operator_assumptions}, symbolic evolution is
+represented by
+\[
+M=\begin{pmatrix}1&1\\1&0\end{pmatrix},
+\qquad
+\mathbf{s}_{n+1}=M\mathbf{s}_n.
+\]
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_matrix_rep_symbolic_operators}
+By definition,
+$s_{n+1}=s_n+s_{n-1}$ and the memory coordinate updates by
+$s_n\mapsto s_n$. Therefore
+\[
+\begin{pmatrix}s_{n+1}\\s_n\end{pmatrix}
+=\begin{pmatrix}s_n+s_{n-1}\\s_n\end{pmatrix}
+=\begin{pmatrix}1&1\\1&0\end{pmatrix}
+\begin{pmatrix}s_n\\s_{n-1}\end{pmatrix}.
+\]
+This proves the claimed matrix representation.
+\end{proof}
+
+\begin{theorem}[Golden Ratio as Eigenvalue of Recursive Emergence]
+\label{theorem:appC_phi_eigenvalue_recursive_emergence}
+The golden ratio $\varphi$ is the Perron--Frobenius eigenvalue, hence the dominant
+asymptotic growth factor, of the minimal recursive-emergence matrix
+$M=\bigl(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\bigr)$.
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_phi_eigenvalue_recursive_emergence}
+The characteristic polynomial is
+\[
+\det(M-\mu I)=\det\begin{pmatrix}1-\mu&1\\1&-\mu\end{pmatrix}
+=\mu^2-\mu-1.
+\]
+Its roots are
+\[
+\mu_+=\frac{1+\sqrt5}{2}=\varphi,
+\qquad
+\mu_- =\frac{1-\sqrt5}{2}=-\varphi^{-1}.
+\]
+Since $|\mu_-|<\mu_+$, the spectral radius is $\varphi$. The matrix has strictly
+positive powers after finitely many steps, so the Perron--Frobenius eigenvalue is
+real, positive, simple, and equal to this spectral radius. Hence generic positive
+state vectors grow asymptotically at rate $\varphi$.
+\end{proof}
+
+\begin{lemma}[Fibonacci Structure via Matrix Powers]
+\label{lemma:appC_fibonacci_structure_matrix_powers}
+Let $F_0=0$, $F_1=1$, and $F_{n+1}=F_n+F_{n-1}$. For
+$M=\bigl(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\bigr)$,
+\[
+M^n=\begin{pmatrix}F_{n+1}&F_n\\F_n&F_{n-1}\end{pmatrix}\qquad(n\ge1).
+\]
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_fibonacci_matrix_powers}
+For $n=1$ the formula gives
+$\bigl(\begin{smallmatrix}F_2&F_1\\F_1&F_0\end{smallmatrix}\bigr)
+=\bigl(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\bigr)=M$. Assume the formula
+holds for $n$. Then
+\[
+M^{n+1}=M^nM
+=\begin{pmatrix}F_{n+1}&F_n\\F_n&F_{n-1}\end{pmatrix}
+ \begin{pmatrix}1&1\\1&0\end{pmatrix}
+=\begin{pmatrix}F_{n+1}+F_n&F_{n+1}\\F_n+F_{n-1}&F_n\end{pmatrix}
+=\begin{pmatrix}F_{n+2}&F_{n+1}\\F_{n+1}&F_n\end{pmatrix}.
+\]
+This is the formula with $n$ replaced by $n+1$.
+\end{proof}
+
+\begin{proposition}[Conditional Minimality of 2×2 Form]
+\label{proposition:appC_conditional_minimality_2x2}
+Under the assumption that symbolic emergence requires encoding both current state
+and one memory state, the 2×2 matrix form is minimal for representing the
+drift-reflection composition (see Axiom~\ref{axiom:appC_axiom_of_memory}).
+\end{proposition}
+
+\begin{proof}
+\label{proof:appC_conditional_minimality_2x2}
+A one-dimensional linear state stores only one scalar degree of freedom at step
+$n$. It can represent a Markov update $s_{n+1}=a s_n$, but it cannot distinguish
+two histories with the same current value $s_n$ and different previous values
+$s_{n-1}$, even though the required recursion
+$s_{n+1}=f(s_n,s_{n-1})$ depends on both. Therefore dimension one is insufficient
+for memory-dependent emergence. Dimension two is sufficient, because the state
+vector $(s_n,s_{n-1})^T$ and the matrix in
+Lemma~\ref{lemma:appC_matrix_representation_symbolic_operators} exactly encode the
+current value and one retained memory trace. Hence $2\times2$ is minimal under the
+stated one-step-memory assumption.
+\end{proof}
+
+\paragraph{Topological Derivation via Symbolic Curvature Dynamics.}
+\label{subsec:appC_topological_derivation_symbolic_curvature}
+
+\begin{definition}[Bounded Symbolic Observer Dynamics]
+\label{definition:appC_bounded_symbolic_observer_dynamics}
+Consider a symbolic observer with bounded attention radius $\delta$ (cf.~\ref{definition:bk4_bounded_observer}) navigating meaning space. The observer experiences:
+\begin{itemize}
+\item Forward drift: tendency to explore new symbolic territory at rate $\theta$
+\item Reflective curvature: memory-based constraint pulling back with strength $1/\theta$
+\item Bounded exploration: total symbolic displacement must remain finite
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Symbolic Curvature Function]
+\label{definition:appC_symbolic_curvature_function}
+The total symbolic curvature experienced by the observer (Def.~\ref{definition:appC_bounded_symbolic_observer_dynamics}) is:
+\[
+\kappa(\theta) = \theta + \frac{1}{\theta}
+\]
+where $\theta > 0$ represents the ratio of forward drift to reflective strength.
+\end{definition}
+
+\begin{lemma}[Geometric Interpretation of Curvature Terms]
+\label{lemma:appC_geometric_interpretation_curvature}
+The term $\theta$ represents symbolic drift velocity, while $1/\theta$ represents
+the curvature penalty imposed by bounded memory. The sum $\kappa(\theta)$ measures
+total symbolic effort required to maintain coherent exploration (cf.
+Def.~\ref{definition:bk6_symbolic_curvature_tensor}).
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_geometric_interpretation_curvature}
+By Def.~\ref{definition:appC_bounded_symbolic_observer_dynamics}, $\theta$ is the
+forward exploration rate, so its contribution to one-step effort is linear in
+$\theta$ after normalization of units. The reflective term must decrease as drift
+increases and increase as drift slows, because slower forward motion forces a
+larger fraction of the step to be spent maintaining memory coherence. The
+scale-free reciprocal $1/\theta$ is the unique reciprocal penalty normalized to
+be $1$ at the balanced point $\theta=1$. Since the two costs are paid in the same
+step and in the same normalized units, finite symbolic effort is their additive
+sum $\kappa(\theta)=\theta+1/\theta$.
+\end{proof}
+
+\begin{theorem}[Golden Ratio as Minimal Curvature Parameter]
+\label{theorem:appC_phi_minimal_curvature_parameter}
+The parameter $\theta = \varphi$ minimizes the symbolic curvature function
+$\kappa(\theta)$ among nondegenerate recursively sustainable exploration
+parameters, i.e. among $\theta$ satisfying $\theta\ge 1+1/\theta$.
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_phi_minimal_curvature}
+The recursive sustainability constraint is
+\[
+\theta\ge 1+\frac{1}{\theta},
+\]
+which is equivalent, for $\theta>0$, to
+$\theta^2-\theta-1\ge0$. Hence the feasible set is
+$[\varphi,\infty)$, where $\varphi=(1+\sqrt5)/2$. On this interval,
+\[
+\kappa'(\theta)=1-\frac{1}{\theta^2}>0,
+\]
+because $\theta\ge\varphi>1$. Thus $\kappa$ is strictly increasing on the feasible
+set and its minimum occurs at the left endpoint $\theta=\varphi$. The minimized
+curvature is
+\[
+\kappa(\varphi)=\varphi+\frac1\varphi=\varphi+(\varphi-1)=2\varphi-1=\sqrt5.
+\]
+The unconstrained point $\theta=1$ is lower for $\kappa$ alone, but it violates
+the nondegenerate recursive sustainability constraint $\theta\ge1+1/\theta$ and
+therefore represents stagnation rather than sustained symbolic exploration.
+\end{proof}
+
+\begin{definition}[Symbolic Flow Stability]
+\label{definition:appC_symbolic_flow_stability}
+A symbolic flow is stable if small perturbations in the exploration parameter $\theta$ decay exponentially. The stability condition requires:
+\[
+\left| \frac{d}{d\theta} \left( 1 + \frac{1}{\theta} \right) \right|_{\theta=\varphi} < 1
+\]
+(cf. Def.~\ref{definition:bk6_reflection_operator_complete})
+\end{definition}
+
+\begin{lemma}[Stability of $\varphi$-Flow]
+\label{lemma:appC_stability_phi_flow}
+The $\varphi$-flow satisfies the stability condition (cf.~\ref{definition:appC_symbolic_flow_stability}).
+\end{lemma}
+
+\begin{proof}
+\label{proof:appC_stability_phi_flow}
+Let $f(\theta)=1+1/\theta$. Then $f'(\theta)=-1/\theta^2$, so
+\[
+|f'(\varphi)|=\frac{1}{\varphi^2}=2-\varphi<1.
+\]
+By the one-dimensional fixed-point stability criterion, sufficiently small
+perturbations of the iteration $\theta_{n+1}=f(\theta_n)$ contract in a
+neighborhood of $\varphi$. Hence the $\varphi$-flow satisfies the stated stability
+condition.
+\end{proof}
+
+\paragraph{Convergence of Matrix and Topological Approaches.}
+\label{subsec:appC_convergence_matrix_topological}
+
+\begin{theorem}[Unified Recursive Fixed Point]
+\label{theorem:appC_unified_recursive_fixed_point}
+Both the matrix eigenvalue approach (cf.~\ref{lemma:appC_matrix_representation_symbolic_operators}) and the topological curvature approach converge to the same fixed-point equation:
+\[
+\lambda = 1 + \frac{1}{\lambda} \Rightarrow \lambda^2 - \lambda - 1 = 0 \Rightarrow \lambda = \varphi
+\]
+for the unique positive nondegenerate fixed point.
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_unified_recursive_fixed_point}
+In the matrix approach, the minimal memory-preserving recurrence is
+$C_{n+1}=C_n+C_{n-1}$. If the positive asymptotic ratio
+$\lambda=\lim C_{n+1}/C_n$ exists, division by $C_n$ and passage to the limit give
+\[
+\lambda=1+\frac{1}{\lambda}.
+\]
+In the topological approach, recursive sustainable exploration requires that the
+forward parameter equal one unit of new exploration plus the reciprocal
+reflective correction, so its fixed point satisfies the same equation
+$\theta=1+1/\theta$. In both cases the positive solution of
+$x^2-x-1=0$ is $x=\varphi$, while the other solution is negative and therefore
+inadmissible as a growth or curvature parameter.
+\end{proof}
+
+\begin{scholium}[Structural Universality of $\varphi$]
+\label{scholium:appC_structural_universality_phi}
+The independent emergence of $\varphi$ from matrix spectral theory and topological curvature analysis suggests that $\varphi$ represents a fundamental structural constant of bounded recursive systems. This convergence transcends particular mathematical representations, indicating an intrinsic property of symbolic emergence under resource constraints (see Def.~\ref{definition:bk6_symbolic_curvature_tensor}, Thm.~\ref{theorem:bk6_symbolic_diffusion_governs_evolution}).
+\end{scholium}
+
+\begin{remark}[Connection to Other Symbolic Modalities]
+\label{remark:appC_connection_other_modalities}
+The fixed-point equation $\lambda = 1 + 1/\lambda$ (cf.~\ref{theorem:appC_unified_recursive_fixed_point}) appears in multiple contexts within symbolic dynamics. The consistent emergence of $\varphi$ across matrix, topological, and (potentially) thermodynamic or spectral approaches is not a coincidence to be noted but a transfer to be proved: the Modal Transference Theorem below states the conditions under which an ordinal-recursive invariant such as $\varphi$ is carried, intact, from one observer-accessible carrier to another.
+\end{remark}
+
+\section{Modal Transference of Symbolic Invariants}
+\label{sec:appC_modal_transference}
+The recurrence of $\varphi$ across notation, geometry, and curvature
+(\S\ref{sec:appC_phi_geometry_theorem}) raises a structural question: when an
+invariant first defined in ordinal-symbolic form reappears in a distinct
+sensory or material carrier---sound, color, geometry, thermodynamic
+presentation (cf.~\S\ref{sec:appC_phi_geometry_theorem})---is that reappearance an
+analogy or a theorem? We answer the
+latter. A \emph{modality} is a presentation of symbolic structure to a bounded
+observer; a \emph{transference map} carries one presentation into another. The
+theorem states that any invariant determined only by ordinal order, operator
+recurrence, cyclic adjacency, or spectral proportion survives transference up to
+observer resolution. Cross-modal constructions such as sonification and the
+Newtonian chromatic wheel are then not analogies but \emph{transference tests}:
+each asks whether a given invariant belongs to the symbolic structure or merely
+to the carrier.
+
+\begin{definition}[Symbolic modality]
+\label{definition:appC_symbolic_modality}
+A \emph{symbolic modality} is a tuple
+\[
+\mathfrak{M} = (X_\mathfrak{M},\ \preceq_\mathfrak{M},\ d_{\Obs,\mathfrak{M}},\
+E_\mathfrak{M},\ \mathcal{I}_\mathfrak{M}),
+\]
+where $X_\mathfrak{M}$ is a space of modal presentations, $\preceq_\mathfrak{M}$
+is an observer-resolved emergence order, $d_{\Obs,\mathfrak{M}}$ is the
+observer-relative modal distance, $E_\mathfrak{M}$ is the stage-composite
+emergence operator (cf.~Def.~\ref{definition:bk1_stage_composite_operator}) in
+the modality, and $\mathcal{I}_\mathfrak{M}$ is a family of structural invariants
+(cyclic order, adjacency, recurrence spectrum, proportion, curvature signature).
+\end{definition}
+
+\begin{definition}[Modal transference map]
+\label{definition:appC_modal_transference_map}
+Let $\mathfrak{M}_A,\mathfrak{M}_B$ be symbolic modalities. A \emph{modal
+transference map} is an observer-bounded map
+$T_{A\to B}:X_{\mathfrak{M}_A}\to X_{\mathfrak{M}_B}$ satisfying:
+\begin{enumerate}
+\item \emph{Ordinal preservation:}
+$x\preceq_{\mathfrak{M}_A}y \Rightarrow T_{A\to B}(x)\preceq_{\mathfrak{M}_B}T_{A\to B}(y)$.
+\item \emph{Observer-bounded distortion:} there exist $L<\infty$ and
+$\varepsilon_\Obs\ge 0$ with
+\[
+d_{\Obs,\mathfrak{M}_B}\!\big(T_{A\to B}x,\,T_{A\to B}y\big)
+\le L\, d_{\Obs,\mathfrak{M}_A}(x,y) + \varepsilon_\Obs.
+\]
+\item \emph{Operator semi-conjugacy:}
+$T_{A\to B}\circ E_{\mathfrak{M}_A} \sim_\Obs E_{\mathfrak{M}_B}\circ T_{A\to B}$,
+equality holding up to observer resolution $\varepsilon_\Obs$.
+\item \emph{Invariant preservation:} for each $I\in\mathcal{I}_{\mathfrak{M}_A}$
+transferred by $T_{A\to B}$ there is $T_*I\in\mathcal{I}_{\mathfrak{M}_B}$ with
+$I(x)=T_*I(T_{A\to B}x)$ up to $\varepsilon_\Obs$.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Modal Transference]
+\label{theorem:appC_modal_transference}
+Let $T_{A\to B}$ be a modal transference map between symbolic modalities
+$\mathfrak{M}_A$ and $\mathfrak{M}_B$. Then any invariant determined only by
+ordinal order, operator recurrence, cyclic adjacency, or spectral proportion is
+preserved across the transfer up to observer resolution. In particular, if a
+recurrence invariant $\lambda$ is fixed in $\mathfrak{M}_A$ by the balanced
+two-step closure $a_{n+1}=a_n+a_{n-1}$
+(cf.~book V, Def.~\ref{definition:bk5_balanced_two_step_memory_closure}), then its
+transferred presentation in $\mathfrak{M}_B$ carries the same positive spectral
+invariant $\lambda=\varphi$.
+\end{theorem}
+
+\begin{proof}
+\label{proof:appC_modal_transference}
+By ordinal preservation, $T_{A\to B}$ preserves the emergence order of the source
+modality; by observer-bounded distortion, differences below the observer
+threshold in $\mathfrak{M}_A$ remain below threshold in $\mathfrak{M}_B$. By
+operator semi-conjugacy the transferred system follows the same emergence
+dynamics up to resolution: $T_{A\to B}\circ E_{\mathfrak{M}_A} \sim_\Obs
+E_{\mathfrak{M}_B}\circ T_{A\to B}$. An invariant fixed solely by the recurrence
+or adjacency structure of $E_{\mathfrak{M}_A}$ cannot change when $E_{\mathfrak{M}_A}$
+is replaced by its semi-conjugate presentation $E_{\mathfrak{M}_B}$ except below
+threshold. For the balanced two-step closure the companion matrix is
+$A=\big(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\big)$, with characteristic
+equation $\lambda^2-\lambda-1=0$ and positive root $\varphi$. Since transference
+preserves the recurrence structure, the same spectral invariant appears in the
+target modality. Hence $\varphi$ is not tied to a sensory carrier; it is an
+ordinal-recursive invariant transferred through modal presentation.
+\end{proof}
+
+\begin{scholium}[Sonification and the Chromatic Wheel as Transference Tests]
+\label{scholium:appC_transference_tests}
+The sonification and chromatic-wheel constructions are not offered as analogies.
+They are modal transference tests. Each asks whether an invariant first defined
+in ordinal-symbolic form survives transfer into a distinct observer-accessible
+carrier. Sonification is the transference map
+$T_{\mathrm{symbolic}\to\mathrm{audio}}$ carrying symbolic order into pitch,
+interval, rhythm, and phase; the Newtonian color wheel is the map
+$T_{\mathrm{symbolic}\to\mathrm{chromatic}}$ carrying cyclic adjacency,
+opposition, and return into visual structure. When cyclic order, recurrence
+spectrum, and bounded adjacency are preserved under
+Def.~\ref{definition:appC_modal_transference_map}, the invariant belongs to the
+symbolic structure rather than to the particular sensory modality. This is the
+precise sense in which domains are modal presentations of shared ordinal-symbolic
+invariants---not the claim that everything is the same substance, but the claim
+that distinct modalities preserve the same emergence grammar when the
+transference map respects ordinal order, observer bounds, and operator recurrence.
+\end{scholium}
