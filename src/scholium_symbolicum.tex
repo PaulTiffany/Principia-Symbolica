@@ -1,4 +1,4 @@
-﻿\phantomsection
+\phantomsection
 \addcontentsline{toc}{chapter}{Scholium Symbolicum}
 \begin{center}
 \textit{"That which is, emerges not from what is, but from that which drifts."} \\
@@ -2078,123 +2078,143 @@ A modeling framework exhibits the Newtonian Category Error when it presupposes m
 
 \begin{proposition}[Newtonian Incompleteness]
 \label{proposition:bk1_newtonian_incompleteness}
-Let $M$ be a smooth manifold in the Newtonian sense. Then no symbolic system $\mathcal{S}$ defined over $M$ can construct a reflexive update map $\rho: \mathcal{S} \times \mathcal{S} \to \mathcal{S}$ (see \ref{definition:bk1_reflexive_update_map}) that satisfies both:
-\begin{align}
-\rho(s, D(s)) &\neq s \quad \text{(Drift Responsiveness)} \\
-\alpha(\rho(s, D(s))) &\subset \mathcal{O} \quad \text{(Observer Accessibility)}
-\end{align}
+Let \(V\) be a real normed vector space and let the Newtonian force law be
+\(F_m(a)=m a\) for \(m\in\mathbb{R}\) and \(a\in V\).  The map \(F_m\) is
+equivariant under every continuous linear change of frame \(L:V\to V\):
+\[
+  L(F_m(a))=F_m(L(a)).
+\]
+However, if an accelerated frame contributes a nonzero acceleration
+\(w\in V\), its transformed acceleration \(a+2w\) is not \(a\).  Hence the
+linear-frame covariance of the Newtonian law does not by itself extend to
+accelerated observer frames: such an extension requires an explicit
+frame-correction term.
 \end{proposition}
-\begin{proof}[Drift Cannot Be Both Externalized and Observer-Constructible]
+\begin{proof}[Covariance Boundary]
 \label{proof:bk1_newtonian_incompleteness}
 \leavevmode
 
-Assume that such a reflexive update map \(\rho\) exists over a Newtonian smooth
-manifold \(M\). The expression \(\rho(s,D(s))\) requires \(D(s)\) to be
-available as a symbolic input to the update, and the accessibility condition
-\(\alpha(\rho(s,D(s)))\subset\mathcal{O}\) requires the resulting update to lie
-within the bounded observer's horizon. But Def.~\ref{definition:bk1_newtonian_category_error}
-states that a Newtonian framework, by assuming global differentiability
-independently of bounded observer logic, renders the drift operator \(D\)
-non-constructible within that observer horizon. Hence the same \(D(s)\) is
-required by the proposed \(\rho\) to be observer-constructible and forbidden by
-the Newtonian category error from being observer-constructible. This
-contradiction rules out the simultaneous satisfaction of drift responsiveness
-and observer accessibility.
+For every continuous linear \(L\),
+\[
+  L(F_m(a))=L(ma)=mL(a)=F_m(L(a)),
+\]
+so \(F_m\) is equivariant under the stated covariance class.  If \(w\ne0\),
+then \(2w\ne0\), and cancellation in the additive group of \(V\) gives
+\(a+2w\ne a\).  The accelerated-frame defect therefore cannot be obtained by
+ordinary linear-frame equivariance alone and must be represented explicitly.
 \end{proof}
 
-\begin{definition}[Quantum Category Error]
+\begin{definition}[Quantum Tensor-Closure Category Error]
 \label{definition:bk1_quantum_category_error}
-Quantum formalism exhibits a category error when it maintains strict linearity in Hilbert space evolution while attempting to model self-referential symbolic systems. For any quantum observable $\hat{A}$ and state $|\psi\rangle$, the evolution $U|\psi\rangle$ cannot generate a meta-level observation of its own Hamiltonian $\hat{H}$, thus prohibiting symbolic self-modification of the form $\rho(\hat{H}, |\psi\rangle) \to \hat{H}'$ (see \ref{definition:bk1_reflexive_update_map}).
+A tensor-closure category error occurs when an update valued in one state
+carrier \(\mathcal H\) is identified directly with a tensor
+\(\psi\otimes\varphi\in\mathcal H\otimes\mathcal H\) without specifying a
+map from the tensor product back to \(\mathcal H\).  A \emph{lossless linear
+closure} is a linear isomorphism
+\[
+ C:\mathcal H\otimes_{\mathbb K}\mathcal H
+   \overset{\sim}{\longrightarrow}\mathcal H.
+\]
+Whether a Hamiltonian is externally controlled, dynamically updated, or
+represented inside a larger quantum system is a separate modeling question;
+strict linearity alone does not prohibit such constructions.
 \end{definition}
 
-\begin{lemma}[Symbolic-Quantum Incompatibility]
+\begin{lemma}[Finite-Dimensional Symbolic--Quantum Tensor Obstruction]
 \label{lemma:bk1_symbolic_quantum_incompatibility}
-Let $\mathcal{H}$ be a Hilbert space with unitary evolution operator $U(t)=e^{-i\hat{H}t/\hbar}$. If $\mathcal{S}$ is a symbolic system with reflexive capacity $R(\mathcal{S}) > 0$ (see \ref{definition:bk1_reflection_operator}), then there exists no isomorphism $\phi: \mathcal{S} \to \mathcal{H}$ that preserves both:
-\begin{align}
-\phi(R(s)) &= U(t)\phi(s) \quad \text{(Reflection Preservation)} \\
-\phi(\rho(s, s')) &= \phi(s) \otimes \phi(s') \quad \text{(Update Preservation)}
-\end{align}
-where $\rho$ is the reflexive update map (see \ref{definition:bk1_reflexive_update_map}) and $\mathcal{S}$ resides in a symbolic category (see \ref{definition:bk1_symbolic_category}).
+Let \(\mathcal H\) be a finite-dimensional vector space over a field
+\(\mathbb K\), with \(1<\dim_{\mathbb K}\mathcal H<\infty\).  Then there is no
+lossless linear closure
+\[
+ \mathcal H\otimes_{\mathbb K}\mathcal H
+   \overset{\sim}{\longrightarrow}\mathcal H.
+\]
+Consequently, a symbolic reflexive update whose preservation requires the
+pair tensor \(\phi(s)\otimes\phi(s')\) to be represented losslessly in the
+same finite-dimensional state carrier cannot be preserved by such a closure.
+Unitary reflection evolution does not remove this dimension obstruction.
+The conclusion is sharp: in dimension one the tensor square is linearly
+isomorphic to the original carrier.
 \end{lemma}
-\begin{proof}[Strict Linearity Cannot Preserve Reflexive Update]
+\begin{proof}[Tensor Dimension Obstruction]
 \label{proof:bk1_symbolic_quantum_incompatibility}
 \leavevmode
 
-Assume that an isomorphism \(\phi:\mathcal{S}\to\mathcal{H}\) preserves both
-displayed structures. Reflection preservation sends the symbolic reflection
-operator \(R\) to the unitary flow \(U(t)=e^{-i\hat Ht/\hbar}\). Update
-preservation then sends the reflexive update \(\rho\) to the tensor product
-operation in Hilbert space. Since \(R(\mathcal{S})>0\), the symbolic system has
-genuine reflexive capacity: by Def.~\ref{definition:bk1_reflexive_update_map},
-its update can modify representations that include the updater itself.
-
-Under the assumed preservation, that self-modifying update would have to appear
-inside the quantum representation as a meta-level update of the Hilbert-space
-evolution, hence as an update of the Hamiltonian structure generating
-\(U(t)\). Def.~\ref{definition:bk1_quantum_category_error} states that strict
-linear Hilbert evolution cannot generate such a meta-level observation or
-self-modification of its own Hamiltonian. Therefore the assumed isomorphism
-would both require and forbid preservation of reflexive update. No isomorphism
-can preserve both reflection and update under these hypotheses.
+Write \(n=\dim_{\mathbb K}\mathcal H\).  Finite-dimensional tensor products
+satisfy
+\[
+ \dim_{\mathbb K}(\mathcal H\otimes_{\mathbb K}\mathcal H)=n^2.
+\]
+A linear isomorphism to \(\mathcal H\) would therefore imply \(n^2=n\).
+For positive finite \(n\), this forces \(n=1\), contradicting \(n>1\).
+Thus no lossless linear self-tensor closure exists in the stated regime.
+When \(n=1\), both sides have dimension one and a linear isomorphism does
+exist, proving sharpness.  The argument concerns the typed tensor closure; it
+does not assert a universal prohibition on Hamiltonian control or quantum
+models of self-reference.
 \end{proof}
 
 \subsection{Conclusion: Reflexivity Requires Quadratic Framing}
 \label{subsec:bk1_reflexivity_requires_quadratic_framing}
 
-\begin{theorem}[Symbolic Emergence Theorem-Thermodynamics]
+\begin{theorem}[Symbolic Emergence Theorem---Contextual Cross-Error]
 \label{theorem:bk1_symbolic_emergence_theorem_thermodynamics}
-Let $\mathcal{S}$ be a symbolic system over a manifold $M$. If $\mathcal{S}$ supports:
+Let $\mathcal{S}$ be a symbolic system over a manifold $M$, and let
+$\mathcal{U}:\mathbb{R}\times\mathbb{R}\to\mathbb{R}$ be a local residual
+update in state and context coordinates. Suppose $\mathcal{S}$ supports:
 \begin{itemize}
-  \item Horizon-relative novelty: $\exists s \in \mathcal{S}$ such that $D(s) \notin \alpha(\mathcal{S})$ (see \ref{definition:bk1_drift_field}),
-  \item Reflexive symbolic identity: $R(\mathcal{S}) \cap \mathcal{S} \neq \emptyset$ (see \ref{definition:bk1_reflection_operator}),
-  \item Paradox resolution via structural growth: $\dim(\rho(\mathcal{S}, \mathcal{S})) > \dim(\mathcal{S})$ (see \ref{definition:bk1_paradox_triggered_emergence}),
+  \item horizon-relative novelty: $\exists s\in\mathcal{S}$ such that $D(s)\notin\alpha(\mathcal{S})$ (Def.~\ref{definition:bk1_drift_field});
+  \item reflexive symbolic identity: $R(\mathcal{S})\cap\mathcal{S}\neq\emptyset$ (Def.~\ref{definition:bk1_reflection_operator});
+  \item contextual structural growth: $\mathcal{U}$ is not additively separable as $A(\xi)+B(\chi)$.
 \end{itemize}
-then $\mathcal{S}$ admits a non-zero curvature tensor $\kappa: \mathcal{S} \times \mathcal{S} \times \mathcal{S} \to \mathcal{S}$ (see \ref{definition:bk1_symbolic_riemann_tensor}) and must possess a quadratic symbolic geometry (see \ref{theorem:bk1_minimal_quadratic_sufficiency}) with $\kappa(s,s',s'') \neq 0$ for some symbolic elements $s, s', s'' \in \mathcal{S}$ (residing on symbolic manifold $M$, see \ref{definition:bk1_symbolic_manifold}).
+Then there exist state and context displacements $\xi,\chi$ for which the
+mixed cross-error
+\[
+\Delta\mathcal{U}(\xi,\chi)
+ =\mathcal{U}(\xi,\chi)-\mathcal{U}(\xi,0)
+  -\mathcal{U}(0,\chi)+\mathcal{U}(0,0)
+\]
+is nonzero.  This cross-error is the Scholium-level certificate supplied to
+Book~IV.  The later transport construction may geometrize it as noncommuting
+state--context transport; that geometric realization is not used as a premise
+of this theorem.  Likewise, identifying the leading mixed term as bilinear
+requires the smooth local-expansion hypotheses stated with the later
+quadratic construction.
 \end{theorem}
-\begin{proof}[Emergence Hypotheses Force Curvature and Quadratic Geometry]
+\begin{proof}[Nonseparability Forces a Cross-Error]
 \label{proof:bk1_symbolic_emergence_theorem_thermodynamics}
 \leavevmode
 
-The three hypotheses are exactly the three marks of symbolic emergence used in
-Thm.~\ref{theorem:bk1_symbolic_emergence_and_curvature}. Horizon-relative
-novelty gives drift beyond the current access image, reflexive symbolic identity
-gives a nonempty reflected self-relation through \(R\), and paradox resolution
-by structural growth gives contextual meaning through an update that cannot be
-absorbed inside the prior symbolic dimension
-(Def.~\ref{definition:bk1_paradox_triggered_emergence}). Therefore
-Thm.~\ref{theorem:bk1_symbolic_emergence_and_curvature} applies and yields
-nonzero symbolic curvature on the symbolic manifold:
+Assume for contradiction that every mixed cross-error vanishes.  Define
 \[
-\kappa(s,s',s'')\neq 0
+ A(\xi)=\mathcal U(\xi,0),
+ \qquad
+ B(\chi)=\mathcal U(0,\chi)-\mathcal U(0,0).
 \]
-for some symbolic elements in \(\mathcal{S}\). Since the same hypotheses include
-reflexivity, horizon-relative context-sensitivity, and persistent identity under
-structural perturbation, Thm.~\ref{theorem:bk1_minimal_quadratic_sufficiency}
-also applies. Hence the system must possess at minimum quadratic symbolic
-geometry, and that geometry carries the nonzero curvature tensor asserted.
+The vanishing cross-difference identity rearranges pointwise to
+$\mathcal U(\xi,\chi)=A(\xi)+B(\chi)$, contradicting contextual structural
+growth.  Hence some $\Delta\mathcal U(\xi,\chi)$ is nonzero.  Novelty and
+reflexive identity retain their emergence roles, while contextual
+nonseparability is the load-bearing premise for this certificate.  Book~IV
+consumes the certificate downstream; it does not discharge the Scholium proof
+backward.
 \end{proof}
-\begin{corollary}[Necessity of Non-Euclidean Symbolic Space]
+\begin{corollary}[Necessity of Non-Euclidean Symbolic Transport]
 \label{corollary:bk1_necessity_of_non_euclidean_symbolic_space}
-By Thm.~\ref{theorem:bk1_symbolic_emergence_theorem_thermodynamics}, any symbolic system capable of reflexive emergence must operate in a space where:
-\begin{align}
-\nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]}Z = \kappa(X,Y)Z \neq 0
-\end{align}
-for some vector fields $X, Y, Z$ in the tangent bundle of the symbolic manifold.
+Under the hypotheses of
+Thm.~\ref{theorem:bk1_symbolic_emergence_theorem_thermodynamics}, there exist
+state and context displacements whose induced transports do not commute.
+Thus no single flat, additively separable transport geometry represents the
+contextual update.
 \end{corollary}
-\begin{proof}[Nonzero Curvature Is Non-Euclidean Structure]
+\begin{proof}[Nonzero Holonomy Obstructs Flat Transport]
 \label{proof:bk1_necessity_of_non_euclidean_symbolic_space}
 \leavevmode
-
-By Thm.~\ref{theorem:bk1_symbolic_emergence_theorem_thermodynamics}, reflexive
-emergence forces a nonzero symbolic curvature tensor on the symbolic manifold.
-Def.~\ref{definition:bk1_symbolic_riemann_tensor} defines that tensor by
-\[
-\kappa(X,Y)Z=\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ-\nabla_{[X,Y]}Z .
-\]
-Nonzero curvature means that there exist vector fields \(X,Y,Z\) for which this
-quantity is nonzero. A space with such a non-vanishing curvature operator is not
-Euclidean in the symbolic-geometric sense, so reflexive emergence requires
-non-Euclidean symbolic space.
+The theorem supplies a nonzero mixed cross-error and, at nonzero observer
+scale, two induced transports whose composites depend on order.  Flat
+additively separable transport has zero mixed cross-error and commuting routes.
+Therefore the witnessed update is non-Euclidean in the precise transport sense
+claimed.
 \end{proof}
 \begin{flushright}
 \textit{"Drift is not noise. It is the membrane we traverse."}
@@ -2550,8 +2570,8 @@ then gives the effective dual horizon signature for such emergence: the
 generative and stabilizing channels must meet on a shared bounded domain.
 
 The classical alternatives do not remove this structure. Prop.~\ref{proposition:bk1_newtonian_incompleteness}
-shows that a globally smooth Newtonian frame cannot construct the required
-observer-accessible drift-responsive update, and
+shows that ordinary linear-frame covariance does not extend to accelerated
+observer frames without an explicit correction, and
 Prop.~\ref{proposition:bk1_limitation_linear_reflexive_maps} shows that purely
 linear reflexive maps cannot alter their own fixed-point structure while
 preserving symbolic coherence. Thus the projected field must be represented by

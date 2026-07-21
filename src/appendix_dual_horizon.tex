@@ -1,8 +1,7 @@
 \clearpage
 \phantomsection
-\chapter*{Appendix C: Dual Horizon – A Formal Proof by Elimination}
+\chapter{Dual Horizon – A Formal Proof by Elimination}
 \label{sec:appC_dual_horizon}
-\addcontentsline{toc}{chapter}{Appendix C: Dual Horizon – A Formal Proof by Elimination}
 This appendix is the expanded dialectical proof-by-elimination behind the canonical \emph{Dual Horizon Necessity Theorem} of Book~I (Thm.~\ref{theorem:bk1_dual_horizon_necessity_theorem}), to which it defers for the formal statement of record. Its task is to defend, in slow motion, why a \emph{Dual Horizon} structure is necessary for any symbolic system that sustains bounded reflexive emergence under a Bounded Observer (\(\Obs\), cf.~\ref{definition:bk4_bounded_observer}). The claim is sharpened from its earlier metaphysical reading. ``Dual Horizon'' does not assert that two literal horizons exist; it asserts that the \emph{observer-visible flux} of a viable system carries a \emph{dual effective signature} --- a positive, novelty-producing (generative) part sourced by Drift (\(\drift\), cf.~\ref{definition:bk6_drift_operator_complete}) and a negative, structure-stabilizing (dissipative) part sourced by stabilizing Reflection (\(R_{\mathrm{stab}}\), cf.~\ref{definition:bk6_reflection_operator_complete}) --- both present on a \emph{shared} bounded-observer domain \(\Omega\). What the theorem constrains is the signature, not its geometric realization; the result is therefore stable under realization by a single horizon pair, by several same-sign horizons, by a single sign-changing curvature field, or by a delocalized horizon-effect with no isolated horizon at all. We prove this necessity \emph{twice} --- in the observational modality (elimination by what a bounded observer can register, \S\ref{sec:appC_proof_observational}) and in the geometric modality (the flux signature on the manifold, \S\ref{sec:appC_proof_by_elimination}). Because both proofs rest on the single root of observer finitude, their agreement is itself a transference test of the result against its own presentation (Scholium~\ref{scholium:appC_two_modalities_one_root}).
 
 \subsection*{C.0.1 Method: two eliminations, one root} \label{subsec:appC_methodological_logical_framework}
@@ -329,16 +328,16 @@ rather than in the Hilbert space structure it explains; the Born conclusion is
 conditional on PS-C3$'$.
 \end{remark}
 
-\section*{Born.0 Preamble}
+\subsection*{Preamble}
 \label{sec:appC_born_preamble}
-We derive the Born probability rule as a necessary consequence of the
+Conditionally on the explicitly stated observer and non-contextuality premises, we derive the Born probability rule from the
 \emph{Bounded Observer} formalism (Definition~\ref{definition:bk1_bounded_observer})
 embedded in \textit{Principia Symbolica} (PS).
 All symbols follow PS conventions; Hilbert-space notation is employed
 only as a concrete realization of high-curvature symbolic geometry
 (Definition~\ref{definition:bk6_symbolic_curvature_tensor}).
 
-\subsection{Born.1 Observer Data Structures in the Quantum Regime}
+\subsection{Observer Data Structures in the Quantum Regime}
 \label{subsec:appC_born_observer_structures}
 Observer states here are bounded by the perceptual kernel of the Bounded Observer (cf.~\ref{definition:bk1_bounded_observer}).
 Let $\Horizon$ be a complex Hilbert space with $\dim\Horizon = d \ge 2$
@@ -370,7 +369,44 @@ where $\tilde\psi_{\Obs}$ is the observer’s internal (fuzzy) representation
 of the external state $\psi \in \Horizon$.
 \end{definition}
 
-\subsection{Born.1b Interpretive-Budget Additivity from Bounded Discernibility}
+\begin{remark}[Formal correspondence at the observer boundary]
+\label{remark:appC_observer_lowering_boundary}
+The machine-checked companion supplies two complementary Gleason-facing
+half-bridges, separated by an observer boundary.  In the source-to-readout direction,
+a normalized pure-state vector determines its Hermitian rank-one density and lowers
+through a fixed observer kernel to a Born-compatible resolved readout.  In the
+readout-to-representation direction, explicitly certified conjugate-linear, linear,
+and Hermitian cross laws construct a sesquilinear representation of the available
+values.  The second construction represents the readout; it is not an inverse that
+recovers the originating vector or process state.
+
+The seam is genuinely lossy.  Global phase is forgotten, so distinct normalized
+vectors can yield the same density and the same fixed-kernel observer record.
+Explicit counterexamples further show that arbitrary coherent frame readouts and
+arbitrary normalized resolution records need not determine an upstream Hermitian
+state.  Finite partial trace provides another exact lowering: it preserves trace and
+all represented local-observer expectations while discarding access to the full joint
+operator.
+
+Temporal direction is already present in the companion's Cost of Cacophony backbone.
+Simultaneous finite-support compression obeys the certified norm-fracture bounds, and
+the diagonal witness has a strictly positive representability gap.  A staged path is
+instead accounted for as an ordered sum of per-step displacements; its transport cost
+is paid by free-energy decrease in the certified JKO step.  Under the stated
+summability, completeness, or Lyapunov-descent premises, those directed stages
+converge.  Thus time is not merely a metaphor here: it is the parameter by which one
+simultaneous obstruction is re-expressed as sequential transport with an explicit cost
+and convergence contract.
+
+What remains functionally interpretive is the physical specialization: mapping quantum decoherence
+and noise as the continued unfolding of this general directed cost-and-loss geometry.
+The exact temporal transport results, exact partial-trace reduction, and exact
+phase-collision boundary ground that operational, testable reading without collapsing the mapped domains into one another.
+This status distinction neither rejects the human mathematical argument under
+PS--C1--PS--C6 nor reduces its observer interpretation to the finite Lean model.
+\end{remark}
+
+\subsection{Interpretive-Budget Additivity from Bounded Discernibility}
 \label{subsec:appC_born_additivity_derivation}
 The coherence axiom PS--C3 (additivity over a complete orthogonal decomposition) is
 the only one that does interpretive work which could be mistaken for an assumed
@@ -533,7 +569,7 @@ until it is completed, PS--C3$'$ stands as an axiom and the Born conclusion is
 conditional on it.
 \end{remark}
 
-\subsection{Born.2 Coherence Axioms (PS–C)}
+\subsection{Coherence Axioms (PS–C)}
 \label{subsec:appC_born_axioms}
 The following axioms constrain the coherence functional (cf.~\ref{definition:appC_coherence_functional}) of a Bounded Observer. The structural constraints
 PS--C1, PS--C2, PS--C4, PS--C5, together with the non-contextuality axiom PS--C3$'$
@@ -576,7 +612,9 @@ $\mu_{\Obs,\tilde\psi}(\mathcal{T}_\Obs(\mathfrak{F})) = 1$.
 \begin{axiom}[PS--C4 (Ray invariance)]
 \label{axiom:appC_psc4}
 $\mathcal{C}_{\Obs}(e^{i\theta} \tilde\psi_{\Obs}, \Pi)
-= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$ \quad (cf.~\ref{definition:appC_coherence_functional})
+= \mathcal{C}_{\Obs}(\tilde\psi_{\Obs}, \Pi)$ \quad (cf.~\ref{definition:appC_coherence_functional}).
+The corresponding complex homogeneity is phase-faithful: amplitudes scale through
+$\overline a a=|a|^2$, not through the real shadow $a^2$.
 \end{axiom}
 
 \begin{axiom}[PS--C5 (Resolution-limited distinguishability)]
@@ -597,7 +635,7 @@ Equivalently, the question whose range is precisely the represented ray is
 answered with full coherence by that represented pure state.
 \end{axiom}
 
-\subsection{Born.3 Preparatory Lemmas}
+\subsection{Preparatory Lemmas}
 \label{subsec:appC_born_lemmas}
 
 \begin{lemma}[Finite orthogonal additivity gives a Gleason frame function]
@@ -657,7 +695,7 @@ Ray invariance PS--C4 ensures that this statement depends only on the ray of the
 state representation and not on its arbitrary global phase.
 \end{proof}
 
-\subsection{Born.4 Main Theorem}
+\subsection{Main Theorem}
 \label{subsec:appC_born_theorem}
 
 \begin{theorem}[Observer-relative Born Rule]
@@ -762,7 +800,7 @@ $\mathcal{C}_{\Obs}(\widetilde{\psi_i}_{\Obs},\Pi_a)
 \]
 \end{proof}
 
-\subsection{Born.5 Interpretation Within Principia Symbolica}
+\subsection{Interpretation Within Principia Symbolica}
 \label{subsec:appC_born_interpretation_ps}
 Define coherence deficit:
 \[
@@ -773,7 +811,7 @@ Randomness emerges from projecting high-curvature symbolic states
 onto finite classical frames with finite $\epsilon_{\Obs}$.
 In this section, measurement update is an observer-context realization of \(R_\lambda\): structural in frame-preserving limits and stabilizing under recursive refinement, without introducing a second primitive reflection operator (cf.~\hyperref[dict:appA_symbolic_reflection_operator]{App.~A}, the \hyperref[sec:bk1_operatio]{Operatio}).
 
-\subsection{Born.6 Implications and Outlook}
+\subsection{Implications and Outlook}
 \label{subsec:appC_born_outlook}
 For large $\epsilon_{\Obs}$, symbolic curvature flattens to classical statistics.
 For $\epsilon_{\Obs} \ll \hbar$, precision approaches quantum ideality.
@@ -788,15 +826,15 @@ from bounded observer geometry, rather than as an axiom.
 \label{sec:appC_arrow_of_time_rigorous}
 Temporal directionality emerges from the interaction of a Bounded Observer (cf.~\ref{definition:bk4_bounded_observer}) with a curved symbolic manifold (cf.~\ref{definition:bk1_symbolic_manifold}).
 
-\subsection*{Time.0 Preamble}
+\subsection*{Preamble}
 \label{subsec:appC_time_preamble_rigorous}
 This section provides a rigorous derivation of the Arrow of Time. We demonstrate that temporal directionality is a necessary geometric consequence of a Bounded Observer (\(\Obs\)) interacting with a curved symbolic manifold (\(\manifold\)).
 
-\subsection*{Time.1 Critique of the Entropic Arrow}
+\subsection{Critique of the Entropic Arrow}
 \label{subsec:appC_time_critique_rigorous}
 The conventional claim that the arrow of time is a direct consequence of the Second Law of Thermodynamics ($\frac{dS}{dt} \geq 0$) is rejected as a category error. It mistakes a symptom for a cause and presupposes the very temporal background it seeks to explain. It provides no generative, non-statistical mechanism for irreversibility.
 
-\subsection*{Time.2 The Geometric Engine of Irreversibility}
+\subsection{The Geometric Engine of Irreversibility}
 \label{subsec:appC_time_geometric_engine_final}
 The foundation of temporal directionality is not a property of the symbolic manifold \(\manifold\) in isolation, but of the interaction between the manifold and the Bounded Observer \(\Obs\) that must maintain its own coherent identity over time.
 

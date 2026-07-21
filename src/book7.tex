@@ -1,8 +1,8 @@
-﻿\section{Preamble: The Arc Toward Coherence}
+\section{Preamble: The Arc Toward Coherence}
 \label{sec:bk7_preamble_the_arc_toward_coherence} % Numbered Section
 Books I-VI established the foundational dynamics of symbolic systems: the emergence of manifolds from pre-geometric processes (Book I; cf.~\ref{definition:bk1_symbolic_manifold}), the thermodynamic principles governing symbolic states (Book II), the formation and interaction of symbolic membranes (Book III), the nature of symbolic identity and its fragmentation (Book IV), the conditions for symbolic life through metabolic persistence and mutually assured progress (MAP) (Book V), and the calculus of symbolic mutation and regulation (Book VI).
 We have established that symbolic systems are subject to inherent drift (\(\drift\)), a source of both novelty and potential dissolution. Stability is achieved through reflection (\(\reflect\)), an operator that enforces coherence and counters entropic tendencies. Mutation (\(M_\lambda\)) introduces discontinuous change, while regulation (via operator canons \(\mathcal{C}\)) attempts to maintain viability across transformations.
-Book VII now addresses the ultimate trajectory of these dynamics under conditions where reflective stabilization dominates over entropic drift. We move beyond mere persistence or bounded fluctuation to explore the principle of \textbf{convergence}: the process by which symbolic systems, guided by reflection, asymptotically approach stable, coherent identity structures (\(\identity\)) (cf.~Cor.~\ref{corollary:bk5_symbolic_eigenlife}). This book formalizes the \textbf{Reflection-Integration Link}, demonstrating how recursive reflection acts as a powerful integrating force, smoothing drift and resolving contradictions, ultimately leading the system toward a state of minimized symbolic free energy and maximal internal coherence. This convergence, when extended to interacting systems, culminates in the \textbf{theorem of Convergent Reciprocity}, revealing the conditions for mutual symbolic alignment and the emergence of shared meaning structures.
+Book VII now addresses the ultimate trajectory of these dynamics under conditions where reflective stabilization dominates over entropic drift. We move beyond mere persistence or bounded fluctuation to explore the principle of \textbf{convergence}: the process by which symbolic systems, guided by reflection, asymptotically approach stable, coherent identity structures (\(\identity\)) (cf.~Cor.~\ref{corollary:bk5_symbolic_eigenlife}). This book formalizes the \textbf{Reflection-Integration Link}, demonstrating how recursive reflection acts as a powerful integrating force, smoothing drift and resolving contradictions, ultimately leading the system toward a state of minimized symbolic free energy and maximal internal coherence. This convergence, when extended to interacting systems, culminates in the \textbf{Theorem of Convergent Reciprocity}, revealing the conditions for mutual symbolic alignment and the emergence of shared meaning structures.
 
 \section{Symbolic Power: Genesis, Dynamics, and Regulation}
 \label{sec:bk7_symbolic_power_genesis_dynamics_regulation}
@@ -21,15 +21,22 @@ Let \(S = (\manifold, \metric, \drift, \reflect, \rho)\) be a symbolic system wi
 where \(\rho(x|\mathcal{R}_S)\) is the conditional state density within \(\mathcal{R}_S\), and \(r\) is a characteristic interaction scale. \(\Sigma_P(S)\) quantifies the system's capacity to project coherent, directed influence.
 \end{definition}
 
-\begin{proposition}[Power from Coherent Confidence and Regulation]
+\begin{proposition}[Magnitude and Orientation of Systemic Power]
 \label{proposition:bk7_power_from_coherent_confidence_regulation}
-Systemic Symbolic Power \(\Sigma_P(S)\) emerges and is sustained when:
-\begin{enumerate}
-    \item The system maintains regions of high and stable Symbolic Confidence \(\mathfrak{C}(x) \to 1\).
-    \item The Confidence Gradient \(\nabla \mathfrak{C}(x)\) is substantial, coherently aligned, and persistent, indicating clear directionality of increasing certainty towards \(\identity\).
-    \item The system possesses stable Regulatory Basins \(\mathcal{R}_S\) (\ref{definition:bk6_regulatory_basin}) with non-trivial symbolic volume, providing a domain for the effective expression of confidence and its gradient.
-\end{enumerate}
-These conditions are fostered by the effective operation of the Symbolic Operator Canon (\ref{sec:bk6_canones_operatoriae_symbolicae_completus}), particularly the Confidence Field Operator \(\mathcal{C}_\sigma\) (\ref{definition:bk6_confidence_field_operator}), stabilizing Reflection \(\reflect\) (\ref{definition:bk6_reflection_operator_complete}), and structuring Transformation \(T_\alpha\) (\ref{definition:bk6_transformation_operator_complete}).
+Let a nonempty regulatory basin carry positive density, confidence, effective
+volume, and confidence-gradient magnitude.  Then the norm-valued systemic
+power integral is strictly positive.  Direction toward identity is a separate
+certificate: for an identity-directed reference field $J(x)$ require
+\[
+ \langle\nabla\mathfrak C(x),J(x)\rangle_g>0
+\]
+throughout the basin (or an explicitly transported cone analogue).  Under
+positive confidence and volume, the oriented local contribution
+$\mathfrak C(x)\langle\nabla\mathfrak C(x),J(x)\rangle_g\operatorname{vol}(x)$
+is positive.  Reversing the gradient preserves its norm and hence the scalar
+power integrand, but reverses this directional certificate.  Thus systemic
+power magnitude and coherent identity alignment are related but not
+interchangeable claims.
 \end{proposition}
 \begin{demonstratio}[Operator Basis of Systemic Power]
 \label{demonstratio:bk7_operator_basis_systemic_power}
@@ -492,18 +499,35 @@ Since \(B(\identity)\) is closed inside the complete state space and \(\reflect(
 \label{demonstratio:bk7_banach_convergence_reflection}
 When \(\reflect\) and the symbolic free energy form a descent pair on the complete basin \(\overline{B(\identity)}\) -- the Caristi inequality of Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}(i) -- every orbit \(\reflect^n(\rho_0)\) has summable increments and converges to a fixed point \(\identity\) with \(\reflect(\identity)=\identity\) (Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}). Boundedness below of \(\freeenergy\) prevents unbounded descent, and the basin \(B(\identity)\) is the set of all initial states \(\rho_0\) for which \(\lim_{n\to\infty}\reflect^n(\rho_0)=\identity\). Non-triviality holds unless the basin collapses to a single point under \(\reflect\) (cf.~Def.~\ref{definition:bk7_reflective_operator}, Ax.~\ref{axiom:bk7_convergence_potential}). The earlier appeal to the Banach Fixed-Point Theorem is subsumed: contraction is one sufficient condition for the descent inequality, not a prerequisite. \qed
 \end{demonstratio}
-\begin{corollary}[Stability-Innovation Equilibrium]
+\begin{corollary}[Stability--Innovation Compatibility]
 \label{corollary:bk7_stability_innovation_equilibrium}
-The convergent state \(\identity\) represents a dynamic equilibrium balancing entropic innovation driven by drift \(\drift\) (exploration of symbolic phase space, increase in \(\entropy\)) and reflective integration driven by \(\reflect\) (structural conservation, stabilization of \(\energy\)). The specific structure of \(\identity\) optimizes the trade-off \(\freeenergy = \energy - \temperature \entropy\) for the given operators \(\drift, \reflect\) and temperature \(\temperature\), representing optimal cognitive or structural emergence within those constraints (cf.~Def.~\ref{definition:bk7_convergent_symbolic_identity}, Axiom~\ref{axiom:bk7_convergence_potential}).
+Let $\mathcal{U}:\mathbb{R}\times\mathbb{R}\to\mathbb{R}$ be a contextually
+nonseparable local update, and let reflection satisfy the convergence
+hypotheses of Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}
+on a basin $B(\identity)$. Then the system possesses both:
+\begin{enumerate}
+  \item a nonzero state--context holonomy certificate, supplied by
+  Thm.~\ref{theorem:bk1_symbolic_emergence_theorem_thermodynamics}; and
+  \item a reflective orbit converging to the stable identity $\identity$.
+\end{enumerate}
+Thus stabilization need not erase innovation-bearing contextual structure.
+If $\identity$ is additionally certified as a minimizer of
+$\freeenergy=\energy-\temperature\entropy$ on its basin, it also realizes the
+corresponding constrained stability--innovation optimum.
 \end{corollary}
-\begin{proof}[Equilibrium as constrained free-energy optimum]
+\begin{proof}[Contextual Curvature with Stable Identity]
 \label{proof:bk7_stability_innovation_equilibrium}
 \leavevmode
-By Def.~\ref{definition:bk7_convergent_symbolic_identity}, a convergent symbolic identity \(\identity\) is a stable fixed or near-fixed reflective state and lies in the minimizing set of \(\freeenergy\) on its basin. By Ax.~\ref{axiom:bk7_convergence_potential},
-\[
-\freeenergy[\rho]=\energy[\rho]-\temperature\entropy[\rho].
-\]
-The \(\energy\) term measures the coherence cost controlled by reflection, while the \(\temperature\entropy\) term measures the entropic allowance for drift-driven exploration. Therefore minimizing \(\freeenergy\) over the basin is exactly optimizing the trade-off between reflective stability and entropic innovation at the fixed temperature \(\temperature\). Since \(\identity\) is the minimizer in that basin, it is the dynamic equilibrium achieving that constrained optimum.
+Contextual nonseparability gives a nonzero mixed cross-error and hence
+noncommuting transports by
+Thm.~\ref{theorem:bk1_symbolic_emergence_theorem_thermodynamics}. Independently,
+the reflective-convergence hypotheses give
+$\reflect^n(\rho_0)\to\identity$ for every $\rho_0\in B(\identity)$ by
+Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}. These two
+certificates coexist: one concerns the local state--context transport geometry,
+the other the asymptotic reflective orbit. The final optimization statement
+uses the additional minimizer certificate and does not follow from convergence
+or contextual curvature alone.
 \end{proof}
 \begin{demonstratio}[Thermodynamic Equilibrium via Symbolic Free Energy Balance]
 \label{demonstratio:bk7_free_energy_balance_equilibrium}
@@ -525,7 +549,7 @@ where $\mathcal{B}(\mathcal{H}_{\Obs})$ is a symbolic basin of attraction define
 \textbf{Symbolic Inhalation.} Divergence opens the basin: \(\drift\) loosens a state into excess, alternatives, and unspent meaning. Reflection draws it in. \(\reflect\) compresses the manifold, binds curvature to utility, and lets the hypothesis take breath as an attractor. Hypotheses are the symbolic alveoli -- folded submanifolds where interpretive surface is maximized without losing volume.
 \textbf{Scientific Method Reframed.} In this formulation, scientific inquiry emerges as the limit behavior of symbolic convergence flows across hypothesis manifolds. Testing a hypothesis corresponds to measuring the convergence basin $\mathcal{B}(\mathcal{H}_{\Obs})$ under modified drift fields; falsification becomes curvature repulsion; refinement corresponds to reweaving the attractor geometry itself.
 \end{scholium}
-\section{Reflective Fixed Point theorem}
+\section{Reflective Fixed Point Theorem}
 \label{sec:bk7_reflective_fixed_point_theorem}
 As Pauli suggested in his correspondence with Jung \cite{pauli1994atom}, the symbolic structure of physical law may be inseparable from the reflective geometry of the psyche. Our formal derivation of symbolic fracture curvature and recursive identity convergence (cf.~\ref{theorem:bk4_reflective_reentry}) gives precise mathematical form to this intuition.
 \begin{theorem}[Reflective Convergence to Stable Identity]
@@ -604,113 +628,55 @@ Under Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity} with clos
 Well-definedness and $\operatorname{im}(R_{\mathrm{stab}}) \subseteq \operatorname{Fix}(\reflect)$ are the convergence and fixed-point clauses of Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}. For idempotence, $R_{\mathrm{stab}}(\rho) \in \operatorname{Fix}(\reflect)$, so the $\reflect$-orbit of $R_{\mathrm{stab}}(\rho)$ is constant and limits to itself, whence $R_{\mathrm{stab}}(R_{\mathrm{stab}}(\rho)) = R_{\mathrm{stab}}(\rho)$.
 \end{proof}
 
-\begin{theorem}[Observer-Relative Free Energy Minimization as $L^p$ Regression Equivalence]
+\begin{theorem}[Certified Observer-Relative Free-Energy/$L^p$ Equivalence]
 \label{theorem:bk7_observer_relative_free_energy_minimization_as_lp_regression}
-Let $S = (M, g, D, R, \rho)$ be a symbolic system and let 
-$\Obs = \left(N_{\Obs}, \left\{ \delta^{n}_{\Obs} \right\}_{n=1}^{N_{\Obs}}, \epsO \right)$ 
-be a bounded observer (\ref{definition:bk4_fuzzy_symbolic_substitution}) perceiving the system via the fuzzy symbolic substitution 
-$u : M \to \Mt$, inducing the observer-relative fuzzy membrane $\Mt$ endowed with metric $\gt$, and observer-relative operators $\Dt$, $\Rt$.
-
-Let $\Ft\left[ \tilde{\rho} \right] = \Et[\tilde{\rho}] - T_S \St[\tilde{\rho}]$ be the observer-relative symbolic free energy functional on the space of probability densities $\prob(\Mt)$, where $\Et$ is the observer-relative coherence energy and $\St$ is the observer-relative entropy. Assume $\Ft$ is bounded below, and that $\Rt$ satisfies the free-energy descent hypotheses of Theorem~\ref{theorem:bk7_reflective_convergence_to_stable_identity} on the metric space $(\prob(\Mt), W_{2,\gt})$, where $W_{2,\gt}$ denotes the Wasserstein-2 distance induced by the observer-relative metric $\gt$ on $\Mt$.
-
-Let the observer perceive a drifted state $\tilde{\rho}_{drifted} \in \prob(\Mt)$ and seek an optimal coherent model state $\tilde{\rho}_{model} \in \prob(\Mt)$ by employing the observer-relative reflection operator $\Rt$, which drives the state towards the observer-relative convergent identity $\Itc \in B(\Itc) \subseteq \prob(\Mt)$.
-
-Then, the observer's optimization problem,
+Let $\mathcal H_{\rm feas}$ be the observer's feasible model basin, let
+$F_{\mathcal O}:\mathcal H_{\rm feas}\to\mathbb R$ be observer-relative free
+energy, and let manifest sampling define
 \[
-\Itc \approx \arg\min_{\tilde{\rho}_{model} \in B(\Itc)} \Ft[ \tilde{\rho}_{model} \mid \tilde{\rho}_{drifted} ],
+ L_p(f)=\sum_{i=1}^{N_{\rm samples}}|y_i-f(x_i)|^p.
 \]
-subject to the reflective dynamics $\tilde{\rho}_{n+1} = \Rt(\tilde{\rho}_n)$, is formally equivalent to minimizing an $L^p$ loss function in the observer's manifest data space:
+Assume an explicit positive affine representation on the whole basin,
 \[
-\min_{f \in \mathcal{H}} \sum_{i=1}^{N_{samples}} \left|y_i - f(x_i)\right|^p \quad \equiv \quad \min_{f \in \mathcal{H}} \norm{\mathbf{y} - f(\mathbf{X})}_p^p
+ F_{\mathcal O}(f)=aL_p(f)+b,\qquad a>0.
 \]
-where $\{(x_i, y_i)\}_{i=1}^{N_{samples}}$ represents manifest data sampled according to $\tilde{\rho}_{drifted}$ within the observer's frame, $f(x)$ is the predictive model function corresponding to $\tilde{\rho}_{model}$, $\mathcal{H}$ is the hypothesis space available to the observer, and the specific value of $p \in [1, \infty]$ is determined by the effective statistical properties of the perceived drift noise and the regularization structure inherent in the observer's reflection $\Rt$ and perceptual resolution limitations $(\epsO, \{\delta^n_{\Obs}\})$.
-
-Let \( S = (M, g, D, R, \rho) \) be a symbolic system and let 
-\( \Obs = \left(N_{\Obs}, \left\{ \delta^{n}_{\Obs} \right\}_{n=1}^{N_{\Obs}}, \epsO \right) \) 
-be a bounded observer (\ref{definition:bk4_fuzzy_symbolic_substitution}) perceiving the system via the fuzzy symbolic substitution 
-\( u : M \to \Mt \), inducing the observer-relative fuzzy membrane \( \Mt \) endowed with metric \( \gt \), and observer-relative operators \( \Dt \), \( \Rt \).
-Let \( \Ft\left[ \tilde{\rho} \right] = \Et[\tilde{\rho}] - T_S \St[\tilde{\rho}] \) be the observer-relative symbolic free energy functional on the space of probability densities \( \prob(\Mt) \), where \( \Et \) is the observer-relative coherence energy and \( \St \) is the observer-relative entropy. Assume \( \Ft \) is bounded below.
-Let the observer perceive a drifted state \( \tilde{\rho}_{drifted} \in \prob(\Mt) \). Assume the observer's task is to find an optimal coherent model state \( \tilde{\rho}_{model} \in \prob(\Mt) \) by employing the observer-relative reflection operator \( \Rt \), which acts as a dynamical process driving the state towards a local minimum of \( \Ft \), corresponding to an observer-relative convergent identity \( \Itc \) (\ref{proof:bk7_observer_relative_symbolic_stabilization_as_statistical_inference}, adapted to \( \Mt \)). Assume \( \Rt \) forms a free-energy descent pair within a basin of attraction \( B(\Itc) \subseteq \prob(\Mt) \) containing \( \tilde{\rho}_{drifted} \).
-Then, the optimization problem faced by the observer,
-\[
-\Itc \approx \arg\min_{\tilde{\rho}_{model} \in B(\Itc)} \Ft[ \tilde{\rho}_{model} \mid \tilde{\rho}_{drifted} ]
-\]
-where minimization is subject to the dynamics induced by \( \Rt \), is formally equivalent to minimizing an \( L^p \) loss function in the observer's manifest data space under a statistical modeling interpretation:
-\[
-\min_{f \in \mathcal{H}} \sum_{i=1}^{N_{samples}} \left|y_i - f(x_i)\right|^p \quad \equiv \quad \min_{f \in \mathcal{H}} \norm{\mathbf{y} - f(\mathbf{X})}_p^p
-\]
-where \( \{(x_i, y_i)\}_{i=1}^{N_{samples}} \) represents manifest data sampled according to \( \tilde{\rho}_{drifted} \) within the observer's frame, \( f(x) \) is the predictive model function corresponding to \( \tilde{\rho}_{model} \), \( \mathcal{H} \) is the hypothesis space available to the observer, and the specific value of \( p \in [1, \infty] \) is determined by the effective statistical properties of the perceived drift noise (as implicitly modeled by the structure of \( \Ft \)) and the regularization inherent in the observer's reflection \( \Rt \) and perceptual limitations (\( \epsO, \{\delta^n_{\Obs}\} \)).
+Then $f_*$ minimizes $F_{\mathcal O}$ on the basin if and only if it minimizes
+$L_p$ there.  If the representation is certified only along a reflective
+orbit, the same equivalence holds only for ordering, descent steps, and minima
+among visited states; it does not become a basin-global argmin theorem.
+Boundedness below and reflective descent alone do not construct the affine
+representation or select $p$.  A noise/regularization law selecting $p$ is a
+separate modeling certificate.  Appendix SRV traces may test these Book VII
+premises downstream but do not supply them backward.
 \end{theorem}
 
-\begin{proof}[Observer-Relative Symbolic Stabilization as Statistical Inference]
+\begin{proof}[Positive-Affine Order Transport]
 \label{proof:bk7_observer_relative_symbolic_stabilization_as_statistical_inference}
 \leavevmode
-
-\textbf{1. Observer-Mediated Problem Formulation:} The bounded observer $\Obs$ accesses the symbolic system $S$ only through the fuzzy substitution $u: M \to \Mt$, perceiving drift $D$ as the observer-relative perturbation $\Dt$ acting on the fuzzy membrane $\Mt$. This produces the perceived drifted state $\tilde{\rho}_{drifted}$, which deviates from the observer-relative coherent identity $\Itc$. The observer's reflective operator $\Rt$ implements the stabilization dynamics guaranteed by the observer-relative version of Theorem~\ref{theorem:bk7_reflective_convergence_to_stable_identity}, driving states toward the minimum of $\Ft$ within the basin $B(\Itc)$.
-
-The target state $\tilde{\rho}_{model}$ represents the observer's optimal estimate of the underlying coherent structure, balancing internal coherence (low $\Et$) against entropic dispersion (controlled $\St$) as mediated by the thermodynamic parameter $T_S$.
-
-\textbf{2. Statistical Interpretation of Symbolic Dynamics:} We interpret the observer's stabilization task as Bayesian inference under structural constraints. The perceived drifted state $\tilde{\rho}_{drifted}$ is modeled as arising from an underlying coherent structure $\Itc$ (represented by model $\tilde{\rho}_{model}$) corrupted by perceived drift, which manifests as effective noise from the observer's modeling perspective.
-
-The observer samples data $\{(x_i, y_i)\}_{i=1}^{N_{samples}}$ consistent with $\tilde{\rho}_{drifted}$. Finding the $\tilde{\rho}_{model}$ that minimizes $\Ft$ corresponds to finding the model function $f$ that maximizes the penalized likelihood under the observer's implicit structural assumptions.
-
-\textbf{3. Free Energy Decomposition and Likelihood Equivalence:} The observer-relative free energy decomposes as $\Ft = \Et - T_S \St$, where:
-\begin{itemize}
-    \item The energy term $\Et[\tilde{\rho}_{model}]$ quantifies the cost of deviation from optimal coherence relative to $\tilde{\rho}_{drifted}$, corresponding to the negative log-likelihood of the data under model $f$.
-    \item The entropy term $-T_S \St[\tilde{\rho}_{model}]$ acts as a regularization penalty, favoring models with appropriate complexity as determined by the observer's resolution $\epsO$ and differentiation capabilities $\{\delta^n_{\Obs}\}$.
-\end{itemize}
-
-Therefore, $\min \Ft[\tilde{\rho}_{model} \mid \tilde{\rho}_{drifted}]$ is equivalent to $\max \log \mathrm{Pr}(\mathbf{y} | f(\mathbf{X})) - \lambda \cdot \text{Regularizer}(f)$ for appropriate choice of regularization parameter $\lambda \propto T_S^{-1}$.
-
-\textbf{4. Emergence of the $L^p$ Norm Structure:} The specific form of the likelihood $\mathrm{Pr}(\mathbf{y} | f(\mathbf{X}))$ depends on the observer's implicit model of the perceived drift noise. The negative log-likelihood takes the form $\sum_i \left|y_i - f(x_i)\right|^p$ when:
-\begin{itemize}
-    \item \textbf{$p=2$ (Gaussian Model):} The observer perceives drift as symmetric, continuous perturbations with well-defined variance. The quadratic form emerges when $\Et$ emphasizes mean-square deviations and $\Rt$ implements variance-minimizing stabilization.
-    \item \textbf{$p=1$ (Laplacian Model):} The observer prioritizes robustness against sparse, large deviations. This corresponds to $\Rt$ implementing median-based stabilization or when $\Et$ penalizes outliers more severely than central tendencies.
-    \item \textbf{General $p \in [1,\infty]$:} Intermediate values arise from the observer's specific balance between coherence energy minimization and entropic regularization, as determined by the contraction parameter $\kappa$ in condition (i), the thermodynamic temperature $T_S$, and the observer's perceptual resolution $\epsO$.
-\end{itemize}
-
-\textbf{5. Smoothness and O-Differentiable Transitions:} The O-differentiable structure of $\Mt$ (\ref{corollary:bk4_smoothness_as_epistemic_phenomenon}) ensures that variations in the effective $p$-norm appear as smooth transitions rather than discontinuous phase changes. The mechanism is $\mathcal{O}$-boundedness: composing $\Rt$ and $\Dt$ on $\Mt$ propagates only finite observer-scale constants through each operation, so no transition escapes the sub-threshold regime (Scholium~\ref{scholium:bk4_o_boundedness_unifying_principle}). This reflects the continuous adaptation of the observer's reflective stabilization strategy $\Rt$ in response to varying perceived drift conditions, consistent with the smooth symbolic response patterns observed in validation traces.
-
-The equivalence establishes that $L^p$ regression serves not merely as an analogy but as the direct manifestation of observer-relative symbolic free energy minimization, with the norm parameter $p$ encoding the observer's intrinsic stabilization dynamics and perceptual limitations.
+For feasible $f,g$, the representation gives
+$F_{\mathcal O}(f)\leq F_{\mathcal O}(g)$ if and only if
+$aL_p(f)+b\leq aL_p(g)+b$, which, since $a>0$, is equivalent to
+$L_p(f)\leq L_p(g)$.  Quantifying over the feasible basin proves equivalence
+of the two argmin predicates.
 \end{proof}
 
-\begin{proof}[Proof Elaboration]
+\begin{proof}[Orbit-Local Elaboration]
 \label{proof:bk7_proof_elaboration}
 \leavevmode
-
-1.  	extbf{Observer's Problem Formulation:} The bounded observer \( \Obs \) does not access \( M \) directly but perceives \( \Mt \) via \( u \). Drift \( D \) manifests as \( \Dt \), causing the perceived state \( \tilde{\rho} \) to deviate from coherence, resulting in \( \tilde{\rho}_{drifted} \). The observer employs \( \Rt \) to counteract this perceived drift. By \ref{definition:bk7_symbolic_uncertainty} and \ref{sec:bk7_pisu_universal_symbolic_uncertainty} (adapted to \( \Mt, \Rt, \Ft \)), this process seeks to minimize the observer-relative free energy \( \Ft \). The target state \( \tilde{\rho}_{model} \) represents the observer's best estimate of the coherent state \( \Itc \) underlying \( \tilde{\rho}_{drifted} \). Minimizing \( \Ft[ \tilde{\rho}_{model} \mid \tilde{\rho}_{drifted} ] \) functionally means finding a state that maximizes internal coherence (low \( \Et \)) and minimizes observer-relative uncertainty/dispersion (low \( \St \)), relative to the perceived input \( \tilde{\rho}_{drifted} \).
-2.  	extbf{Statistical Interpretation:} We interpret the observer's task as inferential modeling. The perceived drifted state \( \tilde{\rho}_{drifted} \) can be modeled as arising from an underlying coherent structure \( \Itc \) (represented by model \( \tilde{\rho}_{model} \)) corrupted by perceived drift, which acts as effective "noise" from the observer's modeling perspective. The observer samples data \( \{(x_i, y_i)\} \) consistent with \( \tilde{\rho}_{drifted} \). Finding the \( \tilde{\rho}_{model} \) that minimizes \( \Ft \) is equivalent to finding the model function \( f \) (representing \( \tilde{\rho}_{model} \)) that best explains the data \( y_i \) given \( x_i \), under the coherence constraints imposed by \( \Ft \).
-3.  	extbf{Free Energy and Likelihood:} The minimization of free energy is formally related to the maximization of likelihood (or penalized likelihood/posterior probability) in statistical inference. Let \( f \) be the model corresponding to \( \tilde{\rho}_{model} \). The symbolic free energy can be decomposed: \( \Ft = \Et - T_S \St \).
-    \begin{itemize}
-        \item The entropy term \( -\St \) relates to the volume of the state space compatible with \( \tilde{\rho}_{model} \). Maximizing entropy corresponds to seeking simpler or more general models.
-        \item The energy term \( \Et \) relates to the internal coherence and the "cost" of deviation from some ideal structure. Minimizing \( \Et \) relative to the perceived drifted state corresponds to maximizing the fit to the data.
-    \end{itemize}
-    Therefore, \( \min \Ft \) is conceptually equivalent to finding a model \( f \) that maximizes \( \log \mathrm{Pr}(\mathbf{y} | f(\mathbf{X})) - \lambda \cdot \text{Regularizer}(f) \), where the likelihood term measures fit to data (related to \( \Et \) reduction relative to drift) and the regularizer penalizes complexity (related to \( \St \) or constraints within \( \Et \)).
-4.  	extbf{Emergence of the Lp Norm:} The specific form of the likelihood \( \mathrm{Pr}(\mathbf{y} | f(\mathbf{X})) \) depends on the observer's implicit assumptions about the "noise" process (the perceived effect of \( \Dt \)). If the negative log-likelihood of the noise distribution takes the form \( \sum_i \left|y_i - f(x_i)\right|^p \), then maximizing likelihood corresponds to minimizing the \( L^p \) norm.
-    \begin{itemize}
-        \item \textbf{p=2 (L2/Squared Error):} Arises if the observer models perceived drift/noise as Gaussian. Then $\Ft$ minimization emphasizes variance reduction and squared deviations from the coherent mean.
-        \item \textbf{p=1 (L1/Absolute Error):} Arises if the observer models drift/noise with a Laplacian distribution, prioritizing robustness to outliers. This corresponds to an $\Rt$ or $\Ft$ structure that strongly penalizes sparse large deviations while tolerating smaller dense ones.
-        \item \textbf{General p:} Other values of $p$ correspond to generalized Gaussian noise models or different balances between the energy ($\Et$) and entropy ($\St$) terms in $\Ft$ as perceived by $\Obs$. The observer's tolerance $\epsO$ and differentiation operators $\{\delta^n_{\Obs}\}$ shape the effective $p$.
-    \end{itemize}
-5. 	extbf{Smoothness and O-Differentiability:} The smooth variation observed in the symbolic response patterns (e.g., Figs B.1-B.4) when sweeping \( p \) is consistent with the O-differentiable structure (\ref{corollary:bk4_smoothness_as_epistemic_phenomenon}) of \( \Mt \) and the operators \( \Dt, \Rt \). Since the observer perceives the underlying symbolic dynamics through a "fuzzy" lens that ensures sufficient smoothness relative to their resolution, transitions between different effective \( p \)-norms (representing different balances in \( \tilde{F}_s \) minimization or adaptation of \( \tilde{R} \)) appear continuous rather than as sharp phase transitions, reflecting the adaptive nature of the observer-relative reflection process.
-Therefore, the \( L^p \) regression framework utilized in Appendix B serves not merely as an analogy but as a derived consequence and manifest representation of the observer-relative symbolic free energy minimization process governed by \( \R \) acting on \( \Mt \), with the specific norm \( p \) parameterizing aspects of the observer's structure and implicit modeling assumptions regarding perceived drift.
+If the positive affine identity is known only on a reflective trace
+$f_{n+1}=R_{\mathcal O}(f_n)$, the same cancellation of $b$ and division by
+$a>0$ preserves every pairwise ordering on that trace.  Hence a free-energy
+descent step is exactly an $L^p$-loss descent step, and a minimum among visited
+states is preserved.  No statement about unvisited feasible models follows.
 \end{proof}
-\begin{proof}[$L^p$ Loss as Observer-Relative Free Energy Minimization]
+\begin{proof}[$L^p$ Representation Boundary]
 \label{proof:bk7_sketch_lp_loss_as_observer_free_energy_minimization}
 \leavevmode
-
-The observer $\Obs$ perceives the symbolic system through the fuzzy membrane $\Mt$. Drift $D$ manifests to the observer as perturbations or noise leading to a perceived state $\tilde{\rho}_{drifted}$ that deviates from coherence. The observer's internal reflection mechanism $\Rt$ acts to restore coherence by driving the state towards a minimum of the observer-relative free energy $\Ft$. This minimum represents the most stable/coherent state achievable \emph{within the observer's perceptual and representational limits} (cf.~Scholium~\ref{scholium:bk1_epistemic_humility}).
-By \ref{subsec:bk7_duality_power_uncertainty} and \ref{subsec:bk7_pisu_revisited_power_uncertainty} (adapted to the observer-relative frame), $\Rt$ acts as a stabilizing operator minimizing $\Ft$. The functional $\Ft[\tilde{\rho}] = \Et[\tilde{\rho}] - T_S \St[\tilde{\rho}]$ balances coherence energy $\Et$ and observer-relative entropy $\St$.
-Consider the minimization task: find a model $\tilde{\rho}_{model}$ (representing the target coherent state $\Itc$) that best "fits" the perceived drifted data $\tilde{\rho}_{drifted}$ while satisfying internal coherence constraints (implicit in minimizing $\Ft$). This minimization can be framed as minimizing a distance or divergence between $\tilde{\rho}_{model}$ and $\tilde{\rho}_{drifted}$, regularized by terms related to the internal structure/coherence of $\tilde{\rho}_{model}$ (related to $\Et$ and $\St$).
-In the observer's manifest data space (samples $x_i$ with perceived states $y_i$ derived from $\tilde{\rho}_{drifted}$), this corresponds to finding a model function $f(x)$ (representing $\tilde{\rho}_{model}$) that minimizes the discrepancy $\norm{y - f(x)}$. The *type* of distance metric (i.e., the value of $p$ in the $L^p$ norm) emerges from the specific structure of the observer's perception and their stabilization strategy (encoded in $\Rt$ and $\Ft$).
-For instance:
-\begin{itemize}
-    \item If the observer's error perception $\epsO$ or the dominant noise component in $\tilde{\rho}_{drifted}$ (as perceived) follows Gaussian statistics, minimizing $\Ft$ might correspond to minimizing squared error ($L^2$ norm, $p=2$). This aligns with maximizing likelihood under Gaussian assumptions.
-    \item If the observer prioritizes robustness to sparse, large deviations (perceiving drift as localized shocks) or if their $\Rt$ strongly enforces sparsity in the representation of $\Itc$, minimizing $\Ft$ might correspond to minimizing absolute error ($L^1$ norm, $p=1$). This aligns with maximizing likelihood under Laplacian assumptions or using L1 regularization for sparsity.
-    \item Intermediate values of $p$ could arise from different observer noise models, different forms of the coherence energy $\Et$ or entropy $\St$ within $\Ft$, or different contraction properties of $\Rt$ as perceived on $\Mt$.
-\end{itemize}
-The O-differentiability (\ref{corollary:bk4_smoothness_as_epistemic_phenomenon}) ensures that these processes appear sufficiently smooth relative to the observer, allowing for the continuous spectrum of Lp norms observed symbologically reflexively (Traces 3-7) to represent a smooth adaptation of the observer's reflective stabilization strategy $\Rt$ or perceived free energy landscape $\Ft$ in response to varying perceived drift $\Dt$.
-Thus, the minimization of the Lp loss in the validation traces is not merely analogous to, but can be seen as a direct *manifestation* of, the observer-relative reflective process minimizing observer-relative symbolic free energy, with the specific norm `p` reflecting the observer's intrinsic structure and stabilization dynamics.
+The displayed finite residual sum defines $L_p$ once the sampling and model
+map are specified.  The theorem then follows from the positive affine
+representation, not from a likelihood analogy.  A two-model counterexample
+with bounded descending free energy but identical manifest losses shows that
+boundedness and descent cannot manufacture this bridge.
 \end{proof}
 \subsection{Symbolic Convergence and the Human Decency Benchmark}
 \label{subsec:bk7_hdb_integration}
@@ -928,7 +894,7 @@ These definitions and results complete the formal scaffold for the Human Decency
 \label{sec:bk7_meta_reflective_drift_and_emergent_symbolic_time}
 
 Meta-reflective drift extends the symbolic drift field (Def.~\ref{definition:bk1_drift_field}) to second-order evolution of system structure, informed by the symbolic emergence conditions of Book~IV (Def.~\ref{definition:bk4_symbolic_emergence}).
-While the Reflective Fixed Point theorem establishes local convergence within a stable symbolic framework \(S = (\manifold, \metric, \drift, \reflect)\), complex symbolic systems often experience evolution not only of their state \(\rho\) within \(\manifold\), but of the framework \(S\) itself.
+While the Reflective Fixed Point Theorem establishes local convergence within a stable symbolic framework \(S = (\manifold, \metric, \drift, \reflect)\), complex symbolic systems often experience evolution not only of their state \(\rho\) within \(\manifold\), but of the framework \(S\) itself.
 \begin{definition}[Meta-Reflective Drift \(\drift_{\mathrm{meta}}\)]
 \label{definition:bk7_meta_reflective_drift__meta}
 \emph{Meta-reflective drift} is a higher-order process acting on the space of symbolic system configurations \(\mathbb{S} = \{ S = (\manifold, \metric, \drift, \reflect) \}\), inducing time-dependent changes in the system's structural components:
@@ -960,7 +926,7 @@ Under the adiabatic condition (\(\tau_{\mathrm{meta}} \gg \tau_{\mathrm{conv}}(t
 \begin{scholium}
 
 \label{scholium:bk7_unnamed_scholium_02}Meta-reflective drift introduces a hierarchy of time. First-order symbolic time measures change *within* a stable coherence structure (\(\identity\)). Second-order symbolic time measures the change *of* that coherence structure (\(d\identity/dt\)). This aligns with cognitive development, scientific paradigm shifts, and biological evolution, where the rules and structures themselves evolve over longer timescales than the dynamics they govern. True symbolic freedom (Book IX) involves agency not just within the first order, but the capacity to influence the second-order flow -- to consciously participate in the evolution of one's own symbolic structure through reflective acts that shape meta-drift. \qed \end{scholium}
-\section{theorem of Convergent Reciprocity (Two-Way Street)}
+\section{Theorem of Convergent Reciprocity (Two-Way Street)}
 \label{sec:bk7_theorem_of_convergent_reciprocity_two_way_street}
 This section formalizes mutual symbolic convergence between interacting observers (cf.~\ref{definition:bk4_symbolic_autonomy}).
 \begin{definition}[Two-Way Flow Operator \(\Phi^{\leftrightarrow}\)]
@@ -1213,7 +1179,7 @@ The Two-Way Street convergence guarantees existence and uniqueness of a mutually
 \begin{remark}[Empathy as Dynamical Invariant]
 \label{remark:bk7_empathy_as_dynamical_invariant}
 \leavevmode\newline
-The theorem of Convergent Reciprocity
+The Theorem of Convergent Reciprocity
 (Thm.~\ref{theorem:bk7_two_way_street_convergence}) gives a formal basis for
 empathy within symbolic systems.
 At a stable fixed point \((x^{\ast}, y^{\ast})\), each state reflects the other:
@@ -1398,11 +1364,22 @@ This is the model-dependent hypothesis of the theorem -- neither location nor cu
 
 \begin{theorem}[Universal Symbolic Uncertainty Principle (PISU), derived form]
 \label{theorem:bk7_pisu}
-Under Definition~\ref{definition:bk7_operational_resolution_uncertainties}, the coherence window (Lemma~\ref{lemma:bk7_coherence_window}), and the channel floors (Assumption~\ref{assumption:bk7_channel_floors}), every allocation $N_I + N_K \le N_{\max}$ satisfies
-\begin{equation}
-\boxed{\;\Delta\Sigma_I \cdot \Delta K_S \;\geq\; \eta \cdot \frac{\|\Delta \drift\|}{\mathcal{B_R}} \cdot \delta_O, \qquad \eta = 2\sqrt{c_I\,c_K}\;}
-\end{equation}
-with equality approached at the balanced allocation $N_I = N_K = N_{\max}/2$. The dimensionless coupling $\eta$ is therefore not a free order-unity constant: it is computed from the channel constants of Assumption~\ref{assumption:bk7_channel_floors}.
+Assume $N_I>0$, $N_K>0$, $\mathcal B_R>0$, $\delta_O>0$, and
+$\lVert\Delta\drift\rVert>0$.  Under
+Def.~\ref{definition:bk7_operational_resolution_uncertainties}, the coherence
+window (Lemma~\ref{lemma:bk7_coherence_window}), and both channel floors
+(Assumption~\ref{assumption:bk7_channel_floors}), every allocation
+$N_I+N_K\leq N_{\max}$ satisfies
+\[
+ \Delta\Sigma_I\Delta K_S\geq
+ 2\sqrt{c_Ic_K}\,
+ \frac{\lVert\Delta\drift\rVert}{\mathcal B_R}\,\delta_O.
+\]
+The AM--GM allocation step is sharp at $N_I=N_K=N_{\max}/2$.  Equality in the
+full PISU bound additionally requires both channel-floor inequalities and the
+coherence-window budget to be sharp.  Zero channel allocation is outside the
+finite real-valued formulas unless an extended-real infinite-uncertainty
+convention is separately adopted.
 \end{theorem}
 
 \begin{proof}[PISU by coherence-window allocation]
@@ -1580,24 +1557,41 @@ $E_{\epsilon}$ preserves strict convexity.
 \end{proof}
 \begin{lemma}[Budget-Limited Minimizer]
 \label{lemma:bk7_budgetlimited_minimizer}
-Given $\tilde{x}$ and fixed $\epsilon$ (cf.~\ref{definition:bk1_self_regulating_mapping_function_srmf}), there exists a unique minimizer
+Fix $\tilde{x}$, $\epsilon$, and $p\in(1,\infty)$
+(cf.~\ref{definition:bk1_self_regulating_mapping_function_srmf}), and let
+\[
+\mathfrak{R}_{\mathcal B}
+:=\{\mathcal R:\lVert D\mathcal R\rVert_g\le\mathcal B\}
+\]
+be a nonempty convex weak*-compact admissible class.  Make the dependence on
+the candidate regulator explicit by defining
+\[
+J_{\tilde{x}}^{(p)}(\mathcal R)
+:=\int_{\mathcal M_\epsilon}
+\left\lVert
+\pi_\epsilon\!\bigl(\mathcal R(\tilde{x})\bigr)
+-\pi_\epsilon(\tilde{x})
+\right\rVert^p\,\mathrm d\mu_g.
+\]
+If $J_{\tilde{x}}^{(p)}$ is weak*-lower-semicontinuous on
+$\mathfrak{R}_{\mathcal B}$ and strictly convex there (equivalently for the
+finite kernel, its cost separates distinct admissible regulators), then there
+exists a unique
 \[
 \mathcal{R}_{\epsilon}^{*}(\tilde{x})
-=\arg\!\min_{\mathcal{R}}
-\bigl\{
-\tilde{F}_{s}^{(p)}(\tilde{x})
-\;:\;
-\lVert D\mathcal{R}\rVert_{g}\le\mathcal{B}
-\bigr\}.
+=\arg\!\min_{\mathcal R\in\mathfrak R_{\mathcal B}}
+J_{\tilde{x}}^{(p)}(\mathcal R).
 \]
 \end{lemma}
-\begin{proof}[From Compactness and Convexity]
+\begin{proof}[From Compactness and Strict Convexity]
 \label{proof:bk7_from_compactness_and_convexity}
 \leavevmode
 
-Combine Lemma~\ref{lemma:bk7_budgetlimited_minimizer} with the Banach-Alaoglu theorem
-(applied to the closed, convex, weak*-compact set of maps satisfying
-the SRMF budget).  Strict convexity yields uniqueness.
+Weak*-compactness and weak*-lower-semicontinuity give existence of a
+minimizer.  If two distinct admissible regulators minimized
+$J_{\tilde{x}}^{(p)}$, convexity of $\mathfrak R_{\mathcal B}$ and strict
+convexity of the objective would make their midpoint have strictly smaller
+cost, a contradiction.  Hence the minimizer is unique.
 \end{proof}
 \begin{theorem}[Emergent L$^{p}$ Norm]
 \label{theorem:bk7_emergent_lp_norm}
@@ -1679,25 +1673,28 @@ $p\!\to\!1$ minimises the $\ell^{1}$ cost (sparsity-dominant).
 Uniqueness of $p$ follows by the strict monotonicity of
 $\partial_{p}\tilde{F}_{s}^{(p)}$ under convexity.
 \end{proof}
-\begin{corollary}[Procedural Detection]
+\begin{corollary}[Certified Procedural Detection]
 \label{corollary:bk7_procedural_detection}
-Let $\epsilon_{1}<\epsilon_{2}$ be two horizon scales realised in
-Appendix~B's simulated observers (cf.~Def.~\ref{definition:bk4_bounded_observer}).
-Then the fitted exponents satisfy $p(\epsilon_{1})>p(\epsilon_{2})$, and the procedural
-log-log plot of
-\(
-\lVert E_{\epsilon}\rVert_{p}
-\)
-versus $\epsilon$ has slope strictly negative, reflexively
-confirming Thm.~\ref{theorem:bk7_emergent_lp_norm}.
+Let $0<\epsilon_1<\epsilon_2$.  Assume the fitted exponent is strictly
+decreasing, so $p(\epsilon_2)<p(\epsilon_1)$, and separately assume the plotted
+residual magnitude decreases,
+\[
+ \lVert E_{\epsilon_2}\rVert_{p(\epsilon_2)}
+ <\lVert E_{\epsilon_1}\rVert_{p(\epsilon_1)}.
+\]
+Then the log--log secant slope of the residual observable between the two
+scales is strictly negative.  Exponent monotonicity alone does not determine
+the direction of a separately varying residual norm.  Appendix B observations
+may validate both premises but are not a proof of their universal coupling.
 \end{corollary}
-\begin{proof}[Monotonicity of Emergent \( L^p \)-Norm Bounds]
+\begin{proof}[Two-Premise Detection]
 \label{proof:bk7_lp_norm_monotonicity}
 \leavevmode
-
-Immediate from Theorem~\ref{theorem:bk7_emergent_lp_norm}
-(cf.~Def.~\ref{definition:bk2_symbolic_free_energy}) and monotonicity of
-$p(\epsilon)$.
+Strict antitonicity gives the exponent ordering.  Since logarithm is strictly
+increasing on positive scales, $\log\epsilon_2-\log\epsilon_1>0$; the supplied
+decrease of the residual observable makes the log--log secant numerator
+negative, hence its slope is negative.  A decreasing exponent paired with an
+increasing observable is a countermodel if the second premise is omitted.
 \end{proof}
 \paragraph{Discussion.}
 Theorem~\ref{theorem:bk7_emergent_lp_norm} formalises the intuition that an
@@ -1863,47 +1860,50 @@ of the minimizer is precisely the symbolic phase transition of
 Def.~\ref{definition:bk2_symbolic_phase_transitio}.
 \end{proof}
 
-\begin{corollary}[Continuous $L^{p}$ sweep has no interior phase transition]
+\begin{corollary}[Certified continuous $L^p$ sweep has no interior transition]
 \label{corollary:bk7_bridge_no_interior_transition}
-On any closed sub-sweep $\xi\in[\xi_{0},\xi_{1}]$ with $\kappa<\kappa^{\ast}$
-throughout---in particular the segment realizing $p\in[1,2]$---the effective
-geometry varies continuously and exhibits no discrete phase transition
-(Def.~\ref{definition:bk2_symbolic_phase_transitio})---a direct consequence of
-part~(iii) of the Hilbert--Banach Bridge (Thm.~\ref{theorem:bk7_hilbert_banach_bridge}).
-This is the
-structural content behind the SRV observation (Trace~5,
-Fig.~\ref{figure:trace5_phase_transition_summary}) that the $L^{p}$ regression
-sweep $p\in\{1.0,\dots,2.0\}$ produced no discrete transition even under
-heavy-tailed or correlated noise: the observer was traversing the Banach--Hilbert
-segment of the bridge by smooth reweighting, with $\kappa$ below threshold.
+Let $G:[\xi_0,\xi_1]\to\mathcal G$ be the effective geometry.  Assume a
+curvature-to-regularity bridge proving that the uniform bound
+$\kappa(\xi)<\kappa^*$ on the closed sweep entails continuity (or $C^1$
+regularity) of $G$.  Then no interior point is a discrete phase transition,
+where such a transition means failure of continuity relative to the sweep.
+The numerical curvature inequality does not imply regularity without this
+bridge.  The Appendix SRV sweep is downstream corroboration of the certified
+regime, not the premise establishing continuity.
 \end{corollary}
-\begin{proof}
+\begin{proof}[Continuity Excludes a Discrete Transition]
 \label{proof:bk7_bridge_no_interior_transition}
 \leavevmode
-By part~(iii) of the Hilbert--Banach Bridge (Thm.~\ref{theorem:bk7_hilbert_banach_bridge}), a discontinuity of the effective geometry along the $L^p$ sweep requires crossing the curvature threshold $\kappa^\ast$: where $\kappa<\kappa^\ast$ the minimizer of the bridge functional stays a singleton, the map $\xi\mapsto p$ retains $C^1$ regularity, and the effective geometry varies continuously. On a closed sub-sweep $\xi\in[\xi_0,\xi_1]$ with $\kappa<\kappa^\ast$ throughout --- in particular the segment realizing $p\in[1,2]$ --- no threshold crossing occurs, so the geometry is everywhere $C^1$ and exhibits no discrete phase transition (Def.~\ref{definition:bk2_symbolic_phase_transitio}). This is the structural content corroborated by the SRV $L^p$ sweep (Trace~5), which observed no discrete transition: the observer traversed the Banach--Hilbert segment by smooth reweighting with $\kappa$ below threshold.
+Apply the supplied curvature-to-regularity bridge to obtain continuity of
+$G$ on the closed sweep.  At every point of that domain, continuity within the
+domain is therefore true, so its negation---the defined discrete phase
+transition---is false.
 \end{proof}
 
-\begin{lemma}[Non-contextuality is available only at the Hilbert cross-section]
+\begin{lemma}[Certified non-contextuality/Hilbert cross-section equivalence]
 \label{lemma:bk7_noncontextuality_forces_hilbert}
-Along the bridge family of Thm.~\ref{theorem:bk7_hilbert_banach_bridge}, a
-frame-independent coherence value $\mathcal{C}_{\Obs}(\tilde\psi,\Pi)$ for every
-coarse-grained projector $\Pi$ -- the non-contextuality of PS-C3$'$
-(Ax.~\ref{axiom:appC_psc3prime}) -- exists if and only if the effective geometry is
-Hilbertian, that is $p(\xi)=2$.
+Along the bridge family, assume separately:
+\begin{enumerate}
+\item a coherence-representation theorem identifying frame-independent
+projector values with the parallelogram/inner-product property; and
+\item the $L^p$ geometry theorem identifying that property with $p(\xi)=2$
+under the stated dimensional and regularity hypotheses.
+\end{enumerate}
+Then PS-C3$'$ non-contextuality holds if and only if the effective geometry is
+the Hilbert cross-section $p(\xi)=2$.  Hilbert geometry alone does not constrain
+an otherwise unspecified coherence functional.  Appendix C may instantiate
+the coherence bridge downstream; it is not imported backward as this lemma's
+premise.
 \end{lemma}
 
-\begin{proof}[Non-contextuality requires the parallelogram law]
+\begin{proof}[Composition of the Two Representation Bridges]
 \label{proof:bk7_noncontextuality_forces_hilbert}
 \leavevmode
-A frame-independent value for every projector requires a canonical orthogonal
-complementation $\Pi \mapsto \mathbbm{1}-\Pi$ independent of the complete frame in
-which $\Pi$ is posed; this is orthogonal projection with respect to an inner product.
-By the Jordan--von Neumann theorem an $L^{p}$ geometry of dimension at least two
-carries an inner product -- equivalently satisfies the parallelogram identity --
-iff $p=2$. For $p\neq2$ the parallelogram law fails, the complementation depends on
-the frame, and the token budget $T_{\Obs}(\Pi)$, hence
-$\mathcal{C}_{\Obs}(\tilde\psi,\Pi)$, is frame-dependent. Thus non-contextuality holds
-iff $p(\xi)=2$.
+Compose the coherence-representation equivalence with the $L^p$
+parallelogram characterization.  This yields non-contextuality iff the
+parallelogram law holds iff $p(\xi)=2$.  The concrete $L^1$ coordinate vectors
+violate the parallelogram identity, while a deliberately unconstrained
+coherence functional shows why the first equivalence must remain explicit.
 \end{proof}
 
 \begin{definition}[Contextuality defect]
@@ -1921,69 +1921,42 @@ Lemma~\ref{lemma:bk7_noncontextuality_forces_hilbert}, $\Phi_{\mathrm{nc}}(\xi)=
 $p(\xi)=2$, i.e.\ iff $\xi=\xi^{\ast}$.
 \end{definition}
 
-\begin{theorem}[Born collapse: the Banach--Hilbert collapse is measurement]
+\begin{theorem}[Conditional Born collapse at the Hilbert cross-section]
 \label{theorem:bk7_born_collapse}
-Let the observer's measurement dynamics be the reflective free-energy descent
-(Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity}; Cor.~\ref{corollary:bk7_drift_collapse_equivalence}) acting on the
-frame-temperature parameter $\xi$ -- equivalently the emergent exponent $p(\xi)$
-(Lemma~\ref{lemma:bk7_frame_temperature_exponent_correspondence}) -- with the
-contextuality defect $\Phi_{\mathrm{nc}}$
-(Def.~\ref{definition:bk7_contextuality_defect}) as descent potential, so that each
-reflective step pays for its displacement in $\Phi_{\mathrm{nc}}$. Then:
-\begin{enumerate}
-\item \emph{(Unique stable cross-section.)} The fixed locus is the single Hilbert
-cross-section $\{\xi^{\ast}\}$, $p=2$; every $p\neq2$ geometry has
-$\Phi_{\mathrm{nc}}>0$ and is reflectively unstable.
-\item \emph{(Collapse.)} From any initial frame temperature the descent has summable
-increments and converges to $\xi^{\ast}$: the Banach-robust ($p\to1$) and
-sharply-resolved ($p\to\infty$) geometries both flow onto the Hilbert point.
-\item \emph{(Born readout.)} At $\xi^{\ast}$ the geometry is Hilbertian and the
-coherence functional satisfies PS-C1, C2, C3$'$, C4, C5 with $\dim\Horizon\ge3$, so by
-Gleason's route
-$\mathcal{C}_{\Obs}(\tilde\psi,\Pi)=\langle\tilde\psi|\Pi|\tilde\psi\rangle$
-(App.~C, Thm.~\ref{theorem:appC_born_rule}).
-\end{enumerate}
-Measurement is therefore the collapse of the observer's $L^{p}$ geometry from the
-Banach regime onto the Hilbert cross-section, and the Born rule is the coherence
-functional read at that fixed point -- a derived consequence of reflective
-non-contextuality, not an added postulate.
+Let a reflective orbit in frame temperature converge to a limit $\xi_\infty$.
+Assume: (i) contextuality defect is nonnegative and vanishes exactly at the
+unique Hilbert frame $\xi^*$; (ii) reflective fixed points are exactly the
+zero-defect states; (iii) the defect is continuous at $\xi_\infty$ and tends
+to zero along the orbit.  Then $\xi_\infty=\xi^*$ and the orbit converges to
+the Hilbert cross-section.
+
+For a Born readout, assume separately a Gleason-style uniqueness certificate:
+at the Hilbert frame, every coherence assignment satisfying the stated
+normalization, additivity, non-contextuality, regularity, and dimension
+hypotheses equals the Born functional.  Under that certificate the limiting
+coherence readout is Born.  Hilbert collapse alone does not select a
+probability functional.  Appendix C may validate or instantiate the uniqueness
+certificate downstream; Book VII does not use the appendix as an upstream
+premise.
 \end{theorem}
 
-\begin{proof}[Collapse to the non-contextual fixed point]
+\begin{proof}[Limit Identification and Separate Born Bridge]
 \label{proof:bk7_born_collapse}
 \leavevmode
-\emph{(1)} By Def.~\ref{definition:bk7_contextuality_defect} and
-Lemma~\ref{lemma:bk7_noncontextuality_forces_hilbert}, $\Phi_{\mathrm{nc}}(\xi)=0$ iff
-$p(\xi)=2$, and by Lemma~\ref{lemma:bk7_frame_temperature_exponent_correspondence}
-there is a unique such $\xi^{\ast}$. A reflective fixed point cannot carry a positive
-contextuality defect: a frame-dependent coherence assignment is a self-inconsistency
-the reflective operator detects and reduces, so $\Phi_{\mathrm{nc}}=0$ at any fixed
-point. Hence the fixed locus is exactly $\{\xi^{\ast}\}$.
-
-\emph{(2)} With $\Phi_{\mathrm{nc}}$ bounded below and lower semicontinuous as descent
-potential, the pair (reflective update, $\Phi_{\mathrm{nc}}$) is a free-energy descent
-pair; by the convergence mechanism of
-Thm.~\ref{theorem:bk7_reflective_convergence_to_stable_identity} -- the telescoping
-summable-increment argument on the one-parameter frame-temperature line -- the orbit
-is Cauchy and converges to a zero of $\Phi_{\mathrm{nc}}$, which by~(1) is the
-singleton $\{\xi^{\ast}\}$. Convergence is therefore from any initial $\xi$, including
-the Banach-ward and sup-ward extremes.
-
-\emph{(3)} At $\xi^{\ast}$, $p=2$ and the geometry is Hilbertian
-(Lemma~\ref{lemma:bk7_noncontextuality_forces_hilbert}); the coherence functional then
-satisfies the coherence constraints PS-C1, C2, C4, C5 and, since
-$\Phi_{\mathrm{nc}}(\xi^{\ast})=0$, the non-contextuality axiom PS-C3$'$
-(Ax.~\ref{axiom:appC_psc3prime}). For $\dim\Horizon\ge3$ Gleason's theorem applies,
-giving
-\[
-\mathcal{C}_{\Obs}(\tilde\psi,\Pi)=\operatorname{Tr}\!\big(|\tilde\psi\rangle\langle\tilde\psi|\,\Pi\big)=\langle\tilde\psi|\Pi|\tilde\psi\rangle
-\]
-(App.~C, Thm.~\ref{theorem:appC_born_rule}).
+Continuity of the defect at the orbit limit transports orbital convergence to
+convergence of defect values at $\Phi_{\rm nc}(\xi_\infty)$.  Uniqueness of
+limits together with the assumed defect convergence to zero gives
+$\Phi_{\rm nc}(\xi_\infty)=0$, hence $\xi_\infty=\xi^*$ by the zero-defect
+characterization.  The separate uniqueness certificate then identifies the
+coherence readout with its Born value.  A distinct readout on the same Hilbert
+fixed point is a countermodel when that certificate is omitted.
 \end{proof}
 
-\begin{remark}[PS-C3$'$ relocated: from axiom to attractor; the $L^{p}$ sweep]
+\begin{remark}[Interpretive reading of PS-C3$'$: from axiom to attractor]
 \label{remark:bk7_born_collapse_psc3prime}
-Thm.~\ref{theorem:bk7_born_collapse} recasts the one posited ingredient of the Born
+The following is an interpretive synthesis of the certified conditional theorem, not
+an additional kernel identity. Thm.~\ref{theorem:bk7_born_collapse} recasts the one
+posited ingredient of the Born
 derivation. Non-contextuality (PS-C3$'$) is not an arbitrary axiom imposed on the
 coherence functional; it is the \emph{fixed-point condition} of the reflective
 collapse -- the zero-set of the contextuality defect $\Phi_{\mathrm{nc}}$ -- so a
@@ -1999,16 +1972,27 @@ $\Phi_{\mathrm{nc}}$ to its zero at $p=2$.
 
 \begin{scholium}[Born as the Hilbert cross-section]
 \label{scholium:bk7_born_as_hilbert_cross_section}
-Thm.~\ref{theorem:bk7_born_collapse} places the observer-relative Born rule
+In the interpretive register, Thm.~\ref{theorem:bk7_born_collapse} places the observer-relative Born rule
 (Thm.~\ref{theorem:appC_born_rule}) where it belongs: at $\xi^{\ast}$, the unique
 cross-section $p=2$ where the effective geometry is Hilbertian and the coherence
 functional admits the inner-product form that Gleason's route requires. Reading the
 sweep outward from $\xi^{\ast}$ recovers the frame-temperature regimes of the
-origin programme: as $\xi\to 0^{+}$ the predictions sharpen toward the
-deterministic (Newtonian, Dirac) limit, while as $\xi\to\infty$ they flatten toward
-the uniform (hyper-quantum) limit. Born is thus not an isolated postulate bolted
-onto a Hilbert space; it is the $p=2$ slice of one continuous observer geometry,
-flanked by Banach robustness on one side and deterministic collapse on the other.
+origin programme: as $\xi\to 0^{+}$ the resolved predictions sharpen toward a
+deterministic-looking (Newtonian, Dirac) limit, while as $\xi\to\infty$ they flatten
+toward the uniform (hyper-quantum) limit. This concerns appearance within the chosen
+observer frame: neither limit reconstructs the full upstream state from its resolved
+record. Born is thus read not as an isolated postulate bolted onto a Hilbert space,
+but as the $p=2$ slice of one continuous observer geometry, flanked by Banach
+robustness on one side and deterministic-looking collapse on the other.
+Constitution precedes appearance: an observer receives a resolved surface, not an
+invertible copy of its source.  Temporal becoming is already certified in the general
+geometry inherited from the Cost of Cacophony: simultaneous compression meets a
+geometric obstruction, while staged displacement becomes directed transport whose
+cost telescopes and, under explicit preservation or descent premises, converges.
+In the functionally interpretive physical specialization, decoherence and noise map onto that same
+direction through successive loss, quotient, or stabilization.  Apparent randomness
+at such a boundary does not by itself decide whether every richer process description
+is indeterministic.
 \end{scholium}
 
 \subsection{Formalizing Reflective Selection: Confidence, Loss, and Symbolic Free Energy}

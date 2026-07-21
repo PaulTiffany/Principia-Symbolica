@@ -524,26 +524,38 @@ where $\mathcal{T}_s\mathcal{H}$ is the tangent space, $\rho_{\text{Obs}}(v)$ is
 These observer-indexed quantities are local refinements of the global symbolic free energy, entropy, and temperature constructs in def~\ref{definition:bk2_symbolic_free_energy}, def~\ref{definition:bk2_symbolic_entropy}, and def~\ref{definition:bk2_symbolic_temperature}.
 \end{scholium}
 
-\begin{lemma}[Thermodynamic Consistency of Hypothesis Manifolds] 
+\begin{lemma}[Thermodynamic Consistency of Hypothesis Manifolds]
 \label{lemma:bk2_thermodynamic_consistency_hypothesis_manifolds}
-For any well-formed hypothesis manifold $\mathcal{H}_{\text{Obs}}$ with bounded curvature $\kappa_{\mathcal{H}} < K_{\text{Obs}}$ (cf.~\ref{definition:bk1_symbolic_riemann_tensor}), the thermodynamic consistency relation holds:
+Let $\mathcal{H}_{\text{Obs}}$ be a well-formed hypothesis manifold with
+bounded curvature $\kappa_{\mathcal{H}} < K_{\text{Obs}}$
+(cf.~\ref{definition:bk1_symbolic_riemann_tensor}).  Assume the closed
+hypothesis-surface balance
 \[
-\oint_{\partial \mathcal{H}} \nabla F_{\mathcal{H}} \cdot d\vec{s} = -\int_{\mathcal{H}} S_{\mathcal{H}} \, dT_{\text{Obs}}
+\oint_{\partial\mathcal H}
+\bigl(dE_{\text{Obs}}-T_{\text{Obs}}\,dS_{\mathcal H}\bigr)=0,
 \]
-where $F_{\mathcal{H}}$, $S_{\mathcal{H}}$, and $T_{\text{Obs}}$ respectively correspond to symbolic free energy (def~\ref{definition:bk2_symbolic_free_energy}), symbolic entropy (def~\ref{definition:bk2_symbolic_entropy}), and symbolic temperature (def~\ref{definition:bk2_symbolic_temperature}).
+so the observer-energy term and the exact temperature--entropy term have zero
+net contribution around $\partial\mathcal H$.  Then the thermodynamic
+consistency relation holds as an identity of pulled-back one-forms along any
+piecewise-$C^1$ parameterization $\gamma:[a,b]\to\partial\mathcal H$:
+\[
+\oint_{\partial \mathcal{H}} dF_{\mathcal H}
+= -\oint_{\partial\mathcal H} S_{\mathcal H}\,dT_{\text{Obs}}.
+\]
+Equivalently, in a chart this is the integral of
+$\frac{d}{dt}(F_{\mathcal H}\circ\gamma)$ against $dt$.  Rewriting the
+right-hand boundary integral as an interior integral over $\mathcal H$
+requires a separately supplied orientation, differential-form degree, and
+Stokes hypothesis; bounded curvature alone does not provide that bridge.
+Here $F_{\mathcal{H}}$, $S_{\mathcal{H}}$, and $T_{\text{Obs}}$ respectively
+correspond to symbolic free energy (def~\ref{definition:bk2_symbolic_free_energy}),
+symbolic entropy (def~\ref{definition:bk2_symbolic_entropy}), and symbolic
+temperature (def~\ref{definition:bk2_symbolic_temperature}).
 \end{lemma}
 
 \begin{proof}
 \label{proof:bk2_thermodynamic_consistency_hypothesis_manifolds}
 \leavevmode
-
-\begin{assumption}[Closed hypothesis-surface balance]
-For a well-formed hypothesis manifold of bounded curvature, the observer-energy
-term and the exact $T_{\mathrm{Obs}}\,dS_{\mathcal H}$ term have zero net
-contribution around the closed boundary $\partial\mathcal H$. The remaining
-boundary work is therefore the entropy-weighted temperature exchange across
-the hypothesis surface.
-\end{assumption}
 
 The scholium \ref{scholium:bk2_on_hypotheses_as_thermodyn} defines the
 observer-relative free energy on a hypothesis surface by
@@ -557,15 +569,17 @@ dF_{\mathcal H}
 \]
 Bounded curvature, relative to the symbolic Riemann tensor of
 Def.~\ref{definition:bk1_symbolic_riemann_tensor}, supplies the regularity
-needed to integrate this differential over the closed boundary. By the closed
-hypothesis-surface balance assumption, the first two terms have zero net
-boundary contribution, leaving only the entropy-temperature exchange term.
-Thus
+needed to integrate this differential over the closed boundary. By the
+lemma's closed hypothesis-surface balance hypothesis, the first two terms
+have zero net boundary contribution, leaving only the entropy--temperature
+exchange term. Thus, after pullback along $\gamma$ and interval integration,
 \[
-\oint_{\partial \mathcal{H}} \nabla F_{\mathcal{H}}\cdot d\vec{s}
-  = -\int_{\mathcal H} S_{\mathcal H}\,dT_{\mathrm{Obs}},
+\oint_{\partial \mathcal{H}} dF_{\mathcal H}
+  = -\oint_{\partial\mathcal H}S_{\mathcal H}\,dT_{\mathrm{Obs}},
 \]
-which is the stated thermodynamic consistency relation.
+which is the stated thermodynamic consistency relation.  Any conversion of
+this boundary exchange into an integral over $\mathcal H$ is a subsequent
+Stokes step and consumes its own geometric hypotheses.
 \end{proof}
 
 \subsection{Summary and Coherence}

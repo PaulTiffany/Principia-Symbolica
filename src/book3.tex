@@ -17,15 +17,33 @@ A symbolic membrane $\mathcal{M}_i$ is a connected open submanifold of $M$ with 
 \end{definition}
 
 % Lemma 3.1.3
-\begin{lemma}[Well-posedness of Symbolic Membranes] \label{lemma:bk3_wellposedness_of_symbolic_membranes}
-For sufficiently small perturbation bounds $\delta_i$, symbolic membranes (Def.~\ref{definition:bk3_symbolic_membrane}) are well-defined structures within the symbolic manifold $M$ (see proof~\ref{proof:bk3_local_regulation_smooth_membranes}).
+\begin{lemma}[Conditional Well-posedness of Symbolic Membranes]
+\label{lemma:bk3_wellposedness_of_symbolic_membranes}
+Let $M$ contain a nonempty connected open submanifold $U$ whose closure is
+compact and whose boundary is smooth.  Suppose the global drift field $D$ and
+symbolic Hamiltonian $H$ are smooth on the relevant domains.  Then for every
+perturbation budget $\delta_i>0$ and every $\alpha>0$, $U$ carries symbolic
+membrane data in the sense of Def.~\ref{definition:bk3_symbolic_membrane}.
+The perturbation budget controls the drift modification; it does not supply the
+existence or regularity of $U$.
 \end{lemma}
 
-\begin{proof}[Local Regulation of Drift on Smooth Symbolic Membranes]
+\begin{proof}[Local Regulation of Drift on a Supplied Smooth Domain]
 \label{proof:bk3_local_regulation_smooth_membranes}
 \leavevmode
 
-Since $M$ is a smooth manifold by Theorem~\ref{theorem:appB_smoothness_emergence}, the existence of connected open submanifolds with compact closure and smooth boundary is guaranteed by standard results in differential topology. The internal drift field $D_i$ is well-defined as a modification of the global drift field $D$, which is smooth by Theorem~\ref{theorem:bk1_emergence_of_drift_field}. The bound $\delta_i$ ensures that $D_i$ remains sufficiently close to $D$ to preserve the essential dynamics while allowing for internal regulation. The permeability function $\pi_i$ is well-defined on the tangent bundle restricted to the boundary. The stability functional $S_i$ can be constructed from the symbolic Hamiltonian $H$ (defined in Definition~\ref{definition:bk2_symbolic_hamiltonian}), for instance as $S_i(x) = \exp(-\alpha H(x))$ for some $\alpha > 0$, ensuring positivity and appropriate scaling.
+Take $\mathcal{M}_i=U$ and let $D_i$ be the restriction of $D$ to $U$.
+Then $D_i(x)-D(x)=0$, so
+$\|D_i(x)-D(x)\|_g=0\leq\delta_i$ for every $\delta_i>0$.  Define the
+boundary permeability by the constant function $\pi_i(p,v)=0$, which takes
+values in $[0,1]$.  Finally set
+\begin{equation}
+S_i(x)=\exp(-\alpha H(x)).
+\end{equation}
+This is strictly positive, and it is smooth whenever $H$ is smooth.  Thus the
+supplied domain and fields carry all of the stated membrane data.  Notice that
+no smallness condition on $\delta_i$ is needed for this canonical witness; the
+geometric hypotheses on $U$ are separate and load-bearing.
 \end{proof}
 
 \begin{definition}[Membrane Thermodynamics] \label{definition:bk3_membrane_thermodynamics}
@@ -374,22 +392,54 @@ where $\nabla_g \cdot$ is the divergence operator and $\text{curl}_g$ is the cur
 \end{definition}
 
 % Lemma 3.2.4
-\begin{lemma}[Helmholtz Decomposition of Refinement Field] \label{lemma:bk3_helmholtz_decomposition_refinement_field}
-The refinement vector field $V_r$ (Def.~\ref{definition:bk3_refinement_vector_field}) can be decomposed (locally, or globally under suitable topological conditions) as:
-\[
-V_r = \nabla_g \phi + \text{curl}_g(A) + H
-\]
-where $\phi$ is a scalar potential (representing integrative forces), $A$ is a vector potential (representing differentiative forces), and $H$ is a harmonic vector field (representing components that are both divergence-free and curl-free, often related to topology). Assuming $H=0$ for simplicity or on simply connected domains:
-\[
-V_r \approx \nabla_g \phi + \text{curl}_g(A)
-\]
+\begin{lemma}[Hodge--Helmholtz Decomposition of the Refinement Field]
+\label{lemma:bk3_helmholtz_decomposition_refinement_field}
+Let $(\mathcal{M},g)$ be a compact, connected, oriented smooth Riemannian
+manifold without boundary, and let $V_r$ be a smooth refinement vector field.
+Writing $V_r^\flat$ for its metric-dual one-form, there exist a smooth scalar
+potential $\phi$, a smooth two-form $\beta$, and a harmonic one-form $h$ such
+that
+\begin{equation}
+V_r^\flat=d\phi+\delta\beta+h.
+\end{equation}
+The three summands are pairwise orthogonal in $L^2$, and the decomposition is
+unique after the usual normalization of the scalar potential.  The harmonic
+term represents the de Rham cohomology class of $V_r^\flat$; in particular it
+vanishes when $H^1_{\mathrm{dR}}(\mathcal{M})=0$.  In dimension three, after
+using the metric and orientation to identify forms and vector fields, the
+coexact term $\delta\beta$ is the conventional curl component.
+
+For a finite-dimensional inner-product model with a chosen integrative
+subspace $G$, the corresponding certified kernel is the orthogonal split
+\begin{equation}
+V_r=P_GV_r+(I-P_G)V_r,
+\end{equation}
+whose two components are orthogonal and unique relative to $G$.
 \end{lemma}
 
-\begin{proof}[Symbolic Forces via Helmholtz Decomposition]
+\begin{proof}[Symbolic Forces via Hodge Decomposition]
 \label{proof:bk3_symbolic_helmholtz_decomposition}
 \leavevmode
 
-This follows from the Hodge-Helmholtz decomposition theorem for vector fields on Riemannian manifolds. Since $\mathcal{M}$ is a smooth manifold with the symbolic metric $g$ (cf. Def.~\ref{definition:bk2_symbolic_probability_spa}), any smooth vector field $V_r$ on $\mathcal{M}$ can be decomposed into a sum of an exact form (gradient field, curl-free), a co-exact form (curl field, divergence-free), and a harmonic form (both curl-free and divergence-free). The gradient component $\nabla_g \phi$ represents purely integrative forces (associated with convergence/divergence), while the curl component $\text{curl}_g(A)$ represents purely differentiative forces (associated with rotation/shear). Harmonic fields depend on the topology of $\mathcal{M}$ (supporting Lem.~\ref{lemma:bk3_helmholtz_decomposition_refinement_field}).
+The Hodge decomposition theorem on compact oriented Riemannian manifolds gives
+the orthogonal direct sum
+\begin{equation}
+\Omega^1(\mathcal{M})
+ =\operatorname{im}d\;\oplus\;\operatorname{im}\delta
+ \;\oplus\;\mathcal{H}^1(\mathcal{M}).
+\end{equation}
+Applying it to $V_r^\flat$ yields the displayed decomposition.  Hodge theory
+identifies $\mathcal{H}^1(\mathcal{M})$ with
+$H^1_{\mathrm{dR}}(\mathcal{M})$, proving the stated vanishing criterion.  The
+three-dimensional curl reading follows only after the stated metric and
+orientation identifications.
+
+In the finite-dimensional model, orthogonal projection onto $G$ gives
+$P_GV_r\in G$ and $(I-P_G)V_r\in G^\perp$.  Their sum reconstructs $V_r$;
+orthogonality and uniqueness follow from
+$G\cap G^\perp=\{0\}$.  This finite kernel captures the identifiable
+integration--differentiation split without claiming the omitted global
+analytic machinery.
 \end{proof}
 
 \subsection{Evolution of Symbolic Knowledge Structure} \label{subsec:bk3_evolution_symbolic_knowledge_structure}
@@ -493,42 +543,50 @@ A symbolic network $\mathcal{N}$ is a graph structure where:
 \end{definition}
 
 % Theorem 3.2.11
-\begin{theorem}[Emergence of Symbolic Networks] \label{theorem:bk3_emergence_of_symbolic_networks}
-Under sustained symbolic growth conditions (Theorem~\ref{theorem:bk3_conditions_sustained_symbolic_growth}), coupled symbolic membranes naturally generate symbolic networks (Def.~\ref{definition:bk3_symbolic_network}) through compressed relational structures (Def.~\ref{definition:bk3_compressed_relational_structure}) and conceptual bridges (Def.~\ref{definition:bk3_conceptual_bridge}).
-See also Def.~\ref{definition:bk2_symbolic_free_energy}, Def.~\ref{definition:bk1_bounded_observer}, and proof~\ref{proof:bk3_sketch_symbolic_network_emergence}.
+\begin{theorem}[Conditional Assembly of Symbolic Networks]
+\label{theorem:bk3_emergence_of_symbolic_networks}
+Assume the sustained-growth condition of
+Thm.~\ref{theorem:bk3_conditions_sustained_symbolic_growth}.  In addition,
+let $J$ be a nonempty finite index set and suppose the following assembly data
+are supplied:
+\begin{enumerate}
+  \item for every $j\in J$, a selected high-coherence region $\omega_j$ and a
+  total compression operator $\mathcal{C}$ with
+  $\sigma_j=\mathcal{C}(\omega_j)\in\Sigma$;
+  \item a selected edge relation $E\subseteq J\times J$ and, for every
+  $(i,j)\in E$, a reflexive encoding whose induced conceptual bridge connects
+  $\sigma_i$ to $\sigma_j$;
+  \item a global stability value $s_{\mathcal N}$ and a node-coherence lower
+  bound $m>0$ such that $s_{\mathcal N}\geq m$.
+\end{enumerate}
+Then these data assemble into a symbolic network $\mathcal N$ in the sense of
+Def.~\ref{definition:bk3_symbolic_network}, with strictly positive global
+stability. Sustained symbolic growth alone does not supply the compression
+codomain, nodes, edges, or stability certificate.
 \end{theorem}
 
-\begin{proof}[Symbolic Network Emergence Under Sustained Growth]
+\begin{proof}[Assembly from Compression, Bridge, and Stability Witnesses]
 \label{proof:bk3_sketch_symbolic_network_emergence}
 \leavevmode
 
-We construct the network $\mathcal{N}$ explicitly in three steps.
+Use the compressed structures $\{\sigma_j\}_{j\in J}$ as the node family and
+the supplied relation $E$ as the edge relation.  By hypothesis, each selected
+edge is witnessed by a reflexive encoding and its induced conceptual bridge,
+so the edge interpretation required by
+Def.~\ref{definition:bk3_symbolic_network} is satisfied.  Assign
+$s_{\mathcal N}$ as the global stability value.  Since
+$s_{\mathcal N}\geq m>0$, it lies in $\mathbb{R}_+$ and is strictly positive.
+The node, edge, and stability fields therefore form the required symbolic
+network.  The accompanying Lean realization retains the selected regions, total
+compression, bridge witness for every selected edge, positive node-coherence
+floor, and lower-bound inequality in one process certificate; its execution
+proves the node, edge, and strict-stability clauses jointly.
 
-\textbf{Step 1: Nodes.}
-By Thm.~\ref{theorem:bk3_conditions_sustained_symbolic_growth}, sustained growth
-requires $\int_{r_0}^{r_0+T}(I'(s)-D'(s))\,ds > 0$ recurrently, so the
-knowledge structure $K(r)$ (Def.~\ref{definition:bk3_symbolic_knowledge_structure})
-grows in coherence $\kappa(x,r)$ over time. Regions $\omega \subset \mathcal{M}$
-where $\kappa(x,r)$ exceeds the stability threshold of
-Thm.~\ref{theorem:bk3_membrane_stability_criteria} become stable and
-identifiable. Apply the compression operator $\mathcal{C}$
-(Def.~\ref{definition:bk3_compressed_relational_structure}) to each such $\omega$
-to obtain nodes $\sigma_i = \mathcal{C}(\omega_i) \in \Sigma$.
-
-\textbf{Step 2: Edges.}
-For any two high-coherence regions $\omega_i \subset \mathcal{M}_i$ and
-$\omega_j \subset \mathcal{M}_j$, coupled membranes admit reflexive encodings
-$E_{ij}: \mathcal{M}_i \to \mathcal{M}_j$ (Def.~\ref{definition:bk3_reflexive_encoding}).
-By Lemma~\ref{lemma:bk3_reflexive_encodings_generate_conceptual_bridges}, each
-such encoding generates a conceptual bridge (Def.~\ref{definition:bk3_conceptual_bridge})
-between $\sigma_i$ and $\sigma_j$, forming an edge in $\mathcal{N}$.
-
-\textbf{Step 3: Global stability.}
-The network stability functional $\mathcal{S}(\mathcal{N})$
-(Def.~\ref{definition:bk3_symbolic_network}, condition 3) is bounded below by
-the minimum coherence among all nodes $\sigma_i$, which is positive by
-Step 1. Therefore $\mathcal{N}$ satisfies all three conditions of
-Def.~\ref{definition:bk3_symbolic_network} and is a well-defined symbolic network.
+The sustained-growth premise identifies the intended dynamical setting but is
+not used to manufacture any assembly datum.  In particular, positive growth is
+compatible with an empty compression codomain, in which case even one network
+node cannot be constructed.  This shows why the additional witnesses are
+load-bearing rather than consequences of growth alone.
 \end{proof}
 
 % Definition 3.2.12
@@ -817,91 +875,59 @@ chemical, but that it instantiates the same self-maintenance-plus-heritable-vari
 structure that (N) uses to demarcate life.
 \end{definition}
 
-\begin{theorem}[Canonical Life Correspondence]
+\begin{theorem}[Certified Canonical Life Correspondence]
 \label{theorem:bk3_symbolic_life_satisfies_canonical_definitions}
-A symbolic system satisfying the persistent symbolic life criteria
-(Thm.~\ref{theorem:bk3_criteria_persistent_symbolic_life}) satisfies all three
-canonical life standards of
-Def.~\ref{definition:bk3_canonical_life_standards}: every clause of \textbf{(K)},
-\textbf{(N)}, and \textbf{(T)} is met by an existing PS construct. Hence
-\emph{symbolic vitality} is not a metaphor but membership in the established
-demarcation of life, read in the symbolic register.
+Let $\mathcal S$ satisfy the persistent symbolic life criteria of
+Thm.~\ref{theorem:bk3_criteria_persistent_symbolic_life}.  Suppose additionally
+that a correspondence certificate supplies, for this same system, explicit
+witnesses of:
+\begin{enumerate}
+  \item Koshland's program, improvisation, compartmentalization, energy,
+  regeneration, adaptability, and seclusion clauses;
+  \item self-maintenance and a population-level Darwinian mechanism with
+  variation, heritable transmission, and differential selection;
+  \item the textbook clauses of order, energy processing, homeostasis, growth,
+  reproduction, environmental response, and evolutionary adaptation.
+\end{enumerate}
+Then $\mathcal S$ satisfies the three canonical standards of
+Def.~\ref{definition:bk3_canonical_life_standards} in the symbolic register.
+The three persistence inequalities alone do not construct this correspondence
+certificate.
 \end{theorem}
 
-\begin{proof}[Clause-by-clause correspondence]
+\begin{proof}[Certificate projection]
 \label{proof:bk3_symbolic_life_satisfies_canonical_definitions}
 \leavevmode
-Let $\mathcal{S}$ satisfy the three persistence conditions of
-Thm.~\ref{theorem:bk3_criteria_persistent_symbolic_life}.
+The certificate contains a witness for every named clause of \textbf{(K)},
+\textbf{(N)}, and \textbf{(T)}.  Projecting those fields yields the required
+conjunction of canonical standards.  The persistence witness identifies the
+symbolic system to which the certificate applies, but it does not derive the
+external clauses.  In particular, regeneration, reproduction, heredity, and
+selection remain separately inspectable bridge obligations rather than aliases
+for positive growth or bounded metabolic rate.
 
-\textbf{(K) Koshland's seven pillars.}
-\emph{Program} is the symbolic knowledge structure $K(r)$
-(Def.~\ref{definition:bk3_symbolic_knowledge_structure}) together with the
-self-regulating mapping function
-(Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}): the organized
-description governing symbolic interactions.
-\emph{Improvisation} is the recurrent growth and refinement of that program
-(condition~2), by which $\mathcal{S}$ revises its own structure under drift.
-\emph{Compartmentalization} is the symbolic membrane
-(Def.~\ref{definition:bk3_symbolic_membrane},
-Thm.~\ref{theorem:bk3_membrane_stability_criteria}), the bounded volume
-separating system from environment.
-\emph{Energy} is symbolic metabolism: the metabolic rate $R_{\text{meta}}$
-(Def.~\ref{definition:bk3_symbolic_metabolic_rate}) held in its homeostatic band
-(condition~1), an open throughput of symbolic free energy
-(Def.~\ref{definition:bk2_symbolic_free_energy}).
-\emph{Regeneration} is the repair process
-(Def.~\ref{definition:bk4_repair_process}) and symbolic autopoiesis
-(Def.~\ref{definition:bk3_symbolic_autopoiesis}) compensating drift-degradation.
-\emph{Adaptability} is the drift-compensating symbiotic coupling
-(Def.~\ref{definition:bk3_symbiotic_curvature}, condition~3) and homeostatic
-regulation responding to perturbation.
-\emph{Seclusion} is observer-boundedness
-(Def.~\ref{definition:bk1_bounded_observer},
-Def.~\ref{definition:bk1_observer_horizon_structure}): each system's pathways are
-refracted through its own horizon, keeping them specific rather than chaotically
-cross-coupled. All seven pillars are met.
-
-\textbf{(N) NASA working definition (under the stated translation).}
-\emph{Self-sustaining}: conditions~1 and the autopoietic closure
-(Def.~\ref{definition:bk3_symbolic_autopoiesis}) make $\mathcal{S}$
-self-maintaining without external authorship. \emph{Capable of Darwinian
-evolution}: the three Lewontin requisites hold for populations of such systems
-(Remark~\ref{remark:bk3_toward_symbolic_evolution}) --- variation, from
-drift-field perturbations (Def.~\ref{definition:bk1_drift_field}); heredity, in
-the transmitted structure $K(r)$; and selection, through differential
-persistence governed by $S_i,\kappa_{\text{symb}},K(r)$. A self-sustaining
-symbolic system capable of symbolic Darwinian evolution satisfies (N) once
-\emph{chemical} is read as \emph{symbolic}.
-
-\textbf{(T) Textbook characteristics.}
-Order is the organized $K(r)$ and membrane structure; energy processing is
-$R_{\text{meta}}$ in band (condition~1); homeostatic regulation is symbolic
-homeostasis (Def.~\ref{definition:bk3_symbolic_homeostasis}); growth is the
-recurrent growth of $K(r)$ (condition~2); reproduction and response are supplied
-by autopoiesis (Def.~\ref{definition:bk3_symbolic_autopoiesis}) and
-drift-responsive regulation; evolutionary adaptation is again
-Remark~\ref{remark:bk3_toward_symbolic_evolution}. Every textbook characteristic
-is instantiated.
-
-Since each clause of (K), (N), and (T) is discharged by a PS construct already
-required for persistence, the persistent symbolic system qualifies as life under
-all three independent demarcations. The internal criterion and the external
-standards therefore converge, and ``vitality'' denotes membership in the
-established class rather than a borrowed figure of speech.
+The NASA clause is conditional on the declared substrate translation
+\emph{chemical}$\mapsto$\emph{symbolic}; the theorem establishes structural
+correspondence under that translation, not chemical identity.
+The accompanying Lean certificate constructs that structural translation from
+self-maintenance, heritable variation, and differential selection, and retains
+the textbook evolutionary-adaptation clause separately.  Where an explicit
+representation identifies symbolic coherence with negative distance from a
+target morphology, Lean also proves that regenerative coherence improvement is
+equivalent to reduced target-form error.  Revising the target is recorded as
+proto-self-authorship; no Book IX conclusion about freedom is inferred here.  A persistent
+system paired with a false regeneration clause is a counterexample to any
+attempt to delete the certificate premise.
 \end{proof}
 
-\begin{scholium}[Convergent demarcation]
+\begin{scholium}[Certified convergent demarcation]
 \label{scholium:bk3_convergent_demarcation}
-Three demarcations built for chemistry and biology --- one substrate-independent
-by design \citep{koshland2002pillars}, one substrate-bound and translated
-\citep{joyce1994foreword}, one purely descriptive \citep{urry2021campbell} ---
-agree on the same symbolic object. Convergence of independent definitions is the
-ordinary evidence that a demarcation has caught something real; here it licenses
-the framework's later thermodynamic and ethical use of \emph{life} and
-\emph{vitality} (cf.~Thm.~\ref{theorem:bk4_freedom_life_connection},
-Prop.~\ref{proposition:bk9_stability_conditions_for_the_good}) without circular
-appeal to the framework's own vocabulary.
+Agreement among the three external demarcations is evidence only after the
+correspondence fields have been witnessed for the same system.  Where such a
+certificate exists, later thermodynamic and ethical arguments may use
+\emph{symbolic life} or \emph{vitality} in that certified symbolic sense.  Where
+it does not, the internal persistence predicate remains an internal viability
+criterion and must not be silently promoted to biological or chemical life.
 \end{scholium}
 
 \subsection{Toward Symbolic Evolution}

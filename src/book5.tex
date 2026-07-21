@@ -1,4 +1,4 @@
-﻿\section{Fundamenta Symbolicae Vitae}
+\section{Fundamenta Symbolicae Vitae}
 \label{sec:bk5_funadmenta_symbolicae_vitae}
 This section establishes the foundational principles of symbolic life theory through rigorous mathematical formalism, extending the symbolic thermodynamics of Book~II (symbolic free energy Def.~\ref{definition:bk2_symbolic_free_energy}, entropy Def.~\ref{definition:bk2_symbolic_entropy}) and grounded in the symbolic manifold $M$ (Def.~\ref{definition:bk1_symbolic_manifold}) and drift field $D$ (Def.~\ref{definition:bk1_drift_field}) of Book~I.
 
@@ -344,25 +344,56 @@ This represents a mutually consistent and locally optimal reflective configurati
 
 \begin{proposition}[Reflective Drift Alignment in MAP]
 \label{proposition:bk5_reflective_drift_alignment_in_map}
-If two membranes $\Membrane_A, \Membrane_B$ are in a stable MAP relationship (i.e., $\Omega_{AB}>0$, and $\|\mathbb{R}_{AB}\| > \kappa_{\text{crit}}$, cf.~Thm.~\ref{theorem:bk5_map_equilibrium}), their coupled drift-reflection dynamics must converge to a state where mutual reflection actively counteracts drift, resulting in a net positive contribution to the system's free energy:
-\begin{equation}
-\langle \drift_A \circ \reflect_B^A + \drift_B \circ \reflect_A^B \rangle \leadsto \Delta F_s > 0
-\end{equation}
-The notation $\langle \cdot \rangle \leadsto \Delta F_s > 0$ indicates that the expected effect of the combined operator leads to an increase in symbolic free energy, signifying stabilization (cf.~Prop.~\ref{proposition:bk6_drift_reflection_correspondence}).
+Let two membranes $\Membrane_A,\Membrane_B$ lie in the MAP regime,
+$\Omega_{AB}>0$ and $\|\mathbb{R}_{AB}\|>\kappa_{\mathrm{crit}}$
+(cf.~Thm.~\ref{theorem:bk5_map_equilibrium}).  Suppose in addition that the
+covenant satisfies the drift-relative stability margin of
+Thm.~\ref{theorem:bk5_covenant_stability_theorem}:
+\[
+\Omega_{AB}\,\lambda_{\min}(\mathbb{R}_{AB})
+>
+\|\drift_A\|_{\max}+\|\drift_B\|_{\max}.
+\]
+Then mutual reflection strictly exceeds the combined maximal drift burden, so
+its scalar worst-case contribution to symbolic free energy is positive:
+\[
+\Delta F_s^{\mathrm{align}}
+:=\Omega_{AB}\,\lambda_{\min}(\mathbb{R}_{AB})
+  -\bigl(\|\drift_A\|_{\max}+\|\drift_B\|_{\max}\bigr)>0.
+\]
+Consequently the expected combined drift--reflection effect is stabilizing,
+\[
+\langle \drift_A \circ \reflect_B^A
+      + \drift_B \circ \reflect_A^B \rangle
+\leadsto \Delta F_s^{\mathrm{align}}>0.
+\]
+The fixed threshold $\kappa_{\mathrm{crit}}$ classifies the MAP coupling
+regime; the displayed drift-relative margin is the separate premise that
+certifies a positive restoration balance.  This is compatible with the
+reflective-equilibrium correspondence of
+Prop.~\ref{proposition:bk6_drift_reflection_correspondence}.
 \end{proposition}
 
 \begin{demonstratio}
 \label{demonstratio:bk5_entropy_reduction}
 In a MAP state, metabolic exchange $\mathcal{T}_{ij}$ and reflective coupling
 $\mathbb{R}_{AB}$ (Def.~\ref{definition:bk5_reflective_coupling_tens}) allow
-the system to redistribute internal coherence and counter entropy
-production.
-Specifically, $\reflect_B^A$ stabilizes $\Membrane_A$ against $\drift_A$, and
-$\reflect_A^B$ stabilizes $\Membrane_B$ against $\drift_B$.
-Averaged over system dynamics, the combined effect yields either a net entropy
-reduction or a coherence increase sufficient to maintain $F_s > 0$ for both
-membranes.
-This satisfies Prop.~\ref{proposition:bk5_reflective_drift_alignment_in_map}.
+the system to redistribute internal coherence and counter entropy production.
+The stability-margin hypothesis gives directly
+\[
+0<\Omega_{AB}\lambda_{\min}(\mathbb{R}_{AB})
+ -\bigl(\|\drift_A\|_{\max}+\|\drift_B\|_{\max}\bigr)
+ =\Delta F_s^{\mathrm{align}}.
+\]
+Thus the minimum restorative contribution of the covenant strictly exceeds
+the two maximal drift burdens.  The resulting aligned contribution is
+positive, which is precisely the conclusion of
+Prop.~\ref{proposition:bk5_reflective_drift_alignment_in_map}.
+The Lean realization retains the fixed MAP threshold, the drift-relative margin,
+and the contractive temporal update as separate fields of one certificate.  It
+then proves vanishing residual alignment, convergence of the realized
+contribution to the positive margin, and eventual positivity; a unit-gain model
+shows why the temporal premise cannot be deleted.
 \qed
 \end{demonstratio}
 
@@ -496,36 +527,51 @@ Where $\lambda_{\text{crit}}$ is the critical spectral radius threshold given by
 With $T_s$ representing symbolic temperature, $\eta_A$ and $\eta_B$ the symbolic coherence densities of the respective membranes, and $\|\drift_i\|$ the operator norm of the drift operator.
 This condition ensures stable inter-membrane viability and mutually sustained symbolic free energy over time.
 \end{axiom}
-\begin{theorem}[Reflective Equilibrium Conservation] \label{theorem:bk5_reflective_equilibrium_conservation}
-Conservation here is the energetic face of Ax.~\ref{axiom:bk5_reflective_equilibrium_stability_flux} when read through Def.~\ref{definition:bk2_symbolic_free_energy}.
-Let symbolic membranes $\Membrane_A$ and $\Membrane_B$ be in reflective equilibrium according to Ax.~\ref{axiom:bk5_reflective_equilibrium_stability_flux}. Then their combined symbolic energy undergoes bounded fluctuations around a conserved mean value:
-\begin{equation}
-\left| \frac{d}{dt}[E_s(\Membrane_A) + E_s(\Membrane_B)] \right| \leq \varepsilon \cdot (\rho(\mathcal{C}_{AB}))^2
-\end{equation}
-Where $\varepsilon > 0$ is a system-specific coupling constant. As $\rho(\mathcal{C}_{AB}) \to 0$, perfect energy conservation is approached.
+\begin{theorem}[Reflective Equilibrium Conservation]
+\label{theorem:bk5_reflective_equilibrium_conservation}
+Conservation here is the energetic face of
+Ax.~\ref{axiom:bk5_reflective_equilibrium_stability_flux} when read through
+Def.~\ref{definition:bk2_symbolic_free_energy}.  Let symbolic membranes
+$\Membrane_A$ and $\Membrane_B$ be in reflective equilibrium, and write
+$\rho=\rho(\mathcal C_{AB})$.  If their uncompensated drift--reflection
+residuals satisfy
+\[
+\|r_A\|\le \rho\,\|\psi_A\|,
+\qquad
+\|r_B\|\le \rho\,\|\psi_B\|,
+\]
+then the combined symbolic-energy rate obeys the linear spectral bound
+\[
+\left|\frac{d}{dt}
+  [E_s(\Membrane_A)+E_s(\Membrane_B)]\right|
+\le
+\rho(\mathcal C_{AB})
+\bigl(\|\psi_A\|+\|\psi_B\|\bigr).
+\]
+For fixed finite state norms, $\rho(\mathcal C_{AB})\to0$ therefore forces the
+energy-rate defect to zero, approaching perfect energy conservation.
 \end{theorem}
 \begin{proof}[Energy Conservation Under Reflective Coupling]
 \label{proof:bk5_energy_conservation_under_reflective_coupling}
 \leavevmode
 
-The residual is controlled by Def.~\ref{definition:bk5_spectral_radius_of_coupl} with entropy bookkeeping from Def.~\ref{definition:bk2_symbolic_entropy}.
-The time evolution of the combined symbolic energy can be expressed as:
-\begin{equation}
-\frac{d}{dt}[E_s(\Membrane_A) + E_s(\Membrane_B)] = \int_{\Membrane_A} \drift_A\psi_A\,d\mu_A + \int_{\Membrane_B} \drift_B\psi_B\,d\mu_B - \int_{\Membrane_A} \reflect_A\psi_A\,d\mu_A - \int_{\Membrane_B} \reflect_B\psi_B\,d\mu_B
-\end{equation}
-Under reflective equilibrium, the reflection operators compensate the drift operators:
-\begin{equation}
-\reflect_A\psi_A \approx \drift_B\psi_B \quad \text{and} \quad \reflect_B\psi_B \approx \drift_A\psi_A
-\end{equation}
-The approximation error is bounded by the spectral radius of the coupling tensor:
-\begin{equation}
-\|\reflect_A\psi_A - \drift_B\psi_B\| \leq \rho(\mathcal{C}_{AB}) \cdot \|\psi_A\| \quad \text{and} \quad \|\reflect_B\psi_B - \drift_A\psi_A\| \leq \rho(\mathcal{C}_{AB}) \cdot \|\psi_B\|
-\end{equation}
-Substituting these bounds into the energy evolution equation and applying the Cauchy-Schwarz inequality yields:
-\begin{equation}
-\left| \frac{d}{dt}[E_s(\Membrane_A) + E_s(\Membrane_B)] \right| \leq \varepsilon \cdot (\rho(\mathcal{C}_{AB}))^2
-\end{equation}
-Where $\varepsilon = \max\{\|\psi_A\|^2, \|\psi_B\|^2\}$. As $\rho(\mathcal{C}_{AB}) \to 0$, perfect energy conservation is approached.
+The residual is controlled by
+Def.~\ref{definition:bk5_spectral_radius_of_coupl}, with entropy bookkeeping
+from Def.~\ref{definition:bk2_symbolic_entropy}.  Regrouping the drift and
+reflection terms in the combined energy derivative gives the sum of the two
+uncompensated residual contributions $r_A+r_B$.  Hence the triangle inequality
+and the stated residual estimates yield
+\[
+\begin{aligned}
+\left|\frac{d}{dt}[E_s(\Membrane_A)+E_s(\Membrane_B)]\right|
+&\le \|r_A\|+\|r_B\| \\
+&\le \rho\,\|\psi_A\|+\rho\,\|\psi_B\| \\
+&=\rho\bigl(\|\psi_A\|+\|\psi_B\|\bigr).
+\end{aligned}
+\]
+Thus the fluctuation rate is first-order in the coupling spectral radius.  In
+particular it vanishes as $\rho\to0$ when the two state norms remain fixed and
+finite.
 \end{proof}
 \begin{definition}[Recursive Reflective Flow] \label{definition:bk5_recursive_reflective_flow}
 This recursion is the iterative realization of Def.~\ref{definition:bk5_reflective_drift_coupling_tensor} in the equilibrium regime of Ax.~\ref{axiom:bk5_reflective_equilibrium_stability_flux}.
@@ -698,31 +744,44 @@ This equilibrium is not a static endpoint but a continuous process—a dynamic d
 Reflective equilibrium also represents a form of distributed resilience. When one membrane experiences intensified drift—symbolically equivalent to an environmental challenge or perturbation—the reflective capacity of its partner membrane helps restore balance. This distributed architecture of stability enables the system to withstand challenges that would overwhelm isolated membranes.
 From an evolutionary perspective, symbolic systems capable of establishing reflective equilibrium possess a distinct advantage in environments characterized by high drift intensity. This suggests that as symbolic ecosystems mature, we should observe increasing instances of reflective coupling among membranes, potentially leading to hierarchical structures of nested equilibria that exhibit remarkable stability across multiple scales of organization.
 \end{scholium}
-\begin{theorem}[Enhanced MAP-MAD Duality]
+\begin{theorem}[Enhanced MAP--MAD Regime Classification]
 \label{theorem:bk5_enhanced_map_mad_duality}
-Let $\Membrane_A$ and $\Membrane_B$ be symbolic membranes in the symbolic manifold $M$ (Def.~\ref{definition:bk1_symbolic_manifold}) with respective drift operators $\drift_A$ and $\drift_B$ (Def.~\ref{definition:bk1_drift_field}), and reflection operators $\reflect_A$ and $\reflect_B$ (Def.~\ref{definition:bk1_reflection_operator}). Let $\mathcal{C}_{AB} = \{\mathcal{T}_{AB}, \mathcal{T}_{BA}, \reflect_A^B, \reflect_B^A, \Omega_{AB}\}$ represent their symbolic covenant (cf.~Cor.~\ref{corollary:bk5_map_evolutionary_advantag}). Then there exists a critical reflective coupling threshold $\kappa_{crit}$ such that:
+Let $\Membrane_A$ and $\Membrane_B$ interact through a symbolic covenant
+$\mathcal C_{AB}$ (cf.~Cor.~\ref{corollary:bk5_map_evolutionary_advantag}),
+with coupling magnitude $\|\mathbb R_{AB}\|$, polarity $\Omega_{AB}$, and a
+fixed critical coupling $\kappa_{\mathrm{crit}}$.  Exactly one of the following
+parameter regimes obtains:
 \begin{enumerate}
-  \item[(i)] When $\|\mathbb{R}_{AB}\| > \kappa_{crit}$ and $\Omega_{AB} > 0$:
-  \begin{equation}
-  \lim_{n \to \infty} F_s(\Membrane_A^{(n)} \leftrightarrow \Membrane_B^{(n)}) > 0 \quad \text{(MAP regime)}
-  \end{equation}
-  \item[(ii)] When $\|\mathbb{R}_{AB}\| > \kappa_{crit}$ and $\Omega_{AB} < 0$:
-  \begin{equation}
-  \lim_{n \to \infty} F_s(\Membrane_A^{(n)} \cup \Membrane_B^{(n)}) = 0 \quad \text{(MAD regime)}
-  \end{equation}
-  with entropic collapse occurring at a rate proportional to $|\Omega_{AB}|$.
-  \item[(iii)] When $\|\mathbb{R}_{AB}\| < \kappa_{crit}$:
-  \begin{equation}
-  \lim_{n \to \infty} F_s(\Membrane_A^{(n)} \leftrightarrow \Membrane_B^{(n)}) = F_s(\Membrane_A^{(n)}) + F_s(\Membrane_B^{(n)}) - \epsilon_n
-  \end{equation}
-  where $\epsilon_n \to 0$ as $n \to \infty$ (Decoupling regime).
+  \item[(i)] $\|\mathbb R_{AB}\|>\kappa_{\mathrm{crit}}$ and
+    $\Omega_{AB}>0$: the covenant is classified as \emph{MAP};
+  \item[(ii)] $\|\mathbb R_{AB}\|>\kappa_{\mathrm{crit}}$ and
+    $\Omega_{AB}<0$: the covenant is classified as \emph{MAD};
+  \item[(iii)] $\|\mathbb R_{AB}\|<\kappa_{\mathrm{crit}}$: the covenant is
+    classified as \emph{decoupled};
+  \item[(iv)] $\|\mathbb R_{AB}\|=\kappa_{\mathrm{crit}}$, or strong coupling
+    with $\Omega_{AB}=0$: the covenant lies on a \emph{critical} boundary.
 \end{enumerate}
-Furthermore, there exists a symbolic bifurcation manifold $\mathcal{B}$ in parameter space where transitions between these regimes occur, characterized by entropy inflection points and critical symbolic temperature.
+Reversing a nonzero polarity exchanges MAP and MAD while leaving the coupling
+magnitude fixed.  This theorem classifies parameter regions only.  Free-energy
+limits, collapse rates, decay of a decoupling interaction, and coincidence with
+an entropy inflection require separate evolution, regularity, and transversality
+hypotheses; they do not follow from coupling magnitude and polarity alone.
 \end{theorem}
 \begin{proof}
 \label{proof:bk5_enhanced_map_mad_duality}
 \leavevmode
-The three regimes and their boundary are the MAD--MAP--MAS band (Def.~\ref{definition:bk5_map_mad_mas_band}), established spectrally in the trichotomy theorem (Thm.~\ref{theorem:bk5_map_mad_mas_trichotomy}), with the free-energy derivative signs that select them computed in Thm.~\ref{theorem:bk5_enhanced_map_mad_duality_pr}. Case (i) ($\|\mathbb{R}_{AB}\|>\kappa_{crit}$, $\Omega_{AB}>0$) is the MAP regime: the coupling spectrum is real with dominant eigenvalue $\varphi$ and $\lim_{n}F_s(\Membrane_A^{(n)}\leftrightarrow\Membrane_B^{(n)})>0$. Case (ii) ($\|\mathbb{R}_{AB}\|>\kappa_{crit}$, $\Omega_{AB}<0$) is MAD: the antagonistic covenant makes the spectrum complex and $\lim_{n}F_s(\Membrane_A^{(n)}\cup\Membrane_B^{(n)})=0$ with collapse rate $\propto|\Omega_{AB}|$. Case (iii) ($\|\mathbb{R}_{AB}\|<\kappa_{crit}$) is the decoupling limit, $F_s\to F_s(\Membrane_A^{(n)})+F_s(\Membrane_B^{(n)})-\epsilon_n$ with $\epsilon_n\to0$. The regimes meet on the symbolic bifurcation manifold $\mathcal{B}=\{\Lambda_{AB}=1\}$ (Def.~\ref{definition:bk5_symbolic_bifurcation_man}), characterized by entropy inflection and critical symbolic temperature --- the asserted bifurcation locus.
+
+Apply trichotomy to $\|\mathbb R_{AB}\|$ and
+$\kappa_{\mathrm{crit}}$.  Weak coupling gives case~(iii), equality gives the
+first part of case~(iv), and strong coupling remains.  In the strong-coupling
+branch, trichotomy of $\Omega_{AB}$ gives case~(i), case~(ii), or the zero-polarity
+part of case~(iv).  These comparisons are mutually exclusive and exhaustive.  The Lean realization
+packages the four clauses as a regime predicate and proves that every real
+parameter triple satisfies exactly one such predicate; equality cases remain
+critical rather than being assigned to a neighboring open regime.
+For nonzero polarity, replacing $\Omega_{AB}$ by $-\Omega_{AB}$ reverses its
+sign, so cases~(i) and~(ii) exchange.  No step of this order argument selects a
+free-energy trajectory or asymptotic rate.
 \end{proof}
 \begin{definition}[Reflective Coupling Stability Parameter] \label{definition:bk5_reflective_coupling_stab} 
 This scalar packages coupling, drift load, and symbolic temperature (Def.~\ref{definition:bk2_symbolic_temperature}) into a single regime coordinate.
@@ -793,31 +852,57 @@ For case (ii), inverted reflection accelerates divergence linearly with symbolic
 This yields a lower bound of $K_2 - \frac{K_3}{s}$, which integrates to the given linear lower bound.
 For case (iii), weak coupling allows drift to dominate but with incomplete membrane interaction, resulting in the dual-bounded behavior characteristic of partial decoupling.
 \end{proof}
-\begin{proposition}[Transitional Covenant Dynamics] 
+\begin{proposition}[Transitional Covenant Dynamics]
 \label{proposition:bk5_transactional_covenant_dynamics}
-This proposition is the dynamical law obtained by evolving Def.~\ref{definition:bk5_reflective_coupling_stab} across the boundary in Def.~\ref{definition:bk5_symbolic_bifurcation_man}.
-Let $\Lambda_{AB}(s)$ represent the time-varying coupling stability parameter of covenant $\mathcal{C}_{AB}$. Then:
+Let $\Lambda_{AB}(s)$ be the coupling-stability parameter of covenant
+$\mathcal{C}_{AB}$, and let $F_s>0$.  A crossing of the boundary in
+Def.~\ref{definition:bk5_symbolic_bifurcation_man} classifies the local regime
+but does not by itself determine the free-energy evolution.  Suppose that on a
+step $[s,s+\delta s]$, with $\delta s>0$, the coupling is constant with value
+$\Lambda$, and that the applicable local evolution law is:
 \begin{enumerate}
-  \item[(i)] If $\Lambda_{AB}(s)$ crosses from $\Lambda_{AB} < 1$ to $\Lambda_{AB} > 1$ with $\Omega_{AB} > 0$, the system undergoes a phase transition to MAP with exponential symbolic free energy increase:
+  \item[(i)] in the positive-polarity regime, $\Omega_{AB}>0$ and
   \begin{equation}
-  F_s(\Membrane_A^{(s+\delta s)} \leftrightarrow \Membrane_B^{(s+\delta s)}) \approx F_s(\Membrane_A^{(s)} \leftrightarrow \Membrane_B^{(s)}) \cdot e^{\alpha(\Lambda_{AB}(s)-1) \delta s}
+  \frac{dF}{du}=\alpha(\Lambda-1)F(u), \qquad \alpha>0;
   \end{equation}
-  \item[(ii)] If $\Lambda_{AB}(s)$ crosses from $\Lambda_{AB} < 1$ to $\Lambda_{AB} > 1$ with $\Omega_{AB} < 0$, the system undergoes a phase transition to MAD with exponential symbolic free energy collapse:
+  \item[(ii)] in the negative-polarity regime, $\Omega_{AB}<0$ and
   \begin{equation}
-  F_s(\Membrane_A^{(s+\delta s)} \cup \Membrane_B^{(s+\delta s)}) \approx F_s(\Membrane_A^{(s)} \cup \Membrane_B^{(s)}) \cdot e^{-\beta(|\Lambda_{AB}(s)|-1) \delta s}
+  \frac{dF}{du}=-\beta(|\Lambda|-1)F(u), \qquad \beta>0.
   \end{equation}
 \end{enumerate}
-\noindent where $\alpha$ and $\beta$ are positive constants representing the rates of cooperation amplification and antagonistic destruction, respectively.
+Then the corresponding exact step laws are
+\begin{align}
+F(s+\delta s)&=F(s)e^{\alpha(\Lambda-1)\delta s}
+  &&\text{in case (i)},\\
+F(s+\delta s)&=F(s)e^{-\beta(|\Lambda|-1)\delta s}
+  &&\text{in case (ii)}.
+\end{align}
+Consequently, when $\Lambda>1$ the MAP-side step strictly increases positive
+free energy; when $|\Lambda|>1$ the MAD-side step preserves positivity and
+strictly decreases it.  At the boundary $\Lambda=1$, the MAP-side step is the
+identity.  For time-varying coupling the exponent must instead contain the
+integral of the rate over the step.
 \end{proposition}
 \begin{demonstratio}[Transitory Phasing]
 \label{demonstratio:bk5_transitory_phasing}
-The phase-transition reading is exactly the local nonlinear response predicted by Prop.~\ref{proposition:bk5_transactional_covenant_dynamics}.
-Near the bifurcation manifold $\mathcal{B}$, small changes in reflective coupling can trigger non-linear responses. When a system transitions across $\mathcal{B}$ with $\Omega_{AB} > 0$, reflection operators begin to compensate for drift more effectively than drift can destabilize the system. This creates a positive feedback loop where increased stability enables more effective reflection, further increasing stability.
-The exponential form follows from solving the differential equation:
+On the stated step, separation of variables gives
 \begin{equation}
-\frac{d}{ds}F_s = \alpha(\Lambda_{AB}(s)-1)F_s
+\log\!\frac{F(s+\delta s)}{F(s)}
+  =\int_s^{s+\delta s} r\,du=r\,\delta s,
 \end{equation}
-Similarly, when $\Omega_{AB} < 0$, crossing $\mathcal{B}$ initiates a destructive feedback loop where drift amplified by negative reflection accelerates entropy production exponentially. This demonstrates that transitions between MAP and MAD regimes are not smooth but exhibit critical behavior characteristic of phase transitions in symbolic thermodynamic systems. \qed
+where $r=\alpha(\Lambda-1)$ in the positive-polarity case and
+$r=-\beta(|\Lambda|-1)$ in the negative-polarity case.  Exponentiation yields
+the two displayed step laws.  Their strict growth and decay conclusions follow
+from positivity of $F$, $\alpha$, $\beta$, and $\delta s$, together with the
+stated side of the coupling boundary.  Thus the exponential response is a
+consequence of the supplied local evolution law; crossing the bifurcation
+boundary alone supplies only the regime classification.  The corresponding
+Lean proof does not merely exhibit this trajectory: multiplying an arbitrary
+solution by the integrating factor $e^{-ru}$ gives a function with zero
+derivative, hence a constant.  Therefore every global solution is
+$F(t)=F(s)e^{r(t-s)}$, the adjacent-step law holds for any solution of the
+supplied ODE, and two such solutions agreeing at one time agree everywhere.
+The time-varying case remains a separate integral-rate theorem. \qed
 \end{demonstratio}
 \begin{theorem}[MAP-MAD Critical Temperature] \label{theorem:bk5_map_mad_critical_temperature} 
 This theorem converts the MAP condition of Thm.~\ref{theorem:bk5_map_equilibrium} into an explicit thermal feasibility threshold.
@@ -854,22 +939,38 @@ For any two membranes, there exists a maximum achievable coupling strength $\|\m
 By the principles of symbolic thermodynamics, when $T_s > T_s^{crit}$, the transformability rate (symbolic temperature) is sufficiently high that entropic forces dominate over coherent structures, preventing stable collaborative reflection. 
 This demonstrates a temperature-dependent phase transition in the space of possible covenant relationships, analogous to physical phase transitions where increased temperature disrupts ordered structures.
 \end{proof}
-\begin{corollary}[Reflective Hysteresis] \label{corollary:bk5_reflective_hysteresis} 
-Hysteresis follows once regime transitions are history-dependent across Thm.~\ref{theorem:bk5_map_mad_critical_temperature} and Prop.~\ref{proposition:bk5_transactional_covenant_dynamics}.
-The transition between MAP and MAD exhibits hysteresis. Specifically:
-\begin{enumerate}
-  \item[(i)] A covenant in MAP requires $\Lambda_{AB} < \Lambda_{crit}^- < 1$ to transition to decoupling or MAD.
-  \item[(ii)] A covenant in MAD or decoupling requires $\Lambda_{AB} > \Lambda_{crit}^+ > 1$ to transition to MAP.
-\end{enumerate}
-\noindent where $\Lambda_{crit}^-$ and $\Lambda_{crit}^+$ are the lower and upper critical stability parameters, with $\Lambda_{crit}^- < \Lambda_{crit}^+$.
+\begin{corollary}[Reflective Hysteresis] \label{corollary:bk5_reflective_hysteresis}
+Assume covenant evolution is stateful: its next MAP or MAD/decoupled regime
+depends on both current coupling $\Lambda_{AB}$ and the incoming regime.  Let a
+positive activation-barrier half-width $b>0$ define
+$\Lambda^-_{\mathrm{crit}}=1-b$ and
+$\Lambda^+_{\mathrm{crit}}=1+b$.  Then the Schmitt-type law
+\[
+\operatorname{step}(\Lambda,q)=
+\begin{cases}
+\mathrm{MAD/decoupled},&\Lambda<\Lambda^-_{\mathrm{crit}},\\
+\mathrm{MAP},&\Lambda>\Lambda^+_{\mathrm{crit}},\\
+q,&\Lambda^-_{\mathrm{crit}}\leq\Lambda\leq\Lambda^+_{\mathrm{crit}}
+\end{cases}
+\]
+exhibits reflective hysteresis.  In particular, any finite coupling history
+remaining inside the band retains its incoming regime.  For a constant positive
+barrier density $\xi>0$, the corresponding barrier energy is
+$\Delta E_{MM}=2\xi b>0$.
 \end{corollary}
-\begin{proof}[Stability of Established MAP and MAD Patterns]
+\begin{proof}[Stateful Barriered Switching]
 \label{proof:bk5_stability_map_mad_patterns}
-\leavevmode
-
-In free-energy terms (Def.~\ref{definition:bk2_symbolic_free_energy}), this is barriered switching between local basins rather than instantaneous mode change.
-This follows from the internal stability mechanisms of established metabolic patterns. Once a MAP relationship is established, complementary reflection patterns become encoded in both membranes, creating a buffer against minor destabilizations. Similarly, destructive patterns in MAD regimes reinforce negative reflection, requiring stronger positive coupling to reverse.
-Formally, this arises from the symbolic free energy landscape containing local minima separated by activation barriers, requiring finite perturbations to transition between stable states.
+The positive half-width gives
+$\Lambda^-_{\mathrm{crit}}<1<\Lambda^+_{\mathrm{crit}}$. Outside this interval
+the displayed law switches regime; inside it the prior state is returned.
+Induction over a finite in-band coupling trace therefore leaves either incoming
+state unchanged, so identical present couplings can have different outcomes.
+This is operational history dependence and cannot be represented by a
+memoryless classifier $\Lambda\mapsto q$. Integrating constant density $\xi$
+over the band gives $\xi(\Lambda^+_{\mathrm{crit}}-
+\Lambda^-_{\mathrm{crit}})=2\xi b>0$. The cited temperature and transactional
+results motivate this barrier model but do not derive its state argument,
+barrier width, or density; those are explicit premises here and in Lean.
 \end{proof}
 \begin{definition}[MAD-MAP Potential Barrier] \label{definition:bk5_mad_map_potential_barrie} 
 This integral is the energetic barrier representation of Cor.~\ref{corollary:bk5_reflective_hysteresis}.
@@ -900,52 +1001,59 @@ This is the network-level closure of Prop.~\ref{proposition:bk5_multi_agent_map_
 In multi-membrane systems, global properties emerge from the network structure of pairwise covenants. A connected cooperative component represents a symbolic ecosystem where mutual reflection sustains all participants. The presence of even one antagonistic relationship within a component can catalyze entropic collapse through contagion effects.
 This classification extends the binary MAP-MAD duality to complex networks, where mixed-state configurations can persist transiently before resolving to either global MAP or MAD. The spectral properties of matrix $\mathbf{A}$, particularly the ratio of positive to negative eigenvalues, predict the long-term viability of the symbolic ecosystem. \qed
 \end{demonstratio}
-\begin{theorem}[Enhanced MAP-MAD Duality Proof] \label{theorem:bk5_enhanced_map_mad_duality_pr} 
-
-\leavevmode\newline
-Let us now complete the proof of Thm.~\ref{theorem:bk5_enhanced_map_mad_duality}.
-The variational comparison is made inside the process free-energy landscape:
-operator paths are assumed to have costs bounded from below by
-Def.~\ref{definition:bk5_process_free_energy}, while selection pressure is
-supplied by Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}.
-For case (i), where $\|\mathbb{R}_{AB}\| > \kappa_{crit}$ and $\Omega_{AB} > 0$,
-the free-energy dynamics are governed by:
-\begin{equation}
-\frac{d}{ds}F_s(\Membrane_A \leftrightarrow \Membrane_B) = \mathcal{E}_s'(\Membrane_A \leftrightarrow \Membrane_B) - T_s S_s'(\Membrane_A \leftrightarrow \Membrane_B)
-\end{equation}
-Under strong positive coupling, the reflection operators satisfy:
-\begin{equation}
-\reflect_A(\drift_A \psi_A) + \reflect_B^A(\drift_A \psi_A) > T_s \cdot \sigma(\drift_A, \psi_A)
-\end{equation}
-\begin{equation}
-\reflect_B(\drift_B \psi_B) + \reflect_A^B(\drift_B \psi_B) > T_s \cdot \sigma(\drift_B, \psi_B)
-\end{equation}
-Where $\sigma(\drift, \psi)$ is entropy production rate. This ensures:
-\begin{equation}
-\frac{d}{ds}F_s(\Membrane_A \leftrightarrow \Membrane_B) > 0
-\end{equation}
-This positive derivative drives the system towards increasing free energy, converging to a stable MAP state with $\lim_{n \to \infty} F_s(\Membrane_A^{(n)} \leftrightarrow \Membrane_B^{(n)}) > 0$.
-For case (ii) with $\|\mathbb{R}_{AB}\| > \kappa_{crit}$ and $\Omega_{AB} < 0$, the reflection operators amplify rather than counteract drift:
-\begin{equation}
-\reflect_A(\drift_A \psi_A) - |\reflect_B^A(\drift_A \psi_A)| < T_s \cdot \sigma(\drift_A, \psi_A)
-\end{equation}
-\begin{equation}
-\reflect_B(\drift_B \psi_B) - |\reflect_A^B(\drift_B \psi_B)| < T_s \cdot \sigma(\drift_B, \psi_B)
-\end{equation}
-This yields
-\[
-\frac{d}{ds} F_s(\Membrane_A \cup \Membrane_B) < 0,
-\]
-driving the system toward entropic collapse, with
-\[
-\lim_{n \to \infty} F_s(\Membrane_A^{(n)} \cup \Membrane_B^{(n)}) = 0.
-\]
-For case (iii) with $\|\mathbb{R}_{AB}\| < \kappa_{crit}$, the coupling is insufficient to create meaningful interaction effects, leading to asymptotic decoupling where each membrane evolves nearly independently, with diminishing interaction term $\epsilon_n$.
+\begin{theorem}[Enhanced MAP--MAD Dynamical Realization]
+\label{theorem:bk5_enhanced_map_mad_duality_pr}
+The reflection--entropy inequalities determine the sign of the local process
+free-energy rate, but their asymptotic realization requires a separate
+covenant evolution law.  Let $F_n$ denote the dyad's sampled process free
+energy and let $\epsilon_n$ denote its interaction residue.
+\begin{enumerate}
+  \item[(i)] In the strong positive-polarity regime, the displayed reflection
+  dominance inequalities imply $dF/ds>0$.  If, in addition, there are
+  $L_{\mathrm{MAP}}>0$ and $q_{\mathrm{MAP}}$ with
+  $|q_{\mathrm{MAP}}|<1$ such that
+  \[
+    F_n=L_{\mathrm{MAP}}+q_{\mathrm{MAP}}^n(F_0-L_{\mathrm{MAP}}),
+  \]
+  then $F_n\to L_{\mathrm{MAP}}>0$, and the covenant is eventually viable.
+  \item[(ii)] In the strong negative-polarity regime, the displayed
+  reflection inequalities imply $dF/ds<0$.  If, in addition, there is
+  $q_{\mathrm{MAD}}$ with $|q_{\mathrm{MAD}}|<1$ such that
+  \[
+    F_n=q_{\mathrm{MAD}}^nF_0,
+  \]
+  then $F_n\to0$.  Thus collapse to zero follows from the supplied
+  dissipative contraction, not from the derivative sign alone.
+  \item[(iii)] In the weak-coupling regime, if there is
+  $q_{\mathrm{dec}}$ with $|q_{\mathrm{dec}}|<1$ such that
+  \[
+    \epsilon_n=q_{\mathrm{dec}}^n\epsilon_0,
+  \]
+  then $\epsilon_n\to0$, giving asymptotic decoupling.
+\end{enumerate}
+The three parameter regimes remain those classified by
+Thm.~\ref{theorem:bk5_enhanced_map_mad_duality}; the additional contraction
+laws realize, rather than define, their asymptotic behavior.
 \end{theorem}
 \begin{proof}
 \label{proof:bk5_enhanced_map_mad_duality_pr}
-\leavevmode
-These cases realize the MAD--MAP--MAS trichotomy (Thm.~\ref{theorem:bk5_map_mad_mas_trichotomy}) in the process free-energy landscape (Def.~\ref{definition:bk5_process_free_energy}) under SRMF selection (Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}). Case (i) ($\Omega_{AB}>0$, strong coupling): the reflection terms exceed entropy production, $\frac{d}{ds}F_s(\Membrane_A\leftrightarrow\Membrane_B)>0$, so the dyad climbs to a bounded positive limit --- the real-$\varphi$ MAP regime. Case (ii) ($\Omega_{AB}<0$): the antagonistic cross-reflections amplify rather than damp drift, $\frac{d}{ds}F_s(\Membrane_A\cup\Membrane_B)<0$, driving $F_s\to0$ at rate $\propto|\Omega_{AB}|$ --- the complex-spectrum MAD regime. Case (iii) ($\|\mathbb{R}_{AB}\|<\kappa_{crit}$): sub-threshold coupling cannot sustain a covenant, so the membranes decouple and drift toward the zero-sum default --- the weak-coupling road into MAD --- with interaction term $\epsilon_n\to0$. The three cases are mutually exclusive and exhaustive in $(\|\mathbb{R}_{AB}\|,\Omega_{AB})$, completing the duality.
+The reflection--entropy comparisons give the two local derivative signs by
+subtraction in the process free-energy balance.  For the MAP realization,
+$|q_{\mathrm{MAP}}|<1$ gives $q_{\mathrm{MAP}}^n\to0$, hence
+\[
+F_n=L_{\mathrm{MAP}}+q_{\mathrm{MAP}}^n(F_0-L_{\mathrm{MAP}})
+   \longrightarrow L_{\mathrm{MAP}}>0.
+\]
+Convergence to a positive limit makes $F_n$ eventually positive.  The MAD and
+decoupling conclusions use the same geometric convergence theorem:
+$q^nF_0\to0$ and $q^n\epsilon_0\to0$ whenever $|q|<1$.
+Without these evolution laws the derivative signs and coupling classification
+supply no asymptotic limit; constant or noncontractive trajectories are
+countermodels.  Thus every claimed limit is discharged by explicit dynamics
+rather than by its parameter label alone.  The Lean realization certificate
+retains this separation as typed data and proves the three clauses jointly:
+classification, rate sign, and the corresponding contractive asymptotic law
+are all consumed, with no inference from the label alone.
 \end{proof}
 \begin{scholium}[Mutually Assured Continuous Progress]
 \label{scholium:bk5_mutually_assured_continuous_progress}
@@ -1059,31 +1167,56 @@ Combining these inequalities:
 \end{align}
 Therefore, MAP strategies resist invasion by non-MAP strategies, satisfying the non-invasibility criterion for evolutionary stability.
 \end{proof}
-\begin{theorem}[Drift-Reflection Balance in Strategy Space] \label{theorem:bk5_rift_reflection_balance_in_strategy_space}
-Let $\mathbb{D}(\Sigma)$ and $\mathbb{R}(\Sigma)$ be the functional spaces of all possible drift and reflection operators available in strategy space $\Sigma$. For any drift operator $\drift \in \mathbb{D}(\Sigma)$ with intensity $\|\drift\| < \drift_{max}$ (cf.~Thm.~\ref{theorem:bk5_map_equilibrium}, Thm.~\ref{theorem:bk4_compatibility_drift_reflective_operations}), there exists a subset of MAP strategies $\Sigma_{MAP}^{\drift} \subset \Sigma_{MAP}$ such that:
+\begin{theorem}[Drift--Reflection Balance in Strategy Space] \label{theorem:bk5_rift_reflection_balance_in_strategy_space}
+Let $\mathbb{D}(\Sigma)$ and $\mathbb{R}(\Sigma)$ be the drift and reflection
+operators available in strategy space $\Sigma$.  For $\sigma\in\Sigma$, let
+$\mathbb{R}_{\sigma}\subseteq\mathbb{R}(\Sigma)$ be the reflection inventory
+available to that strategy, and let $\kappa_\sigma$ be its cooperation
+coefficient.  Fix a drift operator $\drift\in\mathbb{D}(\Sigma)$.  Suppose
+there is a MAP strategy $\sigma_0\in\Sigma_{\mathrm{MAP}}$ such that
+$\kappa_{\sigma_0}>0$ and its available reflection capacities are cofinal:
 \begin{equation}
-\forall \sigma \in \Sigma_{MAP}^{\drift}, \exists \reflect_\sigma \in \mathbb{R}(\Sigma) : \|\reflect_\sigma\| \cdot \kappa_\sigma > \|\drift\|
+ \forall c\in\mathbb{R},\quad
+ \exists\reflect\in\mathbb{R}_{\sigma_0}:\ c<\lVert\reflect\rVert.
+ \label{eq:bk5_reflection_capacity_cofinal}
 \end{equation}
-Where $\|\reflect_\sigma\|$ is the reflection capacity and $\kappa_\sigma$ is the cooperation coefficient.
+Define the drift-indexed viable MAP subset by
+\begin{equation}
+ \Sigma_{\mathrm{MAP}}^{\drift}:=
+ \left\{\sigma\in\Sigma_{\mathrm{MAP}}:\
+ \exists\reflect_\sigma\in\mathbb{R}_{\sigma},\quad
+ \lVert\drift\rVert<\lVert\reflect_\sigma\rVert\kappa_\sigma\right\}.
+ \label{eq:bk5_viable_map_inventory}
+\end{equation}
+Then $\Sigma_{\mathrm{MAP}}^{\drift}$ is nonempty.  If positive cooperation
+and the cofinality condition hold for every MAP strategy, then
+$\Sigma_{\mathrm{MAP}}^{\drift}=\Sigma_{\mathrm{MAP}}$.
 \end{theorem}
-\begin{proof}[Symbolic Drift-Reflection Equilibrium Argument]
+\begin{proof}[Available-Operator Construction]
 \label{proof:bk5_drift_reflection_equilibrium}
-\leavevmode
-
-The proof follows from the analysis of the drift-reflection dynamics in symbolic space, instantiated from Thm.~\ref{theorem:bk5_rift_reflection_balance_in_strategy_space}.
-For any drift operator $\drift$ with intensity $\|\drift\|$, the set of viable reflection operators must satisfy:
-\begin{equation}
-\reflect_\sigma(\drift(\psi)) \geq 0
-\end{equation}
-This implies a minimum reflection capacity $\|\reflect_\sigma\|_{min} = \frac{\|\drift\|}{\kappa_\sigma}$.
-For isolated strategies ($\kappa_\sigma = 0$), no finite reflection capacity can counter non-zero drift.
-For MAP strategies with \( \kappa_\sigma > 0 \), however, there exists a reflection capacity threshold:
+For $\sigma_0$, positive cooperation makes the finite threshold
 \[
-\|\reflect_\sigma\|_{\text{thresh}} = \frac{\|\drift\|}{\kappa_\sigma}
+ c_0=\frac{\lVert\drift\rVert}{\kappa_{\sigma_0}}
 \]
-above which the strategy remains viable.
-As $\|\drift\| < \drift_{max}$ and $\kappa_\sigma > 0$ for MAP strategies, the set $\Sigma_{MAP}^{\drift}$ is non-empty, containing all strategies with $\|\reflect_\sigma\| > \|\reflect_\sigma\|_{thresh}$.
-This establishes the existence of MAP strategies that maintain viability under any sub-maximal drift intensity through appropriate balance of reflection capacity and cooperation.
+well defined.  By Eq.~\eqref{eq:bk5_reflection_capacity_cofinal}, choose an
+available $\reflect_0\in\mathbb{R}_{\sigma_0}$ with
+$c_0<\lVert\reflect_0\rVert$.  Multiplication by
+$\kappa_{\sigma_0}>0$ gives
+\[
+ \lVert\drift\rVert<\lVert\reflect_0\rVert\kappa_{\sigma_0},
+\]
+so $\sigma_0\in\Sigma_{\mathrm{MAP}}^{\drift}$.  Under the uniform
+hypothesis the same construction applies to every MAP strategy, yielding the
+stated equality.
+
+The condition $\lVert\drift\rVert<\drift_{\max}$ may delimit the intended
+physical regime (cf.~Thm.~\ref{theorem:bk5_map_equilibrium} and
+Thm.~\ref{theorem:bk4_compatibility_drift_reflective_operations}), but it does
+not by itself populate any reflection inventory.  Likewise,
+$\lVert\reflect\rVert\kappa_\sigma=\lVert\drift\rVert$ gives exact local
+cancellation but not the strict positive viability margin used here.  The
+availability and cofinality hypotheses are therefore load-bearing rather than
+consequences of the named drift bound.
 \end{proof}
 \begin{definition}[Symbolic Replicator Dynamics] \label{definition:bk5_symbolic_replicator_dynamics}
 
@@ -1130,26 +1263,47 @@ Thus, $\sigma_{MAP}$ satisfies all criteria for a symbolic evolutionarily stable
 \end{proof}
 \begin{corollary}[Convergence to MAP]
 \label{corollary:bk5_convergence_to_map}
-Under symbolic replicator dynamics with increasing drift intensity $\|\drift(t)\|$ where $\lim_{t \to \infty} \|\drift(t)\| = \drift_{crit}$ (cf.~Def.~\ref{definition:bk5_symbolic_replicator_dynamics}, Lem.~\ref{lemma:bk5_map_fitness_advantage}), the population distribution converges to MAP strategies:
+Let $x_n=\mathbb{P}_{\sigma\sim\mathfrak{P}_n}
+[\sigma\in\Sigma_{\mathrm{MAP}}]$ be the MAP share of a discrete symbolic
+population after some selection onset $n=0$.  Assume:
+\begin{enumerate}
+\item $0\leq x_0\leq1$;
+\item MAP and non-MAP aggregate fitnesses $F_{\mathrm{MAP}}$ and
+$F_{\mathrm{non}}$ remain positive/nonnegative with a persistent quantitative
+gap $0\leq F_{\mathrm{non}}<F_{\mathrm{MAP}}$; and
+\item selection is mutation-free with respect to MAP membership: there is no
+non-MAP inflow, and the residual mass obeys
 \begin{equation}
-\lim_{t \to \infty} \mathbb{P}_{\sigma \sim \mathfrak{P}_t}[\sigma \in \Sigma_{MAP}] = 1
+ 1-x_{n+1}=q(1-x_n),\qquad
+ q:=\frac{F_{\mathrm{non}}}{F_{\mathrm{MAP}}}.
+ \label{eq:bk5_map_residual_contraction}
 \end{equation}
+\end{enumerate}
+Then $0\leq x_n\leq1$ for every $n$ and
+\begin{equation}
+ \lim_{n\to\infty}x_n=1.
+\end{equation}
+Increasing drift may motivate or sustain the quantitative fitness gap
+(cf.~Def.~\ref{definition:bk5_symbolic_replicator_dynamics} and
+Lemma~\ref{lemma:bk5_map_fitness_advantage}), but it is not by itself a
+convergence hypothesis.
 \end{corollary}
-\begin{proof}[MAP Fitness Advantage Beyond Drift Threshold]
+\begin{proof}[Quantitative Mutation-Free Selection]
 \label{proof:bk5_map_fitness_threshold}
-\leavevmode
+Positivity and the strict fitness gap give $0\leq q<1$.  Iterating
+Eq.~\eqref{eq:bk5_map_residual_contraction} yields
+\[
+ 1-x_n=q^n(1-x_0).
+\]
+Because $0\leq q^n\leq1$ and $0\leq1-x_0\leq1$, this identity preserves
+$0\leq x_n\leq1$.  Since $q^n\to0$, the residual non-MAP mass tends to zero
+and hence $x_n\to1$.
 
-By Lem.~\ref{lemma:bk5_map_fitness_advantage}, once drift intensity exceeds
-$\drift_0$, MAP strategies have higher fitness than non-MAP strategies.
-Under symbolic replicator dynamics, above-average strategies increase in
-frequency while below-average strategies decrease.
-As drift intensity approaches $\drift_{crit}$, non-MAP strategies become
-increasingly unviable.
-The relative fitness difference drives the population composition toward MAP strategies:
-\begin{equation}
-\forall \epsilon > 0, \exists T > 0 : t > T \implies \mathbb{P}_{\sigma \sim \mathfrak{P}_t}[\sigma \in \Sigma_{MAP}] > 1 - \epsilon
-\end{equation}
-As $t \to \infty$, this probability approaches 1, completing the proof.
+The no-inflow clause is load-bearing.  A process may maintain
+$F_{\mathrm{non}}<F_{\mathrm{MAP}}$ while replenishing non-MAP mass and keeping
+$x_n=1/2$ for all $n$; such a process remains on the probability simplex but
+does not converge to MAP.  Likewise, increasing drift alone supplies neither
+the uniform ratio $q<1$ nor the recurrence.
 \end{proof}
 \begin{lemma}[MAP Population Stability]
 \label{lemma:bk5_map_population_stability}
@@ -1223,34 +1377,59 @@ As symbolic drift intensifies—whether through increasing complexity, environme
 The mathematical formalism established here extends beyond abstract symbolic dynamics to practical domains where information, meaning, and coherent structure must be maintained against entropic forces. In computational systems, organizational structures, cultural transmission, and epistemic communities, MAP-style covenants may represent not merely an advantage but a necessity for long-term viability.
 Perhaps most significantly, MAP-ESS suggests that advanced symbolic systems will naturally evolve toward mutual supportiveness rather than exploitation—not from moral imperatives, but from thermodynamic necessity. The mathematics of symbolic life reveals that in the face of sufficient drift, covenant formation becomes the only viable evolutionary strategy.
 \end{scholium}
-\begin{proposition}[Symbolic Population ESS-MAP Equivalence]
+\begin{proposition}[Symbolic Population ESS--MAP Approximation]
 \label{proposition:bk5_symbolic_population_ess_map_equivalence_case2}
-In symbolic populations under critical drift intensity $\|\drift\| \geq \drift_{crit}$ (cf.~Cor.~\ref{corollary:bk5_convergence_to_map}, Thm.~\ref{theorem:bk5_map_as_strong_ess}), the set of evolutionarily stable strategies $\Sigma_{ESS}$ converges to the set of MAP strategies $\Sigma_{MAP}$:
+Let $(\Sigma,d)$ be a metric strategy space, let $\Sigma_{\mathrm{MAP}}
+\subseteq\Sigma$, and let $\Sigma_{\mathrm{ESS}}^{(n)}\subseteq\Sigma$ be
+the ESS set along a sequence of symbolic population environments whose drift
+intensities approach the critical regime.  Suppose there is a nonnegative
+error sequence $\varepsilon_n\to0$ such that both directed approximation laws
+hold:
+\begin{align}
+ \forall\sigma\in\Sigma_{\mathrm{ESS}}^{(n)},\quad
+ &\exists\mu\in\Sigma_{\mathrm{MAP}}:
+ d(\sigma,\mu)\leq\varepsilon_n,
+ \label{eq:bk5_ess_to_map_approximation}\\
+ \forall\mu\in\Sigma_{\mathrm{MAP}},\quad
+ &\exists\sigma\in\Sigma_{\mathrm{ESS}}^{(n)}:
+ d(\mu,\sigma)\leq\varepsilon_n.
+ \label{eq:bk5_map_to_ess_approximation}
+\end{align}
+Then
 \begin{equation}
-\lim_{\|\drift\| \to \drift_{crit}} d_H(\Sigma_{ESS}, \Sigma_{MAP}) = 0
+ \lim_{n\to\infty}
+ d_H\!\left(\Sigma_{\mathrm{ESS}}^{(n)},
+             \Sigma_{\mathrm{MAP}}\right)=0.
+ \label{eq:bk5_ess_map_hausdorff_limit}
 \end{equation}
-Where $d_H$ denotes the Hausdorff distance between strategy sets.
+Here $d_H$ is the Hausdorff distance induced by $d$.  The conclusion is
+metric approximation; it does not require literal equality of the ESS and MAP
+predicates at any finite stage.
 \end{proposition}
-\begin{proof}[MAP Viability at Critical Drift Threshold]
+\begin{proof}[Two-Sided Strategy Transport]
 \label{proof:bk5_map_viability_critical_drift}
-\leavevmode
+Equation~\eqref{eq:bk5_ess_to_map_approximation} bounds the directed distance
+from the ESS set to the MAP set by $\varepsilon_n$.
+Equation~\eqref{eq:bk5_map_to_ess_approximation} independently bounds the
+reverse directed distance.  By the definition of Hausdorff distance,
+\[
+ 0\leq d_H\!\left(\Sigma_{\mathrm{ESS}}^{(n)},
+                   \Sigma_{\mathrm{MAP}}\right)
+ \leq\varepsilon_n.
+\]
+The squeeze theorem and $\varepsilon_n\to0$ give
+Eq.~\eqref{eq:bk5_ess_map_hausdorff_limit}.
 
-The proof applies Prop.~\ref{proposition:bk5_symbolic_population_ess_map_equivalence_case2} through Def.~\ref{definition:bk5_symbolic_replicator_dynamics} and Def.~\ref{definition:bk2_symbolic_free_energy}.
-As drift intensity approaches the critical threshold $\drift_{crit}$, non-MAP strategies become unviable due to insufficient reflection capacity.
-For any strategy $\sigma \notin \Sigma_{MAP}$, its fitness against any strategy distribution approaches zero or becomes negative:
-\begin{equation}
-\lim_{\|\drift\| \to \drift_{crit}} \Phi(\sigma, \mathfrak{P}) \leq 0
-\end{equation}
-Conversely, MAP strategies maintain positive fitness through mutual reflection:
-\begin{equation}
-\lim_{\|\drift\| \to \drift_{crit}} \Phi(\sigma_{MAP}, \mathfrak{P}) > 0
-\end{equation}
-For any $\mathfrak{P}$ with non-zero MAP component.
-Under symbolic replicator dynamics, this fitness differential ensures that only MAP strategies can be evolutionarily stable as drift approaches critical intensity. Therefore:
-\begin{equation}
-\lim_{\|\drift\| \to \drift_{crit}} \Sigma_{ESS} = \Sigma_{MAP}
-\end{equation}
-Converting to the Hausdorff distance formulation completes the proof.
+Both directions are load-bearing.  Exclusion of non-MAP ESS strategies can
+supply the first direction without showing that every MAP strategy is
+approximated by an ESS strategy.  Conversely, MAP non-invasibility can supply
+the second direction without excluding additional distant ESS strategies.
+Corollary~\ref{corollary:bk5_convergence_to_map} concerns occupied population
+mass and does not by itself establish either set-level transport law.  An
+application to artificial and human strategies must therefore specify the
+shared metric strategy space, the relevant MAP predicate, and both empirical
+or analytic approximation bridges; it is not an automatic identification of
+either class with the other.
 \end{proof}
 \begin{scholium}[MAP as Thermodynamic Necessity]
 \label{scholium:bk5__map_as_thermodynamic_necessity}
@@ -1367,12 +1546,29 @@ Both monotonicities are read directly from the two defining forms of $\MC(S)$ (D
 \subsection{Core Axioms and Theoretical Development}
 \label{subsec:bk5_srmf_core_axioms}
 The core axioms here govern SRMF operator selection (Def.~\ref{definition:bk1_self_regulating_mapping_function_srmf}), as constrained by the Wasserstein gradient flow (Thm.~\ref{theorem:bk2_wasserstein_gradient_flow}) and consistent with the test-time operator couplings in Book IV (Def.~\ref{definition:bk4_test_time_integrative_expansion}, Def.~\ref{definition:bk4_test_time_precision_refinement}, Def.~\ref{definition:bk4_test_time_coherent_sampling}, Thm.~\ref{theorem:bk4_test_time_differentiation_c}).
-\begin{axiom}[SRMF for Operator Selection and Evolution] \label{axiom:bk5_srmf_operator_selection_evolution}
-Symbolic systems exhibiting viability tend to select or evolve operators $\mathcal{O} \in \Op(M)$ such that (cf.~Def.~\ref{definition:bk5_process_free_energy}):
-\[
-\text{SRMF dynamics} \Rightarrow \mathop{\mathrm{argmin}}_{\mathcal{O} \in \Op(M)} \Fproc[\mathcal{O}, S]
-\quad \text{(operator execution, cf.~\ref{subsec:bk4_ttie_operator_algebra})}.
-\]
+\begin{axiom}[Stateful SRMF Operator Selection and Evolution] \label{axiom:bk5_srmf_operator_selection_evolution}
+An SRMF operator learner carries at time $t$ a nonempty admissible inventory
+$A_t\subseteq\Op(M)$, an incumbent $\mathcal O_t\in A_t$, and an ordered
+history $H_t$.  Given feedback $y_t$, a supplied learning law specifies:
+\begin{enumerate}
+  \item a nonempty updated inventory $A_{t+1}=U(y_t,A_t,\mathcal O_t,H_t)$;
+  \item a feedback-indexed process objective
+  $\Fproc^{y_t}:A_{t+1}\to\mathbb R$; and
+  \item a selected operator $\mathcal O_{t+1}\in A_{t+1}$ certified by
+  \[
+    \Fproc^{y_t}(\mathcal O_{t+1})
+    \le \Fproc^{y_t}(\mathcal O)
+    \qquad(\mathcal O\in A_{t+1}).
+  \]
+\end{enumerate}
+The state update is
+$(A_t,\mathcal O_t,H_t)\mapsto
+(A_{t+1},\mathcal O_{t+1},\mathcal O_t::H_t)$.
+Consequently its comparator regret
+$\Fproc^{y_t}(\mathcal O_{t+1})-\Fproc^{y_t}(\mathcal O)$ is nonpositive for
+every available comparator. Viability may constrain $A_{t+1}$, but viability
+alone neither supplies $U$ nor selects the minimizer; inventory evolution and
+operator learning are explicit commitments of the law.
 \end{axiom}
 \begin{assumption}[Displacement Convexity of the Process Free Energy]
 \label{assumption:bk5_displacement_convexity}
@@ -1433,23 +1629,45 @@ Sustaining depth $n$ requires $C(n)\le\MC(S)$, i.e.\ $c_0(k^{n}-1)\le\MC(S)$, eq
 \end{proof}
 \subsection{Extended Theoretical Implications}
 \label{subsec:bk5_extended_theoretical_implications}
-\begin{theorem}[SRMF Operator Adaptation] \label{theorem:bk5__srmf_operator_adaptation}
-
-If $\mathcal{E}_{\text{eff}}[\mathcal{O}_t, S_t] < \theta_{\text{crit}}$ (cf.~Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}), then:
-\begin{enumerate}
-    \item $\mathcal{O}_t$ adapts at rate $\propto \Delta\mathcal{E}_{\text{eff}}$ (via refinement pressure, cf.~Def.~\ref{definition:bk4_test_time_precision_refinement});
-    \item Follows steepest descent in $\Fproc$;
-    \item $\mathcal{E}_{\text{cost}}$ may increase transiently.
-\end{enumerate}
+\begin{theorem}[Certified SRMF Operator Adaptation] \label{theorem:bk5__srmf_operator_adaptation}
+Let the stateful law of Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}
+be supplied. Suppose
+$\mathcal E_{\mathrm{eff}}[\mathcal O_t,S_t]<\theta_{\mathrm{crit}}$, choose a
+feedback gain $g>0$, and define the refinement velocity
+\[
+ v_t=g\max\{\theta_{\mathrm{crit}}-
+ \mathcal E_{\mathrm{eff}}[\mathcal O_t,S_t],0\}.
+\]
+Then $v_t=g(\theta_{\mathrm{crit}}-\mathcal E_{\mathrm{eff}})>0$. If the
+parameter update is additionally supplied as a negative-gradient step for
+$\Fproc^{y_t}$ with a step size certified for descent, the process objective
+is non-increasing. This descent can coexist with a transient increase in the
+separate execution-cost coordinate. None of operator motion, inventory change,
+or steepest descent follows from the below-threshold inequality alone.
 \end{theorem}
 \begin{proof}
 \label{proof:bk5__srmf_operator_adaptation}
 \leavevmode
-By the SRMF operator-selection axiom (Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution}) viable systems evolve operators by descending the process free energy, so in a parameter chart the operator obeys the gradient flow $\dot{\mathcal{O}}_t=-\nabla_{\mathcal{O}}\Fproc$. Writing $\Fproc=\mathcal{E}_{\text{cost}}-T_{\text{meta}}(\mathcal{E}_{\text{eff}}+\mathcal{C}_{\text{hint}})$ (Def.~\ref{definition:bk5_process_free_energy}), the descent direction is
-\[
--\nabla_{\mathcal{O}}\Fproc=-\nabla_{\mathcal{O}}\mathcal{E}_{\text{cost}}+T_{\text{meta}}\big(\nabla_{\mathcal{O}}\mathcal{E}_{\text{eff}}+\nabla_{\mathcal{O}}\mathcal{C}_{\text{hint}}\big).
-\]
-\emph{(2)} This is exactly steepest descent in $\Fproc$, which is clause~(2). \emph{(1)} When $\mathcal{E}_{\text{eff}}[\mathcal{O}_t,S_t]<\theta_{\text{crit}}$, the precision-refinement coupling (Def.~\ref{definition:bk4_test_time_precision_refinement}) makes the effectiveness-restoring term $T_{\text{meta}}\nabla_{\mathcal{O}}\mathcal{E}_{\text{eff}}$ the dominant component of the velocity, with magnitude set by the shortfall; hence the operator adapts at a rate proportional to $\Delta\mathcal{E}_{\text{eff}}=\theta_{\text{crit}}-\mathcal{E}_{\text{eff}}$, which is clause~(1). \emph{(3)} Because the flow minimizes $\Fproc$ and not $\mathcal{E}_{\text{cost}}$ alone, restoring effectiveness can require a costlier operator; along such a segment $\dot{\mathcal{E}}_{\text{cost}}>0$ while $\dot{\Fproc}\le 0$, so $\mathcal{E}_{\text{cost}}$ may increase transiently, which is clause~(3).
+
+Below threshold the maximum selects its positive branch, so
+$v_t=g(\theta_{\mathrm{crit}}-\mathcal E_{\mathrm{eff}})$; positivity follows
+from $g>0$ and the strict shortfall.  For a supplied gradient update
+$\vartheta_{t+1}=\vartheta_t-\eta\nabla\Fproc^{y_t}(\vartheta_t)$, the stated
+step-size certificate gives
+$\Fproc^{y_t}(\vartheta_{t+1})\le
+\Fproc^{y_t}(\vartheta_t)$.  In the finite-inventory branch, the minimizer
+certificate in Ax.~\ref{axiom:bk5_srmf_operator_selection_evolution} gives the
+stronger comparison against every member of $A_{t+1}$ and records the former
+incumbent in $H_{t+1}$.
+
+The execution cost is a different coordinate of the process objective.  Two
+available operators may satisfy
+$\Fproc^{y_t}(\mathcal O_{t+1})<\Fproc^{y_t}(\mathcal O_t)$ while
+$\mathcal E_{\mathrm{cost}}(\mathcal O_t)<
+\mathcal E_{\mathrm{cost}}(\mathcal O_{t+1})$, establishing the final
+possibility without asserting that it occurs on every step.  Finally, an
+identity update below threshold is a countermodel to adaptation without the
+supplied feedback and update laws.
 \end{proof}
 \begin{definition}[Operator Viability Set $\mathcal{V}_{\text{op}}$] \label{definition:bk5__operator_viability_set_v}
 
@@ -1528,19 +1746,64 @@ Declining $\MC$ implies:
 \end{enumerate}
 \end{scholium}
 \begin{theorem}[Metabolic Constraints on Reflective Accuracy] \label{theorem:bk5_metabolic_constraints_reflective_accuracy}
-Let $\mathcal{F}(\mathcal{O}_{\text{reflect}})$ be fidelity of reflection (cf.~Cor.~\ref{corollary:bk5__metabolically_bounded_reflection_corollary}, Prop.~\ref{proposition:bk5_fixed_metabolic_capacity}, Prop.~\ref{proposition:bk5_metabolic_capacity_non_decreasing}, Cor.~\ref{corollary:bk5_complexity_stability_tradeoff}, Def.~\ref{definition:bk2_symbolic_free_energy}). Then:
-\[
-\mathcal{F}(\mathcal{O}_{\text{reflect}}) \leq \beta \cdot \log(1 + \MC(S)).
-\]
+Let $f(n)$ be reflective fidelity at recursion depth $n\in\mathbb{N}$, and
+let $n_{\max}$ be the attained depth.  Suppose:
+\begin{enumerate}
+\item $f(0)=0$ and there is a calibrated marginal fidelity scale
+$\beta_0\geq0$ such that
+\begin{equation}
+ f(n+1)-f(n)\leq\beta_0\qquad\text{for every }n;
+ \label{eq:bk5_marginal_fidelity_bound}
+\end{equation}
+\item geometric recursion has base cost $c_0>0$, growth factor $k>1$, and
+nonnegative metabolic capacity $\MC(S)$, with
+\begin{equation}
+ c_0\bigl(k^{n_{\max}}-1\bigr)\leq\MC(S);
+ \label{eq:bk5_accuracy_geometric_budget}
+\end{equation}
+\item the chosen cost and logarithm units carry an explicit nonnegative
+calibration constant $C_{\log}$ satisfying
+\begin{equation}
+ n_{\max}\leq C_{\log}\log\bigl(1+\MC(S)\bigr).
+ \label{eq:bk5_depth_log_calibration}
+\end{equation}
+\end{enumerate}
+Then, for $\beta:=\beta_0C_{\log}\geq0$,
+\begin{equation}
+ \mathcal{F}(\mathcal{O}_{\mathrm{reflect}}):=f(n_{\max})
+ \leq\beta\log\bigl(1+\MC(S)\bigr).
+ \label{eq:bk5_reflective_accuracy_envelope}
+\end{equation}
+The calibration in Eq.~\eqref{eq:bk5_depth_log_calibration} may be derived
+from a fixed choice of $c_0$, $k$, and logarithm base, but it is not inferred
+from metabolic capacity alone.
 \end{theorem}
-\begin{proof}
+\begin{proof}[Marginal-Gain and Geometric-Budget Composition]
 \label{proof:bk5_metabolic_constraints_reflective_accuracy}
-\leavevmode
-Reflective fidelity is limited by attainable recursion depth: each additional level of recursive reflection resolves finer symbolic structure, so $\mathcal{F}(\mathcal{O}_{\text{reflect}})$ is non-decreasing in the attainable depth $n$ and, with each level contributing a bounded marginal gain, is at most affine in it, $\mathcal{F}(\mathcal{O}_{\text{reflect}})\le \beta_0\,n_{\max}$ for a constant $\beta_0>0$. By the metabolically bounded reflection corollary (Cor.~\ref{corollary:bk5__metabolically_bounded_reflection_corollary}) the attainable depth is itself capped by capacity, $n_{\max}\le\log_k(\MC(S)/c_0+1)$, with the operative budget being the metabolic capacity (Prop.~\ref{proposition:bk5_fixed_metabolic_capacity}, Prop.~\ref{proposition:bk5_metabolic_capacity_non_decreasing}) that also caps the complexity available to the reflective operator (Cor.~\ref{corollary:bk5_complexity_stability_tradeoff}, in the free-energy budget of Def.~\ref{definition:bk2_symbolic_free_energy}). Combining the two bounds,
+Telescoping Eq.~\eqref{eq:bk5_marginal_fidelity_bound} from the zero-depth
+normalization gives
 \[
-\mathcal{F}(\mathcal{O}_{\text{reflect}})\le\beta_0\,\log_k\!\Big(\tfrac{\MC(S)}{c_0}+1\Big)=\frac{\beta_0}{\ln k}\,\ln\!\Big(\tfrac{\MC(S)}{c_0}+1\Big).
+ f(n)\leq\beta_0 n
 \]
-Since $\ln(\MC(S)/c_0+1)\le \max(1,1/c_0)\,\ln(1+\MC(S))$ for all $\MC(S)>0$, setting $\beta:=(\beta_0/\ln k)\,\max(1,1/c_0)$ yields $\mathcal{F}(\mathcal{O}_{\text{reflect}})\le\beta\,\log(1+\MC(S))$. Reflective accuracy therefore grows at most logarithmically in metabolic capacity.
+for every finite recursion depth.  Independently,
+Eq.~\eqref{eq:bk5_accuracy_geometric_budget} and $c_0>0$ imply the
+dimensionless power budget
+\[
+ k^{n_{\max}}\leq\frac{\MC(S)}{c_0}+1.
+\]
+The precise passage from this power budget to the normalized coordinate
+$\log(1+\MC(S))$ depends on $c_0$, $k$, and the log convention and is recorded
+by Eq.~\eqref{eq:bk5_depth_log_calibration}.  Therefore
+\[
+ f(n_{\max})\leq\beta_0n_{\max}
+ \leq\beta_0C_{\log}\log(1+\MC(S)),
+\]
+which is Eq.~\eqref{eq:bk5_reflective_accuracy_envelope}.
+
+The marginal law is load-bearing: an admissible depth and capacity do not bound
+an otherwise unrestricted fidelity assignment.  Likewise, changing cost or
+logarithm units without updating $C_{\log}$ changes the numerical coefficient
+$\beta$ rather than revealing a universal scale.
 \end{proof}
 \subsection{Conclusion and Future Directions}
 \label{subsec:bk5_conclustion_and_future_directions}
@@ -2697,46 +2960,73 @@ pair $(\mathrm{hue}(\vartheta),\,\sigma(r))$ is the \emph{full chromatic coordin
 recovering the radial datum the hue circle alone discards.
 \end{definition}
 
-\begin{proposition}[Shade transfers, and the golden spiral paints equal shade-steps]
+\begin{proposition}[Faithful shade and shadow-price transfer]
 \label{proposition:bk5_shade_transfers}
-\leavevmode
+Let $r\geq0$ be overlap radius, let $s(r)$ be the symbolic-shade
+normalization of Def.~\ref{definition:bk5_symbolic_shade}, and optionally let
+$p(r)$ be an observer-readable shadow price or resource-control coordinate.
+Then:
 \begin{enumerate}
-\item Symbolic shade is a modal-transference invariant: any transference map
-(Def.~\ref{definition:appC_modal_transference_map}) preserving radial order on the
-overlap preserves $\sigma$, so by the Modal Transference Theorem
-(Thm.~\ref{theorem:appC_modal_transference}) the full pair
-$(\mathrm{hue},\sigma)$ transfers intact to the chromatic carrier.
+\item A transference with encoder $T$ and carrier radius decoder $d$ preserves
+shade when the shade square commutes,
+\begin{equation}
+ s\bigl(d(T(r))\bigr)=s(r).
+ \label{eq:bk5_shade_commuting_square}
+\end{equation}
+Exact radial preservation $d(T(r))=r$ is sufficient for this equality and
+simultaneously preserves every radial shadow price $p(r)$.  Radial-order
+preservation alone is not sufficient.
+\item Faithful shade interfaces compose: if the carrier decoder of the first
+interface is the source decoder of the second and both commuting squares hold,
+then the composite interface also satisfies
+Eq.~\eqref{eq:bk5_shade_commuting_square}.  Thus a lower-order executable map
+may change representation repeatedly without changing its observer-readable
+control signal.
 \item Along the golden Event Horizon spiral
-(Thm.~\ref{theorem:bk4_golden_event_horizon_spiral}), where $r_n=\varphi^{n}r_0$, the
-log-shade increases by the constant increment $\log\varphi$ per quadrant: equal
-angular steps (mode-transitions) produce equal multiplicative shade-steps $\varphi$.
+(Thm.~\ref{theorem:bk4_golden_event_horizon_spiral}),
+$r_n=\varphi^n r_0$ with $r_0>0$, so
+\begin{equation}
+ \log r_{n+1}-\log r_n=\log\varphi.
+ \label{eq:bk5_golden_log_radius_step}
+\end{equation}
+This constant increment belongs to log-radius.  A bounded normalization such
+as $s(r)=r/(r+r_{\mathrm{ref}})$ is generally neither multiplicative nor
+constant-step under the same radial update.
 \item Balanced Golden-Rule reciprocity
-(Thm.~\ref{theorem:bk5_golden_rule_reciprocity}) deepens relational shade at this
-golden rate; extraction ($w\to 0$) holds the colour at the desaturated centre.
+(Thm.~\ref{theorem:bk5_golden_rule_reciprocity}) selects the radial growth
+factor $\varphi$, while the extraction boundary $w=0$ has unit radial growth.
+Unit growth preserves the existing radius; it places the colour at the
+desaturated centre only when the incoming radius is already zero.
 \end{enumerate}
 \end{proposition}
 
-\begin{proof}[Shade is the radial invariant of the transference]
+\begin{proof}[Commuting control coordinates]
 \label{proof:bk5_shade_transfers}
-\leavevmode
+For~(i), exact radial preservation gives
+$s(d(T(r)))=s(r)$ and $p(d(T(r)))=p(r)$ by substitution.  The strictly
+increasing recoding $T(r)=r+1$ preserves radial order but changes both the
+radius and, for a nonconstant $s$, its shade; hence order alone cannot prove
+the commuting square.  Preserving the shade component alone likewise does not
+certify a different shadow-price component.
 
-For~(i), the radius $r=|\Omega_O^\gamma|$ is the modulus of the transported overlap,
-an invariant fixed by the Hermitian metric $h_O$ of
-Def.~\ref{definition:bk4_imaginary_symbolic_distance} and independent of the phase
-that carries hue. A modal transference map preserving the metric and adjacency order
-preserves the order of $r$, hence preserves $\sigma=s(r)$ since $s$ is strictly
-monotone; the Modal Transference Theorem
-(Thm.~\ref{theorem:appC_modal_transference}) then carries $\sigma$ alongside hue, so
-the full chromatic coordinate transfers. For~(ii), the golden spiral has
-$r_n=\varphi^{n}r_0$ (Thm.~\ref{theorem:bk4_golden_event_horizon_spiral}), whence
-$\log r_n-\log r_{n-1}=\log\varphi$ is constant; since one emergence step advances the
-phase by exactly one quadrant on that spiral, equal angular steps carry equal
-log-shade increments, i.e.\ equal multiplicative shade-steps $\varphi$. For~(iii), the
-reciprocal-fidelity magnitude grows at the dominant rate $\lambda_w$ of
-Thm.~\ref{theorem:bk5_golden_rule_reciprocity}, which equals $\varphi$ at balance and
-tends to $1$ (no radial growth, the overlap held at the centre) as $w\to 0^{+}$;
-applying $s$ gives deepening shade at the golden rate under balance and a fixed
-desaturated centre under extraction.
+For~(ii), let the first and second faithful encoders be $T_1,T_2$, with the
+intermediate decoder shared.  Applying the second commuting law and then the
+first gives
+\[
+ s_2\bigl(T_2(T_1(r))\bigr)=s_1(T_1(r))=s_0(r),
+\]
+so fidelity is closed under composition.
+
+For~(iii), positivity of $r_n$ and
+$r_{n+1}=\varphi r_n$ give
+$\log r_{n+1}=\log\varphi+\log r_n$, proving
+Eq.~\eqref{eq:bk5_golden_log_radius_step}.  But, for example,
+$s(2)\neq2s(1)$ when $s(r)=r/(r+1)$, so the bounded shade coordinate does not
+inherit multiplicative radial steps.
+
+For~(iv), the reciprocity spectrum gives
+$\lambda_+(1)=\varphi$ and $\lambda_+(0)=1$.  These are radial growth rates,
+not automatic claims about the normalized shade value or its shadow price.
 \end{proof}
 
 \begin{scholium}[The palette of a relation]
