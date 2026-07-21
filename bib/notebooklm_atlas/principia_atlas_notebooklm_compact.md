@@ -6,7 +6,7 @@ Use labels in backticks as stable source addresses.
 ## Metadata
 
 - Nodes: 1914
-- Generated from atlas metadata: `2026-07-21T16:47:23Z`
+- Generated from atlas metadata: `2026-07-21T17:19:00Z`
 - Dependency direction: node -> depends_on, toward foundations.
 
 ## Nodes
@@ -22117,21 +22117,7 @@ Role: `section` | Type: `section` | Book: `integratio` | Source: `integratio.tex
 
 (no body text extracted)
 
-### Book I — De Origine Driftus (`section:main.tex:135`)
-
-Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:135`
-
-- Proof status: `not_applicable`
-- Depends on: none
-- Cites: none
-- Cited by: none
-- Macros used: none
-
-**Statement / Body**
-
-(no body text extracted)
-
-### Scholium Symbolicum (`section:main.tex:137`)
+### Book I — De Origine Driftus (`section:main.tex:137`)
 
 Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:137`
 
@@ -22145,7 +22131,7 @@ Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:137`
 
 (no body text extracted)
 
-### Book II — De Thermodynamica Symbolica (`section:main.tex:139`)
+### Scholium Symbolicum (`section:main.tex:139`)
 
 Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:139`
 
@@ -22159,7 +22145,7 @@ Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:139`
 
 (no body text extracted)
 
-### Book III — De Symbiosi Symbolica (`section:main.tex:141`)
+### Book II — De Thermodynamica Symbolica (`section:main.tex:141`)
 
 Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:141`
 
@@ -22173,7 +22159,7 @@ Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:141`
 
 (no body text extracted)
 
-### Book IV — De Identitate Symbolica et Emergentia (`section:main.tex:143`)
+### Book III — De Symbiosi Symbolica (`section:main.tex:143`)
 
 Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:143`
 
@@ -22187,23 +22173,9 @@ Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:143`
 
 (no body text extracted)
 
-### Book V — De Vita Symbolica (`section:main.tex:146`)
+### Book IV — De Identitate Symbolica et Emergentia (`section:main.tex:145`)
 
-Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:146`
-
-- Proof status: `not_applicable`
-- Depends on: none
-- Cites: none
-- Cited by: none
-- Macros used: none
-
-**Statement / Body**
-
-(no body text extracted)
-
-### Book VI — De Mutatione Symbolica (`section:main.tex:149`)
-
-Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:149`
+Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:145`
 
 - Proof status: `not_applicable`
 - Depends on: none
@@ -22215,7 +22187,21 @@ Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:149`
 
 (no body text extracted)
 
-### Book VII — De Convergentia Symbolica (`section:main.tex:151`)
+### Book V — De Vita Symbolica (`section:main.tex:148`)
+
+Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:148`
+
+- Proof status: `not_applicable`
+- Depends on: none
+- Cites: none
+- Cited by: none
+- Macros used: none
+
+**Statement / Body**
+
+(no body text extracted)
+
+### Book VI — De Mutatione Symbolica (`section:main.tex:151`)
 
 Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:151`
 
@@ -22229,7 +22215,7 @@ Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:151`
 
 (no body text extracted)
 
-### Book VIII — De Projectione Symbolica (`section:main.tex:153`)
+### Book VII — De Convergentia Symbolica (`section:main.tex:153`)
 
 Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:153`
 
@@ -22243,9 +22229,23 @@ Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:153`
 
 (no body text extracted)
 
-### Book IX — De Libertate Cognitiva (`section:main.tex:155`)
+### Book VIII — De Projectione Symbolica (`section:main.tex:155`)
 
 Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:155`
+
+- Proof status: `not_applicable`
+- Depends on: none
+- Cites: none
+- Cited by: none
+- Macros used: none
+
+**Statement / Body**
+
+(no body text extracted)
+
+### Book IX — De Libertate Cognitiva (`section:main.tex:157`)
+
+Role: `section` | Type: `section` | Book: `main` | Source: `main.tex:157`
 
 - Proof status: `not_applicable`
 - Depends on: none
