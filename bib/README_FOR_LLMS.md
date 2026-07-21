@@ -5,6 +5,21 @@ PDF: the PDF's text layer mangles math, loses structure, and cannot be
 traversed. The atlas keeps every claim as an addressable node with its
 **verbatim LaTeX body** and **resolved dependency edges**.
 
+## Two proof surfaces
+
+`proof_status` is manuscript-local: it reports whether the LaTeX statement has a
+linked manuscript proof. It does **not** claim Lean certification.
+
+`lean_alignment` is the independent kernel-correspondence surface. For a mapped
+node, follow `lean_alignment.record_ids` into
+`bib/principia_lean_alignment.json`, then follow each full record's
+`lean_witnesses[].source` and `lean_witnesses[].declaration` into the Sketched
+Lean program at the exact `lean_program.commit`. `conditional`, `refuted`,
+`open_bridge`, `interpretive`, and `poetic` are distinct statuses. A countermodel
+bounds the named implication; it is not an open proof. Interpretive prose and
+operator poetry are not failed theorem mappings. Lean constrains formal claims
+without replacing Principia's semantic or literary layer.
+
 ## Schema
 - `meta` — counts and provenance.
 - `macros` — `{name: {expansion, arity}}`. Custom control sequences in any

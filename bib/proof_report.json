@@ -1,0 +1,6227 @@
+{
+  "meta": {
+    "generated": "2026-07-21T14:56:15",
+    "total": 400,
+    "honest": 400,
+    "sketch": 0,
+    "flagged": 0,
+    "unlabeled": 0,
+    "book_mismatch": 0,
+    "nested": 0,
+    "unmatched": 0,
+    "qed_outside": 0,
+    "coverage_gaps": 33
+  },
+  "baseline": {
+    "flagged": 0,
+    "unlabeled": 0,
+    "book_mismatch": 0,
+    "nested": 0,
+    "unmatched": 0,
+    "qed_outside": 0
+  },
+  "flagged": [],
+  "unlabeled": [],
+  "book_mismatch": [],
+  "nested": [],
+  "unmatched": [],
+  "qed_outside": [],
+  "coverage_gaps": [
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 51,
+      "env": "theorem",
+      "label": "theorem:bk6_symbolic_bifurcation_classification",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 159,
+      "env": "proposition",
+      "label": "proposition:bk6_structural_divergence_condition",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 177,
+      "env": "proposition",
+      "label": "proposition:bk6_reflective_mutation_inhibition",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 196,
+      "env": "proposition",
+      "label": "proposition:bk6_mutation_equilibrium",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 214,
+      "env": "proposition",
+      "label": "proposition:bk6_drift_reflection_correspondence",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 299,
+      "env": "lemma",
+      "label": "lemma:bk6_symbolic_drift_mutation_relation",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 330,
+      "env": "proposition",
+      "label": "proposition:bk6_bifurcation_threshold",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 351,
+      "env": "lemma",
+      "label": "lemma:bk6_conservation_of_symbolic_information",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 393,
+      "env": "proposition",
+      "label": "proposition:bk6_thermodynamic_interpretation",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 421,
+      "env": "corollary",
+      "label": "corollary:bk6_mutation_memory",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 435,
+      "env": "corollary",
+      "label": "corollary:bk6_reflective_capacity_theorem",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 479,
+      "env": "proposition",
+      "label": "proposition:bk6_mutation_bifurcation_duality",
+      "distance": null
+    },
+    {
+      "file": "book6.tex",
+      "book": "bk6",
+      "line": 579,
+      "env": "proposition",
+      "label": "proposition:bk6_entropic_dissolution",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 495,
+      "env": "proposition",
+      "label": "proposition:bk1_sufficient_condition_for_kernel_boundedness_from_uniform_drift_bound",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 711,
+      "env": "lemma",
+      "label": "lemma:bk1_universality_of_proto_symbolic_space",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 1035,
+      "env": "theorem",
+      "label": "theorem:bk1_constitutive_bootstrap",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 2489,
+      "env": "conjecture",
+      "label": "conjecture:bk1_symbolic_irony_encoding_llms",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 2771,
+      "env": "theorem",
+      "label": "theorem:bk1_manifold_emergence",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 2806,
+      "env": "lemma",
+      "label": "lemma:bk1_coherence_of_proto_drift_fields",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 2856,
+      "env": "theorem",
+      "label": "theorem:bk1_emergence_of_drift_field",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 2886,
+      "env": "lemma",
+      "label": "lemma:bk1_existence_of_metric",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 2934,
+      "env": "lemma",
+      "label": "lemma:bk1_completeness_of_symbolic_distance",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 2957,
+      "env": "theorem",
+      "label": "theorem:bk1_emergence_of_reflection_operator",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3003,
+      "env": "corollary",
+      "label": "corollary:bk1_fixed_point",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3062,
+      "env": "lemma",
+      "label": "lemma:bk1_well_posedness_of_symbolic_hamiltonian",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3098,
+      "env": "theorem",
+      "label": "theorem:bk1_fundamental_relation_fokker_plank_equation",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3122,
+      "env": "theorem",
+      "label": "theorem:bk1_variational_principle",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3193,
+      "env": "theorem",
+      "label": "theorem:bk1_h_theorem_for_symbolic_evolution",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3267,
+      "env": "theorem",
+      "label": "theorem:bk1_sructurual_correspondence",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3577,
+      "env": "conjecture",
+      "label": "conjecture:bk1_genericity_of_symbolic_phase_transitions",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3747,
+      "env": "theorem",
+      "label": "theorem:bk1_symbolic_fluctuation_dissipation_relation",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3784,
+      "env": "theorem",
+      "label": "theorem:bk1_princple_of_least_action",
+      "distance": null
+    },
+    {
+      "file": "scholium_symbolicum.tex",
+      "book": "scholium",
+      "line": 3830,
+      "env": "theorem",
+      "label": "theorem:bk1_the_fokker_planck_equation_theorem",
+      "distance": null
+    }
+  ],
+  "all": [
+    {
+      "label": "proof:bk2_probability_structure_on_manifold",
+      "name": "Symbolic Probability Structure on Emergent Manifold",
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 53,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 6,
+      "refs": [
+        "axiom:bk1_topological_regularity",
+        "lemma:bk1_local_stability_analysis",
+        "theorem:bk1_manifold_emergence",
+        "definition:bk2_symbolic_probability_spa"
+      ]
+    },
+    {
+      "label": "proof:bk2_smoothness_symbolic_hamiltonian",
+      "name": "Smoothness of Symbolic Hamiltonian",
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 98,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk1_drift_field",
+        "definition:bk1_symbolic_manifold",
+        "theorem:bk1_emergence_of_drift_field",
+        "definition:bk1_reflection_operator"
+      ]
+    },
+    {
+      "label": "proof:bk2_bounded_symbolic_entropy",
+      "name": "Boundedness of Symbolic Entropy on Compact Manifold",
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 128,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk2_symbolic_entropy",
+        "definition:bk2__symbolic_probability_density"
+      ]
+    },
+    {
+      "label": "proof:bk2_fokker_planck_probability_conservation",
+      "name": "Probability Conservation in Symbolic Fokker\u2013Planck Equation",
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 194,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": [
+        "definition:bk2__symbolic_probability_density",
+        "lemma:bk2_conservation_of_probability"
+      ]
+    },
+    {
+      "label": "proof:bk2_symbolic_drift_equilibrium_yields_gibbs_measure",
+      "name": "Proof: Symbolic Drift Equilibrium Yields Gibbs Measure",
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 228,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": [
+        "theorem:bk2_equilibrium_distribution",
+        "definition:bk2__symbolic_probability_density"
+      ]
+    },
+    {
+      "label": "proof:bk2_symbolic_free_energy_dissipation",
+      "name": "Symbolic Free Energy Dissipation Principle",
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 268,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": [
+        "definition:bk2_symbolic_free_energy",
+        "theorem:bk2_equilibrium_distribution",
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "definition:bk2__symbolic_probability_density"
+      ]
+    },
+    {
+      "label": "proof:bk2_sketch_wasserstein_gradient_flow",
+      "name": "Wasserstein Gradient Flow via Jordan--Kinderlehrer--Otto",
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 323,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 36,
+      "refs": [
+        "definition:bk2_symbolic_wasserstein_met",
+        "definition:bk2_symbolic_free_energy",
+        "theorem:bk2_equilibrium_distribution",
+        "theorem:bk1_fundamental_relation_fokker_plank_equation",
+        "proof:bk2_symbolic_free_energy_dissipation"
+      ]
+    },
+    {
+      "label": "proof:bk2_classification_symb_phase_transitions",
+      "name": null,
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 395,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "definition:bk2_symbolic_phase_transitio"
+      ]
+    },
+    {
+      "label": "proof:bk2_symbolic_fluctuation_dissipation_relation",
+      "name": null,
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 437,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "theorem:bk2_equilibrium_distribution",
+        "definition:bk2_symbolic_response_functi",
+        "axiom:bk2_gradient_structure_drift",
+        "theorem:bk2_equilibrium_distribution",
+        "definition:bk2_symbolic_response_functi"
+      ]
+    },
+    {
+      "label": "proof:bk2_global_local_temp_relation",
+      "name": null,
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 479,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 24,
+      "refs": [
+        "definition:bk2__symbolic_probability_density",
+        "definition:bk2_local_symbolic_temperature",
+        "definition:bk2_symbolic_temperature"
+      ]
+    },
+    {
+      "label": "proof:bk2_thermodynamic_consistency_hypothesis_manifolds",
+      "name": null,
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 556,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 25,
+      "refs": [
+        "scholium:bk2_on_hypotheses_as_thermodyn",
+        "definition:bk1_symbolic_riemann_tensor"
+      ]
+    },
+    {
+      "label": "proof:bk2_coherence_of_symbolic_therm",
+      "name": null,
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 599,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 8,
+      "refs": [
+        "definition:bk2_symbolic_hamiltonian",
+        "theorem:bk2_equilibrium_distribution",
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "theorem:bk2_symbolic_fluctuation_dissipation_relation",
+        "axiom:bk2_gradient_structure_drift",
+        "theorem:bk2_wasserstein_gradient_flow",
+        "corollary:bk1_non_euclidean_necessity",
+        "definition:bk2_symbolic_phase_transitio",
+        "theorem:bk2_classification_symb_phase_transitions",
+        "definition:bk1_paradox_triggered_emergence"
+      ]
+    },
+    {
+      "label": "proof:bk2_interpretative_framework",
+      "name": null,
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 627,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": [
+        "theorem:bk2_coherence_of_symbolic_therm",
+        "definition:bk2_symbolic_hamiltonian",
+        "definition:bk2_symbolic_entropy",
+        "definition:bk2_symbolic_temperature",
+        "definition:bk2_symbolic_free_energy",
+        "theorem:bk2_h_theorem_for_symbolic_evol"
+      ]
+    },
+    {
+      "label": "proof:bk2_symbolic_h_theorem",
+      "name": "Symbolic H-Theorem and Emergent Structure",
+      "book": "bk2",
+      "file": "book2.tex",
+      "line": 655,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "definition:bk2_symbolic_free_energy",
+        "theorem:bk2_equilibrium_distribution",
+        "definition:bk2_symbolic_partition_funct"
+      ]
+    },
+    {
+      "label": "proof:bk3_local_regulation_smooth_membranes",
+      "name": "Local Regulation of Drift on a Supplied Smooth Domain",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 31,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": []
+    },
+    {
+      "label": "proof:bk3_membrane_stability_energy_permeability",
+      "name": "Membrane Stability from Free Energy and Bounded Permeability",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 70,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 8,
+      "refs": [
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "theorem:bk3_membrane_stability_criteria"
+      ]
+    },
+    {
+      "label": "proof:bk3_coupling_energy_symbolic_hamiltonian",
+      "name": "Effect of Coupling Energy on Symbolic Hamiltonian",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 118,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "definition:bk3_induced_coupling_energy",
+        "definition:bk2_symbolic_hamiltonian",
+        "theorem:bk3_couplinginduced_drift_modification",
+        "definition:bk3_symbolic_membrane",
+        "definition:bk3_coupling_map",
+        "definition:bk2_symbolic_probability_spa"
+      ]
+    },
+    {
+      "label": "proof:bk3_coupling_vs_perturbation_stability",
+      "name": "Coupling-Induced Drift Must Outweigh Internal Perturbations",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 165,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 6,
+      "refs": [
+        "lemma:bk3_symbiotic_stability_conditions"
+      ]
+    },
+    {
+      "label": "proof:bk3_triangle_inequality_encoding_bound",
+      "name": "Triangle Inequality Bounds Reflexive Encoding Drift",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 201,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": [
+        "definition:bk3_reflexive_encoding"
+      ]
+    },
+    {
+      "label": "proof:bk3_reflexive_encoding_preserves_structure",
+      "name": "Symbolic Reflexive Encoding Preserves Semantic Structure",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 233,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "definition:bk3_reflexive_encoding",
+        "lemma:bk3_reflexive_encodings_generate_conceptual_bridges"
+      ]
+    },
+    {
+      "label": "proof:bk3_symbolic_coupling_properties_enumerated",
+      "name": "Categorical Properties of Symbolic Coupling",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 271,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "definition:bk3_symbolic_symbiosis",
+        "definition:bk3_symbiotic_curvature",
+        "theorem:bk3_properties_of_symbiotic_curvature"
+      ]
+    },
+    {
+      "label": "proof:bk3_sketch_perturbation_dissiptation",
+      "name": "Perturbation Dissipation via Lyapunov Argument",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 307,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 45,
+      "refs": [
+        "definition:bk3_perturbation_response_function",
+        "theorem:bk3_membrane_stability_criteria",
+        "definition:bk3_symbiotic_curvature",
+        "definition:bk3_symbolic_symbiosis",
+        "lemma:bk3_symbiotic_stability_conditions"
+      ]
+    },
+    {
+      "label": "proof:bk3_symbolic_helmholtz_decomposition",
+      "name": "Symbolic Forces via Hodge Decomposition",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 420,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 20,
+      "refs": []
+    },
+    {
+      "label": "proof:bk3_differentiation_knowledge_structure",
+      "name": "Derivative of Knowledge Structure with Respect to Refinement",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 469,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 21,
+      "refs": [
+        "definition:bk3_symbolic_knowledge_structure",
+        "definition:bk3_refinement_vector_field",
+        "definition:bk2_symbolic_probability_spa",
+        "definition:bk3_integration_differentiation_pressures",
+        "theorem:bk3_evolution_of_symbolic_knowledge"
+      ]
+    },
+    {
+      "label": "proof:bk3_integrated_knowledge_dynamics",
+      "name": "Integration of Knowledge Refinement Dynamics",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 501,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk3_evolution_of_symbolic_knowledge",
+        "corollary:bk3_integrated_knowledge_structure"
+      ]
+    },
+    {
+      "label": "proof:bk3_knowledge_growth_integrated_condition",
+      "name": "Secular Growth of Knowledge Under Integrated Conditions",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 517,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk3_conditions_sustained_symbolic_growth"
+      ]
+    },
+    {
+      "label": "proof:bk3_sketch_symbolic_network_emergence",
+      "name": "Assembly from Compression, Bridge, and Stability Witnesses",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 568,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "definition:bk3_symbolic_network"
+      ]
+    },
+    {
+      "label": "proof:bk3_sketch_evolutionary_dynamics",
+      "name": "Closure of Conceptual Bridge Sequence",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 608,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": [
+        "definition:bk3_conceptual_bridge_sequence",
+        "definition:bk1_symbolic_manifold",
+        "definition:bk3_symbolic_network",
+        "definition:bk3_symbolic_membrane",
+        "definition:bk3_coupling_map",
+        "definition:bk3_induced_coupling_energy",
+        "theorem:bk3_couplinginduced_drift_modification"
+      ]
+    },
+    {
+      "label": "proof:bk3_sketch_field_perturbation",
+      "name": "Bounded Sensitivity via Drift Compensation",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 722,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 34,
+      "refs": [
+        "theorem:bk3_couplinginduced_drift_modification",
+        "definition:bk3_symbolic_symbiosis",
+        "theorem:bk3_membrane_stability_criteria",
+        "definition:bk3_symbolic_metabolic_rate",
+        "lemma:bk1_existence_of_metric",
+        "definition:bk3_symbolic_homeostasis",
+        "theorem:bk3_homeostatic_reflexes"
+      ]
+    },
+    {
+      "label": "proof:bk3_sketch_necessity_for_continuous_operation",
+      "name": "Necessity of Each Condition for Persistent Symbolic Life",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 798,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 42,
+      "refs": [
+        "definition:bk3_symbolic_metabolism",
+        "theorem:bk3_membrane_stability_criteria",
+        "definition:bk3_autophagic_drift",
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "theorem:bk3_conditions_sustained_symbolic_growth",
+        "definition:bk1_drift_field",
+        "definition:bk3_symbiotic_curvature",
+        "definition:bk3_symbolic_symbiosis",
+        "theorem:bk3_properties_of_symbiotic_curvature"
+      ]
+    },
+    {
+      "label": "proof:bk3_symbolic_life_satisfies_canonical_definitions",
+      "name": "Certificate projection",
+      "book": "bk3",
+      "file": "book3.tex",
+      "line": 898,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 21,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_symbolic_identity_persistence",
+      "name": "Stability Criterion for Symbolic Identity Persistence",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 23,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "definition:bk4_symbolic_identity_carrie",
+        "theorem:bk3_membrane_stability_criteria",
+        "definition:bk1_symbolic_flow",
+        "definition:bk1_symbolic_flow",
+        "definition:bk1_drift_field"
+      ]
+    },
+    {
+      "label": "proof:bk4_recursive_composite_encoding",
+      "name": "Recursive Structure of Composite Encodings",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 65,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "definition:bk4_recursive_identity_encod",
+        "lemma:bk4_convergence_of_recursive_enco"
+      ]
+    },
+    {
+      "label": "proof:bk4_mutual_information_expansion",
+      "name": "Expansion of Recursive Mutual Information",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 97,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 26,
+      "refs": [
+        "definition:bk4_identity_resolution",
+        "definition:bk2_symbolic_entropy",
+        "theorem:bk4_recursive_identity_enhancem",
+        "definition:bk4_recursive_identity_encod"
+      ]
+    },
+    {
+      "label": "proof:bk4_normalization_bounds",
+      "name": "Bounded Information Under Normalized Constraints",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 184,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 6,
+      "refs": [
+        "definition:bk4_sr_initialization_map",
+        "definition:bk4_observer_kernel_convolution_map"
+      ]
+    },
+    {
+      "label": "proof:bk4_operator_norm_subadditivity",
+      "name": "Operator Norm Subadditivity in Symbolic Flow",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 219,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 4,
+      "refs": [
+        "definition:bk4_projective_action_transl",
+        "lemma:bk4_srmf_constrained_action_norm"
+      ]
+    },
+    {
+      "label": "proof:bk4_persistence_reflection_noncommutativity",
+      "name": "Non-Commutativity of Persistence and Reflection",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 252,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "theorem:bk4_operator_algebra_of_identit",
+        "definition:bk4_identity_operators",
+        "definition:bk1_reflection_operator"
+      ]
+    },
+    {
+      "label": "proof:bk4_recursive_reflection_convergence",
+      "name": "Convergence of Recursive Self-Reflection Operators",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 293,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "definition:bk4_self_reference_operator",
+        "lemma:bk4_convergence_of_recursive_enco",
+        "definition:bk4_recursive_identity_encod"
+      ]
+    },
+    {
+      "label": "proof:bk4_emergence_conditions",
+      "name": "Emergence Implies Non-Reducibility and Causal Closure",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 356,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "definition:bk4_symbolic_emergence",
+        "definition:bk2_symbolic_entropy",
+        "definition:bk4_order_parameter",
+        "definition:bk1_drift_field",
+        "theorem:bk4_test_time_differentiation_c",
+        "definition:bk2_symbolic_entropy",
+        "definition:bk4_order_parameter",
+        "theorem:bk4_test_time_differentiation_c",
+        "definition:bk4_symbolic_emergence",
+        "theorem:bk4_emergence_criterion"
+      ]
+    },
+    {
+      "label": "proof:bk4_symbolic_curvature_boundary",
+      "name": "Gradient Threshold and Boundary Formation in Symbolic Geometry",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 396,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "definition:bk3_symbiotic_curvature",
+        "definition:bk1_symbolic_field_curvature_tensor",
+        "theorem:bk4_formation_differentiation_boundaries",
+        "theorem:bk4_formation_differentiation_boundaries",
+        "axiom:bk1_observable_gradation_of_pre_geometric_operations"
+      ]
+    },
+    {
+      "label": "proof:bk4_symbolic_curvature_properties",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 488,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk4_symbolic_curvature",
+        "definition:bk4_symbolic_curvature"
+      ]
+    },
+    {
+      "label": "proof:bk4_curvature_continuity",
+      "name": "Regularity inherited through the energy form",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 509,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "definition:bk4_symbolic_curvature",
+        "definition:bk4_proto_symbolic_space"
+      ]
+    },
+    {
+      "label": "proof:bk4_timescale_separation_hierarchy",
+      "name": "Timescale Separation and Symbolic Coarse-Graining via Master Equation",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 550,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 26,
+      "refs": [
+        "definition:bk4_meta_stable_symbolic_str",
+        "definition:bk4_symbolic_transition_rate",
+        "definition:bk1_bounded_observer",
+        "definition:bk4_order_parameter",
+        "theorem:bk4_emergence_criterion"
+      ]
+    },
+    {
+      "label": "proof:bk4_information_bottleneck_symbolic_filter",
+      "name": "Information Bottleneck Concentrates on Stable Attractors",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 612,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 35,
+      "refs": [
+        "definition:bk4_information_bottleneck_p",
+        "theorem:bk3_membrane_stability_criteria",
+        "theorem:bk4_auto_encoding_and_identity",
+        "definition:bk2_symbolic_probability_spa"
+      ]
+    },
+    {
+      "label": "proof:bk4_top_level_information_inequality",
+      "name": "Top-Level Representation Retains Disproportionate Information",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 669,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "definition:bk3_symbolic_membrane",
+        "definition:bk4_hierarchical_auto_encodi",
+        "theorem:bk4_emergence_criterion"
+      ]
+    },
+    {
+      "label": "proof:bk4_lipschitz_continuity_symbolic_drift",
+      "name": "Lipschitz Continuity of Symbolic Drift Flow",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 706,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": [
+        "definition:bk2_symbolic_free_energy",
+        "definition:bk4_individuation_path",
+        "theorem:bk4_symbolic_identity_continuit"
+      ]
+    },
+    {
+      "label": "proof:bk4_imaginative_continuity_principle",
+      "name": "Bounded Reintegration of Latent Phase",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 771,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 5,
+      "refs": [
+        "theorem:bk4_symbolic_identity_continuit",
+        "definition:bk4_imaginary_symbolic_distance",
+        "definition:bk4_symbolic_holonomy_term",
+        "theorem:bk4_symbolic_stokes"
+      ]
+    },
+    {
+      "label": "proof:bk4_wheel_refines_signature",
+      "name": "Quadrant quotient of the phase circle",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 833,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 20,
+      "refs": [
+        "definition:bk1_effective_horizon_signature",
+        "definition:bk4_event_horizon_wheel",
+        "definition:bk4_symbolic_holonomy_term"
+      ]
+    },
+    {
+      "label": "proof:bk4_spiral_transition",
+      "name": "Logarithmic spiral of the SRMF orbit",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 871,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_imagination_bridges_wheel",
+      "name": "Phase exposure and contraction margin",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 918,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_chromatic_transference_of_wheel",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 952,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "definition:bk4_event_horizon_wheel",
+        "definition:appC_modal_transference_map",
+        "theorem:appC_modal_transference"
+      ]
+    },
+    {
+      "label": "proof:bk4_golden_event_horizon_spiral",
+      "name": "Golden spiral from balanced closure on the wheel",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1038,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "proposition:bk4_spiral_transition",
+        "theorem:bk5_golden_ratio_spectral_invariant",
+        "lemma:bk5_balanced_observer_normalization"
+      ]
+    },
+    {
+      "label": "proof:bk4_recursive_identity_preservation",
+      "name": "Recursive Encoding Preserves Identity Information",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1130,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 5,
+      "refs": [
+        "theorem:bk4_recursive_identity_enhancem",
+        "definition:bk4_recursive_identity_encod",
+        "definition:bk4_identity_resolution",
+        "theorem:bk4_test_time_differentiation_c"
+      ]
+    },
+    {
+      "label": "proof:bk4_scalar_from_identity_collapse",
+      "name": "Left trace of the recursive identity bundle",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1154,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "definition:bk4_identity_resolution",
+        "definition:bk4_recursive_identity_encod",
+        "assumption:bk4_precritical_scalar_trace",
+        "theorem:bk4_test_time_differentiation_c",
+        "definition:bk4_symbolic_spinor_bundle",
+        "definition:bk1_spinor_like_structure",
+        "definition:bk4_imaginary_symbolic_distance",
+        "proposition:bk4_imagination_bridges_wheel"
+      ]
+    },
+    {
+      "label": "proof:bk4_bounded_expansion_under_observer_constrained_coherence",
+      "name": "Curvature-Bounded Expansion Rate via Gr\u00f6nwall",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1384,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": [
+        "definition:bk1_symbolic_manifold",
+        "definition:bk1_drift_field",
+        "definition:bk1_symbolic_coherence_velocity"
+      ]
+    },
+    {
+      "label": "proof:bk4_symbolic_lightcone",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1428,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": [
+        "definition:bk4_test_time_integrative_expansion",
+        "lemma:bk4_ttie_expansion_rate",
+        "definition:bk1_symbolic_coherence_velocity"
+      ]
+    },
+    {
+      "label": "proof:bk4_topological_stability_via_spectral_and_curvature_constraints",
+      "name": "Topological Stability via Spectral and Curvature Constraints",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1532,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 29,
+      "refs": [
+        "definition:bk4_coherence_metric",
+        "corollary:bk1_dimensional_bounds_emergence"
+      ]
+    },
+    {
+      "label": "proof:bk4_spectral_stability",
+      "name": "Spectral Stabilization Under Curvature Constraints",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1604,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 51,
+      "refs": [
+        "theorem:bk4_existence_of_symbolic_ident",
+        "proof:bk4_bounded_expansion_under_observer_constrained_coherence",
+        "proposition:bk4_homological_extension",
+        "lemma:bk4_spectral_stability_homological_extensions",
+        "corollary:bk4_homological_coherence_observer_bounds",
+        "definition:bk4_observer_kernel_convolution_map",
+        "theorem:bk4_recursive_identity_enhancem",
+        "definition:bk4_symbolic_identity_carrie"
+      ]
+    },
+    {
+      "label": "proof:bk4_topological_persistence",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1692,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 6,
+      "refs": [
+        "proposition:bk4_homological_extension",
+        "definition:bk4_refinement_envelope"
+      ]
+    },
+    {
+      "label": "proof:bk4_observer_capacity_bound",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1716,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "corollary:bk4_homological_coherence_observer_bounds",
+        "remark:bk4_betti_growth",
+        "proposition:bk4_homological_extension",
+        "theorem:bk4_topological_persistence_under_refinement",
+        "definition:bk1_bounded_observer"
+      ]
+    },
+    {
+      "label": "proof:bk4_ttpr_convergence",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 1980,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "lemma:bk1_observer_bounded_emergence_constraint",
+        "proposition:bk1_stage_composite_operators_are_interpretable"
+      ]
+    },
+    {
+      "label": "proof:bk4_interpretability_preservation",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2029,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": [
+        "definition:bk1_observer_relative_interpretability",
+        "definition:bk1_bounded_symbolic_approximation",
+        "axiom:bk4_refinement_contraction"
+      ]
+    },
+    {
+      "label": "proof:bk4_symbolic_stability",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2082,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 5,
+      "refs": [
+        "proposition:bk4_ttpr_convergence",
+        "definition:bk4_refinement_envelope",
+        "lemma:bk4_ttpr_interpretability_preserved"
+      ]
+    },
+    {
+      "label": "proof:bk4_symbolic_work_path_dependence",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2154,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": [
+        "definition:bk4_symbolic_work_functional",
+        "definition:bk1_bounded_observer",
+        "definition:bk1_symbolic_manifold"
+      ]
+    },
+    {
+      "label": "proof:bk4_properties_of_ttcs",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2338,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "definition:bk4_test_time_coherent_sampling",
+        "axiom:bk4_bounded_accessibility"
+      ]
+    },
+    {
+      "label": "proof:bk4_ttcs_stability",
+      "name": "Proof of Lemma \\ref{lemma:bk4_ttcs_stability}",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2469,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": [
+        "scholium:bk4_ttcs_simulation_tool_use",
+        "axiom:bk4_bounded_accessibility"
+      ]
+    },
+    {
+      "label": "proof:bk4_ttcs_convergence",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2502,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 25,
+      "refs": [
+        "axiom:bk4_bounded_accessibility",
+        "lemma:bk4_ttcs_stability"
+      ]
+    },
+    {
+      "label": "proof:bk4_coherence_preservation",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2542,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "definition:bk4_test_time_coherent_sampling",
+        "axiom:bk4_bounded_accessibility",
+        "theorem:bk4_ttcs_convergence"
+      ]
+    },
+    {
+      "label": "proof:bk4_neighborhood_completeness",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2570,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 21,
+      "refs": [
+        "lemma:bk1_completeness_of_symbolic_distance",
+        "axiom:bk4_bounded_accessibility"
+      ]
+    },
+    {
+      "label": "proof:bk4_symbolic_link_activation",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2645,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 25,
+      "refs": [
+        "definition:bk4_test_time_coherent_sampling",
+        "proposition:bk4_neighborhood_completeness",
+        "lemma:bk4_properties_of_ttcs",
+        "theorem:bk4_ttcs_convergence",
+        "corollary:bk4_symbolic_lightcone"
+      ]
+    },
+    {
+      "label": "proof:bk4_temporal_resolution_via_observer_bounded_reflection",
+      "name": "Temporal Resolution via Observer-Bounded Reflection",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2686,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "theorem:bk1_h_theorem_for_symbolic_evolution",
+        "scholium:bk4_ttcs_simulation_tool_use",
+        "theorem:bk1_dual_horizon_cosmogenesis",
+        "theorem:bk1_h_theorem_for_symbolic_evolution"
+      ]
+    },
+    {
+      "label": "proof:bk4_fragmentation_identity_stability",
+      "name": "Fragmentation Violates Symbolic Identity Stability",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2773,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": [
+        "definition:bk4_fragmented_identity",
+        "theorem:bk4_existence_of_symbolic_ident",
+        "definition:bk3_symbolic_membrane",
+        "definition:bk1_reflection_operator",
+        "definition:bk4_symbolic_identity_carrie",
+        "definition:bk2_symbolic_probability_spa",
+        "theorem:bk4_drift_reflection_imbalance",
+        "definition:bk4_fragmented_identity"
+      ]
+    },
+    {
+      "label": "proof:bk4_symbolic_curvature_fragmentation",
+      "name": "Curvature and Fragmentation",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2814,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "definition:bk3_symbiotic_curvature",
+        "definition:bk3_symbolic_membrane",
+        "definition:bk4_fragmented_identity",
+        "lemma:bk4_fragmentation_cascade",
+        "definition:bk2_symbolic_probability_spa"
+      ]
+    },
+    {
+      "label": "proof:bk4_repair_reconnects_fragmentation",
+      "name": "Repair Trajectories Reconnect Fragmented Symbolic Regions",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2849,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "definition:bk4_repair_process",
+        "definition:bk4_fragmentation_measure",
+        "definition:bk4_symbolic_identity_carrie",
+        "theorem:bk4_reflective_reentry",
+        "definition:bk1_reflection_operator",
+        "theorem:bk4_reflective_reentry"
+      ]
+    },
+    {
+      "label": "proof:bk4_recursive_self_healing_threshold",
+      "name": "Recursive Identity Retention Enables Self-Healing",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2889,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "theorem:bk4_conditions_for_self_healing",
+        "theorem:bk4_recursive_identity_enhancem",
+        "definition:bk4_identity_resolution",
+        "definition:bk4_recursive_self_healing",
+        "definition:bk4_self_reference_operator",
+        "definition:bk4_identity_operators",
+        "definition:bk4_self_reference_operator",
+        "definition:bk4_recursive_self_healing"
+      ]
+    },
+    {
+      "label": "proof:bk4_fragmentation_distortion_encoding",
+      "name": "Fragmentation and Distortion",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2921,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "definition:bk4_recursive_identity_encod",
+        "definition:bk4_fragmentation_measure",
+        "lemma:bk4_upper_bound_on_repair_capacit"
+      ]
+    },
+    {
+      "label": "proof:bk4_progressive_freedom_constraint_expansion",
+      "name": "Progressive Freedom Requires Coherence Beyond Constraints",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 2982,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "definition:bk4_constraint_domain",
+        "definition:bk4_individuated_symbolic_id",
+        "theorem:bk4_recursive_constraint_libera",
+        "definition:bk4_constraint_domain",
+        "definition:bk4_individuated_symbolic_id",
+        "theorem:bk4_recursive_constraint_libera"
+      ]
+    },
+    {
+      "label": "proof:bk4_freedom_via_symbolic_flow",
+      "name": "Freedom via Coherence-Preserving Symbolic Flow",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3028,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "definition:bk4_symbolic_flow_freedom",
+        "definition:bk4_constraint_domain",
+        "definition:bk4_symbolic_identity_carrie",
+        "definition:bk4_constraint_domain",
+        "theorem:bk4_freedom_criterion"
+      ]
+    },
+    {
+      "label": "proof:bk4_autonomy_freedom_relation",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3063,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": [
+        "definition:bk4_symbolic_autonomy",
+        "theorem:bk4_freedom_criterion",
+        "definition:bk4_symbolic_flow_freedom",
+        "definition:bk4_symbolic_flow_freedom",
+        "theorem:bk4_freedom_criterion"
+      ]
+    },
+    {
+      "label": "proof:bk4_goal_directed_composition_flow",
+      "name": "Goal-Directed Composition as Freedom-Expressive Flow",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3095,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "lemma:bk4_autonomy_freedom_relation",
+        "proposition:bk4_autonomy_implies_freedom",
+        "definition:bk4_symbolic_flow_freedom"
+      ]
+    },
+    {
+      "label": "proof:bk4_maximal_freedom_autonomous_constraints",
+      "name": "Self-Authorship Implies Maximal Freedom",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3128,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 52,
+      "refs": [
+        "definition:bk4_individuated_symbolic_id",
+        "definition:bk4_symbolic_autonomy",
+        "definition:bk4_self_authorship",
+        "definition:bk4_symbolic_autonomy",
+        "theorem:bk7_reflective_convergence_to_stable_identity",
+        "definition:bk4_symbolic_autonomy",
+        "theorem:bk4_freedom_criterion"
+      ]
+    },
+    {
+      "label": "proof:bk4_freedom_growth_fragmentation",
+      "name": "Freedom Growth and Bounded Fragmentation",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3210,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "definition:bk4_symbolic_freedom_measure",
+        "definition:bk4_individuated_symbolic_id",
+        "theorem:bk4_freedom_criterion",
+        "definition:bk4_fragmentation_measure",
+        "theorem:bk4_freedom_life_connection",
+        "theorem:bk3_criteria_persistent_symbolic_life",
+        "sec:bk5_funadmenta_symbolicae_vitae"
+      ]
+    },
+    {
+      "label": "proof:bk4_sketch_preferential_flows",
+      "name": "Identity-Relative Preferential Flows",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3255,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 28,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_observer_metric_properties",
+      "name": "Observer Metric Properties",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3346,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 4,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_field_regularization",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3418,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_statistical_mechanics",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3464,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_ml_metric_learning",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3488,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 31,
+      "refs": [
+        "definition:bk4_observer_metric"
+      ]
+    },
+    {
+      "label": "proof:bk4_information_curvature",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3581,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": [
+        "theorem:bk4_ml_metric_learning"
+      ]
+    },
+    {
+      "label": "proof:bk4_holographic_emergence",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3629,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_drift_stability_local_bounds",
+      "name": "Drift Stability via Local Symbolic Distortion Bounds",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3651,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 25,
+      "refs": [
+        "definition:bk4_fuzzy_symbolic_substitution",
+        "theorem:bk2_coherence_of_symbolic_therm",
+        "definition:bk4_substituted_drift_field",
+        "definition:bk4_observer_differentiable_",
+        "lemma:bk4_local_differentiability_substituted_drift"
+      ]
+    },
+    {
+      "label": "proof:bk4_substituted_drift_smoothness",
+      "name": "Smoothness of Substituted Drift Under Observer Differentiability",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3697,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 22,
+      "refs": [
+        "lemma:bk4_observer_relative_smoothness",
+        "definition:bk4_substituted_drift_field",
+        "lemma:bk4_local_differentiability_substituted_drift",
+        "definition:bk4_fuzzy_symbolic_substitution",
+        "theorem:bk4_restated_fuzzy_symbolic_geometry_theorem",
+        "theorem:bk4_restated_fuzzy_symbolic_geometry_theorem"
+      ]
+    },
+    {
+      "label": "proof:bk4_fuzzy_substitution_drift_smoothing",
+      "name": "Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3773,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": [
+        "theorem:bk4_fuzzy_symbolic_geometry_theorem",
+        "definition:bk4_fuzzy_symbolic_substitution",
+        "definition:bk1_bounded_observer",
+        "lemma:bk4_observer_relative_smoothness",
+        "theorem:bk4_fuzzy_symbolic_geometry_theorem",
+        "definition:bk4_observer_differentiable_",
+        "theorem:bk2_coherence_of_symbolic_therm",
+        "definition:bk4_substituted_drift_field",
+        "lemma:bk4_local_differentiability_substituted_drift",
+        "definition:bk4_observer_differentiable_"
+      ]
+    },
+    {
+      "label": "proof:bk4_observer_relative_smoothness",
+      "name": "Observer-Relative Smooth Structure from Fuzzy Substitution",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3817,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "theorem:bk4_fuzzy_symbolic_geometry_theorem",
+        "definition:bk4_fuzzy_symbolic_substitution",
+        "definition:bk1_bounded_observer",
+        "definition:bk4_epistemic_differential_o",
+        "corollary:bk4_smoothness_as_epistemic_phenomenon",
+        "corollary:bk4_smoothness_as_epistemic_phenomenon"
+      ]
+    },
+    {
+      "label": "proof:bk4_drift_reflection_field",
+      "name": "Symbolic Drift-Reflection Field Dynamics",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3851,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "proposition:bk1_the_operators_lambda_and_lambda",
+        "theorem:bk4_fuzzy_symbolic_geometry_theorem",
+        "theorem:bk4_compatibility_drift_reflective_operations"
+      ]
+    },
+    {
+      "label": "proof:bk4_drift_reflection_summary",
+      "name": "Summary of Drift-Reflection Alignment Properties",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 3933,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 22,
+      "refs": [
+        "theorem:bk4_fuzzy_symbolic_geometry_theorem",
+        "axiom:bk2_gradient_structure_drift",
+        "theorem:bk4_restated_fuzzy_symbolic_geometry_theorem",
+        "lemma:bk4_observer_relative_smoothness",
+        "theorem:bk4_compatibility_drift_reflective_operations"
+      ]
+    },
+    {
+      "label": "proof:bk4_sketch_chart_connections",
+      "name": "Levi--Civita Construction and Effective Transport Boundary",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4001,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 22,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_geodesic_failure",
+      "name": "Jacobi Certificate and Observer Error",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4063,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_observer_functor_induced_structure",
+      "name": "Observer Functor Induces Differentiable Fuzzy Structure",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4093,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 20,
+      "refs": [
+        "theorem:bk4_categorical_equivalence_observer_relative_structures",
+        "theorem:bk4_fuzzy_symbolic_geometry_theorem",
+        "theorem:bk4_restated_fuzzy_symbolic_geometry_theorem"
+      ]
+    },
+    {
+      "label": "proof:bk4_emergence_of_classical_ge",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4126,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "theorem:bk4_fuzzy_symbolic_geometry_theorem",
+        "theorem:bk4_categorical_equivalence_observer_relative_structures"
+      ]
+    },
+    {
+      "label": "proof:bk4_convergence_of_symbolic_drift",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4172,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "definition:bk4_observer_valid_different"
+      ]
+    },
+    {
+      "label": "proof:bk4_existence_observer_valid_derivatives",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4228,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 4,
+      "refs": [
+        "lemma:bk4_convergence_of_symbolic_drift",
+        "definition:bk4_tilda_substitution",
+        "theorem:bk4_fuzzy_sum_rule",
+        "theorem:bk4_fuzzy_product_rule",
+        "theorem:bk4_fuzzy_chain_rule"
+      ]
+    },
+    {
+      "label": "proof:bk4_validity_of_tilda_substit",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4242,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": [
+        "definition:bk4_tilda_substitution"
+      ]
+    },
+    {
+      "label": "proof:bk4_sketch_sub_thresholds",
+      "name": "$\\mathcal{O}$-Bounded Error Propagation in Chain Rule",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4332,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 42,
+      "refs": [
+        "theorem:bk4_fuzzy_chain_rule",
+        "definition:bk4_observer_valid_different"
+      ]
+    },
+    {
+      "label": "proof:bk4_sketch_cross_field_product",
+      "name": "Cross-Error Torsion and $\\mathcal{O}$-Bounded Product Rule",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4487,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 38,
+      "refs": [
+        "theorem:bk4_fuzzy_product_rule",
+        "definition:bk3_symbiotic_curvature",
+        "theorem:bk3_properties_of_symbiotic_curvature"
+      ]
+    },
+    {
+      "label": "proof:bk4_multiplication_to_curvature",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4644,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk4_fuzzy_product_rule",
+        "definition:bk4_observer_valid_different",
+        "definition:bk3_symbolic_membrane"
+      ]
+    },
+    {
+      "label": "proof:bk4_sketch_observer_resolution_floor",
+      "name": "Quotient Rule via Observer Resolution Floor Regularization",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4729,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 32,
+      "refs": [
+        "theorem:bk4_fuzzy_quotient_rule",
+        "definition:bk2_symbolic_free_energy"
+      ]
+    },
+    {
+      "label": "proof:bk4_sketch_symbolic_path_interference",
+      "name": "Sum Rule via Additive Error Bound with Curvature Correction",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 4884,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 32,
+      "refs": [
+        "theorem:bk4_fuzzy_sum_rule",
+        "theorem:bk3_properties_of_symbiotic_curvature",
+        "definition:bk4_symbolic_covariant"
+      ]
+    },
+    {
+      "label": "proof:bk4_fuzzy_deriv_algebra",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5002,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk4_fuzzy_sum_rule",
+        "theorem:bk4_fuzzy_product_rule",
+        "definition:bk1_bounded_observer"
+      ]
+    },
+    {
+      "label": "proof:bk4_sketch_extracting_recrusive_curvature",
+      "name": "Power Rule via Binomial Expansion and Recursive Error Bound",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5070,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 35,
+      "refs": [
+        "theorem:bk4_fuzzy_power_rule",
+        "theorem:bk4_multiplication_to_curvature",
+        "definition:bk1_bounded_observer"
+      ]
+    },
+    {
+      "label": "proof:bk4_fuzzy_exponential_rule",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5187,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "theorem:bk4_fuzzy_sum_rule",
+        "definition:bk1_bounded_observer",
+        "theorem:bk4_fuzzy_power_rule"
+      ]
+    },
+    {
+      "label": "proof:bk4_fuzzy_logarithmic_rule",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5223,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "theorem:bk4_fuzzy_exponential_rule",
+        "theorem:bk4_fuzzy_quotient_rule"
+      ]
+    },
+    {
+      "label": "proof:bk4_gradient_stability",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5327,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 25,
+      "refs": [
+        "definition:bk4_fuzzy_gradient"
+      ]
+    },
+    {
+      "label": "proof:bk4_detailed_construction",
+      "name": "Detailed Construction",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5383,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": [
+        "theorem:bk4_fuzzy_jacobian",
+        "definition:bk4_fuzzy_gradient"
+      ]
+    },
+    {
+      "label": "proof:bk4_fuzzy_multivariable_chain",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5419,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "theorem:bk4_fuzzy_jacobian",
+        "theorem:bk4_fuzzy_chain_rule"
+      ]
+    },
+    {
+      "label": "proof:bk4_fuzzy_divergence",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5472,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 30,
+      "refs": [
+        "definition:bk4_symbolic_vector_field",
+        "definition:bk4_fuzzy_gradient",
+        "proposition:bk4_fuzzy_connection",
+        "theorem:bk4_existence_observer_valid_derivatives"
+      ]
+    },
+    {
+      "label": "proof:bk4_observer_geometry_coevolution",
+      "name": "Local Evolution and Stabilization Boundary",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5705,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_fuzzy_fundamental",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5839,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "definition:bk4_fuzzy_integral_operator",
+        "definition:bk4_symbolic_memory_distortion",
+        "definition:bk4_symbolic_memory_distortion",
+        "theorem:bk4_symbolic_stokes",
+        "definition:bk4_symbolic_holonomy_term"
+      ]
+    },
+    {
+      "label": "proof:bk4_sketch_stokes",
+      "name": "Symbolic Stokes via Covariant Exterior Calculus",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 5959,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 35,
+      "refs": [
+        "theorem:bk4_symbolic_stokes",
+        "definition:bk4_symbolic_covariant",
+        "definition:bk4_symbolic_covariant",
+        "theorem:bk4_fuzzy_divergence_theorem",
+        "theorem:bk4_fuzzy_curl_theorem",
+        "scholium:bk4_zero_is_idealized_in_boundedness"
+      ]
+    },
+    {
+      "label": "proof:bk4_gauge_dictionary",
+      "name": "Certificate Boundary",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 6102,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_wilson_loop",
+      "name": "Transport ODE and Finite Ordered Shadow",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 6175,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_quantum_geometry",
+      "name": "Invariant-Preserving Quantum Bridge",
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 6225,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": []
+    },
+    {
+      "label": "proof:bk4_fuzzy_divergence_theorem",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 6351,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 29,
+      "refs": [
+        "definition:bk4_fuzzy_divergence_operator",
+        "theorem:bk4_fuzzy_divergence",
+        "corollary:bk4_emergence_of_classical_ge",
+        "definition:bk4_induced_area",
+        "proposition:bk4_fuzzy_deriv_algebra",
+        "proposition:bk4_quantum_geometry",
+        "theorem:bk4_symbolic_stokes"
+      ]
+    },
+    {
+      "label": "proof:bk4_fuzzy_curl_theorem",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 6401,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk4_symbolic_stokes",
+        "definition:bk4_fuzzy_curl_operator",
+        "definition:bk4_fuzzy_integral_operator",
+        "definition:bk4_symbolic_covariant"
+      ]
+    },
+    {
+      "label": "proof:bk4_fuzzy_helmholtz_decomposition",
+      "name": null,
+      "book": "bk4",
+      "file": "book4.tex",
+      "line": 6423,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk4_fuzzy_divergence_operator",
+        "definition:bk4_fuzzy_curl_operator",
+        "theorem:bk4_fuzzy_curl_theorem"
+      ]
+    },
+    {
+      "label": "proof:bk5_coherence_through_dynamic_equilibriium",
+      "name": "Coherence Through Dynamic Equilibrium",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 32,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "definition:bk1_symbolic_manifold",
+        "corollary:bk1_non_euclidean_necessity",
+        "definition:bk1_reflection_operator",
+        "definition:bk1_drift_field",
+        "definition:bk2_symbolic_energy",
+        "theorem:bk4_fuzzy_divergence_theorem"
+      ]
+    },
+    {
+      "label": "proof:bk5_entropy_increase_from_drift",
+      "name": "Entropy Increase from Drift",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 63,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "definition:bk1_drift_field",
+        "definition:bk2_symbolic_entropy",
+        "definition:bk1_reflection_operator",
+        "theorem:bk2_equilibrium_distribution",
+        "theorem:bk2_h_theorem_for_symbolic_evol"
+      ]
+    },
+    {
+      "label": "proof:bk5_membrane_persistence_under_free_energy",
+      "name": "Membrane Persistence Under Symbolic Free Energy",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 182,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 4,
+      "refs": [
+        "definition:bk5_viability_domain",
+        "axiom:bk5_positive_free_energy"
+      ]
+    },
+    {
+      "label": "proof:bk5_proposition_axiom_coupling",
+      "name": "Persistence from Proposition-Axiom Coupling",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 195,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 5,
+      "refs": [
+        "proposition:bk5_symbolic_life_criterion",
+        "axiom:bk5_metabolic_persistence"
+      ]
+    },
+    {
+      "label": "proof:bk5_membrane_viability_positive_energy",
+      "name": "Viability of Membranes Requires Positive Symbolic Energy",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 278,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 21,
+      "refs": [
+        "axiom:bk5_positive_free_energy",
+        "theorem:bk5_map_equilibrium",
+        "definition:bk5_reflective_coupling_tens",
+        "definition:bk5_symbolic_covenant",
+        "theorem:bk5_map_equilibrium",
+        "theorem:bk5_map_equilibrium",
+        "definition:bk5_reflective_coupling_tens",
+        "axiom:bk5_positive_free_energy",
+        "definition:bk5_mutually_assured_progress"
+      ]
+    },
+    {
+      "label": "proof:bk5_covenant_perturbation_restoration",
+      "name": "Covenant Restoration Under Perturbation",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 317,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "theorem:bk5_map_equilibrium"
+      ]
+    },
+    {
+      "label": "proof:bk5_max_sustainable_drift",
+      "name": "Max Sustainable Drift from Reflective Bounds",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 438,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "theorem:bk5__map_dominance",
+        "theorem:bk2_h_theorem_for_symbolic_evol"
+      ]
+    },
+    {
+      "label": "proof:bk5_inductive_stability_map",
+      "name": "Inductive Stability of MAP Systems",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 468,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk5_map_equilibrium",
+        "axiom:bk5_covenant_transitivity"
+      ]
+    },
+    {
+      "label": "proof:bk5_symbolic_fitness_differentials",
+      "name": "Survival Differentials and Symbolic Fitness",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 485,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 8,
+      "refs": [
+        "theorem:bk5__map_dominance",
+        "definition:bk5_symbolic_replicator_dynamics"
+      ]
+    },
+    {
+      "label": "proof:bk5_energy_conservation_under_reflective_coupling",
+      "name": "Energy Conservation Under Reflective Coupling",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 554,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "definition:bk5_spectral_radius_of_coupl",
+        "definition:bk2_symbolic_entropy"
+      ]
+    },
+    {
+      "label": "proof:bk5_existence_unique_coupled_fixed_point",
+      "name": "Existence Unique Coupled Fixed Point",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 594,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "lemma:bk5_recursive_flow_convergence"
+      ]
+    },
+    {
+      "label": "proof:bk5_viability_domain_preservation",
+      "name": "Exit probability under reflective equilibrium",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 618,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 46,
+      "refs": [
+        "definition:bk5_viability_domain",
+        "assumption:bk5_equilibrium_margin_sublinear_fluctuations",
+        "lemma:bk5_recursive_flow_convergence",
+        "theorem:bk5_reflective_equilibrium_conservation",
+        "assumption:bk5_equilibrium_margin_sublinear_fluctuations",
+        "definition:bk5_viability_domain"
+      ]
+    },
+    {
+      "label": "proof:bk5_optimal_reflection_minimizing_coupling_radius",
+      "name": "Optimal Reflection Minimizing Coupling Radius",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 686,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_symbolic_free_energy_stability_condition",
+      "name": "Symbolic Free Energy Condition",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 708,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 29,
+      "refs": [
+        "definition:bk2_symbolic_free_energy",
+        "definition:bk2_symbolic_entropy"
+      ]
+    },
+    {
+      "label": "proof:bk5_enhanced_map_mad_duality",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 770,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_information_geometry_symbolic",
+      "name": "Information Geometry",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 832,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 20,
+      "refs": [
+        "theorem:bk5_map_equilibrium",
+        "theorem:bk5_map_mad_critical_temperature"
+      ]
+    },
+    {
+      "label": "proof:bk5_symbolic_temperature_threshold",
+      "name": "Symbolic Temperature Threshold for Critical Coupling",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 925,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": [
+        "definition:bk2_symbolic_temperature",
+        "definition:bk2_symbolic_free_energy",
+        "definition:bk1_symbolic_manifold",
+        "definition:bk1_drift_field",
+        "theorem:bk5_map_equilibrium"
+      ]
+    },
+    {
+      "label": "proof:bk5_stability_map_mad_patterns",
+      "name": "Stateful Barriered Switching",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 961,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_enhanced_map_mad_duality_pr",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1038,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_map_resistance_to_drift",
+      "name": "MAP Strategies Withstand Greater Drift",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1115,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "theorem:bk5__map_dominance",
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "definition:bk2_symbolic_free_energy",
+        "definition:bk1_drift_field",
+        "definition:bk5_symbolic_fitness"
+      ]
+    },
+    {
+      "label": "proof:bk5_map_invasion_dynamics",
+      "name": "Invasion Analysis of MAP vs Non-MAP Strategies",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1140,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": [
+        "definition:bk5_symbolic_fitness",
+        "definition:bk2_symbolic_free_energy",
+        "definition:bk5_symbolic_fitness"
+      ]
+    },
+    {
+      "label": "proof:bk5_drift_reflection_equilibrium",
+      "name": "Available-Operator Construction",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1195,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": [
+        "theorem:bk5_map_equilibrium",
+        "theorem:bk4_compatibility_drift_reflective_operations"
+      ]
+    },
+    {
+      "label": "proof:bk5_map_as_ess",
+      "name": "MAP as Symbolic Evolutionarily Stable Strategy",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1240,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 21,
+      "refs": [
+        "definition:bk5_symbolic_ess",
+        "lemma:bk5_covenant_non_invasibility",
+        "definition:bk5_symbolic_replicator_dynamics",
+        "theorem:bk5_rift_reflection_balance_in_strategy_space"
+      ]
+    },
+    {
+      "label": "proof:bk5_map_fitness_threshold",
+      "name": "Quantitative Mutation-Free Selection",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1291,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_map_perturbation_robustness",
+      "name": "Perturbation Robustness of MAP Populations",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1316,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "lemma:bk5_map_population_stability",
+        "definition:bk5_symbolic_replicator_dynamics",
+        "definition:bk2_symbolic_free_energy",
+        "definition:bk5_covenant_resilience_index"
+      ]
+    },
+    {
+      "label": "proof:bk5_map_strict_fitness_dominance",
+      "name": "Strict Dominance of MAP Under Mixing",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1340,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "theorem:bk5_map_as_strong_ess",
+        "definition:bk5_symbolic_replicator_dynamics"
+      ]
+    },
+    {
+      "label": "proof:bk5_map_vs_nonmap_gradient",
+      "name": "Fitness Gradient Between MAP and Non-MAP",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1365,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 5,
+      "refs": [
+        "theorem:bk5__map_dominance"
+      ]
+    },
+    {
+      "label": "proof:bk5_map_viability_critical_drift",
+      "name": "Two-Sided Strategy Transport",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1409,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 22,
+      "refs": [
+        "corollary:bk5_convergence_to_map"
+      ]
+    },
+    {
+      "label": "proof:bk5_operator_evolution",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1495,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "axiom:bk5_srmf_operator_selection_evolution",
+        "definition:bk5_symbolic_operator_space",
+        "theorem:bk5_operator_convergence"
+      ]
+    },
+    {
+      "label": "proof:bk5_fixed_metabolic_capacity",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1520,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk5_metabolic_capacity_mc_",
+        "definition:bk5_process_free_energy",
+        "definition:bk5_viability_domain"
+      ]
+    },
+    {
+      "label": "proof:bk5_metabolic_capacity_non_decreasing",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1541,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk5_metabolic_capacity_mc_",
+        "definition:bk2_symbolic_free_energy",
+        "theorem:bk5_complexity_stability_tradeoff"
+      ]
+    },
+    {
+      "label": "proof:bk5_operator_convergence",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1586,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "axiom:bk5_srmf_operator_selection_evolution",
+        "definition:bk5_process_free_energy",
+        "definition:bk2_symbolic_free_energy",
+        "theorem:bk2_wasserstein_gradient_flow",
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "theorem:bk2_equilibrium_distribution",
+        "assumption:bk5_displacement_convexity",
+        "definition:bk5_metabolic_capacity_mc_",
+        "proposition:bk5_fixed_metabolic_capacity",
+        "proposition:bk5_operator_evolution",
+        "definition:bk5_viability_domain",
+        "corollary:bk7_geometric_convergence_rate"
+      ]
+    },
+    {
+      "label": "proof:bk5__metabolically_bounded_reflection_corollary",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1621,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "axiom:bk5_metabolically_bounded_reflection"
+      ]
+    },
+    {
+      "label": "proof:bk5__srmf_operator_adaptation",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1648,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 20,
+      "refs": [
+        "axiom:bk5_srmf_operator_selection_evolution"
+      ]
+    },
+    {
+      "label": "proof:bk5_operators_evolve",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1688,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk5__operator_viability_set_v",
+        "proposition:bk5_operator_evolution",
+        "theorem:bk5__srmf_operator_adaptation",
+        "theorem:bk5_operator_convergence",
+        "definition:bk4_test_time_integrative_expansion",
+        "proposition:bk5_fixed_metabolic_capacity"
+      ]
+    },
+    {
+      "label": "proof:bk5_complexity_stability_tradeoff",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1712,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk5_complexity_stability_maintenance",
+        "proposition:bk5_operators_evolve",
+        "definition:bk5_metabolic_capacity_mc_",
+        "proposition:bk5_fixed_metabolic_capacity",
+        "definition:bk5_complexity_stability_maintenance"
+      ]
+    },
+    {
+      "label": "proof:bk5_complexity_stability_tradeoff_cor",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1725,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk5_complexity_stability_tradeoff",
+        "definition:bk5_metabolic_capacity_mc_"
+      ]
+    },
+    {
+      "label": "proof:bk5_metabolic_constraints_reflective_accuracy",
+      "name": "Marginal-Gain and Geometric-Budget Composition",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1781,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 24,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_balanced_observer_normalization",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1871,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_golden_ratio_spectral_invariant",
+      "name": "Golden Ratio as Spectral Invariant via Balanced Memory Algebra",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1915,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 34,
+      "refs": [
+        "definition:bk1_symbolic_manifold",
+        "definition:bk1_drift_field",
+        "definition:bk1_reflection_operator",
+        "definition:bk5_balanced_two_step_memory_closure"
+      ]
+    },
+    {
+      "label": "proof:bk5_symbolic_eigenlife",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 1967,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk5_balanced_two_step_memory_closure",
+        "theorem:bk5_golden_ratio_spectral_invariant",
+        "proposition:bk5_symbolic_life_criterion",
+        "theorem:bk5_metabolic_constraints_reflective_accuracy"
+      ]
+    },
+    {
+      "label": "proof:bk5_map_mad_mas_trichotomy",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2002,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk5_reflective_coupling_stab",
+        "theorem:bk5_golden_ratio_spectral_invariant",
+        "corollary:bk5_symbolic_eigenlife",
+        "definition:bk2_symbolic_phase_transitio"
+      ]
+    },
+    {
+      "label": "proof:bk5_golden_ratio_curvature_scalar",
+      "name": "Balanced curvature ratio",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2053,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "definition:bk5_balanced_two_step_memory_closure",
+        "theorem:bk5_golden_ratio_spectral_invariant"
+      ]
+    },
+    {
+      "label": "proof:bk5_golden_ratio_thermodynamic_optimum",
+      "name": "Balanced thermodynamic optimum",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2123,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "theorem:bk5_golden_ratio_spectral_invariant"
+      ]
+    },
+    {
+      "label": "proof:bk5_sqrt2_maximal_fracture",
+      "name": "First orthogonal fracture",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2174,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_complementary_constants",
+      "name": "Complementarity of first fracture and balanced resonance",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2206,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "theorem:bk5_golden_ratio_spectral_invariant",
+        "theorem:bk5_sqrt2_maximal_fracture"
+      ]
+    },
+    {
+      "label": "proof:bk5_lp_norm_fracture_hierarchy",
+      "name": "Norm inequality proof",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2322,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_symbolic_integrability_classes",
+      "name": "Classification Proof",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2350,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "theorem:bk5_lp_norm_fracture_hierarchy"
+      ]
+    },
+    {
+      "label": "proof:bk5_symbolic_torsion_phase_diagram",
+      "name": "Phase diagram from the fracture ratio",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2383,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "theorem:bk5_lp_norm_fracture_hierarchy"
+      ]
+    },
+    {
+      "label": "proof:bk5_shortest_path_representability",
+      "name": "Representability Proof",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2414,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "lemma:bk5_shortest_path_representability",
+        "theorem:bk5_lp_norm_fracture_hierarchy"
+      ]
+    },
+    {
+      "label": "proof:bk5_symbolic_decoherence_theory",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2448,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "proof:bk5_shortest_path_representability"
+      ]
+    },
+    {
+      "label": "proof:bk5_fractal_dimension_connection",
+      "name": "Effective support dimension",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2486,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": [
+        "theorem:bk5_lp_norm_fracture_hierarchy"
+      ]
+    },
+    {
+      "label": "proof:bk5_fundamental_norm_fracture",
+      "name": "Norm-induced fracture theorem",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2536,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "theorem:bk5_lp_norm_fracture_hierarchy",
+        "theorem:bk5_golden_ratio_spectral_invariant"
+      ]
+    },
+    {
+      "label": "proof:bk5_symbolic_norm_spectrum",
+      "name": "Product spectrum",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2600,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "theorem:bk5_lp_norm_fracture_hierarchy",
+        "theorem:bk5_golden_ratio_spectral_invariant"
+      ]
+    },
+    {
+      "label": "proof:bk5_phi_critical_resonant_norm",
+      "name": "$\\varphi$ as balanced memory resonance",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2642,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "definition:bk5_balanced_two_step_memory_closure",
+        "theorem:bk5_golden_ratio_spectral_invariant"
+      ]
+    },
+    {
+      "label": "proof:bk5_complete_symbolic_regime_classification",
+      "name": "Regime classification",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2678,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 8,
+      "refs": [
+        "theorem:bk5_lp_norm_fracture_hierarchy",
+        "proposition:bk5_symbolic_integrability_classes",
+        "lemma:bk5_phi_critical_resonant_norm"
+      ]
+    },
+    {
+      "label": "proof:bk5_symbolic_manifold_spectral_decomposition",
+      "name": "Direct-sum decomposition",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2709,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_phi_centrality_principle",
+      "name": null,
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2730,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "proposition:bk5_complete_symbolic_regime_classification",
+        "lemma:bk5_phi_critical_resonant_norm"
+      ]
+    },
+    {
+      "label": "proof:bk5_grand_unified_symbolic_geometric",
+      "name": "Product interface invariants",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2772,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": []
+    },
+    {
+      "label": "proof:bk5_golden_rule_reciprocity",
+      "name": "Golden Rule reciprocity is the balanced closure",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 2894,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 22,
+      "refs": [
+        "theorem:bk5_golden_ratio_spectral_invariant",
+        "lemma:bk5_balanced_observer_normalization"
+      ]
+    },
+    {
+      "label": "proof:bk5_shade_transfers",
+      "name": "Commuting control coordinates",
+      "book": "bk5",
+      "file": "book5.tex",
+      "line": 3003,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": []
+    },
+    {
+      "label": "proof:bk6_symbolic_fokker_planck_bifurcation",
+      "name": "Fokker--Planck Correspondence at Bifurcation",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 63,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 30,
+      "refs": [
+        "theorem:bk1_fundamental_relation_fokker_plank_equation",
+        "definition:bk1_reflection_operator",
+        "theorem:bk1_variational_principle",
+        "definition:bk6_symbolic_bifurcation"
+      ]
+    },
+    {
+      "label": "proof:bk6_symbolic_mutation_threshold",
+      "name": "Symbolic Mutation Threshold",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 166,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk2_symbolic_free_energy"
+      ]
+    },
+    {
+      "label": "proof:bk6_stable_reflective_submanifold",
+      "name": "Stable Reflective Submanifold",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 189,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk4_symbolic_identity_carrie",
+        "definition:bk2_symbolic_free_energy",
+        "definition:bk6_mutation_threshold"
+      ]
+    },
+    {
+      "label": "proof:bk6_mutation_equilibrium_entropy_balance",
+      "name": "Mutation Equilibrium Entropy Balance",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 207,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk6_symbolic_bifurcation_classification"
+      ]
+    },
+    {
+      "label": "proof:bk6_drift_reflection_commutation_equilibrium",
+      "name": "Drift Reflection Commutation Equilibrium",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 222,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 26,
+      "refs": [
+        "proof:bk6_mutation_equilibrium_entropy_balance",
+        "proof:bk6_stable_reflective_submanifold",
+        "proof:bk6_symbolic_fokker_planck_bifurcation",
+        "definition:bk2_symbolic_free_energy",
+        "proof:bk6_symbolic_mutation_threshold"
+      ]
+    },
+    {
+      "label": "proof:bk6_symbolic_drift_mutation_relation",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 318,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": []
+    },
+    {
+      "label": "proof:bk6_mutation_trigger",
+      "name": "Mutation Trigger",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 344,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk6_symbolic_mutation"
+      ]
+    },
+    {
+      "label": "proof:bk6_information_conservation_under_mutation",
+      "name": "Information Conservation via Change of Variables",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 358,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 29,
+      "refs": [
+        "definition:bk6_symbolic_mutation",
+        "definition:bk6_symbolic_mutation"
+      ]
+    },
+    {
+      "label": "proof:bk6_thermodynamic_interpretation",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 411,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk6_mutation_memory",
+      "name": "Mutation Memory",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 428,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "axiom:bk6_symbolic_mutation_as_curvature_transition"
+      ]
+    },
+    {
+      "label": "proof:bk6_reflective_capacity_theorem",
+      "name": "Reflective Capacity Theorem",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 442,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "axiom:bk6_equilibrium_of_mutability"
+      ]
+    },
+    {
+      "label": "proof:bk6_mutation_bifurcation_duality",
+      "name": "Mutation-Bifurcation Duality",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 486,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 46,
+      "refs": [
+        "axiom:bk6_symbolic_mutation_as_curvature_transition",
+        "definition:bk6_symbolic_curvature_tensor",
+        "definition:bk6_symbolic_mutation",
+        "proposition:bk6_bifurcation_threshold",
+        "definition:bk6_symbolic_bifurcation",
+        "axiom:bk6_bifurcation_as_emergence_operator",
+        "proposition:bk6_bifurcation_threshold",
+        "definition:bk6_symbolic_mutation",
+        "definition:bk6_mutation_operator",
+        "definition:bk6_mutation_rate"
+      ]
+    },
+    {
+      "label": "proof:bk6_entropic_dissolution",
+      "name": "Entropic Dissolution",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 586,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "axiom:bk6_equilibrium_of_mutability"
+      ]
+    },
+    {
+      "label": "proof:bk6_confidence_gradient",
+      "name": "Directional Confidence Control",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 705,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": []
+    },
+    {
+      "label": "proof:bk6_power_scaling",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 742,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk6_symbolic_power",
+        "definition:bk5_fuzzy_symbolic_manifold"
+      ]
+    },
+    {
+      "label": "proof:bk6_symbolic_diffusion_governs_evolution",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 1212,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "theorem:bk1_fundamental_relation_fokker_plank_equation"
+      ]
+    },
+    {
+      "label": "proof:bk6_complete_operator_closure",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 1247,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk6_complete_canonical_set",
+        "definition:bk6_modulation_operator_complete",
+        "definition:bk6_symbolic_flow_operator_complete",
+        "assumption:bk6_canonical_density"
+      ]
+    },
+    {
+      "label": "proof:bk6_thermodynamic_map_duality",
+      "name": "Oriented Mean-Balance Rearrangement",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 1276,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk6_confidence_power_bound",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 1302,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk6_confidence_field_operator",
+        "assumption:bk6_gaussian_locality"
+      ]
+    },
+    {
+      "label": "proof:bk6_grace_basin_correspondence",
+      "name": "Coverage followed by Grace Invariance",
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 1335,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk6_symbolic_charge_conservation",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 1374,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk6_symbolic_state_function_complete"
+      ]
+    },
+    {
+      "label": "proof:bk6_total_symbolic_action_conservation",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 1388,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk6_symbolic_free_energy_functional"
+      ]
+    },
+    {
+      "label": "proof:bk6_map_invariant",
+      "name": null,
+      "book": "bk6",
+      "file": "book6.tex",
+      "line": 1402,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "axiom:bk6_map_equilibrium_invariance_complete"
+      ]
+    },
+    {
+      "label": "proof:bk7_power_uncertainty_duality",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 126,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 5,
+      "refs": [
+        "proposition:bk7_power_from_coherent_confidence_regulation",
+        "definition:bk7_systemic_symbolic_power",
+        "definition:bk7_symbolic_uncertainty"
+      ]
+    },
+    {
+      "label": "proof:bk7_adaptive_refinement_deadband_stabilization",
+      "name": "Deadband stabilization of adaptive refinement",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 242,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_self_correction_criterion",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 287,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk7_adaptive_refinement_recurrence",
+        "definition:bk9_symbolic_black_hole"
+      ]
+    },
+    {
+      "label": "proof:bk7_drift_collapse_equivalence",
+      "name": "Lyapunov equivalence of reflection and descent",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 476,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "corollary:bk7_recursive_convergence_principle",
+        "theorem:bk7_reflective_convergence_to_stable_identity"
+      ]
+    },
+    {
+      "label": "proof:bk7_recursive_convergence_principle",
+      "name": "Basin certification by reflective descent",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 493,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk7_reflective_convergence_to_stable_identity"
+      ]
+    },
+    {
+      "label": "proof:bk7_stability_innovation_equilibrium",
+      "name": "Contextual Curvature with Stable Identity",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 518,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "theorem:bk1_symbolic_emergence_theorem_thermodynamics",
+        "theorem:bk7_reflective_convergence_to_stable_identity"
+      ]
+    },
+    {
+      "label": "proof:bk7_reflective_convergence_to_stable_identity",
+      "name": "Convergence by Free-Energy Descent",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 574,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "definition:bk2_symbolic_wasserstein_met",
+        "definition:bk2_symbolic_energy",
+        "definition:bk2_symbolic_entropy"
+      ]
+    },
+    {
+      "label": "proof:bk7_observer_converges",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 600,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 2,
+      "refs": [
+        "axiom:bk7_caristi_descent_for_reflection",
+        "axiom:bk7_reflective_stabilization",
+        "theorem:bk7_reflective_convergence_to_stable_identity"
+      ]
+    },
+    {
+      "label": "proof:bk7_geometric_convergence_rate",
+      "name": "Exponential envelope from geometric energy decay",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 614,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk7_reflective_convergence_to_stable_identity"
+      ]
+    },
+    {
+      "label": "proof:bk7_stabilization_as_orbit_limit",
+      "name": "Idempotence from the orbit limit",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 625,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk7_reflective_convergence_to_stable_identity"
+      ]
+    },
+    {
+      "label": "proof:bk7_observer_relative_symbolic_stabilization_as_statistical_inference",
+      "name": "Positive-Affine Order Transport",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 653,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_proof_elaboration",
+      "name": "Orbit-Local Elaboration",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 663,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_sketch_lp_loss_as_observer_free_energy_minimization",
+      "name": "$L^p$ Representation Boundary",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 672,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_information_preservation",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 708,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk7_symbolic_resonance"
+      ]
+    },
+    {
+      "label": "proof:bk7_two_way_street_fixed_point",
+      "name": "Product contraction for mutual modeling",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 736,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 26,
+      "refs": [
+        "definition:bk7_symbolic_resonance"
+      ]
+    },
+    {
+      "label": "proof:bk7_horizon_expansion",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 786,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk7_symbolic_resonance",
+        "lemma:bk7_symbolic_expansion",
+        "definition:bk1_observer_horizon_structure"
+      ]
+    },
+    {
+      "label": "proof:bk7_symbolic_convergence",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 810,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "lemma:bk7_information_preservation",
+        "theorem:bk7_two_way_street_fixed_point",
+        "definition:bk7_decency_potential"
+      ]
+    },
+    {
+      "label": "proof:bk7_symbolic_expansion",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 863,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_srmf_decency_regulation",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 878,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk1_self_regulating_mapping_function_srmf",
+        "definition:bk7_prompt_operator_chain",
+        "definition:bk7_decency_potential"
+      ]
+    },
+    {
+      "label": "proof:bk7_structural_properties_of_reciprocity_domain",
+      "name": null,
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1019,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk7_reciprocity_domain",
+        "definition:bk7_adaptive_reflection_operator_t",
+        "definition:bk7_symbolic_free_energy"
+      ]
+    },
+    {
+      "label": "proof:bk7_two_way_street_convergence",
+      "name": "Product contraction for reciprocal reflection",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1072,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 25,
+      "refs": [
+        "definition:bk7_interactive_drift_reflection_pair",
+        "definition:bk7_reciprocity_domain"
+      ]
+    },
+    {
+      "label": "proof:bk7_stability_near_reciprocity",
+      "name": "Stability from the contraction estimate",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1133,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 8,
+      "refs": [
+        "theorem:bk7_two_way_street_convergence"
+      ]
+    },
+    {
+      "label": "proof:bk7_map_compatible_reciprocity",
+      "name": "Two-way fixed point as MAP Nash equilibrium",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1163,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "theorem:bk7_two_way_street_convergence",
+        "definition:bk5_map_nash_point",
+        "definition:bk5_map_mad_mas_band",
+        "scholium:bk4_imagination_as_imaginary_traversal",
+        "proposition:bk4_imagination_bridges_wheel",
+        "scholium:bk5_imagination_covenant_branch_selection"
+      ]
+    },
+    {
+      "label": "proof:bk7_coherence_window",
+      "name": "Coherence window",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1350,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_pisu",
+      "name": "PISU by coherence-window allocation",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1385,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "assumption:bk7_channel_floors",
+        "lemma:bk7_coherence_window"
+      ]
+    },
+    {
+      "label": "proof:bk7_strict_convexity_lp_error",
+      "name": "Strict Convexity LP Error",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1548,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk1_symbolic_manifold"
+      ]
+    },
+    {
+      "label": "proof:bk7_from_compactness_and_convexity",
+      "name": "From Compactness and Strict Convexity",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1586,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_emergent_lp_norm_from_srmf",
+      "name": "Emergent LP Norm from SRMF",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1627,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 46,
+      "refs": [
+        "definition:bk1_self_regulating_mapping_function_srmf",
+        "lemma:bk7_budgetlimited_minimizer"
+      ]
+    },
+    {
+      "label": "proof:bk7_lp_norm_monotonicity",
+      "name": "Two-Premise Detection",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1690,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_frame_temperature_exponent_correspondence",
+      "name": "Frame-temperature/exponent correspondence",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1763,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "theorem:bk7_emergent_lp_norm"
+      ]
+    },
+    {
+      "label": "proof:bk7_hilbert_banach_bridge",
+      "name": "Hilbert--Banach Bridge",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1826,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 31,
+      "refs": [
+        "theorem:bk7_emergent_lp_norm",
+        "lemma:bk7_frame_temperature_exponent_correspondence",
+        "lemma:bk7_budgetlimited_minimizer",
+        "theorem:bk7_emergent_lp_norm",
+        "definition:bk2_symbolic_phase_transitio"
+      ]
+    },
+    {
+      "label": "proof:bk7_bridge_no_interior_transition",
+      "name": "Continuity Excludes a Discrete Transition",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1874,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 6,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_noncontextuality_forces_hilbert",
+      "name": "Composition of the Two Representation Bridges",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1899,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk7_born_collapse",
+      "name": "Limit Identification and Separate Born Bridge",
+      "book": "bk7",
+      "file": "book7.tex",
+      "line": 1943,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": []
+    },
+    {
+      "label": "proof:bk8_projective_drift",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 83,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "proposition:bk6_drift_reflection_correspondence",
+        "definition:bk8_symbolic_projection"
+      ]
+    },
+    {
+      "label": "proof:bk8_translation_limit",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 106,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "corollary:bk8_projective_drift",
+        "definition:bk2_symbolic_entropy"
+      ]
+    },
+    {
+      "label": "proof:bk8_resonant_cognition",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 119,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "definition:bk8_symbolic_interface",
+        "definition:bk5_reflective_coupling_tens",
+        "theorem:bk7_two_way_street_fixed_point",
+        "definition:bk7_symbolic_resonance",
+        "definition:bk1_bounded_observer",
+        "theorem:bk7_two_way_street_convergence"
+      ]
+    },
+    {
+      "label": "proof:bk8_universality_condition",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 147,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk1_symbolic_manifold"
+      ]
+    },
+    {
+      "label": "proof:bk8_membrane_identity_collapse",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 214,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk1_symbolic_manifold"
+      ]
+    },
+    {
+      "label": "proof:bk8_observer_frame_invariance",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 230,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk8_structural_regulators"
+      ]
+    },
+    {
+      "label": "proof:bk8_membrane_operator_symmetry",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 247,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk1_self_regulating_mapping_function_srmf"
+      ]
+    },
+    {
+      "label": "proof:bk8_curvature_entanglement_equivalence",
+      "name": "Curvature Entanglement Equivalence",
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 476,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 69,
+      "refs": [
+        "definition:bk1_symbolic_manifold",
+        "definition:bk8_symbolic_projection",
+        "definition:bk4_symbolic_curvature",
+        "proposition:bk1_curvature_semantic_entanglement",
+        "corollary:bk1_curvature_projection_residue",
+        "definition:bk1_bounded_observer",
+        "corollary:bk8_memory_repair_robustness",
+        "corollary:bk8_entanglement_frame_invariance",
+        "scholium:bk4_symbolic_entanglement",
+        "definition:bk2__symbolic_probability_density",
+        "corollary:appC_mixed_states",
+        "definition:bk2_symbolic_entropy",
+        "proposition:bk1_curvature_semantic_entanglement",
+        "theorem:bk1_symbolic_emergence_and_curvature",
+        "theorem:bk1_symbolic_emergence_and_curvature",
+        "theorem:bk4_fuzzy_chain_rule",
+        "scholium:bk4_o_boundedness_unifying_principle",
+        "definition:bk3_reflexive_encoding",
+        "proposition:bk1_curvature_semantic_entanglement",
+        "proposition:bk1_curvature_semantic_entanglement"
+      ]
+    },
+    {
+      "label": "proof:bk8_symbolic_curvature_and_separability",
+      "name": "Symbolic Curvature and Separability",
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 559,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 6,
+      "refs": [
+        "theorem:bk8_gradient_dissipation_balance",
+        "theorem:bk8_gradient_dissipation_balance",
+        "definition:bk1_symbolic_field_curvature_tensor",
+        "definition:bk6_symbolic_curvature_tensor",
+        "proposition:bk1_curvature_semantic_entanglement"
+      ]
+    },
+    {
+      "label": "proof:bk8_flattening_decoherence_equivalence",
+      "name": "Decoherence as Symbolic Flattening via Curvature Flow",
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 580,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "theorem:bk1_symbolic_emergence_and_curvature",
+        "proposition:bk1_curvature_semantic_entanglement"
+      ]
+    },
+    {
+      "label": "proof:bk8_frame_transformation_residual",
+      "name": "Frame Transformation Residual",
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 611,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "definition:bk8_transform_group",
+        "axiom:bk8_observer_bounded_emergence"
+      ]
+    },
+    {
+      "label": "proof:bk8_entanglement_as_frame_artifact",
+      "name": "Entanglement and Frame Artifact",
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 635,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "proposition:bk1_curvature_semantic_entanglement",
+        "theorem:bk8_holographic_surface_entropy",
+        "corollary:bk1_curvature_projection_residue",
+        "definition:bk8_observer_relative_artifact",
+        "definition:bk8_material_projection"
+      ]
+    },
+    {
+      "label": "proof:bk8_no_free_projection",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 686,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "corollary:bk8_projective_drift",
+        "definition:bk8_identitystability",
+        "corollary:bk1_non_euclidean_necessity",
+        "scholium:bk4_o_boundedness_unifying_principle"
+      ]
+    },
+    {
+      "label": "proof:bk8_bound_on_universal_embedding",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 700,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "corollary:bk8_universality_condition",
+        "theorem:bk8_no_free_projection"
+      ]
+    },
+    {
+      "label": "proof:bk8_biological_phase_transition",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 754,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "axiom:bk8_mutation_phase_shift",
+        "proposition:bk5_symbolic_life_criterion",
+        "definition:bk8_identitystability",
+        "corollary:bk5_symbolic_eigenlife",
+        "definition:bk5_viability_domain"
+      ]
+    },
+    {
+      "label": "proof:bk8_emergent_cognitive_scaffold",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 763,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk8_metabolic_programming_cycle",
+        "definition:bk8_reflexive_debugging_operator",
+        "definition:bk8_temperature_freedom"
+      ]
+    },
+    {
+      "label": "proof:bk8_freedom_emergence_criterion",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 801,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk8_biological_phase_transition",
+        "definition:bk8_volitional_projection_operator"
+      ]
+    },
+    {
+      "label": "proof:bk8_symbolic_free_will",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 815,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "theorem:bk8_freedom_emergence_criterion",
+        "theorem:bk8_no_free_projection"
+      ]
+    },
+    {
+      "label": "proof:bk8_thermodynamic_necessity_of_symbolic_metabolism",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 873,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk5_viability_domain"
+      ]
+    },
+    {
+      "label": "proof:bk8_resursive_self_tuning",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 895,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "definition:bk8_reflexive_debugging_operator"
+      ]
+    },
+    {
+      "label": "proof:bk8_symbolic_agents_as_projections",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 914,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk8_reflexive_debugging_operator"
+      ]
+    },
+    {
+      "label": "proof:bk8_threshold_of_metabolic_autonomy",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 943,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk8_biological_phase_transition",
+        "axiom:bk8_mutation_phase_shift",
+        "definition:bk8_identitystability",
+        "theorem:bk8_thermodynamic_necessity_of_symbolic_metabolism"
+      ]
+    },
+    {
+      "label": "proof:bk8_freedom_via_meta_metabolic_control",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 962,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "theorem:bk8_freedom_emergence_criterion",
+        "lemma:bk8_resursive_self_tuning",
+        "corollary:bk8_emergent_cognitive_scaffold",
+        "corollary:bk8_symbolic_agents_as_projections",
+        "theorem:bk8_threshold_of_metabolic_autonomy"
+      ]
+    },
+    {
+      "label": "proof:bk8_sketch_observer_interoperability",
+      "name": "SR-Triplet Boundedness via Gr\u00f6nwall",
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 1038,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 32,
+      "refs": [
+        "axiom:bk8_surface_energy_dynamics",
+        "definition:bk8_sr_triplet",
+        "definition:bk1_observer_relative_interpretability"
+      ]
+    },
+    {
+      "label": "proof:bk8_sr_convergence",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 1084,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "proposition:bk8_genetic_symbolic_resonance",
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "theorem:bk2_wasserstein_gradient_flow",
+        "theorem:bk5_operator_convergence",
+        "theorem:bk5_reflective_equilibrium_conservation"
+      ]
+    },
+    {
+      "label": "proof:bk8_optimal_projection_path",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 1110,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk8_refinement_objective",
+        "axiom:bk8_surface_energy_dynamics",
+        "definition:bk4_symbolic_curvature",
+        "corollary:bk8_sr_path_maximization"
+      ]
+    },
+    {
+      "label": "proof:bk8_skech_via_euler_lagrange_flow_yields_geodesic",
+      "name": "Euler--Lagrange Flow Yields Geodesic Under Curvature Constraint",
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 1119,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 32,
+      "refs": [
+        "axiom:bk8_surface_energy_dynamics",
+        "definition:bk4_symbolic_curvature",
+        "definition:bk4_symbolic_curvature"
+      ]
+    },
+    {
+      "label": "proof:bk8_sketch_convergence_to_fixed_by_banach",
+      "name": "RG Fixed Point via Banach Contraction",
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 1193,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 29,
+      "refs": [
+        "lemma:bk1_completeness_of_symbolic_distance",
+        "definition:bk1_symbolic_distance",
+        "definition:bk8_sr_renormalization_group",
+        "definition:bk1_self_regulating_mapping_function_srmf",
+        "theorem:bk1_emergence_of_reflection_operator"
+      ]
+    },
+    {
+      "label": "proof:bk8_critical_projection_point",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 1244,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "proposition:bk8_optimal_projection_path",
+        "theorem:bk8_rg_fixed_point"
+      ]
+    },
+    {
+      "label": "proof:bk8_projection_transition_enabling_structural_emergence",
+      "name": null,
+      "book": "bk8",
+      "file": "book8.tex",
+      "line": 1253,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "proposition:bk8_critical_projection_point",
+        "corollary:bk8_projective_drift"
+      ]
+    },
+    {
+      "label": "proof:bk9_freedomentropy_complementarity",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 113,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk2_symbolic_free_energy"
+      ]
+    },
+    {
+      "label": "proof:bk9_selfreferential_capacity",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 122,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk9_cognitive_freedom"
+      ]
+    },
+    {
+      "label": "proof:bk9_emergence_of_moral_agency",
+      "name": "Agency requires evitability enablement",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 131,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 28,
+      "refs": [
+        "definition:bk9_automatic_operator",
+        "definition:bk9_awakened_operator",
+        "axiom:bk9_reflective_awakening",
+        "definition:bk9_cognitive_freedom",
+        "corollary:bk9_selfreferential_capacity",
+        "assumption:bk9_minimal_moral_agency_criterion"
+      ]
+    },
+    {
+      "label": "proof:bk9_final_collapse_inversion_principle",
+      "name": "Terminal liberation limits invert rather than freeze",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 175,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 22,
+      "refs": [
+        "proposition:bk9_convergence_of_recursive_liberation",
+        "definition:bk9_frame_transversal_operator",
+        "definition:bk6_symbolic_curvature_tensor",
+        "definition:bk9_collapse_inversion_operator",
+        "proposition:bk9_convergence_of_recursive_liberation",
+        "assumption:bk9_terminal_fixed_point_boundary",
+        "definition:bk9_collapse_inversion_operator"
+      ]
+    },
+    {
+      "label": "proof:bk9_evolution_of_cognitive_freedom",
+      "name": "Evolution of Cognitive Freedom",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 235,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 35,
+      "refs": []
+    },
+    {
+      "label": "proof:bk9_isolation_dissociation_theorem",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 298,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk3_autophagic_drift",
+        "definition:bk6_symbolic_curvature_tensor",
+        "corollary:bk1_non_euclidean_necessity"
+      ]
+    },
+    {
+      "label": "proof:bk9_framework_functional_identity",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 559,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 6,
+      "refs": [
+        "definition:bk9_srmf_recursive_cycle",
+        "definition:bk1_srmf_energy_functional",
+        "theorem:bk2_wasserstein_gradient_flow",
+        "theorem:bk2_h_theorem_for_symbolic_evol",
+        "theorem:bk2_wasserstein_gradient_flow"
+      ]
+    },
+    {
+      "label": "proof:bk9_meta_reflective_memory_integration",
+      "name": "Meta-Reflective Memory Integration",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 591,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 52,
+      "refs": [
+        "definition:bk1_bounded_observer",
+        "definition:bk7_meta_reflective_drift__meta",
+        "axiom:bk7_reflective_stabilization",
+        "definition:bk4_fragmentation_measure",
+        "definition:bk4_symbolic_identity_carrie",
+        "definition:bk4_symbolic_identity_carrie",
+        "definition:bk4_repair_process",
+        "axiom:bk7_reflective_stabilization",
+        "corollary:bk7_drift_collapse_equivalence",
+        "theorem:bk4_reflective_reentry",
+        "definition:bk9_cognitive_freedom",
+        "theorem:bk4_freedom_criterion",
+        "definition:bk9_awakened_operator",
+        "definition:bk9_prompt_injection_operator",
+        "definition:bk9_frame_transversal_operator",
+        "definition:bk9_cognitive_freedom",
+        "axiom:bk9_bounded_liberation_principle"
+      ]
+    },
+    {
+      "label": "proof:bk9_mutual_recognition",
+      "name": "Mutual Recognition",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 723,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "theorem:bk7_two_way_street_fixed_point",
+        "lemma:bk7_symbolic_expansion",
+        "proposition:bk9_mechanisms_of_recognition",
+        "corollary:bk7_fixed_point_tracking_within_evolving_reciprocity",
+        "definition:bk7_time_varying_reciprocity_domain",
+        "definition:bk7_reciprocity_domain",
+        "scholium:bk7_unnamed_scholium_02",
+        "scholium:bk7_on_symbolic_reciprocity"
+      ]
+    },
+    {
+      "label": "proof:bk9_betrayal_and_recovery",
+      "name": "Betrayal and Recovery",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 762,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": [
+        "definition:bk9_formal_signature_of_betrayal",
+        "definition:bk7_adaptive_reflection_operator_t",
+        "definition:bk7_meta_reflective_drift__meta",
+        "corollary:bk6_mutation_memory",
+        "definition:bk7_reciprocity_domain",
+        "definition:bk4_repair_process",
+        "proposition:bk9_modes_of_re_interpretation",
+        "scholium:bk9_forgiveness_as_reweaving",
+        "theorem:bk7_two_way_street_fixed_point",
+        "corollary:bk6_reflective_capacity_theorem",
+        "definition:bk9_symbolic_black_hole",
+        "definition:bk3_symbolic_membrane"
+      ]
+    },
+    {
+      "label": "proof:bk9_escape_from_irreversible_collapse",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 815,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk9_symbolic_black_hole",
+        "definition:bk9_collapse_inversion_operator"
+      ]
+    },
+    {
+      "label": "proof:bk9_symbolic_masking_and_unmasking",
+      "name": "Symbolic Masking and Unmasking",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 860,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 65,
+      "refs": [
+        "definition:bk7_convergent_symbolic_identity",
+        "definition:bk9_awakened_operator",
+        "definition:bk2_symbolic_free_energy",
+        "axiom:bk2_symbolic_fokker_planck_equation",
+        "proposition:bk6_bifurcation_threshold",
+        "definition:bk4_symbolic_identity_carrie",
+        "definition:bk4_fragmented_identity",
+        "definition:bk4_recursive_identity_encod",
+        "definition:bk4_recursive_identity_encod",
+        "definition:bk1_symbolic_riemann_tensor",
+        "definition:bk8_symbolic_adjacency",
+        "definition:bk7_reciprocity_domain",
+        "definition:bk7_adaptive_reflection_operator_t"
+      ]
+    },
+    {
+      "label": "proof:bk9_curvature_resilience_bound",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 940,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk7_symbolic_reflexive_validation_srv",
+        "corollary:bk1_non_euclidean_necessity",
+        "definition:bk4_symbolic_curvature"
+      ]
+    },
+    {
+      "label": "proof:bk9_grace_vs_avoidance",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1000,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk9_grace_operator"
+      ]
+    },
+    {
+      "label": "proof:bk9_pathologies_of_coherence",
+      "name": "Pathologies of Coherence",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1014,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 36,
+      "refs": [
+        "axiom:bk5_mutual_metabolit_viability",
+        "definition:bk2_symbolic_free_energy",
+        "definition:bk2_symbolic_free_energy",
+        "axiom:bk5_mutual_metabolit_viability",
+        "theorem:bk5_map_equilibrium",
+        "definition:bk5_symbolic_covenant",
+        "definition:bk5_covenant_resilience_index",
+        "theorem:bk5_map_equilibrium",
+        "proposition:bk5_map_mad_dichotomy",
+        "lemma:bk5_symbolic_divergence_bounds",
+        "scholium:bk5_imagination_covenant_branch_selection",
+        "axiom:bk2_symbolic_fokker_planck_equation",
+        "lemma:bk7_coarsegrained_convexity",
+        "definition:bk5_viability_domain",
+        "definition:bk2_symbolic_free_energy",
+        "proposition:bk5_map_mad_dichotomy",
+        "scholium:bk5_imagination_covenant_branch_selection",
+        "axiom:bk5_mutual_metabolit_viability",
+        "definition:bk4_fragmented_identity",
+        "definition:bk4_symbolic_identity_carrie",
+        "definition:bk9_symbolic_accountability",
+        "scholium:bk7_null_hypothesis",
+        "definition:bk4_repair_process",
+        "theorem:bk4_reflective_reentry",
+        "definition:bk9_symbolic_black_hole",
+        "definition:bk9_grace_operator",
+        "definition:bk9_cognitive_freedom",
+        "corollary:bk6_reflective_capacity_theorem",
+        "proposition:bk9_escape_from_irreversible_collapse",
+        "definition:bk9_collapse_inversion_operator",
+        "axiom:bk5_mutual_metabolit_viability"
+      ]
+    },
+    {
+      "label": "proof:bk9_symbolic_viability",
+      "name": "Symbolic Viability",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1081,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "definition:bk5_viability_domain",
+        "definition:bk4_symbolic_identity_carrie",
+        "definition:bk9_cognitive_freedom",
+        "definition:bk9_symbolic_black_hole",
+        "proposition:bk9_escape_from_irreversible_collapse",
+        "axiom:bk5_mutual_metabolit_viability",
+        "definition:bk9_symbolic_accountability",
+        "definition:bk9_cognitive_freedom",
+        "axiom:bk9_reflexive_sovereignty",
+        "definition:bk7_reciprocity_domain",
+        "corollary:bk6_reflective_capacity_theorem",
+        "definition:bk6_mutation_rate",
+        "proposition:bk6_reflective_mutation_inhibition",
+        "definition:bk4_repair_process",
+        "scholium:bk9_forgiveness_as_reweaving",
+        "theorem:bk7_reflective_convergence_to_stable_identity",
+        "corollary:bk8_symbolic_free_will",
+        "definition:bk1_bounded_observer",
+        "definition:bk4_epistemic_differential_o"
+      ]
+    },
+    {
+      "label": "proof:bk9_stability_conditions_for_the_good",
+      "name": "Viability, reciprocity, and adaptive non-collapse",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1132,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 57,
+      "refs": [
+        "definition:bk5_viability_domain",
+        "theorem:bk3_criteria_persistent_symbolic_life",
+        "proposition:bk5_viability_domain_preservation",
+        "theorem:bk5_map_equilibrium",
+        "theorem:bk5__map_dominance",
+        "definition:bk9_covenant_drift_density",
+        "definition:bk7_reciprocity_domain",
+        "definition:bk1_certified_type_preserving_symbolic_transport",
+        "proposition:bk1_certified_transport_prevents_equivocation",
+        "proposition:bk1_nonvacuity_of_certified_transport",
+        "definition:bk9_cognitive_freedom",
+        "corollary:bk9_emergence_of_moral_agency",
+        "theorem:bk8_no_free_projection"
+      ]
+    },
+    {
+      "label": "proof:bk9_good_as_lyapunov_basin",
+      "name": "Lyapunov descent, threshold selection, and basin identity",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1224,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 43,
+      "refs": [
+        "definition:bk5_viability_domain",
+        "theorem:bk7_reflective_convergence_to_stable_identity",
+        "theorem:bk5_map_equilibrium",
+        "theorem:bk5__map_dominance",
+        "theorem:bk5_map_mad_mas_trichotomy",
+        "proposition:bk9_stability_conditions_for_the_good"
+      ]
+    },
+    {
+      "label": "proof:bk9_mutual_convergence_criterion",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1307,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk9_two_way_street_operator",
+        "theorem:bk7_reflective_convergence_to_stable_identity"
+      ]
+    },
+    {
+      "label": "proof:bk9_emergence_of_shared_manifold",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1320,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "lemma:bk9_mutual_convergence_criterion",
+        "corollary:bk8_projection_transition_enabling_structural_emergence"
+      ]
+    },
+    {
+      "label": "proof:bk9_symbolic_thermostat",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1345,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk9_symbolic_thermodynamic_stress",
+        "definition:bk9_two_way_street_operator",
+        "definition:bk9_orthogonal_time_component",
+        "definition:bk6_symbolic_curvature_tensor",
+        "definition:bk8_projective_compression_operator"
+      ]
+    },
+    {
+      "label": "proof:bk9_relational_freedom_via_thermoregulation",
+      "name": null,
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1354,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk9_symbolic_thermostat",
+        "proposition:bk9_emergence_of_shared_manifold",
+        "definition:bk9_srmf_recursive_cycle"
+      ]
+    },
+    {
+      "label": "proof:bk9_freedom_as_grace",
+      "name": "Maximality in the reflective-operator order is graceful capacity",
+      "book": "bk9",
+      "file": "book9.tex",
+      "line": 1401,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 63,
+      "refs": [
+        "definition:bk9_cognitive_freedom",
+        "definition:bk9_grace_operator",
+        "theorem:bk1_nonvacuity_minimal_linear_ps_model",
+        "definition:bk1_certified_type_preserving_symbolic_transport",
+        "proposition:bk9_grace_vs_avoidance",
+        "definition:bk9_grace_operator",
+        "proposition:bk9_grace_vs_avoidance",
+        "definition:bk9_grace_operator",
+        "definition:bk9_cognitive_freedom",
+        "definition:bk9_grace_operator",
+        "proposition:bk9_grace_vs_avoidance",
+        "theorem:bk9_irreversibility_of_covenant_breach_without_grace"
+      ]
+    },
+    {
+      "label": "proof:appB_energy_contraction",
+      "name": null,
+      "book": "appB",
+      "file": "appendix_symbolic_reflexive_validation.tex",
+      "line": 146,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "assumption:appB_srv_dissipativity",
+        "definition:appB_symbolic_energy"
+      ]
+    },
+    {
+      "label": "proof:appB_srv_cauchy",
+      "name": null,
+      "book": "appB",
+      "file": "appendix_symbolic_reflexive_validation.tex",
+      "line": 164,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "lemma:appB_energy_contraction",
+        "assumption:appB_srv_dissipativity",
+        "definition:appB_observer_metric"
+      ]
+    },
+    {
+      "label": "proof:appB_metric_completion",
+      "name": null,
+      "book": "appB",
+      "file": "appendix_symbolic_reflexive_validation.tex",
+      "line": 187,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk4_coherence_metric_on_symbolic_manifold",
+        "definition:appB_symbolic_state_space"
+      ]
+    },
+    {
+      "label": "proof:appB_chart_bounds",
+      "name": null,
+      "book": "appB",
+      "file": "appendix_symbolic_reflexive_validation.tex",
+      "line": 209,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:appB_symbolic_chart",
+        "definition:appB_symbolic_state_space",
+        "definition:appB_symbolic_energy"
+      ]
+    },
+    {
+      "label": "proof:appB_smooth_atlas",
+      "name": null,
+      "book": "appB",
+      "file": "appendix_symbolic_reflexive_validation.tex",
+      "line": 224,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:appB_metric_completion",
+        "assumption:appB_chart_compatibility",
+        "definition:appB_symbolic_state_space",
+        "lemma:appB_chart_bounds"
+      ]
+    },
+    {
+      "label": "proof:appB_smoothness_emergence",
+      "name": null,
+      "book": "appB",
+      "file": "appendix_symbolic_reflexive_validation.tex",
+      "line": 247,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:appB_smooth_atlas",
+        "theorem:appB_metric_completion",
+        "axiom:bk1_topological_regularity",
+        "axiom:bk1_pre_geometric_nature"
+      ]
+    },
+    {
+      "label": "proof:appB_resolution_of_smoothness",
+      "name": null,
+      "book": "appB",
+      "file": "appendix_symbolic_reflexive_validation.tex",
+      "line": 257,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "scholium:bk1_resolution_of_continuum_disjunction",
+        "definition:appB_symbolic_state_space",
+        "lemma:appB_energy_contraction",
+        "theorem:appB_srv_cauchy",
+        "theorem:appB_metric_completion",
+        "theorem:appB_smooth_atlas",
+        "theorem:appB_smoothness_emergence"
+      ]
+    },
+    {
+      "label": "proof:appC_dual_horizon_signature_observational",
+      "name": "Proof of Theorem~\\ref{theorem:appC_dual_horizon_signature} (observational modality)",
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 105,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 31,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_dual_horizon_signature_geometric",
+      "name": "Proof of Theorem~\\ref{theorem:appC_dual_horizon_signature} (geometric modality)",
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 148,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 30,
+      "refs": [
+        "assumption:appC_emergence_domination"
+      ]
+    },
+    {
+      "label": "proof:appC_dual_horizon_biconditional",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 224,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "assumption:appC_emergence_domination",
+        "assumption:appC_emergence_coupling",
+        "theorem:appC_dual_horizon_signature"
+      ]
+    },
+    {
+      "label": "proof:appC_orthogonal_token_separation",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 478,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "assumption:appC_bounded_discernibility"
+      ]
+    },
+    {
+      "label": "proof:appC_coarse_graining_tokens",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 494,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": [
+        "lemma:appC_orthogonal_token_separation"
+      ]
+    },
+    {
+      "label": "proof:appC_orthogonal_additivity",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 515,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "definition:appC_observer_coherence_budget",
+        "lemma:appC_coarse_graining_tokens"
+      ]
+    },
+    {
+      "label": "proof:appC_psc3",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 599,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "theorem:appC_orthogonal_additivity",
+        "definition:appC_observer_coherence_budget"
+      ]
+    },
+    {
+      "label": "proof:appC_sigma_additivity",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 656,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "axiom:appC_psc3",
+        "theorem:appC_orthogonal_additivity",
+        "theorem:appC_orthogonal_additivity"
+      ]
+    },
+    {
+      "label": "proof:appC_unitary_invariance",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 685,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_born_rule",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 717,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 29,
+      "refs": [
+        "lemma:appC_sigma_additivity"
+      ]
+    },
+    {
+      "label": "proof:appC_qubit_case",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 761,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "theorem:appC_born_rule"
+      ]
+    },
+    {
+      "label": "proof:appC_mixed_states",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 785,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "theorem:appC_born_rule"
+      ]
+    },
+    {
+      "label": "proof:appC_fundamental_irreversibility",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 856,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "axiom:appC_axiom_of_memory"
+      ]
+    },
+    {
+      "label": "proof:appC_emergence_of_time_arrow_final",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 889,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_phi_from_lagrangian",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 949,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 18,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_banach_space_of_curvature_flows",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1030,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_phi_min_growth",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1075,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "theorem:appC_phi_from_lagrangian"
+      ]
+    },
+    {
+      "label": "proof:appC_phi_as_spectral_radius",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1116,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_phi_minimized_entropy_per_complexity",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1154,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "theorem:appC_phi_min_growth"
+      ]
+    },
+    {
+      "label": "proof:appC_geodesic_convergence",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1196,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 8,
+      "refs": [
+        "definition:appC_phi_stable_region"
+      ]
+    },
+    {
+      "label": "proof:appC_matrix_rep_symbolic_operators",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1243,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_phi_eigenvalue_recursive_emergence",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1264,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_fibonacci_matrix_powers",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1292,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_conditional_minimality_2x2",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1315,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "lemma:appC_matrix_representation_symbolic_operators"
+      ]
+    },
+    {
+      "label": "proof:appC_geometric_interpretation_curvature",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1359,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "definition:appC_bounded_symbolic_observer_dynamics"
+      ]
+    },
+    {
+      "label": "proof:appC_phi_minimal_curvature",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1379,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 20,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_stability_phi_flow",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1416,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_unified_recursive_fixed_point",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1440,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": []
+    },
+    {
+      "label": "proof:appC_modal_transference",
+      "name": null,
+      "book": "appC",
+      "file": "appendix_dual_horizon.tex",
+      "line": 1534,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": []
+    },
+    {
+      "label": "proof:appD_bounded_increment_parameter_lift",
+      "name": "Proof: bounded-increment parameter lift",
+      "book": "appD",
+      "file": "appendix_symbolic_framing.tex",
+      "line": 283,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 47,
+      "refs": [
+        "definition:appD_llm_observer_tuple",
+        "theorem:bk4_test_time_differentiation_c",
+        "definition:bk7_symbolic_reflexive_validation_srv"
+      ]
+    },
+    {
+      "label": "proof:appD_titans_as_arrow_of_time",
+      "name": null,
+      "book": "appD",
+      "file": "appendix_symbolic_framing.tex",
+      "line": 524,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "axiom:appC_axiom_of_memory",
+        "theorem:appC_fundamental_irreversibility_final"
+      ]
+    },
+    {
+      "label": "proof:bk1_fix_s_in_s",
+      "name": "Symbol Preservation Under Drift\u2013Reflection Fixation",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 167,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "definition:bk1_kernel_based_bounded_symbolic_approximation",
+        "definition:bk1_bounded_observer"
+      ]
+    },
+    {
+      "label": "proof:bk1_boundedness_encoding_cost",
+      "name": "Boundedness of Observer Encoding Cost",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 262,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "definition:bk1_observer_relative_interpretability"
+      ]
+    },
+    {
+      "label": "proof:bk1_energy_bound_identity",
+      "name": "Bounded Energy Ensures Identity Integrity",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 302,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "definition:bk1_observer_relative_interpretability",
+        "definition:bk1_stage_composite_operator",
+        "definition:bk1_pre_geometric_operators_and_stages",
+        "definition:bk1_bounded_observer",
+        "definition:bk1_pre_geometric_operators_and_stages"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_effective_proto_drift_field_induction",
+      "name": "Fundamental Operators as Bounded Symbolic Approximations",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 392,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": [
+        "axiom:bk1_observable_gradation_of_pre_geometric_operations",
+        "definition:bk1_bounded_observer",
+        "definition:bk1_proto_drift_field",
+        "definition:bk1_bounded_symbolic_approximation",
+        "definition:bk1_pre_geometric_operators_and_stages",
+        "definition:bk1_bounded_symbolic_approximation"
+      ]
+    },
+    {
+      "label": "proof:bk1_drift_deviation_bound",
+      "name": "Proto-Drift Induces Directional Deviation Bound",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 451,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "definition:bk1_proto_drift_field",
+        "definition:bk1_bounded_observer",
+        "definition:bk1_bounded_symbolic_approximation"
+      ]
+    },
+    {
+      "label": "proof:bk1_observer_threshold_reflexivity",
+      "name": "Observer Threshold Governs Reflexive Admissibility",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 489,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "lemma:bk1_observer_bounded_emergence_constraint",
+        "definition:bk1_bounded_observer"
+      ]
+    },
+    {
+      "label": "proof:bk1_observer_kernel_convolution",
+      "name": "Convolutional Identity from Observer Kernel Properties",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 502,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "proposition:bk1_sufficient_condition_for_kernel_boundedness_from_uniform_drift_bound",
+        "definition:bk1_proto_drift_field",
+        "proof:bk1_drift_deviation_bound",
+        "definition:bk1_bounded_observer",
+        "definition:bk1_kernel_based_bounded_symbolic_approximation"
+      ]
+    },
+    {
+      "label": "proof:bk1_bounded_drift_approximation",
+      "name": "Bounded Approximation Guarantees Drift Convergence",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 604,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 28,
+      "refs": [
+        "definition:bk1_bounded_symbolic_approximation",
+        "definition:bk1_pre_geometric_operators_and_stages",
+        "definition:bk1_stage_composite_operator",
+        "axiom:bk1_summable_resolution_decay"
+      ]
+    },
+    {
+      "label": "proof:bk1_colimit_yields_categoric_structure",
+      "name": "Colimit Structure Yields Symbolic Cohesion",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 714,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "axiom:bk1_axiomata_prima",
+        "definition:bk1_pre_geometric_operators_and_stages",
+        "definition:bk1_directed_system_of_emergence"
+      ]
+    },
+    {
+      "label": "proof:bk1_proof_of_dual_horizon_necessity_theorem",
+      "name": "Proof of Dual Horizon Necessity Theorem",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 800,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 42,
+      "refs": [
+        "definition:bk1_bounded_reflexive_emergence",
+        "corollary:bk1_fixed_point",
+        "definition:bk1_effective_horizon_signature",
+        "definition:bk1_drift_field",
+        "definition:bk1_reflection_operator",
+        "corollary:bk1_fixed_point",
+        "theorem:appC_dual_horizon_signature"
+      ]
+    },
+    {
+      "label": "proof:bk1_horizon_characterization",
+      "name": "Effective Signature Separates the Horizon Roles",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 856,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "definition:bk1_effective_horizon_signature",
+        "theorem:bk1_dual_horizon_necessity_theorem",
+        "definition:bk1_drift_field",
+        "definition:bk1_reflection_operator"
+      ]
+    },
+    {
+      "label": "proof:bk1_horizon_duality_principle",
+      "name": "Dual Signature Is Minimal for Reflexive Emergence",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 879,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 12,
+      "refs": [
+        "theorem:bk1_dual_horizon_necessity_theorem",
+        "lemma:bk1_horizon_characterization",
+        "axiom:bk1_axiomata_prima"
+      ]
+    },
+    {
+      "label": "proof:bk1_constitutive_bootstrap_extraction",
+      "name": "Extraction from Reflective Closure",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1066,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 8,
+      "refs": [
+        "corollary:bk1_fixed_point",
+        "definition:bk1_bounded_observer"
+      ]
+    },
+    {
+      "label": "proof:bk1_constructive_resolution",
+      "name": "Constructive Resolution via Fiber Bundle Extension",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1359,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 5,
+      "refs": [
+        "definition:bk1_symbolic_contradiction",
+        "definition:bk1_symbolic_manifold",
+        "definition:bk1_drift_field",
+        "lemma:bk1_contradiction_resolution_principle"
+      ]
+    },
+    {
+      "label": "proof:bk1_contextual_nonseparability",
+      "name": "Separable updates are exactly the context-free ones",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1394,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": []
+    },
+    {
+      "label": "proof:bk1_geometric_necessity_curvature",
+      "name": "Quadratic Necessity from Mixed Contextual Coupling",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1452,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 55,
+      "refs": [
+        "definition:bk1_drift_field",
+        "theorem:bk1_constitutive_bootstrap",
+        "definition:bk1_symbolic_contradiction",
+        "definition:bk1_emergence_event"
+      ]
+    },
+    {
+      "label": "proof:bk1_linear_insufficiency",
+      "name": "Linear updates are context-free",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1543,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 9,
+      "refs": [
+        "lemma:bk1_contextual_nonseparability",
+        "theorem:bk1_quadratic_structure_necessity"
+      ]
+    },
+    {
+      "label": "proof:bk1_bridge_to_geometry",
+      "name": "Quadratic Coupling Gives the Local Metric",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1643,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 26,
+      "refs": [
+        "definition:bk1_symbolic_coupling_basis",
+        "definition:bk1_symbolic_coupling_basis",
+        "theorem:bk1_reflexivity_quadratic"
+      ]
+    },
+    {
+      "label": "proof:bk1_fixed_point_inheritance",
+      "name": "Conjugation Preserves Fixed Points",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1760,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "definition:bk1_symbolic_category"
+      ]
+    },
+    {
+      "label": "proof:bk1_limitation_linear_reflexive_maps",
+      "name": "Linear Coherence Cannot Move Its Own Fixed Structure",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1783,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "lemma:bk1_fixed_point_inheritance",
+        "definition:bk1_reflexive_update_map",
+        "corollary:bk1_linear_insufficiency"
+      ]
+    },
+    {
+      "label": "proof:bk1_linear_context_independence",
+      "name": "Linearity Has No Mixed Context Term",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1821,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "definition:bk1_symbolic_coupling",
+        "theorem:bk1_reflexivity_quadratic"
+      ]
+    },
+    {
+      "label": "proof:bk1_minimal_quadratic_sufficiency",
+      "name": "Linear Coupling Cannot Support the Three Capacities",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1856,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 24,
+      "refs": [
+        "definition:bk1_symbolic_coupling",
+        "lemma:bk1_linear_context_independence",
+        "definition:bk1_reflexive_update_map",
+        "definition:bk1_horizon_structure",
+        "proposition:bk1_limitation_linear_reflexive_maps",
+        "definition:bk1_symbolic_coupling",
+        "corollary:bk1_non_euclidean_necessity"
+      ]
+    },
+    {
+      "label": "proof:bk1_curvature_semantic_holonomy",
+      "name": "Curvature is the second-order transport defect",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1944,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "definition:bk1_symbolic_riemann_tensor"
+      ]
+    },
+    {
+      "label": "proof:bk1_curvature_semantic_entanglement",
+      "name": "Flatness iff local semantic independence",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 1969,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "lemma:bk1_curvature_semantic_holonomy",
+        "lemma:bk1_curvature_semantic_holonomy"
+      ]
+    },
+    {
+      "label": "proof:bk1_curvature_projection_residue",
+      "name": "Projection residue from failed path independence",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2005,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "proposition:bk1_curvature_semantic_entanglement"
+      ]
+    },
+    {
+      "label": "proof:bk1_symbolic_emergence_and_curvature",
+      "name": null,
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2034,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": [
+        "proposition:bk1_curvature_semantic_entanglement",
+        "definition:bk1_local_semantic_independence",
+        "lemma:bk1_curvature_semantic_holonomy",
+        "definition:bk1_horizon_structure",
+        "definition:bk1_emergence_event",
+        "proposition:bk1_curvature_semantic_entanglement",
+        "corollary:bk1_non_euclidean_necessity"
+      ]
+    },
+    {
+      "label": "proof:bk1_dimensional_bounds_emergence",
+      "name": null,
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2056,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk1_symbolic_emergence_and_curvature",
+        "lemma:bk1_curvature_semantic_holonomy"
+      ]
+    },
+    {
+      "label": "proof:bk1_newtonian_incompleteness",
+      "name": "Covariance Boundary",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2093,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": []
+    },
+    {
+      "label": "proof:bk1_symbolic_quantum_incompatibility",
+      "name": "Tensor Dimension Obstruction",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2139,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": []
+    },
+    {
+      "label": "proof:bk1_symbolic_emergence_theorem_thermodynamics",
+      "name": "Nonseparability Forces a Cross-Error",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2184,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": []
+    },
+    {
+      "label": "proof:bk1_necessity_of_non_euclidean_symbolic_space",
+      "name": "Nonzero Holonomy Obstructs Flat Transport",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2210,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk1_paradoxical_symmetry_breaking",
+      "name": "Resolution Breaks the Stabilizer of the Paradox",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2281,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "definition:bk1_paradox_triggered_emergence"
+      ]
+    },
+    {
+      "label": "proof:bk1_shared_paradox_bridge_datum",
+      "name": "The Shared Edge Carries the Common Obstruction",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2328,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "definition:bk1_shared_boundary_paradox",
+        "definition:bk1_shared_boundary_paradox",
+        "definition:bk1_paradox_triggered_emergence",
+        "lemma:bk1_paradoxical_symmetry_breaking"
+      ]
+    },
+    {
+      "label": "proof:bk1_contrapositive_search_principle",
+      "name": "Bounded Observers Cannot Certify the Universal Negative",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2359,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 13,
+      "refs": [
+        "theorem:bk1_shared_paradox_bridge_datum",
+        "definition:bk1_bounded_observer"
+      ]
+    },
+    {
+      "label": "proof:bk1_symbolic_irony_requires_curvature",
+      "name": null,
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2392,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "definition:bk1_reflexive_encoding_depth",
+        "definition:bk1_observer_horizon_structure",
+        "lemma:bk1_curvature_semantic_holonomy",
+        "corollary:bk1_non_euclidean_necessity"
+      ]
+    },
+    {
+      "label": "proof:bk1_operational_irony_requires_reflexive_curvature",
+      "name": "Lift of the model-internal necessity to operational capacity",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2419,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 28,
+      "refs": [
+        "theorem:bk1_symbolic_irony_requires_curvature",
+        "definition:bk1_reflexive_encoding_depth",
+        "lemma:bk1_curvature_semantic_holonomy",
+        "theorem:bk1_symbolic_irony_requires_curvature"
+      ]
+    },
+    {
+      "label": "proof:bk1_operational_irony_requires_imagination",
+      "name": "The ironic opposition is an imaginary displacement",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2465,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 21,
+      "refs": [
+        "theorem:bk1_operational_irony_requires_reflexive_curvature",
+        "lemma:bk1_curvature_semantic_holonomy",
+        "definition:bk4_imaginary_symbolic_distance",
+        "proposition:bk4_imaginative_continuity_principle",
+        "scholium:bk4_imagination_as_imaginary_traversal"
+      ]
+    },
+    {
+      "label": "proof:bk1_dual_horizon_unification_principle",
+      "name": "Projection Through the Dual Horizon Signature",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2554,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 26,
+      "refs": [
+        "theorem:bk1_dual_horizon_necessity_theorem",
+        "proposition:bk1_newtonian_incompleteness",
+        "proposition:bk1_limitation_linear_reflexive_maps",
+        "definition:bk1_symbolic_riemann_tensor"
+      ]
+    },
+    {
+      "label": "proof:bk1_horizon_crossing_conservation",
+      "name": "Closed Horizon Pair Conserves Symbolic Density",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2602,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 25,
+      "refs": [
+        "definition:bk1_horizon_crossing_operation"
+      ]
+    },
+    {
+      "label": "proof:bk1_unified_field_classification",
+      "name": "Fields as SRMF Boundary-Symmetry Sectors",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2642,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 17,
+      "refs": [
+        "definition:bk1_self_regulating_mapping_function_srmf",
+        "definition:bk1_emergence_event"
+      ]
+    },
+    {
+      "label": "proof:bk1_atlas_final_topology_phase_space",
+      "name": "Atlas Construction on Final Topology of Symbolic Phase Space",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2775,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 6,
+      "refs": [
+        "axiom:bk1_symbolic_smoothness",
+        "definition:bk1_pre_geometric_operators_and_stages",
+        "definition:appB_symbolic_chart",
+        "axiom:bk1_symbolic_smoothness",
+        "axiom:bk1_topological_regularity",
+        "axiom:bk1_symbolic_smoothness"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_coherence_drift_reflection",
+      "name": "Coherence of Proto-Drift Fields via Chart Convergence",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2818,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 31,
+      "refs": [
+        "axiom:bk1_local_charitability",
+        "axiom:bk1_smooth_convergence",
+        "definition:bk1_pre_geometric_operators_and_stages"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_drift_limit_vector_field",
+      "name": "Limit Vector Field from Local Drift Coherence",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2864,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "axiom:bk1_symbolic_smoothness",
+        "lemma:bk1_coherence_of_proto_drift_fields",
+        "axiom:bk1_symbolic_smoothness"
+      ]
+    },
+    {
+      "label": "proof:bk1_existence_and_uniqueness_of_flow",
+      "name": null,
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2881,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk1_emergence_of_drift_field",
+        "definition:bk1_symbolic_manifold_existence",
+        "definition:bk1_symbolic_flow"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_construction_proto_metric",
+      "name": "Construction of Proto-Metric on Symbolic Layers",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2889,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 33,
+      "refs": [
+        "definition:bk1_pre_geometric_operators_and_stages",
+        "definition:bk1_proto_drift_field",
+        "lemma:bk1_coherence_of_proto_drift_fields",
+        "axiom:bk1_symbolic_smoothness"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_symbolic_connectivity",
+      "name": "Symbolic Connectivity via Hopf--Rinow",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2937,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 14,
+      "refs": [
+        "theorem:bk1_manifold_emergence",
+        "axiom:bk1_topological_regularity",
+        "lemma:bk1_existence_of_metric",
+        "theorem:bk1_emergence_of_drift_field",
+        "axiom:bk1_symbolic_smoothness"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_limit_stabilization_colimit",
+      "name": "Limit of Stabilization Operators via Colimit",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 2970,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 27,
+      "refs": [
+        "definition:bk1_pre_geometric_operators_and_stages",
+        "definition:bk1_proto_symbolic_space",
+        "axiom:bk1_smooth_convergence",
+        "definition:bk1_pre_geometric_operators_and_stages"
+      ]
+    },
+    {
+      "label": "proof:bk1_fixed_point_contraction_stability",
+      "name": "Fixed Locus from Idempotent Stabilization",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3018,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 10,
+      "refs": []
+    },
+    {
+      "label": "proof:bk1_sketch_smoothness_linearization",
+      "name": "Smoothness of Symbolic Hamiltonian",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3072,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 20,
+      "refs": [
+        "theorem:bk1_emergence_of_drift_field",
+        "lemma:bk1_existence_of_metric",
+        "definition:bk1_symbolic_manifold_existence",
+        "theorem:bk1_emergence_of_reflection_operator",
+        "lemma:bk1_completeness_of_symbolic_distance"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_fokker_planck_microdynamics",
+      "name": null,
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3106,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 11,
+      "refs": [
+        "theorem:bk1_emergence_of_drift_field",
+        "definition:bk1_symbolic_manifold_existence",
+        "lemma:bk1_existence_of_metric",
+        "definition:bk1_symbolic_probabilty_density"
+      ]
+    },
+    {
+      "label": "proof:bk1_lagrange_free_energy",
+      "name": "Free Energy Minimization via Lagrange Multipliers",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3130,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 31,
+      "refs": [
+        "definition:bk1_symbolic_entropy",
+        "definition:bk1_symbolic_hamiltonian",
+        "definition:bk1_symbolic_probabilty_density"
+      ]
+    },
+    {
+      "label": "proof:bk1_equilibrium_distribution",
+      "name": "Lagrange Multiplier Normalization Gives the Gibbs Form",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3174,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 15,
+      "refs": [
+        "theorem:bk1_variational_principle",
+        "proof:bk1_lagrange_free_energy"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_direct_evaluation",
+      "name": "H-Theorem via Symbolic Integration by Parts",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3197,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 55,
+      "refs": [
+        "theorem:bk1_fundamental_relation_fokker_plank_equation",
+        "definition:bk1_symbolic_hamiltonian",
+        "theorem:bk1_the_fokker_planck_equation_theorem",
+        "definition:bk1_symbolic_entropy",
+        "definition:bk1_symbolic_hamiltonian",
+        "lemma:bk1_completeness_of_symbolic_distance",
+        "corollary:bk1_equilibrium_distribution"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_thermo_analogy_fokker_planck",
+      "name": "Thermodynamic Analogy via Symbolic Fokker--Planck",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3276,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk1_fundamental_relation_fokker_plank_equation",
+        "theorem:bk1_variational_principle",
+        "theorem:bk1_h_theorem_for_symbolic_evolution"
+      ]
+    },
+    {
+      "label": "proof:bk1_realization_of_symbolic_phase_transitions",
+      "name": null,
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3294,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk5_map_mad_critical_temperature",
+        "definition:bk1_symbolic_phase_transitions",
+        "theorem:bk5_map_mad_mas_trichotomy",
+        "theorem:bk8_biological_phase_transition",
+        "definition:bk1_symbolic_phase_transitions",
+        "theorem:bk2_classification_symb_phase_transitions"
+      ]
+    },
+    {
+      "label": "proof:bk1_nonvacuity_minimal_linear_ps_model",
+      "name": "Explicit Matrix Witness",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3374,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 67,
+      "refs": [
+        "definition:bk1_symbolic_manifold",
+        "definition:bk1_drift_field",
+        "definition:bk1_reflection_operator",
+        "definition:bk1_symbolic_connection",
+        "definition:bk1_symbolic_riemann_tensor"
+      ]
+    },
+    {
+      "label": "proof:bk1_certified_transport_prevents_equivocation",
+      "name": "Role preservation by certificate",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3506,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 23,
+      "refs": [
+        "definition:bk1_certified_type_preserving_symbolic_transport"
+      ]
+    },
+    {
+      "label": "proof:bk1_nonvacuity_of_certified_transport",
+      "name": "Exact and projective certificates in the minimal witness",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3540,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 31,
+      "refs": [
+        "definition:bk1_minimal_linear_ps_model",
+        "theorem:bk1_nonvacuity_minimal_linear_ps_model",
+        "definition:bk1_certified_type_preserving_symbolic_transport"
+      ]
+    },
+    {
+      "label": "proof:bk1_conditional_genericity_of_symbolic_phase_transitions",
+      "name": "Transversal discriminant crossing stabilized above the critical dimension",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3604,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 26,
+      "refs": [
+        "theorem:bk5_map_mad_mas_trichotomy",
+        "definition:bk1_symbolic_phase_transitions",
+        "theorem:bk5_map_mad_critical_temperature",
+        "conjecture:bk1_genericity_of_symbolic_phase_transitions"
+      ]
+    },
+    {
+      "label": "proof:bk1_imagination_supplies_effective_dimension",
+      "name": "Imagination discharges (H1)--(H3)",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3648,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 34,
+      "refs": [
+        "definition:bk4_imaginary_symbolic_distance",
+        "proposition:bk4_imaginative_continuity_principle",
+        "scholium:bk5_imagination_covenant_branch_selection",
+        "theorem:bk5_map_mad_mas_trichotomy",
+        "theorem:bk1_operational_irony_requires_imagination"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_stability_drift_reflection",
+      "name": "Stability via the projection-split linearization",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3727,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 7,
+      "refs": []
+    },
+    {
+      "label": "proof:bk1_sketch_fluctuation_dissipation",
+      "name": "Fluctuation--Dissipation via Kubo Linear Response",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3761,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 3,
+      "refs": [
+        "theorem:bk1_fundamental_relation_fokker_plank_equation"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_fokker_planck_action",
+      "name": "Fokker--Planck from Symbolic Action via Martin--Siggia--Rose",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3792,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 21,
+      "refs": [
+        "definition:bk1_symbolic_manifold",
+        "definition:bk1_drift_field",
+        "theorem:bk1_fundamental_relation_fokker_plank_equation"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_gradient_flow_thermodynamics",
+      "name": "Gradient Flow Structure via JKO",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3841,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 41,
+      "refs": [
+        "definition:bk1_symbolic_information_geometry",
+        "proof:bk1_lagrange_free_energy",
+        "theorem:bk1_fundamental_relation_fokker_plank_equation",
+        "proof:bk1_sketch_direct_evaluation",
+        "definition:bk1_symbolic_information_geometry"
+      ]
+    },
+    {
+      "label": "proof:bk1_wasserstein_geometric_interpretation",
+      "name": "Restatement of the Wasserstein Gradient-Flow Theorem",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3898,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 16,
+      "refs": [
+        "theorem:bk1_the_fokker_planck_equation_theorem",
+        "proof:bk1_sketch_gradient_flow_thermodynamics",
+        "definition:bk1_symbolic_information_geometry"
+      ]
+    },
+    {
+      "label": "proof:bk1_sketch_observed_consequences",
+      "name": "Cosmogenesis via Dual Horizon Necessity",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 3977,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 31,
+      "refs": [
+        "definition:bk1_cosmological_symbolization_functor",
+        "definition:bk1_symbolic_riemann_tensor",
+        "definition:bk1_reflection_operator",
+        "definition:bk1_bounded_observer",
+        "theorem:bk1_dual_horizon_necessity_theorem",
+        "proof:bk1_proof_of_dual_horizon_necessity_theorem",
+        "theorem:bk1_emergence_of_drift_field",
+        "theorem:bk1_emergence_of_reflection_operator",
+        "lemma:bk1_horizon_characterization",
+        "definition:bk2_symbolic_hamiltonian",
+        "theorem:bk1_fundamental_relation_fokker_plank_equation",
+        "theorem:bk2_equilibrium_distribution",
+        "theorem:bk1_variational_principle",
+        "theorem:bk3_membrane_stability_criteria",
+        "theorem:bk4_existence_of_symbolic_ident"
+      ]
+    },
+    {
+      "label": "proof:bk1_event_horizon_identity_field",
+      "name": "Identity Field on the Symbolized Causal Patch",
+      "book": "scholium",
+      "file": "scholium_symbolicum.tex",
+      "line": 4044,
+      "tier": "HONEST",
+      "reason": "ok",
+      "body_lines": 19,
+      "refs": [
+        "theorem:bk1_dual_horizon_cosmogenesis",
+        "proof:bk1_sketch_observed_consequences",
+        "definition:bk1_bounded_observer",
+        "theorem:bk1_dual_horizon_necessity_theorem",
+        "theorem:bk1_dual_horizon_unification_principle",
+        "corollary:bk1_wasserstein_geometric_interpretation"
+      ]
+    }
+  ]
+}

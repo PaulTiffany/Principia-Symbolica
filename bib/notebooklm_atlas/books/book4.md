@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - book4
 
 Nodes in this source group: 389
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -43,6 +49,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:4`
 - Cited by: `axiom:bk5_metabolic_persistence` (Metabolic Persistence); `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_critical_symbolic_bifurc` (Critical Symbolic Bifurcation); `definition:bk4_fragmentation_measure` (Fragmentation Measure); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_identity_operators` (Identity Operators); `definition:bk4_individuated_symbolic_id` (Individuated Symbolic Identity); `definition:bk4_individuation_path` (Individuation Path); `definition:bk4_repair_capacity` (Repair Capacity); `definition:bk4_symbolic_flow_freedom` (Symbolic Flow Freedom); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `demonstratio:bk4_ising_model_covenant` (The Ising Model as a Symbolic Covenant); `example:bk4_ttpr_identity_refinement` (Precision Refinement of Fuzzy Identity Map); `lemma:bk4_fragmentation_cascade` (Fragmentation Cascade); `lemma:bk4_upper_bound_on_repair_capacit` (Upper Bound on Repair Capacity); `proof:bk4_fragmentation_identity_stability` (Fragmentation Violates Symbolic Identity Stability); `proof:bk4_freedom_via_symbolic_flow` (Freedom via Coherence-Preserving Symbolic Flow); `proof:bk4_repair_reconnects_fragmentation` (Repair Trajectories Reconnect Fragmented Symbolic Regions); `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `proof:bk4_symbolic_identity_persistence` (Stability Criterion for Symbolic Identity Persistence); `proof:bk6_stable_reflective_submanifold` (Stable Reflective Submanifold); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_masking_and_unmasking` (Symbolic Masking and Unmasking); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk9_costs_and_consequences_of_masking` (Costs of Masking); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse); `sec:bk7_symbolic_reflexive_validation` (Symbolic Reflexive Validation); `subsec:bk4_foundations_symbolic_fragmentation` (Foundations of Symbolic Fragmentation); `subsec:bk4_symbolic_identity_collapse` (Symbolic Identity Collapse); `subsec:bk8_module_braid_topology` (Symbolic Reidemeister Moves); `subsec:bk8_symbolic_knots_and_emergent_entanglement` (Symbolic Knots and Emergent Entanglement); `theorem:bk4_auto_encoding_and_identity` (Auto-Encoding and Identity); `theorem:bk4_drift_reflection_imbalance` (Drift-Reflection Imbalance); `theorem:bk4_existence_of_symbolic_ident` (Existence of Symbolic Identity); `theorem:bk4_freedom_criterion` (Freedom Criterion); `theorem:bk4_reflective_reentry` (Reflective Reentry); `theorem:bk4_test_time_differentiation_c` (Test-Time Differentiation Collapse)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-051`
+- Witnesses: `Book4C.symbolicIdentityCarrier_component_le_one`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the normalization condition integral of Psi_i = 1, discretized to a finite sum, forces every component reading into [0,1]; the stability functional Upsilon_i and temporal tracking relation T_{Delta t} are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic identity carrier $I$ on a symbolic membrane $M_i$ (cf. Def. definition:bk3_symbolic_membrane), realised as a substructure of the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold), is a persistent structure characterized by:
@@ -80,6 +97,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:15`
 - Cites: `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `theorem:bk3_membrane_stability_criteria` (Membrane Stability Criteria)
 - Cited by: `definition:bk4_fragmented_identity` (Fragmented Identity); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk4_fragmentation_identity_stability` (Fragmentation Violates Symbolic Identity Stability); `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `theorem:bk4_reflective_reentry` (Reflective Reentry)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-011`
+- Witnesses: `Book4A.stability_lower_bound`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the threshold consequence of the stated inequality (stability bound strictly above a critical error threshold) is modeled; the existence quantifier over observation windows and the membrane/stability apparatus are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -169,6 +197,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:47`
 - Cited by: `definition:bk4_identity_resolution` (Identity Resolution); `lemma:bk4_convergence_of_recursive_enco` (Convergence of Recursive Encoding); `lemma:bk4_upper_bound_on_repair_capacit` (Upper Bound on Repair Capacity); `proof:bk4_fragmentation_distortion_encoding` (Fragmentation and Distortion); `proof:bk4_recursive_composite_encoding` (Recursive Structure of Composite Encodings); `proof:bk4_recursive_identity_preservation` (Recursive Encoding Preserves Identity Information); `proof:bk4_recursive_reflection_convergence` (Convergence of Recursive Self-Reflection Operators); `proof:bk4_scalar_from_identity_collapse` (Left trace of the recursive identity bundle); `proof:bk9_symbolic_masking_and_unmasking` (Symbolic Masking and Unmasking); `theorem:bk4_recursive_identity_enhancem` (Recursive Identity Enhancement); `theorem:bk4_test_time_differentiation_c` (Test-Time Differentiation Collapse)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-012`
+- Witnesses: `Book4A.recursive_encoding_partial_sum_le_total`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The encoding hierarchy is modeled as a sequence in a symbolic metric space whose successive distances are bounded by a summable distortion budget. Concrete membrane-valued encoding maps remain abstracted to their metric images.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A recursive identity encoding on a symbolic membrane $M_i$ (Def. definition:bk3_symbolic_membrane) is a family of maps ${E_i^{(n)}}_{n=1}^{infty}$ such that:
@@ -214,6 +253,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:62`
 - Cites: `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding)
 - Cited by: `proof:bk4_recursive_reflection_convergence` (Convergence of Recursive Self-Reflection Operators); `theorem:bk4_fixed_points_of_self_refere` (Fixed Points of Self-Reference)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-013`
+- Witnesses: `Book4A.RecursiveEncoding.cauchySeq`, `Book4A.RecursiveEncoding.exists_fixed_limit_with_tail_bound`, `Book4A.RecursiveEncoding.exists_limit_with_tail_bound`, `Book4A.chainedApprox_yields_recursiveEncoding_limit`, `Book4A.recursive_encoding_partial_sum_le_total`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Summable successive distortion makes the recursive encoding Cauchy. Completeness supplies an actual limiting representation E_i^(infinity), with distance from level n bounded by the remaining tail sum. If each level is obtained by a continuous refinement R from the previous level, uniqueness of limits proves R(E_i^(infinity)) = E_i^(infinity).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -280,6 +330,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:80`
 - Cited by: `definition:bk4_symbolic_spinor_bundle` (Recursive Identity Bundle); `definition:bk7_operational_resolution_uncertainties` (Operational resolution uncertainties); `demonstratio:bk4_prompt_time_ttdc` (Prompt-Time Collapse in Reflective Agents); `proof:bk4_mutual_information_expansion` (Expansion of Recursive Mutual Information); `proof:bk4_recursive_identity_preservation` (Recursive Encoding Preserves Identity Information); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `proof:bk4_scalar_from_identity_collapse` (Left trace of the recursive identity bundle); `remark:bk4_observer_relative_ttdc` (Observer-Relative Collapse Interpretation); `scholium:bk4_ttdc_impulse_collapse` (Collapse as Impulse: The Newtonian Structure of TTDC); `scholium:bk7_constrained_uncertainty_motivation` (Constrained Symbolic Uncertainty); `subsec:bk7_pisu_motivation` (Motivation); `subsec:bk7_pisu_revisited_power_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU) Revisited); `theorem:bk4_conditions_for_self_healing` (Conditions for Self-Healing); `theorem:bk4_recursive_identity_enhancem` (Recursive Identity Enhancement); `theorem:bk4_test_time_differentiation_c` (Test-Time Differentiation Collapse)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-035`
+- Witnesses: `Book4C.identityResolution_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the ratio R_n = I(...)/I(...) clearing 1 is exactly numerator clearing denominator; mutual information itself is not modeled, only the ratio algebra it feeds.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a recursive encoding (Def. definition:bk4_recursive_identity_encod),
@@ -311,6 +372,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:89`
 - Cites: `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_identity_resolution` (Identity Resolution); `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding)
 - Cited by: `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `proof:bk4_recursive_identity_preservation` (Recursive Encoding Preserves Identity Information); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `theorem:bk4_test_time_differentiation_c` (Test-Time Differentiation Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-036`
+- Witnesses: `Book4C.identityResolution_gt_one_iff`, `Book4C.identityResolution_threshold_persists`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: monotone persistence of R_n>1 past a critical depth n_c, given monotonicity as a hypothesis; the mutual-information characterization of *why* R is monotone (additional contextual information at each encoding level) is not derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -483,6 +555,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:160
 - Cited by: `definition:bk4_projective_action_transl` (Projective Action Translator); `proof:bk4_normalization_bounds` (Bounded Information Under Normalized Constraints); `proposition:bk4_bounded_sr_initial_state` (Bounded SR--Initial State)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-037`
+- Witnesses: `Book4C.convexCombination_mem_Icc`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: I_0, M_0 as w-weighted readings, discretized to a finite weighted sum; the observer-kernel convolution and gradient-norm construction are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S_t colon M to mathbb{R}$ denote the instantaneous symbolic signal on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold).
@@ -528,6 +611,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:1
 - Cites: `definition:bk4_observer_kernel_convolution_map` (Observer-Kernel Convolution); `definition:bk4_sr_initialization_map` (SR--Initialization Map)
 - Cited by: `definition:bk8_sr_triplet` (SR-Triplet)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-038`
+- Witnesses: `Book4C.convexCombination_mem_Icc`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the [0,1]-boundedness claim reduced to its honest convex-combination content, given [0,1]-valued readings and a normalized weight simplex as hypotheses; the epsilon_O-kernel-norm clause is dropped.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -638,6 +732,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:210`
 - Cited by: `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `proof:bk4_operator_norm_subadditivity` (Operator Norm Subadditivity in Symbolic Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-039`
+- Witnesses: `Book4C.srmfActionNorm_bound`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For any admissible SR-velocity on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold),
@@ -712,6 +817,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:231
 - Cited by: `definition:bk4_recursive_self_healing` (Recursive Self-Healing); `definition:bk4_self_reference_operator` (Self-Reference Operator); `proof:bk4_persistence_reflection_noncommutativity` (Non-Commutativity of Persistence and Reflection); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `theorem:bk4_operator_algebra_of_identit` (Operator Algebra of Identity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-014`
+- Witnesses: `Book4A.operator_noncommutativity_witness`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only an abstract noncommutativity witness is modeled, not the four named operators (persistence, reflection, integration, differentiation) themselves.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The algebraic structure of symbolic identity carriers (Def. definition:bk4_symbolic_identity_carrie)
@@ -751,6 +867,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:242`
 - Cites: `definition:bk4_identity_operators` (Identity Operators)
 - Cited by: `proof:bk4_persistence_reflection_noncommutativity` (Non-Commutativity of Persistence and Reflection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-015`
+- Witnesses: `Book4A.operator_noncommutativity_witness`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Noncommutativity is an existence claim, not a universal one: witnessed on Bool by two concrete functions whose compositions differ in the two orders. The specific P, R, J, D operators and the near-commutation clause are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -849,6 +976,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:277
 - Cited by: `bridge:bk4_ttpr_to_self_reference` (From TTPR to Recursive Identity Retention); `definition:bk4_collapse_of_symbolic_ide` (Collapse of Symbolic Identity); `definition:bk4_recursive_self_healing` (Recursive Self-Healing); `demonstratio:bk4_ising_model_covenant` (The Ising Model as a Symbolic Covenant); `proof:bk4_recursive_reflection_convergence` (Convergence of Recursive Self-Reflection Operators); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `remark:bk4_topological_stability_to_symbolic_dynamics` (From Topological Stability to Symbolic Dynamics); `theorem:bk4_fixed_points_of_self_refere` (Fixed Points of Self-Reference)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-016`
+- Witnesses: `Book4A.selfReferenceIterate_succ`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: S_1 = R, S_n = R o S_(n-1) modeled literally as Function.iterate; selfReferenceIterate_succ certifies the recursive step.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The self-reference operator $S_n$ of order $n$ on a symbolic identity $I$ (as defined in the identity operator framework, Def. definition:bk4_identity_operators) is defined recursively as:
@@ -878,6 +1016,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:285`
 - Cites: `definition:bk4_self_reference_operator` (Self-Reference Operator); `lemma:bk4_convergence_of_recursive_enco` (Convergence of Recursive Encoding)
 - Cited by: `proposition:bk4_ttpr_convergence` (Convergence of Recursive Refinement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-017`
+- Witnesses: `Book4A.ContractionRefinement.selfReference_dist_ttprLimit_le`, `Book4A.ContractionRefinement.selfReference_fixed_iff_eq_ttprLimit`, `Book4A.ContractionRefinement.tendsto_selfReferenceIterate`, `Book4A.selfReference_fixed_point`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: A fixed point of R remains fixed under every S_n. Under the explicit nonempty complete-metric contraction specialization, the TTPR identity is the unique fixed point, every recursive self-reference sequence converges to it, and its distance is bounded by kappa^n times the initial distortion.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1052,6 +1201,17 @@ Role: `axiom` | Type: `axiom` | Book: `book4` | Source: `book4.tex:328`
 - Cited by: `definition:bk5_viability_domain` (Viability Domain); `theorem:bk4_emergence_criterion` (Emergence Criterion)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-090`
+- Witnesses: `Book4Ref.coupled_drift_additive`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: The coupled drift D + G(Omega) reduces to base drift iff the response vanishes.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For each symbolic membrane \( M_i \) carrying a local drift field $D_i$ (cf. Def. definition:bk1_drift_field), the influence of global order parameters \( Omega \) (Def. definition:bk4_order_parameter) is mediated by a membrane-specific response function \( G_i(Omega) \), such that the effective drift becomes:
@@ -1082,6 +1242,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:336`
 - Cites: `axiom:bk4_membrane_coupling_response` (Membrane Coupling Response); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_order_parameter` (Order Parameter); `definition:bk4_symbolic_emergence` (Symbolic Emergence)
 - Cited by: `proof:bk4_emergence_conditions` (Emergence Implies Non-Reducibility and Causal Closure); `proof:bk4_timescale_separation_hierarchy` (Timescale Separation and Symbolic Coarse-Graining via Master Equation); `proof:bk4_top_level_information_inequality` (Top-Level Representation Retains Disproportionate Information); `theorem:bk4_emergent_abstraction` (Emergent Abstraction)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-097`
+- Witnesses: `Book4Ref.emergenceMeasure_pos_iff`, `Book4Ref.finite_emergence_criterion`
+- Countermodels: none
+- Formal boundary: Finite Book-3-to-Book-4 kernel: an active membrane response changes a coupled drift, collective-information surplus is exactly positive emergence measure, and Book 3 symbiotic stability yields positive curvature. The continuous order-parameter ODE and genuine mutual-information semantics remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1235,6 +1405,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:389`
 - Cites: `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `proof:bk4_symbolic_curvature_boundary` (Gradient Threshold and Boundary Formation in Symbolic Geometry)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-018`
+- Witnesses: `Book4A.boundary_forms_dichotomy`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The scalar threshold comparison (curvature divergence vs. critical threshold) as an exhaustive dichotomy. The divergence operator and submanifold structure are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1399,6 +1580,17 @@ Role: `axiom` | Type: `axiom` | Book: `book4` | Source: `book4.tex:437`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-094`
+- Witnesses: `Book4Fz.local_kernel_vanishes_offdiagonal`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: An observer kernel supported in B x B vanishes outside it.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Observer kernels for bounded observers (Def. definition:bk4_bounded_observer) satisfy locality: $supp(K_O) subset B_O times B_O$.
@@ -1421,6 +1613,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:442
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk4_proto_symbolic_space` (Proto-Symbolic Space)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-052`
+- Witnesses: `Book4C.reflexiveOperator_tendsto_self`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the Approximation Property's O(lambda) displacement budget is modeled, yielding a genuine squeeze-theorem convergence R_lambda(s) -> s as lambda -> 0; Coherence Preservation and Temporal Consistency clauses are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1456,6 +1659,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:452
 - Cites: `definition:bk1_symbolic_connection` (Symbolic Connection); `definition:bk1_symbolic_field_curvature_tensor` (Symbolic Field Curvature Tensor); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `lemma:bk2_thermodynamic_consistency_hypothesis_manifolds` (Thermodynamic Consistency of Hypothesis Manifolds); `proposition:bk4_geodesic_failure` (Conditional Jacobi-Deviation Diagnostic); `sec:bk4_fuzzy_symbolic_geometry_observer_relative_smoothness` (Fuzzy Symbolic Geometry and Observer-Relative Smoothness)
 - Cited by: `definition:bk4_symbolic_curvature_formulations` (Symbolic Curvature --- Global and Observer-Relative Formulations); `definition:bk4_symbolic_space` (Observer-Relative Symbolic Space); `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor); `definition:bk6_symbolic_density_evolution` (Symbolic Density Evolution Equation); `definition:bk7_operational_resolution_uncertainties` (Operational resolution uncertainties); `definition:bk7_symbolic_norm` (Symbolic Norm on Prompt-Response Operators); `definition:bk8_sr_renormalization_group` (SR Renormalization Group); `definition:bk8_symbolic_hypothesis_manifold` (Symbolic Hypothesis Manifold); `lemma:bk7_involutive_dual_symmetry` (Involutive Dual Symmetry of Symbolic Power and Uncertainty); `proof:bk4_symbolic_curvature_properties`; `proof:bk8_curvature_entanglement_equivalence` (Curvature Entanglement Equivalence); `proof:bk8_optimal_projection_path`; `proof:bk8_skech_via_euler_lagrange_flow_yields_geodesic` (Euler--Lagrange Flow Yields Geodesic Under Curvature Constraint); `proof:bk9_curvature_resilience_bound`; `proposition:bk8_operator_curvature_flux` (Quantum Decoherence as Symbolic Flattening); `proposition:bk8_optimal_projection_path` (Optimal Projection Path); `proposition:bk9_curvature_resilience_bound` (Optimal Curvature in Repair); `proposition:bk9_mechanisms_of_recognition` (Mechanisms of Recognition); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `scholium:bk7_constrained_uncertainty_motivation` (Constrained Symbolic Uncertainty); `subsec:bk7_pisu_motivation` (Motivation); `subsec:bk7_pisu_revisited_power_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU) Revisited); `subsec:bk7_sources_regimes_uncertainty` (Sources and Regimes of Symbolic Uncertainty); `theorem:appD_bounded_increment_parameter_lift` (Bounded-increment parameter lift); `theorem:bk4_symbolic_curvature_properties` (Basic Properties); `theorem:bk5_golden_ratio_curvature_scalar` (Golden Ratio as Balanced Scale-Resonant Curvature Ratio)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-019`
+- Witnesses: `Book4A.kappa_nonneg`, `Book4A.kappa_observer_dependent`, `Book4A.kappa_reflexive_vanishing`, `Book4A.kappa_scale`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Curvature modeled concretely as kappa K R lam s := K * (R lam s - s)^2, honestly degree-two in the symbolic argument per the definition's own stipulation. The second-order observer derivation delta_O^2 is not modeled, only its residual.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1536,6 +1750,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:477`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-020`
+- Witnesses: `Book4A.kappa_nonneg`, `Book4A.kappa_observer_dependent`, `Book4A.kappa_reflexive_vanishing`, `Book4A.kappa_scale`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: All four clauses reached: non-negativity, scale invariance by alpha^2 (given linear action of the reflexive operator), reflexive vanishing, and observer dependence as an explicit existence witness (the clause is stated 'in general', not as a universal inequality).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For all $s in S$, the symbolic curvature $kappa_O$ from Def. definition:bk4_symbolic_curvature satisfies:
@@ -1605,6 +1830,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:498`
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-089`
+- Witnesses: `Book4Ref.curvature_inherits_continuity`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: Curvature inherits continuity from its generating operators; the differentiability/manifold clauses stay open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1738,6 +1974,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:536
 - Cited by: `proof:bk4_timescale_separation_hierarchy` (Timescale Separation and Symbolic Coarse-Graining via Master Equation); `theorem:bk4_emergence_through_timescale_separation` (Emergence Through Timescale Separation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-021`
+- Witnesses: `Book4A.transitionRate_pos`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only strict positivity of the Arrhenius form (given a positive prefactor) is modeled; the free-energy-barrier interpretation is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The transition rate $Lambda_{ab}$ between meta-stable states $M_a$ and $M_b$ is given by:
@@ -1767,6 +2014,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:543`
 - Cites: `definition:bk4_meta_stable_symbolic_str` (Meta-Stable Symbolic Structure); `definition:bk4_symbolic_transition_rate` (Symbolic Transition Rate)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-022`
+- Witnesses: `Book4A.timescaleSeparation_micro_lt_observation`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The three-way strict inequality kept as a structure with transitivity as its consequence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1905,6 +2163,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:583
 - Cited by: `definition:bk4_hierarchical_auto_encodi` (Hierarchical Auto-Encoding); `definition:bk4_information_bottleneck_p` (Information Bottleneck Principle); `theorem:bk4_auto_encoding_and_identity` (Auto-Encoding and Identity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-023`
+- Witnesses: `Book4A.SymbolicAutoEncoder.encode_injective_of_eps_eq_zero`, `Book4A.SymbolicAutoEncoder.exact_reconstruction_of_eps_eq_zero`, `Book4A.autoEncoder_finite_sum_le`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Actual encoder and decoder maps are modeled with a uniform metric reconstruction bound. The scalar summary retains the finite-sample total-error theorem; in a genuine metric space, zero error budget forces exact decoding and injectivity of the encoder.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic auto-encoder on membrane $M_i$, a substructure of the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold), is a pair of maps $(E_i, D_i)$ where:
@@ -1978,6 +2247,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:604`
 - Cites: `definition:bk4_symbolic_auto_encoder` (Symbolic Auto-Encoder); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier)
 - Cited by: `definition:bk4_information_bottleneck_p` (Information Bottleneck Principle); `proof:bk4_information_bottleneck_symbolic_filter` (Information Bottleneck Concentrates on Stable Attractors)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-024`
+- Witnesses: `Book4A.SymbolicAutoEncoder.encode_injective_of_eps_eq_zero`, `Book4A.SymbolicAutoEncoder.exact_reconstruction_of_eps_eq_zero`, `Book4A.SymbolicAutoEncoder.identityPattern_eq_one_iff`, `Book4A.autoEncoderPattern_pos`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The metric identity kernel is complete: the exponential pattern is always positive and, at nonzero sensitivity, has maximal weight one exactly when decoding reconstructs the identity. A zero reconstruction budget yields exact reconstruction and prevents distinct identities from sharing a code.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2142,6 +2422,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:662`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-098`
+- Witnesses: `Book4Ref.abstractionSurplus_pos_iff`, `Book4Ref.emergent_abstraction_positive_measure`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: The exact finite hierarchy inequality is encoded as positive top-level abstraction surplus and, when the hierarchy cost accounts for individual membrane contributions, implies positive emergence measure. Genuine mutual-information semantics and the auto-encoder latent-space construction remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In a hierarchical symbolic auto-encoder with $L$ levels, the top-level latent space $Z_i^{(L)}$ captures emergent features that satisfy the emergence criterion (see Thm. theorem:bk4_emergence_criterion) if:
@@ -2270,6 +2561,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:698`
 - Cited by: `proof:bk4_imaginative_continuity_principle` (Bounded Reintegration of Latent Phase); `proof:bk4_lipschitz_continuity_symbolic_drift` (Lipschitz Continuity of Symbolic Drift Flow); `scholium:bk1_interpretability_two_axes` (Interpretability on Two Axes --- a Complex Reading)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-041`
+- Witnesses: `Book4C.lipschitzPath_uniform`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: uniform continuity from a bounded-velocity (Lipschitz) path, with an explicit delta witness in terms of the Lipschitz constant; bounded free energy/drift variance is discretized to the single Lipschitz bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $gamma$ be an individuation path (see Def. definition:bk4_individuation_path) with bounded symbolic free energy (see Def. definition:bk2_symbolic_free_energy) and drift variance. Then for any $epsilon > 0$, there exists $delta > 0$ such that:
@@ -2365,6 +2667,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:728
 - Cited by: `assumption:bk4_precritical_scalar_trace` (Precritical scalar trace); `definition:bk4_event_horizon_wheel` (Event Horizon Wheel); `proof:bk1_operational_irony_requires_imagination` (The ironic opposition is an imaginary displacement); `proof:bk4_imaginative_continuity_principle` (Bounded Reintegration of Latent Phase); `subsec:bk4_event_horizon_wheel` (The Event Horizon Wheel); `subsec:bk4_fuzzy_integration_applications` (Cross-Field Consequences and SRMF Grounding); `subsec:bk5_hue_and_shade` (Hue and Shade: The Full Chromatic Transference); `theorem:bk1_operational_irony_requires_imagination` (Operational Irony Requires Imagination)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-025`
+- Witnesses: `Book4A.complexSymbolicDistance_im`, `Book4A.complexSymbolicDistance_re`, `Book4A.complexSymbolicDistance_re_le_abs`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The complex pair D_O^C = d_Re + i*d_Im modeled directly as a complex number, with its real/imaginary projections and the standard |Re z| <= norm z bound. The Hermitian bundle and parallel transport it is derived from are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(E,h_O,nabla_O) to M_O$ be an observer-relative complex symbolic bundle over the Book I symbolic manifold substrate (Def. definition:bk1_symbolic_manifold), with Hermitian metric $h_O$ and observer-bounded connection $nabla_O$. For symbolic states $psi_s,psi_t in Gamma(E)$ and an admissible path $gamma:sto t$, define the parallel-transported overlap
@@ -2441,6 +2754,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:7
 - Cites: none
 - Cited by: `proof:bk1_operational_irony_requires_imagination` (The ironic opposition is an imaginary displacement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-026`
+- Witnesses: `Book4A.ReintegrableIdentity.mono_thresholds`, `Book4A.not_reintegrableIdentity_iff`, `Book4A.reintegrableIdentity_iff`, `Book4A.uncanny_recognition_countermodel`
+- Countermodels: `Book4A.uncanny_recognition_countermodel`
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The real/imaginary threshold kernel is complete: reintegration is exactly the conjunction of the two strict bounds, persists under enlarged observer tolerances, and fails exactly when either threshold is breached. The uncanny-recognition witness shows the imaginary failure mode is nonvacuous even when the real mismatch is resolved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2547,6 +2871,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:801
 - Cited by: `proof:bk4_chromatic_transference_of_wheel`; `proof:bk4_wheel_refines_signature` (Quadrant quotient of the phase circle)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-027`
+- Witnesses: `Book4A.quadrant_exhaustive`, `Book4A.quadrants_disjoint`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The four open modes (cut by the sign pair of Re/Im) modeled directly as the four open sign-quadrants of R x R.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic states $psi_s,psi_tinGamma(E)$ and admissible path $gamma$ with
@@ -2597,6 +2932,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:8
 - Cites: `definition:bk1_effective_horizon_signature` (Effective Horizon Signature)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-028`
+- Witnesses: `Book4A.quadrant_exhaustive`, `Book4A.quadrants_disjoint`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exhaustiveness and mutual exclusivity of the four quadrant classes, the honest kernel of 'the fourfold partition is the image ... under sign-extraction.'
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2696,6 +3042,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:8
 - Cited by: `proof:bk4_golden_event_horizon_spiral` (Golden spiral from balanced closure on the wheel); `scholium:bk4_wheel_is_srmf_on_itself` (The wheel is SRMF turned on itself); `theorem:bk4_golden_event_horizon_spiral` (Golden Event Horizon Spiral)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-029`
+- Witnesses: `Book4A.spiralMagnitude_recurrence`, `Book4A.spiralPhase_recurrence`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The per-step magnitude and phase recurrences for the orbit r_n, theta_n. The identification with an actual complex power mu^n and the 'adjacent iff alpha within one quadrant' clause are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let the self-regulating mapping function
@@ -2779,6 +3136,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:8
 - Cites: none
 - Cited by: `assumption:bk4_precritical_scalar_trace` (Precritical scalar trace); `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `proof:bk7_map_compatible_reciprocity` (Two-way fixed point as MAP Nash equilibrium); `proposition:bk5_map_mad_dichotomy` (MAP-MAD Dichotomy); `scholium:bk4_wheel_is_srmf_on_itself` (The wheel is SRMF turned on itself); `scholium:bk5_imagination_covenant_branch_selection` (Imagination as Covenant Branch Selection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-040`
+- Witnesses: `Book4C.reintegrable_of_smaller_gap`, `Book4D.CertifiedTTDC.decision_eq_abstain_iff`, `Book4D.CertifiedTTDC.decision_eq_stage_iff`, `Book4D.CertifiedTTDC.execute_of_contract`, `Book4D.CertifiedTTDC.execute_of_not_contract`, `Book4D.CertifiedTTDC.execute_satisfies_postcondition`, `Book4D.CertifiedTTDC.install_ttdc`, `Book4D.CertifiedTTDC.stage_ne_abstain`, `Book4D.EmergenceOperatorFamily.canonicalOrder_recognized`, `Book4D.EmergenceOperatorFamily.identityFamily_not_emergent`, `Book4D.EmergenceOperatorFamily.swapped_middle_executes`, `Book4D.EmergenceOperatorFamily.swapped_middle_unrecognized`, `Book4D.ImaginationHorn.one_pass_refinement_mem_Icc`, `Book4D.ImaginationHorn.one_pass_tendsto_limit`, `Book4D.ImaginationHorn.staged_sample_accessible`, `Book4D.TTCSToTTPRImagination.limit_mem_Icc`, `Book4D.TTCSToTTPRImagination.refinement_iterate_mem_Icc`, `Book4D.TTCSToTTPRImagination.tendsto_refinement_from_sample`, `Book4D.TTDCToTTIEImagination.staged_output_mem_initial`, `Book4D.TTDCToTTIEImagination.staged_then_ttie_iterate_mem_accessibleLimit`, `Book4D.TTDCToTTIEImagination.staged_then_ttie_iterate_mem_envelope`, `Book4D.TTIEToTTCSImagination.exists_accessible_sample`, `Book4D.TTIEToTTCSImagination.expanded_then_sampled_mem_Icc`, `Book4D.TTIEToTTCSImagination.selected_samples_accessible`, `Book4D.TTPRToTTDCImagination.abstaining_return_is_fixed`, `Book4D.TTPRToTTDCImagination.returnState_eq_limit`, `Book4D.TTPRToTTDCImagination.stage_or_abstain`, `Book4ImaginationGuard.effectiveRate_lt_one_iff_phase_penalty_below_margin`, `Book4ImaginationGuard.eleven_percent_phase_ends_near_boundary_contraction`, `Book4ImaginationGuard.phaseBudget_append`, `Book4ImaginationGuard.projection_equality_can_hide_unsafe_phase`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; explicit phase sensitivity converting exposure to contraction penalty; modeling laws are structure fields or explicit hypotheses; nonnegative phase exposure measured by sum of absolute segment phases; phase-bearing intermediate steps retained as a list; strict effective rate below one required for reintegration
+- Formal boundary: Exact conditional phase-rate kernel: ordered latent segments define noncancelling absolute exposure; a calibrated nonlinear response envelope plus observer-specific margin forces strict contraction. Linear response is one specialization. Equal visible projections and canceling signed phases do not erase exposure, while zero calibration alone does not determine the response away from zero.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2909,6 +3277,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:940`
 - Cites: `definition:appC_modal_transference_map` (Modal transference map); `theorem:appC_modal_transference` (Modal Transference)
 - Cited by: `definition:bk5_symbolic_shade` (Symbolic shade); `scholium:bk5_palette_of_a_relation` (The palette of a relation); `subsec:bk5_hue_and_shade` (Hue and Shade: The Full Chromatic Transference)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-034`
+- Witnesses: `Book4A.adjacent_rotate`, `Book4A.opposite_add`, `Book4A.opposite_involutive`, `Book4A.swapPerm_breaks_adjacency`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Flagship cyclic-structure anchor: the wheel modeled concretely as ZMod 12, with rotation genuinely preserving adjacency and commuting with diametric opposition (an involution), plus an explicit countermodel that a non-rotation bijection can break adjacency -- the honest content of 'the wheel is preserved ... not [by] any one carrier' holding specifically for structured (rotation) transferences.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3111,6 +3490,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:1016`
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `lemma:bk5_balanced_observer_normalization` (Balanced Observer Normalization Selects the Closure Matrix); `proposition:bk4_spiral_transition` (Spiral transition between modes); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory)
 - Cited by: `scholium:bk5_decency_golden_resonance` (Decency, resonance, and the golden spiral of relation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-030`
+- Witnesses: `Book4A.goldenRatio_pos`, `Book4A.goldenRatio_sq`, `Book4A.goldenSpiral_ratio_eq`, `Book4A.goldenSpiral_ratio_tendsto`, `Book4A.goldenSpiral_recurrence`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The algebraic/growth kernel is complete: phi^2=phi+1 forces the balanced Fibonacci-type recurrence on phi^n*r0; phi is positive; and for nonzero r0 every consecutive-radius ratio is exactly phi, hence tends to phi. Polar-manifold interpretation and quadrant terminology remain explanatory rather than additional formal claims.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3390,6 +3780,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:1119`
 - Cited by: `assumption:bk4_precritical_scalar_trace` (Precritical scalar trace); `definition:bk4_symbolic_spinor_bundle` (Recursive Identity Bundle); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `definition:bk5_collapse_resilience_test` (Symbolic Collapse Resilience Test); `demonstratio:bk4_prompt_time_ttdc` (Prompt-Time Collapse in Reflective Agents); `proof:appD_bounded_increment_parameter_lift` (Proof: bounded-increment parameter lift); `proof:bk4_emergence_conditions` (Emergence Implies Non-Reducibility and Causal Closure); `proof:bk4_recursive_identity_preservation` (Recursive Encoding Preserves Identity Information); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk4_observer_relative_ttdc` (Observer-Relative Collapse Interpretation); `scholium:bk4_tt_integrative_expansion_action` (TTIE and Symbolic Action); `scholium:bk4_ttcs_potential_field` (TTCS and the Symbolic Potential Field); `scholium:bk4_ttcs_simulation_tool_use` (TTCS as Symbolic Simulation and Tool-Use); `scholium:bk4_ttcs_stochastic_operator` (TTCS as a Stochastic Symbolic Operator); `scholium:bk4_ttdc_impulse_collapse` (Collapse as Impulse: The Newtonian Structure of TTDC); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse); `sec:bk5_srmf_for_symbolic_operators_and_processes` (SRMF for Symbolic Operators and Processes); `subsec:bk4_ttie_operator_algebra` (TTIE Operator Algebra); `subsec:bk5_conclustion_and_future_directions` (Conclusion and Future Directions); `subsec:bk5_srmf_core_axioms` (Core Axioms and Theoretical Development)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-087`
+- Witnesses: `Book4Ref.ttdc_iff_jump`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: TTDC iff the resolution jump reaches the threshold; the recursion-depth dynamics stay open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A collapse of symbolic identity (Def. definition:bk4_collapse_of_symbolic_ide) corresponds to a test-time differentiation collapse (TTDC) if and only if the identity resolution $R_n$ (Def. definition:bk4_identity_resolution) exhibits a discontinuous transition at recursion depth $n geq n_c$:
@@ -3480,6 +3881,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:1146`
 - Cites: `definition:bk4_collapse_of_symbolic_ide` (Collapse of Symbolic Identity)
 - Cited by: `demonstratio:bk4_prompt_time_ttdc` (Prompt-Time Collapse in Reflective Agents); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-088`
+- Witnesses: `Book4Ref.collapse_limit_unique`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: The collapsed observable O = lim R_n(I) is unique.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3978,6 +4390,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:133
 - Cited by: `corollary:bk4_symbolic_lightcone` (Symbolic Light-Cone); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `proof:bk4_symbolic_lightcone`; `proof:bk5_operators_evolve`; `proposition:bk5_operators_evolve`; `scholium:bk1_the_imagination_dipole` (The Imagination Dipole); `scholium:bk4_ttcs_potential_field` (TTCS and the Symbolic Potential Field); `scholium:bk4_ttcs_simulation_tool_use` (TTCS as Symbolic Simulation and Tool-Use); `scholium:bk4_ttdc_impulse_collapse` (Collapse as Impulse: The Newtonian Structure of TTDC); `sec:bk5_srmf_for_symbolic_operators_and_processes` (SRMF for Symbolic Operators and Processes); `subsec:bk4_fuzzy_integration_applications` (Cross-Field Consequences and SRMF Grounding); `subsec:bk4_ttie_operator_algebra` (TTIE Operator Algebra); `subsec:bk5_conclustion_and_future_directions` (Conclusion and Future Directions); `subsec:bk5_srmf_core_axioms` (Core Axioms and Theoretical Development)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-044`
+- Witnesses: `Book4C.ttieMetric_exists_of_glued`, `Book4C.ttieMetric_presupposition_fails_on_dual_horizon`, `Book4D.CertifiedTTIE.accessibleLimit_least`, `Book4D.CertifiedTTIE.exists_envelope_ssubset_accessibleLimit`, `Book4D.CertifiedTTIE.exists_newly_accessible`, `Book4D.CertifiedTTIE.iterate_mem_envelope`, `Book4D.CertifiedTTIE.iterate_mem_envelope_of_mem`
+- Countermodels: `Book4C.ttieMetric_presupposition_fails_on_dual_horizon`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The metric presupposition remains discharged through chart gluing. CertifiedTTIE now supplies an operational fuzzy map, a nested accessible-state envelope, staged reachability of every iterate, genuine strict expansion, coherence-speed control, and the least union-limit of finite stages. Full manifold constraints C1-C3 remain outside the scalar kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Msubset S$ be a symbolic manifold equipped with the observer-induced metric $g_{O}$ (Def. definition:bk1_bounded_observer), interpreted within the SRMF cycle (Def. definition:bk1_self_regulating_mapping_function_srmf; Thm. theorem:bk5_operator_convergence). Fix observer resolution $delta_{O}\!>\!0$ and sectional curvature bound $|kappa_{O}|le kappa_{max}$.
@@ -4074,6 +4497,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:1374`
 - Cites: `definition:bk1_symbolic_coherence_velocity` (Symbolic Coherence Velocity)
 - Cited by: `corollary:bk4_symbolic_lightcone` (Symbolic Light-Cone); `proof:bk4_symbolic_lightcone`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-042`
+- Witnesses: `Book4C.ttieExpansionBound_le_cs`, `Book4D.CertifiedTTIE.step_dist_le_coherenceSpeed`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: given the stated rate bound as a hypothesis, it is shown to never exceed c_s itself; the sup-based definition of Delta_max(epsilon) and the C1-C3 constraints it is derived from are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4187,6 +4621,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:1419`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_symbolic_coherence_velocity` (Symbolic Coherence Velocity); `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `lemma:bk4_ttie_expansion_rate` (Curvature-Bounded Expansion Rate)
 - Cited by: `proof:bk4_symbolic_link_activation`; `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-043`
+- Witnesses: `Book4C.coherenceCone_mono`, `Book4D.CertifiedTTIE.iterate_mem_accessibleLimit`, `Book4D.CertifiedTTIE.iterate_mem_envelope`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the coherence-cone's admissible-distance radius is monotone in elapsed time for cs >= 0; the full causal-consistency argument for bounded observers is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4414,6 +4859,16 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:1
 - Cited by: `demonstratio:bk4_symbolic_graph_topological_stability` (Topological Stability in Symbolic Graph Expansion); `demonstratio:bk4_symbolic_thermodynamics`; `lemma:bk4_spectral_stability_homological_extensions` (Spectral Stability of Homological Extensions); `proof:bk4_observer_capacity_bound`; `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `proof:bk4_topological_persistence`; `remark:bk4_betti_growth` (Betti Growth and Cognitive Tractability); `theorem:bk4_topological_persistence_under_refinement` (Topological Persistence Under Refinement)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-102`
+- Witnesses: `Book4Ref.FiniteHomologicalExtension.finrank_eq_add`, `Book4Ref.FiniteHomologicalExtension.finrank_le_old_add_bound`
+- Countermodels: none
+- Formal boundary: Finite algebraic kernel: a supplied linear equivalence realizes extended homology as old times new, yielding exact rank addition and the stated new-Betti total-rank bound. Construction from manifold expansion, homology functors, and derivation of the curvature-controlled bound remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If the expansion rate on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold) satisfies $v_{text{exp}}(t)<varepsilon(kappa_{max})$ for some stability threshold $varepsilon$, then for each homological degree $kge0$:
@@ -4599,6 +5054,16 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:1599`
 - Cites: `proposition:bk4_homological_extension` (Homological Extension)
 - Cited by: `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `scholium:bk4_towards_symbolic_equilibrium` (Towards Symbolic Equilibrium and Curvature-Limited Gravity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-103`
+- Witnesses: `Book4Ref.FiniteHomologicalExtension.finrank_le_old_add_bound`, `Book4Ref.exists_adjacent_rank_stabilization`
+- Countermodels: none
+- Formal boundary: Finite-rank stabilization engine: a nonincreasing page-rank sequence bounded by beta-zero must have adjacent equal ranks by stage beta-zero, sharper than the stated beta-zero-plus-one bound. An actual spectral sequence, equality of pages rather than ranks, and the resulting filtration-length construction remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4798,6 +5263,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:1682`
 - Cited by: `demonstratio:bk4_symbolic_graph_topological_stability` (Topological Stability in Symbolic Graph Expansion); `proof:bk4_observer_capacity_bound`; `remark:bk4_quantum_topological_phases` (Connection to Quantum Topological Phases)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-104`
+- Witnesses: `Book4Ref.bottleneck_le_curvature_scaled`, `Book4Ref.essential_feature_preserved`
+- Countermodels: none
+- Formal boundary: Quantitative scalar kernels for clauses 2-3: an epsilon bottleneck bound lifts to C*epsilon*(1+kappaMax), and any feature more than epsilon above the observer threshold remains essential after an epsilon perturbation. Persistence diagrams, their interleaving, and derivation of the base bottleneck estimate remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $tilde{s} in S$ be a symbolic structure with associated manifold $M$, and let $s^* = TTPR(tilde{s})$ be its precision refinement (cf. Definition definition:bk4_test_time_precision_refinement). If the refinement satisfies the stability conditions of Proposition proposition:bk4_homological_extension, then:
@@ -4868,6 +5343,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:1707`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer)
 - Cited by: `proof:bk4_observer_capacity_bound`; `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `remark:bk4_quantum_topological_phases` (Connection to Quantum Topological Phases); `scholium:bk4_topological_complexity_semantic_richness` (Topological Complexity and Semantic Richness)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-105`
+- Witnesses: `Book4Ref.FiniteHomologicalExtension.finrank_le_old_add_bound`, `Book4Ref.homological_complexity_le_observer_capacity`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: Finite aggregation kernel: degreewise realized homology ranks bounded by curvature-controlled allowances have total complexity within capacity whenever the allowance sum fits the observer capacity. Deriving those allowances from geometry and formalizing observer capacity semantically remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5435,6 +5921,17 @@ Role: `axiom` | Type: `axiom` | Book: `book4` | Source: `book4.tex:1964`
 - Cited by: `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `proof:bk4_interpretability_preservation`; `proposition:bk4_ttpr_convergence` (Convergence of Recursive Refinement); `remark:bk4_ttpr_descent_route` (Contraction is sufficient, not necessary: the descent route); `theorem:bk4_ttpr_symbolic_stability` (Symbolic Stability via Precision Refinement)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-031`
+- Witnesses: `Book4A.contractionRefinement_iterate`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The Lipschitz contraction law kept as a structure field; the genuine consequence proved is the finite n-step contraction bound dist(R^[n] s, R^[n] s') <= kappa^n * dist s s', by induction.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O$ be a bounded observer (cf. Definition definition:bk1_bounded_observer) with observer kernel $K_{O}$ (cf. Definition definition:bk1_resolution_cost). A symbolic refinement operator $R$ satisfies:
@@ -5465,6 +5962,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:1
 - Cites: `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `theorem:bk4_fixed_points_of_self_refere` (Fixed Points of Self-Reference)
 - Cited by: `proof:bk4_symbolic_stability`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-032`
+- Witnesses: `Book4A.ContractionRefinement.fixed_eq_ttprLimit`, `Book4A.ContractionRefinement.tendsto_iterate_ttprLimit`, `Book4A.ContractionRefinement.ttprLimit_fixed`, `Book4A.contractionRefinement_iterate`, `Book4D.CertifiedTTPR.fixed_eq_limit`, `Book4D.CertifiedTTPR.iterate_dist_limit_le`, `Book4D.CertifiedTTPR.limit_fixed`, `Book4D.CertifiedTTPR.tendsto_iterate_limit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Banach convergence is now lifted into an operational CertifiedTTPR: the same map carries pointwise fuzzy derivatives and perturbation budgets while its contraction certificate yields a unique fixed identity, global convergence, and a geometric distance bound. Completeness and nonemptiness remain explicit.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5588,6 +6096,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2020`
 - Cites: `definition:bk1_bounded_symbolic_approximation` (\textbf{Bounded Symbolic Approximation}); `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability); `definition:bk4_refinement_envelope` (Refinement Envelope)
 - Cited by: `proof:bk4_symbolic_stability`; `theorem:bk4_ttpr_symbolic_stability` (Symbolic Stability via Precision Refinement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-085`
+- Witnesses: `Book4Ref.ttpr_iterates_in_envelope`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: Every refinement iterate stays in a preserved envelope.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5723,6 +6242,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2071`
 - Cites: `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom); `definition:bk4_refinement_envelope` (Refinement Envelope); `lemma:bk4_ttpr_interpretability_preserved` (Precision Refinement Preserves Interpretability); `theorem:bk4_conditions_for_self_healing` (Conditions for Self-Healing)
 - Cited by: `definition:bk5_collapse_resilience_test` (Symbolic Collapse Resilience Test); `remark:bk4_ttpr_entropy` (Relation to Symbolic Thermodynamics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-084`
+- Witnesses: `Book4Ref.ttpr_fixed_point`, `Book4Ref.ttpr_fixed_point_in_envelope`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: TTPR fixed-point + envelope membership (all three clauses); the constraint-space manifold form stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5937,6 +6467,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:2
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk4_symbolic_work_functional` (Symbolic Work)
 - Cited by: `remark:bk4_symbolic_work_capacity` (Observer-Limited Symbolic Work Capacity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-049`
+- Witnesses: `Book4C.symbolicWork_path_dependent_example`, `Book4C.symbolicWork_path_independent_of_constant`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: an explicit numeric countermodel shows discretization-dependence for a non-constant force (work3 id 0 1 2 != work2 id 0 2), paired with the constant-force case where the two discretizations DO agree -- the honest boundary the source's 'in general' qualifier hides.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6416,6 +6957,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2328`
 - Cited by: `proof:bk4_symbolic_link_activation`; `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-099`
+- Witnesses: `Book4C.ttcsWeight_strictAnti`, `Book4C.ttcs_properties`, `Book4C.ttcs_sample_average_ge`, `Book4D.CertifiedTTCS.output_mem_Icc`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Finite operational TTCS: positive inverse temperature strictly favors lower free energy; admissible samples explicitly retain the coherence threshold and observer leash; certified averages remain in the coherence corridor. Global non-ergodicity and entropy-process semantics remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the symbolic manifold and bounded-observer constraints (Def. definition:bk1_symbolic_manifold, Def. definition:bk1_bounded_observer) together with bounded accessibility (Axiom axiom:bk4_bounded_accessibility), the TTCS operator exhibits the following symbolic properties:
@@ -6631,6 +7183,17 @@ Role: `axiom` | Type: `axiom` | Book: `book4` | Source: `book4.tex:2408`
 - Cited by: `lemma:bk4_properties_of_ttcs` (Properties of TTCS); `proof:bk4_coherence_preservation`; `proof:bk4_neighborhood_completeness`; `proof:bk4_properties_of_ttcs`; `proof:bk4_ttcs_convergence`; `proof:bk4_ttcs_stability` (Proof of Lemma \ref{lemma:bk4_ttcs_stability}); `proposition:bk4_neighborhood_completeness` (Neighborhood Completeness); `scholium:bk4_ttcs_link_traversal` (TTCS as Symbolic Link Traversal); `theorem:bk4_ttcs_convergence` (Convergence of TTCS Sampling)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-086`
+- Witnesses: `Book4Ref.coherence_neighborhood_nonempty`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: The coherence neighborhood contains its coherent centre: bounded accessibility realized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For any symbolic configuration $s_0 in M_S$ on the Book I symbolic manifold substrate (Def. definition:bk1_symbolic_manifold) and bounded observer frame (Def. definition:bk1_bounded_observer), and parameters $gamma, varepsilon > 0$, there exists a coherence neighborhood $N_{gamma,varepsilon}(s_0)$ such that:
@@ -6758,6 +7321,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2458`
 - Cited by: `proof:bk4_ttcs_convergence`; `theorem:bk4_ttcs_convergence` (Convergence of TTCS Sampling)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-045`
+- Witnesses: `Book4C.ttcs_sample_average_le`, `Book4D.CertifiedTTCS.alternative_output_dist_le`, `Book4D.CertifiedTTCS.iterate_succ_mem_Icc`, `Book4D.CertifiedTTCS.output_eq_of_sample_constant`, `Book4D.CertifiedTTCS.output_le_upper`, `Book4D.CertifiedTTCS.output_mem_Icc`, `Book4D.CertifiedTTCS.output_reindex`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: discrete finite-sample analogue of the expected-curvature bound: if every sample is at most M, the average is at most M. The exponentially-weighted distribution tilde-p and Delta_max(epsilon) are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $tilde{p}(s)$ be a symbolic distribution constrained by coherence threshold $gamma$ and drift bound $varepsilon$ as defined in Scholium scholium:bk4_ttcs_simulation_tool_use and Def. definition:bk4_test_time_coherent_sampling. Then the expected symbolic curvature of TTCS-sampled outputs remains bounded:
@@ -6851,6 +7425,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2493`
 - Cites: `axiom:bk4_bounded_accessibility` (Bounded Symbolic Accessibility); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `lemma:bk4_ttcs_stability` (Stability of Symbolic Sampling Under Bounded Drift)
 - Cited by: `corollary:bk4_coherence_preservation` (Coherence Preservation); `proof:bk4_coherence_preservation`; `proof:bk4_symbolic_link_activation`; `remark:bk4_computational_complexity` (Computational Complexity); `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-100`
+- Witnesses: `Book4C.ttcsEmpiricalObservableAverage_const`, `Book4C.ttcs_const_empirical_tendsto`
+- Countermodels: none
+- Formal boundary: Deterministic Dirac specialization: for every real observable, empirical evaluations of a sampler concentrated at one admissible state equal and converge to that state's Dirac evaluation. General stochastic sampling, probability measures on the symbolic manifold, and the weak-* law of large numbers remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6980,6 +7564,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:2533`
 - Cited by: `remark:bk4_computational_complexity` (Computational Complexity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-046`
+- Witnesses: `Book4C.ttcs_sample_average_ge`, `Book4D.CertifiedTTCS.alternative_output_dist_le`, `Book4D.CertifiedTTCS.iterate_succ_mem_Icc`, `Book4D.CertifiedTTCS.lower_le_output`, `Book4D.CertifiedTTCS.output_eq_of_sample_constant`, `Book4D.CertifiedTTCS.output_mem_Icc`, `Book4D.CertifiedTTCS.output_reindex`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: A CertifiedTTCS derives its coherence floor from pointwise sample bounds and proves every positive iterate remains in the closed coherence corridor. The N -> infinity limit and weak-* convergence remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the conditions of Theorem theorem:bk4_ttcs_convergence, with coherence metric from Def. definition:bk4_coherence_metric_on_symbolic_manifold, the average coherence of TTCS samples satisfies:
@@ -7053,6 +7648,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:2
 - Cites: `axiom:bk4_bounded_accessibility` (Bounded Symbolic Accessibility); `lemma:bk1_completeness_of_symbolic_distance` (Completeness of Symbolic Distance)
 - Cited by: `proof:bk4_symbolic_link_activation`; `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-047`
+- Witnesses: `Book4C.neighborhoodCompleteness`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: a closed subset of a complete metric space is complete; the coherence/drift neighborhood's closedness is kept as a named hypothesis rather than derived from the coherence and drift-bound constraints, which are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7276,6 +7882,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2635`
 - Cited by: `scholium:bk4_recursive_introspection` (Recursive Introspection)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-101`
+- Witnesses: `Book4C.mem_ttcsActivatedCloud`, `Book4C.ttcsWeight_strictAnti`, `Book4C.ttcs_link_activation`
+- Countermodels: none
+- Formal boundary: Finite operational activation: an indexed TTCS family produces an explicit nonempty observer-relative cloud; all samples are coherent and observer-bounded, and lower free energy is strictly preferred. The narrative reference/presence interpretation and stochastic entropy balance remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 TTCS is the operator that transforms symbolic reference into symbolic presence. Building on Lemma lemma:bk4_properties_of_ttcs, Theorem theorem:bk4_ttcs_convergence, Cor. corollary:bk4_symbolic_lightcone, Prop. proposition:bk4_neighborhood_completeness, the TTCS potential/stochastic/link-traversal scholia (Scholium scholium:bk4_ttcs_potential_field, Scholium scholium:bk4_ttcs_stochastic_operator, Scholium scholium:bk4_ttcs_link_traversal), and Book I bounded-observer structure (Def. definition:bk1_bounded_observer), it maps a static symbolic pointer ($s_0$) to a dynamic, instantiated, and observer-relative cloud of potential realities (${s_i}$). This process is governed by three properties:
@@ -7406,6 +8022,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2681`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `sec:bk1_category_errors_in_classical_models` (Category Errors in Classical Models); `subsec:bk8_symbolic_knots_and_emergent_entanglement` (Symbolic Knots and Emergent Entanglement)
 - Cited by: `scholium:bk4_irreversibility_as_trace` (Irreversibility as Symbolic Trace); `scholium:bk4_ttcs_simulation_tool_use` (TTCS as Symbolic Simulation and Tool-Use)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-083`
+- Witnesses: `Book4D.CertifiedTTDC.abstention_base_inert_but_recorded`, `Book4D.CertifiedTTDC.recordedExecute_eq_iff`, `Book4Fz.CrossObserverTimeConsistent.reparam_add`, `Book4Fz.CrossObserverTimeConsistent.reparam_zero`, `Book4Fz.CrossObserverTimeConsistent.trans`, `Book4Fz.IsObserverFlow.bijective`, `Book4Fz.IsObserverFlow.neg_comp_self`, `Book4Fz.IsObserverFlow.self_comp_neg`, `Book4Fz.crossObserverTimeConsistent_refl`, `ScholiumDyn.base_cancellation_not_full_equilibrium`, `ScholiumDyn.no_full_equilibrium_of_trace_production`, `ScholiumDyn.recordedCombinedStep_eq_iff`
+- Countermodels: none
+- Formal boundary: The observer-memory kernel is formalized on a reflective state carrying a visible coordinate and monotone trace count. Visible drift/reflection cancellation or TTDC abstention can leave the base coordinate fixed, while positive trace production proves the full observer-state changed. This establishes the discrete irreversibility mechanism; the thermodynamic entropy-production and continuous dual-horizon claims remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7629,6 +8255,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:274
 - Cited by: `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_critical_symbolic_bifurc` (Critical Symbolic Bifurcation); `definition:bk4_repair_capacity` (Repair Capacity); `definition:bk4_repair_process` (Repair Process); `proof:bk4_fragmentation_distortion_encoding` (Fragmentation and Distortion); `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation); `proof:bk4_repair_reconnects_fragmentation` (Repair Trajectories Reconnect Fragmented Symbolic Regions); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `theorem:bk4_freedom_life_connection` (Freedom-Life Connection)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-050`
+- Witnesses: `Book4C.fragMeasure_eq_zero_iff`, `Book4C.fragMeasure_mem_Icc`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: mutual information I and entropy H kept as named hypotheses (0 <= I <= H, H > 0, the data-processing content of 'optimal partition'); the argmax-over-partitions construction itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The fragmentation measure $F_{text{frag}}$ of a symbolic identity $I$ (see Def. definition:bk4_symbolic_identity_carrie) is defined as:
@@ -7658,6 +8295,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2753`
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk2_symbolic_probability_spa` (Symbolic Probability Space); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier)
 - Cited by: `proof:bk4_fragmentation_identity_stability` (Fragmentation Violates Symbolic Identity Stability)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-033`
+- Witnesses: `Book4A.imbalanced_drift_exceeds_reflect`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the pointwise threshold consequence is modeled (drift-imbalance with theta>1 forces drift to strictly exceed reflection outright); the iff-characterization of fragmentation and the probability-space apparatus it is embedded in are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7826,6 +8474,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2807`
 - Cited by: `proof:bk4_symbolic_curvature_fragmentation` (Curvature and Fragmentation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-004`
+- Witnesses: `Book4B.cascadeProb_lt_one`, `Book4B.cascadeProb_nonneg`, `Book4B.cascadeProb_strictMono`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The propagation-probability formula 1-exp(-beta*kappa) is kept exactly, with the manifold-valued curvature integral kappa erased to an arbitrary nonnegative real; probability in [0,1) and strict monotonicity in kappa are proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If a symbolic identity (see Def. definition:bk4_symbolic_identity_carrie) undergoes fragmentation (see Def. definition:bk4_fragmented_identity) in a region $U_1 subset M_i$ (see Def. definition:bk3_symbolic_membrane), and the coupling strength between regions exceeds a critical threshold $gamma_{text{crit}}$, then fragmentation propagates to adjacent regions with probability:
@@ -7913,6 +8572,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:283
 - Cited by: `definition:bk4_proto_vitality` (Proto-Vitality); `definition:bk4_recursive_self_healing` (Recursive Self-Healing); `definition:bk4_repair_capacity` (Repair Capacity); `proof:bk4_repair_reconnects_fragmentation` (Repair Trajectories Reconnect Fragmented Symbolic Regions); `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention); `proposition:bk9_curvature_scarring` (Curvature Scarring and Recovery)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4B-005`
+- Witnesses: `Book4B.repairSufficiency_decrease_accum`, `Book4B.repairSufficiency_terminates`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Modeled as a discrete fragmentation-measure sequence decreasing by a fixed positive amount each step, with telescoping and termination consequences (same finite kernel shape as Book8's MetabolicSufficiency, applied to fragmentation instead of free energy).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A repair process $R_{text{rep}}$ for a fragmented identity (see Def. definition:bk4_fragmented_identity) $I$ is a dynamical evolution that increases symbolic coherence:
@@ -7947,6 +8617,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2840`
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `theorem:bk4_existence_of_symbolic_ident` (Existence of Symbolic Identity)
 - Cited by: `definition:bk9_two_way_street_operator` (Two-Way Street Operator); `proof:bk4_repair_reconnects_fragmentation` (Repair Trajectories Reconnect Fragmented Symbolic Regions); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proposition:bk9_mechanisms_of_recognition` (Mechanisms of Recognition); `scholium:bk7_unnamed_scholium_03`; `sec:appD_dialogue_titans` (D.X Principia Symbolica and "Titans": The Geometry of Test-Time Memorization); `sec:bk7_reflection_integration_link_revisited` (Reflection-Integration Link Revisited); `sec:bk7_reflective_fixed_point_theorem` (Reflective Fixed Point Theorem); `subsec:appD_titans_resonance` (D.X.1 Core Resonance: The "Giants" Respond to "Titans"); `subsec:bk7_motivation` (Motivation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-006`
+- Witnesses: `Book4B.recovery_threshold_exceeds_crit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the threshold-transitivity content of the iff is modeled (recovery threshold above critical, overlap meeting it, forces overlap above critical); the existence of a time-evolved reflection operator achieving the overlap is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8039,6 +8720,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:287
 - Cited by: `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `theorem:bk4_conditions_for_self_healing` (Conditions for Self-Healing)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4B-007`
+- Witnesses: `Book4B.repairSufficiency_decrease_accum`, `Book4B.repairSufficiency_terminates`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Recursive self-healing is a repair process, so it obeys the same RepairSufficiency law; the specific self-reference/persistence operator composition S_n . P_dt . S_m is not modeled, only the monotone-decrease consequence any such process must satisfy.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Recursive self-healing is a repair process (see Def. definition:bk4_repair_process) where the fragmented identity (see Def. definition:bk4_fragmented_identity) uses its own reflexive capabilities to restore coherence:
@@ -8068,6 +8760,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2878`
 - Cites: `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_identity_resolution` (Identity Resolution); `definition:bk4_recursive_self_healing` (Recursive Self-Healing)
 - Cited by: `bridge:bk4_ttpr_to_self_reference` (From TTPR to Recursive Identity Retention); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `theorem:bk4_ttpr_symbolic_stability` (Symbolic Stability via Precision Refinement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-008`
+- Witnesses: `Book4B.coreCoherence_exceeds_crit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only condition 2's threshold-transitivity shape is modeled (core error below critical error forces core coherence past 1-critical); condition 1 (identity resolution R_n > chi for n >= n_0) is a bare existential over an unmodeled resolution sequence and is not covered.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8157,6 +8860,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:290
 - Cited by: `lemma:bk4_upper_bound_on_repair_capacit` (Upper Bound on Repair Capacity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4B-009`
+- Witnesses: `Book4B.repairCapacity_lt_one`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Kept as a structure field bounded by the repair-capacity ceiling rather than derived from the sup over repair processes; no topology on the space of repair processes is modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The repair capacity $C_{text{rep}}$ of a symbolic identity $I$ (see Def. definition:bk4_symbolic_identity_carrie) is defined as:
@@ -8187,6 +8901,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2915`
 - Cites: `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding); `definition:bk4_repair_capacity` (Repair Capacity); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier)
 - Cited by: `proof:bk4_fragmentation_distortion_encoding` (Fragmentation and Distortion)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-010`
+- Witnesses: `Book4B.repairCapacityBound_lt_one`, `Book4B.repairCapacityBound_nonneg`, `Book4B.repairCapacityBound_strictMono`, `Book4B.repairCapacity_lt_one`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The bound expression 1 - 1/(n_max+1) is proved to lie in [0,1) and to strictly increase with recursive depth capacity, plus the consequence that any capacity bounded by it is itself below 1.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8342,6 +9067,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:295
 - Cited by: `definition:bk4_symbolic_autonomy` (Symbolic Autonomy); `definition:bk4_symbolic_flow_freedom` (Symbolic Flow Freedom); `definition:bk4_symbolic_freedom_measure` (Symbolic Freedom Measure); `proof:bk4_freedom_via_symbolic_flow` (Freedom via Coherence-Preserving Symbolic Flow); `proof:bk4_progressive_freedom_constraint_expansion` (Progressive Freedom Requires Coherence Beyond Constraints); `theorem:bk4_recursive_constraint_libera` (Constraint Liberation); `theorem:bk4_self_authorship_and_freedom` (Self-Authorship and Freedom)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4B-011`
+- Witnesses: `Book4B.constraintDirectedSystem_universal`, `Book4B.constraintDomain_strict_growth`, `Book4B.constraintDomain_subset_limit`, `Book4B.constraintLimit_least`, `Book4B.mem_constraintLimit_iff`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Domains U(n) are abstract sets. Their recursive limit is constructed as the union of finite stages and proved to satisfy membership, stage-inclusion, and least-upper-domain laws; The Scholium directed-system laws and unique colimit mediator are instantiated by monotone domain inclusions. Metric d_g / reflection-operator membership conditions remain outside the model.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The constraint domain $U(I)$ of a symbolic identity $I$ (see Def. definition:bk4_symbolic_identity_carrie) is the set of all admissible symbolic patterns that satisfy the internal consistency conditions:
@@ -8376,6 +9112,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2968`
 - Cites: `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_individuated_symbolic_id` (Individuated Symbolic Identity)
 - Cited by: `definition:bk4_proto_vitality` (Proto-Vitality); `definition:bk4_symbolic_freedom_measure` (Symbolic Freedom Measure); `proof:bk4_progressive_freedom_constraint_expansion` (Progressive Freedom Requires Coherence Beyond Constraints)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-012`
+- Witnesses: `Book4B.constraintDomain_strict_growth`, `Book4B.constraintDomain_subset_limit`, `Book4B.constraintLimit_least`, `Book4B.constraintLimit_strict_growth`, `Book4B.constraintLimit_tail_eq`, `Book4B.mem_constraintLimit_iff`, `Book4B.orbitConstraintDomain_mono`, `Book4B.orbitConstraintLimit_eq_range`, `Book4B.transfiniteConstraint_leastFixedPoint_fixed`, `Book4B.transfiniteConstraint_leastFixedPoint_le`, `Book4B.transfiniteConstraint_stabilized_eq_lfp`, `Book4B.transfiniteConstraint_stabilized_fixed`, `Book4B.transfiniteConstraint_stage_le_fixed`, `Book4B.transfiniteIterate_eventually_constant_of_card_lt`, `Book4B.transfiniteIterate_eventually_constant_of_fixed`, `Book4B.transfiniteIterate_exists_fixed_of_card_lt`, `Book4B.transfiniteIterate_fixed_stage_eq_lfp`, `Book4B.transfiniteIterate_le_fixed`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The honest order-theoretic limit U_infinity is constructed as the union of all finite domains. It is tail-invariant for monotone sequences, is the least upper domain, and strictly extends U_0 when any stage grows. For Scholium-generated dynamics it is proved exactly equal to the full flow-orbit range. Constraint maps are now modeled abstractly as arbitrary monotone endomorphisms of the complete lattice of domains, with ordinal successor application and union at genuine limit ordinals. Knaster-Tarski supplies the least fixed point unconditionally; ordinal limit induction now derives the standard invariant that every bottom-started stage lies below every fixed domain. Consequently eventual ordinal stabilization alone proves convergence exactly to the least fixed point. The cardinal theorem now gives full eventual convergence for the standard transfinite iterator whenever its well-ordered index type is larger than the constraint-domain lattice and the map is inflationary: it attains the least fixed point and every later stage is identical.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8473,6 +9220,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:300
 - Cited by: `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation); `theorem:bk4_freedom_life_connection` (Freedom-Life Connection)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-013`
+- Witnesses: `Book4B.freedomMeasure_le_one`, `Book4B.freedomMeasure_nonneg`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The ratio (H(U_infinity)-H(U_0))/H(U_infinity) is proved to lie in [0,1] given entropy nonnegativity and monotonicity; the entropy functional H and the limiting domain U_infinity themselves are not modeled, only the algebraic consequence of the stated formula.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic freedom measure $F_{text{free}}$ of an individuated identity $I$ (see Def. definition:bk4_individuated_symbolic_id) is defined as:
@@ -8518,6 +9276,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:301
 - Cited by: `lemma:bk4_autonomy_freedom_relation` (Autonomy-Freedom Relation); `proof:bk4_autonomy_freedom_relation`; `proof:bk4_freedom_via_symbolic_flow` (Freedom via Coherence-Preserving Symbolic Flow); `proof:bk4_goal_directed_composition_flow` (Goal-Directed Composition as Freedom-Expressive Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-014`
+- Witnesses: `Book4B.id_has_no_escape`, `Book4B.symbolicFreedom_of_flowFreedom`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The two-clause predicate (reflection-fixed image; escape from U_0) is modeled directly, plus an explicit countermodel (the identity flow) showing the escape clause is a genuine non-vacuous requirement.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic flow $Phi_s$ (see Def. definition:bk1_symbolic_flow) exhibits freedom with respect to an individuated identity $I$ (see Def. definition:bk4_individuated_symbolic_id) if:
@@ -8552,6 +9321,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3022`
 - Cites: `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier)
 - Cited by: `corollary:bk7_fixed_point_tracking_within_evolving_reciprocity` (Fixed Point Tracking within Evolving Reciprocity); `corollary:bk9_emergence_of_moral_agency` (Emergence of Moral Agency); `definition:bk9_cognitive_freedom` (Cognitive Freedom $\mathfrak{L}$); `definition:bk9_recursive_freedom_operator` (Recursive Freedom Operator \(\Omega^{\leftrightarrow}\)); `lemma:bk4_autonomy_freedom_relation` (Autonomy-Freedom Relation); `proof:bk4_autonomy_freedom_relation`; `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation); `proof:bk4_freedom_via_symbolic_flow` (Freedom via Coherence-Preserving Symbolic Flow); `proof:bk4_maximal_freedom_autonomous_constraints` (Self-Authorship Implies Maximal Freedom); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `proposition:bk4_autonomy_implies_freedom` (Goal-Directed Autonomy Enables Freedom); `proposition:bk9_modes_of_re_interpretation` (Modes of Re-Interpretation); `sec:bk7_corollaria_implications_of_convergence` (Corollaria: Implications of Convergence); `subsubsec:bk7_formal_definition_of_symbolic_confidence_ch_i` (Formal Definition of Symbolic Confidence \(C(h_i)\)); `theorem:bk4_self_authorship_and_freedom` (Self-Authorship and Freedom)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-015`
+- Witnesses: `Book4B.symbolicFreedom_of_flowFreedom`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Symbolic freedom is defined exactly as the existential closure of flow freedom, so the criterion is definitional once flow freedom is modeled; only the forward (witness-exhibits-freedom) direction has independent content, and is the theorem proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8658,6 +9438,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3054`
 - Cited by: `proof:bk4_goal_directed_composition_flow` (Goal-Directed Composition as Freedom-Expressive Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-016`
+- Witnesses: `Book4B.autonomy_implies_freedom`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the forward direction is proved (a decision/goal composite exhibiting flow freedom witnesses symbolic freedom). The converse -- freedom forces existence of such g, e -- is not modeled, since it would need an unstated surjectivity assumption on the decision and goal-transformation maps.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 An individuated identity $I$ (see Def. definition:bk4_individuated_symbolic_id) with symbolic autonomy $(A_i, G_i, D_i)$ (Def. definition:bk4_symbolic_autonomy) exhibits freedom according to the freedom criterion (Thm. theorem:bk4_freedom_criterion) if and only if:
@@ -8748,6 +9539,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:3
 - Cited by: `proof:bk4_goal_directed_composition_flow` (Goal-Directed Composition as Freedom-Expressive Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-017`
+- Witnesses: `Book4B.autonomy_implies_freedom`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Direct existential transfer: exhibiting the decision/goal composite D(.,g) . G(.,e) satisfying flow freedom is exactly exhibiting a free flow.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $I$ be an individuated symbolic identity with symbolic autonomy $(A_i, G_i, D_i)$ (Def. definition:bk4_symbolic_autonomy). If there exists $g in G$ and $e in E$ such that
@@ -8834,6 +9636,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3111`
 - Cites: `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_individuated_symbolic_id` (Individuated Symbolic Identity); `definition:bk4_self_authorship` (Self-Authorship); `definition:bk4_symbolic_autonomy` (Symbolic Autonomy); `theorem:bk4_freedom_criterion` (Freedom Criterion)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-095`
+- Witnesses: `Book4Fz.self_authorship_fixed_point`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: The constraint-refinement sequence converges to a unique fixed-point constraint map; the group-action structure stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9060,6 +9873,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3200`
 - Cited by: `corollary:bk4_emergence_of_meaning` (Emergence of Meaning); `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-018`
+- Witnesses: `Book4B.freedomLife_increase_accum`, `Book4B.freedomLife_strictMono`, `Book4B.freedomLife_succ_lt`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The continuous derivative condition dF_free/dt > 0 is modeled by its discrete analogue (fixed positive per-step increase), yielding strict monotonicity and a telescoping lower bound; the bounded-fragmentation clause is retained as a structure field but not used in a theorem beyond being recorded.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 An individuated symbolic identity $I$ (Def. definition:bk4_individuated_symbolic_id) transitions toward symbolic life (Thm. theorem:bk3_criteria_persistent_symbolic_life) if and only if its symbolic freedom measure (Def. definition:bk4_symbolic_freedom_measure) increases over time while maintaining bounded fragmentation (Def. definition:bk4_fragmentation_measure):
@@ -9138,6 +9962,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:3228`
 - Cites: `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk4_freedom_life_connection` (Freedom-Life Connection)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-004`
+- Witnesses: `Book4Meaning.exists_positive_meaning_iff`, `Book4Meaning.freedomLifeTransition_does_not_force_nonconstant_energy`, `Book4Meaning.identityMeaning_ceiling_witness_has_zero_value`, `Book4Meaning.identityMeaning_is_nontrivial`, `Book4Meaning.identityMeaning_nonneg_on_accessible`, `Book4Meaning.identityMeaning_pos_iff_on_accessible`, `Book4Meaning.identityMeaning_strict_preference_iff`, `Book4Meaning.meaningValue_nonneg`, `Book4Meaning.meaningValue_pos_iff`, `Book4Meaning.meaningValue_strict_preference_iff`, `Book4Meaning.preferentialFlow_meaning_nondecreasing`, `Book4Meaning.retained_distinction_does_not_force_action_distinction`, `Book4Meaning.transition_with_bridge_generates_positive_meaning`, `Book4Meaning.value_map_does_not_determine_significance`
+- Countermodels: `Book4Meaning.freedomLifeTransition_does_not_force_nonconstant_energy`, `Book4Meaning.retained_distinction_does_not_force_action_distinction`, `Book4Meaning.value_map_does_not_determine_significance`
+- Conditions: accessible strict-below-ceiling witness; attained finite energy ceiling; explicit freedom-life-to-energy bridge; identity-relative accessible domain; separate convergence and local-minimum certificate for preferential flows
+- Formal boundary: Rebuilt identity-relative meaning kernel: accessible configurations carry an attained ceiling and a strict-below-ceiling witness, yielding a nonnegative, nonconstant U × I → ℝ value map. A flow certificate separates descent from convergence and local minimality; an explicit bridge separates freedom/life from the energy domain. Countermodels separate energetic value, interpretive significance, retained distinction, and embodied action.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9337,6 +10172,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:329
 - Cited by: `axiom:bk9_preconditions_for_reciprocal_cognition` (Preconditions for Reciprocal Cognition); `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `definition:bk4_epistemic_differential_o` (Epistemic Differential Operator); `definition:bk4_observer_differentiable_` (Observer-Differentiable Structure); `definition:bk4_projective_action_transl` (Projective Action Translator); `definition:bk4_substituted_drift_field` (Substituted Drift Field); `definition:bk4_tilda_substitution` (Tilda-Substitution); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `lemma:bk4_local_differentiability_substituted_drift` (Local Differentiability of Substituted Drift); `lemma:bk4_observer_relative_smoothness` (Observer-Relative Smoothness); `proof:bk4_drift_stability_local_bounds` (Drift Stability via Local Symbolic Distortion Bounds); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `proof:bk4_observer_relative_smoothness` (Observer-Relative Smooth Structure from Fuzzy Substitution); `proof:bk4_substituted_drift_smoothness` (Smoothness of Substituted Drift Under Observer Differentiability); `remark:bk4_fuzzy`; `theorem:bk4_categorical_equivalence_observer_relative_structures` (Categorical Equivalence of Observer-Relative Structures); `theorem:bk4_compatibility_drift_reflective_operations` (Compatibility with Drift-Reflective Operations); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem); `theorem:bk4_restated_fuzzy_symbolic_geometry_theorem` (Restated: Fuzzy Symbolic Geometry Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-053`
+- Witnesses: `Book4D.fuzzySubstitutionBound_compose`, `Book4D.fuzzySubstitutionBound_eps_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The observer-differenced displacement bound below epsilon_O(x) is the diff<eps field of FuzzySubstitutionBound; only the scalar bound is modeled, not the map u or the tangent-space structure.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $M$ be a symbolic membrane (Def. definition:bk3_symbolic_membrane) and $O = (N_O, {delta^n_O}, epsilon_O)$ a bounded observer (Def. definition:bk1_bounded_observer). A fuzzy symbolic substitution is a mapping
@@ -9375,6 +10221,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:330
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution)
 - Cited by: `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `definition:bk4_epistemic_differential_o` (Epistemic Differential Operator); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation); `proof:bk4_drift_stability_local_bounds` (Drift Stability via Local Symbolic Distortion Bounds); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem); `theorem:bk4_restated_fuzzy_symbolic_geometry_theorem` (Restated: Fuzzy Symbolic Geometry Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-056`
+- Witnesses: `Book4D.const_odifferentiableAt`, `Book4D.identity_odifferentiableAt`, `Book4D.odifferentiableAt_iff_ratio_form`, `Book4D.odifferentiableAt_mono_eps`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: ODifferentiableAt is the linear-bound reading, specialized to Real -> Real and a single scalar tangent direction (T_p M not modeled).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9438,6 +10295,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:332
 - Cited by: `definition:bk4_induced_area` (Observer-Induced Area Element); `definition:bk4_symbolic_space` (Observer-Relative Symbolic Space); `lemma:bk4_observer_metric_properties` (Properties of Observer-Induced Metric); `proof:bk4_ml_metric_learning`; `proposition:bk4_field_regularization` (Field Theory Regularization); `scholium:bk4_dynamics_of_observer_frame` (On the Dynamics of the Observer Frame); `scholium:bk4_role_of_observer_induced_metric` (Role of the Observer-Induced Metric); `theorem:bk4_ml_metric_learning` (Machine Learning Metric Learning)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-059`
+- Witnesses: `Book4D.observerMetric_rescale_invariant`, `Book4D.observerMetric_self_eq_zero_iff`, `Book4D.observerMetric_self_nonneg`, `Book4D.observerMetric_symm`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Honest 1-dimensional kernel: g_O(v,w) is K(v)*K(w). Coordinate rescaling x -> a*x acts by the pullback kernel K_a(x)=K(x/a), making the pairing exactly invariant on correspondingly rescaled vectors for nonzero a.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M, g)$ be a smooth Riemannian manifold of dimension $n$ on the Book I symbolic manifold substrate (Def. definition:bk1_symbolic_manifold) and let $O$ be a Bounded Observer (Def. definition:bk1_bounded_observer) with resolution kernel $K_O: TM to TM$ satisfying the following conditions:
@@ -9482,6 +10350,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3337`
 - Cites: `definition:bk4_observer_metric` (Observer-Induced Metric)
 - Cited by: `remark:bk4_universality_scaling` (Universality and Scaling)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-060`
+- Witnesses: `Book4D.observerMetric_rescale_invariant`, `Book4D.observerMetric_self_eq_zero_iff`, `Book4D.observerMetric_self_nonneg`, `Book4D.observerMetric_symm`, `Book4D.rescaleKernel_mul`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: All three clauses are proved in the one-dimensional kernel: nonnegativity with the exact zero case, symmetry, and scale invariance under the explicit pullback action of nonzero coordinate rescalings. Rescaling kernels compose multiplicatively.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9543,6 +10422,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3354`
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-003`
+- Witnesses: `Book4QuantumMeasurement.jointExpectation_eq_sum_partialTrace`, `Book4QuantumMeasurement.jointExpectation_local_eq_reduced`, `Book4QuantumMeasurement.jointExpectation_nonneg`, `Book4QuantumMeasurement.jointExpectation_pureObserver`, `Book4QuantumMeasurement.joint_state_does_not_reduce_to_arbitrary_observer`, `Book4QuantumMeasurement.observerMetric_eq_reduced`, `Book4QuantumMeasurement.trace_partialTraceEnvironment`, `Book4QuantumMeasurement.trace_pureStateDensity_mul`, `Book4QuantumResolution.inducedMetric_diagonal_nonneg`, `Book4QuantumResolution.inducedMetric_diagonal_pos_of_channel`, `Book4QuantumResolution.inducedMetric_symmetric`, `Book4QuantumResolution.inducedMetric_zero_of_response_zero`, `Book4QuantumResolution.quantum_resolution_constructs_observer_metric`, `Book4QuantumResolution.reduced_state_does_not_determine_resolution_kernel`
+- Countermodels: `Book4QuantumMeasurement.joint_state_does_not_reduce_to_arbitrary_observer`, `Book4QuantumResolution.reduced_state_does_not_determine_resolution_kernel`
+- Conditions: explicit reduced-expectation-to-geometry certificate; finite observer and environment bases; finite observer channel basis; independently supplied tangent-to-channel response kernel; joint density operator; local observer metric operator; reduced operator with normalized nonnegative diagonal readout weights
+- Formal boundary: Rebuilt finite-dimensional quantum kernel: complex joint operators admit a genuine environmental partial trace retaining observer coherences. Local observables satisfy the exact joint/reduced expectation identity for correlated and mixed states. Pure-state bra-ket expectation is a proved specialization. An explicit certificate, rather than partial trace alone, bridges the reduced operator expectation to the observer-induced metric; the arbitrary-vector countermodel remains. Constructive quantum-resolution bridge: the reduced-state diagonal supplies normalized nonnegative channel weights, while an independent response kernel maps tangent directions into observer channels. Their weighted pullback constructs a symmetric positive-semidefinite observer metric and detects nonzero responses on positive-weight channels. A countermodel proves that the reduced state alone cannot identify the response kernel or metric.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9672,6 +10562,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:3
 - Cites: `definition:bk4_observer_metric` (Observer-Induced Metric)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-005`
+- Witnesses: `Book4FieldRegularization.accessibleAssignment_card`, `Book4FieldRegularization.accessibleBand_card`, `Book4FieldRegularization.cutoffMode_abs_le`, `Book4FieldRegularization.cutoffMode_eq_self`, `Book4FieldRegularization.cutoffMode_eq_zero`, `Book4FieldRegularization.fixedOrderDiagram_zero`, `Book4FieldRegularization.fixed_orders_do_not_force_all_orders_control`, `Book4FieldRegularization.perturbativeInsertion_eq_zero_of_high_mode`, `Book4FieldRegularization.regularizeField_add`, `Book4FieldRegularization.regularizeField_idempotent`, `Book4FieldRegularization.regularizeField_passband`, `Book4FieldRegularization.regularizeField_smul`, `Book4FieldRegularization.regularizeField_stopband`, `Book4FieldRegularization.regularized_support_bounded`, `Book4FieldRegularization.resolution_scale_alone_does_not_force_suppression`
+- Countermodels: `Book4FieldRegularization.fixed_orders_do_not_force_all_orders_control`, `Book4FieldRegularization.resolution_scale_alone_does_not_force_suppression`
+- Conditions: certified compactly supported Fourier multiplier; finite perturbative order; finitely many internal momentum labels; separate uniform estimates for any all-orders claim
+- Formal boundary: A certified compact Fourier multiplier acts linearly and idempotently on the whole field, preserves its passband, kills its stopband, and bounds support. Each fixed-order diagram has exactly (cutoff+1)^order accessible momentum assignments. Unit finite coefficients give unbounded all-orders partial sums, so diagram-wise finiteness does not prove perturbative-series convergence; resolution scale alone also supplies no cutoff law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9816,6 +10717,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3451`
 - Cited by: `remark:bk4_universality_scaling` (Universality and Scaling)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-002`
+- Witnesses: `Book4StatisticalMechanics.coarseObserverMetric_psd`, `Book4StatisticalMechanics.coarseObserverMetric_symmetric`, `Book4StatisticalMechanics.ensembleMetric_of_constant`, `Book4StatisticalMechanics.ensembleMetric_symmetric`, `Book4StatisticalMechanics.entropy_regularity_alone_does_not_force_metric_decomposition`, `Book4StatisticalMechanics.metricQuadratic_ensembleMetric`, `Book4StatisticalMechanics.metricQuadratic_thermalMetric`, `Book4StatisticalMechanics.thermalMetric_decomposition`, `Book4StatisticalMechanics.thermalMetric_diagonal_nonneg`, `Book4StatisticalMechanics.thermalMetric_symmetric`
+- Countermodels: `Book4StatisticalMechanics.entropy_regularity_alone_does_not_force_metric_decomposition`
+- Conditions: finite microstate and macro-coordinate families; normalized nonnegative ensemble weights; positive inverse temperature and declared entropy sign; symmetric PSD entropy-response Hessian; symmetric PSD microscopic metrics
+- Formal boundary: Rebuilt normalized thermal coarse-graining: nonnegative weights sum to one; microscopic metrics and the entropy-response Hessian are symmetric PSD; beta is positive. Lean proves the complete quadratic-form decomposition and PSD of the constructed observer metric, plus preservation of a constant microscopic metric. Entropy regularity alone still cannot identify an independent observer metric with this constitutive closure.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let a finite coarse-graining carry normalized nonnegative ensemble weights
@@ -9902,6 +10814,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3480`
 - Cites: `definition:bk4_observer_metric` (Observer-Induced Metric)
 - Cited by: `corollary:bk4_information_curvature` (Information-Geometric Curvature); `proof:bk4_information_curvature`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-007`
+- Witnesses: `Book4MetricLearning.certified_metric_learning`, `Book4MetricLearning.differentiability_alone_does_not_guarantee_descent`, `Book4MetricLearning.gradientStep_eq_self_iff`, `Book4MetricLearning.learnedMetric_positive`, `Book4MetricLearning.learnedParameter_succ`, `Book4MetricLearning.learnedParameter_tendsto_target`, `Book4MetricLearning.learnedParameter_zero`, `Book4MetricLearning.metricLearningStep_strict_descent`, `Book4MetricLearning.positiveMetric_injective`, `Book4MetricLearning.positiveMetric_pos`, `Book4MetricLearning.quadratic_gradient_step_decreases`, `Book4MetricLearning.target_identified_from_equal_readout`
+- Countermodels: `Book4MetricLearning.differentiability_alone_does_not_guarantee_descent`
+- Conditions: injective observation readout for identification; realizable quadratic parameter loss; scalar log-parameterized positive metric; step size 0 < eta < 1
+- Formal boundary: Complete scalar realization: exponential log-parameterization preserves positive metric validity; the translated quadratic loss has strict one-step descent for 0<eta<1; the exact recursive trajectory converges geometrically to its supplied target; and an injective readout separately supplies identifiability. The eta=2 countermodel retains the boundary that differentiability alone proves none of descent, convergence, or learning.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10123,6 +11046,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:3546`
 - Cited by: `proposition:bk4_holographic_emergence` (Holographic Emergence)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-006`
+- Witnesses: `Book4InformationCurvature.christoffel_eq_zero_of_dMetric_zero`, `Book4InformationCurvature.curvature_diagonal_zero`, `Book4InformationCurvature.fisherInformation_nonneg`, `Book4InformationCurvature.fisherMetric_diagonal_nonneg`, `Book4InformationCurvature.fisherMetric_symm`, `Book4InformationCurvature.hessianMoment_is_not_riemannCurvature`, `Book4InformationCurvature.riemannCurvature_diagonal_zero`, `Book4InformationCurvature.riemannCurvature_eq_zero_of_constant_jet`, `Book4InformationCurvature.riemannCurvature_swap`, `Book4InformationCurvature.unit_hessianMoment_diagonal`, `Book4InformationCurvature.unit_hessian_moment_cannot_be_riemann_diagonal`, `Book4InformationCurvature.unit_second_hessian_moment`
+- Countermodels: none
+- Conditions: finite coordinate chart; nonnegative statistical weights; regular positive-definite metric two-jet with inverse data; two metric derivatives for Christoffel curvature
+- Formal boundary: Finite-coordinate Fisher–Levi-Civita realization: the Fisher score outer product is symmetric with nonnegative diagonal; an explicit metric two-jet constructs Christoffel symbols, their derivatives, and Riemann curvature with the required antisymmetry and diagonal vanishing. Constant metric jets are flat. The former Hessian-product expression is retained as a distinct Hessian-moment tensor, with a unit countermodel proving it is not generally Riemann curvature.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the regularity and identifiability hypotheses of
@@ -10314,6 +11248,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:3
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-001`
+- Witnesses: `Book4Holographic.boundary_metric_alone_does_not_select_unique_bulk`, `Book4Holographic.minimal_area_does_not_force_unique_surface`, `Book4Holographic.observerSurfaceArea_mono`, `Book4Holographic.observerSurfaceArea_nonneg`, `Book4Holographic.reconstructedEntropy_nonneg`, `Book4Holographic.reconstruction_deterministic`, `Book4Holographic.rtEntropy_area_law`, `Book4Holographic.rtEntropy_nonneg`, `Book4Holographic.rtEntropy_strictMono_area`, `Book4Holographic.selectedSurface_minimizes_entropy`, `Book4Holographic.selectedSurface_unique_of_uniqueMinimizer`
+- Countermodels: `Book4Holographic.boundary_metric_alone_does_not_select_unique_bulk`, `Book4Holographic.minimal_area_does_not_force_unique_surface`
+- Conditions: admissible anchored surface fiber; nonnegative area; observer-relative RT regime; positive Newton constant; selected area minimizer; separate uniqueness witness
+- Formal boundary: Rebuilt variational RT reconstruction with admissible anchored-surface fibers, selected area minimizers, nonnegative area, and positive Newton constant. Entropy minimality is proved. Uniqueness requires a separate witness; countermodels refute uniqueness from boundary metric or minimality alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Assume an observer-relative AdS/CFT-RT reconstruction regime comprising: a
@@ -10419,6 +11364,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3647`
 - Cited by: `lemma:bk4_observer_relative_smoothness` (Observer-Relative Smoothness); `proof:bk4_drift_stability_local_bounds` (Drift Stability via Local Symbolic Distortion Bounds); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `proof:bk4_substituted_drift_smoothness` (Smoothness of Substituted Drift Under Observer Differentiability)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-092`
+- Witnesses: `Book4Fz.TopologicalObserverTangentAtlas.exists_chart_mem_nhds`, `Book4Fz.TopologicalObserverTangentAtlas.iUnion_source_eq_univ`, `Book4Fz.hasFDerivAt_localObserverTransition`, `Book4Fz.hasFDerivAt_observerTransition`, `Book4Fz.hasFDerivAt_substituted_drift`, `Book4Fz.localObserverCoordinateOverlap_iff`, `Book4Fz.localObserverTangentTransition_cocycle`, `Book4Fz.mfderiv_substituted_drift`, `Book4Fz.observerTangentTransition_cocycle`, `Book4Fz.substituted_drift_contMDiff`, `Book4Fz.substituted_drift_continuous`, `Book4Fz.substituted_drift_differentiable`, `Book4Fz.substituted_drift_mdifferentiable`, `Book4Fz.topologicalObserverCoordinateOverlap_isOpen`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: The substituted drift is Frechet differentiable on normed model spaces. Explicit local chart domains now support exact overlap membership and transition Jacobians, with consistent tangent transport across triple overlaps.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $u : M to tilde{M}$ be a fuzzy symbolic substitution (Def. definition:bk4_fuzzy_symbolic_substitution) relative to observer $O$, and let $P_lambda subset M$ be a symbolic structure with drift operator $D_lambda$. Then there exists a neighborhood $U_lambda subset P_lambda$ such that the substituted drift field $tilde{D}_lambda = u_*(D_lambda)$ (Def. definition:bk4_substituted_drift_field) is $O$-differentiable within $u(U_lambda) subset tilde{M}$.
@@ -10518,6 +11474,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3684`
 - Cites: `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution); `definition:bk4_substituted_drift_field` (Substituted Drift Field); `lemma:bk4_local_differentiability_substituted_drift` (Local Differentiability of Substituted Drift)
 - Cited by: `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `proof:bk4_substituted_drift_smoothness` (Smoothness of Substituted Drift Under Observer Differentiability)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-091`
+- Witnesses: `Book4Fz.C1ObserverTangentAtlas.isManifold`, `Book4Fz.C1ObserverTangentAtlas.localTransition_contDiffOn`, `Book4Fz.ContDiffObserverTangentAtlas.isManifold`, `Book4Fz.ContDiffObserverTangentAtlas.isManifold_one`, `Book4Fz.ContDiffObserverTangentAtlas.transition_contDiffOn`, `Book4Fz.TopologicalObserverTangentAtlas.atlas_eq_range`, `Book4Fz.TopologicalObserverTangentAtlas.coordinateOverlap_isOpen`, `Book4Fz.TopologicalObserverTangentAtlas.exists_chart_mem_nhds`, `Book4Fz.TopologicalObserverTangentAtlas.iUnion_source_eq_univ`, `Book4Fz.TopologicalObserverTangentAtlas.isManifold_zero`, `Book4Fz.TopologicalObserverTangentAtlas.mem_chartAt_source`, `Book4Fz.fderiv_localObserverTransition`, `Book4Fz.hasFDerivAt_localObserverTransition`, `Book4Fz.hasFDerivAt_observerTransition`, `Book4Fz.hasFDerivAt_substituted_drift`, `Book4Fz.localObserverCoordinateOverlap_iff`, `Book4Fz.localObserverTangentTransition_cocycle`, `Book4Fz.localObserverTransition_cocycle`, `Book4Fz.localObserverTransition_mem_target`, `Book4Fz.localObserver_coordinate_mem_overlap`, `Book4Fz.mfderiv_substituted_drift`, `Book4Fz.observerTangentTransition_cocycle`, `Book4Fz.observerTangentTransition_self`, `Book4Fz.observerTransition_cocycle`, `Book4Fz.substituted_drift_conjugacy`, `Book4Fz.substituted_drift_contMDiff`, `Book4Fz.substituted_drift_continuous`, `Book4Fz.substituted_drift_differentiable`, `Book4Fz.substituted_drift_iterate_conjugacy`, `Book4Fz.substituted_drift_mdifferentiable`, `Book4Fz.topologicalObserverCoordinateOverlap_isOpen`, `Book4Fz.topologicalObserverOverlap_isOpen`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: Pushforward drift is continuous and Frechet differentiable with exact ordered Jacobian and finite-iterate conjugacy. Local observer charts now carry explicit source and target sets, exact overlap membership, target preservation, transition Jacobians, and coordinate/tangent cocycles on triple overlaps. Native topological chart domains and all pairwise coordinate overlaps are open, and a covering atlas supplies an open chart neighborhood at every point. The covering atlas is now assembled into mathlib's native ChartedSpace and certified as an IsManifold at C^0. A strengthened regular-atlas contract couples every transition Jacobian to overlap-wide C^n regularity. At C^1, chartwise regularity of each chart and inverse now derives pairwise transition regularity automatically, identifies the computed fderiv with tangent transport, and assembles the mathlib manifold without a duplicate transition obligation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10628,6 +11595,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3726`
 - Cites: `axiom:bk2_gradient_structure_drift` (Gradient Structure of Symbolic Drift); `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution); `definition:bk4_observer_differentiable_` (Observer-Differentiable Structure); `definition:bk4_substituted_drift_field` (Substituted Drift Field); `theorem:appB_metric_completion` (Existence of Metric Completion)
 - Cited by: `corollary:bk4_emergence_of_classical_ge` (Emergence of Classical Geometry); `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `proof:bk4_drift_reflection_field` (Symbolic Drift-Reflection Field Dynamics); `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `proof:bk4_emergence_of_classical_ge`; `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `proof:bk4_observer_functor_induced_structure` (Observer Functor Induces Differentiable Fuzzy Structure); `proof:bk4_observer_relative_smoothness` (Observer-Relative Smooth Structure from Fuzzy Substitution); `remark:bk4_fuzzy`; `remark:bk4_fuzzy_notation`; `theorem:bk4_compatibility_drift_reflective_operations` (Compatibility with Drift-Reflective Operations); `theorem:bk4_restated_fuzzy_symbolic_geometry_theorem` (Restated: Fuzzy Symbolic Geometry Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-061`
+- Witnesses: `Book4D.chart_geometry_exists_iff_glued`, `Book4D.chart_glued_yields_single_geometry`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only consequence 2 ("admits an observer-relative differentiable structure") is covered, re-read over FracturedAtlas.ChartComplex with Glued as the named hypothesis consuming the source's chart-convergence condition. Consequences 1 and 3 (perceiving a smooth manifold; reflection-induced stabilization fields) are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10811,6 +11789,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:3805`
 - Cited by: `proof:bk4_observer_relative_smoothness` (Observer-Relative Smooth Structure from Fuzzy Substitution); `remark:bk4_fuzzy`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-063`
+- Witnesses: `Book4D.dual_horizon_no_single_smoothness`, `Book4D.odifferentiableAt_mono_eps`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Clause 3 (different observers may perceive different structures on the same system) is the dual-horizon fracture instance; clauses 2 and 4 (dependence on resolution threshold; classical case as the eps->0 limit) are the honest monotonicity-in-eps content of odifferentiableAt_mono_eps. Clause 1 (smoothness as a resolution artifact, stated narratively) is not separately modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Within the bounded observer framework (Def. definition:bk1_bounded_observer), the emergence of smooth manifold structure is an epistemic phenomenon rather than an ontological primitive. Specifically:
@@ -10896,6 +11885,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3835`
 - Cites: `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Cited by: `definition:bk4_epistemic_differential_o` (Epistemic Differential Operator); `lemma:bk5_recursive_flow_convergence` (Recursive Flow Convergence); `proof:bk4_drift_reflection_field` (Symbolic Drift-Reflection Field Dynamics); `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `proof:bk5_drift_reflection_equilibrium` (Available-Operator Construction); `remark:bk4_fuzzy`; `subsec:bk5_symbolic_free_energy_and_stability` (Symbolic Free Energy and Stability)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-093`
+- Witnesses: `Book4Fz.drift_reflection_contMDiff`, `Book4Fz.drift_reflection_continuous`, `Book4Fz.hasFDerivAt_drift_reflection`, `Book4Fz.hasFDerivAt_substituted_drift_reflection`, `Book4Fz.mfderiv_substituted_drift_reflection`, `Book4Fz.substituted_drift_reflection_contMDiff`, `Book4Fz.substituted_drift_reflection_continuous`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: The drift-reflection operation and its observer substitution are native C-n manifold maps; their exact ordered Frechet and manifold derivatives are kernel-derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11065,6 +12065,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3897`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution); `definition:bk4_observer_differentiable_` (Observer-Differentiable Structure); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Cited by: `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `proof:bk4_observer_functor_induced_structure` (Observer Functor Induces Differentiable Fuzzy Structure); `proof:bk4_substituted_drift_smoothness` (Smoothness of Substituted Drift Under Observer Differentiability); `remark:bk4_fuzzy_notation`; `scholium:bk4_emergence_of_classical_calculus` (Emergence of Classical Calculus)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-062`
+- Witnesses: `Book4D.chart_geometry_exists_iff_glued`, `Book4D.chart_glued_yields_single_geometry`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same as theorem:bk4_fuzzy_symbolic_geometry_theorem: only the "admits a pulled-back C^k differentiable structure" consequence is covered via ChartComplex + Glued.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11280,6 +12291,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:3
 - Cited by: `proof:bk4_fuzzy_divergence`; `proposition:bk4_geodesic_failure` (Conditional Jacobi-Deviation Diagnostic); `theorem:bk4_fuzzy_divergence` (Divergence and Symbolic Conservation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-010`
+- Witnesses: `Book4AssembledConnection.EffectiveParallelTransportCertificate.eq_certified_trajectory`, `Book4AssembledConnection.EffectiveParallelTransportCertificate.observed_endpoint_error_tendsto_zero`, `Book4AssembledConnection.EffectiveParallelTransportCertificate.observed_endpoint_tendsto`, `Book4AssembledConnection.EffectiveParallelTransportCertificate.solves_observer_floor_transport`, `Book4AssembledConnection.ObserverFloorRegularity.coefficient_uses_observer_floor`, `Book4AssembledConnection.assembledTorsionAt_eq_zero_of_local_symmetric`, `Book4AssembledConnection.certified_coefficient_transformation`, `Book4AssembledConnection.discreteParallelTransport_append`, `Book4AssembledConnection.globalNablaAt_eq_of_local_eq`, `Book4AssembledConnection.observer_floor_can_change_visible_path`, `Book4AssembledConnection.step_size_matters`, `Book4FuzzyConnection.flatConnection_torsion_control`, `Book4FuzzyConnection.flatConnection_torsion_zero`, `Book4FuzzyConnection.flat_parallel_transport_exact`, `Book4FuzzyConnection.torsion_control_of_approx_symmetric`
+- Countermodels: none
+- Conditions: continuous bilinear local coefficients; explicit Jacobian cocycle and Hessian correction for affine overlap transport; explicit trajectory existence, ODE law, uniqueness, admissibility, and vanishing effective error bound; finite chart inventory and pointwise partition of unity; finite ordered duration-position-velocity path; positive observer resolution floor and smoothing map yielding a smooth observed path; see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Conditional assembled fuzzy-connection kernel: local coefficients glue with Hessian-aware overlap data and local symmetry transfers to global torsion-freeness. Analytic transport consumes an explicit observer-floor regularization plus separately supplied existence, uniqueness, admissibility, and effective-error evidence; observed endpoint convergence follows. Countermodels show neither finite Euler steps nor an unspecified floor yields observer-free smoothness.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $tilde M$ be a paracompact observer-induced manifold with an
@@ -11407,6 +12429,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:4
 - Cites: `proposition:bk4_fuzzy_connection` (Conditional Fuzzy Connection)
 - Cited by: `definition:bk4_symbolic_curvature` (Symbolic Curvature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-009`
+- Witnesses: `Book4GeodesicFailure.JacobiCertificate.observer_diagnostic_certificate`, `Book4GeodesicFailure.derivative_agreement_does_not_force_jacobi_curvature`
+- Countermodels: `Book4GeodesicFailure.JacobiCertificate.observer_diagnostic_certificate`, `Book4GeodesicFailure.derivative_agreement_does_not_force_jacobi_curvature`
+- Conditions: explicit Jacobi equation with stated sign convention; normed common fibre; observer-to-covariant acceleration error bound; uniform derivative magnitude bounds for the corollary
+- Formal boundary: The repaired proposition is realized at its exact conditional strength by one common-fibre Jacobi certificate: its displayed convention fixes acceleration as negative curvature action, observer approximation gives the magnitude-sensitive squared-norm bound, and uniform magnitude bounds give 2 B epsilon. The countermodel proves approximation alone cannot manufacture the Jacobi premise.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11550,6 +12583,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4086`
 - Cited by: `corollary:bk4_emergence_of_classical_ge` (Emergence of Classical Geometry); `proof:bk4_emergence_of_classical_ge`; `proof:bk4_observer_functor_induced_structure` (Observer Functor Induces Differentiable Fuzzy Structure)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-096`
+- Witnesses: `Book4Fz.CrossObserverTimeConsistent.symm`, `Book4Fz.CrossObserverTimeConsistent.trans`, `Book4Fz.crossObserverTimeConsistent_refl`
+- Countermodels: none
+- Formal boundary: Compatible observer state-and-clock transports satisfy identity, composition, and inverse laws, giving a concrete groupoid kernel. The stated functor from symbolic systems, its essential surjectivity, and a Mathlib CategoryTheory natural transformation remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Symb_Lambda$ be the category of symbolic systems with fuzzy substitutions as morphisms, and let $DiffMan_O$ be the category of observer-relative differentiable manifolds (definition:bk4_fuzzy_symbolic_substitution). There exists a functor
@@ -11638,6 +12681,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:4116`
 - Cites: `theorem:bk4_categorical_equivalence_observer_relative_structures` (Categorical Equivalence of Observer-Relative Structures); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-065`
+- Witnesses: `Book4D.jacobianChain_idealized_forces_zero_tensor`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The categorical-functor limit claim itself is not modeled; the idealized-observer (epsO=0 forces the coupling tensor to vanish) is the same limiting-classical-geometry content in the one place it is a genuine inequality rather than narrative.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11752,6 +12806,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:415
 - Cited by: `definition:bk4_fuzzy_gradient` (Fuzzy Gradient Operator); `definition:bk4_tilda_substitution` (Tilda-Substitution); `lemma:bk4_convergence_of_symbolic_drift` (Convergence of Symbolic Drift); `proof:bk4_convergence_of_symbolic_drift`; `proof:bk4_multiplication_to_curvature`; `proof:bk4_sketch_sub_thresholds` ($\mathcal{O}$-Bounded Error Propagation in Chain Rule); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `theorem:bk4_existence_observer_valid_derivatives` (Existence of Observer-Valid Derivatives); `theorem:bk4_fuzzy_chain_rule` (Observer-Relative Chain Rule); `theorem:bk4_fuzzy_product_rule` (Observer-Relative Product Rule); `theorem:bk4_fuzzy_quotient_rule` (Observer-Relative Quotient Rule); `theorem:bk4_fuzzy_sum_rule` (Observer-Relative Sum Rule); `theorem:bk4_multiplication_to_curvature` (Multiplicative Error Becomes Curvature)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-057`
+- Witnesses: `Book4D.odifferentiableAt_iff_ratio_form`, `Book4D.odifferentiableAt_mono_eps`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The ratio/limit phrasing, proved equivalent to ODifferentiableAt's linear-bound phrasing.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(P, tau_{P})$ be a symbolic structure space with topology $tau_{P}$ induced by observer $O$.
@@ -11784,6 +12849,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:4159`
 - Cites: `definition:bk4_observer_valid_different` (Observer-Valid Differentiation)
 - Cited by: `proof:bk4_existence_observer_valid_derivatives`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-058`
+- Witnesses: `Book4D.symbolicDrift_geometric_contraction_tendsto_zero`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Transfinite/ordinal indexing dropped; kept the honest countable kernel -- a nonnegative sequence contracting geometrically at a fixed rate r<1 tends to 0, via tendsto_pow_atTop_nhds_zero_of_abs_lt_one and squeeze_zero.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11879,6 +12955,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:419
 - Cited by: `corollary:bk4_validity_of_tilda_substit` (Validity of Tilda-Substitution); `definition:bk7_srmfconstrained_observer` (SRMF-Constrained Observer); `proof:bk4_existence_observer_valid_derivatives`; `proof:bk4_validity_of_tilda_substit`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-054`
+- Witnesses: `Book4D.fuzzySubstitutionBound_compose`, `Book4D.fuzzySubstitutionBound_eps_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same FuzzySubstitutionBound scalar law, instantiated at the tilda-substitution's own N_O-fold observer bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A tilda-substitution is a structure-preserving map $tilde{u}: M to widetilde{M}$ between symbolic manifolds that generalizes classical substitution to curved symbolic systems with observer-relative calculus, defined by: (def definition:bk1_bounded_observer) (see def definition:bk4_observer_valid_different)
@@ -11908,6 +12995,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4200`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation)
 - Cited by: `proof:bk4_fuzzy_divergence`; `theorem:bk4_fuzzy_divergence` (Divergence and Symbolic Conservation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-024`
+- Witnesses: `Book4B.boundedErrorTerm_mono_linear`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the shared linear error-scaling schema underlying the three stated consequence bounds (linearity error, Leibniz error, chain error) is modeled; the three preconditions on ratios of higher-order symbolic differences are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12005,6 +13103,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:4234`
 - Cites: `definition:bk4_tilda_substitution` (Tilda-Substitution)
 - Cited by: `theorem:bk4_fuzzy_divergence` (Divergence and Symbolic Conservation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-055`
+- Witnesses: `Book4D.fuzzySubstitutionBound_compose`, `Book4D.fuzzySubstitutionBound_eps_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The commutator norm bound is the same diff<eps scalar shape; fuzzySubstitutionBound_compose gives the honest composition consequence (consistency up to the sum of thresholds).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12135,6 +13244,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4286`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation)
 - Cited by: `corollary:bk4_fuzzy_multivariable_chain` (Chain Rule for Fuzzy Compositions); `definition:bk4_fuzzy_gradient` (Fuzzy Gradient Operator); `proof:bk4_existence_observer_valid_derivatives`; `proof:bk4_fuzzy_multivariable_chain`; `proof:bk4_sketch_sub_thresholds` ($\mathcal{O}$-Bounded Error Propagation in Chain Rule); `scholium:bk4_nested_frames` (The Calculus of Nested Frames); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); `theorem:bk4_fuzzy_jacobian` (Fuzzy Jacobian Matrix Rule); `theorem:bk4_fuzzy_product_rule` (Observer-Relative Product Rule); `theorem:bk8_no_free_projection` (No Free Projection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-019`
+- Witnesses: `Book4B.boundedErrorTerm_mono_linear`, `Book4D.ObserverDerivativeAt.abs_comp_correction_le`, `Book4D.ObserverDerivativeAt.comp`, `Book4D.ObserverDerivativeAt.comp_controlled`, `Book4D.ObserverDerivativeAt.comp_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact scalar chain rule with a derived observer correction, including the outer-correction times inner-correction cross term. Manifold and cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12453,6 +13573,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4437`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation); `theorem:bk4_fuzzy_chain_rule` (Observer-Relative Chain Rule)
 - Cited by: `proof:bk4_existence_observer_valid_derivatives`; `proof:bk4_fuzzy_deriv_algebra`; `proof:bk4_multiplication_to_curvature`; `proof:bk4_sketch_cross_field_product` (Cross-Error Torsion and $\mathcal{O}$-Bounded Product Rule); `proposition:bk4_fuzzy_deriv_algebra` (Algebraic Properties of the Fuzzy Derivative); `scholium:bk4_higher_order_cross_error_structure` (Origin of Higher-Order Interaction Errors); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); `scholium:bk4_symbolic_entanglement` (The Mathematics of Symbolic Entanglement); `theorem:bk4_fuzzy_power_rule` (Observer-Relative Power Rule); `theorem:bk4_fuzzy_quotient_rule` (Observer-Relative Quotient Rule); `theorem:bk4_multiplication_to_curvature` (Multiplicative Error Becomes Curvature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-021`
+- Witnesses: `Book4B.boundedErrorTerm_mono_quadratic`, `Book4D.ObserverDerivativeAt.mul`, `Book4D.ObserverDerivativeAt.mul_controlled`, `Book4D.ObserverDerivativeAt.mul_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact scalar product rule with the correction propagated from certified derivatives. Symbolic torsion and cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12940,6 +14071,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4634`
 - Cited by: `proof:bk4_sketch_extracting_recrusive_curvature` (Power Rule via Binomial Expansion and Recursive Error Bound); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-028`
+- Witnesses: `Atlas.holonomy_eps_squared`, `Atlas.non_euclidean_necessity`, `Book4D.contextualStructuralGrowth_induces_curvature`, `Book4D.contextual_crossError_induces_curvature`, `Book4D.crossErrorTransport_noncommute`, `Book4D.crossTerm_zero_iff_additively_separable`, `Book4D.nonseparable_iff_exists_crossError`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Discrete positive bridge: any nonzero scalar contextual cross-difference is embedded as an explicit upper elementary 2x2 transport; paired with the lower elementary context transport it cannot commute, so the exact epsilon-squared holonomy theorem gives route disagreement at every nonzero scale. It also proves that contextual nonseparability is equivalent to existence of a nonzero cross-error, yielding a complete typed nonseparability-to-curvature bridge. The source's bare dimension inequality still needs a theorem connecting it to nonseparability.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under observer-valid differentiability (Def. definition:bk4_observer_valid_different) and the fuzzy product dynamics of Thm. theorem:bk4_fuzzy_product_rule, multiplicative cross-errors induce curvature in the symbolic-membrane sense of Book III (Def. definition:bk3_symbolic_membrane).
@@ -13010,6 +14152,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4678`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation); `theorem:bk4_fuzzy_product_rule` (Observer-Relative Product Rule)
 - Cited by: `definition:bk4_symbolic_memory_distortion` (Symbolic Memory Distortion); `proof:bk4_fuzzy_logarithmic_rule`; `proof:bk4_sketch_observer_resolution_floor` (Quotient Rule via Observer Resolution Floor Regularization); `scholium:bk4_fuzzy_logarithmic_resolution` (Logarithmic Divergence and Resolution Floors); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); `scholium:bk4_symbolic_regularization` (The Geometry of Symbolic Regularization); `theorem:bk4_fuzzy_logarithmic_rule` (Fuzzy Logarithmic Rule)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-022`
+- Witnesses: `Book4B.boundedErrorTerm_mono_quadratic`, `Book4B.quotientFloor_ge_eps_sq`, `Book4D.ObserverDerivativeAt.div`, `Book4D.ObserverDerivativeAt.div_controlled`, `Book4D.ObserverDerivativeAt.div_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact scalar quotient rule under the necessary nonzero-denominator hypothesis, with its observer correction derived algebraically. Cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13337,6 +14490,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4833`
 - Cited by: `proof:bk4_existence_observer_valid_derivatives`; `proof:bk4_fuzzy_deriv_algebra`; `proof:bk4_fuzzy_exponential_rule`; `proof:bk4_sketch_symbolic_path_interference` (Sum Rule via Additive Error Bound with Curvature Correction); `proposition:bk4_fuzzy_deriv_algebra` (Algebraic Properties of the Fuzzy Derivative); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); `scholium:bk4_symbolic_interference` (Symbolic Interference Geometry); `theorem:bk4_fuzzy_power_rule` (Observer-Relative Power Rule)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-020`
+- Witnesses: `Book4B.boundedErrorTerm_mono_linear`, `Book4D.ObserverDerivativeAt.abs_add_correction_le`, `Book4D.ObserverDerivativeAt.add`, `Book4D.ObserverDerivativeAt.add_controlled`, `Book4D.ObserverDerivativeAt.add_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact scalar sum rule: certified observer corrections add. Manifold and cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Within bounded observation (Def. definition:bk1_bounded_observer) and observer-valid differentiation (Def. definition:bk4_observer_valid_different), additive symbolic flows acquire curvature-coupled interference, consistent with Book III coupling geometry (Def. definition:bk3_symbiotic_curvature).
@@ -13647,6 +14811,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:4
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-025`
+- Witnesses: `Book4B.boundedErrorTerm_mono_linear`, `Book4B.boundedErrorTerm_mono_quadratic`, `Book4D.FuzzyOperator.Reversible.backward_after_forward`, `Book4D.FuzzyOperator.Reversible.forwardThen`, `Book4D.FuzzyOperator.Reversible.forward_after_backward`, `Book4D.FuzzyOperator.forwardThen_assoc_map`, `Book4D.FuzzyOperator.forwardThen_map`, `Book4D.ObserverDerivativeAt.PerturbationRequest.admissible_applied_le_budget`, `Book4D.ObserverDerivativeAt.PerturbationRequest.cosmicRay_rejected`, `Book4D.ObserverDerivativeAt.PerturbationRequest.zero_budget_inert`, `Book4D.ObserverDerivativeAt.RationalPerturbationCertificate.gate_eq_true_iff`, `Book4D.ObserverDerivativeAt.RationalPerturbationCertificate.real_sound`, `Book4D.ObserverDerivativeAt.add_controlled`, `Book4D.ObserverDerivativeAt.comp_controlled`, `Book4D.ObserverDerivativeAt.correctionControlled_mono`, `Book4D.ObserverDerivativeAt.div_controlled`, `Book4D.ObserverDerivativeAt.mul_controlled`, `Book4D.ObserverDerivativeAt.ofClassical_controlled`, `Book4D.ObserverDerivativeAt.pow_controlled`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The algebra now has an operational correction-control predicate with budget weakening, classical zero-correction admission, and derived budget transport through sum, product, chain, power, and quotient. The source's unrestricted inequality between arbitrary observers and its non-quantitative observer-constant clause remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $D_O$ be the fuzzy derivative operator relative to a Bounded Observer $O$. For O-differentiable symbolic fields $f, g$ and scalar $a$, $D_O$ exhibits the following properties:
@@ -13733,6 +14908,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5013`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `theorem:bk4_fuzzy_product_rule` (Observer-Relative Product Rule); `theorem:bk4_fuzzy_sum_rule` (Observer-Relative Sum Rule)
 - Cited by: `proof:bk4_fuzzy_exponential_rule`; `proof:bk4_sketch_extracting_recrusive_curvature` (Power Rule via Binomial Expansion and Recursive Error Bound); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); `scholium:bk4_symbolic_self_organization` (The Geometry of Symbolic Self-Organization); `theorem:bk4_fuzzy_exponential_rule` (Fuzzy Exponential Rule)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-023`
+- Witnesses: `Book4B.boundedErrorTerm_mono_quadratic`, `Book4D.ObserverDerivativeAt.pow`, `Book4D.ObserverDerivativeAt.pow_controlled`, `Book4D.ObserverDerivativeAt.pow_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact natural-power rule with the observer correction propagated through the certified derivative. Recursive-curvature and cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14065,6 +15251,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5177`
 - Cited by: `proof:bk4_fuzzy_logarithmic_rule`; `scholium:bk4_fuzzy_exponential_growth` (Fuzzy Growth Constraints); `theorem:bk4_fuzzy_logarithmic_rule` (Fuzzy Logarithmic Rule)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-066`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := D_O(e^g(x)), classicalValue := e^g(x)*D_O(g(x)), correction := C_O(x). The stated equation is exactly the defining hypothesis heq; the theorem gives "the symbolic curvature term vanishes iff the exponential rule is exactly classical."
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 As the exponential continuation of Book IV recursive calculus (Thm. theorem:bk4_fuzzy_power_rule) under Book I bounded-observer constraints (Def. definition:bk1_bounded_observer), this rule captures curvature-modulated symbolic growth.
@@ -14176,6 +15373,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5212`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `theorem:bk4_fuzzy_exponential_rule` (Fuzzy Exponential Rule); `theorem:bk4_fuzzy_quotient_rule` (Observer-Relative Quotient Rule)
 - Cited by: `scholium:bk4_fuzzy_logarithmic_resolution` (Logarithmic Divergence and Resolution Floors)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-067`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := D_O(ln(g(x))), classicalValue := D_O(g(x))/g(x), correction := D_O(x) (the divergence term).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14348,6 +15556,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:529
 - Cited by: `definition:bk4_fuzzy_vector_field` (Fuzzy Symbolic Vector Field); `definition:bk4_symbolic_vector_field` (Symbolic Vector Field); `lemma:bk4_gradient_stability` (Gradient Stability Under Observer Perturbations); `proof:bk4_detailed_construction` (Detailed Construction); `proof:bk4_fuzzy_divergence`; `proof:bk4_gradient_stability`; `scholium:bk4_symbolic_drift_fields` (Symbolic Drift Fields in Cognitive Systems); `theorem:bk4_fuzzy_jacobian` (Fuzzy Jacobian Matrix Rule)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-026`
+- Witnesses: `Book4B.fuzzyGradient_bound_antitone`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the partial-derivative bound M_f/epsilon_O is modeled, proved strictly antitone in the resolution threshold for fixed positive M_f; the vector-valued vector field, dimensional cross-coupling error term, and its own bound are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Extending Book IV observer-relative differential structure (Def. definition:bk4_observer_valid_different, Thm. theorem:bk4_fuzzy_chain_rule) on Book I bounded-observer grounds (Def. definition:bk1_bounded_observer), the fuzzy gradient captures multivariable symbolic flow under finite resolution.
@@ -14406,6 +15625,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:5317`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_fuzzy_gradient` (Fuzzy Gradient Operator)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-027`
+- Witnesses: `Book4B.gradientStability_same_resolution`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The stated Lipschitz-plus-quadratic bound is kept as a structure field; proved that when two observers share a resolution threshold the bound collapses to the quadratic correction term alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14510,6 +15740,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5359`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_fuzzy_gradient` (Fuzzy Gradient Operator); `theorem:bk4_fuzzy_chain_rule` (Observer-Relative Chain Rule)
 - Cited by: `corollary:bk4_fuzzy_multivariable_chain` (Chain Rule for Fuzzy Compositions); `definition:bk4_symbolic_vector_field` (Symbolic Vector Field); `demonstratio:bk4_fuzzy_forward_mode` (Fuzzy Forward-Mode Differentiation); `proof:bk4_detailed_construction` (Detailed Construction); `proof:bk4_fuzzy_multivariable_chain`; `scholium:bk4_dynamics_of_observer_frame` (On the Dynamics of the Observer Frame); `scholium:bk4_symbolic_drift_fields` (Symbolic Drift Fields in Cognitive Systems)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-068`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance with M a matrix additive group: observerValue := J_O(f)(p), classicalValue := the classical partials matrix, correction := C_O(p).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14624,6 +15865,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:5406`
 - Cites: `theorem:bk4_fuzzy_chain_rule` (Observer-Relative Chain Rule); `theorem:bk4_fuzzy_jacobian` (Fuzzy Jacobian Matrix Rule)
 - Cited by: `demonstratio:bk4_fuzzy_forward_mode` (Fuzzy Forward-Mode Differentiation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-064`
+- Witnesses: `Book4D.jacobianChain_idealized_forces_zero_tensor`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The stated Frobenius-norm bound is kept as the JacobianChainBound.tNorm_bound field; the theorem draws its honest consequence at the unbounded-observer idealization.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14743,6 +15995,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:544
 - Cited by: `proof:bk4_fuzzy_divergence`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-070`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`, `Book4Fz.IsObserverFlow.add_eq_comp`, `Book4Fz.IsObserverFlow.controlledPerturbation_of_reachable_zero`, `Book4Fz.IsObserverFlow.isObserverIntegralCurve`, `Book4Fz.IsObserverFlow.zero_eq_id`, `Book4Fz.IsObserverIntegralCurve.controlledPerturbation_of_direction_zero`, `Book4Fz.controlledVectorFieldPerturbation_add`, `Book4Fz.controlledVectorFieldPerturbation_apply`, `Book4Fz.controlledVectorFieldPerturbation_eq_self_iff`, `Book4Fz.controlledVectorFieldPerturbation_eq_self_of_direction_zero`, `Book4Fz.controlledVectorFieldPerturbation_zero`, `Book4Fz.isObserverIntegralCurve_iff`, `Book4Fz.observerFlow_perturbation_iff`, `Book4Fz.observerIntegralCurve_perturbation_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := V(f)(p), classicalValue := V(p)*grad_O f(p), correction := eps_O*<V(p), E_O(p)> (the additional uncertainty term).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given the fuzzy gradient and Jacobian framework (Def. definition:bk4_fuzzy_gradient, Thm. theorem:bk4_fuzzy_jacobian), a symbolic vector field formalizes observer-relative tangent flow on Book I bounded-observer manifolds.
@@ -14775,6 +16038,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5458`
 - Cites: `corollary:bk4_validity_of_tilda_substit` (Validity of Tilda-Substitution); `proposition:bk4_fuzzy_connection` (Conditional Fuzzy Connection); `theorem:bk4_existence_observer_valid_derivatives` (Existence of Observer-Valid Derivatives)
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-069`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := div_O V(p), classicalValue := sum of classical partials, correction := R_O(p) (the symbolic curvature scalar); correction=0 recovers exact conservation of meaning volume.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15272,6 +16546,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5676`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-008`
+- Witnesses: `Book4ObserverGeometry.CoupledAttractionCertificate.jointError_tendsto_zero`, `Book4ObserverGeometry.driftingSystem_has_no_stabilized_state`, `Book4ObserverGeometry.equilibrium_constantTrajectory_solves`, `Book4ObserverGeometry.exists_picardLindelof_certificate_of_locallyLipschitz`, `Book4ObserverGeometry.exists_recursively_stabilized_system`, `Book4ObserverGeometry.jointEquilibrium_iff`, `Book4ObserverGeometry.locallyLipschitz_finiteDimensional_local_existence`, `Book4ObserverGeometry.picardLindelof_local_existence`, `Book4ObserverGeometry.picardLindelof_local_uniqueness`, `Book4ObserverGeometry.recursivelyStabilized_iff`, `Book4ObserverGeometry.translatingVectorField_has_no_jointEquilibrium`
+- Countermodels: none
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Mathlib Picard-Lindelof gives local existence and uniqueness for the locally Lipschitz finite-dimensional product field. Joint equilibrium yields a constant solution; translation is a countermodel to equilibrium from regularity alone. A separate coupled-attraction certificate now proves geometric joint error tends to zero, making the attraction clause a conditional derivation rather than an open or automatic consequence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $X_{mathcal O}$ and $X_{mathcal G}$ be finite-dimensional normed state
@@ -15430,6 +16715,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:578
 - Cited by: `proof:bk4_fuzzy_curl_theorem`; `proof:bk4_fuzzy_fundamental`; `scholium:bk4_the_observer_as_weaver` (The Observer as Weaver); `theorem:bk4_fuzzy_fundamental` (Fuzzy Fundamental Theorem of Calculus)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-072`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := the fuzzy path integral, classicalValue := the K_O-convolved line integral, correction := E_acc(gamma,f) (Symbolic Memory Distortion).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 As the integration dual to Book IV fuzzy differentiation (Subsec. subsec:bk4_fuzzy_differentiation_summary, Thm. theorem:bk4_fuzzy_fundamental) and rooted in Book I bounded observation (Def. definition:bk1_bounded_observer), this defines observer-relative symbolic accumulation.
@@ -15484,6 +16780,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:579
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `theorem:bk4_fuzzy_quotient_rule` (Observer-Relative Quotient Rule); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Cited by: `proof:bk4_fuzzy_fundamental`; `scholium:bk4_the_observer_as_weaver` (The Observer as Weaver); `theorem:bk4_fuzzy_fundamental` (Fuzzy Fundamental Theorem of Calculus)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-073`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: E_acc is exactly the `correction` slot consumed by definition:bk4_fuzzy_integral_operator's and theorem:bk4_fuzzy_fundamental's instantiations; no independent equation of its own beyond that role.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15578,6 +16885,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5819`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_fuzzy_integral_operator` (Fuzzy Integral Operator); `definition:bk4_symbolic_memory_distortion` (Symbolic Memory Distortion)
 - Cited by: `definition:bk4_fuzzy_integral_operator` (Fuzzy Integral Operator); `definition:bk4_symbolic_holonomy_term` (Symbolic Holonomy Term); `definition:bk5_fuzzy_symbolic_manifold` (Fuzzy Symbolic Manifold); `scholium:bk4_micro_local_vs_path_global_irreversibility` (Micro-Local and Path-Global Irreversibility); `scholium:bk4_symbolic_monodromy` (Symbolic Monodromy and the Topology of Meaning); `scholium:bk4_the_nature_of_truth` (The Nature of Truth); `theorem:bk5_golden_ratio_curvature_scalar` (Golden Ratio as Balanced Scale-Resonant Curvature Ratio)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-074`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Both clauses instantiate the generic law: (1) observerValue := D_O(int_O f), classicalValue := f(x), correction := kappa_O(f, int f); (2) observerValue := int_O^gamma D_O f, classicalValue := f(gamma(b))-f(gamma(a)), correction := H_O(gamma,f).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15676,6 +16994,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:585
 - Cites: `theorem:bk4_fuzzy_fundamental` (Fuzzy Fundamental Theorem of Calculus); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Cited by: `proof:bk4_fuzzy_fundamental`; `proof:bk4_imaginative_continuity_principle` (Bounded Reintegration of Latent Phase); `proof:bk4_wheel_refines_signature` (Quadrant quotient of the phase circle); `scholium:bk4_symbolic_monodromy` (Symbolic Monodromy and the Topology of Meaning)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-075`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: H_O(gamma,f) is exactly the `correction` slot consumed by theorem:bk4_fuzzy_fundamental clause 2 and theorem:bk4_symbolic_stokes; no independent equation of its own.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15844,6 +17173,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:591
 - Cited by: `definition:bk4_fuzzy_curl_operator` (Fuzzy Curl Operator); `proof:bk4_fuzzy_curl_theorem`; `proof:bk4_sketch_stokes` (Symbolic Stokes via Covariant Exterior Calculus); `proof:bk4_sketch_symbolic_path_interference` (Sum Rule via Additive Error Bound with Curvature Correction); `scholium:bk4_torsion_flux_anomaly` (Torsion-Flux Anomaly); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-076`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := D_O f, classicalValue := df, correction := i*A_O wedge f; M taken as the complex-valued (or form-valued) additive group, correction=0 is the trivial-connection case.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Built on Def. definition:bk4_symbolic_space and the Book IV fuzzy derivative calculus, this derivative provides the gauge-covariant symbolic transport rule under bounded observation.
@@ -15923,6 +17263,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5937`
 - Cites: `definition:bk4_induced_area` (Observer-Induced Area Element); `definition:bk4_symbolic_covariant` (Symbolic Covariant Derivative); `scholium:bk4_zero_is_idealized_in_boundedness` (Zero is Idealized in Boundedness)
 - Cited by: `definition:bk4_fuzzy_curl_operator` (Fuzzy Curl Operator); `definition:bk4_symbolic_holonomy_term` (Symbolic Holonomy Term); `definition:bk4_symbolic_memory_distortion` (Symbolic Memory Distortion); `proof:bk4_fuzzy_curl_theorem`; `proof:bk4_fuzzy_divergence_theorem`; `proof:bk4_fuzzy_fundamental`; `proof:bk4_imaginative_continuity_principle` (Bounded Reintegration of Latent Phase); `proof:bk4_sketch_stokes` (Symbolic Stokes via Covariant Exterior Calculus); `proposition:bk4_spiral_transition` (Spiral transition between modes); `remark:bk4_aharonov_bohm` (Connection to Aharonov-Bohm Effect); `scholium:bk4_dark_knowledge` (Dark Knowledge); `scholium:bk4_gauge_relation` (Gauge Relation); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `scholium:bk4_symbolic_monodromy` (Symbolic Monodromy and the Topology of Meaning); `scholium:bk4_the_nature_of_truth` (The Nature of Truth); `theorem:bk4_fuzzy_curl_theorem` (Fuzzy Curl Theorem); `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-077`
+- Witnesses: `Book4FuzzyStokes.FuzzyStokesAtlasCertificate.assembled_classical_recovery`, `Book4FuzzyStokes.FuzzyStokesAtlasCertificate.assembled_fuzzy_stokes`, `Book4FuzzyStokes.FuzzyStokesCertificate.classical_recovery`, `Book4FuzzyStokes.FuzzyStokesCertificate.fuzzy_stokes`, `Book4FuzzyStokes.FuzzyStokesCertificate.integrated_residue_zero_of_classical_recovery`, `Book4FuzzyStokes.FuzzyStokesCertificate.interactionForm_eq_zero_of_classical_recovery`, `Book4FuzzyStokes.RectangleFuzzyStokesData.analytic_classical_recovery`, `Book4FuzzyStokes.RectangleFuzzyStokesData.analytic_curvature_transports_through_gauge`, `Book4FuzzyStokes.RectangleFuzzyStokesData.analytic_fuzzy_stokes`, `Book4FuzzyStokes.RectangleFuzzyStokesData.exteriorDensity_integrable`, `Book4FuzzyStokes.RectangleFuzzyStokesData.rectangle_stokes`, `Book4FuzzyStokes.discrete_classical_recovery`, `Book4FuzzyStokes.discrete_fuzzy_stokes`, `Book4FuzzyStokes.integrated_zero_does_not_force_form_zero`, `Book4FuzzyStokes.sum_stripExteriorDerivative`
+- Countermodels: `Book4FuzzyStokes.integrated_zero_does_not_force_form_zero`
+- Conditions: a classical Stokes bridge for the covariant one-form; a typed curvature-plus-interaction decomposition; additive one-form, two-form, and value carriers; injectivity/no-cancellation only when pointwise recovery is claimed
+- Formal boundary: Typed general certificate; a finite oriented-strip realization; and now a genuine analytic Green--Stokes realization on oriented rectangular charts derived from mathlib planar divergence. Finite chart assembly makes overlap-boundary cancellation explicit, and the analytic curvature carrier transports through Book4Gauge curvature naturality. Integrated recovery remains distinct from pointwise vanishing via the proved cancellation countermodel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16238,6 +17589,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:6
 - Cited by: `corollary:bk4_wilson_loop` (Conditional Wilson Holonomy Representation); `remark:bk4_aharonov_bohm` (Connection to Aharonov-Bohm Effect)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-002`
+- Witnesses: `Book4Gauge.ObserverAtlas.global_unique_of_local_compatibility`, `Book4Gauge.StructuralGaugeCertificate.connectionAction_square`, `Book4Gauge.StructuralGaugeCertificate.curvature_square`, `Book4Gauge.StructuralGaugeCertificate.fieldAction_square`, `Book4Gauge.StructuralGaugeCertificate.holonomy_square`, `Book4Gauge.coordinateObserverAtlas_assembles`, `Book4Gauge.curvature_correspondence_bijective`, `Book4Gauge.derivative_correspondence_bijective`, `Book4Gauge.names_alone_do_not_supply_gauge_dictionary`, `Book4Gauge.observer_local_types_do_not_force_global_existence`
+- Countermodels: `Book4Gauge.observer_local_types_do_not_force_global_existence`
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: A supplied structural gauge certificate carries reversible translations and commuting action, curvature, equivariance, and holonomy squares. Observer locality is now explicit: jointly separating local views determine at most one compatible global geometry, and the full coordinate family gives a concrete assembly. A countermodel keeps global existence separate from local data and names alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The following table is an interpretive glossary:
@@ -16409,6 +17771,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:6136`
 - Cited by: `proposition:bk4_quantum_geometry` (Certified Symbolic Quantum Geometry)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-003`
+- Witnesses: `Book4Gauge.WilsonTransportCertificate.holonomy_eq_endpoint`, `Book4Gauge.WilsonTransportCertificate.trajectory_hasDerivWithinAt`, `Book4Gauge.WilsonTransportCertificate.trajectory_initial`, `Book4Gauge.pathOrderedProduct_append`, `Book4Gauge.pathOrderedProduct_nil`, `Book4Gauge.two_segment_order_independent_iff`, `Book4WilsonGlobal.AnalyticWilsonContinuationTrace.globalTransport_eq_certified_trajectory`, `Book4WilsonGlobal.AnalyticWilsonContinuationTrace.local_trajectory_hasDerivWithinAt`, `Book4WilsonGlobal.CrossObserverWilsonTransport.transported_approximation_eq`, `Book4WilsonGlobal.CrossObserverWilsonTransport.transported_target_eq`, `Book4WilsonGlobal.ObserverWilsonApproximationCertificate.admissible_iff_visible_above_floor`, `Book4WilsonGlobal.ObserverWilsonApproximationCertificate.observed_approximation_tendsto`, `Book4WilsonGlobal.ObserverWilsonApproximationCertificate.observed_error_tendsto_zero`, `Book4WilsonGlobal.WilsonContinuationTrace.chartAt_mem`, `Book4WilsonGlobal.WilsonContinuationTrace.globalHolonomy_eq_endpoint_of_initial_eq_one`, `Book4WilsonGlobal.WilsonContinuationTrace.globalTransport_eq_local`, `Book4WilsonGlobal.endpoint_alone_does_not_identify_symbolic_loop`, `Book4WilsonGlobal.exact_partition_transport_eq_holonomy`, `Book4WilsonGlobal.positive_resolution_floor_not_unique`, `Book4WilsonGlobal.reverseOrderedIncrements_prod`, `Book4WilsonGlobal.scalarConstantEulerApproximation_tendsto`, `Book4WilsonGlobal.scalarConstantObserverCertificate_tendsto`, `Book4WilsonGlobal.shared_raw_endpoint_does_not_force_shared_observation`, `Book4WilsonGlobal.symbolic_loop_has_wilson_representation`, `Book4WilsonGlobal.wilsonObservable_eq_trace`
+- Countermodels: `Book4WilsonGlobal.endpoint_alone_does_not_identify_symbolic_loop`, `Book4WilsonGlobal.shared_raw_endpoint_does_not_force_shared_observation`
+- Conditions: equality of local trajectories on overlaps; eventual floor-admissibility and a vanishing observed-error bound; explicit cross-observer intertwining transport when observations are compared; finite chart cover of [0,1]; group-valued exact segment transports; observer smoothing and positive resolution floor; one shared continuous coefficient field with local Picard certificates; see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Complete conditional construction: Picard-certified local trajectories glue globally; exact ordered increments telescope to holonomy; the trace observable is separately typed; symbolic/Wilson equality requires its explicit compatibility witness; and approximation is observer-relative through smoothing, a positive floor, admissibility, and vanishing observed error. Cross-observer comparison requires an intertwiner, with countermodels excluding observer-independent presentation and a universal floor. Constant-scalar Euler convergence supplies a concrete inhabitant. Variable noncommutative solvers and closed-form rates remain optional future instances, not premises omitted from this theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $GsubseteqGL(V)$ be a matrix Lie group with a fixed
@@ -16554,6 +17927,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:6
 - Cites: `corollary:bk4_wilson_loop` (Conditional Wilson Holonomy Representation)
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-001`
+- Witnesses: `Book4QuantumGeometry.noncommuting_transport_is_path_dependent`, `Book4QuantumGeometry.path_dependence_alone_does_not_force_quantum_fluctuation`, `Book4QuantumGeometry.quantum_fluctuation_of_symbolic_path_dependence`, `Book4QuantumGeometry.twoSegmentPathDependent_iff_noncommute`
+- Countermodels: `Book4QuantumGeometry.path_dependence_alone_does_not_force_quantum_fluctuation`
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Finite holonomy kernel: two-segment symbolic path dependence is exactly noncommutation of transports. A quantum-fluctuation conclusion follows only through an explicit modal bridge preserving that predicate; a logical countermodel shows path dependence alone does not manufacture the physical reading.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16759,6 +18143,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:629
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-071`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`, `Book4Fz.IsObserverFlow.add_eq_comp`, `Book4Fz.IsObserverFlow.controlledPerturbation_of_reachable_zero`, `Book4Fz.IsObserverFlow.isObserverIntegralCurve`, `Book4Fz.IsObserverFlow.zero_eq_id`, `Book4Fz.IsObserverIntegralCurve.controlledPerturbation_of_direction_zero`, `Book4Fz.controlledVectorFieldPerturbation_add`, `Book4Fz.controlledVectorFieldPerturbation_apply`, `Book4Fz.controlledVectorFieldPerturbation_eq_self_iff`, `Book4Fz.controlledVectorFieldPerturbation_eq_self_of_direction_zero`, `Book4Fz.controlledVectorFieldPerturbation_zero`, `Book4Fz.isObserverIntegralCurve_iff`, `Book4Fz.observerFlow_perturbation_iff`, `Book4Fz.observerIntegralCurve_perturbation_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The residual Lie-derivative law is retained, and the native manifold tangent-field layer now gives explicit amplitude-controlled perturbation with zero and additive control laws.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A Fuzzy Symbolic Vector Field on an observer-induced fuzzy membrane $tilde{M}$ is a mapping $vec{V}: tilde{M} to T_{O}tilde{M}$, where $T_{O}tilde{M}$ is the observer-dependent tangent bundle. For any O-differentiable scalar field $f: tilde{M} to mathbb{R}$, the action of $vec{V}$ (the Lie derivative) is given by:
@@ -16803,6 +18198,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:630
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `proof:bk4_fuzzy_helmholtz_decomposition`; `scholium:bk4_meaning_volume` (Meaning Volume); `subsec:bk4_fuzzy_differentiation_summary` (Observer-Centric Summary: The Laws of Fuzzy Symbolic Differentiation); `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem); `theorem:bk4_fuzzy_helmholtz_decomposition` (Fuzzy Helmholtz Decomposition)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-078`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same equation as theorem:bk4_fuzzy_divergence, restated as the operator's own definition.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16859,6 +18265,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:632
 - Cites: `definition:bk4_symbolic_covariant` (Symbolic Covariant Derivative); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Cited by: `proof:bk4_fuzzy_curl_theorem`; `proof:bk4_fuzzy_helmholtz_decomposition`; `scholium:bk4_gauge_relation` (Gauge Relation); `theorem:bk4_fuzzy_curl_theorem` (Fuzzy Curl Theorem); `theorem:bk4_fuzzy_helmholtz_decomposition` (Fuzzy Helmholtz Decomposition)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-079`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := curl_O V, classicalValue := d(omega_V), correction := i*A_O wedge omega_V; M taken as the complex-valued additive group.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16931,6 +18348,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:6341`
 - Cites: `corollary:bk4_emergence_of_classical_ge` (Emergence of Classical Geometry); `definition:bk4_fuzzy_divergence_operator` (Fuzzy Divergence Operator); `definition:bk4_induced_area` (Observer-Induced Area Element); `proposition:bk4_fuzzy_deriv_algebra` (Algebraic Properties of the Fuzzy Derivative); `proposition:bk4_quantum_geometry` (Certified Symbolic Quantum Geometry); `theorem:bk4_fuzzy_divergence` (Divergence and Symbolic Conservation); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Cited by: `proof:bk4_sketch_stokes` (Symbolic Stokes via Covariant Exterior Calculus); `proof:bk5_coherence_through_dynamic_equilibriium` (Coherence Through Dynamic Equilibrium); `scholium:bk4_zero_is_idealized_in_boundedness` (Zero is Idealized in Boundedness)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-080`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := the fuzzy boundary flux integral, classicalValue := the fuzzy volume-divergence integral, correction := H_O(Omega,V) (Boundary Holonomy Term).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -17069,6 +18497,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:6391`
 - Cited by: `proof:bk4_fuzzy_helmholtz_decomposition`; `proof:bk4_sketch_stokes` (Symbolic Stokes via Covariant Exterior Calculus); `scholium:bk4_torsion_flux_anomaly` (Torsion-Flux Anomaly); `theorem:bk4_fuzzy_helmholtz_decomposition` (Fuzzy Helmholtz Decomposition)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-081`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := the fuzzy circulation integral, classicalValue := the fuzzy curl-flux surface integral, correction := T_O(S,V) (Torsion-Flux Anomaly).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Using Def. definition:bk4_fuzzy_curl_operator and the path/surface equivalence pattern of Thm. theorem:bk4_symbolic_stokes, this theorem gives the circulation-vorticity law in observer-relative vector calculus.
@@ -17150,6 +18589,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:6413`
 - Cites: `definition:bk4_fuzzy_curl_operator` (Fuzzy Curl Operator); `definition:bk4_fuzzy_divergence_operator` (Fuzzy Divergence Operator); `theorem:bk4_fuzzy_curl_theorem` (Fuzzy Curl Theorem)
 - Cited by: `scholium:bk4_dark_knowledge` (Dark Knowledge)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-082`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := V, classicalValue := -grad_O Phi + curl_O A, correction := H_O (the Observer-Relative Harmonic Field).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

@@ -20,8 +20,21 @@ layer for tools that prefer Markdown.
 - Labels are shown in backticks, e.g. `definition:bk1_bounded_observer`.
 - `Depends on` points toward support/foundations.
 - `Cited by` points toward later uses.
-- `Proof status` is local atlas status, not external acceptance.
+- `Proof status` is manuscript-local LaTeX proof linkage, not Lean certification.
+- `lean_alignment.statuses` is the independent kernel-correspondence status.
+- Follow `lean_alignment.record_ids` into `../principia_lean_alignment.json`, then follow each receipted declaration into Sketched.
+- Conditional, refuted, open, interpretive, and poetic statuses are distinct.
+- Operator poetry is intentional source material, not an unmapped theorem failure.
 - The statement/body is cleaned for reading; consult the LaTeX source for exact typography.
+
+## Lean Program
+
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 ## Atlas Counts
 

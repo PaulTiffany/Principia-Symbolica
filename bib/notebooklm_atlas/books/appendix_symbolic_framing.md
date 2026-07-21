@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - appendix_symbolic_framing
 
 Nodes in this source group: 55
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -552,6 +558,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_framing` | Source: 
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SMALLPACK-007`
+- Witnesses: `SmallPack.inf_mono_of_subset`, `SmallPack.inf_strict_decrease`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Erases the manifold/linear-algebra content (the residual map, its derivative J_x, tangent spaces, the curvature correction) and keeps only its abstract order-theoretic core: enlarging a feasible real-valued constraint set can only lower sInf, and strictly lowers it exactly when the enlarged set contains a witness below the old infimum -- the honest kernel of 'a new parameter relieves the obstruction precisely when it contributes a non-redundant direction.'
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(M\) be a finite-dimensional symbolic manifold equipped with an
@@ -1080,6 +1097,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_framing` | Source: 
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_SYMBOLIC_FRAMING-001`
+- Witnesses: `AppendixTitansArrow.bare_testTime_update_need_not_be_irreversible`, `AppendixTitansArrow.memorization_changes_history`, `AppendixTitansArrow.memorization_has_positive_cost`, `AppendixTitansArrow.titans_arrow_of_time`, `AppendixTitansArrow.visible_return_is_not_full_return`
+- Countermodels: none
+- Conditions: every represented memory step has strictly positive cost; full process state includes history rather than only the visible model coordinate; the external test-time process supplies a history order strictly increased by every memory step
+- Formal boundary: Conditional downstream kernel: any test-time learning process equipped with the Appendix C MemoryAct laws strictly advances history, pays positive cost, and cannot return to its initial history after a positive number of steps. Visible state can return without full-state return. A reversible Bool update proves a bare external test-time transition does not itself entail irreversibility or empirical validation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

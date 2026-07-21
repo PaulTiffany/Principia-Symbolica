@@ -1,0 +1,502 @@
+{
+  "schema_version": "2.0",
+  "generated": "2026-07-21T17:12:17.179346+00:00",
+  "scope": "witnessed",
+  "witnesses": [
+    {
+      "repo": "fascia",
+      "kind": "executable",
+      "commit": "ae2ac26",
+      "generated": "2026-06-14T15:42:22.161229+00:00",
+      "mode": "live",
+      "artifact_hash": "sha256:c4ef7a9ffba15255e33eef3395bde504cb159806b8b76dda77565d0453146f71"
+    }
+  ],
+  "sources": {
+    "index": {
+      "path": "bib/principia_index.json",
+      "hash": "sha256:d90a077b06ee899e427e11b56f276cbd91d1aa948a11be9dd1eb94adf54a7b73",
+      "generated_at": "2026-07-21T17:12:16.902108Z"
+    },
+    "proof_report": {
+      "path": "bib/proof_report.json",
+      "hash": "sha256:07f473e34b5240f01ced8ab3ccc469c88b1b5fa32088981c4776944239b1039d",
+      "generated": "2026-07-21T13:08:33"
+    }
+  },
+  "integrity": {
+    "labels_certified": 6,
+    "unresolved_labels": [],
+    "reconciled_labels": [
+      {
+        "from": "proposition:appC_dual_horizon_necessity",
+        "to": "theorem:appC_dual_horizon_signature"
+      }
+    ]
+  },
+  "summary": {
+    "by_tier": {
+      "C": 2,
+      "A": 3,
+      "B": 1
+    },
+    "by_transfer": {
+      "pending": 5,
+      "inherited": 1
+    }
+  },
+  "ledger": [
+    {
+      "label": "definition:bk1_bounded_observer",
+      "book": "scholium_symbolicum",
+      "env": "definition",
+      "claim_text": "Bounded Observer",
+      "source": {
+        "file": "scholium_symbolicum.tex",
+        "line": 27
+      },
+      "certified_baseline": {
+        "proof": {
+          "axis": "definitional",
+          "witness": "principia",
+          "from": "proof_report.json@2026-07-21T13:08:33"
+        },
+        "tests": {
+          "mode": "live",
+          "passed": 4,
+          "failed": 0,
+          "node_ids": [
+            "tests/observers/test_resolution_read.py::test_subthreshold_change_is_not_distinguished",
+            "tests/observers/test_resolution_read.py::test_suprathreshold_change_is_distinguished",
+            "tests/observers/test_resolution_read.py::test_measure_subthreshold_change_not_distinguished",
+            "tests/observers/test_resolution_read.py::test_measure_suprathreshold_change_distinguished"
+          ]
+        },
+        "mutation": {
+          "status": "verified",
+          "modules": {
+            "pylantern/observers/observer.py": {
+              "tested": 470,
+              "killed": 470,
+              "survived": 0,
+              "verified": true,
+              "freshness": "modified"
+            }
+          }
+        },
+        "witnesses": [
+          {
+            "repo": "principia",
+            "kind": "proof",
+            "commit": "unversioned",
+            "artifact_hash": "sha256:07f473e34b5240f01ced8ab3ccc469c88b1b5fa32088981c4776944239b1039d"
+          },
+          {
+            "repo": "fascia",
+            "kind": "executable",
+            "commit": "ae2ac26",
+            "artifact_hash": "sha256:c4ef7a9ffba15255e33eef3395bde504cb159806b8b76dda77565d0453146f71"
+          }
+        ],
+        "scope": "composite",
+        "components": {
+          "Diff_O": {
+            "tier": "C",
+            "tier_reason": "declared, unwitnessed"
+          },
+          "Order_O": {
+            "tier": "C",
+            "tier_reason": "declared, unwitnessed"
+          },
+          "Res_O": {
+            "tier": "A",
+            "tier_reason": "definitional (no proof obligation) + code-corroborated",
+            "node_ids": [
+              "tests/observers/test_resolution_read.py::test_subthreshold_change_is_not_distinguished",
+              "tests/observers/test_resolution_read.py::test_suprathreshold_change_is_distinguished",
+              "tests/observers/test_resolution_read.py::test_measure_subthreshold_change_not_distinguished",
+              "tests/observers/test_resolution_read.py::test_measure_suprathreshold_change_distinguished"
+            ]
+          }
+        },
+        "tier": "C",
+        "tier_reason": "aggregate (weakest) over 3 declared fragments; witnessed: Res_O"
+      },
+      "transfer": {
+        "from_certificate_commit": "ae2ac26",
+        "to_current_commit": "dirty",
+        "status": "pending",
+        "changed_modules": [
+          "pylantern/observers/observer.py"
+        ],
+        "reason": "guarding module(s) changed since certified baseline: pylantern/observers/observer.py"
+      },
+      "content_hash": "sha256:9ad4ae90ab2f4c8f296de9ec8688a91272f494c4afc8d4e38b583a84619d9161"
+    },
+    {
+      "label": "definition:bk1_reflection_operator",
+      "book": "scholium_symbolicum",
+      "env": "definition",
+      "claim_text": "Reflection Operator",
+      "source": {
+        "file": "scholium_symbolicum.tex",
+        "line": 1209
+      },
+      "certified_baseline": {
+        "proof": {
+          "axis": "definitional",
+          "witness": "principia",
+          "from": "proof_report.json@2026-07-21T13:08:33"
+        },
+        "tests": {
+          "mode": "live",
+          "passed": 4,
+          "failed": 0,
+          "node_ids": [
+            "tests/observers/test_reflection_axioms.py::test_structural_reflection_involution_with_orthonormal_spinor_basis",
+            "tests/observers/test_reflection_axioms.py::test_structural_reflection_isometry_under_orthonormal_spinor_basis",
+            "tests/property/test_reflection_invariants.py::test_structural_reflection_involution_property",
+            "tests/property/test_reflection_invariants.py::test_structural_reflection_preserves_pairwise_distance_property"
+          ]
+        },
+        "mutation": {
+          "status": "verified",
+          "modules": {
+            "pylantern/observers/observer.py": {
+              "tested": 470,
+              "killed": 470,
+              "survived": 0,
+              "verified": true,
+              "freshness": "modified"
+            }
+          }
+        },
+        "witnesses": [
+          {
+            "repo": "principia",
+            "kind": "proof",
+            "commit": "unversioned",
+            "artifact_hash": "sha256:07f473e34b5240f01ced8ab3ccc469c88b1b5fa32088981c4776944239b1039d"
+          },
+          {
+            "repo": "fascia",
+            "kind": "executable",
+            "commit": "ae2ac26",
+            "artifact_hash": "sha256:c4ef7a9ffba15255e33eef3395bde504cb159806b8b76dda77565d0453146f71"
+          }
+        ],
+        "scope": "composite",
+        "components": {
+          "R_mir": {
+            "tier": "A",
+            "tier_reason": "definitional (no proof obligation) + code-corroborated",
+            "node_ids": [
+              "tests/observers/test_reflection_axioms.py::test_structural_reflection_involution_with_orthonormal_spinor_basis",
+              "tests/observers/test_reflection_axioms.py::test_structural_reflection_isometry_under_orthonormal_spinor_basis",
+              "tests/property/test_reflection_invariants.py::test_structural_reflection_involution_property",
+              "tests/property/test_reflection_invariants.py::test_structural_reflection_preserves_pairwise_distance_property"
+            ]
+          },
+          "R_stab": {
+            "tier": "C",
+            "tier_reason": "declared, unwitnessed"
+          }
+        },
+        "tier": "C",
+        "tier_reason": "aggregate (weakest) over 2 declared fragments; witnessed: R_mir"
+      },
+      "transfer": {
+        "from_certificate_commit": "ae2ac26",
+        "to_current_commit": "dirty",
+        "status": "pending",
+        "changed_modules": [
+          "pylantern/observers/observer.py"
+        ],
+        "reason": "guarding module(s) changed since certified baseline: pylantern/observers/observer.py"
+      },
+      "content_hash": "sha256:f46990beebb9f20c2d3de4df2860f4b8891c59b90cd48514286e1bc573c1e934"
+    },
+    {
+      "label": "scholium:bk4_symbolic_monodromy",
+      "book": "book4",
+      "env": "scholium",
+      "claim_text": "Symbolic Monodromy and the Topology of Meaning",
+      "source": {
+        "file": "book4.tex",
+        "line": 6245
+      },
+      "certified_baseline": {
+        "proof": {
+          "axis": "honest",
+          "witness": "principia",
+          "from": "proof_report.json@2026-07-21T13:08:33"
+        },
+        "tests": {
+          "mode": "live",
+          "passed": 4,
+          "failed": 0,
+          "node_ids": [
+            "tests/manifolds/test_transport_orientation.py::TestPoincareTransportOrientation::test_ccw_loop_holonomy_is_clockwise",
+            "tests/manifolds/test_transport_orientation.py::TestSphereTransportOrientation::test_ccw_loop_holonomy_is_counterclockwise",
+            "tests/manifolds/test_transport_orientation.py::TestSphereTransportOrientation::test_transport_not_identity",
+            "tests/math/test_orientation_residue.py::TestSphereResidueDetectsHolonomy::test_loop_holonomy_appears_as_d_im"
+          ]
+        },
+        "mutation": {
+          "status": "verified",
+          "modules": {
+            "pylantern/manifolds/poincare_ball.py": {
+              "tested": 1251,
+              "killed": 1251,
+              "survived": 0,
+              "verified": true,
+              "freshness": "modified"
+            },
+            "pylantern/manifolds/sphere.py": {
+              "tested": 1522,
+              "killed": 1522,
+              "survived": 0,
+              "verified": true,
+              "freshness": "modified"
+            },
+            "pylantern/math/orientation_residue.py": {
+              "tested": 139,
+              "killed": 139,
+              "survived": 0,
+              "verified": true,
+              "freshness": "untracked"
+            }
+          }
+        },
+        "witnesses": [
+          {
+            "repo": "principia",
+            "kind": "proof",
+            "commit": "unversioned",
+            "artifact_hash": "sha256:07f473e34b5240f01ced8ab3ccc469c88b1b5fa32088981c4776944239b1039d"
+          },
+          {
+            "repo": "fascia",
+            "kind": "executable",
+            "commit": "ae2ac26",
+            "artifact_hash": "sha256:c4ef7a9ffba15255e33eef3395bde504cb159806b8b76dda77565d0453146f71"
+          }
+        ],
+        "scope": "whole",
+        "tier": "A",
+        "tier_reason": "proof honest + code-corroborated"
+      },
+      "transfer": {
+        "from_certificate_commit": "ae2ac26",
+        "to_current_commit": "dirty",
+        "status": "pending",
+        "changed_modules": [
+          "pylantern/manifolds/poincare_ball.py",
+          "pylantern/manifolds/sphere.py",
+          "pylantern/math/orientation_residue.py"
+        ],
+        "reason": "guarding module(s) changed since certified baseline: pylantern/manifolds/poincare_ball.py, pylantern/manifolds/sphere.py, pylantern/math/orientation_residue.py"
+      },
+      "content_hash": "sha256:ffcfb5591ace9eb9978271f0d4e5f9e6d42a8d6a0377b99d6db5460580fd6064"
+    },
+    {
+      "label": "theorem:appC_dual_horizon_signature",
+      "book": "appendix_dual_horizon",
+      "env": "theorem",
+      "claim_text": "Dual Horizon Necessity (Effective Signature)",
+      "source": {
+        "file": "appendix_dual_horizon.tex",
+        "line": 78
+      },
+      "certified_baseline": {
+        "proof": {
+          "axis": "honest",
+          "witness": "principia",
+          "from": "proof_report.json@2026-07-21T13:08:33"
+        },
+        "tests": {
+          "mode": "live",
+          "passed": 3,
+          "failed": 0,
+          "node_ids": [
+            "tests/validation/test_dual_horizon.py::test_scenario_a_drift_only",
+            "tests/validation/test_dual_horizon.py::test_scenario_b_reflection_only",
+            "tests/validation/test_dual_horizon.py::test_scenario_c_dual_horizon"
+          ]
+        },
+        "mutation": {
+          "status": "verified",
+          "modules": {
+            "pylantern/loss_functions/emergence_loss.py": {
+              "tested": 181,
+              "killed": 181,
+              "survived": 0,
+              "verified": true,
+              "freshness": "unchanged"
+            }
+          }
+        },
+        "witnesses": [
+          {
+            "repo": "principia",
+            "kind": "proof",
+            "commit": "unversioned",
+            "artifact_hash": "sha256:07f473e34b5240f01ced8ab3ccc469c88b1b5fa32088981c4776944239b1039d"
+          },
+          {
+            "repo": "fascia",
+            "kind": "executable",
+            "commit": "ae2ac26",
+            "artifact_hash": "sha256:c4ef7a9ffba15255e33eef3395bde504cb159806b8b76dda77565d0453146f71"
+          }
+        ],
+        "scope": "whole",
+        "tier": "A",
+        "tier_reason": "proof honest + code-corroborated"
+      },
+      "transfer": {
+        "from_certificate_commit": "ae2ac26",
+        "to_current_commit": "ae2ac26",
+        "status": "inherited",
+        "changed_modules": [],
+        "reason": "current code == certified baseline"
+      },
+      "registry_label": "proposition:appC_dual_horizon_necessity",
+      "content_hash": "sha256:412583f71a956dcb9225b9fac9c5492d24303c3eec16a9fb6466ace8bb6b7430"
+    },
+    {
+      "label": "theorem:bk1_emergence_of_reflection_operator",
+      "book": "scholium_symbolicum",
+      "env": "theorem",
+      "claim_text": "Emergence of Stabilization Operator",
+      "source": {
+        "file": "scholium_symbolicum.tex",
+        "line": 2957
+      },
+      "certified_baseline": {
+        "proof": {
+          "axis": "gap",
+          "witness": "principia",
+          "from": "proof_report.json@2026-07-21T13:08:33"
+        },
+        "tests": {
+          "mode": "live",
+          "passed": 4,
+          "failed": 0,
+          "node_ids": [
+            "tests/observers/test_reflection_axioms.py::test_stabilizing_frame_map_is_contractive_for_scale_less_than_one",
+            "tests/observers/test_reflection_axioms.py::test_stabilizing_frame_map_has_fixed_point_at_origin",
+            "tests/observers/test_reflection_axioms.py::test_stabilizing_frame_iterations_converge_toward_fixed_point",
+            "tests/property/test_reflection_invariants.py::test_stabilizer_map_is_contractive_property"
+          ]
+        },
+        "mutation": {
+          "status": "verified",
+          "modules": {
+            "pylantern/observers/observer.py": {
+              "tested": 470,
+              "killed": 470,
+              "survived": 0,
+              "verified": true,
+              "freshness": "modified"
+            }
+          }
+        },
+        "witnesses": [
+          {
+            "repo": "principia",
+            "kind": "proof",
+            "commit": "unversioned",
+            "artifact_hash": "sha256:07f473e34b5240f01ced8ab3ccc469c88b1b5fa32088981c4776944239b1039d"
+          },
+          {
+            "repo": "fascia",
+            "kind": "executable",
+            "commit": "ae2ac26",
+            "artifact_hash": "sha256:c4ef7a9ffba15255e33eef3395bde504cb159806b8b76dda77565d0453146f71"
+          }
+        ],
+        "scope": "whole",
+        "tier": "B",
+        "tier_reason": "code-corroborated, proof-gap (no matched proof in cathedral)"
+      },
+      "transfer": {
+        "from_certificate_commit": "ae2ac26",
+        "to_current_commit": "dirty",
+        "status": "pending",
+        "changed_modules": [
+          "pylantern/observers/observer.py"
+        ],
+        "reason": "guarding module(s) changed since certified baseline: pylantern/observers/observer.py"
+      },
+      "content_hash": "sha256:142f0c0dcf1447d243914d1544f2034b9e5a18f152d88898c0e0633fa83b7d58"
+    },
+    {
+      "label": "theorem:bk4_symbolic_identity_continuit",
+      "book": "book4",
+      "env": "theorem",
+      "claim_text": "Symbolic Identity Continuity",
+      "source": {
+        "file": "book4.tex",
+        "line": 698
+      },
+      "certified_baseline": {
+        "proof": {
+          "axis": "honest",
+          "witness": "principia",
+          "from": "proof_report.json@2026-07-21T13:08:33"
+        },
+        "tests": {
+          "mode": "live",
+          "passed": 3,
+          "failed": 0,
+          "node_ids": [
+            "tests/math/test_orientation_residue.py::TestEuclideanResidue::test_identical_state_zero_residue",
+            "tests/math/test_orientation_residue.py::TestEuclideanResidue::test_rotation_detected_as_imaginary_displacement",
+            "tests/math/test_orientation_residue.py::TestEuclideanResidue::test_higher_dimensions_have_no_signed_angle"
+          ]
+        },
+        "mutation": {
+          "status": "verified",
+          "modules": {
+            "pylantern/math/orientation_residue.py": {
+              "tested": 139,
+              "killed": 139,
+              "survived": 0,
+              "verified": true,
+              "freshness": "untracked"
+            }
+          }
+        },
+        "witnesses": [
+          {
+            "repo": "principia",
+            "kind": "proof",
+            "commit": "unversioned",
+            "artifact_hash": "sha256:07f473e34b5240f01ced8ab3ccc469c88b1b5fa32088981c4776944239b1039d"
+          },
+          {
+            "repo": "fascia",
+            "kind": "executable",
+            "commit": "ae2ac26",
+            "artifact_hash": "sha256:c4ef7a9ffba15255e33eef3395bde504cb159806b8b76dda77565d0453146f71"
+          }
+        ],
+        "scope": "whole",
+        "tier": "A",
+        "tier_reason": "proof honest + code-corroborated"
+      },
+      "transfer": {
+        "from_certificate_commit": "ae2ac26",
+        "to_current_commit": "dirty",
+        "status": "pending",
+        "changed_modules": [
+          "pylantern/math/orientation_residue.py"
+        ],
+        "reason": "guarding module(s) untracked — not in baseline commit: pylantern/math/orientation_residue.py"
+      },
+      "content_hash": "sha256:1856d6e585c8b58f4bbd4e3cf922aabdd3543bae43579586cbd51bcdb2386b95"
+    }
+  ],
+  "content_hash": "sha256:92e853d1d1c732b4eebfb89e1284a387aa150c429b39884f10e97e6a913176f6"
+}

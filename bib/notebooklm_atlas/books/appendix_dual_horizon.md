@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - appendix_dual_horizon
 
 Nodes in this source group: 123
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -100,6 +106,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `remark:appC_horizon_realizations` (Invariance under horizon realization)
 - Macros used: `\Obs`, `\drift`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-032`
+- Witnesses: `Book7B.posPart_sub_negPart`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the pointwise real identity x = max(x,0)-max(-x,0) underlying the divergence-theorem remark is modeled; the observer measure and manifold integrals G_Obs, C_Obs themselves are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 On the observer-visible domain \(Omega\) define the generative flux
@@ -154,6 +171,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cites: `definition:bk1_stage_composite_operator` (Stage–Composite Operator); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy)
 - Cited by: `theorem:appC_dual_horizon_signature` (Dual Horizon Necessity (Effective Signature))
 - Macros used: `\Obs`, `\drift`, `\freeenergy`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-001`
+- Witnesses: `AppendixDH.dual_horizon_signature`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Modeled as the hypothesis pair (0 < tauE, tauE <= deltaPhi) taken by dual_horizon_signature, rather than as a standalone named Prop.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -240,6 +268,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `assumption:appC_emergence_domination` (Emergence Domination); `definition:appC_bounded_reflexive_emergence` (Bounded reflexive emergence); `sec:appC_proof_by_elimination` (Proof II --- Effective-Signature (Geometric)); `sec:appC_proof_observational` (Proof I --- Observational Elimination); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Cited by: `proof:appC_dual_horizon_biconditional`; `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); `remark:appC_horizon_realizations` (Invariance under horizon realization); `sec:appC_proof_by_elimination` (Proof II --- Effective-Signature (Geometric)); `sec:appC_proof_observational` (Proof I --- Observational Elimination); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Macros used: `\Obs`, `\drift`, `\manifold`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-002`
+- Witnesses: `AppendixDH.dual_horizon_signature`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Proved via the Emergence Domination route (Proof II of the source): bounded reflexive emergence plus the DualHorizonBalance sandwich forces min(G,C) > 0, hence G > 0 and C > 0. The source's alternative Proof I 'from Bounded Observability alone' is not modeled since that assumption is not given with enough precision in the packet.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -549,6 +588,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: `scholium:appC_two_horizons_co_constitutive` (The Two Horizons as Co-Constitutive)
 - Macros used: `\Obs`, `\drift`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-003`
+- Witnesses: `AppendixDH.dualHorizon_necessity`, `AppendixDH.dualHorizon_necessity_pos`, `AppendixDH.dualHorizon_sufficiency`, `AppendixDH.dualHorizon_tight_biconditional`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The full sandwich kappa*m <= deltaPhi <= Lambda*m, sufficiency, necessity, and the tight kappa=Lambda biconditional are all proved unconditionally from the DualHorizonBalance data.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under Emergence Domination and Emergence Coupling
@@ -844,6 +894,17 @@ Role: `remark` | Type: `remark` | Book: `appendix_dual_horizon` | Source: `appen
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `REVIEW-001`
+- Witnesses: none
+- Countermodels: none
+- Conditions: The remark correctly exposes PS-C3-prime, but its broader assertion that the other PS-C constraints follow from bounded observation is a human mathematical claim not certified by the current Lean companion.
+- Formal boundary: The remark correctly exposes PS-C3-prime, but its broader assertion that the other PS-C constraints follow from bounded observation is a human mathematical claim not certified by the current Lean companion.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This derivation proceeds from the coherence constraints PS-C1-C5
@@ -992,6 +1053,17 @@ Role: `remark` | Type: `remark` | Book: `appendix_dual_horizon` | Source: `appen
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`, `constructed`, `exact`, `interpretive`, `refuted`
+- Records: `C-COMPRESSION-13`, `C-CONVERGENCE-15`, `C-STAGING-14`, `Q-DECOHERENCE-12`, `Q-FRAME-03`, `Q-HERMITIAN-05`, `Q-LOWER-01`, `Q-PARTIAL-11`, `Q-PHASE-02`, `Q-RESOLVE-04`
+- Witnesses: `Book4QuantumMeasurement.jointExpectation_local_eq_reduced`, `Book4QuantumMeasurement.trace_partialTraceEnvironment`, `Book5.axisCostOn_le_card_rpow_mul_lpCostOn`, `Book5.diagonalDecoherence_formula`, `Book5.diagonalDecoherence_pos`, `Book5.lpCostOn_le_axisCostOn`, `Book7QuantumGleason.completeFrameCoherence_does_not_supply_hermitian_certificate`, `Book7QuantumGleason.hermitian_reconstruction_from_certificate`, `Book7QuantumGleason.pureStateDensity_globalPhase`, `Book7QuantumGleason.pureStateDensity_isHermitian`, `Book7QuantumGleason.pureStateToResolution_globalPhase`, `Book7QuantumGleason.pureStateToResolution_reducedState_isHermitian`, `Book7QuantumGleason.pureState_forward_chain`, `Book7QuantumGleason.pureState_lowering_not_injective`, `Book7QuantumGleason.quantumResolution_does_not_force_reducedState_isHermitian`, `Book7QuantumGleason.quantumResolution_to_hermitian_certificate`, `Book7QuantumGleason.quantumResolution_without_matrixHermiticity_does_not_supply_certificate`, `ScholiumA.ChainedApprox.cauchySeq`, `ScholiumA.ChainedApprox.exists_limit_with_tail_bound`, `ScholiumA.chainedApprox_telescope`, `ScholiumD.jko_step_freeEnergy_le`, `ScholiumD.jko_step_transport_cost_le_energy_drop`, `cauchy_forcing_completion`
+- Countermodels: `Book7QuantumGleason.completeFrameCoherence_does_not_supply_hermitian_certificate`, `Book7QuantumGleason.quantumResolution_does_not_force_reducedState_isHermitian`, `Book7QuantumGleason.quantumResolution_without_matrixHermiticity_does_not_supply_certificate`
+- Conditions: Explicit conjugate-linear/linear Hermitian cross laws, or a retained reduced-state matrix certified Hermitian.; Summable per-step displacement bounds and completeness, or a nonnegative potential with positive linear descent control.
+- Formal boundary: Convergence is certified under explicit preservation/descent contracts, not inferred from staging alone. First of two complementary Gleason-facing half-bridges. The construction is forward and preserves upstream Hermiticity without strengthening the observer certificate. Second complementary Gleason-facing half-bridge. It represents the certified observer-level values and is not an inverse recovering the originating source. The failure is information loss across the observer boundary, not a missing certificate field. The implication is formally false, not awaiting proof. The physical quantum specialization is functionally interpretive: an operational, testable map rather than a kernel identity. The general temporal cost-and-transport arrow, partial-trace reduction, and phase-collision boundary are exact or explicitly conditional. This is an exact reduction/regrouping theorem, not a certified temporal channel or distinguishability monotonicity law. This is the Cost of Cacophony-facing geometric obstruction: compression regime and support geometry determine a certified cost boundary. This is the proved non-injectivity of observer lowering. Time supplies an ordered transport coordinate with explicit accumulated cost; this is not merely literary temporal language.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1231,6 +1303,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: `proof:appC_coarse_graining_tokens`; `remark:appC_born_honest_reduction` (What is proved, and what is posited)
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-005`
+- Witnesses: `AppendixDH.orthogonal_token_separation`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Tokens resolving to distinct indices are disjoint, proved directly from the resolving-function model rather than from an operator-orthogonality hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If $Pi Xi = 0$ then $T_Obs(Pi) cap T_Obs(Xi) = varnothing$.
@@ -1286,6 +1369,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: `proof:appC_orthogonal_additivity`; `remark:appC_born_honest_reduction` (What is proved, and what is posited)
 - Macros used: `\Obs`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-006`
+- Witnesses: `AppendixDH.tokensOfSet_eq_biUnion`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Coarse-graining a set of frame indices resolves to exactly the Finset.biUnion of the individual token sets.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1344,6 +1438,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: none
 - Cited by: `lemma:appC_sigma_additivity` (Finite orthogonal additivity gives a Gleason frame function); `proof:appC_psc3`; `proof:appC_sigma_additivity`; `remark:appC_born_honest_reduction` (What is proved, and what is posited); `remark:appC_born_rule_dependency` (Derivation Structure)
 - Macros used: `\Horizon`, `\Obs`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-008`
+- Witnesses: `AppendixDH.mu_biUnion_eq_sum`, `AppendixDH.orthogonal_additivity`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Binary additivity is extended by induction to any finite pairwise-disjoint indexed family, then combined with the token-resolution model to give additivity of mu over any finite orthogonal family.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1418,6 +1523,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: `definition:bk7_contextuality_defect` (Contextuality defect); `remark:appC_born_rule_dependency` (Derivation Structure); `remark:appC_domination_open_route` (Open derivation route for Emergence Domination); `remark:bk7_pisu_status` (Status of the trade-off and its corollaries); `subsec:appC_born_additivity_derivation` (Interpretive-Budget Additivity from Bounded Discernibility); `subsec:appC_born_axioms` (Coherence Axioms (PS–C)); `subsec:appC_conclusion_of_proof_by_elimination` (Sufficiency and the Conditional Biconditional); `subsec:bk7_pisu_implications` (Implications)
 - Macros used: `\Horizon`, `\Obs`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-049`
+- Witnesses: `AppendixCoherenceAxioms.bounded_budget_does_not_force_noncontextuality`, `AppendixCoherenceAxioms.noncontextual_budget_frame_independent`
+- Countermodels: `AppendixCoherenceAxioms.bounded_budget_does_not_force_noncontextuality`
+- Conditions: PS-C3-prime supplied as a cross-frame budget law; PS-C5 supplied as a separated-orthogonal exclusivity law; coherence values bounded in the unit interval
+- Formal boundary: Typed noncontextuality axiom: a budget satisfying NoncontextualAt gives equal values for the same question across frames. Countermodel confirms unit-interval boundedness does not derive frame independence, matching the source declaration that PS-C3-prime is posited.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1505,6 +1621,16 @@ Role: `remark` | Type: `remark` | Book: `appendix_dual_horizon` | Source: `appen
 - Cited by: none
 - Macros used: `\Horizon`, `\Obs`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `REVIEW-002`
+- Witnesses: `Book7QuantumGleason.completeFrameCoherence_does_not_supply_hermitian_certificate`
+- Countermodels: none
+- Formal boundary: The existing continuity-plus-density route is explicitly speculative and distinct from the now-refuted direct frame-readout lift; later editing should keep those two boundaries separate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A future derivation could proceed through resolution-limited frame distinguishability
@@ -1560,6 +1686,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-009`
+- Witnesses: `AppendixDH.mu_le_one`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Boundedness is derived as a theorem from mu_nonneg plus finite additivity (mu(full) = mu(A) + mu(full\A) >= mu(A)), rather than postulated as a separate axiom.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 $0 leq C_{Obs}(tildepsi_{Obs}, Pi) leq 1$ (cf. definition:appC_coherence_functional)
@@ -1582,6 +1719,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: `definition:appC_coherence_functional` (Coherence functional)
 - Cited by: none
 - Macros used: `\Obs`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-042`
+- Witnesses: `Born.psc2_unitary_covariance`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The Born coherence form satisfies unitary covariance; forward direction of the Born rule.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1607,6 +1755,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_dual_horizon` | Source: 
 - Cites: `definition:appC_coherence_functional` (Coherence functional)
 - Cited by: `lemma:appC_sigma_additivity` (Finite orthogonal additivity gives a Gleason frame function); `proof:appC_sigma_additivity`
 - Macros used: `\Obs`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-010`
+- Witnesses: `AppendixDH.mu_conservation`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Conservation (sum over all frame indices = 1) is derived given the added hypothesis that the frame's coarse-graining of every index covers the full admissible token set (tokensOfSet Finset.univ = full); this hypothesis is implicit-by-construction in the source's discernible complete frame but must be stated explicitly here.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1676,6 +1835,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-044`, `Q-COMPLEX-06`
+- Witnesses: `Book7QuantumGleason.complex_phase_refutes_real_degreeTwo`, `Book7QuantumGleason.vectorExpectation_globalPhase`, `Book7QuantumGleason.vectorExpectation_smul`, `Born.psc4_ray_invariance`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The Born form is phase-invariant (ray invariance). The exact kernel supports the phase-faithful correction without certifying the PS axiom as derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 $C_{Obs}(e^{itheta} tildepsi_{Obs}, Pi)
@@ -1705,6 +1875,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: `assumption:appC_bounded_discernibility` (Bounded discernibility); `remark:appC_psc3prime_open_route` (Open derivation route for PS--C3$'$)
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-050`
+- Witnesses: `AppendixCoherenceAxioms.boundedness_does_not_force_resolution_distinguishability`, `AppendixCoherenceAxioms.separated_orthogonal_questions_not_both_maximal`
+- Countermodels: `AppendixCoherenceAxioms.boundedness_does_not_force_resolution_distinguishability`
+- Conditions: PS-C3-prime supplied as a cross-frame budget law; PS-C5 supplied as a separated-orthogonal exclusivity law; coherence values bounded in the unit interval
+- Formal boundary: Typed resolution axiom excludes simultaneous unit coherence for separated orthogonal questions. Countermodel confirms ordinary [0,1] boundedness does not derive PS-C5; it remains an explicit physical axiom.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If $Pi_1 perp Pi_2$ and $\| Pi_1 - Pi_2 \| > epsilon_{Obs}$,
@@ -1729,6 +1910,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: none
 - Macros used: `\Horizon`, `\Obs`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-045`
+- Witnesses: `Born.psc6_calibration`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The Born form calibrates: a pure state answers its own question with coherence 1.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1780,6 +1972,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: `axiom:appC_psc3` (PS--C3 (Conservation of interpretive budget)); `theorem:appC_orthogonal_additivity` (Orthogonal additivity from bounded discernibility)
 - Cited by: `proof:appC_born_rule`
 - Macros used: `\Horizon`, `\Obs`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-011`
+- Witnesses: `AppendixDH.mu_conservation`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the finite-dimensional remark is realized: since the frame-index type is a Fintype, summing mu_conservation over Finset.univ already covers every orthogonal family a finite-dimensional Horizon can present. The Gleason-frame-function / normalized-measure identification itself is not separately formalized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1873,6 +2076,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-043`
+- Witnesses: `Born.psc2_unitary_covariance`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The measure family is unitary-covariant - same kernel as PS-C2.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For every unitary $U$ and projector $Pi$,
@@ -1960,6 +2174,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: none
 - Cited by: `proof:appC_mixed_states`; `proof:appC_qubit_case`; `remark:appC_psc3prime_open_route` (Open derivation route for PS--C3$'$); `remark:bk7_pisu_status` (Status of the trade-off and its corollaries); `scholium:bk7_born_as_hilbert_cross_section` (Born as the Hilbert cross-section); `subsec:bk7_pisu_implications` (Implications)
 - Macros used: `\Horizon`, `\Obs`
+
+### Lean correspondence
+
+- Status: `conditional`, `interpretive`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-046`, `Q-BORN-07`
+- Witnesses: `Born.coh_le_one`, `Born.qubit_born`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The broader appendix argument remains human mathematics; neither formal half-bridge is mislabeled as the classical theorem. The rank-one Born value taken as the coherence functional, computed on the qubit and bounded by 1; Gleason-type uniqueness (axioms force this form in d>=3) stays a counsel-permanent open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2083,6 +2308,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_dual_horizon` | Source: 
 - Cited by: none
 - Macros used: `\Horizon`, `\Obs`
 
+### Lean correspondence
+
+- Status: `conditional`, `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-047`, `REVIEW-003`
+- Witnesses: `Book7GleasonBoundary.rank_two_frame_axioms_do_not_force_born`, `Born.qubit_born`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; The human proof uses an explicit higher-rank extension; Lean certifies the lower-rank obstruction but not this full extension argument.; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The human proof uses an explicit higher-rank extension; Lean certifies the lower-rank obstruction but not this full extension argument. The qubit Born value equals the squared amplitude, computed on C^2.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Vcongmathbb{C}^2$ be a qubit subspace. If the qubit coherence assignment is
@@ -2158,6 +2394,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_dual_horizon` | Source: 
 - Cites: none
 - Cited by: none
 - Macros used: `\Obs`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-048`, `REVIEW-004`
+- Witnesses: `Born.cohMix_nonneg`, `Born.mixed_affine`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; The affine-mixture premise is visible in the prose but the mixed-state construction is not part of the current Lean receipt.; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The affine-mixture premise is visible in the prose but the mixed-state construction is not part of the current Lean receipt. The mixed-state coherence is affine in the mixing weights, matching tr(rho Pi_a).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2243,6 +2490,16 @@ Role: `section` | Type: `section` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: `definition:appC_observer_token_space` (Observer token space for a projective frame)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `interpretive`
+- Records: `REVIEW-005`
+- Witnesses: none
+- Countermodels: none
+- Formal boundary: The emergence-of-randomness and free-energy language is an observer interpretation, not the finite observer-lowering theorem itself.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 (no body text extracted)
@@ -2256,6 +2513,16 @@ Role: `section` | Type: `section` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `interpretive`
+- Records: `REVIEW-006`
+- Witnesses: none
+- Countermodels: none
+- Formal boundary: The resolution-limit outlook is intentionally synthetic and empirical-facing; it should remain outside exact kernel projection unless separately witnessed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2336,6 +2603,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: `proof:appC_fundamental_irreversibility`; `proof:appD_titans_as_arrow_of_time`; `proposition:appC_conditional_minimality_2x2` (Conditional Minimality of 2×2 Form); `scholium:appC_time_as_memory` (Time as the Accumulation of Memory); `scholium:appD_axiom_of_memory_titans` (The Axiom of Memory and the "Titans" Architecture)
 - Macros used: `\Obs`, `\freeenergy`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-013`
+- Witnesses: `AppendixDH.memoryAct_hist_changes`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: History-change on every act is proved as a theorem from the strictly increasing order parameter carried by MemoryAct, upgrading the source's postulated axiom to a derived consequence of the monotone-order model.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Every act of differentiation, \(delta^O\), by a Bounded Observer \(Obs\) necessarily alters its history. If \(delta^O\) maps a state \((x_0, H_{t_0})\) to \((x_1, H_{t_1})\), then \(H_{t_1} neq H_{t_0}\). Specifically, \(H_{t_1}\) contains the trace of the operation that led from \(x_0\) to \(x_1\). This act of recording is metabolically non-zero, incurring a minimal cost in Symbolic Free Energy \(Delta{freeenergy}_{text{mem}} > 0\) (cf. definition:bk2_symbolic_free_energy).
@@ -2358,6 +2636,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk4_bounded_observer` (Bounded Observer)
 - Cited by: `corollary:appC_emergence_of_time_arrow_final` (The Emergence of the Arrow of Time); `proof:appD_titans_as_arrow_of_time`; `scholium:bk4_irreversibility_as_trace` (Irreversibility as Symbolic Trace)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-014`
+- Witnesses: `AppendixDH.memoryAct_irreversible`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Every act incurs strictly positive cost, direct from the MemoryAct.cost_pos field.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2432,6 +2721,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_dual_horizon` | Source: 
 - Cites: `theorem:appC_fundamental_irreversibility_final` (Fundamental Irreversibility of Reflective Observation)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-015`
+- Witnesses: `AppendixDH.memoryAct_no_return`, `AppendixDH.memoryAct_order_iterate`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The order parameter accumulates by at least n over n steps, hence the history never returns to an earlier value along any nontrivial path -- the discrete/finite kernel of the induced directed order and arrow of time.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2558,6 +2858,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `theorem:appC_phi_from_lagrangian` (Emergence of $\varphi$ from Lagrangian Equilibrium)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-016`
+- Witnesses: `AppendixDH.V_eq_zero_iff`, `AppendixDH.V_nonneg`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: V(C) = (1/2)(C - 1/C)^2 kept exactly; nonnegativity is unconditional, the zero-locus characterization (V(C)=0 iff C=1) is proved for C > 0.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Define the symbolic potential governing recursive learning as:
@@ -2588,6 +2899,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:appC_lagrangian_potential` (Symbolic Potential Function)
 - Cited by: `proof:appC_phi_min_growth`; `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-033`
+- Witnesses: `Book7B.shiftedFib_ratio_tendsto_goldenRatio`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Witnessed only for the canonical positive-initial-data instance C_n=fib(n+1) (C_0=C_1=1); generalizing to arbitrary C_0,C_1>0 is not attempted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2717,6 +3039,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-034`
+- Witnesses: `Book7B.complexity_card_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Frame modeled as a Finset rather than a Hilbert-space metric ball.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $H$ be a separable Hilbert space. Define the observer-relative frame (Def. definition:bk4_observer_kernel_convolution_map):
@@ -2747,6 +3080,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cites: `definition:bk1_stage_composite_operator` (Stage–Composite Operator)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-035`
+- Witnesses: `Book7B.complexity_card_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Finset.card of an intersection stands in for dim(span(...)); genuine linear-algebra dimension is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2809,6 +3153,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-052`
+- Witnesses: `AppendixCurvatureFlows.boundedContinuousFlow_cauchy_converges`, `AppendixCurvatureFlows.observer_bound_closed_under_pointwise_limit`, `AppendixCurvatureFlows.pointwise_convergence_alone_does_not_preserve_bound`, `AppendixCurvatureFlows.pointwise_limit_preserves_lipschitz_bound`
+- Countermodels: `AppendixCurvatureFlows.pointwise_convergence_alone_does_not_preserve_bound`
+- Conditions: complete normed target for ambient bounded continuous flows; one common Lipschitz constant across the sequence; pointwise convergence of the flow sequence
+- Formal boundary: Analytic kernel: bounded continuous flows into a complete normed target are complete in the uniform ambient metric, and a shared Lipschitz bound—including the printed C1*delta bound—passes to pointwise limits. A countermodel shows pointwise convergence without a common bound is insufficient. The exact custom Lipschitz norm and bounded-operator specialization are not reconstructed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2920,6 +3275,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `theorem:appC_phi_min_growth` (Golden Ratio as Minimal Sustainable Growth Rate); `theorem:appC_phi_minimized_entropy_per_complexity` ($\varphi$ Minimizes Entropy-per-Complexity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-017`
+- Witnesses: `AppendixDH.sustainable_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Reframed algebraically from the source's asymptotic-ratio condition to the fixed-point inequality theta >= 1 + 1/theta (the same inequality theorem:appC_phi_minimal_curvature_parameter states verbatim for the curvature parameter) -- an explicit honesty gap against the source's limit-of-sequence phrasing.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A growth rate $lambda>1$ is sustainable for a bounded recursive observer if
@@ -2964,6 +3330,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:appC_sustainable_growth_rate` (Sustainable Growth Rate)
 - Cited by: `proof:appC_phi_minimized_entropy_per_complexity`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-018`
+- Witnesses: `AppendixDH.sustainable_ge_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: phi is the least value satisfying the algebraic reframing of Sustainable; not a statement about limits of sequences of ratios.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3078,6 +3455,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-036`
+- Witnesses: `Book7B.shiftedFib_ratio_tendsto_goldenRatio`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The scalar growth-rate content of rho(G)=phi is witnessed by the same golden-ratio limit; the operator G and its spectral radius/operator norm are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For $G$ defined in Def. definition:appC_complexity_growth_operator,
@@ -3186,6 +3574,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:appC_complexity_entropy_tradeof` (Complexity--Entropy Tradeoff); `definition:appC_sustainable_growth_rate` (Sustainable Growth Rate)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-021`
+- Witnesses: `AppendixDH.kappa_min_at_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Proved among Sustainable rates (the algebraic reframing), not among all sustainable-in-the-source's-asymptotic-sense rates.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3302,6 +3701,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-023`
+- Witnesses: `AppendixDH.geodesic_convergence`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Given the PhiStableRegion's global contraction hypothesis, distance to M shrinks geometrically: infDist(x_n, M) <= q^n * infDist(x_0, M).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If an observer trajectory $x_{n+1}=Phi(x_n)$ remains in the neighborhood $U$ of a
@@ -3393,6 +3803,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `lemma:appC_matrix_representation_symbolic_operators` (Matrix Representation of Symbolic Operators)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-024`
+- Witnesses: `AppendixDH.Gop_step`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The two-step closure hypothesis s(n+2)=s(n+1)+s(n) is taken directly as a hypothesis of Gop_step rather than given its own named Prop.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Assume symbolic emergence is represented by a positive two-step complexity
@@ -3437,6 +3858,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: `definition:appC_symbolic_operator_assumptions` (Symbolic Operator Assumptions)
 - Cited by: `proof:appC_conditional_minimality_2x2`; `theorem:appC_unified_recursive_fixed_point` (Unified Recursive Fixed Point)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-025`
+- Witnesses: `AppendixDH.Gop_step`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Gop advances consecutive terms of any two-step-closure sequence: Gop(s(n+1),s(n)) = (s(n+2),s(n+1)).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3516,6 +3948,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-026`
+- Witnesses: `AppendixDH.Gop_phi_eigen`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Reframed from a Perron-Frobenius/matrix-norm spectral-radius argument to a direct eigenvector exhibition: Gop(phi,1) = (phi*phi,phi) = phi . (phi,1).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The golden ratio $varphi$ is the Perron-Frobenius eigenvalue, hence the dominant
@@ -3594,6 +4037,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-037`
+- Witnesses: `Book7B.fibMatrix_pow_succ`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact matrix-power identity for n>=1, reindexed n|->n+1 to avoid Nat subtraction at the excluded n=0 case.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $F_0=0$, $F_1=1$, and $F_{n+1}=F_n+F_{n-1}$. For
@@ -3670,6 +4124,17 @@ Role: `proposition` | Type: `proposition` | Book: `appendix_dual_horizon` | Sour
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-051`
+- Witnesses: `AppendixMemoryMinimality.current_only_update_forgets_memory`, `AppendixMemoryMinimality.memoryStep_encodes_recurrence`, `AppendixMemoryMinimality.memory_projection_not_representable_by_current_only`, `AppendixMemoryMinimality.two_coordinate_form_conditionally_minimal`
+- Countermodels: none
+- Conditions: one-dimensional competitor is current-only; two-dimensional state is the ordered pair current and previous; updates must represent current state plus one retained prior state
+- Formal boundary: Exact operational kernel under the stated one-step-memory assumption: a current-only scalar update cannot distinguish histories sharing the current value and cannot represent the rule next=previous; the two-coordinate state (current, previous) represents every one-step recurrence and shifts memory exactly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the assumption that symbolic emergence requires encoding both current state
@@ -3738,6 +4203,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `definition:appC_symbolic_curvature_function` (Symbolic Curvature Function); `proof:appC_geometric_interpretation_curvature`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-038`
+- Witnesses: `Book7B.symbolicEffort_ge_two`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: theta as forward-drift rate, 1/theta as curvature penalty, kept as plain reals rather than a manifold dynamical system.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Consider a symbolic observer with bounded attention radius $delta$ (cf. definition:bk4_bounded_observer) navigating meaning space. The observer experiences:
@@ -3802,6 +4278,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-039`
+- Witnesses: `Book7B.symbolicEffort_eq_two_iff`, `Book7B.symbolicEffort_ge_two`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: AM-GM lower bound on kappa(theta)=theta+1/theta plus its equality trichotomy at theta=1.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3870,6 +4357,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-028`
+- Witnesses: `AppendixDH.kappa_min_at_phi`, `AppendixDH.sustainable_ge_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The same theorem as theorem:appC_phi_minimized_entropy_per_complexity, stated twice in the source under two names; both are discharged by kappa_min_at_phi (and its minimality precondition by sustainable_ge_phi), restricted to the algebraic Sustainable domain theta >= 1 + 1/theta given verbatim by this anchor.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3957,6 +4455,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `lemma:appC_stability_phi_flow` (Stability of $\varphi$-Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-029`
+- Witnesses: `AppendixDH.stability_phi_flow`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The stability condition |d/dtheta(1+1/theta)| < 1 at theta=phi is realized directly as the closed-form inequality 1/(phi*phi) < 1, without modeling a general derivative operator.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic flow is stable if small perturbations in the exploration parameter $theta$ decay exponentially. The stability condition requires:
@@ -3987,6 +4496,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: `definition:appC_symbolic_flow_stability` (Symbolic Flow Stability)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-030`
+- Witnesses: `AppendixDH.stability_phi_flow`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: 1/(phi*phi) < 1, proved from phi > 1.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4047,6 +4567,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `lemma:appC_matrix_representation_symbolic_operators` (Matrix Representation of Symbolic Operators)
 - Cited by: `remark:appC_connection_other_modalities` (Connection to Other Symbolic Modalities)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-031`
+- Witnesses: `AppendixDH.fixed_point_iff_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Among positive reals, phi is the unique fixed point of lam = 1 + 1/lam, proved via the same factoring argument as sustainable_ge_phi plus uniqueness of the positive root of lam^2-lam-1=0.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4287,6 +4818,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure)
 - Cited by: `corollary:bk4_chromatic_transference_of_wheel` (Chromatic transference of the wheel); `proof:bk4_chromatic_transference_of_wheel`; `scholium:appC_two_modalities_one_root` (Two Modalities, One Root)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-041`
+- Witnesses: `Book7B.quasiLipschitz_comp`, `Book7B.shiftedFib_ratio_tendsto_goldenRatio`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Distortion-composition bound covers the quantitative 'preserved up to observer resolution' content under composition; the golden-ratio tail clause is covered by the shared Fibonacci-ratio theorem. Ordinal/operator-recurrence invariant preservation itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

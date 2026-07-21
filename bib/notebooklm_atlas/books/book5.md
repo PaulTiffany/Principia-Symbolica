@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - book5
 
 Nodes in this source group: 235
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -42,6 +48,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:20`
 - Cites: `definition:bk1_paradox_triggered_emergence` (Paradox-Triggered Emergence); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `definition:bk5_viability_domain` (Viability Domain)
 - Macros used: `\drift`, `\reflect`, `\symb`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-046`
+- Witnesses: `Book5.balance_alone_does_not_force_conservation`, `Book5.closed_stabilized_energy_rate_zero`, `Book5.stabilized_conservation_iff_closed`, `Book5.stabilized_energy_rate_eq_external`
+- Countermodels: `Book5.balance_alone_does_not_force_conservation`
+- Conditions: LifeLaw for the life criterion; MetabolicPersistenceLaw for metabolic necessity; explicit energy budget identity; external closure for conservation
+- Formal boundary: Drift/reflection stabilization cancels only its budget channel. Zero energy derivative additionally requires external closure; a compiled countermodel refutes conservation from balance alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -137,6 +154,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:55`
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator)
 - Cited by: none
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-012`
+- Witnesses: `Book5.entropy_rate_eq_zero_iff_fixed`, `Book5.entropy_rate_nonnegative`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: Requires the named second-law comparison and fixed-point calibration.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -356,6 +384,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:124
 - Cited by: `definition:bk5_map_nash_point` (MAP Nash Point)
 - Macros used: `\symb`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-011`
+- Witnesses: `Book5.viable_iff_positive_free_energy`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: Free energy and viability definitions.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given a symbolic flux $F$, the free energy of a membrane $M$ is defined as:
@@ -386,6 +425,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:133
 - Cites: `axiom:bk4_membrane_coupling_response` (Membrane Coupling Response); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `proposition:bk5_symbolic_ess_via_map_observability_variant` (Symbolic ESS via MAP); `theorem:bk5_symbolic_coherence_conservation` (Symbolic Coherence Conservation)
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `assumption:bk5_equilibrium_margin_sublinear_fluctuations` (Equilibrium margin and sublinear fluctuations); `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `axiom:bk7_reflective_stabilization` (Reflective Stabilization); `corollary:bk5_map_evolutionary_advantag` (MAP Evolutionary Advantage); `corollary:bk7_recursive_convergence_principle` (Recursive Convergence Principle); `definition:bk5_complexity_stability_maintenance` (Operator Complexity, Stability Margin, Maintenance Cost); `definition:bk5_mutually_assured_progress` (Mutually Assured Progress); `demonstratio:bk8_symbolic_unkotting` (Symbolic Unknotting); `proof:bk5_fixed_metabolic_capacity`; `proof:bk5_membrane_persistence_under_free_energy` (Membrane Persistence Under Symbolic Free Energy); `proof:bk5_operator_convergence`; `proof:bk5_viability_domain_preservation` (Exit probability under reflective equilibrium); `proof:bk8_biological_phase_transition`; `proof:bk8_thermodynamic_necessity_of_symbolic_metabolism`; `proof:bk9_good_as_lyapunov_basin` (Lyapunov descent, threshold selection, and basin identity); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk5_fixed_metabolic_capacity` (Fixed Metabolic Capacity); `proposition:bk5_symbolic_ess_via_map_observability_variant` (Symbolic ESS via MAP); `proposition:bk5_symbolic_life_criterion` (Symbolic Life Criterion); `proposition:bk5_viability_domain_preservation` (Viability Domain Preservation); `scholium:bk5_symbolic_life` (Symbolic Life); `scholium:bk8_symbolic_knots_as_metabolic_dysfunctions` (Symbolic Knots as Metabolic Dysfunctions); `subsec:appD_autopoiesis_core_resonance` (D.2.1 Core Resonance); `theorem:bk8_biological_phase_transition` (Threshold of Autonomy); `theorem:bk8_observer_projection_tensor` (Thermodynamics of Reflexive Debugging); `theorem:bk8_thermodynamic_necessity_of_symbolic_metabolism` (Thermodynamic Necessity); `theorem:bk9_irreversibility_of_covenant_breach_without_grace` (Irreversibility of Covenant Breach without Grace)
 - Macros used: `\symb`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-030`
+- Witnesses: `Book5.viable_iff_positive_free_energy`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: The viability domain is definitionally the positive-free-energy region.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -434,6 +484,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:146`
 - Cited by: `corollary:bk5_metabolic_necessity` (Metabolic Necessity); `proof:bk5_proposition_axiom_coupling` (Persistence from Proposition-Axiom Coupling); `scholium:bk5_symbolic_life` (Symbolic Life)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-047`
+- Witnesses: `Book5.metabolic_necessity`
+- Countermodels: none
+- Conditions: LifeLaw for the life criterion; MetabolicPersistenceLaw for metabolic necessity; explicit energy budget identity; external closure for conservation
+- Formal boundary: Represented as explicit MetabolicPersistenceLaw data, not a Lean axiom or a definitional implication.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic life requires a metabolism $M_{meta}$ that regulates drift and sustains identity $I$ (cf. Def. definition:bk4_symbolic_identity_carrie) through continuous energy-entropy balance (cf. Def. definition:bk2_symbolic_energy, Def. definition:bk2_symbolic_entropy).
@@ -456,6 +517,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:151`
 - Cites: `definition:bk2_symbolic_energy` (Symbolic Energy); `definition:bk2_symbolic_entropy` (Symbolic Entropy); `definition:bk2_symbolic_temperature` (Symbolic Temperature)
 - Cited by: `scholium:bk5_symbolic_life` (Symbolic Life)
 - Macros used: `\symb`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-013`
+- Witnesses: `Book5.energy_rate_eq_neg_entropic_rate`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: The closed balance law is structure data, not a global Lean axiom.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -488,6 +560,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:160`
 - Cited by: `axiom:bk8_mutation_phase_shift` (Metabolic Sufficiency Criterion); `definition:bk5_symbolic_free_energy_und` (Symbolic Free Energy Under Drift); `proof:bk5_membrane_persistence_under_free_energy` (Membrane Persistence Under Symbolic Free Energy); `proof:bk5_membrane_viability_positive_energy` (Viability of Membranes Requires Positive Symbolic Energy)
 - Macros used: `\symb`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-014`
+- Witnesses: `Book5.persists_iff_positive_throughout`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: Persistence remains an explicit bridge law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic life persists if and only if $F_{symb} > 0$ is maintained over time (cf. Def. definition:bk2_symbolic_free_energy, Thm. theorem:bk2_h_theorem_for_symbolic_evol).
@@ -510,6 +593,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:165`
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk2_symbolic_hamiltonian` (Symbolic Hamiltonian)
 - Cited by: `definition:bk5_symbolic_covenant` (Symbolic Covenant); `scholium:bk5_symbolic_life` (Symbolic Life)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-010`
+- Witnesses: `Book5Adaptation.adapted_state_viable`, `Book5Adaptation.operators_do_not_supply_adaptation`
+- Countermodels: none
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Adaptation is explicit structure selecting transfer, reflection, or drift modulation that preserves viability across a condition change. A countermodel proves that merely having the three operators does not manufacture the adaptation law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -547,6 +641,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk5_viability_domain` (Viability Domain)
 - Cited by: `axiom:bk8_mutation_phase_shift` (Metabolic Sufficiency Criterion); `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `proof:bk5_proposition_axiom_coupling` (Persistence from Proposition-Axiom Coupling); `proof:bk5_symbolic_eigenlife`; `proof:bk8_biological_phase_transition`
 - Macros used: `\symb`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-048`
+- Witnesses: `Book5.agreement_on_positive_persistence_does_not_supply_life_law`, `Book5.symbolic_life_criterion`
+- Countermodels: `Book5.agreement_on_positive_persistence_does_not_supply_life_law`
+- Conditions: LifeLaw for the life criterion; MetabolicPersistenceLaw for metabolic necessity; explicit energy budget identity; external closure for conservation
+- Formal boundary: Positive free-energy persistence characterizes life only under a supplied LifeLaw; agreement alone does not manufacture that bridge.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -605,6 +710,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:190`
 - Cites: `axiom:bk5_metabolic_persistence` (Metabolic Persistence)
 - Cited by: `axiom:bk8_mutation_phase_shift` (Metabolic Sufficiency Criterion)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-049`
+- Witnesses: `Book5.positive_persistence_has_metabolism`
+- Countermodels: none
+- Conditions: LifeLaw for the life criterion; MetabolicPersistenceLaw for metabolic necessity; explicit energy budget identity; external closure for conservation
+- Formal boundary: The corollary composes LifeLaw and MetabolicPersistenceLaw explicitly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -709,6 +825,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:220
 - Cited by: `axiom:bk8_coherence_horizon` (Symbolic Entanglement); `demonstratio:bk4_ising_model_covenant` (The Ising Model as a Symbolic Covenant); `proof:bk5_membrane_viability_positive_energy` (Viability of Membranes Requires Positive Symbolic Energy); `proposition:bk7_map_compatible_reciprocity` (MAP-Compatible Reciprocity); `subsec:appD_cst_core_resonance` (D.8.1 Core Resonance); `subsec:appD_process_philosophy_contribution_differentiation` (D.6.2 Principia Symbolica's Contribution and Differentiation)
 - Macros used: `\Membrane`, `\symb`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-031`
+- Witnesses: `Book5.map_eventually_viable`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: MAP as positive-limit condition on the joint surplus sequence; membrane semantics not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Membrane_A$ and $Membrane_B$ be symbolic membranes with active metabolic processes $M_{text{meta}}^A$ and $M_{text{meta}}^B$, respectively. We define the Mutually Assured Progress (MAP) condition as a long-term convergence criterion on the joint free energy dynamics:
@@ -748,6 +875,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:233
 - Cites: `axiom:bk5_adaptation` (Adaptation); `definition:bk1_reflection_operator` (Reflection Operator)
 - Cited by: `axiom:bk5_covenant_transitivity` (Covenant Transitivity); `definition:bk5_reflective_coupling_tens` (Reflective Coupling Tensor); `definition:bk5_strategy_space` (Strategy Space); `definition:bk5_two_way_street_tensor` (Two-Way Street reciprocity tensor); `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `demonstratio:bk5_negative_reflection_instability` (Negative Reflection Instability); `proof:bk5_membrane_viability_positive_energy` (Viability of Membranes Requires Positive Symbolic Energy); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention); `theorem:bk5_map_equilibrium` (MAP Equilibrium); `theorem:bk9_good_as_lyapunov_basin` (The Good as a Lyapunov Basin); `theorem:bk9_irreversibility_of_covenant_breach_without_grace` (Irreversibility of Covenant Breach without Grace)
 - Macros used: `\Membrane`, `\reflect`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-029`
+- Witnesses: `Book5.dual_couplingStrength`, `Book5.dual_dual`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Covenant tuple as data with sign-carrying stability; the MAD dual is an involution that flips stability but not coupling strength.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -792,6 +930,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:246
 - Cited by: `corollary:bk8_resonant_cognition` (Resonant Cognition Principle); `demonstratio:bk4_ising_model_covenant` (The Ising Model as a Symbolic Covenant); `demonstratio:bk5_entropy_reduction`; `proof:bk5_membrane_viability_positive_energy` (Viability of Membranes Requires Positive Symbolic Energy); `proof:bk8_resonant_cognition`; `theorem:bk5_covenant_stability_theorem` (Covenant Stability Theorem); `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Macros used: `\Membrane`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-050`
+- Witnesses: `Book5Residue.coupling_stability_gt_one_iff`, `Book5Residue.resilience_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The reflective coupling tensor $mathbb{R}_{AB}$ between membranes $Membrane_A$ and $Membrane_B$ quantifies their mutual reflection capacity and interaction, formally defined on the product space $Membrane_A otimes Membrane_B$:
@@ -822,6 +971,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:255`
 - Cites: `definition:bk5_viability_domain` (Viability Domain)
 - Cited by: `axiom:bk8_coherence_horizon` (Symbolic Entanglement); `definition:bk9_formal_signature_of_betrayal` (Formal Signature of Betrayal); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention); `scholium:bk9_flexible_goal_calibration`; `theorem:bk5_map_equilibrium` (MAP Equilibrium); `theorem:bk9_irreversibility_of_covenant_breach_without_grace` (Irreversibility of Covenant Breach without Grace)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-051`
+- Witnesses: `Book5Residue.viability_union_mono_chain`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -854,6 +1014,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:264`
 - Cited by: `lemma:bk5_multi_membrane_map_extension` (Multi-Membrane MAP Extension); `proof:bk5_inductive_stability_map` (Inductive Stability of MAP Systems)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-052`
+- Witnesses: `Book5Residue.covenant_transitivity_propagates`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given three membranes $Membrane_A$, $Membrane_B$, and $Membrane_C$ with established stable covenants $C_{AB}$ (stability $Omega_{AB}$) and $C_{BC}$ (stability $Omega_{BC}$), there exists a derived effective covenant $C_{AC}$ whose stability $Omega_{AC}$ satisfies:
@@ -884,6 +1055,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:272`
 - Cites: `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `definition:bk5_reflective_coupling_tens` (Reflective Coupling Tensor); `definition:bk5_symbolic_covenant` (Symbolic Covenant)
 - Cited by: `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `definition:bk6_symbolic_operator_canon` (Symbolic Operator Canon); `definition:bk6_symbolic_regulatory_cycle` (Symbolic Regulatory Cycle); `demonstratio:bk5_negative_reflection_instability` (Negative Reflection Instability); `lemma:bk5_multi_membrane_map_extension` (Multi-Membrane MAP Extension); `proof:bk5_covenant_perturbation_restoration` (Covenant Restoration Under Perturbation); `proof:bk5_drift_reflection_equilibrium` (Available-Operator Construction); `proof:bk5_inductive_stability_map` (Inductive Stability of MAP Systems); `proof:bk5_information_geometry_symbolic` (Information Geometry); `proof:bk5_membrane_viability_positive_energy` (Viability of Membranes Requires Positive Symbolic Energy); `proof:bk5_symbolic_temperature_threshold` (Symbolic Temperature Threshold for Critical Coupling); `proof:bk9_good_as_lyapunov_basin` (Lyapunov descent, threshold selection, and basin identity); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `proposition:bk5_map_mad_dichotomy` (MAP-MAD Dichotomy); `proposition:bk5_reflective_drift_alignment_in_map` (Reflective Drift Alignment in MAP); `proposition:bk7_map_compatible_reciprocity` (MAP-Compatible Reciprocity); `theorem:bk5__map_dominance` (MAP Dominance); `theorem:bk5_map_mad_critical_temperature` (MAP-MAD Critical Temperature)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-032`
+- Witnesses: `Book5.map_eventually_viable`, `Book5.map_joint_eventually_viable`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Convergence kernel only: positive limit forces joint indefinite viability; the coupling-threshold hypothesis enters via the contraction instance.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -986,6 +1168,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:309`
 - Cited by: `definition:bk5_covenant_resilience_index` (Covenant Resilience Index); `proof:bk5_covenant_perturbation_restoration` (Covenant Restoration Under Perturbation); `proposition:bk5_map_mad_dichotomy` (MAP-MAD Dichotomy); `proposition:bk5_reflective_drift_alignment_in_map` (Reflective Drift Alignment in MAP)
 - Macros used: `\Membrane`, `\drift`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-015`
+- Witnesses: `Book5.covenant_stable_iff_threshold`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: Proves the quotient threshold form only for positive minimum coupling.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic covenant $C_{AB}$ between $Membrane_A$ and $Membrane_B$ is dynamically stable against small perturbations $delta$ to the system state if and only if its stability parameter $Omega_{AB}$ satisfies:
@@ -1065,6 +1258,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:335
 - Cited by: `demonstratio:bk7_map_stable_mutual_fixed_point` (Mutual Reflective Fixed Point as Stable MAP Nash Point); `proof:bk7_map_compatible_reciprocity` (Two-way fixed point as MAP Nash equilibrium); `proposition:bk7_map_compatible_reciprocity` (MAP-Compatible Reciprocity); `scholium:bk9_golden_rule_thermodynamic_covenant` (The Golden Rule as a Thermodynamic Covenant)
 - Macros used: `\Membrane`, `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-035`
+- Witnesses: `Book5.cooperation_dominates`, `Book5.cooperation_nash`, `Book5.defection_nash`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Assurance-game witness: cooperation and the trap are both Nash, cooperation payoff-dominant; general existence not proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The MAP Nash point of a symbolic covenant $C_{AB}$ is a configuration of reflection operators $(reflect_A^{B*}, reflect_B^{A*})$ representing a stable equilibrium where neither membrane can unilaterally improve its symbolic free energy $F_s$ by changing its reflection strategy, given the other's strategy (cf. Def. definition:bk5_symbolic_free_energy_und):
@@ -1097,6 +1301,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:3
 - Cites: `proposition:bk6_drift_reflection_correspondence` (Drift-Reflection Correspondence); `theorem:bk5_covenant_stability_theorem` (Covenant Stability Theorem); `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Cited by: `demonstratio:bk5_entropy_reduction`
 - Macros used: `\Membrane`, `\drift`, `\reflect`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-009`
+- Witnesses: `Book5AlignmentDynamics.ReflectiveAlignmentCertificate.realizes_reflective_drift_alignment`, `Book5AlignmentDynamics.positive_margin_without_contraction_does_not_align`
+- Countermodels: `Book5AlignmentDynamics.positive_margin_without_contraction_does_not_align`
+- Conditions: geometric reflective update with feedback gain of absolute value below one; realized contribution defined as covenant margin minus alignment-error magnitude; scalar covenant snapshot satisfying the Book 5 drift-relative stability margin
+- Formal boundary: One retained certificate distinguishes the fixed MAP classification threshold from the drift-relative restoration margin, then supplies the contractive temporal law. It jointly proves MAP classification, strict positive margin, vanishing alignment error, convergence of realized contribution to the margin, and eventual positivity. Unit gain remains a countermodel to alignment from margin alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1234,6 +1449,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:4
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-034`
+- Witnesses: `Book5.covenant_mad_collapse`, `Book5.covenant_map_viable`, `Book5.dual_surplus_reflect`, `Book5.viable_collapsed_exclusive`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Linear exchange model: the sign of stability decides viability vs collapse, and MAD is the exact polarity reflection of MAP.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The split is the sign-sensitive extension of the MAP condition in Thm. theorem:bk5_map_equilibrium and the perturbative threshold in Thm. theorem:bk5_covenant_stability_theorem.
@@ -1315,6 +1541,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:426`
 - Cites: `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Cited by: `corollary:bk5_map_evolutionary_advantag` (MAP Evolutionary Advantage); `definition:bk5_symbolic_fitness` (Symbolic Fitness); `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage); `proof:bk5_map_resistance_to_drift` (MAP Strategies Withstand Greater Drift); `proof:bk5_map_vs_nonmap_gradient` (Fitness Gradient Between MAP and Non-MAP); `proof:bk5_max_sustainable_drift` (Max Sustainable Drift from Reflective Bounds); `proof:bk5_symbolic_fitness_differentials` (Survival Differentials and Symbolic Fitness); `proof:bk9_good_as_lyapunov_basin` (Lyapunov descent, threshold selection, and basin identity); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `scholium:bk5_map_as_fundamental_organizational_principle` (MAP as Fundamental Organizational Principle)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-008`
+- Witnesses: `Book5Dominance.map_capacity_strictly_exceeds_isolated`, `Book5Dominance.map_dominates_beyond_isolated_capacity`, `Book5Dominance.map_viable_at_isolated_critical_drift`
+- Countermodels: none
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Deterministic scalar kernel: positive external reflection strictly raises sustainable drift and creates an interval where MAP has positive viability margin after isolation does not. The paper's probability-limit language remains conditional because no probability law is specified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1398,6 +1635,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:454
 - Cited by: `lemma:bk5_map_population_stability` (MAP Population Stability); `proof:bk5_map_perturbation_robustness` (Perturbation Robustness of MAP Populations); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-053`
+- Witnesses: `Book5Residue.resilience_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the resilience>1 threshold is exactly the stated iff-form, given the denominator positive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The covenant resilience index $rho(C_{AB})$ quantifies the stability margin of a covenant $C_{AB}$ against drift perturbations:
@@ -1427,6 +1675,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:461`
 - Cites: `axiom:bk5_covenant_transitivity` (Covenant Transitivity); `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Cited by: `definition:bk9_prompt_injection_operator` (Prompt Injection Operator $\mathcal{J}$)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-054`
+- Witnesses: `Book5Residue.min_resilience_implies_all_edges_resilient`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1505,6 +1764,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:478`
 - Cites: `definition:bk5_viability_domain` (Viability Domain); `theorem:bk5__map_dominance` (MAP Dominance)
 - Cited by: `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `theorem:bk5_enhanced_map_mad_duality` (Enhanced MAP--MAD Regime Classification)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-055`
+- Witnesses: `Book5Residue.ess_invasion_threshold`, `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the selective-advantage shape is captured by finite weighted dominance and the invasion threshold; the replicator-dynamics time-derivative itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1598,6 +1868,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:501
 - Cited by: `definition:bk5_recursive_reflective_flow` (Recursive Reflective Flow); `definition:bk5_spectral_radius_of_coupl` (Spectral Radius of Coupling Tensor); `definition:bk7_operational_resolution_uncertainties` (Operational resolution uncertainties); `lemma:bk7_involutive_dual_symmetry` (Involutive Dual Symmetry of Symbolic Power and Uncertainty); `scholium:bk7_constrained_uncertainty_motivation` (Constrained Symbolic Uncertainty); `sec:bk7_pisu_universal_symbolic_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU)); `subsec:bk7_pisu_axiom_statement` (Fundamental Trade-off); `subsec:bk7_pisu_regimes` (Interpretations and Regimes); `subsec:bk7_pisu_revisited_power_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU) Revisited); `subsec:bk7_sources_regimes_uncertainty` (Sources and Regimes of Symbolic Uncertainty); `theorem:bk5_reflective_stability_criterion` (Reflective Stability Criterion)
 - Macros used: `\Membrane`, `\drift`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-056`
+- Witnesses: `Book5Residue.coupling_stability_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the tensor's scalar spectral-radius reading feeds coupling_stability_gt_one_iff as the free parameter normR; the operator itself is not constructed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic membranes $Membrane_A$ and $Membrane_B$ with respective drift operators $drift_A, drift_B$ (derived from Def. definition:bk1_drift_field) on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold) and reflection operators $reflect_A, reflect_B$ (derived from Def. definition:bk1_reflection_operator), their reflective-drift coupling tensor $C_{AB}$ is defined as:
@@ -1627,6 +1908,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:508
 - Cites: `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `definition:bk5_reflective_drift_coupling_tensor` (Reflective-Drift Coupling Tensor)
 - Cited by: `corollary:bk5_spectral_radius_optimality` (Spectral Radius Optimality); `proof:bk5_energy_conservation_under_reflective_coupling` (Energy Conservation Under Reflective Coupling); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-057`
+- Witnesses: `Book5Residue.coupling_stability_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: same scalar parameter as above; the max-|eigenvalue| definition of the spectral radius is not itself computed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1659,6 +1951,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:516`
 - Cites: `definition:bk2_symbolic_temperature` (Symbolic Temperature); `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Cited by: `definition:bk5_recursive_reflective_flow` (Recursive Reflective Flow); `definition:bk5_spectral_radius_of_coupl` (Spectral Radius of Coupling Tensor); `lemma:bk5_recursive_flow_convergence` (Recursive Flow Convergence); `theorem:bk5_reflective_equilibrium_conservation` (Reflective Equilibrium Conservation); `theorem:bk5_reflective_stability_criterion` (Reflective Stability Criterion)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-033`
+- Witnesses: `Book5.contraction_map`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Scalar instance: contractive coupled ratio with positive carrying level yields MAP.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1702,6 +2005,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:530`
 - Cites: `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy)
 - Cited by: `assumption:bk5_equilibrium_margin_sublinear_fluctuations` (Equilibrium margin and sublinear fluctuations); `axiom:bk6_reflective_regulation_of_mutation` (Reflective Regulation of Mutation); `demonstratio:bk5_energy_fluctuation_bound` (Energy Fluctuation Bound); `proof:bk8_sr_convergence`; `proposition:bk5_viability_domain_preservation` (Viability Domain Preservation); `proposition:bk6_reflective_mutation_inhibition` (Reflective Mutation Inhibition); `scholium:bk5__distributed_resilience` (Distributed Resilience); `theorem:bk8_sr_convergence` (SR Convergence)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-007`
+- Witnesses: `Book5EquilibriumConservation.energy_rate_linear_spectral_bound`, `Book5EquilibriumConservation.energy_rate_norm_linear_spectral_bound`, `Book5EquilibriumConservation.energy_rate_quadratic_spectral_bound`, `Book5EquilibriumConservation.linear_residual_bounds_do_not_imply_quadratic_bound`
+- Countermodels: `Book5EquilibriumConservation.linear_residual_bounds_do_not_imply_quadratic_bound`
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: The repaired source-level statement is proved over arbitrary seminormed additive residual spaces: two order-rho residual controls yield the linear rho bound by the norm triangle inequality. The scalar theorem is retained as a specialization, and the historical countermodel records why the superseded rho-squared form failed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1857,6 +2171,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:585`
 - Cited by: `assumption:bk5_equilibrium_margin_sublinear_fluctuations` (Equilibrium margin and sublinear fluctuations); `demonstratio:bk5_energy_fluctuation_bound` (Energy Fluctuation Bound); `proof:bk5_existence_unique_coupled_fixed_point` (Existence Unique Coupled Fixed Point)
 - Macros used: `\Membrane`, `\drift`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-096`
+- Witnesses: `Book5Op.contraction_flow_unique_fixed_point`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: The recursive reflective flow converges to a unique stable fixed point.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Convergence is the fixed-point form of Ax. axiom:bk5_reflective_equilibrium_stability_flux and is compatible with Thm. theorem:bk4_compatibility_drift_reflective_operations.
@@ -1932,6 +2257,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:6
 - Cites: `definition:bk5_viability_domain` (Viability Domain); `theorem:bk5_reflective_equilibrium_conservation` (Reflective Equilibrium Conservation)
 - Cited by: `corollary:bk5_spectral_radius_optimality` (Spectral Radius Optimality); `proof:bk5_optimal_reflection_minimizing_coupling_radius` (Optimal Reflection Minimizing Coupling Radius); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `theorem:bk8_biological_phase_transition` (Threshold of Autonomy)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-058`
+- Witnesses: `Book5Residue.viability_union_mono_chain`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the long-horizon chaining content is proved; the probability-1 limit statement is not (no probability space is modeled).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2158,6 +2494,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:681`
 - Cited by: `theorem:bk5_reflective_stability_criterion` (Reflective Stability Criterion)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-099`
+- Witnesses: `Book5Op.viability_antitone_in_spectral_radius`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: Viability antitone in spectral radius: minimizing rho maximizes viability.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Optimality follows by composing Prop. proposition:bk5_viability_domain_preservation with Def. definition:bk5_spectral_radius_of_coupl.
@@ -2224,6 +2571,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:700`
 - Cites: `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `corollary:bk5_spectral_radius_optimality` (Spectral Radius Optimality); `definition:bk2_symbolic_temperature` (Symbolic Temperature); `definition:bk5_reflective_drift_coupling_tensor` (Reflective-Drift Coupling Tensor)
 - Cited by: `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$); `scholium:bk5__distributed_resilience` (Distributed Resilience)
 - Macros used: `\Membrane`, `\drift`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-059`
+- Witnesses: `Book5Residue.reflective_stability_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: min(a,b) reading as conjunction is exactly lt_min_iff, applied to the criterion's two per-membrane ratios.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2363,6 +2721,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:747`
 - Cited by: `subsec:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `theorem:bk5_enhanced_map_mad_duality_pr` (Enhanced MAP--MAD Dynamical Realization)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-006`
+- Witnesses: `Book5EnhancedDuality.classify_neg_of_strong`, `Book5EnhancedDuality.existsUnique_regimeCondition`, `Book5EnhancedDuality.positive_regime_parameters_do_not_force_viability`
+- Countermodels: `Book5EnhancedDuality.positive_regime_parameters_do_not_force_viability`
+- Conditions: linear-order trichotomy only; no temporal dynamics inferred; real-valued coupling magnitude, critical threshold, and polarity
+- Formal boundary: The four source conditions are formalized as a regime predicate, and every coupling/threshold/polarity triple satisfies exactly one condition. Threshold equality and strong zero polarity remain critical; reversal of nonzero polarity exchanges MAP and MAD. The paired countermodel enforces the source boundary that classification alone supplies no free-energy dynamics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Membrane_A$ and $Membrane_B$ interact through a symbolic covenant
@@ -2473,6 +2842,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:786
 - Cited by: `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `definition:bk5_symbolic_bifurcation_man` (Symbolic Bifurcation Manifold); `proof:bk5_map_mad_mas_trichotomy`
 - Macros used: `\Membrane`, `\drift`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-060`
+- Witnesses: `Book5Residue.bifurcation_eq_one_iff`, `Book5Residue.coupling_stability_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This scalar packages coupling, drift load, and symbolic temperature (Def. definition:bk2_symbolic_temperature) into a single regime coordinate.
@@ -2506,6 +2886,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:795
 - Cites: `definition:bk5_reflective_coupling_stab` (Reflective Coupling Stability Parameter)
 - Cited by: `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `lemma:bk5_symbolic_divergence_bounds` (Symbolic Divergence Bounds); `proposition:bk5_transactional_covenant_dynamics` (Transitional Covenant Dynamics); `scholium:bk8_emergent_geometry_of_cognition` (Emergent Geometry of Cognition)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-061`
+- Witnesses: `Book5Residue.bifurcation_eq_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2574,6 +2965,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:813`
 - Cites: `definition:bk5_symbolic_bifurcation_man` (Symbolic Bifurcation Manifold)
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence)
 - Macros used: `\Membrane`, `\drift`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-062`
+- Witnesses: `Book5Residue.map_mad_bounds_eventually_incompatible`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2690,6 +3092,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:8
 - Cites: `definition:bk5_symbolic_bifurcation_man` (Symbolic Bifurcation Manifold)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-005`
+- Witnesses: `Book5TransitionDynamics.constant_rate_ode_solution_unique`, `Book5TransitionDynamics.crossing_alone_does_not_force_growth`, `Book5TransitionDynamics.exact_step_of_constant_rate_ode`, `Book5TransitionDynamics.expEvolution_add`, `Book5TransitionDynamics.expEvolution_hasDerivAt`, `Book5TransitionDynamics.expEvolution_zero`, `Book5TransitionDynamics.madStep_eq_expEvolution`, `Book5TransitionDynamics.madStep_strict_decay`, `Book5TransitionDynamics.mapStep_at_boundary`, `Book5TransitionDynamics.mapStep_eq_expEvolution`, `Book5TransitionDynamics.mapStep_strict_growth`, `Book5TransitionDynamics.solution_eq_shifted_expEvolution`
+- Countermodels: `Book5TransitionDynamics.crossing_alone_does_not_force_growth`
+- Conditions: a globally differentiable real free-energy trajectory; one reference value for uniqueness; the supplied constant rate law F-prime = rate times F
+- Formal boundary: The supplied constant-rate ODE now determines the exact law, not merely one constructed example. An integrating-factor proof shows every global solution has the shifted exponential form, yields the exact adjacent-step update, and proves uniqueness from one shared value. MAP growth, MAD positivity/decay, and the boundary identity follow as before. A crossing alone still does not generate the ODE; time-varying coupling requires a separately supplied integral-rate law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2827,6 +3240,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:907`
 - Cited by: `definition:bk8_temperature_freedom` (Symbolic Temperature of Freedom \(T_s^{\mathrm{f}}\)); `proof:bk1_conditional_genericity_of_symbolic_phase_transitions` (Transversal discriminant crossing stabilized above the critical dimension); `proof:bk1_realization_of_symbolic_phase_transitions`; `proof:bk5_information_geometry_symbolic` (Information Geometry); `proposition:bk5_multi_agent_map_mad_classification` (Multi-Agent MAP-MAD Classification); `scholium:bk5__map_as_thermodynamic_necessity` (MAP as Thermodynamic Necessity)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-036`
+- Witnesses: `Book5.lambdaCrit_mono`, `Book5.spectral_iff_thermal`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Threshold-conversion kernel only; the phase-transition and fixed-point reading is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This theorem converts the MAP condition of Thm. theorem:bk5_map_equilibrium into an explicit thermal feasibility threshold.
@@ -2929,6 +3353,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:942`
 - Cites: none
 - Cited by: `definition:bk5_mad_map_potential_barrie` (MAD-MAP Potential Barrier); `scholium:bk5_mutually_assured_continuous_progress` (Mutually Assured Continuous Progress)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-004`
+- Witnesses: `Book5Hysteresis.ActivationBarrier.energy_eq`, `Book5Hysteresis.ActivationBarrier.energy_pos`, `Book5Hysteresis.ActivationBarrier.threshold_gap`, `Book5Hysteresis.HysteresisThresholds.lower_lt_upper`, `Book5Hysteresis.above_upper_switches_to_map`, `Book5Hysteresis.below_lower_switches_from_map`, `Book5Hysteresis.in_band_remembers_history`, `Book5Hysteresis.mad_persists_in_band`, `Book5Hysteresis.map_persists_in_band`, `Book5Hysteresis.memoryless_classifier_cannot_remember_history`, `Book5Hysteresis.runHysteresis_in_band`, `Book5Hysteresis.same_in_band_path_retains_distinct_histories`
+- Countermodels: none
+- Conditions: finite path remains inside the threshold band; positive activation half-width; positive constant barrier density; stateful regime update
+- Formal boundary: A constructed stateful Schmitt-style law now derives separated thresholds 1 - b and 1 + b from a positive half-width b. Crossing either boundary changes regime, while every finite path confined to the band preserves its incoming regime, so identical observations retain distinct histories. A positive constant barrier density gives activation energy 2 ξ b > 0. The memoryless countermodel remains, showing why prior state is load-bearing rather than notation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3061,6 +3496,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:9
 - Cited by: `demonstratio:bk5_emergent_global_properties` (Emergent Global Properties)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-063`
+- Witnesses: `Book5Residue.covenant_adjacency_exclusive`, `Book5Residue.covenant_adjacency_trichotomy`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The matrix criterion extends pairwise thresholds from Thm. theorem:bk5_map_mad_critical_temperature to graph-scale regime identification.
@@ -3129,6 +3575,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1004`
 - Cites: `theorem:bk5_enhanced_map_mad_duality` (Enhanced MAP--MAD Regime Classification)
 - Cited by: `scholium:bk5_mutually_assured_continuous_progress` (Mutually Assured Continuous Progress)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-003`
+- Witnesses: `Book5DualityProof.EnhancedDualityRealizationCertificate.decoupling_realization`, `Book5DualityProof.EnhancedDualityRealizationCertificate.enhanced_map_mad_dynamical_realization`, `Book5DualityProof.EnhancedDualityRealizationCertificate.mad_realization`, `Book5DualityProof.EnhancedDualityRealizationCertificate.map_realization`, `Book5DualityProof.covenantTrajectory_orientation_dual`, `Book5DualityProof.covenantTrajectory_tendsto_target`, `Book5DualityProof.decoupling_consumes_vanishing_interaction`, `Book5DualityProof.decoupling_without_contraction_can_persist`, `Book5DualityProof.geometric_decoupling_vanishes`, `Book5DualityProof.mad_rate_negative`, `Book5DualityProof.mad_rate_negative_iff`, `Book5DualityProof.mad_target_eventually_collapsed`, `Book5DualityProof.map_rate_positive`, `Book5DualityProof.map_rate_positive_iff`, `Book5DualityProof.map_target_eventually_viable`, `Book5DualityProof.negative_rate_alone_does_not_force_zero_limit`, `Book5DualityProof.positive_rate_alone_does_not_force_positive_limit`
+- Countermodels: `Book5DualityProof.decoupling_without_contraction_can_persist`, `Book5DualityProof.negative_rate_alone_does_not_force_zero_limit`, `Book5DualityProof.positive_rate_alone_does_not_force_positive_limit`
+- Conditions: a positive MAP target; reflection/entropy inequalities for local rate signs; separately supplied strict contractions for MAP, MAD, and residue dynamics; strong/weak coupling and polarity premises for classification
+- Formal boundary: A typed realization certificate keeps parameter classification and temporal laws as distinct premises, then jointly proves all three source clauses: MAP classification, positive rate, convergence to a positive target, and eventual viability; MAD classification, negative rate, and zero-target convergence; weak-coupling classification and vanishing residue. Countermodels still show classification alone supplies no dynamics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3332,6 +3789,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:107
 - Cited by: `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-064`
+- Witnesses: `Book5Residue.ess_invasion_threshold`, `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: strategies are consumed abstractly as an index type / real payoff values inside the dominance and invasion lemmas, not as the (reflect,transfer,coop-coefficient) tuple itself.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Strategies are the microscopic control primitives whose interaction payoffs are measured by symbolic free energy (Def. definition:bk2_symbolic_free_energy).
@@ -3369,6 +3837,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:108
 - Cited by: `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-065`
+- Witnesses: `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic strategy space $Sigma$ is the set of all possible symbolic strategies available to membranes. We denote $Sigma_{MAP} subset Sigma$ as the subset of strategies that satisfy MAP conditions as per Def. definition:bk5_symbolic_covenant.
@@ -3391,6 +3870,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:109
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `theorem:bk5__map_dominance` (MAP Dominance)
 - Cited by: `definition:bk5_symbolic_ess` (Symbolic ESS); `definition:bk5_symbolic_replicator_dynamics` (Symbolic Replicator Dynamics); `proof:bk5_map_invasion_dynamics` (Invasion Analysis of MAP vs Non-MAP Strategies); `proof:bk5_map_resistance_to_drift` (MAP Strategies Withstand Greater Drift)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-066`
+- Witnesses: `Book5Residue.ess_invasion_threshold`, `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3423,6 +3913,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:109
 - Cited by: `lemma:bk5_covenant_non_invasibility` (Covenant Non-Invasibility); `proof:bk5_map_as_ess` (MAP as Symbolic Evolutionarily Stable Strategy); `theorem:bk5_map_as_strong_ess` (MAP as Strong ESS)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-067`
+- Witnesses: `Book5Residue.ess_invasion_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A strategy $sigma^* in Sigma$ is a symbolic evolutionarily stable strategy if for every strategy $sigma neq sigma^*$, there exists $epsilon_sigma > 0$ such that for all $epsilon in (0, epsilon_sigma)$ (using Def. definition:bk5_symbolic_fitness):
@@ -3453,6 +3954,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1107`
 - Cites: `definition:bk5_strategy_space` (Strategy Space); `definition:bk5_symbolic_strategy` (Symbolic Strategy); `theorem:bk2_h_theorem_for_symbolic_evol` (H-Theorem for Symbolic Evolution); `theorem:bk5__map_dominance` (MAP Dominance)
 - Cited by: `lemma:bk5_covenant_non_invasibility` (Covenant Non-Invasibility); `lemma:bk5_map_invasion_barrier_strength` (MAP Invasion Barrier Strength)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-068`
+- Witnesses: `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: instantiates directly: pointwise strict dominance on positive-weight population members gives strict weighted-average dominance.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3533,6 +4045,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1133`
 - Cites: `definition:bk5_symbolic_ess` (Symbolic ESS); `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage)
 - Cited by: `proof:bk5_map_as_ess` (MAP as Symbolic Evolutionarily Stable Strategy)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-069`
+- Witnesses: `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3634,6 +4157,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1170`
 - Cites: none
 - Cited by: `proof:bk5_map_as_ess` (MAP as Symbolic Evolutionarily Stable Strategy); `proposition:bk6_drift_reflection_correspondence` (Drift-Reflection Correspondence)
 - Macros used: `\drift`, `\reflect`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-002`
+- Witnesses: `Book5StrategyBalance.OperatorStrategySpace.exists_operator_balance_of_cofinal`, `Book5StrategyBalance.OperatorStrategySpace.mem_viableMAP_iff`, `Book5StrategyBalance.OperatorStrategySpace.submaximal_drift_without_inventory_countermodel`, `Book5StrategyBalance.OperatorStrategySpace.viableMAP_eq_isMAP_of_uniform_richness`, `Book5StrategyBalance.OperatorStrategySpace.viableMAP_nonempty_of_richness`, `Book5StrategyBalance.balance_iff_capacity_above_threshold`, `Book5StrategyBalance.exists_available_balancing_strategy`, `Book5StrategyBalance.isolated_strategy_cannot_balance_positive_drift`, `Book5StrategyBalance.local_cancellation_is_not_strict_balance`, `Book5StrategyBalance.submaximal_drift_alone_does_not_supply_available_strategy`
+- Countermodels: `Book5StrategyBalance.OperatorStrategySpace.submaximal_drift_without_inventory_countermodel`, `Book5StrategyBalance.submaximal_drift_alone_does_not_supply_available_strategy`
+- Conditions: cofinal available reflection capacity; positive cooperation at a MAP strategy; strategy-indexed available reflection inventory; typed drift and reflection operator carriers
+- Formal boundary: Typed operator-inventory reconstruction: drift and reflection operators remain distinct carrier types with observer-assigned intensities, MAP membership, strategy-indexed availability, and cooperation. Cofinal reflection capacity at one cooperative MAP strategy constructs a nonempty viable MAP subset; uniform cofinality proves equality with the MAP set. Countermodels retain that sub-maximal drift and positive cooperation do not populate an empty inventory, while exact cancellation lacks strict margin.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3799,6 +4333,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cited by: `definition:bk5_viability_domain` (Viability Domain)
 - Macros used: `\Membrane`, `\drift`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-070`
+- Witnesses: `Book5Residue.ess_invasion_threshold`, `Book5Residue.viability_union_mono_chain`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: stability and non-invasibility conditions are covered by ess_invasion_threshold; viability expansion is covered qualitatively by viability_union_mono_chain; the three are not composed into one theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $sigma_{MAP} in Sigma_{MAP}$ be a MAP strategy with symbolic free energy $F_s$ (Def. definition:bk2_symbolic_free_energy) on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold) in an environment with drift intensity $\|drift\| > drift_0$ (Def. definition:bk1_drift_field). Let viability be measured by Def. definition:bk5_viability_domain. If $sigma_{MAP}$ satisfies:
@@ -3899,6 +4444,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:1264`
 - Cites: none
 - Cited by: `proof:bk5_map_viability_critical_drift` (Two-Sided Strategy Transport); `scholium:bk5__map_ess_implications` (MAP-ESS Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-001`
+- Witnesses: `Book5ConvergenceMAP.MAPPopulationOrbit.fitness_gap_with_inflow_does_not_force_convergence`, `Book5ConvergenceMAP.MAPPopulationOrbit.residual_eq_pow`, `Book5ConvergenceMAP.MAPPopulationOrbit.share_eq_mapShare`, `Book5ConvergenceMAP.MAPPopulationOrbit.share_le_one`, `Book5ConvergenceMAP.MAPPopulationOrbit.share_nonneg`, `Book5ConvergenceMAP.MAPPopulationOrbit.share_tendsto_one`, `Book5ConvergenceMAP.PersistentMAPAdvantage.contraction_lt_one`, `Book5ConvergenceMAP.PersistentMAPAdvantage.contraction_nonneg`, `Book5ConvergenceMAP.increasing_drift_alone_does_not_force_map_convergence`, `Book5ConvergenceMAP.mapShare_succ`, `Book5ConvergenceMAP.mapShare_tendsto_one`, `Book5ConvergenceMAP.mapShare_zero`
+- Countermodels: `Book5ConvergenceMAP.MAPPopulationOrbit.fitness_gap_with_inflow_does_not_force_convergence`, `Book5ConvergenceMAP.increasing_drift_alone_does_not_force_map_convergence`
+- Conditions: exact residual recurrence excluding non-MAP inflow; initial MAP share in the probability interval; positive MAP and nonnegative non-MAP fitness; strict persistent MAP aggregate fitness advantage
+- Formal boundary: A persistent quantitative MAP fitness advantage yields a contraction ratio q in [0,1). A mutation-free aggregate population orbit explicitly excludes non-MAP inflow through its residual recurrence. Lean derives the geometric residual, proves every share remains in [0,1], and proves convergence to MAP mass one. Countermodels show that increasing drift alone—or even a strict fitness gap with replenishing inflow—does not force convergence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4019,6 +4575,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1308`
 - Cited by: `proof:bk5_map_perturbation_robustness` (Perturbation Robustness of MAP Populations)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-071`
+- Witnesses: `Book5Residue.min_resilience_implies_all_edges_resilient`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A population composed entirely of MAP strategies is stable against perturbations in strategy distribution if the covenant resilience index (Def. definition:bk5_covenant_resilience_index) satisfies:
@@ -4095,6 +4662,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1332`
 - Cited by: `definition:bk5_symbolic_invasion_barrier` (Symbolic Invasion Barrier); `proof:bk5_map_strict_fitness_dominance` (Strict Dominance of MAP Under Mixing); `scholium:bk5__map_ess_implications` (MAP-ESS Implications)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-072`
+- Witnesses: `Book5Residue.ess_invasion_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If a MAP strategy $sigma_{MAP}$ satisfies (in the setting of Def. definition:bk5_symbolic_ess):
@@ -4163,6 +4741,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:135
 - Cited by: `lemma:bk5_map_invasion_barrier_strength` (MAP Invasion Barrier Strength)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-073`
+- Witnesses: `Book5Residue.ess_invasion_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The invasion barrier $beta(sigma_{MAP}, sigma)$ of a MAP strategy $sigma_{MAP}$ against an alternative strategy $sigma$ is defined as (cf. Thm. theorem:bk5_map_as_strong_ess):
@@ -4189,6 +4778,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1358`
 - Cites: `definition:bk5_symbolic_invasion_barrier` (Symbolic Invasion Barrier); `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage)
 - Cited by: `definition:bk9_prompt_injection_operator` (Prompt Injection Operator $\mathcal{J}$)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-074`
+- Witnesses: `Book5Residue.ess_invasion_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4277,6 +4877,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: none
 - Cited by: `scholium:bk5__map_as_thermodynamic_necessity` (MAP as Thermodynamic Necessity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-100`
+- Witnesses: `Book5ESSEquivalence.TwoSidedStrategyApproximation.hausdorffDist_le`, `Book5ESSEquivalence.TwoSidedStrategyApproximation.hausdorffDist_tendsto_zero`, `Book5ESSEquivalence.TwoSidedStrategyApproximation.of_eventual_equality`, `Book5ESSEquivalence.distance_tendsto_zero_of_eventually_identified`, `Book5ESSEquivalence.one_sided_ess_to_map_does_not_identify_sets`, `Book5ESSEquivalence.population_limit_does_not_supply_two_sided_approximation`
+- Countermodels: `Book5ESSEquivalence.one_sided_ess_to_map_does_not_identify_sets`, `Book5ESSEquivalence.population_limit_does_not_supply_two_sided_approximation`
+- Conditions: ESS-to-MAP witnesses at tolerance; MAP-to-ESS witnesses at tolerance; distinct ESS sequence and MAP set predicates; nonnegative tolerance tending to zero; pseudo-metric strategy space
+- Formal boundary: Genuine metric reconstruction: ESS and MAP remain distinct set-valued predicates in an arbitrary pseudo-metric strategy space. Two independent directed witness laws at tolerance ε_n bound the actual Hausdorff distance; ε_n → 0 yields convergence without finite-stage equality. One-sided inclusion and population-mass convergence countermodels show neither supplies two-sided set approximation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4589,6 +5200,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cited by: `proof:bk5_operator_convergence`; `proof:bk5_operators_evolve`; `theorem:bk5_operator_convergence` (Operator Convergence)
 - Macros used: `\Fproc`, `\Op`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-094`
+- Witnesses: `Book5Op.operator_stationary_iff_critical`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: Stationary iff critical point of F_proc for the descent step; the minimizer/critical gap stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O_{theta}$, $theta in mathbb{R}^n$, be a parameterized symbolic operator in $Op(M)$ (Def. definition:bk5_symbolic_operator_space). Under SRMF operator-selection dynamics (Ax. axiom:bk5_srmf_operator_selection_evolution) the path $gamma: t mapsto O_{theta(t)}$ is stationary if and only if $O_{theta}$ minimizes the process free energy $Fproc$ (Def. definition:bk5_process_free_energy); otherwise the operator strictly evolves and converges to a minimizer (Thm. theorem:bk5_operator_convergence). That is: operators evolve.
@@ -4636,6 +5258,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:150
 - Cited by: `assumption:bk5_displacement_convexity` (Displacement Convexity of the Process Free Energy); `axiom:bk8_coherence_horizon` (Symbolic Entanglement); `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk5__operator_viability_set_v` (Operator Viability Set $\mathcal{V}_{\text{op}}$); `definition:bk5_complexity_stability_maintenance` (Operator Complexity, Stability Margin, Maintenance Cost); `definition:bk6_symbolic_system` (Symbolic System); `demonstratio:bk8_symbolic_unkotting` (Symbolic Unknotting); `proof:bk5_fixed_metabolic_capacity`; `proof:bk5_operator_convergence`; `proposition:bk5_fixed_metabolic_capacity` (Fixed Metabolic Capacity); `proposition:bk5_operator_evolution` (Operator Evolution); `remark:bk8_inference_principle_over_confidence_loss_tradeoff` (Inference Principle Over Confidence-Loss Tradeoff); `scholium:bk8_symbolic_knots_as_metabolic_dysfunctions` (Symbolic Knots as Metabolic Dysfunctions); `subsec:bk4_ttie_operator_algebra` (TTIE Operator Algebra); `subsec:bk7_pisu_formula` (Mathematical Formulation); `theorem:bk8_observer_projection_tensor` (Thermodynamics of Reflexive Debugging)
 - Macros used: `\Fproc`, `\Op`, `\freeenergy`, `\viabilitydomain`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-075`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: F_proc's admissibility role is mirrored by the MetabolicBudget structure's cost law; the E_cost/E_eff/C_hint decomposition itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given an operator $O in Op(M)$ acting within a symbolic system $S = (M, g, D, R, rho)$, its Process Free Energy $Fproc$ is defined as (cf. Def. definition:bk2_symbolic_free_energy):
@@ -4680,6 +5313,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk5_viability_domain` (Viability Domain)
 - Cited by: `proof:bk5_complexity_stability_tradeoff`; `proof:bk5_operator_convergence`; `proof:bk5_operators_evolve`
 - Macros used: `\MC`, `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-076`
+- Witnesses: `Book5Residue.energy_depletes_in_finite_time`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: a strictly positive cost overrun above the sustainable maximum drives the accumulated deficit negative in finite time (Archimedean argument), matching the anchor's finite-time exit claim.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4734,6 +5378,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:152
 - Cited by: `axiom:bk5_metabolically_bounded_reflection` (Metabolically Bounded Reflection); `corollary:bk5_complexity_stability_tradeoff` (Complexity Stability Tradeoff); `proof:bk5_complexity_stability_tradeoff`; `proof:bk5_complexity_stability_tradeoff_cor`; `proof:bk5_fixed_metabolic_capacity`; `proof:bk5_metabolic_capacity_non_decreasing`; `proof:bk5_operator_convergence`; `proposition:bk5_metabolic_capacity_non_decreasing`
 - Macros used: `\MC`, `\freeenergy`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-077`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`, `Book5Residue.energy_depletes_in_finite_time`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: MC is treated as an opaque nonnegative real parameter; its two alternative characterizations (time-average free energy vs max sustainable drift norm) are not modeled or shown equivalent.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The Metabolic Capacity $MC(S)$ of a symbolic system $S$ represents its sustained ability to maintain viability (cf. Def. definition:bk2_symbolic_free_energy). It may be quantified by either:
@@ -4772,6 +5427,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: `definition:bk5_metabolic_capacity_mc_` (Metabolic Capacity $\MC$); `theorem:bk5_complexity_stability_tradeoff` (Complexity-Stability Tradeoff)
 - Cited by: none
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-098`
+- Witnesses: `Book5Op.metabolic_capacity_monotone`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: Metabolic capacity non-decreasing in energy reserves.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4833,6 +5499,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:1549`
 - Cites: none
 - Cited by: `definition:bk5__operator_viability_set_v` (Operator Viability Set $\mathcal{V}_{\text{op}}$); `demonstratio:bk8_symbolic_unkotting` (Symbolic Unknotting); `proof:bk5__srmf_operator_adaptation`; `proof:bk5_operator_convergence`; `proof:bk5_operator_evolution`; `proposition:bk5_operator_evolution` (Operator Evolution); `scholium:bk8_symbolic_knots_as_metabolic_dysfunctions` (Symbolic Knots as Metabolic Dysfunctions); `subsec:bk4_ttie_operator_algebra` (TTIE Operator Algebra); `theorem:bk5__srmf_operator_adaptation` (Certified SRMF Operator Adaptation); `theorem:bk8_observer_projection_tensor` (Thermodynamics of Reflexive Debugging)
 - Macros used: `\Fproc`, `\Op`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-101`
+- Witnesses: `Book5OperatorSelection.exists_process_minimizer`, `Book5OperatorSelection.rejects_strictly_suboptimal_incumbent`, `Book5OperatorSelection.selected_le_incumbent`, `Book5OperatorSelection.viability_alone_does_not_force_operator_argmin`, `Book5StatefulOperatorLearning.boolFeedbackLaw_responds`, `Book5StatefulOperatorLearning.feedback_response_does_not_force_inventory_change`, `Book5StatefulOperatorLearning.step_comparatorRegret_nonpos`, `Book5StatefulOperatorLearning.step_current`
+- Countermodels: `Book5OperatorSelection.viability_alone_does_not_force_operator_argmin`, `Book5StatefulOperatorLearning.feedback_response_does_not_force_inventory_change`
+- Conditions: explicit minimizer certificate for each transition; explicit selection certificate for SRMF consequences; feedback-indexed real-valued process objective; finite nonempty available operator inventory; finite nonempty updated operator inventory; inventory update and selection policy supplied independently of viability; real-valued process free energy
+- Formal boundary: Conditional stateful selection kernel: a supplied feedback-indexed learning law updates an admissible inventory, selects a certified process-free-energy minimizer, records the incumbent, and has nonpositive one-step comparator regret. A concrete law responds to feedback without forcing inventory change. Viability alone neither supplies this law nor proves fair or asymptotic convergence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4932,6 +5609,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1581`
 - Cited by: `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `demonstratio:bk8_symbolic_unkotting` (Symbolic Unknotting); `proof:bk5_operator_evolution`; `proof:bk5_operators_evolve`; `proof:bk8_sr_convergence`; `proposition:bk5_operator_evolution` (Operator Evolution); `proposition:bk5_operators_evolve`; `scholium:bk4_ttcs_simulation_tool_use` (TTCS as Symbolic Simulation and Tool-Use); `scholium:bk4_ttcs_stochastic_operator` (TTCS as a Stochastic Symbolic Operator); `scholium:bk4_ttdc_impulse_collapse` (Collapse as Impulse: The Newtonian Structure of TTDC); `subsec:bk4_symbolic_identity_expansion` (Symbolic Identity Expansion); `subsec:bk4_ttie_operator_algebra` (TTIE Operator Algebra); `subsec:bk7_pisu_motivation` (Motivation); `theorem:bk8_rg_fixed_point` (RG Fixed Point); `theorem:bk8_sr_convergence` (SR Convergence)
 - Macros used: `\Fproc`, `\MC`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-095`
+- Witnesses: `Book5Op.contraction_flow_converges`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: SRMF convergence to a fixed point (contraction-Banach); the Wasserstein O(1/t) rate stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Via Wasserstein gradient flow (Thm. theorem:bk2_wasserstein_gradient_flow) on symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold), assume regularity of $Fproc$ (cf. Def. definition:bk2_symbolic_free_energy), displacement convexity (Assumption assumption:bk5_displacement_convexity), and bounded $MC$ (Def. definition:bk1_self_regulating_mapping_function_srmf).
@@ -5014,6 +5702,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:1608`
 - Cited by: `corollary:bk5__metabolically_bounded_reflection_corollary`; `proof:bk5__metabolically_bounded_reflection_corollary`
 - Macros used: `\MC`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-078`
+- Witnesses: `Book5Residue.max_recursive_depth_bound`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $B := f(MC(S))$ with $f$ non-decreasing and $f(MC) leq MC$ (cf. Def. definition:bk5_metabolic_capacity_mc_). Then:
@@ -5042,6 +5741,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:1615`
 - Cites: `axiom:bk5_metabolically_bounded_reflection` (Metabolically Bounded Reflection)
 - Cited by: none
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-079`
+- Witnesses: `Book5Residue.max_recursive_depth_bound`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5116,6 +5826,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1632`
 - Cites: `axiom:bk5_srmf_operator_selection_evolution` (Stateful SRMF Operator Selection and Evolution)
 - Cited by: `proof:bk5_operators_evolve`; `proposition:bk5_operators_evolve`
 - Macros used: `\Fproc`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-102`
+- Witnesses: `Book5OperatorAdaptation.below_threshold_alone_does_not_force_adaptation`, `Book5OperatorAdaptation.gradientStep_displacement`, `Book5OperatorAdaptation.process_descent_can_increase_execution_cost`, `Book5OperatorAdaptation.quadratic_processFreeEnergy_descent`, `Book5OperatorAdaptation.refinementVelocity_eq_of_below`, `Book5OperatorAdaptation.refinementVelocity_pos`, `Book5StatefulOperatorLearning.step_records_incumbent`, `Book5StatefulOperatorLearning.two_steps_retain_ordered_history`
+- Countermodels: `Book5OperatorAdaptation.below_threshold_alone_does_not_force_adaptation`
+- Conditions: effectiveness below threshold; explicit gradient update law; explicit minimizer certificate for each transition; explicit positive feedback gain; feedback-indexed real-valued process objective; finite nonempty updated operator inventory; inventory update and selection policy supplied independently of viability; stable quadratic step size in [0,2]
+- Formal boundary: Conditional adaptation kernel: an explicit positive-gain law converts effectiveness shortfall into proportional pressure, and an explicit gradient step descends quadratic process free energy for step size in [0,2]. Stateful execution retains ordered incumbents, while a countermodel shows the threshold inequality alone cannot force motion. General steepest descent, calibration, and continuous or asymptotic evolution remain premises rather than consequences.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5226,6 +5947,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:167
 - Cited by: `proof:bk5_operators_evolve`; `proposition:bk5_operators_evolve`
 - Macros used: `\Fproc`, `\Op`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-080`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 \[
@@ -5252,6 +5984,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk5__operator_viability_set_v` (Operator Viability Set $\mathcal{V}_{\text{op}}$); `theorem:bk5__srmf_operator_adaptation` (Certified SRMF Operator Adaptation); `theorem:bk5_operator_convergence` (Operator Convergence)
 - Cited by: `proof:bk5_complexity_stability_tradeoff`; `theorem:bk5_complexity_stability_tradeoff` (Complexity-Stability Tradeoff)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-097`
+- Witnesses: `Book5Op.contraction_flow_unique_fixed_point`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: Operators evolve to and rest at the unique viable fixed point.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5311,6 +6054,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:169
 - Cited by: `proof:bk5_complexity_stability_tradeoff`; `theorem:bk5_complexity_stability_tradeoff` (Complexity-Stability Tradeoff)
 - Macros used: `\Op`, `\freeenergy`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-081`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: C, S, E_maint are represented as the structure's C, S, and the derived product form, packaged with the nonnegativity/positivity side-conditions as named fields (no axioms).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For an operator $OinOp(M)$ acting on system $S$ we define:
@@ -5345,6 +6099,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1702`
 - Cites: `definition:bk5_complexity_stability_maintenance` (Operator Complexity, Stability Margin, Maintenance Cost); `proposition:bk5_operators_evolve`
 - Cited by: `corollary:bk5_complexity_stability_tradeoff` (Complexity Stability Tradeoff); `proof:bk5_complexity_stability_tradeoff_cor`; `proof:bk5_metabolic_capacity_non_decreasing`; `proposition:bk5_metabolic_capacity_non_decreasing`
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-082`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5412,6 +6177,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:1721`
 - Cites: `definition:bk5_metabolic_capacity_mc_` (Metabolic Capacity $\MC$); `theorem:bk5_complexity_stability_tradeoff` (Complexity-Stability Tradeoff)
 - Cited by: none
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-083`
+- Witnesses: `Book5Residue.admissible_complexity_mono`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5525,6 +6301,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1748`
 - Cites: none
 - Cited by: `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `proof:bk5_symbolic_eigenlife`; `proposition:bk5_golden_ratio_thermodynamic_optimum` (Golden Ratio as Thermodynamic Optimum in the Balanced Regime)
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-103`
+- Witnesses: `Book5ReflectiveAccuracy.GeometricRecursionBudget.power_le_capacity_ratio_add_one`, `Book5ReflectiveAccuracy.ReflectiveAccuracyCertificate.beta_nonneg`, `Book5ReflectiveAccuracy.ReflectiveAccuracyCertificate.fidelity_le_log_capacity`, `Book5ReflectiveAccuracy.ReflectiveFidelityProcess.fidelity_le_linear`, `Book5ReflectiveAccuracy.capacity_alone_does_not_bound_unconstrained_fidelity`, `Book5ReflectiveAccuracy.depth_budget_without_marginal_control_countermodel`, `Book5ReflectiveAccuracy.fidelityEnvelope_nonneg`, `Book5ReflectiveAccuracy.fidelity_le_log_of_depth_bound`
+- Countermodels: `Book5ReflectiveAccuracy.capacity_alone_does_not_bound_unconstrained_fidelity`, `Book5ReflectiveAccuracy.depth_budget_without_marginal_control_countermodel`
+- Conditions: explicit nonnegative depth-to-log calibration; nonnegative metabolic capacity and geometric cost admissibility; positive base cost and growth; uniform nonnegative marginal fidelity gain; zero-depth fidelity normalization
+- Formal boundary: Depth-indexed reconstruction: a reflective fidelity process with zero-depth normalization and uniform marginal gain telescopes to a linear depth bound. A positive geometric recursion budget derives the dimensionless power bound. An explicit log-coordinate calibration composes these into the source envelope with nonnegative β. A countermodel shows depth and capacity cannot bound unrestricted fidelity.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5732,6 +6519,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:182
 - Cited by: `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `lemma:bk5_phi_critical_resonant_norm` ($\varphi$ as Balanced Memory Resonance); `proof:bk5_golden_ratio_curvature_scalar` (Balanced curvature ratio); `proof:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant via Balanced Memory Algebra); `proof:bk5_phi_critical_resonant_norm` ($\varphi$ as balanced memory resonance); `proof:bk5_symbolic_eigenlife`; `remark:bk5_symbolic_fibonacci_coding` (Symbolic Fibonacci Coding and Memory); `theorem:appC_modal_transference` (Modal Transference); `theorem:bk4_golden_event_horizon_spiral` (Golden Event Horizon Spiral); `theorem:bk5_golden_ratio_curvature_scalar` (Golden Ratio as Balanced Scale-Resonant Curvature Ratio); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory); `theorem:bk5_golden_rule_reciprocity` (Golden Rule Reciprocity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-016`
+- Witnesses: `balanced_memory_tendsto_gold`, `closureMatrix_eigen_gold`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Matrix and asymptotic ratio.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S_n$ denote the $n$th observer-resolved symbolic state and let
@@ -5784,6 +6582,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1848`
 - Cites: none
 - Cited by: `proof:bk4_golden_event_horizon_spiral` (Golden spiral from balanced closure on the wheel); `proof:bk5_golden_rule_reciprocity` (Golden Rule reciprocity is the balanced closure); `theorem:bk4_golden_event_horizon_spiral` (Golden Event Horizon Spiral); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory); `theorem:bk5_golden_rule_reciprocity` (Golden Rule Reciprocity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-017`
+- Witnesses: `Book5.balanced_observer_weights_unique`
+- Countermodels: none
+- Conditions: nonnegative reciprocity weight; strict positivity for strict regime comparisons
+- Formal boundary: Normalization and equal calibration uniquely select unit weights.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5887,6 +6696,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1886`
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `definition:bk5_spectral_radius_of_coupl` (Spectral Radius of Coupling Tensor); `lemma:bk5_balanced_observer_normalization` (Balanced Observer Normalization Selects the Closure Matrix)
 - Cited by: `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `definition:bk5_symbolic_curvature_operator_spectrum` (Symbolic Curvature Operator Spectrum); `proof:bk4_golden_event_horizon_spiral` (Golden spiral from balanced closure on the wheel); `proof:bk5_complementary_constants` (Complementarity of first fracture and balanced resonance); `proof:bk5_fundamental_norm_fracture` (Norm-induced fracture theorem); `proof:bk5_golden_ratio_curvature_scalar` (Balanced curvature ratio); `proof:bk5_golden_ratio_thermodynamic_optimum` (Balanced thermodynamic optimum); `proof:bk5_golden_rule_reciprocity` (Golden Rule reciprocity is the balanced closure); `proof:bk5_map_mad_mas_trichotomy`; `proof:bk5_phi_critical_resonant_norm` ($\varphi$ as balanced memory resonance); `proof:bk5_symbolic_eigenlife`; `proof:bk5_symbolic_norm_spectrum` (Product spectrum); `proposition:bk5_complementary_constants` (Complementary Constants: Fracture vs Resonance); `proposition:bk5_golden_ratio_thermodynamic_optimum` (Golden Ratio as Thermodynamic Optimum in the Balanced Regime); `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos); `remark:bk5_symbolic_fibonacci_coding` (Symbolic Fibonacci Coding and Memory); `subsec:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `theorem:bk4_golden_event_horizon_spiral` (Golden Event Horizon Spiral); `theorem:bk5_fundamental_dichotomy` (Fundamental Dichotomy of Symbolic Constants); `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture); `theorem:bk5_golden_rule_reciprocity` (Golden Rule Reciprocity); `theorem:bk5_grand_unified_symbolic_geometric` (Product Theorem of the Symbolic-Geometric Interface); `theorem:bk5_symbolic_norm_spectrum` (Symbolic Norm Spectrum); `theorem:bk8_rg_fixed_point` (RG Fixed Point)
 - Macros used: `\drift`, `\reflect`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-018`
+- Witnesses: `closureMatrix_eigen_gold`, `gold_unique_positive_root`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Arithmetic spectral kernel; commutator interpretation is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6050,6 +6870,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:1953`
 - Cited by: `definition:bk8_identitystability` (Stability of Symbolic Identity \identitystability); `definition:bk8_recursive_symbolic_metaboloic_cycle` (Symbolic Metabolic Cycle $\Omega_{\mathrm{MP}}$); `lemma:bk7_involutive_dual_symmetry` (Involutive Dual Symmetry of Symbolic Power and Uncertainty); `proof:bk5_map_mad_mas_trichotomy`; `proof:bk8_biological_phase_transition`; `scholium:bk8_autonomous_repair_systems_expanded` (Autonomous Repair Systems as Metabolic Projections — An Expanded View); `sec:bk7_preamble_the_arc_toward_coherence` (Preamble: The Arc Toward Coherence); `subsec:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `theorem:bk8_biological_phase_transition` (Threshold of Autonomy)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-084`
+- Witnesses: `Book5Residue.closureMatrix_disc_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system exhibits eigenlife in the balanced two-step memory
@@ -6131,6 +6962,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:197
 - Cited by: `proof:bk7_map_compatible_reciprocity` (Two-way fixed point as MAP Nash equilibrium); `proposition:bk7_map_compatible_reciprocity` (MAP-Compatible Reciprocity); `scholium:bk5_imagination_covenant_branch_selection` (Imagination as Covenant Branch Selection); `theorem:bk5_map_mad_mas_trichotomy` (MAD--MAP--MAS Trichotomy)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-085`
+- Witnesses: `Book5Residue.quadratic_no_real_root_of_disc_neg`, `Book5Residue.quadratic_real_root_neg`, `Book5Residue.quadratic_real_root_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the discriminant-based real/complex spectral split underlying MAD vs MAP/MAS is proved generically; the specific MAP-vs-MAS distinction (which real eigendirection is dominant) is not captured.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Membrane_A,Membrane_B$ interact through the symbolic covenant $C_{AB}$ (Cor. corollary:bk5_map_evolutionary_advantag), and let $C_{AB}$ be the induced linearized mutual-reflection operator on the joint tangent space, governing $X_{n+1}=C_{AB}X_n$ for the paired state $X=(psi_A,psi_B)$. Order the dyad by the reflective coupling stability parameter $Lambda_{AB}$ (Def. definition:bk5_reflective_coupling_stab) about its bifurcation manifold $Lambda_{AB}=1$ (Def. definition:bk5_symbolic_bifurcation_man). By the spectrum of $C_{AB}$ the dyad occupies one of three regimes:
@@ -6176,6 +7018,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1992`
 - Cites: `definition:bk2_symbolic_phase_transitio` (Symbolic Phase Transition); `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band)
 - Cited by: `proof:bk1_conditional_genericity_of_symbolic_phase_transitions` (Transversal discriminant crossing stabilized above the critical dimension); `proof:bk1_realization_of_symbolic_phase_transitions`; `proof:bk9_good_as_lyapunov_basin` (Lyapunov descent, threshold selection, and basin identity); `scholium:bk5_imagination_covenant_branch_selection` (Imagination as Covenant Branch Selection); `theorem:bk1_conditional_genericity_of_symbolic_phase_transitions` (Conditional Genericity of Symbolic Phase Transitions); `theorem:bk9_good_as_lyapunov_basin` (The Good as a Lyapunov Basin)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-086`
+- Witnesses: `Book5Residue.closureMatrix_disc_pos`, `Book5Residue.quadratic_no_real_root_of_disc_neg`, `Book5Residue.quadratic_real_root_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6314,6 +7167,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2031`
 - Cites: `definition:bk4_symbolic_curvature` (Symbolic Curvature); `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `theorem:bk4_fuzzy_fundamental` (Fuzzy Fundamental Theorem of Calculus)
 - Cited by: `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor); `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos); `scholium:bk5_constant_of_becoming` (The Constant of Becoming)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-087`
+- Witnesses: `Book5Residue.balanced_memory_tendsto_gold_scaled`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the constant-rescaled-Fibonacci case of the ratio limit is proved; the anchor's general two-term holonomy/curvature recurrence (arbitrary balanced-closure initial data) is not derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6507,6 +7371,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cited by: `scholium:bk5_experimental_predictions` (Experimental Predictions); `scholium:bk5_life_on_edge_of_chaos` (Life on the Edge of Chaos)
 - Macros used: `\drift`, `\reflect`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-088`
+- Witnesses: `Book5Residue.golden_ratio_thermodynamic_min`, `Book5Residue.golden_ratio_thermodynamic_optimum_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let
@@ -6647,6 +7522,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:214
 - Cited by: `lemma:bk5_shortest_path_representability` (Shortest Path Representability Criterion)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-089`
+- Witnesses: `Book5Residue.compression_ratio_R2`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In a fuzzy symbolic manifold with orthogonal basis vectors ${e_1, e_2, ldots}$, a diagonal transition is any symbolic path that cannot be decomposed into integer-aligned steps without introducing irrational scaling factors (cf. Def. definition:bk5_fuzzy_symbolic_manifold).
@@ -6669,6 +7555,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2152`
 - Cites: none
 - Cited by: `lemma:bk5_shortest_path_representability` (Shortest Path Representability Criterion); `proof:bk5_complementary_constants` (Complementarity of first fracture and balanced resonance); `proposition:bk5_complementary_constants` (Complementary Constants: Fracture vs Resonance); `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos); `scholium:bk5_experimental_predictions` (Experimental Predictions); `theorem:bk5_fundamental_dichotomy` (Fundamental Dichotomy of Symbolic Constants)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-020`
+- Witnesses: `diag_fracture_ratio`, `sqrt2_first_fracture`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Integer two-support lower bound and elementary diagonal ratio.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6785,6 +7682,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cites: `definition:bk4_fragmented_identity` (Fragmented Identity); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory); `theorem:bk5_sqrt2_maximal_fracture` ($\sqrt{2}$ as the First Orthogonal Fracture Constant)
 - Cited by: `theorem:bk5_fundamental_dichotomy` (Fundamental Dichotomy of Symbolic Constants)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-022`
+- Witnesses: `constants_complementary`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Algebraic separation of phi and sqrt(2).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6966,6 +7874,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2256`
 - Cited by: `demonstratio:bk5_diagonal_dissociation` (The Diagonal Dissociation Principle); `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-023`
+- Witnesses: `constants_complementary`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Arithmetic separation kernel only; the resonance-vs-fracture mechanism reading stays authored prose.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In fuzzy symbolic calculus, the constants $varphi$ and $sqrt{2}$ instantiate two fundamental mechanisms:
@@ -7061,6 +7980,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:228
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-090`
+- Witnesses: `Book5Residue.l1_ge_l2`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A fuzzy symbolic manifold $tilde{M}$ belongs to symbolic integrability class $I_p$ if its dominant geometric transitions are governed by the $ell_p$ norm (cf. Def. definition:bk5_fuzzy_symbolic_manifold), where symbolic paths of length $delta$ satisfy:
@@ -7087,6 +8017,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:228
 - Cites: none
 - Cited by: `definition:bk5_symbolic_curvature_operator_spectrum` (Symbolic Curvature Operator Spectrum)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-091`
+- Witnesses: `Book5Residue.curvature_control_p2_nonneg`, `Book5Residue.l1_ge_l2`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7128,6 +8069,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2301`
 - Cites: none
 - Cited by: `definition:bk5_symbolic_compression_experiment` (Symbolic Compression Experiment); `proof:bk5_complete_symbolic_regime_classification` (Regime classification); `proof:bk5_fractal_dimension_connection` (Effective support dimension); `proof:bk5_fundamental_norm_fracture` (Norm-induced fracture theorem); `proof:bk5_shortest_path_representability` (Representability Proof); `proof:bk5_symbolic_integrability_classes` (Classification Proof); `proof:bk5_symbolic_norm_spectrum` (Product spectrum); `proof:bk5_symbolic_torsion_phase_diagram` (Phase diagram from the fracture ratio); `proposition:bk5_symbolic_integrability_classes` (Symbolic Integrability Classes); `remark:bk5_lattice_field_theory_analogy` (Lattice Field Theory Analogy); `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture); `theorem:bk5_symbolic_norm_spectrum` (Symbolic Norm Spectrum)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-021`
+- Witnesses: `Book5.axisCostOn_le_card_rpow_mul_lpCostOn`, `Book5.diagonal_l1_l2_ratio`, `Book5.infinity_ratio_bounds`, `Book5.infinity_sharp_iff_equal_magnitudes`, `Book5.lpCostOn_le_axisCostOn`, `Book5.sharp_norm_bound_iff_equal_magnitudes`
+- Countermodels: none
+- Conditions: axis and Lp costs are the explicit finite-support definitions in Book5Norm.lean; finite coordinate set; finite nonempty support; named nonempty finite support; nonzero common magnitude for equality witness; nonzero diagonal amplitude; positive supremum cost for division-form ratio bounds; real exponent p > 1; real exponent p >= 1; real-valued coordinates; support size at least two for logarithmic dimension; two-coordinate special case
+- Formal boundary: Complete finite-support kernel: lower and cardinality upper bounds, finite p>1 and Linfinity equality characterizations, and the elementary diagonal values.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7233,6 +8185,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cited by: `proof:bk5_complete_symbolic_regime_classification` (Regime classification); `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-037`
+- Witnesses: `Book5.elementary_spectrum_values`, `Book5.support_collapse_forgets_distribution`, `Book5.symbolicTorsion_one`, `Book5.symbolicTorsion_two_two`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite support represented by Fin n; finite-support norm kernel from LPS-P20 through LPS-P24; nonzero coordinate magnitude and positive support for the ratio; positive finite real p; support size at least two for logarithmic effective dimension; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Typed transition diagnostics certify axis integrability, Euclidean fracture, and support collapse, including a concrete loss-of-distribution witness.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Fuzzy symbolic manifolds can be rigorously classified into three fundamental integrability classes (cf. Thm. theorem:bk5_lp_norm_fracture_hierarchy):
@@ -7304,6 +8267,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2366`
 - Cites: none
 - Cited by: `scholium:bk5_critical_point_p2` (Critical Point at p=2)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-039`
+- Witnesses: `Book5.equalMagnitude_ratio`, `Book5.symbolicTorsionInfinity_eq_ratio_sub_one`, `Book5.symbolicTorsionInfinity_tendsto_atTop`, `Book5.symbolicTorsion_eq_equalMagnitude_ratio_sub_one`, `Book5.symbolicTorsion_mono_exponent`, `Book5.symbolicTorsion_one`, `Book5.symbolicTorsion_two_two`
+- Countermodels: none
+- Conditions: finite support represented by Fin n; named nonempty finite support; nonzero common magnitude for equality witness; nonzero coordinate magnitude and positive support for the ratio; positive finite real p; positive supremum cost for division-form ratio bounds; support size at least two for logarithmic dimension; support size at least two for logarithmic effective dimension
+- Formal boundary: Exact finite-positive-p and Linfinity formulas, special values, monotonicity in positive finite p, and divergence of Linfinity torsion along unbounded support.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7422,6 +8396,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:2406`
 - Cited by: `proof:bk5_shortest_path_representability` (Representability Proof)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-041`
+- Witnesses: `Book5.diagonal_symbolic_longer`, `Book5.shortestGeometric_le_shortestSymbolic`, `Book5.symbolicDecoherence_eq_zero_iff_has_symbolic_geodesic`, `Book5.symbolicDecoherence_pos_iff`
+- Countermodels: none
+- Conditions: finite nonempty geometric and symbolic candidate sets; positive integer n for strict diagonal gap; shared real-valued path cost; symbolic candidates included in geometric candidates
+- Formal boundary: Finite admissible-path kernel with symbolic candidates explicitly included in geometric candidates; proves the exact minimum and representability criteria.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic fracture arises precisely when the geometrically shortest transition
@@ -7518,6 +8503,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:2441`
 - Cited by: `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-042`
+- Witnesses: `Book5.diagonalDecoherence_formula`, `Book5.diagonalDecoherence_pos`, `Book5.symbolicDecoherence_eq_zero_iff`, `Book5.symbolicDecoherence_eq_zero_iff_has_symbolic_geodesic`, `Book5.symbolicDecoherence_nonneg`
+- Countermodels: none
+- Conditions: finite nonempty geometric and symbolic candidate sets; positive integer n for strict diagonal gap; shared real-valued path cost; symbolic candidates included in geometric candidates
+- Formal boundary: For finite path families, decoherence is the nonnegative excess symbolic minimum, vanishing exactly when a symbolic geodesic exists; the diagonal gap is exact.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic decoherence $drift$ of a transition is the excess
@@ -7607,6 +8603,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-040`
+- Witnesses: `Book5.effectiveSupportDimensionInfinity_eq_two`, `Book5.effectiveSupportDimensionInfinity_log_ratio`, `Book5.effectiveSupportDimension_eq`, `Book5.effectiveSupportDimension_one`, `Book5.effectiveSupportDimension_two`
+- Countermodels: none
+- Conditions: finite support represented by Fin n; named nonempty finite support; nonzero common magnitude for equality witness; nonzero coordinate magnitude and positive support for the ratio; positive finite real p; positive supremum cost for division-form ratio bounds; support size at least two for logarithmic dimension; support size at least two for logarithmic effective dimension
+- Formal boundary: The logarithmic diagnostic is 2-1/p for finite p on support at least two, with the support-one convention and p=1,2,infinity values certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7716,6 +8723,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:250
 - Cited by: `definition:bk5_symbolic_regime_detection` (Symbolic Regime Detection Experiment)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-092`
+- Witnesses: `Book5Residue.compression_ratio_R1`, `Book5Residue.compression_ratio_R2`, `Book5Residue.l1_eq_card_mul_c`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 To test the $ell_p$-fracture theory, design an experiment measuring symbolic compression ratio (cf. Thm. theorem:bk5_lp_norm_fracture_hierarchy):
@@ -7748,6 +8766,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2518`
 - Cites: `corollary:bk5_symbolic_decoherence_theory` (Symbolic Decoherence Theory); `proposition:bk5_symbolic_integrability_classes` (Symbolic Integrability Classes); `theorem:bk5_fundamental_dichotomy` (Fundamental Dichotomy of Symbolic Constants); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory); `theorem:bk5_lp_norm_fracture_hierarchy` (\(\ell_p\)-Norm Fracture Hierarchy)
 - Cited by: `definition:bk6_symbolic_bifurcation` (Symbolic Bifurcation); `demonstratio:bk5_geometry_symbol_unity` (The Deep Unity of Geometry and Symbol); `remark:bk5_open_questions` (Open Questions); `theorem:bk5_grand_unified_symbolic_geometric` (Product Theorem of the Symbolic-Geometric Interface)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-038`
+- Witnesses: `Book5.diagonalDecoherence_pos`, `Book5.fundamental_norm_fracture_kernel`, `Book5.infinity_sharp_iff_equal_magnitudes`, `Book5.sharp_norm_bound_iff_equal_magnitudes`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite nonempty geometric and symbolic candidate sets; finite nonempty support; finite-support norm kernel from LPS-P20 through LPS-P24; named nonempty finite support; positive integer n for strict diagonal gap; real exponent p > 1; real-valued coordinates; shared real-valued path cost; symbolic candidates included in geometric candidates; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Finite-support typed kernel assembling all norm regimes, equality cases, support collapse, diagonal decoherence, and the distinct memory resonance channel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7921,6 +8950,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2579`
 - Cited by: `definition:bk5_symbolic_curvature_operator_spectrum` (Symbolic Curvature Operator Spectrum); `lemma:bk5_phi_critical_resonant_norm` ($\varphi$ as Balanced Memory Resonance); `proposition:bk5_complete_symbolic_regime_classification` (Complete Symbolic Regime Classification)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-024`
+- Witnesses: `Book5.balancedSpectrum_memory`, `Book5.elementary_spectrum_values`, `Book5.euclidean_balanced_product_spectrum`, `Book5.norm_and_memory_coordinates_independent`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite-support norm kernel from LPS-P20 through LPS-P24; transition diagnostics are local classifications, not agent identities
+- Formal boundary: The norm and memory spectra are explicit independent product coordinates; sqrt(2) and phi coexist without identification.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic behavior of fuzzy manifolds separates into two coupled spectra:
@@ -8013,6 +9053,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:261
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-093`
+- Witnesses: `Book5Residue.curvature_control_p2_nonneg`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a fuzzy symbolic manifold $tilde{M}$ with observer resolution
@@ -8065,6 +9116,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:2633`
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `theorem:bk5_symbolic_norm_spectrum` (Symbolic Norm Spectrum)
 - Cited by: `corollary:bk5_phi_centrality_principle` (The $\varphi$-Centrality Principle); `proof:bk5_complete_symbolic_regime_classification` (Regime classification); `proof:bk5_phi_centrality_principle`; `proposition:bk5_complete_symbolic_regime_classification` (Complete Symbolic Regime Classification)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-043`
+- Witnesses: `Book5.balancedSpectrum_memory`, `Book5.balanced_memory_resonance_unique`, `Book5.euclidean_balanced_product_spectrum`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite-support norm kernel from LPS-P20 through LPS-P24; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Phi is the unique positive balanced-recursion root in the memory coordinate and is proved distinct from the Euclidean norm ratio.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8141,6 +9203,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cites: `lemma:bk5_phi_critical_resonant_norm` ($\varphi$ as Balanced Memory Resonance); `theorem:bk5_symbolic_norm_spectrum` (Symbolic Norm Spectrum)
 - Cited by: `corollary:bk5_phi_centrality_principle` (The $\varphi$-Centrality Principle); `proof:bk5_phi_centrality_principle`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-025`
+- Witnesses: `Book5.changing_norm_preserves_balanced_memory`, `Book5.elementary_spectrum_values`, `Book5.norm_and_memory_coordinates_independent`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite-support norm kernel from LPS-P20 through LPS-P24; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Transition-level diagnostic classification with independently varying norm and memory axes; not an essential identity of a manifold or agent.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8227,6 +9300,16 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2690`
 - Cited by: `definition:bk5_symbolic_regime_detection` (Symbolic Regime Detection Experiment)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-045`
+- Witnesses: `Book5.ObserverSpectralDecomposition.component_is_invariant`, `Book5.ObserverSpectralDecomposition.coordinate_representation_unique`, `Book5.ObserverSpectralDecomposition.spectral_decomposition_kernel`, `Book5.ObserverSpectralDecomposition.sum_components`
+- Countermodels: none
+- Formal boundary: Given the stated observer-resolved linear equivalence and diagonal evolution law, four-channel reconstruction, uniqueness, and invariance are proved. Existence of such a decomposition is not asserted universally.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Suppose a fuzzy symbolic manifold $tilde{M}$ admits an observer-resolved
@@ -8311,6 +9394,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:2720`
 - Cited by: `scholium:bk5_golden_rule_covenant` (The Golden Rule as a Recursive Covenant)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-044`
+- Witnesses: `Book5.balanced_memory_converges_to_spectrum_memory`, `Book5.balanced_memory_resonance_unique`, `Book5.euclidean_balanced_product_spectrum`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite-support norm kernel from LPS-P20 through LPS-P24; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Balanced memory ratios converge to the unique phi coordinate, while sqrt(2) remains a distinct metric-fracture coordinate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The Golden Ratio $varphi$ occupies a central position in the memory component
@@ -8370,6 +9464,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:273
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-019`
+- Witnesses: `balanced_memory_tendsto_gold`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Balanced Fibonacci memory ratio prediction.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 To empirically validate the product spectrum, measure the symbolic
@@ -8420,6 +9525,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2755`
 - Cites: `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory)
 - Cited by: `demonstratio:bk5_deep_unity_math_meaning` (The Deep Unity of Mathematics and Meaning); `remark:bk5_open_frontiers` (Open Frontiers); `scholium:bk5_golden_rule_covenant` (The Golden Rule as a Recursive Covenant)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-026`
+- Witnesses: `Book5.ObserverSpectralDecomposition.spectral_decomposition_kernel`, `Book5.same_memory_does_not_fix_norm`, `Book5.same_norm_does_not_fix_memory`, `closureMatrix_eigen_gold`
+- Countermodels: `Book5.same_memory_does_not_fix_norm`, `Book5.same_norm_does_not_fix_memory`
+- Conditions: nonzero diagonal amplitude; only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements; two-coordinate special case
+- Formal boundary: Typed product coordinates and their independence, not a universal manifold semantics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8662,6 +9778,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:284
 - Cited by: `theorem:bk5_golden_rule_reciprocity` (Golden Rule Reciprocity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-027`
+- Witnesses: `Book5.reciprocityMatrix_eigen`, `Book5.reciprocityRate_characteristic`
+- Countermodels: none
+- Conditions: nonnegative reciprocity weight; strict positivity for strict regime comparisons
+- Formal boundary: Weighted companion matrix and positive eigenpair.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $A,B$ be bounded observer-agents
@@ -8722,6 +9849,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2864`
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `definition:bk5_two_way_street_tensor` (Two-Way Street reciprocity tensor); `lemma:bk5_balanced_observer_normalization` (Balanced Observer Normalization Selects the Closure Matrix); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory)
 - Cited by: `scholium:bk5_decency_golden_resonance` (Decency, resonance, and the golden spiral of relation); `scholium:bk5_golden_rule_covenant` (The Golden Rule as a Recursive Covenant)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-028`
+- Witnesses: `Book5.reciprocityRate_one`, `Book5.reciprocityRate_subgolden`, `Book5.reciprocityRate_supergolden`
+- Countermodels: none
+- Conditions: nonnegative reciprocity weight; strict positivity for strict regime comparisons
+- Formal boundary: Spectral rate regimes only; ethical interpretation remains authored prose.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8959,6 +10097,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cites: `definition:bk5_symbolic_shade` (Symbolic shade)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-104`
+- Witnesses: `Book5ShadeTransfer.ShadeInterface.faithful_comp`, `Book5ShadeTransfer.ShadeInterface.identity_faithful`, `Book5ShadeTransfer.balanced_reciprocity_paints_golden_rate`, `Book5ShadeTransfer.extraction_has_unit_radial_rate`, `Book5ShadeTransfer.faithfulControlTransport_components`, `Book5ShadeTransfer.golden_logRadius_step`, `Book5ShadeTransfer.monotone_encoding_not_semantically_faithful`, `Book5ShadeTransfer.normalized_shade_is_not_multiplicative`, `Book5ShadeTransfer.radial_order_alone_does_not_preserve_shade`, `Book5ShadeTransfer.radius_preservation_implies_control_fidelity`, `Book5ShadeTransfer.shade_preserved_of_radius_preserved`, `Book5ShadeTransfer.shade_without_shadow_price_is_not_control_fidelity`
+- Countermodels: `Book5ShadeTransfer.radial_order_alone_does_not_preserve_shade`, `Book5ShadeTransfer.shade_without_shadow_price_is_not_control_fidelity`
+- Conditions: commuting decoder-after-encode law; exact radius witness for normalization-independent control fidelity; positive initial radius for log-radius step; shared intermediate decoder for composition; source and carrier shade decoders
+- Formal boundary: Commuting-interface reconstruction: shade fidelity means decoding after representation transport equals source shade, and faithful interfaces compose. Exact radius preservation constructs fidelity for both shade and any radial shadow price. Countermodels show strict order preservation is not semantic fidelity and matching shade alone does not preserve the joint control signal. Golden steps are constant in log-radius, not bounded shade.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - appendix_symbolic_reflexive_validation
 
 Nodes in this source group: 37
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -141,6 +147,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_symbolic_reflexive_val
 - Cited by: `definition:appB_symbolic_energy` (Symbolic Energy Functional); `proof:appB_chart_bounds`; `proof:appB_metric_completion`; `proof:appB_resolution_of_smoothness`; `proof:appB_smooth_atlas`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SMALLPACK-001`
+- Witnesses: `SmallPack.resolutionLevel_mono`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Only the monotone-nesting content of the level sets P_lambda is modeled, via the InLevel threshold predicate. The underlying space S, End(S), and the operator norm are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ denote the space of symbolic configurations with finite symbolic complexity (cf. definition:bk1_symbolic_manifold). For each resolution level $lambda in mathbb{N}$, define:
@@ -217,6 +234,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_symbolic_reflexive_val
 - Cited by: `proof:appB_chart_bounds`; `proof:appB_energy_contraction`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-002`
+- Witnesses: `SmallPack.symbolicEnergy_nonneg`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Models the algebraic form H + (1/2)*drift^2 + (epsO/2)*refl^2 directly on reals and proves nonnegativity conditional on H >= 0, epsO >= 0. The kappa-norm and symbolic-manifold structure underlying drift/refl are erased to bare reals.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given an SRV trajectory ${x_t}$ through the symbolic state space (Def. definition:appB_symbolic_state_space), define:
@@ -268,6 +296,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_symbolic_reflexive_validation` |
 - Cites: `definition:bk2_symbolic_hamiltonian` (Symbolic Hamiltonian)
 - Cited by: `proof:appB_resolution_of_smoothness`; `proof:appB_smooth_atlas`; `proof:appB_srv_cauchy`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-003`
+- Witnesses: `SmallPack.symbolicEnergyContraction_accum`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The per-step contraction law is kept as a structure field on an abstract energy : Nat -> Real sequence; its telescoped/accumulated form over n steps is proved by induction, mirroring Book8's metabolic-sufficiency pattern. H_symb and the underlying SRV dynamics are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -339,6 +378,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_reflexive_validatio
 - Cites: `definition:appB_observer_metric` (Observer-Relative Symbolic Metric)
 - Cited by: `proof:appB_resolution_of_smoothness`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SMALLPACK-004`
+- Witnesses: `SmallPack.symbolicEnergyContraction_sum_bounded`, `SmallPack.symbolicEnergyContraction_term_bounded`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Does not construct the observer metric d_O or prove literal Cauchy-ness of the trajectory. Instead proves the quantitative content the Cauchy claim depends on: given a lower bound on energy, the cumulative and individual squared-drift terms stay uniformly bounded across all steps. This is a genuinely weaker, honest substitute, not a full proof of the stated theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -417,6 +467,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_reflexive_validatio
 - Cited by: `definition:appB_symbolic_chart` (Symbolic Chart System); `proof:appB_resolution_of_smoothness`; `proof:appB_smooth_atlas`; `proof:appB_smoothness_emergence`; `theorem:appB_smooth_atlas` (Smooth Atlas on Completion); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-010`
+- Witnesses: `Book9B.atlas_consistent_of_glued_and_covers`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: "the metric completion exists" is re-read as "a single global metric consistent with every chart exists" via single_geometry_iff_glued, given PairCovers and Glued; separability is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The metric completion $overline{P}$ of $(P, d_{O})$ exists and is separable.
@@ -466,6 +527,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_symbolic_reflexive_val
 - Cited by: `assumption:appB_chart_compatibility` (Smooth Chart Compatibility); `lemma:appB_chart_bounds` (Uniform Chart Bounds); `proof:appB_chart_bounds`; `proof:bk1_atlas_final_topology_phase_space` (Atlas Construction on Final Topology of Symbolic Phase Space); `theorem:appB_smooth_atlas` (Smooth Atlas on Completion)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-009`
+- Witnesses: `Book9B.atlas_consistent_of_glued_and_covers`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: re-read over FracturedAtlas's ChartComplex rather than constructed from an encode/matrix pair; the specific R^{d_lambda} coordinatization is not modeled, only chart-consistency.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For each $lambda$, define:
@@ -496,6 +568,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_symbolic_reflexive_validation` |
 - Cites: `definition:appB_symbolic_chart` (Symbolic Chart System)
 - Cited by: `assumption:appB_chart_compatibility` (Smooth Chart Compatibility); `proof:appB_smooth_atlas`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-005`
+- Witnesses: `SmallPack.chartBound_mono`, `SmallPack.chartBound_nonneg`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Models only the scalar bound expression C_chart * sqrt(lambda) and proves it is nonnegative and monotone nondecreasing in lambda. The operator-norm sup over the actual charts D chi_lambda is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -573,6 +656,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_reflexive_validatio
 - Cited by: `proof:appB_resolution_of_smoothness`; `proof:appB_smoothness_emergence`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-011`
+- Witnesses: `Book9B.atlas_consistent_of_glued_and_covers`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only chart-compatibility (existence of a consistent global metric) is modeled; the smooth-manifold structure itself is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The metric completion $M = overline{P}$ admits a smooth manifold structure compatible with the charts ${chi_lambda}$ (cf. definition:appB_symbolic_chart), constructed over the completed space (cf. theorem:appB_metric_completion).
@@ -634,6 +728,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_reflexive_validatio
 - Cited by: `proof:appB_resolution_of_smoothness`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-012`
+- Witnesses: `Book9B.no_global_metric_without_gluing`
+- Countermodels: `Book9B.no_global_metric_without_gluing`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the converse/obstruction direction: charts that are not glued admit no consistent global metric. Smoothness, second-countability, and paracompactness are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The completed space $M = overline{P}$ is a smooth, second-countable, paracompact manifold, confirming topological regularity (cf. axiom:bk1_topological_regularity) and realizing the pre-geometric nature of the framework (cf. axiom:bk1_pre_geometric_nature).
@@ -680,6 +785,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_symbolic_reflexive_valid
 - Cites: `scholium:bk1_resolution_of_continuum_disjunction` (On the Resolution of the Continuum Disjunction)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-013`
+- Witnesses: `Book9B.no_global_metric_without_gluing`
+- Countermodels: `Book9B.no_global_metric_without_gluing`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: "smooth structure arises... under bounded observer resolution" is re-read as its failure mode: resolution that is not consistent across charts (not Glued) yields no single global metric.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

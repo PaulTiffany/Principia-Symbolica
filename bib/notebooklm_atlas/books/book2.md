@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - book2
 
 Nodes in this source group: 55
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -42,6 +48,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:23`
 - Cites: `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `proof:bk2_probability_structure_on_manifold` (Symbolic Probability Structure on Emergent Manifold)
 - Cited by: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk2_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk3_integration_differentiation_pressures` (Integration and Differentiation Pressures); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk3_symbolic_knowledge_structure` (Symbolic Knowledge Structure); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `definition:bk3_symbolic_symbiosis` (Symbolic Symbiosis); `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_individuated_symbolic_id` (Individuated Symbolic Identity); `definition:bk5_symbolic_operator_space` (Symbolic Operator Space as Meta-Manifold $\Op(M)$); `lemma:bk2_wellposedness_symb_prob_space` (Well-posedness of Symbolic Probability Space); `lemma:bk3_symbiotic_stability_conditions` (Symbiotic Stability Conditions); `lemma:bk4_fragmentation_cascade` (Fragmentation Cascade); `proof:bk2_probability_structure_on_manifold` (Symbolic Probability Structure on Emergent Manifold); `proof:bk3_coupling_energy_symbolic_hamiltonian` (Effect of Coupling Energy on Symbolic Hamiltonian); `proof:bk3_differentiation_knowledge_structure` (Derivative of Knowledge Structure with Respect to Refinement); `proof:bk4_fragmentation_identity_stability` (Fragmentation Violates Symbolic Identity Stability); `proof:bk4_information_bottleneck_symbolic_filter` (Information Bottleneck Concentrates on Stable Attractors); `proof:bk4_symbolic_curvature_fragmentation` (Curvature and Fragmentation); `theorem:bk4_drift_reflection_imbalance` (Drift-Reflection Imbalance)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK2-001`
+- Witnesses: `Book2.gibbs_isDensity`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite probability space as density structure; the Borel/volume apparatus is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -123,6 +140,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:48`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-002`
+- Witnesses: `Book2.gibbs_isDensity`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite kernel: the Gibbs state is a genuine density (positive, sums to one).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic probability space $(M, B, mu_g)$ is well-defined for any bounded symbolic observer (see def definition:bk1_bounded_observer) embedded within the system (see def definition:bk2_symbolic_probability_spa).
@@ -190,6 +218,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:67`
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk2_symbolic_probability_spa` (Symbolic Probability Space)
 - Cited by: `assumption:appB_srv_dissipativity` (SRV as a Stable Dissipative Descent); `axiom:bk2_gradient_structure_drift` (Gradient Structure of Symbolic Drift); `axiom:bk5_adaptation` (Adaptation); `axiom:bk7_convergence_potential` (Convergence Potential); `corollary:bk2_interpretative_framework` (Physical Interpretation); `definition:bk2_symbolic_energy` (Symbolic Energy); `definition:bk2_symbolic_partition_funct` (Symbolic Partition Function); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `lemma:appB_energy_contraction` (Energy Contraction Lemma); `lemma:bk2_wellposedness_symb_hamiltonian` (Well-posedness of Symbolic Hamiltonian); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk2_coherence_of_symbolic_therm`; `proof:bk2_interpretative_framework`; `proof:bk3_coupling_energy_symbolic_hamiltonian` (Effect of Coupling Energy on Symbolic Hamiltonian); `remark:bk2_symbolic_hamiltonian` (Motivating the Canonical Symbolic Hamiltonian); `sec:bk7_definitionnes_septimae_structures_of_convergence` (Definitiones Septimae: Structures of Convergence)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-017`
+- Witnesses: `Book7B.hamiltonian_denom_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the regularized denominator's positivity is modeled; the drift-norm and parallel-transported reflection-linearization trace terms are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -275,6 +314,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:93`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-018`
+- Witnesses: `Book7B.hamiltonian_denom_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the real-analytic non-vanishing-denominator core of well-posedness is modeled; smoothness on the manifold M is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic Hamiltonian $H$ (defined in def definition:bk2_symbolic_hamiltonian) is well-defined and smooth on $M$ (see also proof proof:bk2_smoothness_symbolic_hamiltonian).
@@ -323,6 +373,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:105
 - Cited by: `axiom:bk5_energy_conservation` (Energy Conservation); `axiom:bk5_metabolic_persistence` (Metabolic Persistence); `axiom:bk7_convergence_potential` (Convergence Potential); `definition:bk2_symbolic_temperature` (Symbolic Temperature); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk5_symbolic_energy` (Symbolic Energy); `demonstratio:bk7_free_energy_balance_equilibrium` (Thermodynamic Equilibrium via Symbolic Free Energy Balance); `proof:bk5_coherence_through_dynamic_equilibriium` (Coherence Through Dynamic Equilibrium); `proof:bk7_reflective_convergence_to_stable_identity` (Convergence by Free-Energy Descent); `subsec:bk5_symbolic_free_energy_and_stability` (Symbolic Free Energy and Stability); `subsubsec:bk7_formal_definition_of_symbolic_confidence_ch_i` (Formal Definition of Symbolic Confidence \(C(h_i)\))
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK2-014`
+- Witnesses: `Book2.energy_eq_neg_deriv_log_partition`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: The bridge identity: Gibbs mean energy = -d/dbeta log Z.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic energy at symbolic time $s$ is defined as:
@@ -354,6 +415,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:114
 - Cited by: `axiom:bk5_energy_conservation` (Energy Conservation); `axiom:bk5_metabolic_persistence` (Metabolic Persistence); `axiom:bk7_convergence_potential` (Convergence Potential); `axiom:bk9_emergent_autonomy` (Emergent Autonomy); `corollary:bk2_interpretative_framework` (Physical Interpretation); `corollary:bk8_translation_limit` (Cognitive Translation Limit); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk2_symbolic_temperature` (Symbolic Temperature); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk3_reflexive_encoding` (Reflexive Encoding); `definition:bk4_fragmentation_measure` (Fragmentation Measure); `definition:bk4_symbolic_freedom_measure` (Symbolic Freedom Measure); `definition:bk5_entropy_inflection_point` (Entropy Inflection Point); `definition:bk8_entropy_shift` (Entropy Shift \(\Delta \mu\)); `definition:bk8_metabolic_programming_cycle` (Metabolic Programming Cycle); `definition:bk8_refinement_objective` (Refinement Objective); `definition:bk8_symbolic_interface` (Symbolic Interface); `demonstratio:bk5_negative_reflection_instability` (Negative Reflection Instability); `demonstratio:bk7_free_energy_balance_equilibrium` (Thermodynamic Equilibrium via Symbolic Free Energy Balance); `lemma:bk2_finiteness_of_symbolic_entropy` (Finiteness of Symbolic Entropy); `lemma:bk2_thermodynamic_consistency_hypothesis_manifolds` (Thermodynamic Consistency of Hypothesis Manifolds); `proof:bk2_bounded_symbolic_entropy` (Boundedness of Symbolic Entropy on Compact Manifold); `proof:bk2_interpretative_framework`; `proof:bk4_emergence_conditions` (Emergence Implies Non-Reducibility and Causal Closure); `proof:bk5_energy_conservation_under_reflective_coupling` (Energy Conservation Under Reflective Coupling); `proof:bk5_entropy_increase_from_drift` (Entropy Increase from Drift); `proof:bk5_symbolic_free_energy_stability_condition` (Symbolic Free Energy Condition); `proof:bk7_reflective_convergence_to_stable_identity` (Convergence by Free-Energy Descent); `proof:bk8_translation_limit`; `remark:bk3_toward_symbolic_evolution`; `scholium:bk2_on_hypotheses_as_thermodyn` (On Hypotheses as Thermodynamic Surfaces); `scholium:bk4_fuzzy_exponential_growth` (Fuzzy Growth Constraints); `scholium:bk5_metabolic_cost_of_cognition` (Metabolic Cost of Cognition); `sec:bk2_foundations_symbolic_thermodynamics` (Foundations of Symbolic Thermodynamics); `sec:bk5_funadmenta_symbolicae_vitae` (Fundamenta Symbolicae Vitae); `sec:bk7_pisu_universal_symbolic_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU)); `subsec:appD_core_resonance` (D.1.1 Core Resonance); `subsec:bk3_preamble_to_symbiosis` (Preamble to Symbiosis); `subsec:bk5_symbolic_free_energy_and_stability` (Symbolic Free Energy and Stability); `subsec:bk6_structural_requirements_for_regulation` (Structural Requirements for Regulation); `subsec:bk7_pisu_formula` (Mathematical Formulation); `subsec:bk7_pisu_implications` (Implications); `subsubsec:bk7_formal_definition_of_symbolic_loss_loss` (Formal Definition of Symbolic Loss \(\text{Loss); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity); `theorem:bk8_holographic_surface_entropy` (Symbolic Frame Transformation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK2-003`
+- Witnesses: `Book2.entropy_nonneg`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite entropy with the 0 log 0 = 0 convention.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic entropy at symbolic time $s$ is defined as:
@@ -384,6 +456,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:123`
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk2_symbolic_entropy` (Symbolic Entropy)
 - Cited by: `definition:bk2_symbolic_entropy` (Symbolic Entropy); `sec:bk2_foundations_symbolic_thermodynamics` (Foundations of Symbolic Thermodynamics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK2-004`
+- Witnesses: `Book2.entropy_le_log_card`, `Book2.entropy_nonneg`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Two-sided quantitative bounds 0 <= S <= log n.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -433,6 +516,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:135
 - Cited by: `axiom:appC_axiom_of_memory` (The Axiom of Memory); `axiom:bk5_adaptation` (Adaptation); `axiom:bk5_positive_free_energy` (Positive Free Energy); `axiom:bk8_coherence_horizon` (Symbolic Entanglement); `axiom:bk8_mutation_phase_shift` (Metabolic Sufficiency Criterion); `axiom:bk9_bounded_liberation_principle` (Bounded Liberation Principle); `axiom:bk9_emergent_autonomy` (Emergent Autonomy); `corollary:bk2_interpretative_framework` (Physical Interpretation); `corollary:bk9_freedomentropy_complementarity` (Freedom-Entropy Complementarity); `definition:appC_bounded_reflexive_emergence` (Bounded reflexive emergence); `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `definition:bk3_autophagic_drift` (Autophagic Drift); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `definition:bk4_collapse_of_symbolic_ide` (Collapse of Symbolic Identity); `definition:bk4_individuation_path` (Individuation Path); `definition:bk4_meta_stable_symbolic_str` (Meta-Stable Symbolic Structure); `definition:bk4_symbolic_spinor_bundle` (Recursive Identity Bundle); `definition:bk4_symbolic_transition_rate` (Symbolic Transition Rate); `definition:bk4_symbolic_work_functional` (Symbolic Work); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk5_complexity_stability_maintenance` (Operator Complexity, Stability Margin, Maintenance Cost); `definition:bk5_metabolic_capacity_mc_` (Metabolic Capacity $\MC$); `definition:bk5_mutually_assured_progress` (Mutually Assured Progress); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk5_symbolic_fitness` (Symbolic Fitness); `definition:bk5_symbolic_strategy` (Symbolic Strategy); `definition:bk5_viability_domain` (Viability Domain); `definition:bk6_mutation_threshold` (Mutation Threshold); `definition:bk6_symbolic_free_energy_functional` (Symbolic Free Energy Functional); `definition:bk6_symbolic_regulatory_cycle` (Symbolic Regulatory Cycle); `definition:bk7_convergent_symbolic_identity` (Convergent Symbolic Identity \(\identity\)); `definition:bk7_symbolic_free_energy` (Symbolic Free Energy \(\freeenergy\)); `definition:bk8_metabolic_programming_cycle` (Metabolic Programming Cycle); `definition:bk8_projective_compression_operator` (Projective Compression Operator); `definition:bk8_structural_regulators` (Directional Drift Operators \(D_1, D_2\)); `definition:bk8_symbolic_adjacency` (Symbolic Knot); `definition:bk8_symbolic_stress_tensor` (Reflexive Debugging Operator $\mathcal{O}_{\text{debug}}$); `definition:bk8_translation_loss` (Translation Loss); `definition:bk9_frame_selection_reflection` (Frame Selection via Injected Reflection); `definition:bk9_symbolic_thermodynamic_stress` (Symbolic Thermodynamic Stress); `demonstratio:bk4_symbolic_thermodynamics`; `demonstratio:bk8_symbolic_unkotting` (Symbolic Unknotting); `lemma:bk2_thermodynamic_consistency_hypothesis_manifolds` (Thermodynamic Consistency of Hypothesis Manifolds); `lemma:bk7_coarsegrained_convexity` (Coarse-Grained Convexity); `proof:bk2_interpretative_framework`; `proof:bk2_sketch_wasserstein_gradient_flow` (Wasserstein Gradient Flow via Jordan--Kinderlehrer--Otto); `proof:bk2_symbolic_free_energy_dissipation` (Symbolic Free Energy Dissipation Principle); `proof:bk2_symbolic_h_theorem` (Symbolic H-Theorem and Emergent Structure); `proof:bk4_lipschitz_continuity_symbolic_drift` (Lipschitz Continuity of Symbolic Drift Flow); `proof:bk4_sketch_observer_resolution_floor` (Quotient Rule via Observer Resolution Floor Regularization); `proof:bk5_map_invasion_dynamics` (Invasion Analysis of MAP vs Non-MAP Strategies); `proof:bk5_map_perturbation_robustness` (Perturbation Robustness of MAP Populations); `proof:bk5_map_resistance_to_drift` (MAP Strategies Withstand Greater Drift); `proof:bk5_metabolic_capacity_non_decreasing`; `proof:bk5_operator_convergence`; `proof:bk5_symbolic_free_energy_stability_condition` (Symbolic Free Energy Condition); `proof:bk5_symbolic_temperature_threshold` (Symbolic Temperature Threshold for Critical Coupling); `proof:bk6_drift_reflection_commutation_equilibrium` (Drift Reflection Commutation Equilibrium); `proof:bk6_stable_reflective_submanifold` (Stable Reflective Submanifold); `proof:bk6_symbolic_mutation_threshold` (Symbolic Mutation Threshold); `proof:bk9_freedomentropy_complementarity`; `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_masking_and_unmasking` (Symbolic Masking and Unmasking); `proposition:bk5_golden_ratio_thermodynamic_optimum` (Golden Ratio as Thermodynamic Optimum in the Balanced Regime); `proposition:bk5_symbolic_ess_via_map_observability_variant` (Symbolic ESS via MAP); `proposition:bk5_symbolic_life_criterion` (Symbolic Life Criterion); `remark:bk3_toward_symbolic_evolution`; `remark:bk4_ttpr_entropy` (Relation to Symbolic Thermodynamics); `remark:bk8_inference_principle_over_confidence_loss_tradeoff` (Inference Principle Over Confidence-Loss Tradeoff); `remark:bk9_gauge_theoretic_perspective` (Gauge-Theoretic Perspective); `scholium:bk2_on_hypotheses_as_thermodyn` (On Hypotheses as Thermodynamic Surfaces); `scholium:bk3_hypotheses_as_cognitive_membranes` (Hypotheses as Cognitive Membranes); `scholium:bk4_fuzzy_logarithmic_resolution` (Logarithmic Divergence and Resolution Floors); `scholium:bk4_symbolic_entanglement` (The Mathematics of Symbolic Entanglement); `scholium:bk4_symbolic_interference` (Symbolic Interference Geometry); `scholium:bk4_ttcs_stochastic_operator` (TTCS as a Stochastic Symbolic Operator); `scholium:bk5_life_on_edge_of_chaos` (Life on the Edge of Chaos); `scholium:bk5_map_as_fundamental_organizational_principle` (MAP as Fundamental Organizational Principle); `scholium:bk5_metabolic_cost_of_cognition` (Metabolic Cost of Cognition); `scholium:bk6_hypotheses_as_regulatory_mutation_manifolds` (Hypotheses as Regulatory Mutation Manifolds); `scholium:bk7_reflective_selection_as_principled_convergence` (Reflective Selection as Principled Convergence); `scholium:bk8_telephone_game` (Every Translation Betrays Something); `sec:bk2_foundations_symbolic_thermodynamics` (Foundations of Symbolic Thermodynamics); `sec:bk5_funadmenta_symbolicae_vitae` (Fundamenta Symbolicae Vitae); `sec:bk7_axiomata_septima_the_laws_of_convergence` (Axiomata Septima: The Laws of Convergence); `sec:bk7_pisu_universal_symbolic_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU)); `sec:bk8_axiomata_octava` (Axiomata Octava); `subsec:appC_born_interpretation_ps` (Interpretation Within Principia Symbolica); `subsec:appD_core_resonance` (D.1.1 Core Resonance); `subsec:bk2_symbolic_phase_transitions` (Symbolic Phase Transitions); `subsec:bk3_preamble_to_symbiosis` (Preamble to Symbiosis); `subsec:bk4_ttie_operator_algebra` (TTIE Operator Algebra); `subsec:bk6_structural_requirements_for_regulation` (Structural Requirements for Regulation); `subsec:bk7_formalizing_reflective_selection_confidence_loss_and_symbolic_` (Formalizing Reflective Selection: Confidence, Loss, and Symbolic Free Energy); `subsec:bk7_pisu_formula` (Mathematical Formulation); `subsec:bk7_pisu_implications` (Implications); `subsec:bk9_limits_of_repair` (Symbolic Black Holes and the Limits of Repair); `theorem:appC_fundamental_irreversibility_final` (Fundamental Irreversibility of Reflective Observation); `theorem:bk2_h_theorem_for_symbolic_evol` (H-Theorem for Symbolic Evolution); `theorem:bk2_wasserstein_gradient_flow` (Wasserstein Gradient Flow); `theorem:bk4_symbolic_identity_continuit` (Symbolic Identity Continuity); `theorem:bk5_operator_convergence` (Operator Convergence); `theorem:bk5_reflective_equilibrium_conservation` (Reflective Equilibrium Conservation); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity); `theorem:bk8_biological_phase_transition` (Threshold of Autonomy); `theorem:bk8_sr_convergence` (SR Convergence); `theorem:bk8_threshold_of_metabolic_autonomy` (Threshold of Metabolic Autonomy); `theorem:bk9_good_as_lyapunov_basin` (The Good as a Lyapunov Basin)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK2-005`
+- Witnesses: `Book2.freeEnergy_gibbs`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite free-energy functional; its decrease along the flow is a named open item.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic free energy functional $F_beta: P(M) rightarrow mathbb{R}$ is defined for inverse temperature parameter $beta > 0$ as:
@@ -471,6 +565,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:148
 - Cites: `definition:bk2_symbolic_energy` (Symbolic Energy); `definition:bk2_symbolic_entropy` (Symbolic Entropy)
 - Cited by: `axiom:bk5_energy_conservation` (Energy Conservation); `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `axiom:bk7_convergence_potential` (Convergence Potential); `corollary:bk2_interpretative_framework` (Physical Interpretation); `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold); `definition:bk2_local_symbolic_temperature` (Local Symbolic Temperature); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk4_symbolic_transition_rate` (Symbolic Transition Rate); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk5_reflective_coupling_stab` (Reflective Coupling Stability Parameter); `definition:bk7_frame_temperature_quotient` (Frame-temperature quotient); `definition:bk8_temperature_freedom` (Symbolic Temperature of Freedom \(T_s^{\mathrm{f}}\)); `demonstratio:bk4_ising_model_covenant` (The Ising Model as a Symbolic Covenant); `demonstratio:bk7_free_energy_balance_equilibrium` (Thermodynamic Equilibrium via Symbolic Free Energy Balance); `lemma:bk2_thermodynamic_consistency_hypothesis_manifolds` (Thermodynamic Consistency of Hypothesis Manifolds); `proof:bk2_global_local_temp_relation`; `proof:bk2_interpretative_framework`; `proof:bk5_symbolic_temperature_threshold` (Symbolic Temperature Threshold for Critical Coupling); `proposition:bk2_global_local_temp_relation` (Global-Local Temperature Relation); `scholium:bk2_on_hypotheses_as_thermodyn` (On Hypotheses as Thermodynamic Surfaces); `sec:bk2_foundations_symbolic_thermodynamics` (Foundations of Symbolic Thermodynamics); `subsec:bk5_symbolic_free_energy_and_stability` (Symbolic Free Energy and Stability); `theorem:bk5_reflective_stability_criterion` (Reflective Stability Criterion); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-015`
+- Witnesses: `Book2.energy_eq_neg_deriv_log_partition`, `Book2.gibbs_concentrates`, `Book2.gibbs_freezes`
+- Countermodels: none
+- Conditions: finite alphabet; strict suboptimality/unique minimizer hypotheses explicit; limits along atTop in beta; finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: The derivative bridge plus the full trichotomy of the temperature knob: uniform at beta 0, variational balance at finite beta, freezing/concentration at beta to infinity; the dS/dE form itself is not formalized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -517,6 +622,17 @@ Role: `axiom` | Type: `axiom` | Book: `book2` | Source: `book2.tex:162`
 - Cited by: `axiom:bk2_symbolic_fokker_planck_equation` (Symbolic Fokker-Planck Equation); `proof:bk2_coherence_of_symbolic_therm`; `proof:bk2_symbolic_fluctuation_dissipation_relation`; `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `theorem:bk2_equilibrium_distribution` (Equilibrium Distribution); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-011`
+- Witnesses: `Book2.cycle_stationary_not_reversible`, `Book2.detailedBalance_stationary`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Detailed balance is the finite shadow of the gradient condition; the 3-cycle exhibits the solenoidal component.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic drift field $D$ (Def. definition:bk1_drift_field) is related to the symbolic Hamiltonian $H$ (Def. definition:bk2_symbolic_hamiltonian) by:
@@ -547,6 +663,17 @@ Role: `axiom` | Type: `axiom` | Book: `book2` | Source: `book2.tex:171`
 - Cites: `axiom:bk2_gradient_structure_drift` (Gradient Structure of Symbolic Drift); `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation)
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_masking_and_unmasking` (Symbolic Masking and Unmasking)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-010`
+- Witnesses: `Book2.evolve_conserves`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite skeleton only: evolution by a stochastic kernel; the manifold PDE is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -590,6 +717,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:185`
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `proof:bk2_fokker_planck_probability_conservation` (Probability Conservation in Symbolic Fokker–Planck Equation)
 - Cited by: `proof:bk2_fokker_planck_probability_conservation` (Probability Conservation in Symbolic Fokker–Planck Equation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-009`
+- Witnesses: `Book2.evolve_conserves`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite Markov skeleton: row-stochastic evolution conserves total mass.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -676,6 +814,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:216`
 - Cites: `axiom:bk2_gradient_structure_drift` (Gradient Structure of Symbolic Drift); `definition:bk2_symbolic_partition_funct` (Symbolic Partition Function)
 - Cited by: `definition:bk2_symbolic_partition_funct` (Symbolic Partition Function); `definition:bk2_symbolic_response_functi` (Symbolic Response Function); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk2_coherence_of_symbolic_therm`; `proof:bk2_sketch_wasserstein_gradient_flow` (Wasserstein Gradient Flow via Jordan--Kinderlehrer--Otto); `proof:bk2_symbolic_drift_equilibrium_yields_gibbs_measure` (Proof: Symbolic Drift Equilibrium Yields Gibbs Measure); `proof:bk2_symbolic_fluctuation_dissipation_relation`; `proof:bk2_symbolic_free_energy_dissipation` (Symbolic Free Energy Dissipation Principle); `proof:bk2_symbolic_h_theorem` (Symbolic H-Theorem and Emergent Structure); `proof:bk5_entropy_increase_from_drift` (Entropy Increase from Drift); `proof:bk5_operator_convergence`; `remark:bk2_symbolic_hamiltonian` (Motivating the Canonical Symbolic Hamiltonian); `subsec:bk2_symbolic_phase_transitions` (Symbolic Phase Transitions); `theorem:bk2_coherence_of_symbolic_therm` (Coherence of Symbolic Thermodynamics); `theorem:bk2_emergence_structure_symb_thermo` (Emergence of Symbolic Structure); `theorem:bk2_h_theorem_for_symbolic_evol` (H-Theorem for Symbolic Evolution); `theorem:bk2_symbolic_fluctuation_dissipation_relation` (Symbolic Fluctuation-Dissipation Relation); `theorem:bk2_wasserstein_gradient_flow` (Wasserstein Gradient Flow)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-007`
+- Witnesses: `Book2.detailedBalance_stationary`, `Book2.gibbs_minimizes`, `Book2.gibbs_unique_minimizer`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite kernel: stationarity under detailed balance plus unique variational characterization; the PDE derivation is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -778,6 +927,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:255`
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `proof:bk2_symbolic_free_energy_dissipation` (Symbolic Free Energy Dissipation Principle); `theorem:bk2_equilibrium_distribution` (Equilibrium Distribution)
 - Cited by: `axiom:bk5_positive_free_energy` (Positive Free Energy); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage); `proof:bk2_coherence_of_symbolic_therm`; `proof:bk2_interpretative_framework`; `proof:bk2_symbolic_free_energy_dissipation` (Symbolic Free Energy Dissipation Principle); `proof:bk2_symbolic_h_theorem` (Symbolic H-Theorem and Emergent Structure); `proof:bk3_membrane_stability_energy_permeability` (Membrane Stability from Free Energy and Bounded Permeability); `proof:bk3_sketch_necessity_for_continuous_operation` (Necessity of Each Condition for Persistent Symbolic Life); `proof:bk5_entropy_increase_from_drift` (Entropy Increase from Drift); `proof:bk5_map_resistance_to_drift` (MAP Strategies Withstand Greater Drift); `proof:bk5_max_sustainable_drift` (Max Sustainable Drift from Reflective Bounds); `proof:bk5_operator_convergence`; `proof:bk8_sr_convergence`; `proof:bk9_framework_functional_identity`; `sec:bk7_scholium_convergence_as_symbolic_inhalation` (Scholium: Convergence as Symbolic Inhalation); `subsec:bk7_pisu_implications` (Implications); `theorem:bk2_coherence_of_symbolic_therm` (Coherence of Symbolic Thermodynamics); `theorem:bk2_emergence_structure_symb_thermo` (Emergence of Symbolic Structure); `theorem:bk8_sr_convergence` (SR Convergence)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-008`
+- Witnesses: `Book2.gibbs_minimizes`, `Book2.gibbs_unique_minimizer`, `Book2H.dataProcessing_kl`, `Book2H.h_theorem`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Both halves now certified finitely: unique variational endpoint (Book2) and monotone decrease under any detailed-balance stochastic step via finite data-processing (Book2H); the continuum Fokker-Planck flow is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -945,6 +1105,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:315`
 - Cited by: `proof:bk2_coherence_of_symbolic_therm`; `proof:bk5_operator_convergence`; `proof:bk8_sr_convergence`; `proof:bk9_framework_functional_identity`; `scholium:bk4_ttcs_potential_field` (TTCS and the Symbolic Potential Field); `sec:bk5_srmf_for_symbolic_operators_and_processes` (SRMF for Symbolic Operators and Processes); `subsec:bk5_srmf_core_axioms` (Core Axioms and Theoretical Development); `subsec:bk7_pisu_formula` (Mathematical Formulation); `theorem:bk5_operator_convergence` (Operator Convergence); `theorem:bk8_sr_convergence` (SR Convergence)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-020`
+- Witnesses: `Book2H.freeEnergy_trajectory_antitone`, `Book2H.trajectory_isDensity`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: Finite discrete gradient-flow kernel: every repeated detailed-balance step preserves density and the complete free-energy trajectory is antitone. No Wasserstein metric or continuum Fokker-Planck identification is asserted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the gradient condition $D = -nabla_g H$ (see theorem theorem:bk2_equilibrium_distribution), the symbolic Fokker-Planck equation can be interpreted as the gradient flow of the free energy functional $F_beta[rho]$ (see def definition:bk2_symbolic_free_energy) with respect to the symbolic Wasserstein metric (see def definition:bk2_symbolic_wasserstein_met):
@@ -1083,6 +1254,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:369
 - Cited by: `definition:bk2_symbolic_phase_transitio` (Symbolic Phase Transition); `proof:bk2_symbolic_h_theorem` (Symbolic H-Theorem and Emergent Structure); `theorem:bk2_equilibrium_distribution` (Equilibrium Distribution)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK2-006`
+- Witnesses: `Book2.freeEnergy_gibbs`, `Book2.gibbs_isDensity`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite partition function: positivity and the equilibrium value -1/beta log Z.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic partition function $Z(beta)$ (see theorem theorem:bk2_equilibrium_distribution; cf. def definition:bk2_symbolic_phase_transitio), integrating the Hamiltonian (Def. definition:bk2_symbolic_hamiltonian) over the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold), is defined as:
@@ -1111,6 +1293,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:377
 - Cites: `definition:bk2_symbolic_partition_funct` (Symbolic Partition Function)
 - Cited by: `definition:bk2_symbolic_partition_funct` (Symbolic Partition Function); `proof:bk2_classification_symb_phase_transitions`; `proof:bk2_coherence_of_symbolic_therm`; `proof:bk5_map_mad_mas_trichotomy`; `proof:bk7_hilbert_banach_bridge` (Hilbert--Banach Bridge); `sec:bk2_foundations_symbolic_thermodynamics` (Foundations of Symbolic Thermodynamics); `theorem:bk2_classification_symb_phase_transitions` (Classification of Symbolic Phase Transitions); `theorem:bk5_map_mad_mas_trichotomy` (MAD--MAP--MAS Trichotomy); `theorem:bk7_hilbert_banach_bridge` (Hilbert--Banach Bridge)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-012`
+- Witnesses: `Book2.no_finite_phase_transition`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: The definition's non-analyticity is proved impossible at finite alphabet.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1142,6 +1335,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:385`
 - Cites: `definition:bk2_symbolic_phase_transitio` (Symbolic Phase Transition)
 - Cited by: `proof:bk1_realization_of_symbolic_phase_transitions`; `proof:bk2_coherence_of_symbolic_therm`; `theorem:bk5_map_mad_critical_temperature` (MAP-MAD Critical Temperature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-013`
+- Witnesses: `Book2.no_finite_phase_transition`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Negative-space kernel: f differentiable at every beta > 0 finitely; the order classification is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1274,6 +1478,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:428`
 - Cited by: `proof:bk2_coherence_of_symbolic_therm`; `theorem:bk2_coherence_of_symbolic_therm` (Coherence of Symbolic Thermodynamics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-021`
+- Witnesses: `Book2Response.fluctuation_response_hasDerivAt`
+- Countermodels: none
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Finite static Kubo kernel: under H_h = H - hB, the derivative at h=0 of the Gibbs expectation of A equals beta times the equilibrium covariance of A and B. The continuous-time correlation derivative requires a differentiable equilibrium semigroup and remains outside this kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For the symbolic Fokker-Planck dynamics in equilibrium (see thm theorem:bk2_equilibrium_distribution), the response function (see def definition:bk2_symbolic_response_functi) is related to the equilibrium correlation function by:
@@ -1402,6 +1617,17 @@ Role: `proposition` | Type: `proposition` | Book: `book2` | Source: `book2.tex:4
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk2_local_symbolic_temperature` (Local Symbolic Temperature); `definition:bk2_symbolic_temperature` (Symbolic Temperature)
 - Cited by: `theorem:bk5_map_mad_critical_temperature` (MAP-MAD Critical Temperature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK2-019`
+- Witnesses: `ThermoRes.global_beta_between`
+- Countermodels: none
+- Conditions: manifold measure form, specific masking free-energy functional, and Hilbert decoherence operator stay open per row notes
+- Formal boundary: Global inverse temperature = density-weighted mean of local inverse temps, bounded by the extremes; the manifold integral stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1589,6 +1815,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:527`
 - Cited by: `definition:bk4_symbolic_curvature` (Symbolic Curvature)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-022`
+- Witnesses: `Book2CycleConsistency.path_thermodynamic_consistency`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.boundary_balance_with_residue`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.boundary_consistency_iff_residue_zero`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.boundary_thermodynamic_consistency`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.interior_consistency_iff_residue_zero`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.interior_thermodynamic_consistency`, `Book2HypothesisSurfaceStokes.bounded_curvature_does_not_zero_residue`, `Book2HypothesisSurfaceStokes.scalar_closed_surface_consistent`
+- Countermodels: `Book2HypothesisSurfaceStokes.bounded_curvature_does_not_zero_residue`
+- Conditions: additive real modules of boundary one-forms and interior two-forms kept as distinct types; continuous boundary parameter and interval-integrable balance/exchange terms for the analytic path kernel; degree-correct Stokes identity; finite closed-cycle hypotheses for the discrete kernel; linear boundary and interior integration with exterior derivative; oriented closed surface certificate; pointwise first-variation decomposition and vanishing closed balance; pulled-back thermodynamic first-variation identity; zero observer-energy/temperature-entropy residue for consistency
+- Formal boundary: Conditional differential-form closure: pulled-back first variation exposes free-energy circulation as observer-accounting residue minus entropy-temperature exchange. Boundary consistency is equivalent to zero residue. A separately supplied oriented, degree-correct Stokes calculus transports exactly that identity into the interior. The scalar positive control inhabits the construction; the bounded-curvature countermodel proves regularity cannot manufacture reconciliation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $H_{text{Obs}}$ be a well-formed hypothesis manifold with
@@ -1743,6 +1980,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:588`
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `corollary:bk2_interpretative_framework` (Physical Interpretation); `proof:bk2_interpretative_framework`; `proof:bk4_drift_stability_local_bounds` (Drift Stability via Local Symbolic Distortion Bounds); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `remark:bk4_ttpr_entropy` (Relation to Symbolic Thermodynamics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-016`
+- Witnesses: `Book2.detailedBalance_stationary`, `Book2.gibbs_minimizes`, `Book2.no_finite_phase_transition`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Its clause (2) proper-thermodynamic-behavior claims are the proved kernels above; clauses (1),(3),(4) are not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The framework established in this Book forms a coherent symbolic thermodynamic theory that:
@@ -1825,6 +2073,17 @@ Role: `corollary` | Type: `corollary` | Book: `book2` | Source: `book2.tex:616`
 - Cites: `definition:bk2_symbolic_entropy` (Symbolic Entropy); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk2_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk2_symbolic_temperature` (Symbolic Temperature); `theorem:bk2_coherence_of_symbolic_therm` (Coherence of Symbolic Thermodynamics)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-023`
+- Witnesses: `Book2.entropy_nonneg`, `Book2.gibbs_minimizes`, `Book2Response.fluctuation_response_hasDerivAt`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; see per-anchor coverage-map notes for the exact scope of each conditional/partial grade; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Quantitative roles are certified: entropy is nonnegative uncertainty, Gibbs free energy is minimized at equilibrium, and beta scales finite linear response. The prose interpretations remain authored semantics, not propositions promoted by Lean.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1920,6 +2179,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:650`
 - Cites: `theorem:bk2_equilibrium_distribution` (Equilibrium Distribution); `theorem:bk2_h_theorem_for_symbolic_evol` (H-Theorem for Symbolic Evolution)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-024`
+- Witnesses: `Book2.gibbs_minimizes`, `Book2H.h_theorem`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Drift/reflection/fluctuation yielding persistent emergent structure: the H-theorem descent kernel; the synthesis stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

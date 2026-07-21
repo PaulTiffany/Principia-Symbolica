@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - scholium_symbolicum
 
 Nodes in this source group: 264
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -28,6 +34,16 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `axiom:bk1_axiomata_prima` (Drift as Origin)
 - Cited by: `axiom:bk1_pre_geometric_nature` (Pre-geometric Nature); `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); `definition:bk1_symbolic_category` (Symbolic Category); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `lemma:bk1_universality_of_proto_symbolic_space` (Universality of Proto-symbolic Space); `subsec:appD_ct_contribution_differentiation` (D.9.2 Principia Symbolica's Contribution and Differentiation)
 - Macros used: `\catS`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-001`
+- Witnesses: `ScholiumC.CategoryOfStructures.existsUnique_from_empty`, `ScholiumC.CategoryOfStructures.exists_colimit_cocone`, `ScholiumC.CategoryOfStructures.hom_advances_stage`
+- Countermodels: none
+- Formal boundary: Typed ambient interface only: an arbitrary staged category, initial void, and universe-bounded cocompleteness are recorded as supplied data. This list-first definition has no ontological priority over the co-emergent drift/reflection operation and does not manufacture either operation or the later manifold.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -66,6 +82,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_let_cats_be_the_category` (Category of Structures)
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `axiom:bk1_observable_gradation_of_pre_geometric_operations` (Observable Gradation of Pre-geometric Operations); `axiom:bk4_bounded_accessibility` (Bounded Symbolic Accessibility); `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom); `axiom:bk8_curvature_transformation` (Symbolic Cognition Cycle); `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `corollary:bk4_homological_coherence_observer_bounds` (Homological Coherence with Observer Bounds); `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `corollary:bk4_symbolic_lightcone` (Symbolic Light-Cone); `corollary:bk8_resonant_cognition` (Resonant Cognition Principle); `corollary:bk9_freedomentropy_complementarity` (Freedom-Entropy Complementarity); `definition:appC_bounded_observation_frame` (Bounded Observation Frame); `definition:appC_coherence_functional` (Coherence functional); `definition:appD_llm_observer_tuple` (LLM observer tuple); `definition:bk1_bounded_symbolic_approximation` (\textbf{Bounded Symbolic Approximation}); `definition:bk1_cosmological_symbolization_functor` (Cosmological Symbolization Functor); `definition:bk1_effective_horizon_signature` (Effective Horizon Signature); `definition:bk1_kernel_based_bounded_symbolic_approximation` (\textbf{Kernel-Based Bounded Symbolic Approximation (Illustration)}); `definition:bk1_newtonian_category_error` (Newtonian Category Error); `definition:bk1_observer_gradient` (Observer as Structured Gradient); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability); `definition:bk1_problem_of_symbolic_smoothness` (Problem of Symbolic Smoothness); `definition:bk1_shared_boundary_paradox` (Shared Boundary Paradox); `definition:bk1_symbolic_hypothesis` (Symbolic Hypothesis); `definition:bk4_bounded_observer` (Bounded Observer); `definition:bk4_collapse_of_symbolic_ide` (Collapse of Symbolic Identity); `definition:bk4_epistemic_differential_o` (Epistemic Differential Operator); `definition:bk4_fuzzy_gradient` (Fuzzy Gradient Operator); `definition:bk4_fuzzy_integral_operator` (Fuzzy Integral Operator); `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution); `definition:bk4_observer_differentiable_` (Observer-Differentiable Structure); `definition:bk4_observer_metric` (Observer-Induced Metric); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation); `definition:bk4_symbolic_space` (Observer-Relative Symbolic Space); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk4_tilda_substitution` (Tilda-Substitution); `definition:bk5_two_way_street_tensor` (Two-Way Street reciprocity tensor); `definition:bk6_symbolic_confidence_field` (Symbolic Confidence Field); `definition:bk7_adaptive_refinement_recurrence` (Controlled symbolic refinement recurrence); `definition:bk7_observerrelative_symbolic_error_field` (Observer-Relative Symbolic Error Field); `definition:bk7_operational_resolution_uncertainties` (Operational resolution uncertainties); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `definition:bk7_symbolic_uncertainty` (Symbolic Uncertainty \(\Sigma_U\)); `definition:bk8_observer_relative_artifact` (Observer-relative artifact); `definition:bk8_sr_triplet` (SR-Triplet); `definition:bk9_reflective_dyad` (Reflective Dyad); `demonstratio:bk4_fuzzy_forward_mode` (Fuzzy Forward-Mode Differentiation); `demonstratio:bk4_prompt_time_ttdc` (Prompt-Time Collapse in Reflective Agents); `demonstratio:bk7_convergence_within_reflective_basin` (Why Descent, Not Mere Monotonicity); `lemma:bk1_bounded_approximation_and_interpretability` (Bounded Approximation Implies Interpretability); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `lemma:bk2_wellposedness_symb_prob_space` (Well-posedness of Symbolic Probability Space); `lemma:bk4_gradient_stability` (Gradient Stability Under Observer Perturbations); `lemma:bk4_properties_of_ttcs` (Properties of TTCS); `proof:bk1_constitutive_bootstrap_extraction` (Extraction from Reflective Closure); `proof:bk1_contrapositive_search_principle` (Bounded Observers Cannot Certify the Universal Negative); `proof:bk1_drift_deviation_bound` (Proto-Drift Induces Directional Deviation Bound); `proof:bk1_energy_bound_identity` (Bounded Energy Ensures Identity Integrity); `proof:bk1_event_horizon_identity_field` (Identity Field on the Symbolized Causal Patch); `proof:bk1_fix_s_in_s` (Symbol Preservation Under Drift–Reflection Fixation); `proof:bk1_observer_kernel_convolution` (Convolutional Identity from Observer Kernel Properties); `proof:bk1_observer_threshold_reflexivity` (Observer Threshold Governs Reflexive Admissibility); `proof:bk1_sketch_effective_proto_drift_field_induction` (Fundamental Operators as Bounded Symbolic Approximations); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk4_fuzzy_deriv_algebra`; `proof:bk4_fuzzy_exponential_rule`; `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `proof:bk4_observer_capacity_bound`; `proof:bk4_observer_relative_smoothness` (Observer-Relative Smooth Structure from Fuzzy Substitution); `proof:bk4_sketch_extracting_recrusive_curvature` (Power Rule via Binomial Expansion and Recursive Error Bound); `proof:bk4_symbolic_work_path_dependence`; `proof:bk4_timescale_separation_hierarchy` (Timescale Separation and Symbolic Coarse-Graining via Master Equation); `proof:bk8_resonant_cognition`; `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk1_observer_relative_bounded_approximation` (Observer–Relative Bounded Approximation); `proposition:bk1_stage_composite_operators_are_interpretable` (Stage–Composite Operators Are Interpretable); `proposition:bk4_symbolic_work_path_dependence` (Path Dependence of Symbolic Work); `proposition:bk9_modes_of_re_interpretation` (Modes of Re-Interpretation); `remark:appC_born_rule_dependency` (Derivation Structure); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk3_toward_symbolic_evolution`; `remark:bk4_computational_complexity` (Computational Complexity); `remark:bk4_observer_relative_ttdc` (Observer-Relative Collapse Interpretation); `remark:bk4_symbolic_work_capacity` (Observer-Limited Symbolic Work Capacity); `remark:bk8_inference_principle_over_confidence_loss_tradeoff` (Inference Principle Over Confidence-Loss Tradeoff); `scholium:bk1_constitutive_reflex` (The Constitutive Reflex); `scholium:bk1_curvature_flux_kin_kout`; `scholium:bk1_emergence_envelope` (Emergence Envelope); `scholium:bk1_epistemic_humility` (Epistemic Humility); `scholium:bk1_interpretability_two_axes` (Interpretability on Two Axes --- a Complex Reading); `scholium:bk1_resolution_of_continuum_disjunction` (On the Resolution of the Continuum Disjunction); `scholium:bk2_on_hypotheses_as_thermodyn` (On Hypotheses as Thermodynamic Surfaces); `scholium:bk3_hypotheses_as_cognitive_membranes` (Hypotheses as Cognitive Membranes); `scholium:bk4_dynamics_of_observer_frame` (On the Dynamics of the Observer Frame); `scholium:bk4_irreversibility_as_trace` (Irreversibility as Symbolic Trace); `scholium:bk4_nested_frames` (The Calculus of Nested Frames); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `scholium:bk4_recursive_introspection` (Recursive Introspection); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); `scholium:bk4_role_of_observer_induced_metric` (Role of the Observer-Induced Metric); `scholium:bk4_symbolic_drift_fields` (Symbolic Drift Fields in Cognitive Systems); `scholium:bk4_the_nature_of_truth` (The Nature of Truth); `scholium:bk4_the_observer_as_weaver` (The Observer as Weaver); `scholium:bk4_topological_complexity_semantic_richness` (Topological Complexity and Semantic Richness); `scholium:bk4_ttcs_link_traversal` (TTCS as Symbolic Link Traversal); `scholium:bk4_ttcs_stochastic_operator` (TTCS as a Stochastic Symbolic Operator); `scholium:bk4_ttdc_impulse_collapse` (Collapse as Impulse: The Newtonian Structure of TTDC); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse); `scholium:bk4_zero_is_idealized_in_boundedness` (Zero is Idealized in Boundedness); `scholium:bk5_constant_of_becoming` (The Constant of Becoming); `scholium:bk7_constrained_uncertainty_motivation` (Constrained Symbolic Uncertainty); `scholium:bk7_power_organizational_navigational` (Power as Organizational Capacity and Navigational Imperative); `sec:appC_born_preamble` (Preamble); `sec:appC_born_rule` (Born Rule – A Formal Derivation); `sec:bk7_pisu_universal_symbolic_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU)); `subsec:appC_born_observer_structures` (Observer Data Structures in the Quantum Regime); `subsec:bk3_preamble_to_symbiosis` (Preamble to Symbiosis); `subsec:bk4_fuzzy_sum_rule` (The Fuzzy Sum Rule: Curvature-Induced Interference and Symbolic Path Divergence); `subsec:bk4_symbolic_identity_collapse` (Symbolic Identity Collapse); `subsec:bk7_emergence_symbolic_uncertainty` (Emergence of Symbolic Uncertainty); `subsec:bk7_pisu_axiom_statement` (Fundamental Trade-off); `subsec:bk7_pisu_motivation` (Motivation); `subsec:bk7_pisu_revisited_power_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU) Revisited); `subsec:bk7_pisu_scholium` (Scholium: The Shape of Cognitive Freedom); `subsec:bk7_sources_regimes_uncertainty` (Sources and Regimes of Symbolic Uncertainty); `theorem:bk1_constitutive_bootstrap` (Constitutive Bootstrap Theorem); `theorem:bk1_dual_horizon_cosmogenesis` (Dual Horizon Cosmogenesis under \texorpdfstring{$\mathcal{B}_{\mathrm{cos}}$}{B\_cos}); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem); `theorem:bk4_existence_observer_valid_derivatives` (Existence of Observer-Valid Derivatives); `theorem:bk4_fuzzy_chain_rule` (Observer-Relative Chain Rule); `theorem:bk4_fuzzy_exponential_rule` (Fuzzy Exponential Rule); `theorem:bk4_fuzzy_fundamental` (Fuzzy Fundamental Theorem of Calculus); `theorem:bk4_fuzzy_jacobian` (Fuzzy Jacobian Matrix Rule); `theorem:bk4_fuzzy_logarithmic_rule` (Fuzzy Logarithmic Rule); `theorem:bk4_fuzzy_power_rule` (Observer-Relative Power Rule); `theorem:bk4_fuzzy_product_rule` (Observer-Relative Product Rule); `theorem:bk4_fuzzy_quotient_rule` (Observer-Relative Quotient Rule); `theorem:bk4_fuzzy_sum_rule` (Observer-Relative Sum Rule); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem); `theorem:bk4_paradoxical_arrow_of_time` (The Paradoxical Arrow of Time); `theorem:bk4_restated_fuzzy_symbolic_geometry_theorem` (Restated: Fuzzy Symbolic Geometry Theorem); `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation); `theorem:bk8_gradient_dissipation_balance` (Framing Equivalence Theorem)
 - Macros used: `\Obs`, `\catS`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-002`
+- Witnesses: `ScholiumA.interpretable_of_factor_and_traceable`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Modeled as the BoundedObserver structure (N, delta, eps) used downstream by Traceable/interpretable_of_factor_and_traceable; no standalone theorem, differentiation operators kept opaque (Nat -> Real -> Real) rather than manifold operators.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -262,6 +289,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cited by: `axiom:bk8_binding_curvature_limit` (Frame Relativity of Meaning); `definition:bk8_symbolic_projection` (Symbolic Projection); `scholium:bk3_hypotheses_as_cognitive_membranes` (Hypotheses as Cognitive Membranes)
 - Macros used: `\Obs`, `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-027`
+- Witnesses: `ScholiumC.exists_bounded_approx`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Existence holds given K kills the zero vector and eps is pointwise nonnegative; Phi = id witnesses it. Honesty gap: this is exactly the trivial case the source's 'non-trivial' qualifier excludes.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(S in Ob(catS)\) be a structure (cf. sec:bk1_minimal_structure_for_symbolic_emergence), and let \(Obs\) be a bounded observer (cf. definition:bk1_bounded_observer).
@@ -363,6 +401,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_bounded_symbolic_approximation` (\textbf{Bounded Symbolic Approximation}); `definition:bk1_kernel_based_bounded_symbolic_approximation` (\textbf{Kernel-Based Bounded Symbolic Approximation (Illustration)})
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `axiom:bk8_binding_curvature_limit` (Frame Relativity of Meaning); `definition:bk3_autophagic_drift` (Autophagic Drift); `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `definition:bk8_symbolic_projection` (Symbolic Projection); `lemma:bk1_bounded_approximation_and_interpretability` (Bounded Approximation Implies Interpretability); `lemma:bk4_ttpr_interpretability_preserved` (Precision Refinement Preserves Interpretability); `proof:bk1_boundedness_encoding_cost` (Boundedness of Observer Encoding Cost); `proof:bk1_energy_bound_identity` (Bounded Energy Ensures Identity Integrity); `proof:bk4_interpretability_preservation`; `proof:bk8_sketch_observer_interoperability` (SR-Triplet Boundedness via Grönwall); `proposition:bk1_stage_composite_operators_are_interpretable` (Stage–Composite Operators Are Interpretable); `proposition:bk8_genetic_symbolic_resonance` (Boundedness); `scholium:bk1_interpretability_two_axes` (Interpretability on Two Axes --- a Complex Reading); `scholium:bk2_on_hypotheses_as_thermodyn` (On Hypotheses as Thermodynamic Surfaces); `scholium:bk4_topological_complexity_semantic_richness` (Topological Complexity and Semantic Richness)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-007`
+- Witnesses: `ScholiumA.ifValue_le_eps`, `ScholiumA.interpretable_of_factor_and_traceable`, `ScholiumA.nu_le_ifValue`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: (I1) distinguishability and (I2) boundedness are derived (not assumed) from a c*eps factorization; (I3) traceability is modeled concretely via a Finset.range witness over BoundedObserver.delta rather than manifold differentiation operators.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -486,6 +535,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `definition:bk4_refinement_envelope` (Refinement Envelope); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `proof:bk1_energy_bound_identity` (Bounded Energy Ensures Identity Integrity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-008`
+- Witnesses: `ScholiumA.ifValue_le_eps`, `ScholiumA.nu_le_ifValue`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The c_min ≤ c ≤ 1 and c_min*eps ≥ nu hypotheses genuinely force nu ≤ c*eps ≤ eps; this is a real inequality derivation, not a restatement.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Phi : P to P$ be an operator on structured states, and let $O$ be a bounded observer (cf. definition:bk1_bounded_observer).
@@ -584,6 +644,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability)
 - Cited by: `proof:bk1_energy_bound_identity` (Bounded Energy Ensures Identity Integrity); `proof:bk4_ttpr_convergence`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-009`
+- Witnesses: `ScholiumA.interpretable_of_factor_and_traceable`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Hypotheses (a) bounded energy approximation and (b) lower-bounded distinguishability are represented by the InterpretabilityFactor sandwich; traceability is supplied as an explicit extra hypothesis (the source's own hypotheses do not entail it either, since (a)/(b) alone give only I1/I2).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -695,6 +766,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk1_local_charitability` (Local Chartability); `axiom:bk1_pre_geometric_nature` (Pre-geometric Nature); `axiom:bk1_symbolic_smoothness` (Symbolic Smoothness); `axiom:bk1_topological_regularity` (Topological Regularity); `definition:bk1_directed_system_of_emergence` (Directed System of Emergence); `definition:bk1_problem_of_symbolic_smoothness` (Problem of Symbolic Smoothness); `definition:bk1_proto_drift_field` (Proto-Drift Field $\vec{D}_\lambda$); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_stage_composite_operator` (Stage–Composite Operator); `lemma:bk1_coherence_of_proto_drift_fields` (Coherence of Proto-Drift Fields); `lemma:bk1_existence_of_metric` (Existence of Metric); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `lemma:bk1_universality_of_proto_symbolic_space` (Universality of Proto-symbolic Space); `proof:bk1_atlas_final_topology_phase_space` (Atlas Construction on Final Topology of Symbolic Phase Space); `proof:bk1_bounded_drift_approximation` (Bounded Approximation Guarantees Drift Convergence); `proof:bk1_colimit_yields_categoric_structure` (Colimit Structure Yields Symbolic Cohesion); `proof:bk1_energy_bound_identity` (Bounded Energy Ensures Identity Integrity); `proof:bk1_sketch_coherence_drift_reflection` (Coherence of Proto-Drift Fields via Chart Convergence); `proof:bk1_sketch_construction_proto_metric` (Construction of Proto-Metric on Symbolic Layers); `proof:bk1_sketch_effective_proto_drift_field_induction` (Fundamental Operators as Bounded Symbolic Approximations); `proof:bk1_sketch_limit_stabilization_colimit` (Limit of Stabilization Operators via Colimit); `scholium:bk1_emergence_envelope` (Emergence Envelope); `subsec:appD_category_theory_core_resonance` (D.9.1 Core Resonance)
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-014`
+- Witnesses: `ScholiumA.projection_idempotent_ne_id_exists`, `ScholiumC.OperationalStage.drift_advances_stage`, `ScholiumC.OperationalStage.operators_coemerge`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are fields of one OperationalStage witness; neither is derived from the other; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: A categorical OperationalStage now carries drift and idempotent stabilization jointly as one co-emergent witness; neither operator is derived from the other. The drift morphism preserves emergence orientation. The earlier concrete projection remains a nontrivial stabilization witness; ordinal limits, topology, and continuity remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Working within category $catS$
@@ -739,6 +821,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `proof:bk1_sketch_effective_proto_drift_field_induction` (Fundamental Operators as Bounded Symbolic Approximations); `proof:bk4_symbolic_curvature_boundary` (Gradient Threshold and Boundary Formation in Symbolic Geometry)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-094`
+- Witnesses: `Atlas.tower_glues`, `ScholiumC.OperationalStage.observed_drift_ne_zero`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other; pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Observable transformation requires an explicit Observation map and nonzero drift signal; continuity across the stage parameter remains represented only by the Atlas tower-convergence kernel. Detectability is not inferred from category structure.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The operators $D_lambda$ and $R_lambda$ induce observable transformations that vary continuously relative to the stage parameter $lambda$, as perceived by a bounded observer $O$ (cf. definition:bk1_bounded_observer).
@@ -761,6 +854,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability); `lemma:bk4_ttpr_interpretability_preserved` (Precision Refinement Preserves Interpretability); `proof:bk1_bounded_drift_approximation` (Bounded Approximation Guarantees Drift Convergence); `proof:bk1_drift_deviation_bound` (Proto-Drift Induces Directional Deviation Bound); `proof:bk1_sketch_effective_proto_drift_field_induction` (Fundamental Operators as Bounded Symbolic Approximations); `proof:bk4_interpretability_preservation`; `proposition:bk1_boundedness_from_drift` (\textbf{Boundedness from Drift}); `proposition:bk1_the_operators_lambda_and_lambda` (Fundamental Operators as Bounded Symbolic Approximations); `scholium:bk1_consequences_of_bounded_pre_geometric_operations` (Consequences of Bounded Pre-geometric Operations)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-003`
+- Witnesses: `ScholiumA.kernelBounded_le`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Folded into one scalar kernel-bound structure/theorem shared with the three anchors below; convolution itself is not modeled, only the stated submultiplicativity inequality.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -803,6 +907,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `definition:bk1_bounded_symbolic_approximation` (\textbf{Bounded Symbolic Approximation}); `definition:bk1_proto_drift_field` (Proto-Drift Field $\vec{D}_\lambda$); `definition:bk1_reflection_operator` (Reflection Operator)
 - Cited by: `proof:bk4_drift_reflection_field` (Symbolic Drift-Reflection Field Dynamics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-093`
+- Witnesses: `AxiomataPrima.no_drift_no_novelty`, `AxiomataPrima.pure_drift_dissolves`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: D_lambda, R_lambda as bounded symbolic approximations: their single-channel failure modes are certified; the bounded-approximation predicate stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -947,6 +1062,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability); `definition:bk4_coherence_metric` (Observer-Weighted Coherence Metric); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `proof:bk1_fix_s_in_s` (Symbol Preservation Under Drift–Reflection Fixation); `proof:bk1_observer_kernel_convolution` (Convolutional Identity from Observer Kernel Properties); `proposition:bk1_sufficient_condition_for_kernel_boundedness_from_uniform_drift_bound` (\textbf{Sufficient Condition for Kernel-Boundedness from Uniform Drift Bound}); `remark:bk1_kernel_based_bounded_approximation` (Alternative Perspective: Kernel-Based Bounded Approximation); `scholium:bk1_consequences_of_bounded_pre_geometric_operations` (Consequences of Bounded Pre-geometric Operations)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-004`
+- Witnesses: `ScholiumA.kernelBounded_le`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Same KernelBoundedApprox structure as bk1_bounded_symbolic_approximation; the iff-form of the source definition is not modeled, only the derived bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O$ be a bounded observer with resolution kernel $K_O$ as specified in Definition definition:bk1_bounded_observer. An operator $Phi_lambda$ (or $Psi_lambda$) acting on symbolic structures $S$ is said to be a kernel-bounded symbolic approximation if and only if for any symbol $s in S$ and its image $Phi_lambda(s)$, the perceptual difference as measured by $O$ satisfies:
@@ -977,6 +1103,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `definition:bk1_bounded_symbolic_approximation` (\textbf{Bounded Symbolic Approximation}); `definition:bk1_proto_drift_field` (Proto-Drift Field $\vec{D}_\lambda$)
 - Cited by: `remark:bk1_kernel_based_bounded_approximation` (Alternative Perspective: Kernel-Based Bounded Approximation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-005`
+- Witnesses: `ScholiumA.kernelBounded_le`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The sup-bound hypothesis is represented as a plain scalar bound (drift ≤ δ) rather than an actual supremum over a domain.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1124,6 +1261,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cited by: `proof:bk1_observer_kernel_convolution` (Convolutional Identity from Observer Kernel Properties)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-006`
+- Witnesses: `ScholiumA.kernelBounded_le`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: This anchor's own inline proof is exactly the ‖K‖1=1 submultiplicativity chain now proved by kernelBounded_le; kernel norm and convolution remain hypotheses, not derived objects.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $vec{D}_lambda$ be the proto-drift field induced by operators $Phi_lambda$ and $Psi_lambda$ such that $vec{D}_lambda(s) = Phi_lambda(s) - s$ (or an appropriate difference). If $vec{D}_lambda$ satisfies:
@@ -1230,6 +1378,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:appC_bounded_reflexive_emergence` (Bounded reflexive emergence); `definition:appC_complexity_measure` (Complexity Measure); `definition:appC_symbolic_modality` (Symbolic modality); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `proof:appC_phi_from_lagrangian`; `proof:bk1_bounded_drift_approximation` (Bounded Approximation Guarantees Drift Convergence); `proof:bk1_energy_bound_identity` (Bounded Energy Ensures Identity Integrity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-010`
+- Witnesses: `ScholiumA.twoStep_bound`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Modeled as the TwoStepBoundedApprox structure's stabilize ∘ drift composite; no standalone theorem beyond twoStep_bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(D_lambda : P_{<lambda} to P_lambda\) be a symbolic transformation representing directional drift, and let \(R_lambda : P_lambda to P_lambda\) be a refinement or reflection operator
@@ -1266,6 +1425,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: none
 - Cited by: `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `proof:bk1_bounded_drift_approximation` (Bounded Approximation Guarantees Drift Convergence); `scholium:bk1_emergence_envelope` (Emergence Envelope)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-012`
+- Witnesses: `ScholiumA.ChainedApprox.cauchySeq`, `ScholiumA.ChainedApprox.exists_limit_with_tail_bound`, `ScholiumA.chainedApprox_telescope`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Summability is an explicit ChainedApprox field. It yields finite telescoping, a genuine Cauchy stage path, and under completeness an actual limit with tail-sum displacement bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1321,6 +1491,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `axiom:bk1_summable_resolution_decay` (Summable Resolution Decay); `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_directed_system_of_emergence` (Directed System of Emergence); `definition:bk1_kernel_based_bounded_symbolic_approximation` (\textbf{Kernel-Based Bounded Symbolic Approximation (Illustration)}); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); `definition:bk1_stage_composite_operator` (Stage–Composite Operator)
 - Cited by: `proof:bk1_observer_threshold_reflexivity` (Observer Threshold Governs Reflexive Admissibility); `proof:bk4_ttpr_convergence`; `proposition:bk4_ttpr_convergence` (Convergence of Recursive Refinement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-011`
+- Witnesses: `ScholiumA.ChainedApprox.cauchySeq`, `ScholiumA.ChainedApprox.exists_limit_with_tail_bound`, `ScholiumA.chainedApprox_telescope`, `ScholiumA.twoStep_bound`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Part (i)'s 2δ bound follows from the triangle inequality. Part (ii) includes finite telescoping and, from summable resolution decay, full Cauchy and complete-space convergence with a tail displacement bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1668,6 +1849,16 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `lemma:bk1_universality_of_proto_symbolic_space` (Universality of Proto-symbolic Space); `proof:bk1_colimit_yields_categoric_structure` (Colimit Structure Yields Symbolic Cohesion)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-026`
+- Witnesses: `ScholiumC.DirectedStageSystem.directed_colimit_universal_property`, `ScholiumC.DirectedStageSystem.injection_transition`
+- Countermodels: none
+- Formal boundary: A Nat-directed system explicitly records stage carriers, transition maps, and their identity/composition laws; transition images are identified in the colimit and every compatible cocone has a unique mediator.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The directed system ${P_lambda, f_{lambdamu}}_{lambda < mu < Omega}$ consists of:
@@ -1719,6 +1910,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk1_local_charitability` (Local Chartability); `axiom:bk1_smooth_convergence` (Smooth Convergence); `axiom:bk1_topological_regularity` (Topological Regularity); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `lemma:bk1_universality_of_proto_symbolic_space` (Universality of Proto-symbolic Space); `proof:bk1_sketch_limit_stabilization_colimit` (Limit of Stabilization Operators via Colimit); `proposition:bk4_ttpr_convergence` (Convergence of Recursive Refinement); `subsec:appD_category_theory_core_resonance` (D.9.1 Core Resonance); `theorem:bk1_manifold_emergence` (Manifold Emergence)
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-024`
+- Witnesses: `ScholiumC.DirectedStageSystem.directed_colimit_universal_property`, `ScholiumC.colimit_universal_property`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: The proto-symbolic carrier is now the quotient of the coproduct of a concrete Nat-directed stage tower by eventual compatibility; genuinely ordinal indexing and the source category catS remain abstracted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The proto-symbolic space $P$ is defined as the colimit in the category $catS$ (see Def. definition:bk1_let_cats_be_the_category):
@@ -1749,6 +1951,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_directed_system_of_emergence` (Directed System of Emergence); `definition:bk1_let_cats_be_the_category` (Category of Structures); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space)
 - Cited by: none
 - Macros used: `\catS`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-025`
+- Witnesses: `ScholiumC.DirectedStageSystem.directed_colimit_universal_property`, `ScholiumC.colimit_universal_property`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Existence and uniqueness of the mediating morphism is proved both for a general quotient and for cocones over an explicit Nat-directed diagram with lawful transition maps; ordinal indexing and catS remain abstracted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1820,6 +2033,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `proof:bk1_horizon_characterization` (Effective Signature Separates the Horizon Roles); `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); `proof:bk4_wheel_refines_signature` (Quadrant quotient of the phase circle); `proposition:bk4_wheel_refines_signature` (The wheel refines the effective horizon signature)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-028`
+- Witnesses: `ScholiumC.effectiveSignature_empty`, `ScholiumC.effectiveSignature_full`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Modeled on a single generative/dissipative flux pair (G, C) rather than existential quantification over multiple horizon components; the integral definitions of G_O, C_O themselves are not modeled, only the resulting sign predicate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $U$ be a symbolic universe sustaining a bounded observer
@@ -1889,6 +2113,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Macros used: `\freeenergy`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-030`
+- Witnesses: `ScholiumC.dualHorizonBinding_both_pos`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the 'binding special case' clause (Delta Phi_O = G_O(H_G) C_O(H_D)) is modeled as a scalar product-threshold fact; the general observer-resolved free-energy criterion is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic universe \(U\) supports bounded reflexive emergence
@@ -1947,6 +2182,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `proof:bk1_colimit_yields_categoric_structure` (Colimit Structure Yields Symbolic Cohesion); `theorem:appC_dual_horizon_signature` (Dual Horizon Necessity (Effective Signature))
 - Cited by: `axiom:bk1_dual_horizon_postulate` (Dual Horizon Postulate); `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `corollary:bk1_horizon_duality_principle` (Horizon Duality Principle); `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `definition:bk1_horizon_crossing_operation` (Horizon-Crossing Operation); `lemma:bk1_horizon_characterization` (Horizon Characterization); `proof:bk1_dual_horizon_unification_principle` (Projection Through the Dual Horizon Signature); `proof:bk1_event_horizon_identity_field` (Identity Field on the Symbolized Causal Patch); `proof:bk1_horizon_characterization` (Effective Signature Separates the Horizon Roles); `proof:bk1_horizon_duality_principle` (Dual Signature Is Minimal for Reflexive Emergence); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `scholium:bk1_cosmogenesis_proof_status` (Proof status of Cosmogenesis); `sec:appC_dual_horizon` (Dual Horizon – A Formal Proof by Elimination); `theorem:appC_dual_horizon_signature` (Dual Horizon Necessity (Effective Signature)); `theorem:bk1_dual_horizon_cosmogenesis` (Dual Horizon Cosmogenesis under \texorpdfstring{$\mathcal{B}_{\mathrm{cos}}$}{B\_cos}); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-029`
+- Witnesses: `ScholiumC.dualHorizonBinding_both_pos`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the converse/binding, coupled-case direction is modeled (product of fluxes above threshold forces both signs present); the necessity direction and the general (non-binding) case are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2116,6 +2362,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `proof:bk1_horizon_duality_principle` (Dual Signature Is Minimal for Reflexive Emergence); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-031`
+- Witnesses: `ScholiumC.dualHorizonBinding_both_pos`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only clause 2's stabilization-flux conclusion (C_O(H_D) > 0) is captured, via the shared binding-product fact; clause 1's divergence condition nabla.D > 0 and clause 3's containment-domain definition are not modeled (require manifold divergence).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The generative horizon $H_G$ and dissipative horizon $H_D$ exhibit distinct, complementary properties fundamental to symbolic dynamics:
@@ -2201,6 +2458,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `axiom:bk1_axiomata_prima` (Drift as Origin); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Cited by: `scholium:bk1_curvature_flux_kin_kout`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-032`
+- Witnesses: `ScholiumC.dualHorizonBinding_both_pos`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: The 'opposing horizon principles both present' conclusion is captured by the same binding-product fact; the elimination-argument narrative and 'no simpler configuration' claim are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2723,6 +2991,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `corollary:bk1_linear_insufficiency` (Linear Insufficiency); `proof:bk1_geometric_necessity_curvature` (Quadratic Necessity from Mixed Contextual Coupling); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-033`
+- Witnesses: `ScholiumC.idempotent_image_eq_fixedPoints`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the proof's internal fixed-point sublemma (stabilized image of R_stab lies in, in fact equals, Fix(R_stab)) is modeled; the maximal self-reflective substructure and the (N, delta^n, epsilon) observer-extraction triple are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Every stable symbolic structure $S$ with reflection structure
@@ -2893,6 +3172,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `definition:bk1_symbolic_manifold` (Symbolic Manifold); `proof:appB_smoothness_emergence`; `theorem:appB_smoothness_emergence` (Emergent Smoothness from Symbolic Discreteness)
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-092`
+- Witnesses: `Atlas.manifold_emergence`, `AxiomataPrima.two_channel_sustained`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open; the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: Drift/reflection as pre-geometric operators (Existence-is-not/drift-as-origin) whose smooth limit is the AtlasTower emergence kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The following operators
@@ -2964,6 +3254,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `assumption:bk4_precritical_scalar_trace` (Precritical scalar trace); `scholium:bk4_clifford_correspondence` (Flat-Space Clifford Correspondence); `scholium:bk4_cut_wheel_nonorientable` (The cut wheel and its non-orientable seam)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-015`
+- Witnesses: `ScholiumA.CoemergentPhaseProcess.ObserverPhaseCertificate.components`, `ScholiumA.CoemergentPhaseProcess.zmod4_pair_nontrivial`, `ScholiumA.stepZMod4_four_returns`, `ScholiumA.stepZMod4_two_no_return`
+- Countermodels: none
+- Conditions: carrier-indexed linear instruments; injectivity or another explicit faithfulness witness for detection claims; curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; explicit unique orthogonal Hodge decomposition and faithful first-cohomology class map; finite model: selected orthogonal exact/coexact subspaces; global certificate: compact, connected, oriented, smooth Riemannian membrane without boundary; linear operational readout for perceptual or computational exposure; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: A reader-operated co-emergent drift/reflection process drives the recursive step: the structure is inert until an explicit operate action is supplied and certified faithful. The observer distinguishes the half-cycle orientation and the double cycle restores embodied phase; a ZMod 4 construction proves both operations nonidentity. This remains partial: curvature coupling, smooth transport, general minimality, and a genuine spinor bundle are open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3134,6 +3435,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk1_symbolic_primacy` (Symbolic Primacy); `axiom:bk4_bounded_accessibility` (Bounded Symbolic Accessibility); `axiom:bk8_observer_bounded_emergence` (Symbolic Transfer); `axiom:bk8_symbolic_reidemeister_algebra` (Symbolic Reidemeister Algebra); `axiom:bk9_bounded_liberation_principle` (Bounded Liberation Principle); `corollary:bk8_memory_repair_robustness` (Entanglement Projection); `corollary:bk8_universality_condition` (Universality Condition); `definition:appB_symbolic_state_space` (Symbolic State Space); `definition:appC_observer_visible_system` (Observer-visible symbolic system); `definition:appC_reflective_state_space` (Reflective State Space \(\mathcal{S}_O\)); `definition:bk1_bounded_symbolic_approximation` (\textbf{Bounded Symbolic Approximation}); `definition:bk1_drift_field` (Drift Field); `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_horizon_structure` (Horizon Structure); `definition:bk1_minimal_linear_ps_model` (Minimal Linear PS-Model Witness); `definition:bk1_newtonian_category_error` (Newtonian Category Error); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `definition:bk1_problem_of_symbolic_smoothness` (Problem of Symbolic Smoothness); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_shared_boundary_paradox` (Shared Boundary Paradox); `definition:bk1_spinor_like_structure` (Spinor-Like Symbolic Structure); `definition:bk1_srmf_energy_functional` (SRMF Energy Functional); `definition:bk1_symbolic_category` (Symbolic Category); `definition:bk1_symbolic_connection` (Symbolic Connection); `definition:bk1_symbolic_contradiction` (Symbolic Contradiction); `definition:bk1_symbolic_hypothesis` (Symbolic Hypothesis); `definition:bk1_symbolic_manifold_feature_maps` (Symbolic Manifold and Feature Maps); `definition:bk2_symbolic_partition_funct` (Symbolic Partition Function); `definition:bk4_coherence_metric_on_symbolic_manifold` (Coherence Metric on Symbolic Manifold); `definition:bk4_fuzzy_divergence_operator` (Fuzzy Divergence Operator); `definition:bk4_imaginary_symbolic_distance` (Imaginary Symbolic Distance); `definition:bk4_observer_kernel_convolution_map` (Observer-Kernel Convolution); `definition:bk4_observer_metric` (Observer-Induced Metric); `definition:bk4_proto_symbolic_space` (Proto-Symbolic Space); `definition:bk4_sr_initialization_map` (SR--Initialization Map); `definition:bk4_symbolic_auto_encoder` (Symbolic Auto-Encoder); `definition:bk4_symbolic_curvature` (Symbolic Curvature); `definition:bk4_symbolic_emergence` (Symbolic Emergence); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `definition:bk5_reflective_drift_coupling_tensor` (Reflective-Drift Coupling Tensor); `definition:bk5_symbolic_operator_space` (Symbolic Operator Space as Meta-Manifold $\Op(M)$); `definition:bk8_identitystability` (Stability of Symbolic Identity \identitystability); `definition:bk8_metabolic_programming_cycle` (Metabolic Programming Cycle); `definition:bk8_symbolic_hypothesis_manifold` (Symbolic Hypothesis Manifold); `definition:bk8_symbolic_projection` (Symbolic Projection); `definition:bk8_transform_group` (Frame Transform Group); `definition:bk9_frame_selection_reflection` (Frame Selection via Injected Reflection); `definition:bk9_memetic_operator` (Memetic Operator $\mathcal{M}$); `definition:bk9_symbolic_black_hole` (Symbolic Black Hole); `definition:bk9_symbolic_framework` (Symbolic Framework); `definition:bk9_symbolic_operator` (Symbolic Operator $\mathcal{O}$); `demonstratio:bk4_symbolic_graph_topological_stability` (Topological Stability in Symbolic Graph Expansion); `lemma:bk1_contradiction_resolution_principle` (Contradiction Resolution Principle); `lemma:bk1_horizon_characterization` (Horizon Characterization); `lemma:bk4_properties_of_ttcs` (Properties of TTCS); `lemma:bk4_srmf_constrained_action_norm` (SRMF-Constrained Action Norm); `proof:bk1_constructive_resolution` (Constructive Resolution via Fiber Bundle Extension); `proof:bk1_nonvacuity_minimal_linear_ps_model` (Explicit Matrix Witness); `proof:bk1_sketch_fokker_planck_action` (Fokker--Planck from Symbolic Action via Martin--Siggia--Rose); `proof:bk2_smoothness_symbolic_hamiltonian` (Smoothness of Symbolic Hamiltonian); `proof:bk3_sketch_evolutionary_dynamics` (Closure of Conceptual Bridge Sequence); `proof:bk4_bounded_expansion_under_observer_constrained_coherence` (Curvature-Bounded Expansion Rate via Grönwall); `proof:bk4_symbolic_work_path_dependence`; `proof:bk5_coherence_through_dynamic_equilibriium` (Coherence Through Dynamic Equilibrium); `proof:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant via Balanced Memory Algebra); `proof:bk5_symbolic_temperature_threshold` (Symbolic Temperature Threshold for Critical Coupling); `proof:bk7_strict_convexity_lp_error` (Strict Convexity LP Error); `proof:bk8_curvature_entanglement_equivalence` (Curvature Entanglement Equivalence); `proof:bk8_membrane_identity_collapse`; `proof:bk8_universality_condition`; `proposition:bk4_homological_extension` (Homological Extension); `proposition:bk4_symbolic_work_path_dependence` (Path Dependence of Symbolic Work); `proposition:bk5_symbolic_ess_via_map_observability_variant` (Symbolic ESS via MAP); `proposition:bk8_membrane_identity_collapse` (Type I -- Local Reflection Collapse); `proposition:bk8_operator_curvature_flux` (Quantum Decoherence as Symbolic Flattening); `proposition:bk9_emergence_of_shared_manifold` (Emergence of Shared Manifold); `remark:bk4_betti_growth` (Betti Growth and Cognitive Tractability); `remark:bk7_unnamed_remark_04`; `scholium:bk1_hypotheses_as_submanifolds` (On Hypotheses as Observer-Relative Submanifolds); `scholium:bk1_spinor_like_ml` (Spinor-Like Structures and Representation Learning); `scholium:bk2_on_hypotheses_as_thermodyn` (On Hypotheses as Thermodynamic Surfaces); `scholium:bk4_symbolic_parsimony` (TTCS and the Principle of Symbolic Parsimony); `scholium:bk4_towards_symbolic_equilibrium` (Towards Symbolic Equilibrium and Curvature-Limited Gravity); `scholium:bk4_ttcs_simulation_tool_use` (TTCS as Symbolic Simulation and Tool-Use); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse); `scholium:bk5_metabolic_cost_of_cognition` (Metabolic Cost of Cognition); `sec:bk1_category_errors_in_classical_models` (Category Errors in Classical Models); `sec:bk1_quadratic_sufficiency_and_symbolic_curvature` (Quadratic Sufficiency and Symbolic Curvature); `sec:bk5_funadmenta_symbolicae_vitae` (Fundamenta Symbolicae Vitae); `sec:bk5_srmf_for_symbolic_operators_and_processes` (SRMF for Symbolic Operators and Processes); `sec:bk7_preamble_the_arc_toward_coherence` (Preamble: The Arc Toward Coherence); `sec:bk8_definitiones_octavae` (Definitiones Octavae); `sec:bk8_scholium` (Scholium: Symbolic Projection as Co-Emergence); `subsec:bk1_emergence_via_paradox_resolution` (Emergence via Paradox Resolution); `subsec:bk2_core_thermodynamic_quantities` (Core Thermodynamic Quantities); `subsec:bk4_coherence_metric_construction` (Coherence Metric Construction); `subsec:bk4_foundations_symbolic_fragmentation` (Foundations of Symbolic Fragmentation); `subsec:bk4_fuzzy_sum_rule` (The Fuzzy Sum Rule: Curvature-Induced Interference and Symbolic Path Divergence); `subsec:bk8_symbolic_knots_and_emergent_entanglement` (Symbolic Knots and Emergent Entanglement); `theorem:bk1_dual_horizon_cosmogenesis` (Dual Horizon Cosmogenesis under \texorpdfstring{$\mathcal{B}_{\mathrm{cos}}$}{B\_cos}); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity); `theorem:bk4_freedom_criterion` (Freedom Criterion); `theorem:bk5_operator_convergence` (Operator Convergence); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity); `theorem:bk8_gradient_dissipation_balance` (Framing Equivalence Theorem); `theorem:bk9_isolation_dissociation_theorem` (Isolation–Dissociation Theorem (IDT))
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-034`
+- Witnesses: `ScholiumC.consistent_unique`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Re-read via the FracturedAtlas license: existence of 'the' metric is Atlas.consistent_of_glued (given Glued + PairCovers); this file adds the uniqueness half. The manifold's smooth structure and dimension n >= 2 are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ be a smooth manifold of dimension $n geq 2$, equipped with a Riemannian metric tensor $g$, arising as the geometric realisation of the category of structures $catS$ (Def. definition:bk1_let_cats_be_the_category). Points $s in S$ represent symbolic states, and the tangent space $T_sS$ at each point encodes the space of possible symbolic transformations accessible from state $s$.
@@ -3193,6 +3505,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `axiom:bk1_axiomata_prima` (Drift as Origin); `definition:bk1_drift_field` (Drift Field); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `assumption:appB_srv_dissipativity` (SRV as a Stable Dissipative Descent); `axiom:bk1_symbolic_smoothness` (Symbolic Smoothness); `axiom:bk8_curvature_transformation` (Symbolic Cognition Cycle); `corollary:bk1_fixed_point` (Reflective Fixed Locus); `corollary:bk8_projective_drift` (Projective Drift Duality); `corollary:bk9_selfreferential_capacity` (Self-Referential Capacity); `definition:bk1_certified_type_preserving_symbolic_transport` (Certified Type-Preserving Symbolic Transport); `definition:bk1_minimal_linear_ps_model` (Minimal Linear PS-Model Witness); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_spinor_like_structure` (Spinor-Like Symbolic Structure); `definition:bk1_symbolic_hypothesis` (Symbolic Hypothesis); `definition:bk2_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk3_symbolic_metabolism` (Symbolic Metabolism); `definition:bk4_individuated_symbolic_id` (Individuated Symbolic Identity); `definition:bk4_reflexive_operator` (Reflexive Operator); `definition:bk4_symbolic_memory_distortion` (Symbolic Memory Distortion); `definition:bk4_symbolic_spinor_bundle` (Recursive Identity Bundle); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk5_reflective_coupling_tens` (Reflective Coupling Tensor); `definition:bk5_reflective_drift_coupling_tensor` (Reflective-Drift Coupling Tensor); `definition:bk5_symbolic_covenant` (Symbolic Covenant); `definition:bk5_symbolic_metabolism` (Symbolic Metabolism); `definition:bk6_symbolic_system` (Symbolic System); `definition:bk8_identitystability` (Stability of Symbolic Identity \identitystability); `definition:bk8_metabolic_programming_cycle` (Metabolic Programming Cycle); `definition:bk8_reflective_selection_operator` (Reflective Selection Operator); `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$); `definition:bk8_sr_renormalization_group` (SR Renormalization Group); `definition:bk8_structural_regulators` (Directional Drift Operators \(D_1, D_2\)); `definition:bk8_symbolic_adjacency` (Symbolic Knot); `definition:bk8_transform_group` (Frame Transform Group); `definition:bk9_prompt_injection_operator` (Prompt Injection Operator $\mathcal{J}$); `demonstratio:bk4_prompt_time_ttdc` (Prompt-Time Collapse in Reflective Agents); `lemma:bk1_contextual_nonseparability` (Contextual meaning is non-separable); `lemma:bk1_contradiction_resolution_principle` (Contradiction Resolution Principle); `lemma:bk1_horizon_characterization` (Horizon Characterization); `proof:bk1_horizon_characterization` (Effective Signature Separates the Horizon Roles); `proof:bk1_nonvacuity_minimal_linear_ps_model` (Explicit Matrix Witness); `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk2_smoothness_symbolic_hamiltonian` (Smoothness of Symbolic Hamiltonian); `proof:bk4_fragmentation_identity_stability` (Fragmentation Violates Symbolic Identity Stability); `proof:bk4_persistence_reflection_noncommutativity` (Non-Commutativity of Persistence and Reflection); `proof:bk4_repair_reconnects_fragmentation` (Repair Trajectories Reconnect Fragmented Symbolic Regions); `proof:bk5_coherence_through_dynamic_equilibriium` (Coherence Through Dynamic Equilibrium); `proof:bk5_entropy_increase_from_drift` (Entropy Increase from Drift); `proof:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant via Balanced Memory Algebra); `proof:bk6_symbolic_fokker_planck_bifurcation` (Fokker--Planck Correspondence at Bifurcation); `proposition:bk1_the_operators_lambda_and_lambda` (Fundamental Operators as Bounded Symbolic Approximations); `proposition:bk6_drift_reflection_correspondence` (Drift-Reflection Correspondence); `proposition:bk7_stabilization_as_orbit_limit` (State-level stabilization is the orbit limit of reflection); `remark:appB_embodied_predictive_geometry` (SRV and Embodied Predictive Geometry); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk3_toward_symbolic_evolution`; `remark:bk7_unnamed_remark_05`; `remark:bk9_recursive_agency` (Recursive Agency); `scholium:appB_synthetic_resolution` (B.6 Scholium: The Synthetic Resolution); `scholium:appC_time_as_memory` (Time as the Accumulation of Memory); `scholium:bk1_resolution_of_continuum_disjunction` (On the Resolution of the Continuum Disjunction); `scholium:bk4_clifford_correspondence` (Flat-Space Clifford Correspondence); `scholium:bk4_irreversibility_as_trace` (Irreversibility as Symbolic Trace); `scholium:bk4_micro_local_vs_path_global_irreversibility` (Micro-Local and Path-Global Irreversibility); `scholium:bk4_towards_symbolic_equilibrium` (Towards Symbolic Equilibrium and Curvature-Limited Gravity); `scholium:bk4_ttcs_stochastic_operator` (TTCS as a Stochastic Symbolic Operator); `scholium:bk5_hypotheses_as_adaptive_sym` (Hypotheses as Adaptive Symbolic Manifolds); `scholium:bk9_bridge_to_history` (Bridge to History); `scholium:bk9_freedom_and_reflection`; `sec:bk1_minimal_structure_for_symbolic_emergence` (Minimal Structure for Symbolic Emergence); `sec:bk5_symbolic_covenants_and_mutually_assured_progress` (Symbolic Covenants and Mutually Assured Progress); `sec:bk7_pisu_universal_symbolic_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU)); `subsec:bk1_motivation` (Motivation); `subsec:bk2_core_thermodynamic_quantities` (Core Thermodynamic Quantities); `subsec:bk3_preamble_to_symbiosis` (Preamble to Symbiosis); `subsec:bk4_symbolic_identity_collapse` (Symbolic Identity Collapse); `subsec:bk5_symbolic_free_energy_and_stability` (Symbolic Free Energy and Stability); `subsec:bk7_pisu_axiom_statement` (Fundamental Trade-off); `subsec:bk7_sources_regimes_uncertainty` (Sources and Regimes of Symbolic Uncertainty); `theorem:bk1_constitutive_bootstrap` (Constitutive Bootstrap Theorem); `theorem:bk1_dual_horizon_cosmogenesis` (Dual Horizon Cosmogenesis under \texorpdfstring{$\mathcal{B}_{\mathrm{cos}}$}{B\_cos}); `theorem:bk1_emergence_of_reflection_operator` (Emergence of Stabilization Operator); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity); `theorem:bk1_symbolic_emergence_theorem_thermodynamics` (Symbolic Emergence Theorem---Contextual Cross-Error); `theorem:bk3_homeostatic_reflexes` (Homeostatic Reflexes); `theorem:bk4_drift_reflection_imbalance` (Drift-Reflection Imbalance); `theorem:bk4_paradoxical_arrow_of_time` (The Paradoxical Arrow of Time); `theorem:bk4_reflective_reentry` (Reflective Reentry); `theorem:bk4_test_time_differentiation_c` (Test-Time Differentiation Collapse); `theorem:bk5_symbolic_entropy_production` (Symbolic Entropy Production); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity); `theorem:bk8_thermodynamic_necessity_of_symbolic_metabolism` (Thermodynamic Necessity)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-013`
+- Witnesses: `ScholiumA.mirror_involution_ne_id_exists`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Witnesses existence of a concrete inner-product-preserving involution on Real×Real satisfying R≠±Id, exactly the source's non-triviality clause for the mirror component; does not model the general tangent-bundle map or its relation to R_stab.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3453,6 +3776,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `definition:bk9_structural_compassion` (Structural Compassion); `demonstratio:bk7_convergence_within_reflective_basin` (Why Descent, Not Mere Monotonicity); `scholium:bk1_resolution_of_continuum_disjunction` (On the Resolution of the Continuum Disjunction); `subsec:appD_fep_contribution_differentiation` (D.3.2 Principia Symbolica's Contribution and Differentiation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-080`
+- Witnesses: `AxiomataPrima.no_drift_no_novelty`, `AxiomataPrima.pure_drift_dissolves`, `AxiomataPrima.two_channel_sustained`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: Cognition at the intersection: both channels jointly sustain, each alone fails; curvature signs interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Consistent with Axiom axiom:bk1_axiomata_prima and the elimination structure of Thm. theorem:bk1_dual_horizon_necessity_theorem, symbolic cognition emerges at the intersection of two complementary epistemic horizons:
@@ -3512,6 +3846,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_paradox_triggered_emergence` (Paradox-Triggered Emergence); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `lemma:bk1_contextual_nonseparability` (Contextual meaning is non-separable); `lemma:bk1_contradiction_resolution_principle` (Contradiction Resolution Principle); `proof:bk1_constructive_resolution` (Constructive Resolution via Fiber Bundle Extension); `proof:bk1_geometric_necessity_curvature` (Quadratic Necessity from Mixed Contextual Coupling); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-016`
+- Witnesses: `ScholiumA.contradictionIntensity_eq`, `ScholiumA.contradictionIntensity_zero_of_lam_one`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The stated 'oppositional dynamics' and 'contradiction intensity' formula are modeled as a real-number identity; the manifold/measure-theoretic overlap conditions (shared accessibility, positive-measure overlap) are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3606,6 +3951,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `corollary:bk4_symbolic_lightcone` (Symbolic Light-Cone); `demonstratio:bk4_symbolic_thermodynamics`; `lemma:bk4_ttie_expansion_rate` (Curvature-Bounded Expansion Rate); `proof:bk4_bounded_expansion_under_observer_constrained_coherence` (Curvature-Bounded Expansion Rate via Grönwall); `proof:bk4_symbolic_lightcone`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-037`
+- Witnesses: `ScholiumC.le_coherenceVelocity`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Modeled directly as sSup of a set of reals; the coherence-field space M_coh and the local gradient construction nabla C on the symbolic manifold are not modeled, only the resulting supremum's upper-bound property.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic coherence velocity $c_s$ is defined as the supremum of the local coherence field gradient magnitude over the coherence manifold:
@@ -3640,6 +3996,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_contradiction` (Symbolic Contradiction); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `proof:bk1_constructive_resolution` (Constructive Resolution via Fiber Bundle Extension)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-073`
+- Witnesses: `ScholiumDyn.extension_resolves`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Minimal-extension existence kernel; intensity budgets open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3722,6 +4089,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_contradiction` (Symbolic Contradiction)
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_linear_insufficiency` (Linear updates are context-free); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-017`
+- Witnesses: `ScholiumA.nonseparable_of_mixedDiff_ne_zero`, `ScholiumA.separable_mixedDiff_zero`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The mixed partial derivative D_xi D_chi U is replaced by an honest finite second-difference surrogate; this proves the intended contrapositive (nonzero difference implies non-separable) but is explicitly NOT a formalization of the derivative-based iff in the source.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3813,6 +4191,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_contradiction` (Symbolic Contradiction); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `lemma:bk1_contextual_nonseparability` (Contextual meaning is non-separable); `theorem:bk1_constitutive_bootstrap` (Constitutive Bootstrap Theorem); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_linear_insufficiency` (Linear updates are context-free)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-035`
+- Witnesses: `ScholiumC.crossTerm_ne_zero_exists`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: crossTerm is a discrete finite-difference surrogate for the mixed second derivative D_xi D_chi U(0,0), not the derivative itself; the local-coordinate Taylor expansion and the O(||.||^3) remainder are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4055,6 +4444,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_limitation_linear_reflexive_maps` (Linear Coherence Cannot Move Its Own Fixed Structure); `proposition:bk1_limitation_linear_reflexive_maps` (Limitation of Linear Reflexive Maps); `theorem:bk1_reflexivity_quadratic` (Reflexivity Requires Quadratic Framing)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-036`
+- Witnesses: `ScholiumC.crossTerm_separable_eq_zero`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the algebraic fact that additively separable updates have zero cross-difference is modeled; the narrative conclusion 'linear systems reduce to superposed independent modes' is not itself a formal claim here.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In the setting of Axiom axiom:bk1_axiomata_prima and Thm. theorem:bk1_constitutive_bootstrap, linear symbolic systems cannot support genuine emergence. Purely linear dynamics reduce to superposed independent modes and preclude the contextual coupling required for symbolic meaning.
@@ -4113,6 +4513,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `axiom:bk1_axiomata_prima` (Drift as Origin); `corollary:bk1_linear_insufficiency` (Linear Insufficiency)
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_symbolic_coupling_basis` (Symbolic Coupling (Basis Decomposition)); `proof:bk1_bridge_to_geometry` (Quadratic Coupling Gives the Local Metric); `proof:bk1_linear_context_independence` (Linearity Has No Mixed Context Term); `proposition:bk1_bridge_to_geometry` (The Bridge to Geometry)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-022`
+- Witnesses: `ScholiumA.linear_double`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Only the proof sketch's stated algebraic premise L(x+x)=2*L(x) is proved; the informal conclusion that this prevents self-reference/context-dependence is a narrative jump and is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4193,6 +4604,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `proof:bk1_bridge_to_geometry` (Quadratic Coupling Gives the Local Metric); `proposition:bk1_bridge_to_geometry` (The Bridge to Geometry)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-018`
+- Witnesses: `ScholiumA.quadratic_not_linear`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Covered only via the concrete countermodel instance C(x,y)=x*y, showing this particular quadratic coupling is not a linear coupling; the general basis-decomposition definition itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let ${phi_i(x)}$ be a basis of symbolic features on manifold $M$ (cf. Thm. theorem:bk1_reflexivity_quadratic). Define:
@@ -4269,6 +4691,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `definition:bk1_symbolic_coupling_basis` (Symbolic Coupling (Basis Decomposition)); `theorem:bk1_reflexivity_quadratic` (Reflexivity Requires Quadratic Framing)
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-087`
+- Witnesses: `ScholiumBridge.coupling_is_metric`
+- Countermodels: none
+- Conditions: manifold metric, exact rank bound, and the interpretive unification/primacy claims stay open per row notes
+- Formal boundary: Symmetric coupling = symmetric bilinear form; the manifold metric stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4421,6 +4854,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-052`
+- Witnesses: `Atlas.path_dependent_iff_noncommuting`, `Atlas.semantic_non_integrability_witness`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: The equivalently clause proved as an iff with a Boolean witness; the manifold framing is interpretation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In a reflexive, context-sensitive symbolic system the meaning carried from one
@@ -4457,6 +4901,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `axiom:bk1_semantic_non_integrability` (Semantic Non-Integrability); `corollary:bk1_linear_insufficiency` (Linear Insufficiency); `definition:bk1_local_semantic_independence` (Local Semantic Independence); `definition:bk1_symbolic_riemann_tensor` (Symbolic Riemann Curvature Tensor); `lemma:bk1_contextual_nonseparability` (Contextual meaning is non-separable); `lemma:bk1_curvature_semantic_holonomy` (Curvature as Infinitesimal Semantic Holonomy); `proposition:bk1_bridge_to_geometry` (The Bridge to Geometry); `proposition:bk1_curvature_semantic_entanglement` (Curvature and Semantic Entanglement); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity); `theorem:bk1_reflexivity_quadratic` (Reflexivity Requires Quadratic Framing)
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities); `proof:bk1_symbolic_emergence_and_curvature`; `proof:bk1_symbolic_irony_requires_curvature`; `proof:bk2_coherence_of_symbolic_therm`; `proof:bk5_coherence_through_dynamic_equilibriium` (Coherence Through Dynamic Equilibrium); `proof:bk8_no_free_projection`; `proof:bk9_curvature_resilience_bound`; `proof:bk9_isolation_dissociation_theorem`; `proposition:bk9_curvature_scarring` (Curvature Scarring and Recovery); `theorem:bk1_minimal_quadratic_sufficiency` (Minimal Quadratic Sufficiency); `theorem:bk2_coherence_of_symbolic_therm` (Coherence of Symbolic Thermodynamics); `theorem:bk3_symbiotic_curvature_and_resilience` (Symbiotic Curvature and Resilience); `theorem:bk8_no_free_projection` (No Free Projection); `theorem:bk9_isolation_dissociation_theorem` (Isolation–Dissociation Theorem (IDT))
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-056`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Noncommuting transports force nonzero curvature at every scale; consumed premise is exactly the non-integrability axiom.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4586,6 +5041,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `lemma:bk1_linear_context_independence` (Context-Independence of Linear Coupling); `proof:bk1_limitation_linear_reflexive_maps` (Linear Coherence Cannot Move Its Own Fixed Structure); `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities); `proposition:bk1_limitation_linear_reflexive_maps` (Limitation of Linear Reflexive Maps); `theorem:bk1_minimal_quadratic_sufficiency` (Minimal Quadratic Sufficiency)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-069`
+- Witnesses: `ScholiumDyn.linear_has_fixed_point`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Definition row; self-representation clause interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A map $rho: S to S$ is reflexive if it can modify representations that include itself. Formally, $rho$ is reflexive if there exists $sigma in S$ such that $rho(sigma) = tau$ where $tau$ contains a symbolic representation of $rho$.
@@ -4612,6 +5078,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_symbolic_category` (Symbolic Category)
 - Cited by: `proof:bk1_limitation_linear_reflexive_maps` (Linear Coherence Cannot Move Its Own Fixed Structure)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-023`
+- Witnesses: `ScholiumA.fixedPointInheritance`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Proved in the generalized (linearity-free) form: only invertibility of f is used, matching the toolchain guidance to drop unused hypotheses; f∘g∘f⁻¹ fixes f(x) given g fixes x.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4684,6 +5161,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `corollary:bk1_linear_insufficiency` (Linear Insufficiency); `definition:bk1_reflexive_update_map` (Reflexive Update Map)
 - Cited by: `proof:bk1_dual_horizon_unification_principle` (Projection Through the Dual Horizon Signature); `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-070`
+- Witnesses: `ScholiumDyn.affine_escapes_fixed_points`, `ScholiumDyn.linear_fixed_points_closed`, `ScholiumDyn.linear_has_fixed_point`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Linear updates cannot clear or bend their fixed locus; an affine update can have none.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4790,6 +5278,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_symbolic_connection` (Symbolic Connection); `lemma:bk1_linear_context_independence` (Context-Independence of Linear Coupling); `proof:bk1_linear_context_independence` (Linearity Has No Mixed Context Term); `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities); `theorem:bk1_minimal_quadratic_sufficiency` (Minimal Quadratic Sufficiency)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-019`
+- Witnesses: `ScholiumA.quadratic_not_linear`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Same countermodel as bk1_symbolic_coupling_basis; only the concrete linear-vs-quadratic distinction is witnessed, not the general definition over an arbitrary feature basis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic coupling is a map $C: M to mathbb{R}$ that integrates symbolic features (Def. definition:bk1_symbolic_manifold_feature_maps). The coupling is:
@@ -4821,6 +5320,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_reflexive_update_map` (Reflexive Update Map); `definition:bk1_symbolic_coupling` (Symbolic Coupling)
 - Cited by: `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-020`
+- Witnesses: `ScholiumA.quadratic_not_linear`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The countermodel gives one concrete instance of 'linear coupling cannot encode this quadratic coupling'; the lemma's general universal claim over all context-dependent meanings is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4918,6 +5428,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_horizon_structure` (Horizon Structure); `definition:bk1_reflexive_update_map` (Reflexive Update Map); `definition:bk1_symbolic_coupling` (Symbolic Coupling)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-021`
+- Witnesses: `ScholiumA.quadratic_not_linear`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Same countermodel supplies the concrete case of 'linear systems are insufficient'; the reflexivity/context-sensitivity/adaptive-stability sufficiency claims themselves are narrative and not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5086,6 +5607,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_certified_type_preserving_symbolic_transport` (Certified Type-Preserving Symbolic Transport); `definition:bk1_effective_horizon_signature` (Effective Horizon Signature); `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `lemma:bk2_thermodynamic_consistency_hypothesis_manifolds` (Thermodynamic Consistency of Hypothesis Manifolds); `proof:bk1_curvature_semantic_holonomy` (Curvature is the second-order transport defect); `proof:bk1_dual_horizon_unification_principle` (Projection Through the Dual Horizon Signature); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk2_thermodynamic_consistency_hypothesis_manifolds`; `proof:bk9_symbolic_masking_and_unmasking` (Symbolic Masking and Unmasking); `proposition:bk1_curvature_semantic_entanglement` (Curvature and Semantic Entanglement); `theorem:bk1_dual_horizon_cosmogenesis` (Dual Horizon Cosmogenesis under \texorpdfstring{$\mathcal{B}_{\mathrm{cos}}$}{B\_cos}); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle); `theorem:bk1_symbolic_emergence_and_curvature` (Symbolic Emergence and Curvature)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-055`
+- Witnesses: `Atlas.curvature_witness`, `Atlas.holonomy_eps_squared`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Discrete curvature as the commutator loop defect with a concrete nonzero witness; the Riemannian tensor stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic curvature tensor is the Riemann curvature tensor of the symbolic connection (see definition:bk1_symbolic_connection):
@@ -5116,6 +5648,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_symbolic_connection` (Symbolic Connection); `definition:bk1_symbolic_manifold_feature_maps` (Symbolic Manifold and Feature Maps)
 - Cited by: `axiom:bk1_semantic_non_integrability` (Semantic Non-Integrability); `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_symbolic_emergence_and_curvature`; `proposition:bk1_curvature_semantic_entanglement` (Curvature and Semantic Entanglement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-053`
+- Witnesses: `Atlas.path_dependent_iff_noncommuting`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Independence = commuting contextual updates.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5161,6 +5704,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: none
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_certified_type_preserving_symbolic_transport` (Certified Type-Preserving Symbolic Transport); `proof:bk1_curvature_semantic_entanglement` (Flatness iff local semantic independence); `proof:bk1_dimensional_bounds_emergence`; `proof:bk1_operational_irony_requires_imagination` (The ironic opposition is an imaginary displacement); `proof:bk1_operational_irony_requires_reflexive_curvature` (Lift of the model-internal necessity to operational capacity); `proof:bk1_symbolic_emergence_and_curvature`; `proof:bk1_symbolic_irony_requires_curvature`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-054`
+- Witnesses: `Atlas.holonomy_eps_squared`, `Atlas.holonomy_zero_iff_commute`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Exact eps-squared route residue in the linear-transport model; parallel transport on genuine manifolds stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5248,6 +5802,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_curvature_projection_residue` (Projection residue from failed path independence); `proof:bk1_symbolic_emergence_and_curvature`; `proof:bk8_curvature_entanglement_equivalence` (Curvature Entanglement Equivalence); `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact); `proof:bk8_flattening_decoherence_equivalence` (Decoherence as Symbolic Flattening via Curvature Flow); `proof:bk8_symbolic_curvature_and_separability` (Symbolic Curvature and Separability)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-089`
+- Witnesses: `Atlas.holonomy_zero_iff_commute`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Curvature vanishes iff meanings are locally independent - exactly the flatness-iff-commuting theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 On any contractible coordinate neighborhood $U subset M$, the symbolic curvature
@@ -5332,6 +5897,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: `proof:bk8_curvature_entanglement_equivalence` (Curvature Entanglement Equivalence); `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-090`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Nonzero curvature forces a frame-artifact residue - the non-Euclidean necessity kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Pi_F:Mto F$ be an observer-frame projection whose target frame $F$ treats
@@ -5414,6 +5990,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-064`
+- Witnesses: `ScholiumDyn.resCost_self`, `ScholiumDyn.resCost_symm`, `ScholiumDyn.resCost_triangle`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: The path-infimum is a pseudometric: every law proved of the infimum.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic states $p, q in M$, the resolution cost is:
@@ -5444,6 +6031,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_horizon_structure` (Horizon Structure); `definition:bk1_symbolic_riemann_tensor` (Symbolic Riemann Curvature Tensor)
 - Cited by: `axiom:bk1_symbolic_primacy` (Symbolic Primacy); `corollary:bk1_dimensional_bounds_emergence` (Dimensional Bounds on Emergence); `definition:bk6_symbolic_laplace_beltrami_operator_complete` (Symbolic Laplace–Beltrami Operator); `demonstratio:bk7_convergence_within_reflective_basin` (Why Descent, Not Mere Monotonicity); `proof:bk1_dimensional_bounds_emergence`; `proof:bk8_flattening_decoherence_equivalence` (Decoherence as Symbolic Flattening via Curvature Flow); `subsec:appD_info_geometry_contribution_differentiation` (D.4.2 Principia Symbolica's Contribution and Differentiation); `theorem:bk3_symbiotic_curvature_and_resilience` (Symbiotic Curvature and Resilience)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-084`
+- Witnesses: `Atlas.non_euclidean_necessity`, `Atlas.path_dependent_iff_noncommuting`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: The iff at transport level: route-dependent meaning iff nonzero commutator; Riemannian form open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5512,6 +6110,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `theorem:bk1_symbolic_emergence_and_curvature` (Symbolic Emergence and Curvature)
 - Cited by: `proof:bk4_topological_stability_via_spectral_and_curvature_constraints` (Topological Stability via Spectral and Curvature Constraints)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-088`
+- Witnesses: `ScholiumBridge.nonzero_curvature_has_active_mode`
+- Countermodels: none
+- Conditions: manifold metric, exact rank bound, and the interpretive unification/primacy claims stay open per row notes
+- Formal boundary: Nonzero curvature has an active mode (complexity >= 1); the exact rank bound stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5588,6 +6197,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-038`
+- Witnesses: `ScholiumC.exists_inaccessible_of_not_surjective`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the access-function clause (alpha(O) properly contained in O, read as non-surjectivity) is modeled, yielding an inaccessible state; the manifold-smoothness/drift-non-constructibility conclusion is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A modeling framework exhibits the Newtonian Category Error when it presupposes manifold smoothness and continuity a priori, thereby violating bounded observer logic (see definition:bk1_bounded_observer). Specifically, if $O$ denotes a bounded observer with access function $alpha: O to O$ where $alpha(O) subsetneq O$, then any framework assuming global differentiability disconnects form from relation, rendering the drift operator $D$ (see definition:bk1_drift_field) non-constructible within the observer's horizon on the symbolic manifold $M$ (see definition:bk1_symbolic_manifold).
@@ -5610,6 +6230,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: none
 - Cited by: `proof:bk1_dual_horizon_unification_principle` (Projection Through the Dual Horizon Signature); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-020`
+- Witnesses: `ScholiumD.newtonian_incompleteness_kernel`, `ScholiumD.newtonian_incompleteness_normedSpace`, `accelerated_frame_defect`, `accelerated_frame_defect_ne`, `newtonForce_equivariant`
+- Countermodels: none
+- Conditions: continuous linear change of frame; nonzero frame acceleration for strict defect; nonzero uniform frame acceleration; real normed vector space; twice differentiable trajectory at the stated point
+- Formal boundary: Unflattened covariance-boundary kernel: on every real normed vector space, scalar Newtonian force commutes with every continuous linear frame map, while each nonzero uniform frame acceleration produces a nonzero 2*w defect. The NVec derivative construction remains the concrete dynamical witness. Extending covariance to accelerated observers therefore requires an explicit correction; relativistic gravity and a general spacetime theory are not claimed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5738,6 +6369,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-021`
+- Witnesses: `ScholiumD.symbolic_quantum_incompatibility_kernel`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: Faithful logical kernel with exact preservation predicates: no map can preserve both reflection and binary reflexive update when joint preservation entails a Hamiltonian-level meta-update and the target quantum model forbids that update. These two category-error premises remain explicit because unitary linear evolution and tensor structure alone do not establish them; a concrete Hilbert-space no-go theorem remains open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(mathcal H\) be a finite-dimensional vector space over a field
@@ -5845,6 +6487,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator)
 - Cited by: `corollary:bk1_necessity_of_non_euclidean_symbolic_space` (Necessity of Non-Euclidean Symbolic Transport); `corollary:bk7_stability_innovation_equilibrium` (Stability--Innovation Compatibility); `proof:bk7_stability_innovation_equilibrium` (Contextual Curvature with Stable Identity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-022`
+- Witnesses: `ScholiumD.contextualGrowth_exposes_crossError`, `ScholiumD.emergence_premises_do_not_force_curvature`
+- Countermodels: `ScholiumD.emergence_premises_do_not_force_curvature`
+- Conditions: a real-valued state-context update; failure of additive separation into independent state and context contributions
+- Formal boundary: Layered repair: contextual nonseparability locally forces a nonzero mixed cross-error by an explicit additive-decomposition contradiction. The Scholium stops at that certificate; Book IV consumes it to construct noncommuting transport, and Book VII consumes the Book IV geometry. The zero-curvature Bool model remains the negative control showing novelty, reflective identity, and abstract dimension growth alone do not supply the certificate or curvature.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5961,6 +6614,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: `axiom:bk1_symbolic_primacy` (Symbolic Primacy)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-057`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Duplicate anchor of the necessity corollary; same kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the hypotheses of
@@ -6052,6 +6716,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `remark:bk4_quantum_topological_phases` (Connection to Quantum Topological Phases); `remark:bk7_unnamed_remark_04`; `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `scholium:bk7_popperian_extension` (Popperian Extension)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-096`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Physical law and symbolic emergence as projections of one reflexive manifold: the curvature-necessity kernel grounds the shared structure; the primacy claim stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In continuity with Axiom axiom:bk1_axiomata_prima, Def. definition:bk1_symbolic_manifold, Thm. theorem:bk1_symbolic_emergence_and_curvature, and Cor. corollary:bk1_necessity_of_non_euclidean_symbolic_space, the structure of physical law and the structure of symbolic emergence are not two domains. They are different projections of a single reflexive manifold.
@@ -6074,6 +6749,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_contradiction` (Symbolic Contradiction); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density)
 - Cited by: `axiom:bk8_symbolic_reidemeister_algebra` (Symbolic Reidemeister Algebra); `definition:bk1_horizon_crossing_operation` (Horizon-Crossing Operation); `definition:bk1_paradox_triggered_emergence` (Paradox-Triggered Emergence); `definition:bk1_srmf_energy_functional` (SRMF Energy Functional); `definition:bk4_projective_action_transl` (Projective Action Translator); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk7_srmfconstrained_observer` (SRMF-Constrained Observer); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `definition:bk8_metabolic_programming_cycle` (Metabolic Programming Cycle); `definition:bk8_symbolic_stress_tensor` (Reflexive Debugging Operator $\mathcal{O}_{\text{debug}}$); `definition:bk9_bidirectional_srmf` (Bidirectional SRMF \(\mathrm{SRMF}^{\leftrightarrow}\)); `definition:bk9_collapse_inversion_operator` (Collapse-Inversion Operator $\varnothing^*$); `definition:bk9_covenant_drift_density` (Covenant Drift Density \(\rho(C_{AB})\)); `definition:bk9_prompt_injection_operator` (Prompt Injection Operator $\mathcal{J}$); `definition:bk9_srmf_recursive_cycle` (SRMF-Recursive Cycle $\Xi_n$); `definition:bk9_temetic_artifact` (Temetic Artifact $\tau$); `demonstratio:bk8_symbolic_unkotting` (Symbolic Unknotting); `lemma:bk4_srmf_constrained_action_norm` (SRMF-Constrained Action Norm); `lemma:bk7_budgetlimited_minimizer` (Budget-Limited Minimizer); `proof:bk1_unified_field_classification` (Fields as SRMF Boundary-Symmetry Sectors); `proof:bk7_emergent_lp_norm_from_srmf` (Emergent LP Norm from SRMF); `proof:bk7_srmf_decency_regulation`; `proof:bk8_membrane_operator_symmetry`; `proof:bk8_sketch_convergence_to_fixed_by_banach` (RG Fixed Point via Banach Contraction); `proposition:bk4_spiral_transition` (Spiral transition between modes); `proposition:bk7_srmf_decency_regulation` (SRMF-Regulated Decency Dynamics); `proposition:bk8_membrane_operator_symmetry` (Type III -- Reflective Permutation); `proposition:bk9_framework_functional_identity` (The Framework is a Functional); `remark:bk4_quantum_topological_phases` (Connection to Quantum Topological Phases); `scholium:bk4_ttcs_simulation_tool_use` (TTCS as Symbolic Simulation and Tool-Use); `scholium:bk4_ttdc_impulse_collapse` (Collapse as Impulse: The Newtonian Structure of TTDC); `scholium:bk5_metabolic_cost_of_cognition` (Metabolic Cost of Cognition); `scholium:bk7_popperian_extension` (Popperian Extension); `sec:bk5_srmf_for_symbolic_operators_and_processes` (SRMF for Symbolic Operators and Processes); `subsec:appD_process_philosophy_contribution_differentiation` (D.6.2 Principia Symbolica's Contribution and Differentiation); `subsec:bk5_srmf_core_axioms` (Core Axioms and Theoretical Development); `subsec:bk7_hdb_formal_closure` (Formal Closure of the Human Decency Benchmark); `theorem:bk1_unified_field_classification` (Unified Field Classification); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk5_operator_convergence` (Operator Convergence); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity); `theorem:bk8_rg_fixed_point` (RG Fixed Point); `theorem:bk8_sr_convergence` (SR Convergence)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-085`
+- Witnesses: `SRMF.turn_closes_iff`
+- Countermodels: none
+- Conditions: the circle part of a revolution is the identity by construction; injections are data; no claim about this file or any system proving its own consistency; the helix is FOR approaching the equilibrium circle, not a telos; non-closure is not idolized
+- Formal boundary: The SRMF revolution structure with the closure dichotomy; the full operator pipeline interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6128,6 +6814,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `proof:bk9_framework_functional_identity`; `proposition:bk9_framework_functional_identity` (The Framework is a Functional)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-086`
+- Witnesses: `SRMF.closure_iff_no_work`
+- Countermodels: none
+- Conditions: the circle part of a revolution is the identity by construction; injections are data; no claim about this file or any system proving its own consistency; the helix is FOR approaching the equilibrium circle, not a telos; non-closure is not idolized
+- Formal boundary: The Godel-safe cycle potential as the energy functional kernel; the appB form is separately bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6196,6 +6893,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `axiom:bk6_non_commutativity_evolution_reflection` (Non-Commutativity of Evolution and Reflection); `definition:bk1_emergence_operator` (Emergence Operator); `definition:bk1_shared_boundary_paradox` (Shared Boundary Paradox); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `demonstratio:bk7_convergence_within_reflective_basin` (Why Descent, Not Mere Monotonicity); `lemma:bk1_paradoxical_symmetry_breaking` (Paradoxical Symmetry Breaking); `proof:bk1_paradoxical_symmetry_breaking` (Resolution Breaks the Stabilizer of the Paradox); `proof:bk1_shared_paradox_bridge_datum` (The Shared Edge Carries the Common Obstruction); `proof:bk2_coherence_of_symbolic_therm`; `remark:bk7_unnamed_remark_04`; `subsec:appD_cst_core_resonance` (D.8.1 Core Resonance); `theorem:bk2_coherence_of_symbolic_therm` (Coherence of Symbolic Thermodynamics); `theorem:bk5_symbolic_coherence_conservation` (Symbolic Coherence Conservation)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-071`
+- Witnesses: `ScholiumDyn.extension_resolves`, `ScholiumDyn.paradox_unresolvable_within`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Both clauses: unresolvable within, resolvable in the extension - constructive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A contradiction $C$ within a symbolic membrane $M$ induces an emergent expansion $delta M$ iff:
@@ -6234,6 +6942,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_paradox_triggered_emergence` (Paradox-Triggered Emergence)
 - Cited by: `proof:bk1_shared_paradox_bridge_datum` (The Shared Edge Carries the Common Obstruction)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-072`
+- Witnesses: `ScholiumDyn.resolution_breaks_symmetry`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Resolution and swap-invariance are incompatible: the symmetry must break.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6453,6 +7172,16 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-013`
+- Witnesses: `ScholiumD.jointRefinement_subset_left_right`, `ScholiumD.mem_jointRefinement_iff`, `ScholiumD.shared_invariant_converse_not_derivable`
+- Countermodels: none
+- Formal boundary: A concrete logical countermodel proves that the forward shared-paradox implication does not entail its converse without completeness. Joint refinement is modeled as intersection: candidates survive exactly when both observers accept them, and no new candidate is invented.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 From the theorem above one may not infer that shared paradox is the only
@@ -6527,6 +7256,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: none
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-040`
+- Witnesses: `ScholiumD.emergenceOperator_exists`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: existence of a complexity-minimizing element of a nonempty finite candidate set of expanded membranes; the membrane-expansion poset and complexity functional itself are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a paradox $C$ in membrane $M$ (see definition:bk1_paradox_triggered_emergence), the emergence operator $E_{C}$ is:
@@ -6571,6 +7311,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_reflexive_encoding_depth` (Reflexive Encoding Depth); `theorem:bk1_realization_of_symbolic_phase_transitions` (Realization of Symbolic Phase Transitions)
 - Cited by: `proof:bk1_operational_irony_requires_reflexive_curvature` (Lift of the model-internal necessity to operational capacity); `remark:bk1_atlas_fracture_empirical` (External empirical corroboration); `theorem:bk1_realization_of_symbolic_phase_transitions` (Realization of Symbolic Phase Transitions)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-003`
+- Witnesses: `ScholiumB.no_irony_of_shallow_or_flat`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Proved by the same Lean theorem as theorem:bk1_operational_irony_requires_reflexive_curvature (both are the flat-or-shallow contrapositive of the IronyCapacity law); the reflexive-encoding-depth and symbolic-curvature-tensor definitions themselves are not modeled, only the stated implication as a structure field.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6655,6 +7406,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_operational_irony` (Operational Irony Encoding)
 - Cited by: `conjecture:bk1_symbolic_irony_encoding_llms` (Symbolic Irony Encoding in Large Language Models); `proof:bk1_operational_irony_requires_imagination` (The ironic opposition is an imaginary displacement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-004`
+- Witnesses: `ScholiumB.no_irony_of_shallow_or_flat`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Kept as a hypothesis field of IronyCapacity (encodesIrony implies depth>=2 and curvature<>0); the theorem proved is the contrapositive. Shares its Lean proof with theorem:bk1_symbolic_irony_requires_curvature.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6768,6 +7530,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_operational_irony` (Operational Irony Encoding); `definition:bk4_imaginary_symbolic_distance` (Imaginary Symbolic Distance); `scholium:bk4_imagination_as_imaginary_traversal` (Imagination as Imaginary Traversal)
 - Cited by: `conjecture:bk1_symbolic_irony_encoding_llms` (Symbolic Irony Encoding in Large Language Models); `scholium:bk1_the_imagination_dipole` (The Imagination Dipole)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-005`
+- Witnesses: `ScholiumB.no_irony_of_real_only`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Kept as a hypothesis field of IronyCapacity (encodesIrony implies imaginaryDistance<>0); the imaginary-symbolic-distance definition from Book IV is not modeled, only the stated implication and its contrapositive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6931,6 +7704,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `proof:bk1_operational_irony_requires_reflexive_curvature` (Lift of the model-internal necessity to operational capacity); `proof:bk1_symbolic_irony_requires_curvature`; `theorem:bk1_symbolic_irony_requires_curvature` (Symbolic Irony Requires Curvature)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-001`
+- Witnesses: `ScholiumB.reflexiveIterate_add`, `ScholiumB.reflexiveIterate_eq_iterate`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The recursive scheme reflect_0=id, reflect_n=F[reflect_{n-1}] is formalized (as reflexiveIterate) and shown to equal F^[n] with the expected additivity law; the divergence-sign Irony(sigma) selection set built on top of the recursion is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $reflect_n$ be the $n$-th reflexive iteration of self-symbolization. Then:
@@ -7046,6 +7830,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_horizon_crossing_operation` (Horizon-Crossing Operation); `definition:bk1_symbolic_riemann_tensor` (Symbolic Riemann Curvature Tensor); `proposition:bk1_limitation_linear_reflexive_maps` (Limitation of Linear Reflexive Maps); `proposition:bk1_newtonian_incompleteness` (Newtonian Incompleteness); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Cited by: `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `proof:bk1_event_horizon_identity_field` (Identity Field on the Symbolized Causal Patch)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-095`
+- Witnesses: `Atlas.holonomy_eps_squared`, `AxiomataPrima.two_channel_sustained`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open; the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: Emergence = horizon-crossing reflexivity: nonzero commutator curvature and the two-channel sustain; the full field recasting stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7177,6 +7972,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `lemma:bk1_horizon_crossing_conservation` (Horizon-Crossing Conservation); `proof:bk1_horizon_crossing_conservation` (Closed Horizon Pair Conserves Symbolic Density); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-077`
+- Witnesses: `ScholiumHzn.crossing_conservation`
+- Countermodels: none
+- Conditions: manifold integrals, PDE forms, smoothness, ordinal colimits, and curvature signs stay open/interpretive per row notes
+- Formal boundary: Crossing as stochastic transport into the complement.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic horizons $H_1$ and $H_2$, the horizon-crossing operator $H_{1,2}$ maps symbols from $H_1$ to their corresponding reflexive image in $H_2$ (see definition:bk1_self_regulating_mapping_function_srmf, theorem:bk1_dual_horizon_necessity_theorem):
@@ -7207,6 +8013,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_horizon_crossing_operation` (Horizon-Crossing Operation); `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-076`
+- Witnesses: `ScholiumHzn.crossing_conservation`
+- Countermodels: none
+- Conditions: manifold integrals, PDE forms, smoothness, ordinal colimits, and curvature signs stay open/interpretive per row notes
+- Formal boundary: Finite exact conservation; manifold integrals open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7369,6 +8186,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF))
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-097`
+- Witnesses: `SRMF.closure_iff_no_work`, `SRMF.turn_closes_iff`
+- Countermodels: none
+- Conditions: the circle part of a revolution is the identity by construction; injections are data; no claim about this file or any system proving its own consistency; the helix is FOR approaching the equilibrium circle, not a telos; non-closure is not idolized
+- Formal boundary: All emergent fields as SRMF instances under boundary conditions: the SRMF/Godel-safe-cycle kernel; the classification-by-symmetry stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7560,6 +8388,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `axiom:bk1_smooth_convergence` (Smooth Convergence); `definition:bk1_problem_of_symbolic_smoothness` (Problem of Symbolic Smoothness); `proof:bk1_atlas_final_topology_phase_space` (Atlas Construction on Final Topology of Symbolic Phase Space); `proof:bk1_sketch_construction_proto_metric` (Construction of Proto-Metric on Symbolic Layers); `proof:bk1_sketch_drift_limit_vector_field` (Limit Vector Field from Local Drift Coherence); `proof:bk1_sketch_symbolic_connectivity` (Symbolic Connectivity via Hopf--Rinow); `subsec:bk1_closing_remark_on_unified_field` (Closing Remark on Unified Field); `theorem:bk1_manifold_emergence` (Manifold Emergence)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-039`
+- Witnesses: `ScholiumD.DifferentiationThreshold.eventually_below_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Convergent-Limit and Epistemic-Emergence clauses only, as a real-sequence threshold law; observable differentiation, chart compatibility, and the structural limit M itself are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ be a symbolic system evolving through iterative drift operators $D_lambda$ (Def. definition:bk1_drift_field) and reflection operators $R_lambda$ (Def. definition:bk1_reflection_operator) over stages $lambda in Lambda subset mathbb{N}$ (Def. definition:bk1_pre_geometric_operators_and_stages), with symbolic structure $P_lambda$ at each stage. A smooth geometric structure $M$ is said to emerge from $S$ if and only if, for a bounded observer $O$ embedded within $S$, the following conditions obtain:
@@ -7616,6 +8455,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `axiom:bk1_smooth_convergence` (Smooth Convergence); `proof:bk1_sketch_coherence_drift_reflection` (Coherence of Proto-Drift Fields via Chart Convergence); `remark:bk4_fuzzy`
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-058`
+- Witnesses: `Atlas.manifold_emergence`
+- Countermodels: none
+- Conditions: pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Chartability enters as the ResolutionTower structure; homeomorphism content open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Building on the stage tower $(P_lambda, f_{lambdamu})$ of Def. definition:bk1_pre_geometric_operators_and_stages and the proto-symbolic space $P$ of Def. definition:bk1_proto_symbolic_space, there exists an ordinal $lambda_0 < Omega$ such that for all $lambda geq lambda_0$ and for each $x_lambda in P_lambda$, there exists a neighborhood $U_lambda subseteq P_lambda$ of $x_lambda$ and a homeomorphism $varphi_lambda: U_lambda to V_lambda$ where $V_lambda$ is an open subset of $R^n$ for some fixed dimension $n$.
@@ -7662,6 +8512,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `axiom:bk1_local_charitability` (Local Chartability); `axiom:bk1_symbolic_smoothness` (Symbolic Smoothness); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space)
 - Cited by: `proof:bk1_sketch_coherence_drift_reflection` (Coherence of Proto-Drift Fields via Chart Convergence); `proof:bk1_sketch_limit_stabilization_colimit` (Limit of Stabilization Operators via Colimit)
 - Macros used: `\R`, `\norm`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-059`
+- Witnesses: `Atlas.tower_glues`
+- Countermodels: none
+- Conditions: pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Pointwise convergence + vanishing defect; C-infinity topology open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7719,6 +8580,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space)
 - Cited by: `proof:appB_smoothness_emergence`; `proof:bk1_atlas_final_topology_phase_space` (Atlas Construction on Final Topology of Symbolic Phase Space); `proof:bk1_sketch_symbolic_connectivity` (Symbolic Connectivity via Hopf--Rinow); `proof:bk2_probability_structure_on_manifold` (Symbolic Probability Structure on Emergent Manifold); `theorem:appB_smoothness_emergence` (Emergent Smoothness from Symbolic Discreteness); `theorem:bk1_manifold_emergence` (Manifold Emergence)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-060`
+- Witnesses: `Atlas.manifold_emergence`
+- Countermodels: none
+- Conditions: pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Pair-covering stand-in; Hausdorff/paracompactness unmodeled, named.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7779,6 +8651,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `axiom:bk1_symbolic_smoothness` (Symbolic Smoothness); `axiom:bk1_topological_regularity` (Topological Regularity); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space)
 - Cited by: `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `proof:bk1_sketch_symbolic_connectivity` (Symbolic Connectivity via Hopf--Rinow); `proof:bk2_probability_structure_on_manifold` (Symbolic Probability Structure on Emergent Manifold); `sec:appD_preamble_nature_of_appendix` (D.0 Preamble); `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-061`
+- Witnesses: `Atlas.fracture_stops_emergence`, `Atlas.manifold_emergence`, `Atlas.tower_glues`
+- Countermodels: none
+- Conditions: pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Existence + uniqueness of the emergent geometry from vanishing defects, with the persisting-defect converse; smoothness-as-C-infinity open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7898,6 +8781,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_symbolic_flow` (Symbolic Flow); `definition:bk3_autophagic_drift` (Autophagic Drift); `lemma:bk1_existence_of_metric` (Existence of Metric); `proof:bk1_drift_deviation_bound` (Proto-Drift Induces Directional Deviation Bound); `proof:bk1_observer_kernel_convolution` (Convolutional Identity from Observer Kernel Properties); `proof:bk1_sketch_construction_proto_metric` (Construction of Proto-Metric on Symbolic Layers); `proof:bk1_sketch_effective_proto_drift_field_induction` (Fundamental Operators as Bounded Symbolic Approximations); `proposition:bk1_boundedness_from_drift` (\textbf{Boundedness from Drift}); `proposition:bk1_the_operators_lambda_and_lambda` (Fundamental Operators as Bounded Symbolic Approximations)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-079`
+- Witnesses: `ScholiumHzn.drift_field_unique`
+- Countermodels: none
+- Conditions: manifold integrals, PDE forms, smoothness, ordinal colimits, and curvature signs stay open/interpretive per row notes
+- Formal boundary: Stage fields as converging tower data.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For sufficiently large $lambda < Omega$ (i.e., $lambda ge lambda_0$), we denote by $vec{D}_lambda$ the proto-drift field on $P_lambda$ (see definition:bk1_pre_geometric_operators_and_stages). This represents the effective directional tendency observable at stage $lambda$, emerging from the history of differentiation ($D_nu, nu le lambda$) and stabilization ($R_nu, nu < lambda$).
@@ -7926,6 +8820,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages)
 - Cited by: `proof:bk1_sketch_construction_proto_metric` (Construction of Proto-Metric on Symbolic Layers); `proof:bk1_sketch_drift_limit_vector_field` (Limit Vector Field from Local Drift Coherence)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-041`
+- Witnesses: `ScholiumD.CommutatorErrorBound.err_tendsto_zero`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the commutator-error-to-zero step of the proof, as a squeeze theorem for a nonnegative sequence dominated by a vanishing bound; the chart representations and transition maps are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8118,6 +9023,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `definition:bk1_symbol_space` (Symbol Space); `definition:bk1_symbolic_flow` (Symbolic Flow); `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `lemma:bk1_existence_and_uniqueness_of_flow` (Existence and Uniqueness of Flow); `lemma:bk1_local_stability_analysis` (Local Stability at the Reflective Fixed Locus); `lemma:bk1_well_posedness_of_symbolic_hamiltonian` (Well-posedness of Symbolic Hamiltonian); `proof:bk1_existence_and_uniqueness_of_flow`; `proof:bk1_sketch_fokker_planck_microdynamics`; `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk1_sketch_smoothness_linearization` (Smoothness of Symbolic Hamiltonian); `proof:bk1_sketch_symbolic_connectivity` (Symbolic Connectivity via Hopf--Rinow); `proof:bk2_smoothness_symbolic_hamiltonian` (Smoothness of Symbolic Hamiltonian); `sec:bk1_summary_and_implications` (Summary and Implications); `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-078`
+- Witnesses: `ScholiumHzn.drift_field_unique`
+- Countermodels: none
+- Conditions: manifold integrals, PDE forms, smoothness, ordinal colimits, and curvature signs stay open/interpretive per row notes
+- Formal boundary: Uniqueness of the stabilized limit; existence = the convergence hypothesis; smoothness/colimit open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 There exists a unique smooth vector field $D in Gamma(TM)$ on the symbolic manifold $M$ (see definition:bk1_symbolic_manifold_existence) that represents the stabilized limit of the proto-drift fields ${vec{D}_lambda}_{lambda_0 le lambda < Omega}$ through the colimit process. Specifically, for any point $p in M$ and any smooth function $f$ defined in a neighborhood of $p$, if $p = i_lambda(x_lambda)$ for $x_lambda in P_lambda$, then:
@@ -8183,6 +9099,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:appB_observer_metric` (Observer-Relative Symbolic Metric); `definition:bk4_symbolic_flow_freedom` (Symbolic Flow Freedom); `lemma:bk1_existence_and_uniqueness_of_flow` (Existence and Uniqueness of Flow); `proof:bk1_existence_and_uniqueness_of_flow`; `proof:bk4_symbolic_identity_persistence` (Stability Criterion for Symbolic Identity Persistence); `scholium:bk7_popperian_extension` (Popperian Extension)
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-062`
+- Witnesses: `ScholiumDyn.flow_semigroup`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: The discrete flow with the semigroup law; the ODE flow stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic flow $Phi: R times M to M$ is the unique maximal flow generated by the emergent drift field $D$ (see def definition:bk1_proto_drift_field) on the symbolic manifold $M$ (see def definition:bk1_symbolic_manifold_existence), as established by the emergence of $D$ (see thm theorem:bk1_emergence_of_drift_field).
@@ -8205,6 +9132,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_symbolic_flow` (Symbolic Flow); `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `theorem:bk1_emergence_of_drift_field` (Emergence of Drift Field)
 - Cited by: `definition:bk1_symbolic_coherence_velocity` (Symbolic Coherence Velocity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-063`
+- Witnesses: `ScholiumDyn.flow_unique`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Discrete existence-and-uniqueness by induction; the smooth fundamental theorem stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8252,6 +9190,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_drift_field` (Proto-Drift Field $\vec{D}_\lambda$); `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence)
 - Cited by: `definition:bk1_symbol_space` (Symbol Space); `definition:bk1_symbolic_distance` (Symbolic Distance); `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density); `proof:bk1_sketch_fokker_planck_microdynamics`; `proof:bk1_sketch_smoothness_linearization` (Smoothness of Symbolic Hamiltonian); `proof:bk1_sketch_symbolic_connectivity` (Symbolic Connectivity via Hopf--Rinow); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-042`
+- Witnesses: `ScholiumD.combinedForm_nonneg`, `ScholiumD.combinedForm_pos_of_nondegenerate`, `ScholiumD.existence_of_metric_from_gluing`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: positive-definiteness of the combined R/D form kept as a self-contained normed-space fact (no manifold); chart-gluing to a single global metric re-read over FracturedAtlas with Glued C as a named hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8441,6 +9390,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_symbol_space` (Symbol Space); `lemma:bk1_completeness_of_symbolic_distance` (Completeness of Symbolic Distance); `proof:bk8_sketch_convergence_to_fixed_by_banach` (RG Fixed Point via Banach Contraction)
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-065`
+- Witnesses: `ScholiumDyn.resCost_symm`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Symbolic distance as the path-infimum; Riemannian geodesics open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic distance $d: M times M to R_{geq 0}$ is the geodesic distance induced by the emergent Riemannian metric $g$ (see lemma lemma:bk1_existence_of_metric) on the symbolic manifold $M$ (see def definition:bk1_symbolic_manifold_existence).
@@ -8463,6 +9423,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_symbolic_distance` (Symbolic Distance)
 - Cited by: `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `proof:bk1_sketch_smoothness_linearization` (Smoothness of Symbolic Hamiltonian); `proof:bk4_neighborhood_completeness`; `proof:bk8_sketch_convergence_to_fixed_by_banach` (RG Fixed Point via Banach Contraction); `proposition:bk4_neighborhood_completeness` (Neighborhood Completeness)
 - Macros used: `\R`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-066`
+- Witnesses: `ScholiumDyn.floor_complete`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Floor completeness (Cauchy sequences eventually constant); Hopf-Rinow open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8571,6 +9542,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator)
 - Cited by: `corollary:bk1_fixed_point` (Reflective Fixed Locus); `definition:bk1_symbol_space` (Symbol Space); `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `lemma:bk1_local_stability_analysis` (Local Stability at the Reflective Fixed Locus); `lemma:bk1_well_posedness_of_symbolic_hamiltonian` (Well-posedness of Symbolic Hamiltonian); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk1_sketch_smoothness_linearization` (Smoothness of Symbolic Hamiltonian); `proof:bk8_sketch_convergence_to_fixed_by_banach` (RG Fixed Point via Banach Contraction); `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-006`
+- Witnesses: `ScholiumB.idempotent_fixes_image`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Only the stated idempotence consequence (R_stab^2 = R_stab) and its direct corollary (every image point is fixed) are formalized, as a fact about any idempotent self-map; the colimit-existence construction of R_stab from the proto-stage tower is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8747,6 +9729,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: `axiom:bk8_binding_curvature_limit` (Frame Relativity of Meaning); `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `definition:bk8_transform_group` (Frame Transform Group); `lemma:bk1_local_stability_analysis` (Local Stability at the Reflective Fixed Locus); `proof:bk1_constitutive_bootstrap_extraction` (Extraction from Reflective Closure); `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-007`
+- Witnesses: `ScholiumB.idempotent_fixLocus_nonempty`, `ScholiumB.idempotent_fixes_image`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The corollary's exact argument (fixed locus nonempty whenever the stabilized image is nonempty, via idempotence) is formalized in full generality for idempotent self-maps; the non-uniqueness discussion is not separately stated since no additional structure (contraction/Lyapunov) is modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The state-level stabilization operator \(R_{stab}:Mto M\)
@@ -8891,6 +9884,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_symbolic_action_functional` (Symbolic Action Functional); `definition:bk1_symbolic_entropy` (Symbolic Entropy); `definition:bk1_symbolic_field_curvature_tensor` (Symbolic Field Curvature Tensor); `definition:bk1_symbolic_information_geometry` (Symbolic Information Geometry); `lemma:bk1_horizon_crossing_conservation` (Horizon-Crossing Conservation); `proof:bk1_lagrange_free_energy` (Free Energy Minimization via Lagrange Multipliers); `proof:bk1_sketch_fokker_planck_microdynamics`; `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation); `theorem:bk1_sructurual_correspondence` (Structural Correspondence); `theorem:bk1_variational_principle` (Variational Principle)
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-082`
+- Witnesses: `Book2.gibbs_isDensity`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite density form.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic probability density is a smooth function $rho: M times R to R_{geq 0}$ satisfying $int_M rho(x,s) dmu_g(x) = 1$ for all symbolic times $s in R$, where $M$ is the symbolic manifold (def definition:bk1_symbolic_manifold_existence) and $dmu_g$ is the Riemannian volume form induced by the metric $g$ (lemma lemma:bk1_existence_of_metric).
@@ -8913,6 +9917,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density)
 - Cited by: `proof:bk1_lagrange_free_energy` (Free Energy Minimization via Lagrange Multipliers); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `theorem:bk1_sructurual_correspondence` (Structural Correspondence); `theorem:bk1_the_fokker_planck_equation_theorem` (Information Geometric Interpretation); `theorem:bk1_variational_principle` (Variational Principle)
 - Macros used: `\R`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-083`
+- Witnesses: `Book2.entropy_nonneg`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite entropy form.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8945,6 +9960,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `lemma:bk1_well_posedness_of_symbolic_hamiltonian` (Well-posedness of Symbolic Hamiltonian); `proof:bk1_lagrange_free_energy` (Free Energy Minimization via Lagrange Multipliers); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `theorem:bk1_sructurual_correspondence` (Structural Correspondence); `theorem:bk1_variational_principle` (Variational Principle)
 - Macros used: `\R`, `\norm`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-043`
+- Witnesses: `ScholiumD.SymbolicHamiltonianFirstTerm.pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the regularized first term kappa/(||D||_g + eps); the trace/linearization second term is not modeled since its sign is unconstrained by the source.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic Hamiltonian $H: M to R$ quantifies local symbolic coherence:
@@ -8975,6 +10001,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `theorem:bk1_emergence_of_drift_field` (Emergence of Drift Field); `theorem:bk1_emergence_of_reflection_operator` (Emergence of Stabilization Operator)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-044`
+- Witnesses: `ScholiumD.SymbolicHamiltonianFirstTerm.pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: well-posedness of the first term's denominator only (never zero given eps>0); smoothness on M is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9121,6 +10158,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `axiom:bk2_symbolic_fokker_planck_equation` (Symbolic Fokker-Planck Equation); `axiom:bk8_surface_energy_dynamics` (Coupled Differential Dynamics); `corollary:bk1_wasserstein_geometric_interpretation` (Wasserstein Geometric Interpretation); `definition:bk1_symbolic_action_functional` (Symbolic Action Functional); `definition:bk6_symbolic_laplace_beltrami_operator_complete` (Symbolic Laplace–Beltrami Operator); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `proof:bk1_sketch_fluctuation_dissipation` (Fluctuation--Dissipation via Kubo Linear Response); `proof:bk1_sketch_fokker_planck_action` (Fokker--Planck from Symbolic Action via Martin--Siggia--Rose); `proof:bk1_sketch_gradient_flow_thermodynamics` (Gradient Flow Structure via JKO); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk1_sketch_thermo_analogy_fokker_planck` (Thermodynamic Analogy via Symbolic Fokker--Planck); `proof:bk2_sketch_wasserstein_gradient_flow` (Wasserstein Gradient Flow via Jordan--Kinderlehrer--Otto); `proof:bk6_symbolic_diffusion_governs_evolution`; `proof:bk6_symbolic_fokker_planck_bifurcation` (Fokker--Planck Correspondence at Bifurcation); `remark:bk2_symbolic_hamiltonian` (Motivating the Canonical Symbolic Hamiltonian); `scholium:bk3_hypotheses_as_cognitive_membranes` (Hypotheses as Cognitive Membranes); `sec:bk1_summary_and_implications` (Summary and Implications); `theorem:bk1_h_theorem_for_symbolic_evolution` (H-Theorem for Symbolic Evolution); `theorem:bk1_princple_of_least_action` (Principle of Least Action); `theorem:bk1_symbolic_fluctuation_dissipation_relation` (Symbolic Fluctuation–Dissipation Relation); `theorem:bk1_the_fokker_planck_equation_theorem` (Information Geometric Interpretation); `theorem:bk6_symbolic_diffusion_governs_evolution` (Symbolic Diffusion Operator Governs Thermodynamic Evolution)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-081`
+- Witnesses: `Book2.evolve_conserves`, `Book2H.h_theorem`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Discrete skeleton with conservation and the H-theorem; the manifold PDE open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The evolution of $rho$ is governed by:
@@ -9217,6 +10265,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_symbolic_entropy` (Symbolic Entropy); `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density)
 - Cited by: `corollary:bk1_equilibrium_distribution` (Equilibrium Distribution); `corollary:bk1_wasserstein_geometric_interpretation` (Wasserstein Geometric Interpretation); `definition:bk1_symbolic_phase_transitions` (Symbolic Phase Transitions); `proof:bk1_equilibrium_distribution` (Lagrange Multiplier Normalization Gives the Gibbs Form); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk1_sketch_thermo_analogy_fokker_planck` (Thermodynamic Analogy via Symbolic Fokker--Planck); `proof:bk6_symbolic_fokker_planck_bifurcation` (Fokker--Planck Correspondence at Bifurcation); `scholium:bk4_symbolic_potential_energy` (Symbolic Potential and the Thermodynamics of Sampling); `sec:bk1_summary_and_implications` (Summary and Implications); `theorem:bk1_h_theorem_for_symbolic_evolution` (H-Theorem for Symbolic Evolution); `theorem:bk1_sructurual_correspondence` (Structural Correspondence); `theorem:bk1_symbolic_fluctuation_dissipation_relation` (Symbolic Fluctuation–Dissipation Relation); `theorem:bk1_the_fokker_planck_equation_theorem` (Information Geometric Interpretation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-008`
+- Witnesses: `ScholiumB.gibbsProb_antitone`, `ScholiumB.gibbsProb_sum_eq_one`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The Lagrange-multiplier derivation and the manifold measure d mu_g are not modeled; instead the finite-discrete Gibbs distribution this variational principle produces is formalized directly (positivity, normalization, and the monotone-in-energy law), over a nonempty finite index type standing in for the symbolic manifold.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9395,6 +10454,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-009`
+- Witnesses: `ScholiumB.gibbsProb_pos`, `ScholiumB.gibbsProb_sum_eq_one`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The stated formula rho_eq(x) = Z^{-1} e^{-beta H(x)} is formalized verbatim as gibbsProb/gibbsZ over a finite index type, with positivity and normalization proved; the manifold integral defining Z is replaced by a Finset.sum.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The equilibrium distribution is given by:
@@ -9474,6 +10544,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation); `theorem:bk1_variational_principle` (Variational Principle)
 - Cited by: `proof:bk1_sketch_thermo_analogy_fokker_planck` (Thermodynamic Analogy via Symbolic Fokker--Planck); `proof:bk4_temporal_resolution_via_observer_bounded_reflection` (Temporal Resolution via Observer-Bounded Reflection); `scholium:bk4_micro_local_vs_path_global_irreversibility` (Micro-Local and Path-Global Irreversibility); `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: `\norm`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-045`
+- Witnesses: `ScholiumD.FreeEnergyDescent.antitone`, `ScholiumD.FreeEnergyDescent.const_of_eq`, `ScholiumD.FreeEnergyDescent.le_initial`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: discrete telescoping/rigidity skeleton (dF/ds <= 0 with equality-only-at-equilibrium, as a step sequence); the Fokker-Planck evolution and integration-by-parts derivation producing the monotonicity are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9786,6 +10867,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-091`
+- Witnesses: `Book2.gibbs_minimizes`, `Book2H.h_theorem`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: The (M,g,D,R) -> (rho,S,H,F,beta) dictionary: the Book2 discrete-thermodynamics kernels; the full analogy stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The framework $(M, g, D, R) to (rho, S, H, F, beta)$ exhibits structural correspondence with classical thermodynamics and statistical mechanics. That is:
@@ -9853,6 +10945,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `proof:bk1_conditional_genericity_of_symbolic_phase_transitions` (Transversal discriminant crossing stabilized above the critical dimension); `proof:bk1_realization_of_symbolic_phase_transitions`; `theorem:bk1_conditional_genericity_of_symbolic_phase_transitions` (Conditional Genericity of Symbolic Phase Transitions); `theorem:bk1_realization_of_symbolic_phase_transitions` (Realization of Symbolic Phase Transitions)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-046`
+- Witnesses: `ScholiumD.exists_critical_coupling`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: existence of a critical crossing value via IVT for a continuous straddling coupling function; non-analyticity of the partition function is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic phase transition occurs when the equilibrium distribution $rho_{text{eq}}$ undergoes a qualitative change in structure as a parameter (typically $beta$) is varied continuously. Formally, a critical point $beta_c$ is characterized by non-analytic behavior in the partition function $Z(beta)$ at $beta = beta_c$.
@@ -9879,6 +10982,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_symbol_space` (Symbol Space); `definition:bk1_symbolic_phase_transitions` (Symbolic Phase Transitions); `theorem:bk1_symbolic_irony_requires_curvature` (Symbolic Irony Requires Curvature)
 - Cited by: `conjecture:bk1_genericity_of_symbolic_phase_transitions` (Genericity of Symbolic Phase Transitions); `theorem:bk1_symbolic_irony_requires_curvature` (Symbolic Irony Requires Curvature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-047`
+- Witnesses: `ScholiumD.exists_critical_coupling`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the existence-of-critical-beta_c content only, via IVT; the non-analyticity / curvature-analogy content is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10080,6 +11194,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_minimal_linear_ps_model` (Minimal Linear PS-Model Witness)
 - Cited by: `definition:bk1_certified_type_preserving_symbolic_transport` (Certified Type-Preserving Symbolic Transport); `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `proof:bk1_nonvacuity_of_certified_transport` (Exact and projective certificates in the minimal witness); `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk1_mathematical_witness_boundary` (Witness boundary); `remark:bk4_finite_witness_for_drift_reflection_imbalance` (Finite witness for imbalance); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-011`
+- Witnesses: `ScholiumB.minimalPS_collapse_ne_id`, `ScholiumB.minimalPS_connection_curvature_nonzero`, `ScholiumB.minimalPS_drift_reflection_noncommute`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: All three claims (collapse is not identity, drift/stabilization do not commute, connection has nonzero curvature) are proved unconditionally by explicit witness computation at concrete points, matching the theorem's own finite-dimensional realization claim exactly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10303,6 +11428,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `proof:bk1_certified_transport_prevents_equivocation` (Role preservation by certificate); `proof:bk1_nonvacuity_of_certified_transport` (Exact and projective certificates in the minimal witness); `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk4_finite_witness_for_drift_reflection_imbalance` (Finite witness for imbalance); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-049`
+- Witnesses: `ScholiumD.TransportLoss.exact_supportsDependency`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the four-level loss taxonomy (field ell) is modeled as an explicit finite type; the transported-occurrence map T, signature sigma, and structural role rho are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(V_a\) and \(V_b\) be two PS operator vocabularies
@@ -10399,6 +11535,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: none
 - Cited by: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk4_finite_witness_for_drift_reflection_imbalance` (Finite witness for imbalance); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-050`
+- Witnesses: `ScholiumD.TransportLoss.exact_supportsDependency`, `ScholiumD.TransportLoss.interpretive_not_supportsDependency`, `ScholiumD.TransportLoss.projective_supportsDependency`, `ScholiumD.TransportLoss.quotient_supportsDependency`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the licensing rule only (which loss levels may support a theorem dependency); the equivocation-detection claim about a downstream argument's symbol usage is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10498,6 +11645,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: none
 - Cited by: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk4_finite_witness_for_drift_reflection_imbalance` (Finite witness for imbalance); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-051`
+- Witnesses: `ScholiumD.TransportLoss.exact_ne_projective`, `ScholiumD.TransportLoss.nonempty`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: nonemptiness plus an explicit distinct exact/projective witness, as a finite countermodel over the 4-element TransportLoss type.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10635,6 +11793,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `conjecture:bk1_genericity_of_symbolic_phase_transitions` (Genericity of Symbolic Phase Transitions)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-048`
+- Witnesses: `ScholiumD.exists_critical_coupling`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: hypothesis (H2) (coupling-range straddle) is exactly the IVT hypothesis; (H1) effective dimensionality and (H3) transversality are not modeled, and monotonicity of lambda is dropped as unneeded rather than modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M,g,D,R)$ be a symbolic manifold whose dyadic covenant coupling satisfies:
@@ -10766,6 +11935,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-014`
+- Witnesses: `ScholiumD.ImaginativeGenericityCertificate.supplies_genericity_hypotheses`, `ScholiumD.exists_critical_coupling`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Faithful certificate form: injective Fin 2 directions provide H1's two effective directions, continuous coupling straddle derives H2's critical coupling, and H3 transversality remains an explicit nonzero-slope obligation. Full complex bundles and generic-imagination claims remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10951,6 +12131,16 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `proof:bk2_probability_structure_on_manifold` (Symbolic Probability Structure on Emergent Manifold); `scholium:bk3_hypotheses_as_cognitive_membranes` (Hypotheses as Cognitive Membranes)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-012`
+- Witnesses: `Book4D.CertifiedTTDC.abstention_base_inert_but_recorded`, `Book4D.CertifiedTTDC.recordedExecute_eq_iff`, `Book7.orbitLimit_base_fixed_but_recorded`, `Book7.orbitLimit_completeJacobian`, `Book7.orbitLimit_completeJacobian_semigroup`, `Book7.orbitLimit_derivative_image_kernel_split`, `Book7.orbitLimit_fixedLocusVelocity_iff`, `Book7.orbitLimit_linear_image_kernel_split`, `Book7.orbitLimit_semigroup_transverse_eigenmode_tendsto_zero`, `Book7.orbitLimit_transverse_contracts`, `Book7.orbitLimit_transverse_eigenvalue_stable`, `Book7.orbitLimit_transverse_iterates_tendsto_zero`, `Book7.orbitLimit_transverse_jacobian_eigenmode_stable`, `ScholiumDyn.ReflectiveLinearProjection.apply_apply`, `ScholiumDyn.ReflectiveLinearProjection.derivative_image_kernel_decomposition`, `ScholiumDyn.ReflectiveLinearProjection.exists_image_kernel_decomposition`, `ScholiumDyn.ReflectiveLinearProjection.image_kernel_intersection_zero`, `ScholiumDyn.ReflectiveLinearProjection.sub_identity_on_image`, `ScholiumDyn.ReflectiveLinearProjection.sub_identity_on_kernel`, `ScholiumDyn.base_cancellation_not_full_equilibrium`, `ScholiumDyn.combinedEulerLinearization_eigen_of_jacobian_eigen`, `ScholiumDyn.combinedEulerLinearization_iterate_mem_kernel`, `ScholiumDyn.combinedEulerLinearization_iterate_tendsto_zero`, `ScholiumDyn.combinedEulerLinearization_on_kernel`, `ScholiumDyn.combinedEulerLinearization_preserves_kernel`, `ScholiumDyn.combinedEulerLinearization_transverse_contracts`, `ScholiumDyn.combinedJacobian_apply`, `ScholiumDyn.combinedJacobian_on_image`, `ScholiumDyn.combinedJacobian_on_kernel`, `ScholiumDyn.completeJacobian_at_reflective_fixed`, `ScholiumDyn.continuousLinearMap_pow_apply_eigen`, `ScholiumDyn.equilibrium_cancellation_counterexample`, `ScholiumDyn.equilibrium_iff_fixed_and_drift_zero_of_aligned`, `ScholiumDyn.equilibrium_of_fixed_and_drift_zero`, `ScholiumDyn.fixedLocusVelocity_iff_derivative_fixed`, `ScholiumDyn.hasDerivAt_jacobianSemigroup`, `ScholiumDyn.hasFDerivAt_combinedVectorField`, `ScholiumDyn.hasFDerivAt_idempotent_at_fixed`, `ScholiumDyn.jacobianSemigroup_add`, `ScholiumDyn.jacobianSemigroup_add_apply`, `ScholiumDyn.jacobianSemigroup_apply_eigen`, `ScholiumDyn.jacobianSemigroup_eigenmode_tendsto_zero`, `ScholiumDyn.jacobianSemigroup_zero`, `ScholiumDyn.no_full_equilibrium_of_trace_production`, `ScholiumDyn.no_transverse_unstable_eigenmode`, `ScholiumDyn.norm_combinedEulerLinearization_iterate_le`, `ScholiumDyn.norm_combinedEulerLinearization_on_kernel_le`, `ScholiumDyn.recordedCombinedStep_eq_iff`, `ScholiumDyn.transverse_eigenvalue_abs_le`, `ScholiumDyn.transverse_eigenvalue_abs_lt_one`, `ScholiumDyn.transverse_jacobian_eigenmode_tendsto_zero`, `ScholiumDyn.transverse_jacobian_eigenvalue_le_negative_margin`, `ScholiumDyn.transverse_jacobian_eigenvalue_neg`
+- Countermodels: `ScholiumDyn.equilibrium_cancellation_counterexample`
+- Formal boundary: Clauses 1-3 have partial honest kernels. Fixed reflection plus zero drift is sufficient for scalar equilibrium, but the claimed converse is false without separation: an explicit idempotent stabilizer cancels nonzero drift. Component alignment recovers the scalar iff, while the history-bearing lift proves full stationarity iff visible flow and trace production both vanish. The algebraic projection kernel proves image/kernel decomposition, trivial intersection, and the actions of P-I on both summands. The chain rule now derives P=dR as an idempotent projection from differentiability, fixedness, and stabilizer idempotence. The complete Jacobian J=(P-I)+alpha*dD is now derived by Frechet derivative rules and restricted exactly to image and kernel directions. The projection image is now identified exactly with curve-based fixed-locus velocities, and the complete Euler linearization has a strict quantitative transverse contraction below the unit perturbation margin. Under the explicit invariant-kernel contract, every transverse iterate remains transverse, obeys the geometric q^n envelope, and converges to zero. Real transverse eigenmodes are now confined to the strict unit disk and neutral or unstable modes are excluded. Each real transverse Jacobian eigenvalue now has a strict negative margin and its explicit continuous-time exponential mode converges to zero. The full complete-Jacobian bounded-operator exponential now has identity, semigroup, pointwise composition, and generator-ODE laws. The semigroup action on every real Jacobian eigenvector is now identified exactly with scalar exponential action, and stable transverse semigroup orbits converge to zero. Full manifold charts, complex spectrum/spectral-radius identification, and center-manifold claims remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Consider the combined symbolic dynamics on $M$,
@@ -11072,6 +12262,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-015`
+- Witnesses: `ScholiumD.symbolic_fluctuation_dissipation`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: Local scalar calculus kernel: from an explicit HasDerivAt Kubo certificate, response equals the equilibrium-correlation derivative and -beta times the generator correlation. Expectation spaces, equilibrium measures, and derivation from the Fokker-Planck operator remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For small perturbations around equilibrium, the response of the symbolic system to an external perturbation coupled to an observable $B$ is related to equilibrium fluctuations by:
@@ -11163,6 +12364,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: none
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-067`
+- Witnesses: `ScholiumDyn.action_nonneg`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Discrete Onsager-Machlup action.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic action functional $S: C^infty(M times [s_1, s_2]) to R$ is defined over paths $rho(x,s)$ in the space of symbolic probability densities (see def definition:bk1_symbolic_probabilty_density):
@@ -11201,6 +12413,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation)
 - Cited by: `scholium:bk4_symbolic_parsimony` (TTCS and the Principle of Symbolic Parsimony); `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-068`
+- Witnesses: `ScholiumDyn.least_action_iff_evolution`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Exact discrete form: dynamics = zero-action paths = the global minimum; MSR open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11380,6 +12603,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_symbolic_entropy` (Symbolic Entropy); `definition:bk1_symbolic_information_geometry` (Symbolic Information Geometry); `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation); `theorem:bk1_variational_principle` (Variational Principle)
 - Cited by: `corollary:bk1_wasserstein_geometric_interpretation` (Wasserstein Geometric Interpretation); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `proof:bk1_wasserstein_geometric_interpretation` (Restatement of the Wasserstein Gradient-Flow Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-016`
+- Witnesses: `ScholiumD.FreeEnergyDescent.antitone`, `ScholiumD.jko_step_freeEnergy_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Discrete JKO kernel: minimizing squared transport cost plus free energy against the previous-state competitor proves one-step free-energy descent; the existing descent structure then yields antitonicity. Wasserstein probability geometry, the Fokker-Planck PDE, and the tau-to-zero convergence theorem remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11617,6 +12851,16 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `proof:bk1_event_horizon_identity_field` (Identity Field on the Symbolized Causal Patch)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-017`
+- Witnesses: `ScholiumD.jko_step_freeEnergy_le`, `ScholiumD.jko_step_transport_cost_le_energy_drop`
+- Countermodels: none
+- Formal boundary: Discrete metric-gradient kernel: the JKO minimizer's scaled squared transport displacement is bounded by its free-energy drop, and free energy cannot increase. Construction of P(M), the Wasserstein-2 metric, tangent continuity equations, and identification with the Fokker-Planck PDE remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The Fokker-Planck equation (Thm. theorem:bk1_fundamental_relation_fokker_plank_equation) describes the gradient flow of free-energy functional $F[rho]$ (Thm. theorem:bk1_variational_principle) on space $P(M)$ from Def. definition:bk1_symbolic_information_geometry, equipped with Wasserstein metric $W_2$:
@@ -11764,6 +13008,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_cosmological_symbolization_functor` (Cosmological Symbolization Functor); `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk1_symbolic_riemann_tensor` (Symbolic Riemann Curvature Tensor); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Cited by: `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `proof:bk1_event_horizon_identity_field` (Identity Field on the Symbolized Causal Patch); `proof:bk4_temporal_resolution_via_observer_bounded_reflection` (Temporal Resolution via Observer-Bounded Reflection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-018`
+- Witnesses: `Atlas.dual_horizon_fractured`, `Atlas.no_single_geometry_for_dual_horizon`, `ScholiumD.dual_horizon_cosmogenesis_kernel`
+- Countermodels: none
+- Conditions: named next layers, deliberately not forced into the keystone: curvature as loop defect (discrete holonomy) and the appB resolution tower (P_lambda as graded complex, emergent smoothness as defects vanishing up the grading); pair-covering is the assembly hypothesis for the classical direction
+- Formal boundary: Static geometric kernel: opposite-signed past/future curvature parameters are provably distinct, while the certified dual-horizon chart complex at positive observer resolution admits no single consistent geometry. The cosmological symbolization functor, causal spacetime evolution, bounded observer dynamics, Hamiltonian apparatus, and existence of the intervening domain remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11994,6 +13249,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `corollary:bk1_wasserstein_geometric_interpretation` (Wasserstein Geometric Interpretation); `definition:bk1_bounded_observer` (Bounded Observer); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `theorem:bk1_dual_horizon_cosmogenesis` (Dual Horizon Cosmogenesis under \texorpdfstring{$\mathcal{B}_{\mathrm{cos}}$}{B\_cos}); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-019`
+- Witnesses: `Atlas.no_single_geometry_for_dual_horizon`, `ScholiumD.dual_horizon_cosmogenesis_kernel`, `ScholiumD.event_horizon_identity_field_kernel`
+- Countermodels: none
+- Conditions: named next layers, deliberately not forced into the keystone: curvature as loop defect (discrete holonomy) and the appB resolution tower (P_lambda as graded complex, emergent smoothness as defects vanishing up the grading); pair-covering is the assembly hypothesis for the classical direction
+- Formal boundary: Static identity-field kernel: defining horizon tension as the past-minus-future curvature contrast, opposite curvature signs force strictly positive tension; at positive observer resolution the same hypotheses obstruct a single geometry reconciling the dual horizon. Construction and evolution of a spacetime identity field, observer measures, and the claimed physical interpretation remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

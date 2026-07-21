@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - book3
 
 Nodes in this source group: 76
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -57,6 +63,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:10`
 - Cited by: `definition:bk3_autophagic_drift` (Autophagic Drift); `definition:bk3_compressed_relational_structure` (Compressed Relational Structure); `definition:bk3_conceptual_bridge` (Conceptual Bridge); `definition:bk3_conceptual_bridge_sequence` (Conceptual Bridge Sequence); `definition:bk3_coupling_map` (Coupling Map); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk3_reflexive_encoding` (Reflexive Encoding); `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `definition:bk3_symbolic_metabolism` (Symbolic Metabolism); `definition:bk3_symbolic_refinement` (Symbolic Refinement); `definition:bk3_symbolic_symbiosis` (Symbolic Symbiosis); `definition:bk4_critical_symbolic_bifurc` (Critical Symbolic Bifurcation); `definition:bk4_differentiation_boundary` (Differentiation Boundary); `definition:bk4_fragmentation_measure` (Fragmentation Measure); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution); `definition:bk4_hierarchical_auto_encodi` (Hierarchical Auto-Encoding); `definition:bk4_individuated_symbolic_id` (Individuated Symbolic Identity); `definition:bk4_meta_stable_symbolic_str` (Meta-Stable Symbolic Structure); `definition:bk4_order_parameter` (Order Parameter); `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding); `definition:bk4_symbolic_auto_encoder` (Symbolic Auto-Encoder); `definition:bk4_symbolic_emergence` (Symbolic Emergence); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `definition:bk6_symbolic_system` (Symbolic System); `definition:bk8_symbolic_adjacency` (Symbolic Knot); `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `lemma:bk3_reflexive_encodings_generate_conceptual_bridges` (Reflexive Encodings Generate Conceptual Bridges); `lemma:bk3_symbiotic_stability_conditions` (Symbiotic Stability Conditions); `lemma:bk3_wellposedness_of_symbolic_membranes` (Conditional Well-posedness of Symbolic Membranes); `lemma:bk4_fragmentation_cascade` (Fragmentation Cascade); `proof:bk3_coupling_energy_symbolic_hamiltonian` (Effect of Coupling Energy on Symbolic Hamiltonian); `proof:bk3_sketch_evolutionary_dynamics` (Closure of Conceptual Bridge Sequence); `proof:bk4_fragmentation_identity_stability` (Fragmentation Violates Symbolic Identity Stability); `proof:bk4_multiplication_to_curvature`; `proof:bk4_symbolic_curvature_fragmentation` (Curvature and Fragmentation); `proof:bk4_top_level_information_inequality` (Top-Level Representation Retains Disproportionate Information); `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `scholium:bk4_symbolic_interference` (Symbolic Interference Geometry); `scholium:bk4_symbolic_regularization` (The Geometry of Symbolic Regularization); `scholium:bk4_tt_integrative_expansion_action` (TTIE and Symbolic Action); `scholium:bk6_hypotheses_as_regulatory_mutation_manifolds` (Hypotheses as Regulatory Mutation Manifolds); `sec:bk7_symbolic_reflexive_validation` (Symbolic Reflexive Validation); `theorem:bk3_closure_conceptual_bridge_sequence` (Closure of Conceptual Bridge Sequence); `theorem:bk3_couplinginduced_drift_modification` (Coupling-Induced Drift Modification); `theorem:bk3_cyclic_reflexive_encodings` (Cyclic Reflexive Encodings); `theorem:bk3_membrane_stability_criteria` (Membrane Stability Criteria); `theorem:bk3_symbiotic_curvature_and_resilience` (Symbiotic Curvature and Resilience); `theorem:bk4_conditions_for_self_healing` (Conditions for Self-Healing); `theorem:bk4_drift_reflection_imbalance` (Drift-Reflection Imbalance); `theorem:bk4_emergence_criterion` (Emergence Criterion); `theorem:bk4_formation_differentiation_boundaries` (Formation of Differentiation Boundaries); `theorem:bk4_multiplication_to_curvature` (Multiplicative Error Becomes Curvature); `theorem:bk4_recursive_identity_enhancem` (Recursive Identity Enhancement); `theorem:bk4_reflective_reentry` (Reflective Reentry); `theorem:bk5_symbolic_coherence_conservation` (Symbolic Coherence Conservation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK3-005`
+- Witnesses: `Book3.membrane_complement_permeability_mem`
+- Countermodels: none
+- Formal boundary: Drift-deviation bound, permeability in [0,1], and nonnegative stability captured as structure fields over Real; the submanifold (connected, compact closure, smooth boundary) is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic membrane $M_i$ is a connected open submanifold of $M$ with compact closure $overline{M}_i$ and smooth boundary $partialM_i$, endowed with:
@@ -90,6 +106,17 @@ Role: `lemma` | Type: `lemma` | Book: `book3` | Source: `book3.tex:20`
 - Cites: `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-004`
+- Witnesses: `Book3.canonicalMembrane_stability_pos`, `Book3.conditional_symbolic_membrane_wellposed`, `Book3.exists_chart_membrane`, `Book3.exists_static_membrane`, `Book3.perturbation_budget_does_not_supply_domain`
+- Countermodels: `Book3.perturbation_budget_does_not_supply_domain`
+- Conditions: nonempty connected open carrier with compact closure and smooth boundary; positive perturbation budget and alpha; regularity calculus closed under x ↦ exp(-alpha f(x)); supplied smooth global drift and Hamiltonian
+- Formal boundary: Conditional source-faithful construction: a supplied nonempty connected open relatively compact smooth-boundary domain, smooth global drift, and smooth Hamiltonian yield canonical membrane data for every positive perturbation budget and alpha. Internal drift is the supplied restriction, permeability is zero, and exp(-alpha H) is positive and smooth through the supplied regularity calculus. The Empty countermodel proves a positive budget cannot manufacture the load-bearing domain.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -173,6 +200,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:49`
 - Cited by: `remark:bk3_symbolic_membrane_remark`; `theorem:bk3_evolution_of_symbolic_knowledge` (Evolution of Symbolic Knowledge); `theorem:bk3_membrane_stability_criteria` (Membrane Stability Criteria)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK3-006`
+- Witnesses: `Book3.membrane_viable_iff`
+- Countermodels: none
+- Formal boundary: Energy/entropy/temperature/free-energy algebra captured (mirrors the Book5 thermodynamic snapshot pattern); the manifold integrals defining E_i, S_i, T_i are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a symbolic membrane $M_i$ (Def. definition:bk3_symbolic_membrane), we define:
@@ -212,6 +249,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:61`
 - Cites: `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk3_membrane_stability_energy_permeability` (Membrane Stability from Free Energy and Bounded Permeability); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); `proof:bk3_sketch_necessity_for_continuous_operation` (Necessity of Each Condition for Persistent Symbolic Life); `proof:bk3_sketch_perturbation_dissiptation` (Perturbation Dissipation via Lyapunov Argument); `proof:bk4_information_bottleneck_symbolic_filter` (Information Bottleneck Concentrates on Stable Attractors); `proof:bk4_symbolic_identity_persistence` (Stability Criterion for Symbolic Identity Persistence); `scholium:bk6_semantic_network_regulation` (Semantic Network Regulation); `theorem:bk3_evolution_of_symbolic_knowledge` (Evolution of Symbolic Knowledge); `theorem:bk4_existence_of_symbolic_ident` (Existence of Symbolic Identity); `theorem:bk6_symbolic_bifurcation_classification` (Symbolic Bifurcation Classification)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-007`
+- Witnesses: `Book3.membrane_stable_of_conditions`, `Book3.membrane_stable_permeability_lt_one`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: The three named conditions are kept as explicit hypothesis fields (free-energy local-min and no-unstable-fixed-point are opaque Prop witnesses); stability is proved as their conjunction, not asserted to hold generally.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -330,6 +378,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:95`
 - Cited by: `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `definition:bk3_symbolic_metabolism` (Symbolic Metabolism); `lemma:bk3_symbiotic_stability_conditions` (Symbiotic Stability Conditions); `proof:bk3_coupling_energy_symbolic_hamiltonian` (Effect of Coupling Energy on Symbolic Hamiltonian); `proof:bk3_sketch_evolutionary_dynamics` (Closure of Conceptual Bridge Sequence); `theorem:bk3_couplinginduced_drift_modification` (Coupling-Induced Drift Modification); `theorem:bk3_homeostatic_reflexes` (Homeostatic Reflexes)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-009`
+- Witnesses: `Book3.couplingEnergy_nonneg`
+- Countermodels: none
+- Formal boundary: H_ij = lambda*(phi-target)^2 and its nonnegativity for lambda>=0, fully proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The coupling map $Phi_{ij}$ (Def. definition:bk3_coupling_map) induces an energy function $H_{ij}: M_i times M_j rightarrow mathbb{R}$ defined as:
@@ -359,6 +417,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:104`
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk3_induced_coupling_energy` (Induced Coupling Energy); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `lemma:bk3_symbiotic_stability_conditions` (Symbiotic Stability Conditions); `proof:bk3_coupling_energy_symbolic_hamiltonian` (Effect of Coupling Energy on Symbolic Hamiltonian); `proof:bk3_sketch_evolutionary_dynamics` (Closure of Conceptual Bridge Sequence); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); `theorem:bk3_homeostatic_reflexes` (Homeostatic Reflexes)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-010`
+- Witnesses: `Book3.coupled_drift_deviation_bound`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Scalar model: the correction integral is replaced by a single bounded real; the theorem proved is the triangle-inequality consequence |D_coupled - D| <= eta*bound, given the bound as a hypothesis rather than derived from an actual integral.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -438,6 +507,17 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:132
 - Cited by: `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_metabolism` (Symbolic Metabolism); `definition:bk6_symbolic_recombination` (Symbolic Recombination); `lemma:bk3_symbiotic_stability_conditions` (Symbiotic Stability Conditions); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); `proof:bk3_sketch_necessity_for_continuous_operation` (Necessity of Each Condition for Persistent Symbolic Life); `proof:bk3_sketch_perturbation_dissiptation` (Perturbation Dissipation via Lyapunov Argument); `proof:bk3_symbolic_coupling_properties_enumerated` (Categorical Properties of Symbolic Coupling); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk3_properties_of_symbiotic_curvature` (Properties of Symbiotic Curvature); `theorem:bk9_irreversibility_of_covenant_breach_without_grace` (Irreversibility of Covenant Breach without Grace)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-011`
+- Witnesses: `Book3.in_symbiosis_of_conditions`, `Book3.symbiosis_drift_perturbation_ne_zero`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: All three named clauses (mutual stability enhancement, information transfer positivity, drift compensation) kept as explicit hypothesis fields; a genuine corollary (perturbation must be nonzero under compensation) is derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Two symbolic membranes $M_i$ and $M_j$ (Def. definition:bk3_symbolic_membrane) are in symbiosis if their coupling satisfies:
@@ -501,6 +581,17 @@ Role: `lemma` | Type: `lemma` | Book: `book3` | Source: `book3.tex:157`
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk2_symbolic_probability_spa` (Symbolic Probability Space); `definition:bk3_coupling_map` (Coupling Map); `definition:bk3_induced_coupling_energy` (Induced Coupling Energy); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk3_symbolic_symbiosis` (Symbolic Symbiosis); `theorem:bk3_couplinginduced_drift_modification` (Coupling-Induced Drift Modification)
 - Cited by: `proof:bk3_coupling_vs_perturbation_stability` (Coupling-Induced Drift Must Outweigh Internal Perturbations); `proof:bk3_sketch_perturbation_dissiptation` (Perturbation Dissipation via Lyapunov Argument)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-012`
+- Witnesses: `Book3.symbiotic_threshold_clears_i`, `Book3.symbiotic_threshold_clears_j`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: The max-of-two-bounds threshold algebra is fully proved: lambda above the max clears each side of the enhancement inequality delta^2 < 4*eta*infoGrad*lambda.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -602,6 +693,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:183
 - Cited by: `definition:bk3_conceptual_bridge` (Conceptual Bridge); `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding); `lemma:bk3_reflexive_encodings_generate_conceptual_bridges` (Reflexive Encodings Generate Conceptual Bridges); `proof:bk3_reflexive_encoding_preserves_structure` (Symbolic Reflexive Encoding Preserves Semantic Structure); `proof:bk3_triangle_inequality_encoding_bound` (Triangle Inequality Bounds Reflexive Encoding Drift); `theorem:bk3_cyclic_reflexive_encodings` (Cyclic Reflexive Encodings)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK3-013`
+- Witnesses: `Book3.reflexive_encoding_information_strictly_preserved`
+- Countermodels: none
+- Formal boundary: Bounded round-trip distortion and the information-preservation inequality (conditionalEntropy < totalEntropy - kappa) are modeled; the approximate-equality 'stability preservation up to scaling' clause is not formalized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A reflexive encoding for a symbolic membrane $M_i$ (Def. definition:bk3_symbolic_membrane) is a smooth map $E_i: M_i rightarrow M_j$ to another membrane $M_j$ satisfying:
@@ -635,6 +736,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:193`
 - Cites: `definition:bk3_reflexive_encoding` (Reflexive Encoding); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-014`
+- Witnesses: `Book3.cyclic_distortion_bound`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Telescoping triangle-inequality bound on a chain of n composed maps in a PseudoMetricSpace, proved by induction. Directly instantiates the cyclic case since the theorem is agnostic to whether the chain closes into a loop.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -747,6 +859,17 @@ Role: `lemma` | Type: `lemma` | Book: `book3` | Source: `book3.tex:229`
 - Cited by: `proof:bk3_reflexive_encoding_preserves_structure` (Symbolic Reflexive Encoding Preserves Semantic Structure)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-016`
+- Witnesses: `Book3.reflexive_pair_generates_bridge`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Shows that reflexive-encoding-style round-trip bounds are literally sufficient data to construct a BoundedRoundTrip; existence-style construction rather than a deep theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given reflexive encodings $E_i: M_i rightarrow M_j$ and $E_j: M_j rightarrow M_i$ between symbolic membranes $M_i$ and $M_j$ (Def. definition:bk3_symbolic_membrane, Def. definition:bk3_reflexive_encoding), the pair $(E_i, E_j)$ forms a conceptual bridge (Def. definition:bk3_conceptual_bridge) between the symbolic domains represented by these membranes.
@@ -855,6 +978,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:261`
 - Cites: `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_symbiosis` (Symbolic Symbiosis)
 - Cited by: `proof:bk3_sketch_necessity_for_continuous_operation` (Necessity of Each Condition for Persistent Symbolic Life); `proof:bk3_symbolic_coupling_properties_enumerated` (Categorical Properties of Symbolic Coupling); `proof:bk4_sketch_cross_field_product` (Cross-Error Torsion and $\mathcal{O}$-Bounded Product Rule); `proof:bk4_sketch_symbolic_path_interference` (Sum Rule via Additive Error Bound with Curvature Correction); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-018`
+- Witnesses: `Book3.symbioticCurvature_gt_one`, `Book3.symbioticCurvature_mono_info`, `Book3.symbioticCurvature_pos`, `Book3.weighted_avg_le_max`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Positivity and symbiotic-enhancement (>1) are proved in full for the finite-n formula. Monotonicity is proved as a non-strict comparison across two info matrices. Subadditivity is only covered at the level of its abstract mediant/convex-combination core (weighted_avg_le_max); the full derivation from summing over two disjoint index sets is not carried out.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -972,6 +1106,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:299`
 - Cites: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk3_perturbation_response_function` (Perturbation Response Function); `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `theorem:bk1_symbolic_emergence_and_curvature` (Symbolic Emergence and Curvature)
 - Cited by: `definition:bk3_perturbation_response_function` (Perturbation Response Function); `remark:bk3_symbolic_membrane_remark`; `remark:bk4_fuzzy`; `scholium:bk4_symbolic_entanglement` (The Mathematics of Symbolic Entanglement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-020`
+- Witnesses: `Book3.resilience_bound_antitone`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Honest static kernel: the bound C/kappa_symb is antitone in kappa_symb for fixed C>0. The limiting behaviour of R(delta,t) as t->infinity is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1248,6 +1393,17 @@ Role: `lemma` | Type: `lemma` | Book: `book3` | Source: `book3.tex:395`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-003`
+- Witnesses: `Book3Helmholtz.FiniteHodgeData.nonzero_harmonic_component_exists`, `Book3Helmholtz.FiniteHodgeData.reconstruction`, `Book3Helmholtz.GlobalHodgeCertificate.components`, `Book3Helmholtz.GlobalHodgeCertificate.faithful_readout_detects_harmonic`, `Book3Helmholtz.GlobalHodgeCertificate.harmonic_eq_zero_of_subsingleton_cohomology`, `Book3Helmholtz.GlobalHodgeCertificate.multimodal_readout_reconstructs`, `Book3Helmholtz.GlobalHodgeCertificate.operational_readout_reconstructs`, `Book3Helmholtz.GlobalHodgeCertificate.refinement_energy_decomposes`, `Book3Helmholtz.harmonic_channel_can_be_operationally_detected`, `Book3Helmholtz.unfaithful_readout_can_erase_harmonic`
+- Countermodels: none
+- Conditions: carrier-indexed linear instruments; injectivity or another explicit faithfulness witness for detection claims; curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; explicit unique orthogonal Hodge decomposition and faithful first-cohomology class map; finite model: selected orthogonal exact/coexact subspaces; global certificate: compact, connected, oriented, smooth Riemannian membrane without boundary; linear operational readout for perceptual or computational exposure; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Conditional global Hodge bridge: a certificate retains the compact, connected, oriented, smooth Riemannian, boundaryless membrane hypotheses; exact, coexact, and harmonic sectors reconstruct uniquely and orthogonally; squared refinement energy separates by sector; and a faithful harmonic-class map kills the harmonic part when first cohomology is trivial. Any linear operational readout, including sonification, preserves the certified split but does not manufacture its geometric hypotheses. The readout bridge is carrier-neutral across sound, light, temperature, pressure, and other linear instruments; nonzero-residue detection additionally requires a faithful instrument, while the zero-readout countermodel shows silence cannot establish absence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M,g)$ be a compact, connected, oriented smooth Riemannian
@@ -1416,6 +1572,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:457`
 - Cited by: `proof:bk3_differentiation_knowledge_structure` (Derivative of Knowledge Structure with Respect to Refinement); `proof:bk3_integrated_knowledge_dynamics` (Integration of Knowledge Refinement Dynamics); `theorem:bk3_conditions_sustained_symbolic_growth` (Conditions for Sustained Symbolic Growth)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-021`
+- Witnesses: `Book3.integration_rate_eq`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: The rate equation dK/dr = I'-D'+R is kept as a structure field (a modeling commitment, not derived); one algebraic rearrangement is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The rate of change of symbolic knowledge structure $K(r)$ (Def. definition:bk3_symbolic_knowledge_structure) with respect to refinement (Def. definition:bk3_symbolic_refinement) satisfies (cf. Def. definition:bk3_membrane_thermodynamics, Thm. theorem:bk3_membrane_stability_criteria):
@@ -1515,6 +1682,17 @@ Role: `corollary` | Type: `corollary` | Book: `book3` | Source: `book3.tex:494`
 - Cited by: `proof:bk3_integrated_knowledge_dynamics` (Integration of Knowledge Refinement Dynamics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-022`
+- Witnesses: `Book3.knowledge_structure_telescopes`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Discrete telescoping-sum analogue of the continuous FTC-style corollary, proved by induction on Nat.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The accumulated symbolic knowledge structure $K(r)$ (Def. definition:bk3_symbolic_knowledge_structure) from initial refinement state $r_0$ to state $r$ is:
@@ -1567,6 +1745,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:509`
 - Cites: `definition:bk3_symbolic_knowledge_structure` (Symbolic Knowledge Structure); `theorem:bk3_evolution_of_symbolic_knowledge` (Evolution of Symbolic Knowledge)
 - Cited by: `proof:bk3_knowledge_growth_integrated_condition` (Secular Growth of Knowledge Under Integrated Conditions); `proof:bk3_sketch_necessity_for_continuous_operation` (Necessity of Each Condition for Persistent Symbolic Life); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk3_emergence_of_symbolic_networks` (Conditional Assembly of Symbolic Networks)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-023`
+- Witnesses: `Book3.sustained_growth_window`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Discrete window version: positive net increment sum over a length-T window implies K strictly increases across that window, built on the telescoping lemma.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1700,6 +1889,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:546`
 - Cites: `definition:bk3_symbolic_network` (Symbolic Network); `theorem:bk3_conditions_sustained_symbolic_growth` (Conditions for Sustained Symbolic Growth)
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `definition:bk3_symbolic_metabolism` (Symbolic Metabolism); `sec:bk9_symbolic_ecosystems_and_emergent_governance` (Symbolic Ecosystems and Emergent Governance)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-001`
+- Witnesses: `Book3.runNetworkEmergence_realizes_assembly`, `Book3.runNetworkEmergence_stability_pos_from_floor`, `Book3.same_growth_allows_distinct_nodes`
+- Countermodels: none
+- Conditions: bridge certificate for every selected edge; finite indexed region family and total compression operator; positive node-coherence floor bounded above by stage stability; sustained-growth trace
+- Formal boundary: A time-indexed operational process retains the supplied region selection, total compression, bridge-certified edge relation, positive node-coherence floor, and global-stability lower bound. Execution jointly realizes the compressed nodes, bridge-backed edges, and strictly positive global stability. A paired countermodel shows that the same sustained-growth trace permits distinct compression outcomes, so growth does not identify or manufacture the assembly policy.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1849,6 +2049,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:602`
 - Cites: `definition:bk3_conceptual_bridge_sequence` (Conceptual Bridge Sequence); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `definition:bk3_symbolic_metabolism` (Symbolic Metabolism)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-031`
+- Witnesses: `Book7B.conceptualBridgeLoop_toM_surjective`, `Book7B.conceptualBridgeLoop_toSigma1_injective`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Given the loop literally closes (composite = identity on M, the honest reading of 'can form a closed loop feeding back into the originals'), the first map is injective and the return map is surjective.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2043,6 +2254,17 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:670
 - Cited by: `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); `remark:bk3_symbolic_membrane_remark`; `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk3_homeostatic_reflexes` (Homeostatic Reflexes)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK3-026`
+- Witnesses: `Book3.metabolicRate_nonneg`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Finite double-sum analogue of the continuous double integral over paired membranes; only nonnegativity of the analogue is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic metabolic rate $R_{text{meta}}$ of a system of coupled symbolic membranes ${M_i}$ (Def. definition:bk3_symbolic_membrane) is defined as (cf. Thm. theorem:bk3_couplinginduced_drift_modification, Def. definition:bk2_symbolic_free_energy):
@@ -2158,6 +2380,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:703
 - Cited by: `axiom:bk9_emergent_autonomy` (Emergent Autonomy); `definition:bk6_symbolic_confidence_field` (Symbolic Confidence Field); `definition:bk6_symbolic_mutation` (Symbolic Mutation); `lemma:bk6_conservation_of_symbolic_information` (Conservation of Symbolic Information); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); `remark:bk8_symbolic_repair_loop` (Symbolic Repair Loop); `subsec:bk6_from_map_to_operator_formalism` (From MAP to Operator Formalism); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk3_homeostatic_reflexes` (Homeostatic Reflexes)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-027`
+- Witnesses: `Book3.homeostatic_band_nonempty`
+- Countermodels: none
+- Formal boundary: Operating-band definition and the trivial-but-real consequence that a homeostatic state forces rmin<=rmax.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system maintains homeostasis if, for a bounded range of perturbations $delta$ (affecting, e.g., drift fields or external potentials), the symbolic metabolic rate $R_{text{meta}}$ (Def. definition:bk3_symbolic_metabolic_rate) remains within a stable operating band (cf. Thm. theorem:bk3_membrane_stability_criteria, Def. definition:bk2_symbolic_free_energy):
@@ -2191,6 +2423,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:714`
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk3_induced_coupling_energy` (Induced Coupling Energy); `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `theorem:bk3_couplinginduced_drift_modification` (Coupling-Induced Drift Modification)
 - Cited by: `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-028`
+- Witnesses: `Book3.metabolic_response_deviation_bound`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: The derivative bound |dR/dDelta|<=C is modeled as a Lipschitz condition on the response function (a modeling commitment); a genuine two-sided deviation-from-baseline bound is derived from it.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2366,6 +2609,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:777`
 - Cites: `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk2_symbolic_entropy` (Symbolic Entropy); `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `definition:bk3_symbolic_knowledge_structure` (Symbolic Knowledge Structure); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `definition:bk3_symbolic_symbiosis` (Symbolic Symbiosis); `theorem:bk3_conditions_sustained_symbolic_growth` (Conditions for Sustained Symbolic Growth); `theorem:bk3_properties_of_symbiotic_curvature` (Properties of Symbiotic Curvature)
 - Cited by: `corollary:bk4_emergence_of_meaning` (Emergence of Meaning); `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `remark:bk3_toward_symbolic_evolution`; `scholium:bk4_symbolic_self_organization` (The Geometry of Symbolic Self-Organization); `sec:bk9_emergence_ethics_and_compassion` (Emergent Ethics and Compassion); `theorem:bk3_symbolic_life_satisfies_canonical_definitions` (Certified Canonical Life Correspondence); `theorem:bk4_freedom_life_connection` (Freedom-Life Connection); `theorem:bk8_biological_phase_transition` (Threshold of Autonomy)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-029`
+- Witnesses: `Book3.persistentLife_kappa_pos`, `Book3.persistentLife_rmin_le_rmax`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Capstone structure assembling the three named criteria (homeostatic metabolic rate, positive growth increment, curvature bounded away from zero) as fields, with two projection consequences proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2609,6 +2863,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:878`
 - Cites: `definition:bk3_canonical_life_standards` (Canonical Life Standards); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria)
 - Cited by: `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good")
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-002`
+- Witnesses: `Book3CanonicalLife.operational_symbolic_life_realizes_canonical_demarcations`, `Book3CanonicalLife.persistence_alone_does_not_supply_correspondence`, `Book3CanonicalLife.repair_improves_iff_morphological_error_decreases`
+- Countermodels: `Book3CanonicalLife.persistence_alone_does_not_supply_correspondence`
+- Conditions: explicit coherence-to-target-morphology representation when the morphology equivalence is used; inspectable repair, reproduction, heredity, variation, differential-fitness, and response witnesses; persistent symbolic-life witness; typed symbolic organism operations
+- Formal boundary: A Book-3-local operational witness now realizes the declared structural substrate translation and every Koshland, NASA, and textbook clause, including evolutionary adaptation, for the same organism. Under an explicit morphology representation bridge, regenerative coherence improvement is equivalent to reduced target-form error. This is structural correspondence rather than chemical identity; persistence alone still cannot manufacture the certificate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

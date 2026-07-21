@@ -6,7 +6,13 @@ Use labels in backticks as stable source addresses.
 ## Metadata
 
 - Nodes: 1914
-- Generated from atlas metadata: `2026-07-21T17:19:00Z`
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
+- Generated from atlas metadata: `2026-07-21T18:54:28Z`
 - Dependency direction: node -> depends_on, toward foundations.
 
 ## Nodes
@@ -175,6 +181,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `remark:appC_horizon_realizations` (Invariance under horizon realization)
 - Macros used: `\Obs`, `\drift`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-032`
+- Witnesses: `Book7B.posPart_sub_negPart`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the pointwise real identity x = max(x,0)-max(-x,0) underlying the divergence-theorem remark is modeled; the observer measure and manifold integrals G_Obs, C_Obs themselves are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 On the observer-visible domain \(Omega\) define the generative flux \[ G_{Obs}(Omega) := int_Omega big(nabla\!cdotdriftbig)_+ dmu_{Obs}, (x)_+ := max{x,0}, \] and the stabilizing flux \[ C_{Obs}(Omega) := int_Omega big(-nabla\!cdot R_{stab}big)_+ dmu_{Obs}. \] Thus \(G_{Obs}\) accumulates the observer-visible rate at which Drift sources novelty (positive divergence) and \(C_{Obs}\) the rate at which stabilizing Reflection sinks it (negative divergence).
@@ -188,6 +205,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cites: `definition:bk1_stage_composite_operator` (Stage–Composite Operator); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy)
 - Cited by: `theorem:appC_dual_horizon_signature` (Dual Horizon Necessity (Effective Signature))
 - Macros used: `\Obs`, `\drift`, `\freeenergy`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-001`
+- Witnesses: `AppendixDH.dual_horizon_signature`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Modeled as the hypothesis pair (0 < tauE, tauE <= deltaPhi) taken by dual_horizon_signature, rather than as a standalone named Prop.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -216,6 +244,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `assumption:appC_emergence_domination` (Emergence Domination); `definition:appC_bounded_reflexive_emergence` (Bounded reflexive emergence); `sec:appC_proof_by_elimination` (Proof II --- Effective-Signature (Geometric)); `sec:appC_proof_observational` (Proof I --- Observational Elimination); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Cited by: `proof:appC_dual_horizon_biconditional`; `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); `remark:appC_horizon_realizations` (Invariance under horizon realization); `sec:appC_proof_by_elimination` (Proof II --- Effective-Signature (Geometric)); `sec:appC_proof_observational` (Proof I --- Observational Elimination); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Macros used: `\Obs`, `\drift`, `\manifold`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-002`
+- Witnesses: `AppendixDH.dual_horizon_signature`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Proved via the Emergence Domination route (Proof II of the source): bounded reflexive emergence plus the DualHorizonBalance sandwich forces min(G,C) > 0, hence G > 0 and C > 0. The source's alternative Proof I 'from Bounded Observability alone' is not modeled since that assumption is not given with enough precision in the packet.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -315,6 +354,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: `scholium:appC_two_horizons_co_constitutive` (The Two Horizons as Co-Constitutive)
 - Macros used: `\Obs`, `\drift`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-003`
+- Witnesses: `AppendixDH.dualHorizon_necessity`, `AppendixDH.dualHorizon_necessity_pos`, `AppendixDH.dualHorizon_sufficiency`, `AppendixDH.dualHorizon_tight_biconditional`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The full sandwich kappa*m <= deltaPhi <= Lambda*m, sufficiency, necessity, and the tight kappa=Lambda biconditional are all proved unconditionally from the DualHorizonBalance data.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under Emergence Domination and Emergence Coupling (Assumptions assumption:appC_emergence_domination, assumption:appC_emergence_coupling), write \(m:=min{G_{Obs}(Omega),C_{Obs}(Omega)}\). Then \[ kappa m le DeltaPhi_{Obs}(drift,R_{stab}) le Lambda m . \] Consequently: - (Sufficiency) \(m ge tau_E/kappa Rightarrow DeltaPhi_{Obs}getau_E\); - (Necessity) \(DeltaPhi_{Obs}getau_E Rightarrow m ge tau_E/Lambda > 0\).
@@ -413,6 +463,17 @@ Role: `remark` | Type: `remark` | Book: `appendix_dual_horizon` | Source: `appen
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `REVIEW-001`
+- Witnesses: none
+- Countermodels: none
+- Conditions: The remark correctly exposes PS-C3-prime, but its broader assertion that the other PS-C constraints follow from bounded observation is a human mathematical claim not certified by the current Lean companion.
+- Formal boundary: The remark correctly exposes PS-C3-prime, but its broader assertion that the other PS-C constraints follow from bounded observation is a human mathematical claim not certified by the current Lean companion.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This derivation proceeds from the coherence constraints PS-C1-C5 (Ssubsec:appC_born_axioms) to Gleason's hypotheses, and thence to the Born Rule. The structural constraints PS-C1, PS-C2, PS-C4, PS-C5 are consequences of bounded observation (Def. definition:bk1_bounded_observer), not ad hoc quantum postulates: each encodes a constraint that any finite-resolution observer necessarily satisfies.
@@ -482,6 +543,17 @@ Role: `remark` | Type: `remark` | Book: `appendix_dual_horizon` | Source: `appen
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`, `constructed`, `exact`, `interpretive`, `refuted`
+- Records: `C-COMPRESSION-13`, `C-CONVERGENCE-15`, `C-STAGING-14`, `Q-DECOHERENCE-12`, `Q-FRAME-03`, `Q-HERMITIAN-05`, `Q-LOWER-01`, `Q-PARTIAL-11`, `Q-PHASE-02`, `Q-RESOLVE-04`
+- Witnesses: `Book4QuantumMeasurement.jointExpectation_local_eq_reduced`, `Book4QuantumMeasurement.trace_partialTraceEnvironment`, `Book5.axisCostOn_le_card_rpow_mul_lpCostOn`, `Book5.diagonalDecoherence_formula`, `Book5.diagonalDecoherence_pos`, `Book5.lpCostOn_le_axisCostOn`, `Book7QuantumGleason.completeFrameCoherence_does_not_supply_hermitian_certificate`, `Book7QuantumGleason.hermitian_reconstruction_from_certificate`, `Book7QuantumGleason.pureStateDensity_globalPhase`, `Book7QuantumGleason.pureStateDensity_isHermitian`, `Book7QuantumGleason.pureStateToResolution_globalPhase`, `Book7QuantumGleason.pureStateToResolution_reducedState_isHermitian`, `Book7QuantumGleason.pureState_forward_chain`, `Book7QuantumGleason.pureState_lowering_not_injective`, `Book7QuantumGleason.quantumResolution_does_not_force_reducedState_isHermitian`, `Book7QuantumGleason.quantumResolution_to_hermitian_certificate`, `Book7QuantumGleason.quantumResolution_without_matrixHermiticity_does_not_supply_certificate`, `ScholiumA.ChainedApprox.cauchySeq`, `ScholiumA.ChainedApprox.exists_limit_with_tail_bound`, `ScholiumA.chainedApprox_telescope`, `ScholiumD.jko_step_freeEnergy_le`, `ScholiumD.jko_step_transport_cost_le_energy_drop`, `cauchy_forcing_completion`
+- Countermodels: `Book7QuantumGleason.completeFrameCoherence_does_not_supply_hermitian_certificate`, `Book7QuantumGleason.quantumResolution_does_not_force_reducedState_isHermitian`, `Book7QuantumGleason.quantumResolution_without_matrixHermiticity_does_not_supply_certificate`
+- Conditions: Explicit conjugate-linear/linear Hermitian cross laws, or a retained reduced-state matrix certified Hermitian.; Summable per-step displacement bounds and completeness, or a nonnegative potential with positive linear descent control.
+- Formal boundary: Convergence is certified under explicit preservation/descent contracts, not inferred from staging alone. First of two complementary Gleason-facing half-bridges. The construction is forward and preserves upstream Hermiticity without strengthening the observer certificate. Second complementary Gleason-facing half-bridge. It represents the certified observer-level values and is not an inverse recovering the originating source. The failure is information loss across the observer boundary, not a missing certificate field. The implication is formally false, not awaiting proof. The physical quantum specialization is functionally interpretive: an operational, testable map rather than a kernel identity. The general temporal cost-and-transport arrow, partial-trace reduction, and phase-collision boundary are exact or explicitly conditional. This is an exact reduction/regrouping theorem, not a certified temporal channel or distinguishability monotonicity law. This is the Cost of Cacophony-facing geometric obstruction: compression regime and support geometry determine a certified cost boundary. This is the proved non-injectivity of observer lowering. Time supplies an ordered transport coordinate with explicit accumulated cost; this is not merely literary temporal language.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -553,6 +625,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: `proof:appC_coarse_graining_tokens`; `remark:appC_born_honest_reduction` (What is proved, and what is posited)
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-005`
+- Witnesses: `AppendixDH.orthogonal_token_separation`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Tokens resolving to distinct indices are disjoint, proved directly from the resolving-function model rather than from an operator-orthogonality hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If $Pi Xi = 0$ then $T_Obs(Pi) cap T_Obs(Xi) = varnothing$.
@@ -580,6 +663,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: `proof:appC_orthogonal_additivity`; `remark:appC_born_honest_reduction` (What is proved, and what is posited)
 - Macros used: `\Obs`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-006`
+- Witnesses: `AppendixDH.tokensOfSet_eq_biUnion`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Coarse-graining a set of frame indices resolves to exactly the Finset.biUnion of the individual token sets.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -609,6 +703,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: `lemma:appC_sigma_additivity` (Finite orthogonal additivity gives a Gleason frame function); `proof:appC_psc3`; `proof:appC_sigma_additivity`; `remark:appC_born_honest_reduction` (What is proved, and what is posited); `remark:appC_born_rule_dependency` (Derivation Structure)
 - Macros used: `\Horizon`, `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-008`
+- Witnesses: `AppendixDH.mu_biUnion_eq_sum`, `AppendixDH.orthogonal_additivity`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Binary additivity is extended by induction to any finite pairwise-disjoint indexed family, then combined with the token-resolution model to give additivity of mu over any finite orthogonal family.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Obs$ be a Bounded Observer with finite coherence budget $mu_{Obs,tildepsi}$. For any finite mutually orthogonal family ${Pi_i}_{i=1}^n subseteq Proj(Horizon)$, \[ C_{Obs}\!Big(tildepsi_{Obs}, sum_i Pi_iBig) = sum_i C_{Obs}(tildepsi_{Obs}, Pi_i). \]
@@ -636,6 +741,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: `definition:bk7_contextuality_defect` (Contextuality defect); `remark:appC_born_rule_dependency` (Derivation Structure); `remark:appC_domination_open_route` (Open derivation route for Emergence Domination); `remark:bk7_pisu_status` (Status of the trade-off and its corollaries); `subsec:appC_born_additivity_derivation` (Interpretive-Budget Additivity from Bounded Discernibility); `subsec:appC_born_axioms` (Coherence Axioms (PS–C)); ... +2 more
 - Macros used: `\Horizon`, `\Obs`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-049`
+- Witnesses: `AppendixCoherenceAxioms.bounded_budget_does_not_force_noncontextuality`, `AppendixCoherenceAxioms.noncontextual_budget_frame_independent`
+- Countermodels: `AppendixCoherenceAxioms.bounded_budget_does_not_force_noncontextuality`
+- Conditions: PS-C3-prime supplied as a cross-frame budget law; PS-C5 supplied as a separated-orthogonal exclusivity law; coherence values bounded in the unit interval
+- Formal boundary: Typed noncontextuality axiom: a budget satisfying NoncontextualAt gives equal values for the same question across frames. Countermodel confirms unit-interval boundedness does not derive frame independence, matching the source declaration that PS-C3-prime is posited.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -665,6 +781,16 @@ Role: `remark` | Type: `remark` | Book: `appendix_dual_horizon` | Source: `appen
 - Cited by: none
 - Macros used: `\Horizon`, `\Obs`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `REVIEW-002`
+- Witnesses: `Book7QuantumGleason.completeFrameCoherence_does_not_supply_hermitian_certificate`
+- Countermodels: none
+- Formal boundary: The existing continuity-plus-density route is explicitly speculative and distinct from the now-refuted direct frame-readout lift; later editing should keep those two boundaries separate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A future derivation could proceed through resolution-limited frame distinguishability (PS-C5, Ax. axiom:appC_psc5): if two discernible frames agree on $Pi$ up to the observer threshold $epsilon_Obs$, the budgets they assign $Pi$ must agree up to a modulus controlled by $epsilon_Obs$, and a continuity-plus-density argument over the frame manifold - connected for $dimHorizon ge 3$ - might then force exact equality in the $epsilon_Obs to 0$ refinement limit. We record this as open.
@@ -693,6 +819,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-009`
+- Witnesses: `AppendixDH.mu_le_one`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Boundedness is derived as a theorem from mu_nonneg plus finite additivity (mu(full) = mu(A) + mu(full\A) >= mu(A)), rather than postulated as a separate axiom.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 $0 leq C_{Obs}(tildepsi_{Obs}, Pi) leq 1$ (cf. definition:appC_coherence_functional)
@@ -707,6 +844,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-042`
+- Witnesses: `Born.psc2_unitary_covariance`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The Born coherence form satisfies unitary covariance; forward direction of the Born rule.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 $C_{Obs}(U tildepsi_{Obs}, U Pi U^dagger) = C_{Obs}(tildepsi_{Obs}, Pi)$ (cf. definition:appC_coherence_functional)
@@ -720,6 +868,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_dual_horizon` | Source: 
 - Cites: `definition:appC_coherence_functional` (Coherence functional)
 - Cited by: `lemma:appC_sigma_additivity` (Finite orthogonal additivity gives a Gleason frame function); `proof:appC_sigma_additivity`
 - Macros used: `\Obs`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-010`
+- Witnesses: `AppendixDH.mu_conservation`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Conservation (sum over all frame indices = 1) is derived given the added hypothesis that the frame's coarse-graining of every index covers the full admissible token set (tokensOfSet Finset.univ = full); this hypothesis is implicit-by-construction in the source's discernible complete frame but must be stated explicitly here.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -749,6 +908,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-044`, `Q-COMPLEX-06`
+- Witnesses: `Book7QuantumGleason.complex_phase_refutes_real_degreeTwo`, `Book7QuantumGleason.vectorExpectation_globalPhase`, `Book7QuantumGleason.vectorExpectation_smul`, `Born.psc4_ray_invariance`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The Born form is phase-invariant (ray invariance). The exact kernel supports the phase-faithful correction without certifying the PS axiom as derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 $C_{Obs}(e^{itheta} tildepsi_{Obs}, Pi) = C_{Obs}(tildepsi_{Obs}, Pi)$ (cf. definition:appC_coherence_functional). The corresponding complex homogeneity is phase-faithful: amplitudes scale through $overline a a=|a|^2$, not through the real shadow $a^2$.
@@ -763,6 +933,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: `assumption:appC_bounded_discernibility` (Bounded discernibility); `remark:appC_psc3prime_open_route` (Open derivation route for PS--C3$'$)
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-050`
+- Witnesses: `AppendixCoherenceAxioms.boundedness_does_not_force_resolution_distinguishability`, `AppendixCoherenceAxioms.separated_orthogonal_questions_not_both_maximal`
+- Countermodels: `AppendixCoherenceAxioms.boundedness_does_not_force_resolution_distinguishability`
+- Conditions: PS-C3-prime supplied as a cross-frame budget law; PS-C5 supplied as a separated-orthogonal exclusivity law; coherence values bounded in the unit interval
+- Formal boundary: Typed resolution axiom excludes simultaneous unit coherence for separated orthogonal questions. Countermodel confirms ordinary [0,1] boundedness does not derive PS-C5; it remains an explicit physical axiom.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If $Pi_1 perp Pi_2$ and $\| Pi_1 - Pi_2 \| > epsilon_{Obs}$, then both coherence values cannot equal 1 for the same pure state (cf. definition:appC_coherence_functional).
@@ -776,6 +957,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: none
 - Macros used: `\Horizon`, `\Obs`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-045`
+- Witnesses: `Born.psc6_calibration`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The Born form calibrates: a pure state answers its own question with coherence 1.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -805,6 +997,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: `proof:appC_born_rule`
 - Macros used: `\Horizon`, `\Obs`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-011`
+- Witnesses: `AppendixDH.mu_conservation`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the finite-dimensional remark is realized: since the frame-index type is a Fintype, summing mu_conservation over Finset.univ already covers every orthogonal family a finite-dimensional Horizon can present. The Gleason-frame-function / normalized-measure identification itself is not separately formalized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $dimHorizon=d<infty$ and fix an observer-state representation $tildepsi_{Obs}$. Define $mu_psi(Pi):=C_{Obs}(tildepsi_{Obs},Pi)$. Boundedness (PS-C1) and within-frame additivity (PS-C3, now Cor. axiom:appC_psc3, established as Thm. theorem:appC_orthogonal_additivity) imply that $mu_psi$ is a normalized nonnegative finitely additive measure on $Proj(Horizon)$; equivalently, its restriction to rank-one projectors is a normalized frame function.
@@ -832,6 +1035,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: none
 - Macros used: `\Obs`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-043`
+- Witnesses: `Born.psc2_unitary_covariance`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The measure family is unitary-covariant - same kernel as PS-C2.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -875,6 +1089,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: `proof:appC_mixed_states`; `proof:appC_qubit_case`; `remark:appC_psc3prime_open_route` (Open derivation route for PS--C3$'$); `remark:bk7_pisu_status` (Status of the trade-off and its corollaries); `scholium:bk7_born_as_hilbert_cross_section` (Born as the Hilbert cross-section); `subsec:bk7_pisu_implications` (Implications)
 - Macros used: `\Horizon`, `\Obs`
 
+### Lean correspondence
+
+- Status: `conditional`, `interpretive`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-046`, `Q-BORN-07`
+- Witnesses: `Born.coh_le_one`, `Born.qubit_born`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The broader appendix argument remains human mathematics; neither formal half-bridge is mislabeled as the classical theorem. The rank-one Born value taken as the coherence functional, computed on the qubit and bounded by 1; Gleason-type uniqueness (axioms force this form in d>=3) stays a counsel-permanent open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $dim Horizon = d geq 3$, let $psiinHorizon$ be normalized, and suppose PS-C1-PS-C6 hold for the observer representation $tildepsi_{Obs}$. Then for any rank-one projector $Pi_a = |arangle langle a|$, \[ C_{Obs}(tildepsi_{Obs}, Pi_a) = |langle a | psi rangle|^2 . \] More generally, for every projector $Piin Proj(Horizon)$, \[ C_{Obs}(tildepsi_{Obs},Pi)=tr(P_psiPi), P_psi:=|psiranglelanglepsi|. \]
@@ -902,6 +1127,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_dual_horizon` | Source: 
 - Cites: none
 - Cited by: none
 - Macros used: `\Horizon`, `\Obs`
+
+### Lean correspondence
+
+- Status: `conditional`, `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-047`, `REVIEW-003`
+- Witnesses: `Book7GleasonBoundary.rank_two_frame_axioms_do_not_force_born`, `Born.qubit_born`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; The human proof uses an explicit higher-rank extension; Lean certifies the lower-rank obstruction but not this full extension argument.; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The human proof uses an explicit higher-rank extension; Lean certifies the lower-rank obstruction but not this full extension argument. The qubit Born value equals the squared amplitude, computed on C^2.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -931,6 +1167,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_dual_horizon` | Source: 
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-048`, `REVIEW-004`
+- Witnesses: `Born.cohMix_nonneg`, `Born.mixed_affine`
+- Countermodels: none
+- Conditions: Gleason-type uniqueness (axioms force the Born form in d>=3) and PS-C5 stay open; only the forward direction Born => axioms is certified; The affine-mixture premise is visible in the prose but the mixed-state construction is not part of the current Lean receipt.; continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The affine-mixture premise is visible in the prose but the mixed-state construction is not part of the current Lean receipt. The mixed-state coherence is affine in the mixing weights, matching tr(rho Pi_a).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Assume, in addition, that the observer coherence budget is affine under classical mixtures of preparations. If $rho = sum_i p_i |psi_iranglelanglepsi_i|$ with $p_ige0$ and $sum_i p_i=1$, then for every projector $Pi_a$, \[ C_{Obs}(tilderho_{Obs}, Pi_a) = tr(rho Pi_a). \]
@@ -959,6 +1206,16 @@ Role: `section` | Type: `section` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: `definition:appC_observer_token_space` (Observer token space for a projective frame)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `interpretive`
+- Records: `REVIEW-005`
+- Witnesses: none
+- Countermodels: none
+- Formal boundary: The emergence-of-randomness and free-energy language is an observer interpretation, not the finite observer-lowering theorem itself.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 (no body text extracted)
@@ -972,6 +1229,16 @@ Role: `section` | Type: `section` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `interpretive`
+- Records: `REVIEW-006`
+- Witnesses: none
+- Countermodels: none
+- Formal boundary: The resolution-limit outlook is intentionally synthetic and empirical-facing; it should remain outside exact kernel projection unless separately witnessed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1043,6 +1310,17 @@ Role: `axiom` | Type: `axiom` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: `proof:appC_fundamental_irreversibility`; `proof:appD_titans_as_arrow_of_time`; `proposition:appC_conditional_minimality_2x2` (Conditional Minimality of 2×2 Form); `scholium:appC_time_as_memory` (Time as the Accumulation of Memory); `scholium:appD_axiom_of_memory_titans` (The Axiom of Memory and the "Titans" Architecture)
 - Macros used: `\Obs`, `\freeenergy`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-013`
+- Witnesses: `AppendixDH.memoryAct_hist_changes`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: History-change on every act is proved as a theorem from the strictly increasing order parameter carried by MemoryAct, upgrading the source's postulated axiom to a derived consequence of the monotone-order model.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Every act of differentiation, \(delta^O\), by a Bounded Observer \(Obs\) necessarily alters its history. If \(delta^O\) maps a state \((x_0, H_{t_0})\) to \((x_1, H_{t_1})\), then \(H_{t_1} neq H_{t_0}\). Specifically, \(H_{t_1}\) contains the trace of the operation that led from \(x_0\) to \(x_1\). This act of recording is metabolically non-zero, incurring a minimal cost in Symbolic Free Energy \(Delta{freeenergy}_{text{mem}} > 0\) (cf. definition:bk2_symbolic_free_energy).
@@ -1056,6 +1334,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk4_bounded_observer` (Bounded Observer)
 - Cited by: `corollary:appC_emergence_of_time_arrow_final` (The Emergence of the Arrow of Time); `proof:appD_titans_as_arrow_of_time`; `scholium:bk4_irreversibility_as_trace` (Irreversibility as Symbolic Trace)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-014`
+- Witnesses: `AppendixDH.memoryAct_irreversible`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Every act incurs strictly positive cost, direct from the MemoryAct.cost_pos field.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1084,6 +1373,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_dual_horizon` | Source: 
 - Cites: `theorem:appC_fundamental_irreversibility_final` (Fundamental Irreversibility of Reflective Observation)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-015`
+- Witnesses: `AppendixDH.memoryAct_no_return`, `AppendixDH.memoryAct_order_iterate`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The order parameter accumulates by at least n over n steps, hence the history never returns to an earlier value along any nontrivial path -- the discrete/finite kernel of the induced directed order and arrow of time.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1141,6 +1441,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `theorem:appC_phi_from_lagrangian` (Emergence of $\varphi$ from Lagrangian Equilibrium)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-016`
+- Witnesses: `AppendixDH.V_eq_zero_iff`, `AppendixDH.V_nonneg`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: V(C) = (1/2)(C - 1/C)^2 kept exactly; nonnegativity is unconditional, the zero-locus characterization (V(C)=0 iff C=1) is proved for C > 0.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Define the symbolic potential governing recursive learning as: \[ V(C) = frac{1}{2} left(C - frac{1}{C} right)^2 \] This encodes the symbolic tension between drift (cf. Def. definition:bk6_drift_operator_complete) and reflection (Def. definition:bk6_reflection_operator_complete), as defined in Book VI.
@@ -1154,6 +1465,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:appC_lagrangian_potential` (Symbolic Potential Function)
 - Cited by: `proof:appC_phi_min_growth`; `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-033`
+- Witnesses: `Book7B.shiftedFib_ratio_tendsto_goldenRatio`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Witnessed only for the canonical positive-initial-data instance C_n=fib(n+1) (C_0=C_1=1); generalizing to arbitrary C_0,C_1>0 is not attempted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1197,6 +1519,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-034`
+- Witnesses: `Book7B.complexity_card_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Frame modeled as a Finset rather than a Hilbert-space metric ball.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $H$ be a separable Hilbert space. Define the observer-relative frame (Def. definition:bk4_observer_kernel_convolution_map): \[ F_delta(t) = {x in H : \|x - x_0(t)\| leq delta} \] with $x_0(t)$ the current observer state and $delta$ their perceptual radius (see also bounded observer kernel in Def. definition:bk1_bounded_observer).
@@ -1210,6 +1543,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cites: `definition:bk1_stage_composite_operator` (Stage–Composite Operator)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-035`
+- Witnesses: `Book7B.complexity_card_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Finset.card of an intersection stands in for dim(span(...)); genuine linear-algebra dimension is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1239,6 +1583,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-052`
+- Witnesses: `AppendixCurvatureFlows.boundedContinuousFlow_cauchy_converges`, `AppendixCurvatureFlows.observer_bound_closed_under_pointwise_limit`, `AppendixCurvatureFlows.pointwise_convergence_alone_does_not_preserve_bound`, `AppendixCurvatureFlows.pointwise_limit_preserves_lipschitz_bound`
+- Countermodels: `AppendixCurvatureFlows.pointwise_convergence_alone_does_not_preserve_bound`
+- Conditions: complete normed target for ambient bounded continuous flows; one common Lipschitz constant across the sequence; pointwise convergence of the flow sequence
+- Formal boundary: Analytic kernel: bounded continuous flows into a complete normed target are complete in the uniform ambient metric, and a shared Lipschitz bound—including the printed C1*delta bound—passes to pointwise limits. A countermodel shows pointwise convergence without a common bound is insufficient. The exact custom Lipschitz norm and bounded-operator specialization are not reconstructed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Fix a finite observation interval $[0,T]$. Let $L(H)$ denote the bounded operators on the Hilbert space and let \[ Lip([0,T],L(H)) :={K:[0,T]toL(H) : Ktext{ is Lipschitz}} \] with norm \[ \|K\|_{Lip} :=sup_{tin[0,T]}\|K_t\|_{op} +sup_{sne t}frac{\|K_t-K_s\|_{op}}{|t-s|}. \] Then $Lip([0,T],L(H))$ is a Banach space. The admissible bounded-observer curvature flows satisfying \[ \|K_t-K_s\|_{op}le C_1delta |t-s| (s,tin[0,T]) \] form a closed complete subset of this Banach space.
@@ -1267,6 +1622,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `theorem:appC_phi_min_growth` (Golden Ratio as Minimal Sustainable Growth Rate); `theorem:appC_phi_minimized_entropy_per_complexity` ($\varphi$ Minimizes Entropy-per-Complexity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-017`
+- Witnesses: `AppendixDH.sustainable_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Reframed algebraically from the source's asymptotic-ratio condition to the fixed-point inequality theta >= 1 + 1/theta (the same inequality theorem:appC_phi_minimal_curvature_parameter states verbatim for the curvature parameter) -- an explicit honesty gap against the source's limit-of-sequence phrasing.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A growth rate $lambda>1$ is sustainable for a bounded recursive observer if there exists a positive complexity sequence $(C_n)$ with finite asymptotic ratio \[ lambda=lim_{ntoinfty}frac{C_{n+1}}{C_n} \] and satisfying the drift-reflection retention constraint \[ C_{n+1}ge C_n+C_{n-1} (nge1). \] Equality is the minimal balanced closure: the next state preserves current symbolic content and exactly one previous memory trace, with no superfluous expansion.
@@ -1280,6 +1646,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:appC_sustainable_growth_rate` (Sustainable Growth Rate)
 - Cited by: `proof:appC_phi_minimized_entropy_per_complexity`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-018`
+- Witnesses: `AppendixDH.sustainable_ge_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: phi is the least value satisfying the algebraic reframing of Sustainable; not a statement about limits of sequences of ratios.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1323,6 +1700,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-036`
+- Witnesses: `Book7B.shiftedFib_ratio_tendsto_goldenRatio`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The scalar growth-rate content of rho(G)=phi is witnessed by the same golden-ratio limit; the operator G and its spectral radius/operator norm are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For $G$ defined in Def. definition:appC_complexity_growth_operator, \[ rho(G)=lim_{n to infty} \|G^n\|^{1/n} = varphi . \]
@@ -1364,6 +1752,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:appC_complexity_entropy_tradeof` (Complexity--Entropy Tradeoff); `definition:appC_sustainable_growth_rate` (Sustainable Growth Rate)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-021`
+- Witnesses: `AppendixDH.kappa_min_at_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Proved among Sustainable rates (the algebraic reframing), not among all sustainable-in-the-source's-asymptotic-sense rates.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1407,6 +1806,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-023`
+- Witnesses: `AppendixDH.geodesic_convergence`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Given the PhiStableRegion's global contraction hypothesis, distance to M shrinks geometrically: infDist(x_n, M) <= q^n * infDist(x_0, M).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If an observer trajectory $x_{n+1}=Phi(x_n)$ remains in the neighborhood $U$ of a $varphi$-stable region $M_varphi$, then $x_n$ converges to $M_varphi$ in observer-relative distance: \[ d(x_n,M_varphi)le q^n d(x_0,M_varphi)longrightarrow0 . \]
@@ -1449,6 +1859,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `lemma:appC_matrix_representation_symbolic_operators` (Matrix Representation of Symbolic Operators)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-024`
+- Witnesses: `AppendixDH.Gop_step`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The two-step closure hypothesis s(n+2)=s(n+1)+s(n) is taken directly as a hypothesis of Gop_step rather than given its own named Prop.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Assume symbolic emergence is represented by a positive two-step complexity sequence $(s_n)$ whose state vector is \[ s_n=(s_n,s_{n-1})^T. \] The minimal drift-reflection closure preserves current symbolic content and one memory trace: \[ s_{n+1}=s_n+s_{n-1}. \] Thus Drift contributes the current term $s_n$, Reflection contributes the retained memory term $s_{n-1}$, and recursive emergence is their balanced composition.
@@ -1462,6 +1883,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: `definition:appC_symbolic_operator_assumptions` (Symbolic Operator Assumptions)
 - Cited by: `proof:appC_conditional_minimality_2x2`; `theorem:appC_unified_recursive_fixed_point` (Unified Recursive Fixed Point)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-025`
+- Witnesses: `AppendixDH.Gop_step`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Gop advances consecutive terms of any two-step-closure sequence: Gop(s(n+1),s(n)) = (s(n+2),s(n+1)).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1491,6 +1923,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-026`
+- Witnesses: `AppendixDH.Gop_phi_eigen`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Reframed from a Perron-Frobenius/matrix-norm spectral-radius argument to a direct eigenvector exhibition: Gop(phi,1) = (phi*phi,phi) = phi . (phi,1).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The golden ratio $varphi$ is the Perron-Frobenius eigenvalue, hence the dominant asymptotic growth factor, of the minimal recursive-emergence matrix $M=bigl(1&1\\1&0bigr)$.
@@ -1518,6 +1961,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-037`
+- Witnesses: `Book7B.fibMatrix_pow_succ`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact matrix-power identity for n>=1, reindexed n|->n+1 to avoid Nat subtraction at the excluded n=0 case.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1547,6 +2001,17 @@ Role: `proposition` | Type: `proposition` | Book: `appendix_dual_horizon` | Sour
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-051`
+- Witnesses: `AppendixMemoryMinimality.current_only_update_forgets_memory`, `AppendixMemoryMinimality.memoryStep_encodes_recurrence`, `AppendixMemoryMinimality.memory_projection_not_representable_by_current_only`, `AppendixMemoryMinimality.two_coordinate_form_conditionally_minimal`
+- Countermodels: none
+- Conditions: one-dimensional competitor is current-only; two-dimensional state is the ordered pair current and previous; updates must represent current state plus one retained prior state
+- Formal boundary: Exact operational kernel under the stated one-step-memory assumption: a current-only scalar update cannot distinguish histories sharing the current value and cannot represent the rule next=previous; the two-coordinate state (current, previous) represents every one-step recurrence and shifts memory exactly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the assumption that symbolic emergence requires encoding both current state and one memory state, the 2×2 matrix form is minimal for representing the drift-reflection composition (see Axiom axiom:appC_axiom_of_memory).
@@ -1574,6 +2039,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cites: `definition:bk4_bounded_observer` (Bounded Observer)
 - Cited by: `definition:appC_symbolic_curvature_function` (Symbolic Curvature Function); `proof:appC_geometric_interpretation_curvature`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-038`
+- Witnesses: `Book7B.symbolicEffort_ge_two`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: theta as forward-drift rate, 1/theta as curvature penalty, kept as plain reals rather than a manifold dynamical system.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1603,6 +2079,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-039`
+- Witnesses: `Book7B.symbolicEffort_eq_two_iff`, `Book7B.symbolicEffort_ge_two`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: AM-GM lower bound on kappa(theta)=theta+1/theta plus its equality trichotomy at theta=1.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The term $theta$ represents symbolic drift velocity, while $1/theta$ represents the curvature penalty imposed by bounded memory. The sum $kappa(theta)$ measures total symbolic effort required to maintain coherent exploration (cf. Def. definition:bk6_symbolic_curvature_tensor).
@@ -1630,6 +2117,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-028`
+- Witnesses: `AppendixDH.kappa_min_at_phi`, `AppendixDH.sustainable_ge_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The same theorem as theorem:appC_phi_minimized_entropy_per_complexity, stated twice in the source under two names; both are discharged by kappa_min_at_phi (and its minimality precondition by sustainable_ge_phi), restricted to the algebraic Sustainable domain theta >= 1 + 1/theta given verbatim by this anchor.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1659,6 +2157,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_dual_horizon` | Source
 - Cited by: `lemma:appC_stability_phi_flow` (Stability of $\varphi$-Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-029`
+- Witnesses: `AppendixDH.stability_phi_flow`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The stability condition |d/dtheta(1+1/theta)| < 1 at theta=phi is realized directly as the closed-form inequality 1/(phi*phi) < 1, without modeling a general derivative operator.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic flow is stable if small perturbations in the exploration parameter $theta$ decay exponentially. The stability condition requires: \[ left| frac{d}{dtheta} left( 1 + frac{1}{theta} right) right|_{theta=varphi} < 1 \] (cf. Def. definition:bk6_reflection_operator_complete)
@@ -1672,6 +2181,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_dual_horizon` | Source: `appendi
 - Cites: `definition:appC_symbolic_flow_stability` (Symbolic Flow Stability)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-030`
+- Witnesses: `AppendixDH.stability_phi_flow`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: 1/(phi*phi) < 1, proved from phi > 1.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1700,6 +2220,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `lemma:appC_matrix_representation_symbolic_operators` (Matrix Representation of Symbolic Operators)
 - Cited by: `remark:appC_connection_other_modalities` (Connection to Other Symbolic Modalities)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-031`
+- Witnesses: `AppendixDH.fixed_point_iff_phi`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Among positive reals, phi is the unique fixed point of lam = 1 + 1/lam, proved via the same factoring argument as sustainable_ge_phi plus uniqueness of the positive root of lam^2-lam-1=0.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1798,6 +2329,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_dual_horizon` | Source: `app
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure)
 - Cited by: `corollary:bk4_chromatic_transference_of_wheel` (Chromatic transference of the wheel); `proof:bk4_chromatic_transference_of_wheel`; `scholium:appC_two_modalities_one_root` (Two Modalities, One Root)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_DUAL_HORIZON-041`
+- Witnesses: `Book7B.quasiLipschitz_comp`, `Book7B.shiftedFib_ratio_tendsto_goldenRatio`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Distortion-composition bound covers the quantitative 'preserved up to observer resolution' content under composition; the golden-ratio tail clause is covered by the shared Fibonacci-ratio theorem. Ordinal/operator-recurrence invariant preservation itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2275,6 +2817,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_framing` | Source: 
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SMALLPACK-007`
+- Witnesses: `SmallPack.inf_mono_of_subset`, `SmallPack.inf_strict_decrease`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Erases the manifold/linear-algebra content (the residual map, its derivative J_x, tangent spaces, the curvature correction) and keeps only its abstract order-theoretic core: enlarging a feasible real-valued constraint set can only lower sInf, and strictly lowers it exactly when the enlarged set contains a witness below the old infimum -- the honest kernel of 'a new parameter relieves the obstruction precisely when it contributes a non-redundant direction.'
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(M\) be a finite-dimensional symbolic manifold equipped with an observer-relative norm \(\|cdot\|_{Obs}\), and let \[ r:Mlongrightarrow mathbb{R}^{k} \] be a \(C^{1}\) residual map encoding \(k\) simultaneous symbolic constraints near \(xin M\). Work in a normal neighborhood of \(x\), write \(J_x = Dr_x:T_xMtomathbb{R}^k\), and suppose the bounded observer can make only increments \(vin T_xM\) with \(\|v\|_{Obs}leq B\), up to local linearization error \(O(kappa\|v\|_{Obs}^{2})\) from symbolic curvature (cf.
@@ -2583,6 +3136,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_framing` | Source: 
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-APPENDIX_SYMBOLIC_FRAMING-001`
+- Witnesses: `AppendixTitansArrow.bare_testTime_update_need_not_be_irreversible`, `AppendixTitansArrow.memorization_changes_history`, `AppendixTitansArrow.memorization_has_positive_cost`, `AppendixTitansArrow.titans_arrow_of_time`, `AppendixTitansArrow.visible_return_is_not_full_return`
+- Countermodels: none
+- Conditions: every represented memory step has strictly positive cost; full process state includes history rather than only the visible model coordinate; the external test-time process supplies a history order strictly increased by every memory step
+- Formal boundary: Conditional downstream kernel: any test-time learning process equipped with the Appendix C MemoryAct laws strictly advances history, pays positive cost, and cannot return to its initial history after a positive number of steps. Visible state can return without full-state return. A reversible Bool update proves a bare external test-time transition does not itself entail irreversibility or empirical validation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The process described by Behrouz et al. is necessarily irreversible and thus provides empirical validation for the geometric derivation of the Arrow of Time (Sec. sec:appC_arrow_of_time_rigorous).
@@ -2751,6 +3315,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_symbolic_reflexive_val
 - Cited by: `definition:appB_symbolic_energy` (Symbolic Energy Functional); `proof:appB_chart_bounds`; `proof:appB_metric_completion`; `proof:appB_resolution_of_smoothness`; `proof:appB_smooth_atlas`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SMALLPACK-001`
+- Witnesses: `SmallPack.resolutionLevel_mono`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Only the monotone-nesting content of the level sets P_lambda is modeled, via the InLevel threshold predicate. The underlying space S, End(S), and the operator norm are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ denote the space of symbolic configurations with finite symbolic complexity (cf. definition:bk1_symbolic_manifold). For each resolution level $lambda in mathbb{N}$, define: \[ P_lambda = left{(s, rho) in S times text{End}(S) : text{complexity}(s) leq lambda, \|rho\|_{text{op}} leq lambda right} \] The symbolic tower is the directed union $P = bigcup_{lambda} P_lambda$.
@@ -2793,6 +3368,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_symbolic_reflexive_val
 - Cited by: `proof:appB_chart_bounds`; `proof:appB_energy_contraction`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-002`
+- Witnesses: `SmallPack.symbolicEnergy_nonneg`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Models the algebraic form H + (1/2)*drift^2 + (epsO/2)*refl^2 directly on reals and proves nonnegativity conditional on H >= 0, epsO >= 0. The kappa-norm and symbolic-manifold structure underlying drift/refl are erased to bare reals.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given an SRV trajectory ${x_t}$ through the symbolic state space (Def. definition:appB_symbolic_state_space), define: \[ E_t = H_{text{symb}}(x_t) + frac{1}{2}\|text{drift}_t\|_kappa^2 + frac{epsilon_{O}}{2}\|text{refl}_t\|_kappa^2 \]
@@ -2821,6 +3407,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_symbolic_reflexive_validation` |
 - Cited by: `proof:appB_resolution_of_smoothness`; `proof:appB_smooth_atlas`; `proof:appB_srv_cauchy`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-003`
+- Witnesses: `SmallPack.symbolicEnergyContraction_accum`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The per-step contraction law is kept as a structure field on an abstract energy : Nat -> Real sequence; its telescoped/accumulated form over n steps is proved by induction, mirroring Book8's metabolic-sufficiency pattern. H_symb and the underlying SRV dynamics are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under SRV, we have: \[ E_{t+1} - E_t leq -lambda_{text{cont}} left( \|text{drift}_t\|_kappa^2 + epsilon_{O}\|text{refl}_t\|_kappa^2 right) \] Here $H_{text{symb}}$ generalizes the symbolic Hamiltonian (cf. definition:bk2_symbolic_hamiltonian) under SRV dynamics.
@@ -2848,6 +3445,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_reflexive_validatio
 - Cites: `definition:appB_observer_metric` (Observer-Relative Symbolic Metric)
 - Cited by: `proof:appB_resolution_of_smoothness`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SMALLPACK-004`
+- Witnesses: `SmallPack.symbolicEnergyContraction_sum_bounded`, `SmallPack.symbolicEnergyContraction_term_bounded`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Does not construct the observer metric d_O or prove literal Cauchy-ness of the trajectory. Instead proves the quantitative content the Cauchy claim depends on: given a lower bound on energy, the cumulative and individual squared-drift terms stay uniformly bounded across all steps. This is a genuinely weaker, honest substitute, not a full proof of the stated theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2891,6 +3499,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_reflexive_validatio
 - Cited by: `definition:appB_symbolic_chart` (Symbolic Chart System); `proof:appB_resolution_of_smoothness`; `proof:appB_smooth_atlas`; `proof:appB_smoothness_emergence`; `theorem:appB_smooth_atlas` (Smooth Atlas on Completion); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-010`
+- Witnesses: `Book9B.atlas_consistent_of_glued_and_covers`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: "the metric completion exists" is re-read as "a single global metric consistent with every chart exists" via single_geometry_iff_glued, given PairCovers and Glued; separability is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The metric completion $overline{P}$ of $(P, d_{O})$ exists and is separable. The symbolic tower $P$ is equipped with the coherence metric (cf. definition:bk4_coherence_metric_on_symbolic_manifold).
@@ -2919,6 +3538,17 @@ Role: `definition` | Type: `definition` | Book: `appendix_symbolic_reflexive_val
 - Cited by: `assumption:appB_chart_compatibility` (Smooth Chart Compatibility); `lemma:appB_chart_bounds` (Uniform Chart Bounds); `proof:appB_chart_bounds`; `proof:bk1_atlas_final_topology_phase_space` (Atlas Construction on Final Topology of Symbolic Phase Space); `theorem:appB_smooth_atlas` (Smooth Atlas on Completion)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-009`
+- Witnesses: `Book9B.atlas_consistent_of_glued_and_covers`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: re-read over FracturedAtlas's ChartComplex rather than constructed from an encode/matrix pair; the specific R^{d_lambda} coordinatization is not modeled, only chart-consistency.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For each $lambda$, define: \[ chi_lambda(s, rho) = (text{encode}_lambda(s), text{matrix}_lambda(rho)) in mathbb{R}^{d_lambda} \] These charts coordinatize the completed manifold $M$ (cf. theorem:appB_metric_completion).
@@ -2932,6 +3562,17 @@ Role: `lemma` | Type: `lemma` | Book: `appendix_symbolic_reflexive_validation` |
 - Cites: `definition:appB_symbolic_chart` (Symbolic Chart System)
 - Cited by: `assumption:appB_chart_compatibility` (Smooth Chart Compatibility); `proof:appB_smooth_atlas`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-005`
+- Witnesses: `SmallPack.chartBound_mono`, `SmallPack.chartBound_nonneg`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Models only the scalar bound expression C_chart * sqrt(lambda) and proves it is nonnegative and monotone nondecreasing in lambda. The operator-norm sup over the actual charts D chi_lambda is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2975,6 +3616,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_reflexive_validatio
 - Cited by: `proof:appB_resolution_of_smoothness`; `proof:appB_smoothness_emergence`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-011`
+- Witnesses: `Book9B.atlas_consistent_of_glued_and_covers`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only chart-compatibility (existence of a consistent global metric) is modeled; the smooth-manifold structure itself is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The metric completion $M = overline{P}$ admits a smooth manifold structure compatible with the charts ${chi_lambda}$ (cf. definition:appB_symbolic_chart), constructed over the completed space (cf. theorem:appB_metric_completion).
@@ -3017,6 +3669,17 @@ Role: `theorem` | Type: `theorem` | Book: `appendix_symbolic_reflexive_validatio
 - Cited by: `proof:appB_resolution_of_smoothness`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-012`
+- Witnesses: `Book9B.no_global_metric_without_gluing`
+- Countermodels: `Book9B.no_global_metric_without_gluing`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the converse/obstruction direction: charts that are not glued admit no consistent global metric. Smoothness, second-countability, and paracompactness are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The completed space $M = overline{P}$ is a smooth, second-countable, paracompact manifold, confirming topological regularity (cf. axiom:bk1_topological_regularity) and realizing the pre-geometric nature of the framework (cf. axiom:bk1_pre_geometric_nature).
@@ -3044,6 +3707,17 @@ Role: `corollary` | Type: `corollary` | Book: `appendix_symbolic_reflexive_valid
 - Cites: `scholium:bk1_resolution_of_continuum_disjunction` (On the Resolution of the Continuum Disjunction)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-013`
+- Witnesses: `Book9B.no_global_metric_without_gluing`
+- Countermodels: `Book9B.no_global_metric_without_gluing`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: "smooth structure arises... under bounded observer resolution" is re-read as its failure mode: resolution that is not consistent across charts (not Glued) yields no single global metric.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3157,6 +3831,17 @@ Role: `axiom` | Type: `axiom` | Book: `book1` | Source: `book1.tex:3`
 - Cited by: `axiom:bk1_dual_horizon_postulate` (Dual Horizon Postulate); `axiom:bk1_pre_geometric_nature` (Pre-geometric Nature); `axiom:bk1_symbolic_primacy` (Symbolic Primacy); `corollary:bk1_horizon_duality_principle` (Horizon Duality Principle); `corollary:bk1_linear_insufficiency` (Linear Insufficiency); `definition:bk1_drift_field` (Drift Field); ... +9 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SMALLPACK-008`
+- Witnesses: `AxiomataPrima.everything_forces_stasis`, `AxiomataPrima.just_is_observationally_nothing`, `AxiomataPrima.negotiation_not_null`, `AxiomataPrima.no_manifest_only_existence`, `AxiomataPrima.no_return_past_work`, `AxiomataPrima.two_channel_sustained`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: Proof by negation over the minimal frame: just-is and everything both collapse observationally into nothing; nothing dies by exhibition of the negotiation (non-null, selecting, positive-floor); uniqueness signed by the descent arrow (no return past work). Conditional on the minimal frame; the metaphysical scope of the three-word axiom is not exhausted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Existence is not.
@@ -3199,6 +3884,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:23`
 - Cited by: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk2_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk3_integration_differentiation_pressures` (Integration and Differentiation Pressures); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk3_symbolic_knowledge_structure` (Symbolic Knowledge Structure); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); ... +14 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK2-001`
+- Witnesses: `Book2.gibbs_isDensity`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite probability space as density structure; the Borel/volume apparatus is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The triple $(M, B, mu_g)$ forms a probability space (see proof proof:bk2_probability_structure_on_manifold) where: - $M$ is the symbolic manifold (Def. definition:bk1_symbolic_manifold_existence); - $B$ is the Borel $sigma$-algebra generated by the topology on $M$; - $mu_g$ is the normalized Riemannian volume measure induced by the symbolic metric $g$, satisfying $mu_g(M) = 1$.
@@ -3226,6 +3922,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:48`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk2_symbolic_probability_spa` (Symbolic Probability Space)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-002`
+- Witnesses: `Book2.gibbs_isDensity`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite kernel: the Gibbs state is a genuine density (positive, sums to one).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3269,6 +3976,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:67`
 - Cited by: `assumption:appB_srv_dissipativity` (SRV as a Stable Dissipative Descent); `axiom:bk2_gradient_structure_drift` (Gradient Structure of Symbolic Drift); `axiom:bk5_adaptation` (Adaptation); `axiom:bk7_convergence_potential` (Convergence Potential); `corollary:bk2_interpretative_framework` (Physical Interpretation); `definition:bk2_symbolic_energy` (Symbolic Energy); ... +10 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-017`
+- Witnesses: `Book7B.hamiltonian_denom_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the regularized denominator's positivity is modeled; the drift-norm and parallel-transported reflection-linearization trace terms are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic Hamiltonian $H: M rightarrow mathbb{R}$ is defined as: \[ H(x) = frac{kappa}{\|D(x)\|_g + epsilon} + lambda cdot text{tr}(L_x) \] where (see def definition:bk2_symbolic_probability_spa; see also def definition:bk1_reflection_operator): - $kappa, lambda > 0$ are scaling constants; - $\|D(x)\|_g$ denotes the norm of the drift vector at point $x$ with respect to the metric $g$; - $epsilon > 0$ is a regularization constant ensuring well-definedness;
@@ -3296,6 +4014,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:93`
 - Cites: `definition:bk2_symbolic_hamiltonian` (Symbolic Hamiltonian); `proof:bk2_smoothness_symbolic_hamiltonian` (Smoothness of Symbolic Hamiltonian)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-018`
+- Witnesses: `Book7B.hamiltonian_denom_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the real-analytic non-vanishing-denominator core of well-posedness is modeled; smoothness on the manifold M is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3325,6 +4054,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:105
 - Cited by: `axiom:bk5_energy_conservation` (Energy Conservation); `axiom:bk5_metabolic_persistence` (Metabolic Persistence); `axiom:bk7_convergence_potential` (Convergence Potential); `definition:bk2_symbolic_temperature` (Symbolic Temperature); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk5_symbolic_energy` (Symbolic Energy); ... +5 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK2-014`
+- Witnesses: `Book2.energy_eq_neg_deriv_log_partition`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: The bridge identity: Gibbs mean energy = -d/dbeta log Z.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic energy at symbolic time $s$ is defined as: \[ E_s = int_M rho(x,s) H(x) dmu_g(x) \] representing the expectation value of the Hamiltonian (see def definition:bk2_symbolic_hamiltonian) with respect to the probability density $rho(cdot,s)$ (see def definition:bk2__symbolic_probability_density).
@@ -3339,6 +4079,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:114
 - Cited by: `axiom:bk5_energy_conservation` (Energy Conservation); `axiom:bk5_metabolic_persistence` (Metabolic Persistence); `axiom:bk7_convergence_potential` (Convergence Potential); `axiom:bk9_emergent_autonomy` (Emergent Autonomy); `corollary:bk2_interpretative_framework` (Physical Interpretation); `corollary:bk8_translation_limit` (Cognitive Translation Limit); ... +40 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK2-003`
+- Witnesses: `Book2.entropy_nonneg`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite entropy with the 0 log 0 = 0 convention.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic entropy at symbolic time $s$ is defined as: \[ S_s = -int_M rho(x,s) logrho(x,s) dmu_g(x) \] This generalizes the Shannon entropy to the continuous manifold setting (see def definition:bk2__symbolic_probability_density; see also lemma lemma:bk2_finiteness_of_symbolic_entropy).
@@ -3352,6 +4103,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:123`
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk2_symbolic_entropy` (Symbolic Entropy)
 - Cited by: `definition:bk2_symbolic_entropy` (Symbolic Entropy); `sec:bk2_foundations_symbolic_thermodynamics` (Foundations of Symbolic Thermodynamics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK2-004`
+- Witnesses: `Book2.entropy_le_log_card`, `Book2.entropy_nonneg`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Two-sided quantitative bounds 0 <= S <= log n.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3381,6 +4143,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:135
 - Cited by: `axiom:appC_axiom_of_memory` (The Axiom of Memory); `axiom:bk5_adaptation` (Adaptation); `axiom:bk5_positive_free_energy` (Positive Free Energy); `axiom:bk8_coherence_horizon` (Symbolic Entanglement); `axiom:bk8_mutation_phase_shift` (Metabolic Sufficiency Criterion); `axiom:bk9_bounded_liberation_principle` (Bounded Liberation Principle); ... +104 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK2-005`
+- Witnesses: `Book2.freeEnergy_gibbs`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite free-energy functional; its decrease along the flow is a named open item.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic free energy functional $F_beta: P(M) rightarrow mathbb{R}$ is defined for inverse temperature parameter $beta > 0$ as: \[ F_beta[rho] = int_M rho(x) H(x) dmu_g(x) - beta^{-1} S[rho] \] where $S[rho] = -int_M rho(x) logrho(x) dmu_g(x)$ is the entropy functional (see def definition:bk2_symbolic_entropy; see also def definition:bk2__symbolic_probability_density).
@@ -3394,6 +4167,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:148
 - Cites: `definition:bk2_symbolic_energy` (Symbolic Energy); `definition:bk2_symbolic_entropy` (Symbolic Entropy)
 - Cited by: `axiom:bk5_energy_conservation` (Energy Conservation); `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `axiom:bk7_convergence_potential` (Convergence Potential); `corollary:bk2_interpretative_framework` (Physical Interpretation); `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold); `definition:bk2_local_symbolic_temperature` (Local Symbolic Temperature); ... +19 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-015`
+- Witnesses: `Book2.energy_eq_neg_deriv_log_partition`, `Book2.gibbs_concentrates`, `Book2.gibbs_freezes`
+- Countermodels: none
+- Conditions: finite alphabet; strict suboptimality/unique minimizer hypotheses explicit; limits along atTop in beta; finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: The derivative bridge plus the full trichotomy of the temperature knob: uniform at beta 0, variational balance at finite beta, freezing/concentration at beta to infinity; the dS/dE form itself is not formalized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3423,6 +4207,17 @@ Role: `axiom` | Type: `axiom` | Book: `book2` | Source: `book2.tex:162`
 - Cited by: `axiom:bk2_symbolic_fokker_planck_equation` (Symbolic Fokker-Planck Equation); `proof:bk2_coherence_of_symbolic_therm`; `proof:bk2_symbolic_fluctuation_dissipation_relation`; `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `theorem:bk2_equilibrium_distribution` (Equilibrium Distribution); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-011`
+- Witnesses: `Book2.cycle_stationary_not_reversible`, `Book2.detailedBalance_stationary`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Detailed balance is the finite shadow of the gradient condition; the 3-cycle exhibits the solenoidal component.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic drift field $D$ (Def. definition:bk1_drift_field) is related to the symbolic Hamiltonian $H$ (Def. definition:bk2_symbolic_hamiltonian) by: \[ D(x) = -nabla_g H(x) + xi(x) \] where $nabla_g$ is the gradient with respect to the metric $g$, and $xi(x)$ is a solenoidal field (i.e., $nabla_g cdot xi = 0$) representing non-conservative components of the symbolic dynamics.
@@ -3437,6 +4232,17 @@ Role: `axiom` | Type: `axiom` | Book: `book2` | Source: `book2.tex:171`
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_masking_and_unmasking` (Symbolic Masking and Unmasking)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-010`
+- Witnesses: `Book2.evolve_conserves`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite skeleton only: evolution by a stochastic kernel; the manifold PDE is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In continuity with the Book I symbolic evolution law (thm theorem:bk1_fundamental_relation_fokker_plank_equation) and the drift decomposition in axiom axiom:bk2_gradient_structure_drift, the evolution of the symbolic probability density $rho$ (def definition:bk2__symbolic_probability_density) is governed by: \[ frac{partial rho}{partial s} = -nabla_g cdot (rho D) + sigma^2 nabla_g^2 rho \] where: - $nabla_g cdot$ is the divergence operator with respect to the metric $g$;
@@ -3450,6 +4256,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:185`
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `proof:bk2_fokker_planck_probability_conservation` (Probability Conservation in Symbolic Fokker–Planck Equation)
 - Cited by: `proof:bk2_fokker_planck_probability_conservation` (Probability Conservation in Symbolic Fokker–Planck Equation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-009`
+- Witnesses: `Book2.evolve_conserves`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite Markov skeleton: row-stochastic evolution conserves total mass.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3479,6 +4296,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:216`
 - Cited by: `definition:bk2_symbolic_partition_funct` (Symbolic Partition Function); `definition:bk2_symbolic_response_functi` (Symbolic Response Function); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk2_coherence_of_symbolic_therm`; `proof:bk2_sketch_wasserstein_gradient_flow` (Wasserstein Gradient Flow via Jordan--Kinderlehrer--Otto); `proof:bk2_symbolic_drift_equilibrium_yields_gibbs_measure` (Proof: Symbolic Drift Equilibrium Yields Gibbs Measure); ... +12 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-007`
+- Witnesses: `Book2.detailedBalance_stationary`, `Book2.gibbs_minimizes`, `Book2.gibbs_unique_minimizer`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite kernel: stationarity under detailed balance plus unique variational characterization; the PDE derivation is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the gradient condition $D = -nabla_g H$ (i.e., when the solenoidal component $xi = 0$ in Axiom axiom:bk2_gradient_structure_drift), the unique equilibrium distribution $rho_{eq}$ satisfying $partial rho / partial s = 0$ for the symbolic Fokker-Planck equation is given by: \[ rho_{eq}(x) = Z^{-1} e^{-beta H(x)} \] where $beta = sigma^{-2}$ and the partition function is: \[ Z = int_M e^{-beta H(x)} dmu_g(x) text{(see def definition:bk2_symbolic_partition_funct)} \]
@@ -3506,6 +4334,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:255`
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `proof:bk2_symbolic_free_energy_dissipation` (Symbolic Free Energy Dissipation Principle); `theorem:bk2_equilibrium_distribution` (Equilibrium Distribution)
 - Cited by: `axiom:bk5_positive_free_energy` (Positive Free Energy); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage); `proof:bk2_coherence_of_symbolic_therm`; `proof:bk2_interpretative_framework`; `proof:bk2_symbolic_free_energy_dissipation` (Symbolic Free Energy Dissipation Principle); ... +14 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-008`
+- Witnesses: `Book2.gibbs_minimizes`, `Book2.gibbs_unique_minimizer`, `Book2H.dataProcessing_kl`, `Book2H.h_theorem`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Both halves now certified finitely: unique variational endpoint (Book2) and monotone decrease under any detailed-balance stochastic step via finite data-processing (Book2H); the continuum Fokker-Planck flow is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3563,6 +4402,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:315`
 - Cited by: `proof:bk2_coherence_of_symbolic_therm`; `proof:bk5_operator_convergence`; `proof:bk8_sr_convergence`; `proof:bk9_framework_functional_identity`; `scholium:bk4_ttcs_potential_field` (TTCS and the Symbolic Potential Field); `sec:bk5_srmf_for_symbolic_operators_and_processes` (SRMF for Symbolic Operators and Processes); ... +4 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-020`
+- Witnesses: `Book2H.freeEnergy_trajectory_antitone`, `Book2H.trajectory_isDensity`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: Finite discrete gradient-flow kernel: every repeated detailed-balance step preserves density and the complete free-energy trajectory is antitone. No Wasserstein metric or continuum Fokker-Planck identification is asserted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the gradient condition $D = -nabla_g H$ (see theorem theorem:bk2_equilibrium_distribution), the symbolic Fokker-Planck equation can be interpreted as the gradient flow of the free energy functional $F_beta[rho]$ (see def definition:bk2_symbolic_free_energy) with respect to the symbolic Wasserstein metric (see def definition:bk2_symbolic_wasserstein_met): \[ frac{partial rho}{partial s} = -text{grad}_{W_2} F_beta[rho] \]
@@ -3605,6 +4455,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:369
 - Cited by: `definition:bk2_symbolic_phase_transitio` (Symbolic Phase Transition); `proof:bk2_symbolic_h_theorem` (Symbolic H-Theorem and Emergent Structure); `theorem:bk2_equilibrium_distribution` (Equilibrium Distribution)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK2-006`
+- Witnesses: `Book2.freeEnergy_gibbs`, `Book2.gibbs_isDensity`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite partition function: positivity and the equilibrium value -1/beta log Z.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic partition function $Z(beta)$ (see theorem theorem:bk2_equilibrium_distribution; cf. def definition:bk2_symbolic_phase_transitio), integrating the Hamiltonian (Def. definition:bk2_symbolic_hamiltonian) over the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold), is defined as: \[ Z(beta) = int_M e^{-beta H(x)} dmu_g(x) \]
@@ -3619,6 +4480,17 @@ Role: `definition` | Type: `definition` | Book: `book2` | Source: `book2.tex:377
 - Cited by: `definition:bk2_symbolic_partition_funct` (Symbolic Partition Function); `proof:bk2_classification_symb_phase_transitions`; `proof:bk2_coherence_of_symbolic_therm`; `proof:bk5_map_mad_mas_trichotomy`; `proof:bk7_hilbert_banach_bridge` (Hilbert--Banach Bridge); `sec:bk2_foundations_symbolic_thermodynamics` (Foundations of Symbolic Thermodynamics); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-012`
+- Witnesses: `Book2.no_finite_phase_transition`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: The definition's non-analyticity is proved impossible at finite alphabet.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic phase transition (see def definition:bk2_symbolic_partition_funct) occurs at inverse temperature $beta_c$ if the free energy \[ f(beta) = -beta^{-1} ln Z(beta) \] or its derivatives exhibit non-analytic behavior at $beta = beta_c$.
@@ -3632,6 +4504,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:385`
 - Cites: `definition:bk2_symbolic_phase_transitio` (Symbolic Phase Transition)
 - Cited by: `proof:bk1_realization_of_symbolic_phase_transitions`; `proof:bk2_coherence_of_symbolic_therm`; `theorem:bk5_map_mad_critical_temperature` (MAP-MAD Critical Temperature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-013`
+- Witnesses: `Book2.no_finite_phase_transition`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Negative-space kernel: f differentiable at every beta > 0 finitely; the order classification is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3689,6 +4572,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:428`
 - Cited by: `proof:bk2_coherence_of_symbolic_therm`; `theorem:bk2_coherence_of_symbolic_therm` (Coherence of Symbolic Thermodynamics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-021`
+- Witnesses: `Book2Response.fluctuation_response_hasDerivAt`
+- Countermodels: none
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Finite static Kubo kernel: under H_h = H - hB, the derivative at h=0 of the Gibbs expectation of A equals beta times the equilibrium covariance of A and B. The continuous-time correlation derivative requires a differentiable equilibrium semigroup and remains outside this kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For the symbolic Fokker-Planck dynamics in equilibrium (see thm theorem:bk2_equilibrium_distribution), the response function (see def definition:bk2_symbolic_response_functi) is related to the equilibrium correlation function by: \[ chi_{AB}(t) = beta frac{d}{dt}langle A(t) B(0) rangle_{eq} text{for } t > 0 \] where $A(t)$ evolves under the unperturbed dynamics.
@@ -3744,6 +4638,17 @@ Role: `proposition` | Type: `proposition` | Book: `book2` | Source: `book2.tex:4
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk2_local_symbolic_temperature` (Local Symbolic Temperature); `definition:bk2_symbolic_temperature` (Symbolic Temperature)
 - Cited by: `theorem:bk5_map_mad_critical_temperature` (MAP-MAD Critical Temperature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK2-019`
+- Witnesses: `ThermoRes.global_beta_between`
+- Countermodels: none
+- Conditions: manifold measure form, specific masking free-energy functional, and Hilbert decoherence operator stay open per row notes
+- Formal boundary: Global inverse temperature = density-weighted mean of local inverse temps, bounded by the extremes; the manifold integral stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3815,6 +4720,17 @@ Role: `lemma` | Type: `lemma` | Book: `book2` | Source: `book2.tex:527`
 - Cited by: `definition:bk4_symbolic_curvature` (Symbolic Curvature)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-022`
+- Witnesses: `Book2CycleConsistency.path_thermodynamic_consistency`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.boundary_balance_with_residue`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.boundary_consistency_iff_residue_zero`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.boundary_thermodynamic_consistency`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.interior_consistency_iff_residue_zero`, `Book2HypothesisSurfaceStokes.HypothesisSurfaceThermodynamics.interior_thermodynamic_consistency`, `Book2HypothesisSurfaceStokes.bounded_curvature_does_not_zero_residue`, `Book2HypothesisSurfaceStokes.scalar_closed_surface_consistent`
+- Countermodels: `Book2HypothesisSurfaceStokes.bounded_curvature_does_not_zero_residue`
+- Conditions: additive real modules of boundary one-forms and interior two-forms kept as distinct types; continuous boundary parameter and interval-integrable balance/exchange terms for the analytic path kernel; degree-correct Stokes identity; finite closed-cycle hypotheses for the discrete kernel; linear boundary and interior integration with exterior derivative; oriented closed surface certificate; pointwise first-variation decomposition and vanishing closed balance; pulled-back thermodynamic first-variation identity; zero observer-energy/temperature-entropy residue for consistency
+- Formal boundary: Conditional differential-form closure: pulled-back first variation exposes free-energy circulation as observer-accounting residue minus entropy-temperature exchange. Boundary consistency is equivalent to zero residue. A separately supplied oriented, degree-correct Stokes calculus transports exactly that identity into the interior. The scalar positive control inhabits the construction; the bounded-curvature countermodel proves regularity cannot manufacture reconciliation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $H_{text{Obs}}$ be a well-formed hypothesis manifold with bounded curvature $kappa_{H} < K_{text{Obs}}$ (cf. definition:bk1_symbolic_riemann_tensor). Assume the closed hypothesis-surface balance \[ oint_{partialmathcal H} bigl(dE_{text{Obs}}-T_{text{Obs}} dS_{mathcal H}bigr)=0, \] so the observer-energy term and the exact temperature-entropy term have zero net contribution around $partialmathcal H$.
@@ -3857,6 +4773,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:588`
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `corollary:bk2_interpretative_framework` (Physical Interpretation); `proof:bk2_interpretative_framework`; `proof:bk4_drift_stability_local_bounds` (Drift Stability via Local Symbolic Distortion Bounds); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `remark:bk4_ttpr_entropy` (Relation to Symbolic Thermodynamics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-016`
+- Witnesses: `Book2.detailedBalance_stationary`, `Book2.gibbs_minimizes`, `Book2.no_finite_phase_transition`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Its clause (2) proper-thermodynamic-behavior claims are the proved kernels above; clauses (1),(3),(4) are not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The framework established in this Book forms a coherent symbolic thermodynamic theory that: - Emerges from the interplay of drift $D$ and reflection $R$ via the Hamiltonian $H$; - Exhibits proper thermodynamic behavior: unique equilibrium states (thm theorem:bk2_equilibrium_distribution), free energy minimization (thm theorem:bk2_h_theorem_for_symbolic_evol), and fluctuation-dissipation relations (thm theorem:bk2_symbolic_fluctuation_dissipation_relation);
@@ -3885,6 +4812,17 @@ Role: `corollary` | Type: `corollary` | Book: `book2` | Source: `book2.tex:616`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK2-023`
+- Witnesses: `Book2.entropy_nonneg`, `Book2.gibbs_minimizes`, `Book2Response.fluctuation_response_hasDerivAt`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; see per-anchor coverage-map notes for the exact scope of each conditional/partial grade; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Quantitative roles are certified: entropy is nonnegative uncertainty, Gibbs free energy is minimized at equilibrium, and beta scales finite linear response. The prose interpretations remain authored semantics, not propositions promoted by Lean.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 As an interpretive consequence of thm theorem:bk2_coherence_of_symbolic_therm, the symbolic thermodynamic quantities (def definition:bk2_symbolic_hamiltonian, def definition:bk2_symbolic_entropy, def definition:bk2_symbolic_temperature, def definition:bk2_symbolic_free_energy) admit the following interpretations: - : Measures local symbolic coherence through drift-reflection balance; - : Quantifies uncertainty in symbolic state distribution; - : Sets the scale of stochastic fluctuations driving exploration;
@@ -3912,6 +4850,17 @@ Role: `theorem` | Type: `theorem` | Book: `book2` | Source: `book2.tex:650`
 - Cites: `theorem:bk2_equilibrium_distribution` (Equilibrium Distribution); `theorem:bk2_h_theorem_for_symbolic_evol` (H-Theorem for Symbolic Evolution)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK2-024`
+- Witnesses: `Book2.gibbs_minimizes`, `Book2H.h_theorem`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Drift/reflection/fluctuation yielding persistent emergent structure: the H-theorem descent kernel; the synthesis stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3983,6 +4932,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:10`
 - Cited by: `definition:bk3_autophagic_drift` (Autophagic Drift); `definition:bk3_compressed_relational_structure` (Compressed Relational Structure); `definition:bk3_conceptual_bridge` (Conceptual Bridge); `definition:bk3_conceptual_bridge_sequence` (Conceptual Bridge Sequence); `definition:bk3_coupling_map` (Coupling Map); `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); ... +54 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK3-005`
+- Witnesses: `Book3.membrane_complement_permeability_mem`
+- Countermodels: none
+- Formal boundary: Drift-deviation bound, permeability in [0,1], and nonnegative stability captured as structure fields over Real; the submanifold (connected, compact closure, smooth boundary) is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic membrane $M_i$ is a connected open submanifold of $M$ with compact closure $overline{M}_i$ and smooth boundary $partialM_i$, endowed with: - An internal drift field $D_i: M_i rightarrow TM_i$ that is a restriction and modification of the global drift field $D$ (Def. definition:bk1_drift_field), satisfying $\|D_i(x) - D(x)\|_g leq delta_i$ for some bound $delta_i > 0$.
@@ -3996,6 +4955,17 @@ Role: `lemma` | Type: `lemma` | Book: `book3` | Source: `book3.tex:20`
 - Cites: `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-004`
+- Witnesses: `Book3.canonicalMembrane_stability_pos`, `Book3.conditional_symbolic_membrane_wellposed`, `Book3.exists_chart_membrane`, `Book3.exists_static_membrane`, `Book3.perturbation_budget_does_not_supply_domain`
+- Countermodels: `Book3.perturbation_budget_does_not_supply_domain`
+- Conditions: nonempty connected open carrier with compact closure and smooth boundary; positive perturbation budget and alpha; regularity calculus closed under x ↦ exp(-alpha f(x)); supplied smooth global drift and Hamiltonian
+- Formal boundary: Conditional source-faithful construction: a supplied nonempty connected open relatively compact smooth-boundary domain, smooth global drift, and smooth Hamiltonian yield canonical membrane data for every positive perturbation budget and alpha. Internal drift is the supplied restriction, permeability is zero, and exp(-alpha H) is positive and smooth through the supplied regularity calculus. The Empty countermodel proves a positive budget cannot manufacture the load-bearing domain.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4025,6 +4995,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:49`
 - Cited by: `remark:bk3_symbolic_membrane_remark`; `theorem:bk3_evolution_of_symbolic_knowledge` (Evolution of Symbolic Knowledge); `theorem:bk3_membrane_stability_criteria` (Membrane Stability Criteria)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK3-006`
+- Witnesses: `Book3.membrane_viable_iff`
+- Countermodels: none
+- Formal boundary: Energy/entropy/temperature/free-energy algebra captured (mirrors the Book5 thermodynamic snapshot pattern); the manifold integrals defining E_i, S_i, T_i are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a symbolic membrane $M_i$ (Def. definition:bk3_symbolic_membrane), we define: - Membrane energy: $E_i(s) = int_{M_i} rho_i(x,s)H_i(x)dmu_g(x)$, where $rho_i$ is the probability density (cf. Def. definition:bk2__symbolic_probability_density) restricted to $M_i$ and normalized, and $H_i$ is the symbolic Hamiltonian (cf. Def. definition:bk2_symbolic_hamiltonian) restricted to $M_i$. (This builds upon the general symbolic energy, cf. Def. definition:bk2_symbolic_energy).
@@ -4038,6 +5018,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:61`
 - Cites: `definition:bk3_membrane_thermodynamics` (Membrane Thermodynamics); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk3_membrane_stability_energy_permeability` (Membrane Stability from Free Energy and Bounded Permeability); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); `proof:bk3_sketch_necessity_for_continuous_operation` (Necessity of Each Condition for Persistent Symbolic Life); ... +7 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-007`
+- Witnesses: `Book3.membrane_stable_of_conditions`, `Book3.membrane_stable_permeability_lt_one`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: The three named conditions are kept as explicit hypothesis fields (free-energy local-min and no-unstable-fixed-point are opaque Prop witnesses); stability is proved as their conjunction, not asserted to hold generally.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4095,6 +5086,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:95`
 - Cited by: `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `definition:bk3_symbolic_metabolism` (Symbolic Metabolism); `lemma:bk3_symbiotic_stability_conditions` (Symbiotic Stability Conditions); `proof:bk3_coupling_energy_symbolic_hamiltonian` (Effect of Coupling Energy on Symbolic Hamiltonian); `proof:bk3_sketch_evolutionary_dynamics` (Closure of Conceptual Bridge Sequence); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-009`
+- Witnesses: `Book3.couplingEnergy_nonneg`
+- Countermodels: none
+- Formal boundary: H_ij = lambda*(phi-target)^2 and its nonnegativity for lambda>=0, fully proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The coupling map $Phi_{ij}$ (Def. definition:bk3_coupling_map) induces an energy function $H_{ij}: M_i times M_j rightarrow mathbb{R}$ defined as: \[ H_{ij}(x,y) = lambda_{ij} \|Phi_{ij}(x,y) - Phi_{ij}^*\|_S^2 \] where $lambda_{ij} > 0$ is a coupling strength parameter and $Phi_{ij}^*$ represents an optimal coupling configuration in $S$.
@@ -4108,6 +5109,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:104`
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk3_induced_coupling_energy` (Induced Coupling Energy); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `lemma:bk3_symbiotic_stability_conditions` (Symbiotic Stability Conditions); `proof:bk3_coupling_energy_symbolic_hamiltonian` (Effect of Coupling Energy on Symbolic Hamiltonian); `proof:bk3_sketch_evolutionary_dynamics` (Closure of Conceptual Bridge Sequence); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); ... +1 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-010`
+- Witnesses: `Book3.coupled_drift_deviation_bound`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Scalar model: the correction integral is replaced by a single bounded real; the theorem proved is the triangle-inequality consequence |D_coupled - D| <= eta*bound, given the bound as a hypothesis rather than derived from an actual integral.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4137,6 +5149,17 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:132
 - Cited by: `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk3_symbolic_metabolism` (Symbolic Metabolism); `definition:bk6_symbolic_recombination` (Symbolic Recombination); `lemma:bk3_symbiotic_stability_conditions` (Symbiotic Stability Conditions); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); ... +6 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-011`
+- Witnesses: `Book3.in_symbiosis_of_conditions`, `Book3.symbiosis_drift_perturbation_ne_zero`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: All three named clauses (mutual stability enhancement, information transfer positivity, drift compensation) kept as explicit hypothesis fields; a genuine corollary (perturbation must be nonzero under compensation) is derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Two symbolic membranes $M_i$ and $M_j$ (Def. definition:bk3_symbolic_membrane) are in symbiosis if their coupling satisfies: - Mutual stability enhancement: \[ S_i^{text{coupled}} > S_i^{text{isolated}} text{and} S_j^{text{coupled}} > S_j^{text{isolated}}, \] where \( S_k^{text{coupled}} \) is the stability of membrane \( k \) under coupling. - Information transfer: \[ I(M_i;
@@ -4150,6 +5173,17 @@ Role: `lemma` | Type: `lemma` | Book: `book3` | Source: `book3.tex:157`
 - Cites: `definition:bk2__symbolic_probability_density` (Symbolic Probability Density); `definition:bk2_symbolic_probability_spa` (Symbolic Probability Space); `definition:bk3_coupling_map` (Coupling Map); `definition:bk3_induced_coupling_energy` (Induced Coupling Energy); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk3_symbolic_symbiosis` (Symbolic Symbiosis); ... +1 more
 - Cited by: `proof:bk3_coupling_vs_perturbation_stability` (Coupling-Induced Drift Must Outweigh Internal Perturbations); `proof:bk3_sketch_perturbation_dissiptation` (Perturbation Dissipation via Lyapunov Argument)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-012`
+- Witnesses: `Book3.symbiotic_threshold_clears_i`, `Book3.symbiotic_threshold_clears_j`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: The max-of-two-bounds threshold algebra is fully proved: lambda above the max clears each side of the enhancement inequality delta^2 < 4*eta*infoGrad*lambda.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4207,6 +5241,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:183
 - Cited by: `definition:bk3_conceptual_bridge` (Conceptual Bridge); `definition:bk3_symbolic_autopoiesis` (Symbolic Autopoiesis); `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding); `lemma:bk3_reflexive_encodings_generate_conceptual_bridges` (Reflexive Encodings Generate Conceptual Bridges); `proof:bk3_reflexive_encoding_preserves_structure` (Symbolic Reflexive Encoding Preserves Semantic Structure); `proof:bk3_triangle_inequality_encoding_bound` (Triangle Inequality Bounds Reflexive Encoding Drift); ... +1 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK3-013`
+- Witnesses: `Book3.reflexive_encoding_information_strictly_preserved`
+- Countermodels: none
+- Formal boundary: Bounded round-trip distortion and the information-preservation inequality (conditionalEntropy < totalEntropy - kappa) are modeled; the approximate-equality 'stability preservation up to scaling' clause is not formalized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A reflexive encoding for a symbolic membrane $M_i$ (Def. definition:bk3_symbolic_membrane) is a smooth map $E_i: M_i rightarrow M_j$ to another membrane $M_j$ satisfying: - Bounded distortion: $d_g(E_j circ E_i(x), x) leq epsilon_{ij}$ for all $x in M_i$ and some bound $epsilon_{ij} > 0$, where $d_g$ is the distance induced by the symbolic metric $g$. - Stability preservation: $S_i(x) approx S_j(E_i(x))$ up to a scaling factor, meaning that stable regions map to stable regions.
@@ -4220,6 +5264,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:193`
 - Cites: `definition:bk3_reflexive_encoding` (Reflexive Encoding); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-014`
+- Witnesses: `Book3.cyclic_distortion_bound`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Telescoping triangle-inequality bound on a chain of n composed maps in a PseudoMetricSpace, proved by induction. Directly instantiates the cyclic case since the theorem is agnostic to whether the chain closes into a loop.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4262,6 +5317,17 @@ Role: `lemma` | Type: `lemma` | Book: `book3` | Source: `book3.tex:229`
 - Cites: `definition:bk3_conceptual_bridge` (Conceptual Bridge); `definition:bk3_reflexive_encoding` (Reflexive Encoding); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `proof:bk3_reflexive_encoding_preserves_structure` (Symbolic Reflexive Encoding Preserves Semantic Structure)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-016`
+- Witnesses: `Book3.reflexive_pair_generates_bridge`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Shows that reflexive-encoding-style round-trip bounds are literally sufficient data to construct a BoundedRoundTrip; existence-style construction rather than a deep theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4319,6 +5385,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:261`
 - Cited by: `proof:bk3_sketch_necessity_for_continuous_operation` (Necessity of Each Condition for Persistent Symbolic Life); `proof:bk3_symbolic_coupling_properties_enumerated` (Categorical Properties of Symbolic Coupling); `proof:bk4_sketch_cross_field_product` (Cross-Error Torsion and $\mathcal{O}$-Bounded Product Rule); `proof:bk4_sketch_symbolic_path_interference` (Sum Rule via Additive Error Bound with Curvature Correction); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-018`
+- Witnesses: `Book3.symbioticCurvature_gt_one`, `Book3.symbioticCurvature_mono_info`, `Book3.symbioticCurvature_pos`, `Book3.weighted_avg_le_max`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Positivity and symbiotic-enhancement (>1) are proved in full for the finite-n formula. Monotonicity is proved as a non-strict comparison across two info matrices. Subadditivity is only covered at the level of its abstract mediant/convex-combination core (weighted_avg_le_max); the full derivation from summing over two disjoint index sets is not carried out.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbiotic curvature $kappa_{text{symb}}$ (Def. definition:bk3_symbiotic_curvature) satisfies: - Positivity: $kappa_{text{symb}}({M_i}) > 0$ for any non-empty set of membranes. - Symbiotic enhancement: If all pairs of membranes are in symbiosis (Definition definition:bk3_symbolic_symbiosis), then $kappa_{text{symb}}({M_i}) > 1$. - Monotonicity under information increase: If the mutual information $I(M_i; M_j)$ increases while stability ratios remain constant, $kappa_{text{symb}}$ increases.
@@ -4360,6 +5437,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:299`
 - Cites: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk3_perturbation_response_function` (Perturbation Response Function); `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `theorem:bk1_symbolic_emergence_and_curvature` (Symbolic Emergence and Curvature)
 - Cited by: `definition:bk3_perturbation_response_function` (Perturbation Response Function); `remark:bk3_symbolic_membrane_remark`; `remark:bk4_fuzzy`; `scholium:bk4_symbolic_entanglement` (The Mathematics of Symbolic Entanglement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-020`
+- Witnesses: `Book3.resilience_bound_antitone`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Honest static kernel: the bound C/kappa_symb is antitone in kappa_symb for fixed C>0. The limiting behaviour of R(delta,t) as t->infinity is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4459,6 +5547,17 @@ Role: `lemma` | Type: `lemma` | Book: `book3` | Source: `book3.tex:395`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-003`
+- Witnesses: `Book3Helmholtz.FiniteHodgeData.nonzero_harmonic_component_exists`, `Book3Helmholtz.FiniteHodgeData.reconstruction`, `Book3Helmholtz.GlobalHodgeCertificate.components`, `Book3Helmholtz.GlobalHodgeCertificate.faithful_readout_detects_harmonic`, `Book3Helmholtz.GlobalHodgeCertificate.harmonic_eq_zero_of_subsingleton_cohomology`, `Book3Helmholtz.GlobalHodgeCertificate.multimodal_readout_reconstructs`, `Book3Helmholtz.GlobalHodgeCertificate.operational_readout_reconstructs`, `Book3Helmholtz.GlobalHodgeCertificate.refinement_energy_decomposes`, `Book3Helmholtz.harmonic_channel_can_be_operationally_detected`, `Book3Helmholtz.unfaithful_readout_can_erase_harmonic`
+- Countermodels: none
+- Conditions: carrier-indexed linear instruments; injectivity or another explicit faithfulness witness for detection claims; curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; explicit unique orthogonal Hodge decomposition and faithful first-cohomology class map; finite model: selected orthogonal exact/coexact subspaces; global certificate: compact, connected, oriented, smooth Riemannian membrane without boundary; linear operational readout for perceptual or computational exposure; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Conditional global Hodge bridge: a certificate retains the compact, connected, oriented, smooth Riemannian, boundaryless membrane hypotheses; exact, coexact, and harmonic sectors reconstruct uniquely and orthogonally; squared refinement energy separates by sector; and a faithful harmonic-class map kills the harmonic part when first cohomology is trivial. Any linear operational readout, including sonification, preserves the certified split but does not manufacture its geometric hypotheses. The readout bridge is carrier-neutral across sound, light, temperature, pressure, and other linear instruments; nonzero-residue detection additionally requires a faithful instrument, while the zero-readout countermodel shows silence cannot establish absence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M,g)$ be a compact, connected, oriented smooth Riemannian manifold without boundary, and let $V_r$ be a smooth refinement vector field. Writing $V_r^flat$ for its metric-dual one-form, there exist a smooth scalar potential $phi$, a smooth two-form $beta$, and a harmonic one-form $h$ such that V_r^flat=dphi+deltabeta+h. The three summands are pairwise orthogonal in $L^2$, and the decomposition is unique after the usual normalization of the scalar potential.
@@ -4515,6 +5614,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:457`
 - Cited by: `proof:bk3_differentiation_knowledge_structure` (Derivative of Knowledge Structure with Respect to Refinement); `proof:bk3_integrated_knowledge_dynamics` (Integration of Knowledge Refinement Dynamics); `theorem:bk3_conditions_sustained_symbolic_growth` (Conditions for Sustained Symbolic Growth)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-021`
+- Witnesses: `Book3.integration_rate_eq`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: The rate equation dK/dr = I'-D'+R is kept as a structure field (a modeling commitment, not derived); one algebraic rearrangement is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The rate of change of symbolic knowledge structure $K(r)$ (Def. definition:bk3_symbolic_knowledge_structure) with respect to refinement (Def. definition:bk3_symbolic_refinement) satisfies (cf. Def. definition:bk3_membrane_thermodynamics, Thm. theorem:bk3_membrane_stability_criteria): \[ frac{dK}{dr} = I(r) - D(r) + R(r) \] where $I(r)$ relates to integration pressure, $D(r)$ relates to differentiation pressure (Def.
@@ -4543,6 +5653,17 @@ Role: `corollary` | Type: `corollary` | Book: `book3` | Source: `book3.tex:494`
 - Cited by: `proof:bk3_integrated_knowledge_dynamics` (Integration of Knowledge Refinement Dynamics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-022`
+- Witnesses: `Book3.knowledge_structure_telescopes`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Discrete telescoping-sum analogue of the continuous FTC-style corollary, proved by induction on Nat.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The accumulated symbolic knowledge structure $K(r)$ (Def. definition:bk3_symbolic_knowledge_structure) from initial refinement state $r_0$ to state $r$ is: \[ K(r) = K(r_0) + int_{r_0}^r (I'(s) - D'(s) + R(s)) ds \]
@@ -4570,6 +5691,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:509`
 - Cites: `definition:bk3_symbolic_knowledge_structure` (Symbolic Knowledge Structure); `theorem:bk3_evolution_of_symbolic_knowledge` (Evolution of Symbolic Knowledge)
 - Cited by: `proof:bk3_knowledge_growth_integrated_condition` (Secular Growth of Knowledge Under Integrated Conditions); `proof:bk3_sketch_necessity_for_continuous_operation` (Necessity of Each Condition for Persistent Symbolic Life); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk3_emergence_of_symbolic_networks` (Conditional Assembly of Symbolic Networks)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-023`
+- Witnesses: `Book3.sustained_growth_window`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Discrete window version: positive net increment sum over a length-T window implies K strictly increases across that window, built on the telescoping lemma.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4641,6 +5773,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:546`
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `definition:bk3_symbolic_metabolism` (Symbolic Metabolism); `sec:bk9_symbolic_ecosystems_and_emergent_governance` (Symbolic Ecosystems and Emergent Governance)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-001`
+- Witnesses: `Book3.runNetworkEmergence_realizes_assembly`, `Book3.runNetworkEmergence_stability_pos_from_floor`, `Book3.same_growth_allows_distinct_nodes`
+- Countermodels: none
+- Conditions: bridge certificate for every selected edge; finite indexed region family and total compression operator; positive node-coherence floor bounded above by stage stability; sustained-growth trace
+- Formal boundary: A time-indexed operational process retains the supplied region selection, total compression, bridge-certified edge relation, positive node-coherence floor, and global-stability lower bound. Execution jointly realizes the compressed nodes, bridge-backed edges, and strictly positive global stability. A paired countermodel shows that the same sustained-growth trace permits distinct compression outcomes, so growth does not identify or manufacture the assembly policy.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Assume the sustained-growth condition of Thm. theorem:bk3_conditions_sustained_symbolic_growth. In addition, let $J$ be a nonempty finite index set and suppose the following assembly data are supplied: - for every $jin J$, a selected high-coherence region $omega_j$ and a total compression operator $C$ with $sigma_j=C(omega_j)inSigma$; - a selected edge relation $Esubseteq Jtimes J$ and, for every $(i,j)in E$, a reflexive encoding whose induced conceptual bridge connects $sigma_i$ to $sigma_j$;
@@ -4682,6 +5825,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:602`
 - Cites: `definition:bk3_conceptual_bridge_sequence` (Conceptual Bridge Sequence); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `definition:bk3_symbolic_metabolism` (Symbolic Metabolism)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-031`
+- Witnesses: `Book7B.conceptualBridgeLoop_toM_surjective`, `Book7B.conceptualBridgeLoop_toSigma1_injective`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Given the loop literally closes (composite = identity on M, the honest reading of 'can form a closed loop feeding back into the originals'), the first map is injective and the return map is surjective.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4753,6 +5907,17 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:670
 - Cited by: `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); `remark:bk3_symbolic_membrane_remark`; `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk3_homeostatic_reflexes` (Homeostatic Reflexes)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK3-026`
+- Witnesses: `Book3.metabolicRate_nonneg`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Finite double-sum analogue of the continuous double integral over paired membranes; only nonnegativity of the analogue is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic metabolic rate $R_{text{meta}}$ of a system of coupled symbolic membranes ${M_i}$ (Def. definition:bk3_symbolic_membrane) is defined as (cf. Thm. theorem:bk3_couplinginduced_drift_modification, Def. definition:bk2_symbolic_free_energy): \[ R_{text{meta}} = sum_{i,j} int_{M_i times M_j} rho_{ij}(x,y) \|nabla_g H_{ij}(x,y)\|_g dmu_g(x) dmu_g(y) \] where: - $rho_{ij}$ is the joint symbolic probability density (Def.
@@ -4809,6 +5974,16 @@ Role: `definition` | Type: `definition` | Book: `book3` | Source: `book3.tex:703
 - Cited by: `axiom:bk9_emergent_autonomy` (Emergent Autonomy); `definition:bk6_symbolic_confidence_field` (Symbolic Confidence Field); `definition:bk6_symbolic_mutation` (Symbolic Mutation); `lemma:bk6_conservation_of_symbolic_information` (Conservation of Symbolic Information); `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation); `remark:bk8_symbolic_repair_loop` (Symbolic Repair Loop); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK3-027`
+- Witnesses: `Book3.homeostatic_band_nonempty`
+- Countermodels: none
+- Formal boundary: Operating-band definition and the trivial-but-real consequence that a homeostatic state forces rmin<=rmax.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system maintains homeostasis if, for a bounded range of perturbations $delta$ (affecting, e.g., drift fields or external potentials), the symbolic metabolic rate $R_{text{meta}}$ (Def. definition:bk3_symbolic_metabolic_rate) remains within a stable operating band (cf. Thm. theorem:bk3_membrane_stability_criteria, Def.
@@ -4822,6 +5997,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:714`
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk3_induced_coupling_energy` (Induced Coupling Energy); `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis); `definition:bk3_symbolic_metabolic_rate` (Symbolic Metabolic Rate); `theorem:bk3_couplinginduced_drift_modification` (Coupling-Induced Drift Modification)
 - Cited by: `proof:bk3_sketch_field_perturbation` (Bounded Sensitivity via Drift Compensation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-028`
+- Witnesses: `Book3.metabolic_response_deviation_bound`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: The derivative bound |dR/dDelta|<=C is modeled as a Lipschitz condition on the response function (a modeling commitment); a genuine two-sided deviation-from-baseline bound is derived from it.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4879,6 +6065,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:777`
 - Cited by: `corollary:bk4_emergence_of_meaning` (Emergence of Meaning); `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `remark:bk3_toward_symbolic_evolution`; `scholium:bk4_symbolic_self_organization` (The Geometry of Symbolic Self-Organization); `sec:bk9_emergence_ethics_and_compassion` (Emergent Ethics and Compassion); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-029`
+- Witnesses: `Book3.persistentLife_kappa_pos`, `Book3.persistentLife_rmin_le_rmax`
+- Countermodels: none
+- Conditions: manifold/PDE/Helmholtz content of Book 3 is NOT formalized; static and finite-discrete kernels only; modeling laws (rate equations, stability conditions, Lipschitz response) are structure fields
+- Formal boundary: Capstone structure assembling the three named criteria (homeostatic metabolic rate, positive growth increment, curvature bounded away from zero) as fields, with two projection consequences proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system supports persistent symbolic life (understood as a dynamically stable, adaptive, and potentially growing symbolic organization) if (cf. Def. definition:bk1_self_regulating_mapping_function_srmf, Def. definition:bk2_symbolic_entropy, Def. definition:bk1_observer_horizon_structure): - Symbolic metabolic rate $R_{text{meta}}$ (Def.
@@ -4934,6 +6131,17 @@ Role: `theorem` | Type: `theorem` | Book: `book3` | Source: `book3.tex:878`
 - Cites: `definition:bk3_canonical_life_standards` (Canonical Life Standards); `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria)
 - Cited by: `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good")
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK3-002`
+- Witnesses: `Book3CanonicalLife.operational_symbolic_life_realizes_canonical_demarcations`, `Book3CanonicalLife.persistence_alone_does_not_supply_correspondence`, `Book3CanonicalLife.repair_improves_iff_morphological_error_decreases`
+- Countermodels: `Book3CanonicalLife.persistence_alone_does_not_supply_correspondence`
+- Conditions: explicit coherence-to-target-morphology representation when the morphology equivalence is used; inspectable repair, reproduction, heredity, variation, differential-fitness, and response witnesses; persistent symbolic-life witness; typed symbolic organism operations
+- Formal boundary: A Book-3-local operational witness now realizes the declared structural substrate translation and every Koshland, NASA, and textbook clause, including evolutionary adaptation, for the same organism. Under an explicit morphology representation bridge, regenerative coherence improvement is equivalent to reduced target-form error. This is structural correspondence rather than chemical identity; persistence alone still cannot manufacture the certificate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5033,6 +6241,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:4`
 - Cited by: `axiom:bk5_metabolic_persistence` (Metabolic Persistence); `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_critical_symbolic_bifurc` (Critical Symbolic Bifurcation); `definition:bk4_fragmentation_measure` (Fragmentation Measure); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_identity_operators` (Identity Operators); ... +33 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-051`
+- Witnesses: `Book4C.symbolicIdentityCarrier_component_le_one`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the normalization condition integral of Psi_i = 1, discretized to a finite sum, forces every component reading into [0,1]; the stability functional Upsilon_i and temporal tracking relation T_{Delta t} are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic identity carrier $I$ on a symbolic membrane $M_i$ (cf. Def. definition:bk3_symbolic_membrane), realised as a substructure of the symbolic manifold $M$ (Def.
@@ -5046,6 +6265,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:15`
 - Cites: `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `theorem:bk3_membrane_stability_criteria` (Membrane Stability Criteria)
 - Cited by: `definition:bk4_fragmented_identity` (Fragmented Identity); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk4_fragmentation_identity_stability` (Fragmentation Violates Symbolic Identity Stability); `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `theorem:bk4_reflective_reentry` (Reflective Reentry)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-011`
+- Witnesses: `Book4A.stability_lower_bound`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the threshold consequence of the stated inequality (stability bound strictly above a critical error threshold) is modeled; the existence quantifier over observation windows and the membrane/stability apparatus are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5075,6 +6305,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:47`
 - Cited by: `definition:bk4_identity_resolution` (Identity Resolution); `lemma:bk4_convergence_of_recursive_enco` (Convergence of Recursive Encoding); `lemma:bk4_upper_bound_on_repair_capacit` (Upper Bound on Repair Capacity); `proof:bk4_fragmentation_distortion_encoding` (Fragmentation and Distortion); `proof:bk4_recursive_composite_encoding` (Recursive Structure of Composite Encodings); `proof:bk4_recursive_identity_preservation` (Recursive Encoding Preserves Identity Information); ... +5 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-012`
+- Witnesses: `Book4A.recursive_encoding_partial_sum_le_total`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The encoding hierarchy is modeled as a sequence in a symbolic metric space whose successive distances are bounded by a summable distortion budget. Concrete membrane-valued encoding maps remain abstracted to their metric images.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A recursive identity encoding on a symbolic membrane $M_i$ (Def. definition:bk3_symbolic_membrane) is a family of maps ${E_i^{(n)}}_{n=1}^{infty}$ such that: - $E_i^{(1)}: M_i to M_i^{(1)}$ is a reflexive encoding (Def.
@@ -5088,6 +6329,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:62`
 - Cites: `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding)
 - Cited by: `proof:bk4_recursive_reflection_convergence` (Convergence of Recursive Self-Reflection Operators); `theorem:bk4_fixed_points_of_self_refere` (Fixed Points of Self-Reference)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-013`
+- Witnesses: `Book4A.RecursiveEncoding.cauchySeq`, `Book4A.RecursiveEncoding.exists_fixed_limit_with_tail_bound`, `Book4A.RecursiveEncoding.exists_limit_with_tail_bound`, `Book4A.chainedApprox_yields_recursiveEncoding_limit`, `Book4A.recursive_encoding_partial_sum_le_total`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Summable successive distortion makes the recursive encoding Cauchy. Completeness supplies an actual limiting representation E_i^(infinity), with distance from level n bounded by the remaining tail sum. If each level is obtained by a continuous refinement R from the previous level, uniqueness of limits proves R(E_i^(infinity)) = E_i^(infinity).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5117,6 +6369,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:80`
 - Cited by: `definition:bk4_symbolic_spinor_bundle` (Recursive Identity Bundle); `definition:bk7_operational_resolution_uncertainties` (Operational resolution uncertainties); `demonstratio:bk4_prompt_time_ttdc` (Prompt-Time Collapse in Reflective Agents); `proof:bk4_mutual_information_expansion` (Expansion of Recursive Mutual Information); `proof:bk4_recursive_identity_preservation` (Recursive Encoding Preserves Identity Information); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); ... +9 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-035`
+- Witnesses: `Book4C.identityResolution_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the ratio R_n = I(...)/I(...) clearing 1 is exactly numerator clearing denominator; mutual information itself is not modeled, only the ratio algebra it feeds.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a recursive encoding (Def. definition:bk4_recursive_identity_encod), define the level-$n$ identity resolution $R_n$ by R_n = frac{I(M_i; M_i^{(n)})}{I(M_i; M_i^{(1)})} where $I(cdot;cdot)$ denotes mutual information between the symbolic patterns in the respective membranes (Def. definition:bk3_symbolic_membrane).
@@ -5130,6 +6393,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:89`
 - Cites: `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_identity_resolution` (Identity Resolution); `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding)
 - Cited by: `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `proof:bk4_recursive_identity_preservation` (Recursive Encoding Preserves Identity Information); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `theorem:bk4_test_time_differentiation_c` (Test-Time Differentiation Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-036`
+- Witnesses: `Book4C.identityResolution_gt_one_iff`, `Book4C.identityResolution_threshold_persists`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: monotone persistence of R_n>1 past a critical depth n_c, given monotonicity as a hypothesis; the mutual-information characterization of *why* R is monotone (additional contextual information at each encoding level) is not derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5187,6 +6461,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:160
 - Cited by: `definition:bk4_projective_action_transl` (Projective Action Translator); `proof:bk4_normalization_bounds` (Bounded Information Under Normalized Constraints); `proposition:bk4_bounded_sr_initial_state` (Bounded SR--Initial State)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-037`
+- Witnesses: `Book4C.convexCombination_mem_Icc`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: I_0, M_0 as w-weighted readings, discretized to a finite weighted sum; the observer-kernel convolution and gradient-norm construction are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S_t colon M to mathbb{R}$ denote the instantaneous symbolic signal on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold). Define the initialization map: \[ Phi_O colon S_t longmapsto (I_0, M_0, C_0) in mathbb{R}^3 \] via: I_0 &= int_M w_I cdot K_O[S_t] dmu notag \\ M_0 &= int_M w_M cdot |nabla K_O[S_t]| dmu notag \\ C_0 &= 1 - frac{1}{varepsilon_O} left\| K_O[S_t] - S_t right\|_{L^2} notag where $K_O$ is the observer-kernel convolution operator (Def.
@@ -5200,6 +6485,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:1
 - Cites: `definition:bk4_observer_kernel_convolution_map` (Observer-Kernel Convolution); `definition:bk4_sr_initialization_map` (SR--Initialization Map)
 - Cited by: `definition:bk8_sr_triplet` (SR-Triplet)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-038`
+- Witnesses: `Book4C.convexCombination_mem_Icc`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the [0,1]-boundedness claim reduced to its honest convex-combination content, given [0,1]-valued readings and a normalized weight simplex as hypotheses; the epsilon_O-kernel-norm clause is dropped.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5243,6 +6539,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:210`
 - Cited by: `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `proof:bk4_operator_norm_subadditivity` (Operator Norm Subadditivity in Symbolic Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-039`
+- Witnesses: `Book4C.srmfActionNorm_bound`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For any admissible SR-velocity on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold), \[ \|Lambda_O(dot{I}, dot{M}, dot{C})\| leq B cdot (|dot{I}| + |dot{M}| + |dot{C}|). \] where $B$ is the SRMF budget (Def. definition:bk1_self_regulating_mapping_function_srmf).
@@ -5285,6 +6592,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:231
 - Cited by: `definition:bk4_recursive_self_healing` (Recursive Self-Healing); `definition:bk4_self_reference_operator` (Self-Reference Operator); `proof:bk4_persistence_reflection_noncommutativity` (Non-Commutativity of Persistence and Reflection); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `theorem:bk4_operator_algebra_of_identit` (Operator Algebra of Identity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-014`
+- Witnesses: `Book4A.operator_noncommutativity_witness`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only an abstract noncommutativity witness is modeled, not the four named operators (persistence, reflection, integration, differentiation) themselves.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The algebraic structure of symbolic identity carriers (Def. definition:bk4_symbolic_identity_carrie) is characterized by the following operators: - Identity Persistence Operator: $P_{Delta t}: I(t) to I(t + Delta t)$ - Identity Reflection Operator: $R: I to I^{(1)}$ maps an identity to its self-representation - Identity Integration Operator: $J: I_1 times I_2 to I_{1 oplus 2}$ combines distinct identities - Identity Differentiation Operator: $D: I to {I_1, I_2, ldots, I_k}$ partitions an identity
@@ -5298,6 +6616,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:242`
 - Cites: `definition:bk4_identity_operators` (Identity Operators)
 - Cited by: `proof:bk4_persistence_reflection_noncommutativity` (Non-Commutativity of Persistence and Reflection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-015`
+- Witnesses: `Book4A.operator_noncommutativity_witness`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Noncommutativity is an existence claim, not a universal one: witnessed on Bool by two concrete functions whose compositions differ in the two orders. The specific P, R, J, D operators and the near-commutation clause are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5327,6 +6656,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:277
 - Cited by: `bridge:bk4_ttpr_to_self_reference` (From TTPR to Recursive Identity Retention); `definition:bk4_collapse_of_symbolic_ide` (Collapse of Symbolic Identity); `definition:bk4_recursive_self_healing` (Recursive Self-Healing); `demonstratio:bk4_ising_model_covenant` (The Ising Model as a Symbolic Covenant); `proof:bk4_recursive_reflection_convergence` (Convergence of Recursive Self-Reflection Operators); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-016`
+- Witnesses: `Book4A.selfReferenceIterate_succ`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: S_1 = R, S_n = R o S_(n-1) modeled literally as Function.iterate; selfReferenceIterate_succ certifies the recursive step.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The self-reference operator $S_n$ of order $n$ on a symbolic identity $I$ (as defined in the identity operator framework, Def. definition:bk4_identity_operators) is defined recursively as: S_1 &= R \\ S_n &= R circ S_{n-1} text{for } n geq 2
@@ -5340,6 +6680,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:285`
 - Cites: `definition:bk4_self_reference_operator` (Self-Reference Operator); `lemma:bk4_convergence_of_recursive_enco` (Convergence of Recursive Encoding)
 - Cited by: `proposition:bk4_ttpr_convergence` (Convergence of Recursive Refinement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-017`
+- Witnesses: `Book4A.ContractionRefinement.selfReference_dist_ttprLimit_le`, `Book4A.ContractionRefinement.selfReference_fixed_iff_eq_ttprLimit`, `Book4A.ContractionRefinement.tendsto_selfReferenceIterate`, `Book4A.selfReference_fixed_point`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: A fixed point of R remains fixed under every S_n. Under the explicit nonempty complete-metric contraction specialization, the TTPR identity is the unique fixed point, every recursive self-reference sequence converges to it, and its distance is bounded by kappa^n times the initial distortion.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5425,6 +6776,17 @@ Role: `axiom` | Type: `axiom` | Book: `book4` | Source: `book4.tex:328`
 - Cited by: `definition:bk5_viability_domain` (Viability Domain); `theorem:bk4_emergence_criterion` (Emergence Criterion)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-090`
+- Witnesses: `Book4Ref.coupled_drift_additive`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: The coupled drift D + G(Omega) reduces to base drift iff the response vanishes.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For each symbolic membrane \( M_i \) carrying a local drift field $D_i$ (cf. Def. definition:bk1_drift_field), the influence of global order parameters \( Omega \) (Def. definition:bk4_order_parameter) is mediated by a membrane-specific response function \( G_i(Omega) \), such that the effective drift becomes: \[ D_i^{text{coupled}} = D_i + G_i(Omega) \] This coupling reflects the system's recursive integration of emergent structure into local symbolic dynamics.
@@ -5438,6 +6800,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:336`
 - Cites: `axiom:bk4_membrane_coupling_response` (Membrane Coupling Response); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_order_parameter` (Order Parameter); `definition:bk4_symbolic_emergence` (Symbolic Emergence)
 - Cited by: `proof:bk4_emergence_conditions` (Emergence Implies Non-Reducibility and Causal Closure); `proof:bk4_timescale_separation_hierarchy` (Timescale Separation and Symbolic Coarse-Graining via Master Equation); `proof:bk4_top_level_information_inequality` (Top-Level Representation Retains Disproportionate Information); `theorem:bk4_emergent_abstraction` (Emergent Abstraction)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-097`
+- Witnesses: `Book4Ref.emergenceMeasure_pos_iff`, `Book4Ref.finite_emergence_criterion`
+- Countermodels: none
+- Formal boundary: Finite Book-3-to-Book-4 kernel: an active membrane response changes a coupled drift, collective-information surplus is exactly positive emergence measure, and Book 3 symbiotic stability yields positive curvature. The continuous order-parameter ODE and genuine mutual-information semantics remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5480,6 +6852,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:389`
 - Cites: `definition:bk3_symbiotic_curvature` (Symbiotic Curvature); `definition:bk3_symbolic_membrane` (Symbolic Membrane)
 - Cited by: `proof:bk4_symbolic_curvature_boundary` (Gradient Threshold and Boundary Formation in Symbolic Geometry)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-018`
+- Witnesses: `Book4A.boundary_forms_dichotomy`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The scalar threshold comparison (curvature divergence vs. critical threshold) as an exhaustive dichotomy. The divergence operator and submanifold structure are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5551,6 +6934,17 @@ Role: `axiom` | Type: `axiom` | Book: `book4` | Source: `book4.tex:437`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-094`
+- Witnesses: `Book4Fz.local_kernel_vanishes_offdiagonal`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: An observer kernel supported in B x B vanishes outside it.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Observer kernels for bounded observers (Def. definition:bk4_bounded_observer) satisfy locality: $supp(K_O) subset B_O times B_O$.
@@ -5565,6 +6959,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:442
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-052`
+- Witnesses: `Book4C.reflexiveOperator_tendsto_self`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the Approximation Property's O(lambda) displacement budget is modeled, yielding a genuine squeeze-theorem convergence R_lambda(s) -> s as lambda -> 0; Coherence Preservation and Temporal Consistency clauses are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given $lambda in mathbb{R}^+$, the reflexive operator $R_lambda : S to S$ on the proto-symbolic space (Def. definition:bk4_proto_symbolic_space) extends the Book I reflection map (Def. definition:bk1_reflection_operator) and satisfies: - Coherence Preservation: $mathfrak{C}(R_lambda(s), s) geq mathfrak{C}(s, s) - epsilon(lambda)$; - Temporal Consistency: $R_lambda(s) in text{Hull}{s_t : t leq time(s)}$; - Approximation Property: $\| R_lambda(s) - s \|_{S} = O(lambda)$.
@@ -5578,6 +6983,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:452
 - Cites: `definition:bk1_symbolic_connection` (Symbolic Connection); `definition:bk1_symbolic_field_curvature_tensor` (Symbolic Field Curvature Tensor); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `lemma:bk2_thermodynamic_consistency_hypothesis_manifolds` (Thermodynamic Consistency of Hypothesis Manifolds); `proposition:bk4_geodesic_failure` (Conditional Jacobi-Deviation Diagnostic); `sec:bk4_fuzzy_symbolic_geometry_observer_relative_smoothness` (Fuzzy Symbolic Geometry and Observer-Relative Smoothness)
 - Cited by: `definition:bk4_symbolic_curvature_formulations` (Symbolic Curvature --- Global and Observer-Relative Formulations); `definition:bk4_symbolic_space` (Observer-Relative Symbolic Space); `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor); `definition:bk6_symbolic_density_evolution` (Symbolic Density Evolution Equation); `definition:bk7_operational_resolution_uncertainties` (Operational resolution uncertainties); `definition:bk7_symbolic_norm` (Symbolic Norm on Prompt-Response Operators); ... +20 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-019`
+- Witnesses: `Book4A.kappa_nonneg`, `Book4A.kappa_observer_dependent`, `Book4A.kappa_reflexive_vanishing`, `Book4A.kappa_scale`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Curvature modeled concretely as kappa K R lam s := K * (R lam s - s)^2, honestly degree-two in the symbolic argument per the definition's own stipulation. The second-order observer derivation delta_O^2 is not modeled, only its residual.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5607,6 +7023,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:477`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-020`
+- Witnesses: `Book4A.kappa_nonneg`, `Book4A.kappa_observer_dependent`, `Book4A.kappa_reflexive_vanishing`, `Book4A.kappa_scale`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: All four clauses reached: non-negativity, scale invariance by alpha^2 (given linear action of the reflexive operator), reflexive vanishing, and observer dependence as an explicit existence witness (the clause is stated 'in general', not as a universal inequality).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For all $s in S$, the symbolic curvature $kappa_O$ from Def. definition:bk4_symbolic_curvature satisfies: - (Non-negativity) $kappa_O(s) geq 0$; - (Observer Dependence) $kappa_{O_1}(s) ne kappa_{O_2}(s)$ in general; - (Scale Invariance) $kappa_O(alpha s) = |alpha|^2 kappa_O(s)$ for $alpha in mathbb{R}$; - (Reflexive Vanishing) If $R_lambda(s) = s$, then $kappa_O(s) = 0$.
@@ -5634,6 +7061,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:498`
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-089`
+- Witnesses: `Book4Ref.curvature_inherits_continuity`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: Curvature inherits continuity from its generating operators; the differentiability/manifold clauses stay open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5691,6 +7129,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:536
 - Cited by: `proof:bk4_timescale_separation_hierarchy` (Timescale Separation and Symbolic Coarse-Graining via Master Equation); `theorem:bk4_emergence_through_timescale_separation` (Emergence Through Timescale Separation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-021`
+- Witnesses: `Book4A.transitionRate_pos`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only strict positivity of the Arrhenius form (given a positive prefactor) is modeled; the free-energy-barrier interpretation is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The transition rate $Lambda_{ab}$ between meta-stable states $M_a$ and $M_b$ is given by: Lambda_{ab} = A_{ab} expleft(-frac{Delta F_{ab}}{T_s}right) where $A_{ab}$ is a structure-dependent prefactor, $Delta F_{ab}$ is the symbolic free energy barrier (Def. definition:bk2_symbolic_free_energy), and $T_s$ is the symbolic temperature (see Def. definition:bk2_symbolic_temperature).
@@ -5704,6 +7153,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:543`
 - Cites: `definition:bk4_meta_stable_symbolic_str` (Meta-Stable Symbolic Structure); `definition:bk4_symbolic_transition_rate` (Symbolic Transition Rate)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-022`
+- Witnesses: `Book4A.timescaleSeparation_micro_lt_observation`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The three-way strict inequality kept as a structure with transitivity as its consequence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5761,6 +7221,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:583
 - Cited by: `definition:bk4_hierarchical_auto_encodi` (Hierarchical Auto-Encoding); `definition:bk4_information_bottleneck_p` (Information Bottleneck Principle); `theorem:bk4_auto_encoding_and_identity` (Auto-Encoding and Identity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-023`
+- Witnesses: `Book4A.SymbolicAutoEncoder.encode_injective_of_eps_eq_zero`, `Book4A.SymbolicAutoEncoder.exact_reconstruction_of_eps_eq_zero`, `Book4A.autoEncoder_finite_sum_le`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Actual encoder and decoder maps are modeled with a uniform metric reconstruction bound. The scalar summary retains the finite-sample total-error theorem; in a genuine metric space, zero error budget forces exact decoding and injectivity of the encoder.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic auto-encoder on membrane $M_i$, a substructure of the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold), is a pair of maps $(E_i, D_i)$ where: - $E_i: M_i to Z_i$ is an encoding map to a latent space $Z_i$ - $D_i: Z_i to M_i$ is a decoding map back to the original space - The composition $D_i circ E_i: M_i to M_i$ satisfies the reconstruction constraint: d_g((D_i circ E_i)(x), x) leq epsilon_{text{recon}} for some small $epsilon_{text{recon}} > 0$ and all $x in M_i$ (see Def.
@@ -5788,6 +7259,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:604`
 - Cites: `definition:bk4_symbolic_auto_encoder` (Symbolic Auto-Encoder); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier)
 - Cited by: `definition:bk4_information_bottleneck_p` (Information Bottleneck Principle); `proof:bk4_information_bottleneck_symbolic_filter` (Information Bottleneck Concentrates on Stable Attractors)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-024`
+- Witnesses: `Book4A.SymbolicAutoEncoder.encode_injective_of_eps_eq_zero`, `Book4A.SymbolicAutoEncoder.exact_reconstruction_of_eps_eq_zero`, `Book4A.SymbolicAutoEncoder.identityPattern_eq_one_iff`, `Book4A.autoEncoderPattern_pos`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The metric identity kernel is complete: the exponential pattern is always positive and, at nonzero sensitivity, has maximal weight one exactly when decoding reconstructs the identity. A zero reconstruction budget yields exact reconstruction and prevents distinct identities from sharing a code.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5830,6 +7312,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:662`
 - Cites: `theorem:bk4_emergence_criterion` (Emergence Criterion)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-098`
+- Witnesses: `Book4Ref.abstractionSurplus_pos_iff`, `Book4Ref.emergent_abstraction_positive_measure`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: The exact finite hierarchy inequality is encoded as positive top-level abstraction surplus and, when the hierarchy cost accounts for individual membrane contributions, implies positive emergence measure. Genuine mutual-information semantics and the auto-encoder latent-space construction remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5887,6 +7380,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:698`
 - Cited by: `proof:bk4_imaginative_continuity_principle` (Bounded Reintegration of Latent Phase); `proof:bk4_lipschitz_continuity_symbolic_drift` (Lipschitz Continuity of Symbolic Drift Flow); `scholium:bk1_interpretability_two_axes` (Interpretability on Two Axes --- a Complex Reading)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-041`
+- Witnesses: `Book4C.lipschitzPath_uniform`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: uniform continuity from a bounded-velocity (Lipschitz) path, with an explicit delta witness in terms of the Lipschitz constant; bounded free energy/drift variance is discretized to the single Lipschitz bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $gamma$ be an individuation path (see Def. definition:bk4_individuation_path) with bounded symbolic free energy (see Def. definition:bk2_symbolic_free_energy) and drift variance. Then for any $epsilon > 0$, there exists $delta > 0$ such that: \|gamma(t + delta) - gamma(t)\| < epsilon for all $t in [0, T - delta]$.
@@ -5929,6 +7433,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:728
 - Cited by: `assumption:bk4_precritical_scalar_trace` (Precritical scalar trace); `definition:bk4_event_horizon_wheel` (Event Horizon Wheel); `proof:bk1_operational_irony_requires_imagination` (The ironic opposition is an imaginary displacement); `proof:bk4_imaginative_continuity_principle` (Bounded Reintegration of Latent Phase); `subsec:bk4_event_horizon_wheel` (The Event Horizon Wheel); `subsec:bk4_fuzzy_integration_applications` (Cross-Field Consequences and SRMF Grounding); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-025`
+- Witnesses: `Book4A.complexSymbolicDistance_im`, `Book4A.complexSymbolicDistance_re`, `Book4A.complexSymbolicDistance_re_le_abs`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The complex pair D_O^C = d_Re + i*d_Im modeled directly as a complex number, with its real/imaginary projections and the standard |Re z| <= norm z bound. The Hermitian bundle and parallel transport it is derived from are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(E,h_O,nabla_O) to M_O$ be an observer-relative complex symbolic bundle over the Book I symbolic manifold substrate (Def. definition:bk1_symbolic_manifold), with Hermitian metric $h_O$ and observer-bounded connection $nabla_O$. For symbolic states $psi_s,psi_t in Gamma(E)$ and an admissible path $gamma:sto t$, define the parallel-transported overlap \[ Omega_O^gamma(psi_s,psi_t) := h_O\!left(P_gamma psi_s,psi_tright) in mathbb{C}.
@@ -5942,6 +7457,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:7
 - Cites: none
 - Cited by: `proof:bk1_operational_irony_requires_imagination` (The ironic opposition is an imaginary displacement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-026`
+- Witnesses: `Book4A.ReintegrableIdentity.mono_thresholds`, `Book4A.not_reintegrableIdentity_iff`, `Book4A.reintegrableIdentity_iff`, `Book4A.uncanny_recognition_countermodel`
+- Countermodels: `Book4A.uncanny_recognition_countermodel`
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The real/imaginary threshold kernel is complete: reintegration is exactly the conjunction of the two strict bounds, persists under enlarged observer tolerances, and fails exactly when either threshold is breached. The uncanny-recognition witness shows the imaginary failure mode is nonvacuous even when the real mismatch is resolved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -5999,6 +7525,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:801
 - Cited by: `proof:bk4_chromatic_transference_of_wheel`; `proof:bk4_wheel_refines_signature` (Quadrant quotient of the phase circle)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-027`
+- Witnesses: `Book4A.quadrant_exhaustive`, `Book4A.quadrants_disjoint`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The four open modes (cut by the sign pair of Re/Im) modeled directly as the four open sign-quadrants of R x R.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic states $psi_s,psi_tinGamma(E)$ and admissible path $gamma$ with transported overlap $Omega_O^gamma=|Omega_O^gamma| e^{ivartheta}inmathbb{C}$ (Def. definition:bk4_imaginary_symbolic_distance), the event-horizon phase is $vartheta:=ArgOmega_O^gammain(-pi,pi]$ and the event horizon wheel is the phase circle $S^1={e^{ivartheta}}$ on which a transition is located.
@@ -6012,6 +7549,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:8
 - Cites: `definition:bk1_effective_horizon_signature` (Effective Horizon Signature)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-028`
+- Witnesses: `Book4A.quadrant_exhaustive`, `Book4A.quadrants_disjoint`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exhaustiveness and mutual exclusivity of the four quadrant classes, the honest kernel of 'the fourfold partition is the image ... under sign-extraction.'
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6041,6 +7589,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:8
 - Cited by: `proof:bk4_golden_event_horizon_spiral` (Golden spiral from balanced closure on the wheel); `scholium:bk4_wheel_is_srmf_on_itself` (The wheel is SRMF turned on itself); `theorem:bk4_golden_event_horizon_spiral` (Golden Event Horizon Spiral)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-029`
+- Witnesses: `Book4A.spiralMagnitude_recurrence`, `Book4A.spiralPhase_recurrence`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The per-step magnitude and phase recurrences for the orbit r_n, theta_n. The identification with an actual complex power mu^n and the 'adjacent iff alpha within one quadrant' clause are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let the self-regulating mapping function (Def. definition:bk1_self_regulating_mapping_function_srmf) act on the transported overlap by one emergence step as multiplication by $mu=rho e^{ialpha}$, where $rho>0$ is the drift/reflection magnitude gain and $alpha$ the holonomy phase increment (Thm. theorem:bk4_symbolic_stokes).
@@ -6069,6 +7628,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:8
 - Cited by: `assumption:bk4_precritical_scalar_trace` (Precritical scalar trace); `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `proof:bk7_map_compatible_reciprocity` (Two-way fixed point as MAP Nash equilibrium); `proposition:bk5_map_mad_dichotomy` (MAP-MAD Dichotomy); `scholium:bk4_wheel_is_srmf_on_itself` (The wheel is SRMF turned on itself); `scholium:bk5_imagination_covenant_branch_selection` (Imagination as Covenant Branch Selection)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-040`
+- Witnesses: `Book4C.reintegrable_of_smaller_gap`, `Book4D.CertifiedTTDC.decision_eq_abstain_iff`, `Book4D.CertifiedTTDC.decision_eq_stage_iff`, `Book4D.CertifiedTTDC.execute_of_contract`, `Book4D.CertifiedTTDC.execute_of_not_contract`, `Book4D.CertifiedTTDC.execute_satisfies_postcondition`, `Book4D.CertifiedTTDC.install_ttdc`, `Book4D.CertifiedTTDC.stage_ne_abstain`, `Book4D.EmergenceOperatorFamily.canonicalOrder_recognized`, `Book4D.EmergenceOperatorFamily.identityFamily_not_emergent`, `Book4D.EmergenceOperatorFamily.swapped_middle_executes`, `Book4D.EmergenceOperatorFamily.swapped_middle_unrecognized`, `Book4D.ImaginationHorn.one_pass_refinement_mem_Icc`, `Book4D.ImaginationHorn.one_pass_tendsto_limit`, `Book4D.ImaginationHorn.staged_sample_accessible`, `Book4D.TTCSToTTPRImagination.limit_mem_Icc`, `Book4D.TTCSToTTPRImagination.refinement_iterate_mem_Icc`, `Book4D.TTCSToTTPRImagination.tendsto_refinement_from_sample`, `Book4D.TTDCToTTIEImagination.staged_output_mem_initial`, `Book4D.TTDCToTTIEImagination.staged_then_ttie_iterate_mem_accessibleLimit`, `Book4D.TTDCToTTIEImagination.staged_then_ttie_iterate_mem_envelope`, `Book4D.TTIEToTTCSImagination.exists_accessible_sample`, `Book4D.TTIEToTTCSImagination.expanded_then_sampled_mem_Icc`, `Book4D.TTIEToTTCSImagination.selected_samples_accessible`, `Book4D.TTPRToTTDCImagination.abstaining_return_is_fixed`, `Book4D.TTPRToTTDCImagination.returnState_eq_limit`, `Book4D.TTPRToTTDCImagination.stage_or_abstain`, `Book4ImaginationGuard.effectiveRate_lt_one_iff_phase_penalty_below_margin`, `Book4ImaginationGuard.eleven_percent_phase_ends_near_boundary_contraction`, `Book4ImaginationGuard.phaseBudget_append`, `Book4ImaginationGuard.projection_equality_can_hide_unsafe_phase`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; explicit phase sensitivity converting exposure to contraction penalty; modeling laws are structure fields or explicit hypotheses; nonnegative phase exposure measured by sum of absolute segment phases; phase-bearing intermediate steps retained as a list; strict effective rate below one required for reintegration
+- Formal boundary: Exact conditional phase-rate kernel: ordered latent segments define noncancelling absolute exposure; a calibrated nonlinear response envelope plus observer-specific margin forces strict contraction. Linear response is one specialization. Equal visible projections and canceling signed phases do not erase exposure, while zero calibration alone does not determine the response away from zero.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A transition between modes separated by an event-horizon phase gap cannot in general be certified from real symbolic displacement alone. Retain the ordered imaginary traversal witness \(phi=(phi_1,ldots,phi_m)\) through the SRMF handoff and define its exposure by \[ E(phi)=sum_{j=1}^m |phi_j|. \] Thus opposite signed phases may cancel in the visible projection while still consuming positive traversal exposure.
@@ -6096,6 +7666,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:940`
 - Cites: `definition:appC_modal_transference_map` (Modal transference map); `theorem:appC_modal_transference` (Modal Transference)
 - Cited by: `definition:bk5_symbolic_shade` (Symbolic shade); `scholium:bk5_palette_of_a_relation` (The palette of a relation); `subsec:bk5_hue_and_shade` (Hue and Shade: The Full Chromatic Transference)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-034`
+- Witnesses: `Book4A.adjacent_rotate`, `Book4A.opposite_add`, `Book4A.opposite_involutive`, `Book4A.swapPerm_breaks_adjacency`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Flagship cyclic-structure anchor: the wheel modeled concretely as ZMod 12, with rotation genuinely preserving adjacency and commuting with diametric opposition (an involution), plus an explicit countermodel that a non-rotation bijection can break adjacency -- the honest content of 'the wheel is preserved ... not [by] any one carrier' holding specifically for structured (rotation) transferences.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6152,6 +7733,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:1016`
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `lemma:bk5_balanced_observer_normalization` (Balanced Observer Normalization Selects the Closure Matrix); `proposition:bk4_spiral_transition` (Spiral transition between modes); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory)
 - Cited by: `scholium:bk5_decency_golden_resonance` (Decency, resonance, and the golden spiral of relation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-030`
+- Witnesses: `Book4A.goldenRatio_pos`, `Book4A.goldenRatio_sq`, `Book4A.goldenSpiral_ratio_eq`, `Book4A.goldenSpiral_ratio_tendsto`, `Book4A.goldenSpiral_recurrence`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The algebraic/growth kernel is complete: phi^2=phi+1 forces the balanced Fibonacci-type recurrence on phi^n*r0; phi is positive; and for nonzero r0 every consecutive-radius ratio is exactly phi, hence tends to phi. Polar-manifold interpretation and quadrant terminology remain explanatory rather than additional formal claims.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6265,6 +7857,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:1119`
 - Cited by: `assumption:bk4_precritical_scalar_trace` (Precritical scalar trace); `definition:bk4_symbolic_spinor_bundle` (Recursive Identity Bundle); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `definition:bk5_collapse_resilience_test` (Symbolic Collapse Resilience Test); ... +16 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-087`
+- Witnesses: `Book4Ref.ttdc_iff_jump`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: TTDC iff the resolution jump reaches the threshold; the recursion-depth dynamics stay open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A collapse of symbolic identity (Def. definition:bk4_collapse_of_symbolic_ide) corresponds to a test-time differentiation collapse (TTDC) if and only if the identity resolution $R_n$ (Def. definition:bk4_identity_resolution) exhibits a discontinuous transition at recursion depth $n geq n_c$: lim_{delta to 0} left| R_n(t_c + delta) - R_n(t_c - delta) right| geq theta for some critical threshold $theta > 0$, where $R_n$ emerges from the recursive identity encoding process (Def.
@@ -6306,6 +7909,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:1146`
 - Cites: `definition:bk4_collapse_of_symbolic_ide` (Collapse of Symbolic Identity)
 - Cited by: `demonstratio:bk4_prompt_time_ttdc` (Prompt-Time Collapse in Reflective Agents); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-088`
+- Witnesses: `Book4Ref.collapse_limit_unique`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: The collapsed observable O = lim R_n(I) is unique.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6433,6 +8047,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:133
 - Cited by: `corollary:bk4_symbolic_lightcone` (Symbolic Light-Cone); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `proof:bk4_symbolic_lightcone`; `proof:bk5_operators_evolve`; `proposition:bk5_operators_evolve`; ... +9 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-044`
+- Witnesses: `Book4C.ttieMetric_exists_of_glued`, `Book4C.ttieMetric_presupposition_fails_on_dual_horizon`, `Book4D.CertifiedTTIE.accessibleLimit_least`, `Book4D.CertifiedTTIE.exists_envelope_ssubset_accessibleLimit`, `Book4D.CertifiedTTIE.exists_newly_accessible`, `Book4D.CertifiedTTIE.iterate_mem_envelope`, `Book4D.CertifiedTTIE.iterate_mem_envelope_of_mem`
+- Countermodels: `Book4C.ttieMetric_presupposition_fails_on_dual_horizon`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The metric presupposition remains discharged through chart gluing. CertifiedTTIE now supplies an operational fuzzy map, a nested accessible-state envelope, staged reachability of every iterate, genuine strict expansion, coherence-speed control, and the least union-limit of finite stages. Full manifold constraints C1-C3 remain outside the scalar kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Msubset S$ be a symbolic manifold equipped with the observer-induced metric $g_{O}$ (Def. definition:bk1_bounded_observer), interpreted within the SRMF cycle (Def. definition:bk1_self_regulating_mapping_function_srmf; Thm. theorem:bk5_operator_convergence). Fix observer resolution $delta_{O}\!>\!0$ and sectional curvature bound $|kappa_{O}|le kappa_{max}$. \[ text{bf TTIE}: M longrightarrow widetilde{M}'subseteqS, widetilde{M}'=bigcup_{t=0}^{T} Phi_t\!left(M;
@@ -6461,6 +8086,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:1374`
 - Cited by: `corollary:bk4_symbolic_lightcone` (Symbolic Light-Cone); `proof:bk4_symbolic_lightcone`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-042`
+- Witnesses: `Book4C.ttieExpansionBound_le_cs`, `Book4D.CertifiedTTIE.step_dist_le_coherenceSpeed`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: given the stated rate bound as a hypothesis, it is shown to never exceed c_s itself; the sup-based definition of Delta_max(epsilon) and the C1-C3 constraints it is derived from are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $v_{text{exp}}(t)=bigl|partial_twidetilde{M}'bigr|_{g_{O}}$ denote the expansion velocity measured in the observer metric. Under constraints C1-C3: \[ v_{text{exp}}(t) le frac{c_{text{s}}}{sqrt{1+kappa_{O}^{2} delta_{O}^{2}}}, \] where $c_{text{s}}$ is the symbolic coherence velocity (Def. definition:bk1_symbolic_coherence_velocity), representing the fundamental speed limit for coherent symbolic propagation.
@@ -6488,6 +8124,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:1419`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_symbolic_coherence_velocity` (Symbolic Coherence Velocity); `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `lemma:bk4_ttie_expansion_rate` (Curvature-Bounded Expansion Rate)
 - Cited by: `proof:bk4_symbolic_link_activation`; `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-043`
+- Witnesses: `Book4C.coherenceCone_mono`, `Book4D.CertifiedTTIE.iterate_mem_accessibleLimit`, `Book4D.CertifiedTTIE.iterate_mem_envelope`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the coherence-cone's admissible-distance radius is monotone in elapsed time for cs >= 0; the full causal-consistency argument for bounded observers is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6545,6 +8192,16 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:1
 - Cited by: `demonstratio:bk4_symbolic_graph_topological_stability` (Topological Stability in Symbolic Graph Expansion); `demonstratio:bk4_symbolic_thermodynamics`; `lemma:bk4_spectral_stability_homological_extensions` (Spectral Stability of Homological Extensions); `proof:bk4_observer_capacity_bound`; `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `proof:bk4_topological_persistence`; ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-102`
+- Witnesses: `Book4Ref.FiniteHomologicalExtension.finrank_eq_add`, `Book4Ref.FiniteHomologicalExtension.finrank_le_old_add_bound`
+- Countermodels: none
+- Formal boundary: Finite algebraic kernel: a supplied linear equivalence realizes extended homology as old times new, yielding exact rank addition and the stated new-Betti total-rank bound. Construction from manifold expansion, homology functors, and derivation of the curvature-controlled bound remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If the expansion rate on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold) satisfies $v_{text{exp}}(t)<varepsilon(kappa_{max})$ for some stability threshold $varepsilon$, then for each homological degree $kge0$: \[ H_k(widetilde{M}') cong H_k(M) oplus H_k^{new} \] where the newly generated homology satisfies: \[ text{rank} H_k^{new}le beta_k(varepsilon,kappa_{max}) \] and $beta_k$ is the curvature-controlled Betti growth bound.
@@ -6586,6 +8243,16 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:1599`
 - Cites: `proposition:bk4_homological_extension` (Homological Extension)
 - Cited by: `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `scholium:bk4_towards_symbolic_equilibrium` (Towards Symbolic Equilibrium and Curvature-Limited Gravity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-103`
+- Witnesses: `Book4Ref.FiniteHomologicalExtension.finrank_le_old_add_bound`, `Book4Ref.exists_adjacent_rank_stabilization`
+- Countermodels: none
+- Formal boundary: Finite-rank stabilization engine: a nonincreasing page-rank sequence bounded by beta-zero must have adjacent equal ranks by stage beta-zero, sharper than the stated beta-zero-plus-one bound. An actual spectral sequence, equality of pages rather than ranks, and the resulting filtration-length construction remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6629,6 +8296,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:1682`
 - Cited by: `demonstratio:bk4_symbolic_graph_topological_stability` (Topological Stability in Symbolic Graph Expansion); `proof:bk4_observer_capacity_bound`; `remark:bk4_quantum_topological_phases` (Connection to Quantum Topological Phases)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-104`
+- Witnesses: `Book4Ref.bottleneck_le_curvature_scaled`, `Book4Ref.essential_feature_preserved`
+- Countermodels: none
+- Formal boundary: Quantitative scalar kernels for clauses 2-3: an epsilon bottleneck bound lifts to C*epsilon*(1+kappaMax), and any feature more than epsilon above the observer threshold remains essential after an epsilon perturbation. Persistence diagrams, their interleaving, and derivation of the base bottleneck estimate remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $tilde{s} in S$ be a symbolic structure with associated manifold $M$, and let $s^* = TTPR(tilde{s})$ be its precision refinement (cf. Definition definition:bk4_test_time_precision_refinement). If the refinement satisfies the stability conditions of Proposition proposition:bk4_homological_extension, then: - The persistence diagram $text{PD}_k(M)$ and $text{PD}_k(widetilde{M}')$ are $varepsilon$-interleaved for all $k$.
@@ -6656,6 +8333,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:1707`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer)
 - Cited by: `proof:bk4_observer_capacity_bound`; `proof:bk4_spectral_stability` (Spectral Stabilization Under Curvature Constraints); `remark:bk4_quantum_topological_phases` (Connection to Quantum Topological Phases); `scholium:bk4_topological_complexity_semantic_richness` (Topological Complexity and Semantic Richness)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-105`
+- Witnesses: `Book4Ref.FiniteHomologicalExtension.finrank_le_old_add_bound`, `Book4Ref.homological_complexity_le_observer_capacity`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: Finite aggregation kernel: degreewise realized homology ranks bounded by curvature-controlled allowances have total complexity within capacity whenever the allowance sum fits the observer capacity. Deriving those allowances from geometry and formalizing observer capacity semantically remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6853,6 +8541,17 @@ Role: `axiom` | Type: `axiom` | Book: `book4` | Source: `book4.tex:1964`
 - Cited by: `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `proof:bk4_interpretability_preservation`; `proposition:bk4_ttpr_convergence` (Convergence of Recursive Refinement); `remark:bk4_ttpr_descent_route` (Contraction is sufficient, not necessary: the descent route); `theorem:bk4_ttpr_symbolic_stability` (Symbolic Stability via Precision Refinement)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-031`
+- Witnesses: `Book4A.contractionRefinement_iterate`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The Lipschitz contraction law kept as a structure field; the genuine consequence proved is the finite n-step contraction bound dist(R^[n] s, R^[n] s') <= kappa^n * dist s s', by induction.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O$ be a bounded observer (cf. Definition definition:bk1_bounded_observer) with observer kernel $K_{O}$ (cf. Definition definition:bk1_resolution_cost). A symbolic refinement operator $R$ satisfies: \[ d_{O}(R(s), R(s')) le kappa cdot d_{O}(s, s') text{for all } s, s' in S, text{with } 0 < kappa < 1 \] where $d_{O}$ is the observer-relative metric (cf. Lemma lemma:bk1_completeness_of_symbolic_distance) induced by convolution with $K_{O}$ (cf. Proof proof:bk1_fix_s_in_s).
@@ -6866,6 +8565,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:1
 - Cites: `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `theorem:bk4_fixed_points_of_self_refere` (Fixed Points of Self-Reference)
 - Cited by: `proof:bk4_symbolic_stability`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-032`
+- Witnesses: `Book4A.ContractionRefinement.fixed_eq_ttprLimit`, `Book4A.ContractionRefinement.tendsto_iterate_ttprLimit`, `Book4A.ContractionRefinement.ttprLimit_fixed`, `Book4A.contractionRefinement_iterate`, `Book4D.CertifiedTTPR.fixed_eq_limit`, `Book4D.CertifiedTTPR.iterate_dist_limit_le`, `Book4D.CertifiedTTPR.limit_fixed`, `Book4D.CertifiedTTPR.tendsto_iterate_limit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Banach convergence is now lifted into an operational CertifiedTTPR: the same map carries pointwise fuzzy derivatives and perturbation budgets while its contraction certificate yields a unique fixed identity, global convergence, and a geometric distance bound. Completeness and nonemptiness remain explicit.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -6909,6 +8619,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2020`
 - Cited by: `proof:bk4_symbolic_stability`; `theorem:bk4_ttpr_symbolic_stability` (Symbolic Stability via Precision Refinement)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-085`
+- Witnesses: `Book4Ref.ttpr_iterates_in_envelope`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: Every refinement iterate stays in a preserved envelope.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If $tilde{s}$ is observer-interpretable (cf. Definition definition:bk1_observer_relative_interpretability) and $R$ is a bounded symbolic approximation (cf. Definition definition:bk1_bounded_symbolic_approximation), then: \[ forall k, R^{(k)}(tilde{s}) in E_{O}(tilde{s}) \] where $E_{O}$ is the refinement envelope (cf. Definition definition:bk4_refinement_envelope). Thus, all iterates preserve symbolic traceability (cf. Clause (I3) of Definition definition:bk1_observer_relative_interpretability).
@@ -6950,6 +8671,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2071`
 - Cites: `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom); `definition:bk4_refinement_envelope` (Refinement Envelope); `lemma:bk4_ttpr_interpretability_preserved` (Precision Refinement Preserves Interpretability); `theorem:bk4_conditions_for_self_healing` (Conditions for Self-Healing)
 - Cited by: `definition:bk5_collapse_resilience_test` (Symbolic Collapse Resilience Test); `remark:bk4_ttpr_entropy` (Relation to Symbolic Thermodynamics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-084`
+- Witnesses: `Book4Ref.ttpr_fixed_point`, `Book4Ref.ttpr_fixed_point_in_envelope`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: TTPR fixed-point + envelope membership (all three clauses); the constraint-space manifold form stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7020,6 +8752,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:2
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk4_symbolic_work_functional` (Symbolic Work)
 - Cited by: `remark:bk4_symbolic_work_capacity` (Observer-Limited Symbolic Work Capacity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-049`
+- Witnesses: `Book4C.symbolicWork_path_dependent_example`, `Book4C.symbolicWork_path_independent_of_constant`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: an explicit numeric countermodel shows discretization-dependence for a non-constant force (work3 id 0 1 2 != work2 id 0 2), paired with the constant-force case where the two discretizations DO agree -- the honest boundary the source's 'in general' qualifier hides.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7161,6 +8904,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2328`
 - Cited by: `proof:bk4_symbolic_link_activation`; `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-099`
+- Witnesses: `Book4C.ttcsWeight_strictAnti`, `Book4C.ttcs_properties`, `Book4C.ttcs_sample_average_ge`, `Book4D.CertifiedTTCS.output_mem_Icc`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Finite operational TTCS: positive inverse temperature strictly favors lower free energy; admissible samples explicitly retain the coherence threshold and observer leash; certified averages remain in the coherence corridor. Global non-ergodicity and entropy-process semantics remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the symbolic manifold and bounded-observer constraints (Def. definition:bk1_symbolic_manifold, Def. definition:bk1_bounded_observer) together with bounded accessibility (Axiom axiom:bk4_bounded_accessibility), the TTCS operator exhibits the following symbolic properties: - Coherence-Seeking (Non-Ergodic): The sampling is not uniform over the entire manifold but is exponentially weighted towards regions of low symbolic free energy ($F_S$).
@@ -7217,6 +8971,17 @@ Role: `axiom` | Type: `axiom` | Book: `book4` | Source: `book4.tex:2408`
 - Cited by: `lemma:bk4_properties_of_ttcs` (Properties of TTCS); `proof:bk4_coherence_preservation`; `proof:bk4_neighborhood_completeness`; `proof:bk4_properties_of_ttcs`; `proof:bk4_ttcs_convergence`; `proof:bk4_ttcs_stability` (Proof of Lemma \ref{lemma:bk4_ttcs_stability}); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-086`
+- Witnesses: `Book4Ref.coherence_neighborhood_nonempty`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for TTPR stability; the differentiable-manifold constraint space, recursion-depth dynamics, and differentiability clause stay open
+- Formal boundary: The coherence neighborhood contains its coherent centre: bounded accessibility realized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For any symbolic configuration $s_0 in M_S$ on the Book I symbolic manifold substrate (Def. definition:bk1_symbolic_manifold) and bounded observer frame (Def. definition:bk1_bounded_observer), and parameters $gamma, varepsilon > 0$, there exists a coherence neighborhood $N_{gamma,varepsilon}(s_0)$ such that: \[ N_{gamma,varepsilon}(s_0) = {s in M_S : C(s) geq gamma text{ and } \|D(s_0, s)\|_F leq varepsilon} \] where $\|cdot\|_F$ denotes the Frobenius norm of the drift tensor.
@@ -7245,6 +9010,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2458`
 - Cited by: `proof:bk4_ttcs_convergence`; `theorem:bk4_ttcs_convergence` (Convergence of TTCS Sampling)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-045`
+- Witnesses: `Book4C.ttcs_sample_average_le`, `Book4D.CertifiedTTCS.alternative_output_dist_le`, `Book4D.CertifiedTTCS.iterate_succ_mem_Icc`, `Book4D.CertifiedTTCS.output_eq_of_sample_constant`, `Book4D.CertifiedTTCS.output_le_upper`, `Book4D.CertifiedTTCS.output_mem_Icc`, `Book4D.CertifiedTTCS.output_reindex`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: discrete finite-sample analogue of the expected-curvature bound: if every sample is at most M, the average is at most M. The exponentially-weighted distribution tilde-p and Delta_max(epsilon) are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $tilde{p}(s)$ be a symbolic distribution constrained by coherence threshold $gamma$ and drift bound $varepsilon$ as defined in Scholium scholium:bk4_ttcs_simulation_tool_use and Def. definition:bk4_test_time_coherent_sampling.
@@ -7272,6 +9048,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2493`
 - Cites: `axiom:bk4_bounded_accessibility` (Bounded Symbolic Accessibility); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `lemma:bk4_ttcs_stability` (Stability of Symbolic Sampling Under Bounded Drift)
 - Cited by: `corollary:bk4_coherence_preservation` (Coherence Preservation); `proof:bk4_coherence_preservation`; `proof:bk4_symbolic_link_activation`; `remark:bk4_computational_complexity` (Computational Complexity); `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-100`
+- Witnesses: `Book4C.ttcsEmpiricalObservableAverage_const`, `Book4C.ttcs_const_empirical_tendsto`
+- Countermodels: none
+- Formal boundary: Deterministic Dirac specialization: for every real observable, empirical evaluations of a sampler concentrated at one admissible state equal and converge to that state's Dirac evaluation. General stochastic sampling, probability measures on the symbolic manifold, and the weak-* law of large numbers remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7315,6 +9101,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:2533`
 - Cited by: `remark:bk4_computational_complexity` (Computational Complexity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-046`
+- Witnesses: `Book4C.ttcs_sample_average_ge`, `Book4D.CertifiedTTCS.alternative_output_dist_le`, `Book4D.CertifiedTTCS.iterate_succ_mem_Icc`, `Book4D.CertifiedTTCS.lower_le_output`, `Book4D.CertifiedTTCS.output_eq_of_sample_constant`, `Book4D.CertifiedTTCS.output_mem_Icc`, `Book4D.CertifiedTTCS.output_reindex`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: A CertifiedTTCS derives its coherence floor from pointwise sample bounds and proves every positive iterate remains in the closed coherence corridor. The N -> infinity limit and weak-* convergence remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the conditions of Theorem theorem:bk4_ttcs_convergence, with coherence metric from Def. definition:bk4_coherence_metric_on_symbolic_manifold, the average coherence of TTCS samples satisfies: \[ lim_{N to infty} frac{1}{N} sum_{i=1}^N C(s_i) geq gamma \] ensuring that symbolic coherence is preserved throughout the sampling process.
@@ -7342,6 +9139,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:2
 - Cites: `axiom:bk4_bounded_accessibility` (Bounded Symbolic Accessibility); `lemma:bk1_completeness_of_symbolic_distance` (Completeness of Symbolic Distance)
 - Cited by: `proof:bk4_symbolic_link_activation`; `theorem:bk4_symbolic_link_activation` (Symbolic Link Activation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-047`
+- Witnesses: `Book4C.neighborhoodCompleteness`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: a closed subset of a complete metric space is complete; the coherence/drift neighborhood's closedness is kept as a named hypothesis rather than derived from the coherence and drift-bound constraints, which are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7413,6 +9221,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2635`
 - Cited by: `scholium:bk4_recursive_introspection` (Recursive Introspection)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-101`
+- Witnesses: `Book4C.mem_ttcsActivatedCloud`, `Book4C.ttcsWeight_strictAnti`, `Book4C.ttcs_link_activation`
+- Countermodels: none
+- Formal boundary: Finite operational activation: an indexed TTCS family produces an explicit nonempty observer-relative cloud; all samples are coherent and observer-bounded, and lower free energy is strictly preferred. The narrative reference/presence interpretation and stochastic entropy balance remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 TTCS is the operator that transforms symbolic reference into symbolic presence. Building on Lemma lemma:bk4_properties_of_ttcs, Theorem theorem:bk4_ttcs_convergence, Cor. corollary:bk4_symbolic_lightcone, Prop. proposition:bk4_neighborhood_completeness, the TTCS potential/stochastic/link-traversal scholia (Scholium scholium:bk4_ttcs_potential_field, Scholium scholium:bk4_ttcs_stochastic_operator, Scholium scholium:bk4_ttcs_link_traversal), and Book I bounded-observer structure (Def.
@@ -7454,6 +9272,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2681`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `sec:bk1_category_errors_in_classical_models` (Category Errors in Classical Models); `subsec:bk8_symbolic_knots_and_emergent_entanglement` (Symbolic Knots and Emergent Entanglement)
 - Cited by: `scholium:bk4_irreversibility_as_trace` (Irreversibility as Symbolic Trace); `scholium:bk4_ttcs_simulation_tool_use` (TTCS as Symbolic Simulation and Tool-Use)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-083`
+- Witnesses: `Book4D.CertifiedTTDC.abstention_base_inert_but_recorded`, `Book4D.CertifiedTTDC.recordedExecute_eq_iff`, `Book4Fz.CrossObserverTimeConsistent.reparam_add`, `Book4Fz.CrossObserverTimeConsistent.reparam_zero`, `Book4Fz.CrossObserverTimeConsistent.trans`, `Book4Fz.IsObserverFlow.bijective`, `Book4Fz.IsObserverFlow.neg_comp_self`, `Book4Fz.IsObserverFlow.self_comp_neg`, `Book4Fz.crossObserverTimeConsistent_refl`, `ScholiumDyn.base_cancellation_not_full_equilibrium`, `ScholiumDyn.no_full_equilibrium_of_trace_production`, `ScholiumDyn.recordedCombinedStep_eq_iff`
+- Countermodels: none
+- Formal boundary: The observer-memory kernel is formalized on a reflective state carrying a visible coordinate and monotone trace count. Visible drift/reflection cancellation or TTDC abstention can leave the base coordinate fixed, while positive trace production proves the full observer-state changed. This establishes the discrete irreversibility mechanism; the thermodynamic entropy-production and continuous dual-horizon claims remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7553,6 +9381,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:274
 - Cited by: `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_critical_symbolic_bifurc` (Critical Symbolic Bifurcation); `definition:bk4_repair_capacity` (Repair Capacity); `definition:bk4_repair_process` (Repair Process); `proof:bk4_fragmentation_distortion_encoding` (Fragmentation and Distortion); `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-050`
+- Witnesses: `Book4C.fragMeasure_eq_zero_iff`, `Book4C.fragMeasure_mem_Icc`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: mutual information I and entropy H kept as named hypotheses (0 <= I <= H, H > 0, the data-processing content of 'optimal partition'); the argmax-over-partitions construction itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The fragmentation measure $F_{text{frag}}$ of a symbolic identity $I$ (see Def. definition:bk4_symbolic_identity_carrie) is defined as: F_{text{frag}}(I) = 1 - frac{I({U_j}_{j=1}^k; Psi_i)}{H({U_j}_{j=1}^k)} where $I(cdot;cdot)$ denotes mutual information, $H(cdot)$ is entropy (see Def. definition:bk2_symbolic_entropy), and ${U_j}_{j=1}^k$ is the optimal partition of the membrane $M_i$ (see Def. definition:bk3_symbolic_membrane) that maximizes fragmentation (see Def. definition:bk4_fragmented_identity).
@@ -7566,6 +9405,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2753`
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk2_symbolic_probability_spa` (Symbolic Probability Space); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier)
 - Cited by: `proof:bk4_fragmentation_identity_stability` (Fragmentation Violates Symbolic Identity Stability)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-033`
+- Witnesses: `Book4A.imbalanced_drift_exceeds_reflect`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the pointwise threshold consequence is modeled (drift-imbalance with theta>1 forces drift to strictly exceed reflection outright); the iff-characterization of fragmentation and the probability-space apparatus it is embedded in are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7623,6 +9473,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2807`
 - Cited by: `proof:bk4_symbolic_curvature_fragmentation` (Curvature and Fragmentation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-004`
+- Witnesses: `Book4B.cascadeProb_lt_one`, `Book4B.cascadeProb_nonneg`, `Book4B.cascadeProb_strictMono`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The propagation-probability formula 1-exp(-beta*kappa) is kept exactly, with the manifold-valued curvature integral kappa erased to an arbitrary nonnegative real; probability in [0,1) and strict monotonicity in kappa are proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If a symbolic identity (see Def. definition:bk4_symbolic_identity_carrie) undergoes fragmentation (see Def. definition:bk4_fragmented_identity) in a region $U_1 subset M_i$ (see Def.
@@ -7665,6 +9526,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:283
 - Cited by: `definition:bk4_proto_vitality` (Proto-Vitality); `definition:bk4_recursive_self_healing` (Recursive Self-Healing); `definition:bk4_repair_capacity` (Repair Capacity); `proof:bk4_repair_reconnects_fragmentation` (Repair Trajectories Reconnect Fragmented Symbolic Regions); `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); ... +4 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4B-005`
+- Witnesses: `Book4B.repairSufficiency_decrease_accum`, `Book4B.repairSufficiency_terminates`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Modeled as a discrete fragmentation-measure sequence decreasing by a fixed positive amount each step, with telescoping and termination consequences (same finite kernel shape as Book8's MetabolicSufficiency, applied to fragmentation instead of free energy).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A repair process $R_{text{rep}}$ for a fragmented identity (see Def. definition:bk4_fragmented_identity) $I$ is a dynamical evolution that increases symbolic coherence: R_{text{rep}}: I_{text{frag}} to I_{text{coh}} such that: F_{text{frag}}(R_{text{rep}}(I_{text{frag}})) < F_{text{frag}}(I_{text{frag}}) text{(see Def. definition:bk4_fragmentation_measure)}
@@ -7678,6 +9550,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2840`
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `theorem:bk4_existence_of_symbolic_ident` (Existence of Symbolic Identity)
 - Cited by: `definition:bk9_two_way_street_operator` (Two-Way Street Operator); `proof:bk4_repair_reconnects_fragmentation` (Repair Trajectories Reconnect Fragmented Symbolic Regions); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proposition:bk9_mechanisms_of_recognition` (Mechanisms of Recognition); `scholium:bk7_unnamed_scholium_03`; ... +5 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-006`
+- Witnesses: `Book4B.recovery_threshold_exceeds_crit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the threshold-transitivity content of the iff is modeled (recovery threshold above critical, overlap meeting it, forces overlap above critical); the existence of a time-evolved reflection operator achieving the overlap is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7707,6 +9590,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:287
 - Cited by: `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `theorem:bk4_conditions_for_self_healing` (Conditions for Self-Healing)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4B-007`
+- Witnesses: `Book4B.repairSufficiency_decrease_accum`, `Book4B.repairSufficiency_terminates`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Recursive self-healing is a repair process, so it obeys the same RepairSufficiency law; the specific self-reference/persistence operator composition S_n . P_dt . S_m is not modeled, only the monotone-decrease consequence any such process must satisfy.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Recursive self-healing is a repair process (see Def. definition:bk4_repair_process) where the fragmented identity (see Def. definition:bk4_fragmented_identity) uses its own reflexive capabilities to restore coherence: R_{text{self}} = S_n circ P_{Delta t} circ S_m where $S_n$ is the self-reference operator of order $n$ (see Def. definition:bk4_self_reference_operator), $P_{Delta t}$ is the identity persistence operator (see Def. definition:bk4_identity_operators), and $m, n$ are suitable recursion depths.
@@ -7720,6 +9614,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2878`
 - Cites: `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_fragmented_identity` (Fragmented Identity); `definition:bk4_identity_resolution` (Identity Resolution); `definition:bk4_recursive_self_healing` (Recursive Self-Healing)
 - Cited by: `bridge:bk4_ttpr_to_self_reference` (From TTPR to Recursive Identity Retention); `proof:bk4_recursive_self_healing_threshold` (Recursive Identity Retention Enables Self-Healing); `theorem:bk4_ttpr_symbolic_stability` (Symbolic Stability via Precision Refinement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-008`
+- Witnesses: `Book4B.coreCoherence_exceeds_crit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only condition 2's threshold-transitivity shape is modeled (core error below critical error forces core coherence past 1-critical); condition 1 (identity resolution R_n > chi for n >= n_0) is a bare existential over an unmodeled resolution sequence and is not covered.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7749,6 +9654,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:290
 - Cited by: `lemma:bk4_upper_bound_on_repair_capacit` (Upper Bound on Repair Capacity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4B-009`
+- Witnesses: `Book4B.repairCapacity_lt_one`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Kept as a structure field bounded by the repair-capacity ceiling rather than derived from the sup over repair processes; no topology on the space of repair processes is modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The repair capacity $C_{text{rep}}$ of a symbolic identity $I$ (see Def. definition:bk4_symbolic_identity_carrie) is defined as: C_{text{rep}}(I) = sup left{ F_{text{frag}}(I') : exists R_{text{rep}} text{ such that } R_{text{rep}}(I') text{ is coherent} right} Here, $F_{text{frag}}$ denotes the fragmentation measure (see Def. definition:bk4_fragmentation_measure), and $R_{text{rep}}$ is a symbolic repair process (see Def. definition:bk4_repair_process).
@@ -7762,6 +9678,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:2915`
 - Cites: `definition:bk4_recursive_identity_encod` (Recursive Identity Encoding); `definition:bk4_repair_capacity` (Repair Capacity); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier)
 - Cited by: `proof:bk4_fragmentation_distortion_encoding` (Fragmentation and Distortion)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-010`
+- Witnesses: `Book4B.repairCapacityBound_lt_one`, `Book4B.repairCapacityBound_nonneg`, `Book4B.repairCapacityBound_strictMono`, `Book4B.repairCapacity_lt_one`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The bound expression 1 - 1/(n_max+1) is proved to lie in [0,1) and to strictly increase with recursive depth capacity, plus the consequence that any capacity bounded by it is itself below 1.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7833,6 +9760,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:295
 - Cited by: `definition:bk4_symbolic_autonomy` (Symbolic Autonomy); `definition:bk4_symbolic_flow_freedom` (Symbolic Flow Freedom); `definition:bk4_symbolic_freedom_measure` (Symbolic Freedom Measure); `proof:bk4_freedom_via_symbolic_flow` (Freedom via Coherence-Preserving Symbolic Flow); `proof:bk4_progressive_freedom_constraint_expansion` (Progressive Freedom Requires Coherence Beyond Constraints); `theorem:bk4_recursive_constraint_libera` (Constraint Liberation); ... +1 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4B-011`
+- Witnesses: `Book4B.constraintDirectedSystem_universal`, `Book4B.constraintDomain_strict_growth`, `Book4B.constraintDomain_subset_limit`, `Book4B.constraintLimit_least`, `Book4B.mem_constraintLimit_iff`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Domains U(n) are abstract sets. Their recursive limit is constructed as the union of finite stages and proved to satisfy membership, stage-inclusion, and least-upper-domain laws; The Scholium directed-system laws and unique colimit mediator are instantiated by monotone domain inclusions. Metric d_g / reflection-operator membership conditions remain outside the model.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The constraint domain $U(I)$ of a symbolic identity $I$ (see Def. definition:bk4_symbolic_identity_carrie) is the set of all admissible symbolic patterns that satisfy the internal consistency conditions: U(I) = left{Psi : d_g(R_{I}(Psi), Psi) leq delta_{text{refl}} text{ and } F_{text{frag}}(Psi) < epsilon_{text{frag}} right} Here, $R_{I}$ denotes the identity-relative reflection operator (see Def. definition:bk4_individuated_symbolic_id), and $F_{text{frag}}$ is the fragmentation measure (see Def.
@@ -7846,6 +9784,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:2968`
 - Cites: `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_individuated_symbolic_id` (Individuated Symbolic Identity)
 - Cited by: `definition:bk4_proto_vitality` (Proto-Vitality); `definition:bk4_symbolic_freedom_measure` (Symbolic Freedom Measure); `proof:bk4_progressive_freedom_constraint_expansion` (Progressive Freedom Requires Coherence Beyond Constraints)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-012`
+- Witnesses: `Book4B.constraintDomain_strict_growth`, `Book4B.constraintDomain_subset_limit`, `Book4B.constraintLimit_least`, `Book4B.constraintLimit_strict_growth`, `Book4B.constraintLimit_tail_eq`, `Book4B.mem_constraintLimit_iff`, `Book4B.orbitConstraintDomain_mono`, `Book4B.orbitConstraintLimit_eq_range`, `Book4B.transfiniteConstraint_leastFixedPoint_fixed`, `Book4B.transfiniteConstraint_leastFixedPoint_le`, `Book4B.transfiniteConstraint_stabilized_eq_lfp`, `Book4B.transfiniteConstraint_stabilized_fixed`, `Book4B.transfiniteConstraint_stage_le_fixed`, `Book4B.transfiniteIterate_eventually_constant_of_card_lt`, `Book4B.transfiniteIterate_eventually_constant_of_fixed`, `Book4B.transfiniteIterate_exists_fixed_of_card_lt`, `Book4B.transfiniteIterate_fixed_stage_eq_lfp`, `Book4B.transfiniteIterate_le_fixed`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The honest order-theoretic limit U_infinity is constructed as the union of all finite domains. It is tail-invariant for monotone sequences, is the least upper domain, and strictly extends U_0 when any stage grows. For Scholium-generated dynamics it is proved exactly equal to the full flow-orbit range. Constraint maps are now modeled abstractly as arbitrary monotone endomorphisms of the complete lattice of domains, with ordinal successor application and union at genuine limit ordinals. Knaster-Tarski supplies the least fixed point unconditionally; ordinal limit induction now derives the standard invariant that every bottom-started stage lies below every fixed domain. Consequently eventual ordinal stabilization alone proves convergence exactly to the least fixed point. The cardinal theorem now gives full eventual convergence for the standard transfinite iterator whenever its well-ordered index type is larger than the constraint-domain lattice and the map is inflationary: it attains the least fixed point and every later stage is identical.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7875,6 +9824,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:300
 - Cited by: `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation); `theorem:bk4_freedom_life_connection` (Freedom-Life Connection)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-013`
+- Witnesses: `Book4B.freedomMeasure_le_one`, `Book4B.freedomMeasure_nonneg`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The ratio (H(U_infinity)-H(U_0))/H(U_infinity) is proved to lie in [0,1] given entropy nonnegativity and monotonicity; the entropy functional H and the limiting domain U_infinity themselves are not modeled, only the algebraic consequence of the stated formula.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic freedom measure $F_{text{free}}$ of an individuated identity $I$ (see Def. definition:bk4_individuated_symbolic_id) is defined as: F_{text{free}}(I) = frac{H(U_{infty}) - H(U_0)}{H(U_{infty})} where $H(U)$ is the symbolic entropy (see Def. definition:bk2_symbolic_entropy) of the constraint domain $U$ (see Def. definition:bk4_constraint_domain). The domain $U_{infty}$ is obtained as the limit of a convergent sequence of self-reflective constraint maps (see Thm. theorem:bk4_recursive_constraint_libera).
@@ -7903,6 +9863,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:301
 - Cited by: `lemma:bk4_autonomy_freedom_relation` (Autonomy-Freedom Relation); `proof:bk4_autonomy_freedom_relation`; `proof:bk4_freedom_via_symbolic_flow` (Freedom via Coherence-Preserving Symbolic Flow); `proof:bk4_goal_directed_composition_flow` (Goal-Directed Composition as Freedom-Expressive Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-014`
+- Witnesses: `Book4B.id_has_no_escape`, `Book4B.symbolicFreedom_of_flowFreedom`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The two-clause predicate (reflection-fixed image; escape from U_0) is modeled directly, plus an explicit countermodel (the identity flow) showing the escape clause is a genuine non-vacuous requirement.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic flow $Phi_s$ (see Def. definition:bk1_symbolic_flow) exhibits freedom with respect to an individuated identity $I$ (see Def. definition:bk4_individuated_symbolic_id) if: - The flow preserves identity coherence: $Phi_s circ Psi_i in text{Fix}(R_{I})$, where $R_{I}$ is the reflection operator associated with the identity carrier (see Def. definition:bk4_symbolic_identity_carrie), - The flow transcends initial constraints: $Phi_s(U_0) notsubseteq U_0$, where $U_0$ is the initial constraint domain (see Def.
@@ -7916,6 +9887,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3022`
 - Cites: `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier)
 - Cited by: `corollary:bk7_fixed_point_tracking_within_evolving_reciprocity` (Fixed Point Tracking within Evolving Reciprocity); `corollary:bk9_emergence_of_moral_agency` (Emergence of Moral Agency); `definition:bk9_cognitive_freedom` (Cognitive Freedom $\mathfrak{L}$); `definition:bk9_recursive_freedom_operator` (Recursive Freedom Operator \(\Omega^{\leftrightarrow}\)); `lemma:bk4_autonomy_freedom_relation` (Autonomy-Freedom Relation); `proof:bk4_autonomy_freedom_relation`; ... +9 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-015`
+- Witnesses: `Book4B.symbolicFreedom_of_flowFreedom`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Symbolic freedom is defined exactly as the existential closure of flow freedom, so the criterion is definitional once flow freedom is modeled; only the forward (witness-exhibits-freedom) direction has independent content, and is the theorem proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -7959,6 +9941,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3054`
 - Cited by: `proof:bk4_goal_directed_composition_flow` (Goal-Directed Composition as Freedom-Expressive Flow)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-016`
+- Witnesses: `Book4B.autonomy_implies_freedom`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the forward direction is proved (a decision/goal composite exhibiting flow freedom witnesses symbolic freedom). The converse -- freedom forces existence of such g, e -- is not modeled, since it would need an unstated surjectivity assumption on the decision and goal-transformation maps.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 An individuated identity $I$ (see Def. definition:bk4_individuated_symbolic_id) with symbolic autonomy $(A_i, G_i, D_i)$ (Def. definition:bk4_symbolic_autonomy) exhibits freedom according to the freedom criterion (Thm. theorem:bk4_freedom_criterion) if and only if: \[ exists g in G, exists e in E text{such that} D_i(cdot, g) circ G_i(cdot, e) = Phi_S, \] where $Phi_S$ satisfies the symbolic flow freedom condition (Def. definition:bk4_symbolic_flow_freedom).
@@ -7986,6 +9979,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:3
 - Cites: `definition:bk4_symbolic_autonomy` (Symbolic Autonomy); `theorem:bk4_freedom_criterion` (Freedom Criterion)
 - Cited by: `proof:bk4_goal_directed_composition_flow` (Goal-Directed Composition as Freedom-Expressive Flow)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-017`
+- Witnesses: `Book4B.autonomy_implies_freedom`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Direct existential transfer: exhibiting the decision/goal composite D(.,g) . G(.,e) satisfying flow freedom is exactly exhibiting a free flow.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8028,6 +10032,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3111`
 - Cites: `definition:bk4_constraint_domain` (Constraint Domain); `definition:bk4_individuated_symbolic_id` (Individuated Symbolic Identity); `definition:bk4_self_authorship` (Self-Authorship); `definition:bk4_symbolic_autonomy` (Symbolic Autonomy); `theorem:bk4_freedom_criterion` (Freedom Criterion)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-095`
+- Witnesses: `Book4Fz.self_authorship_fixed_point`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: The constraint-refinement sequence converges to a unique fixed-point constraint map; the group-action structure stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8085,6 +10100,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3200`
 - Cited by: `corollary:bk4_emergence_of_meaning` (Emergence of Meaning); `proof:bk4_freedom_growth_fragmentation` (Freedom Growth and Bounded Fragmentation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-018`
+- Witnesses: `Book4B.freedomLife_increase_accum`, `Book4B.freedomLife_strictMono`, `Book4B.freedomLife_succ_lt`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The continuous derivative condition dF_free/dt > 0 is modeled by its discrete analogue (fixed positive per-step increase), yielding strict monotonicity and a telescoping lower bound; the bounded-fragmentation clause is retained as a structure field but not used in a theorem beyond being recorded.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 An individuated symbolic identity $I$ (Def. definition:bk4_individuated_symbolic_id) transitions toward symbolic life (Thm. theorem:bk3_criteria_persistent_symbolic_life) if and only if its symbolic freedom measure (Def. definition:bk4_symbolic_freedom_measure) increases over time while maintaining bounded fragmentation (Def. definition:bk4_fragmentation_measure): frac{dF_{text{free}}(I)}{dt} > 0 text{and} F_{text{frag}}(I) < epsilon_{text{max}}.
@@ -8112,6 +10138,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:3228`
 - Cites: `theorem:bk3_criteria_persistent_symbolic_life` (Persistent Symbolic Life Criteria); `theorem:bk4_freedom_life_connection` (Freedom-Life Connection)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-004`
+- Witnesses: `Book4Meaning.exists_positive_meaning_iff`, `Book4Meaning.freedomLifeTransition_does_not_force_nonconstant_energy`, `Book4Meaning.identityMeaning_ceiling_witness_has_zero_value`, `Book4Meaning.identityMeaning_is_nontrivial`, `Book4Meaning.identityMeaning_nonneg_on_accessible`, `Book4Meaning.identityMeaning_pos_iff_on_accessible`, `Book4Meaning.identityMeaning_strict_preference_iff`, `Book4Meaning.meaningValue_nonneg`, `Book4Meaning.meaningValue_pos_iff`, `Book4Meaning.meaningValue_strict_preference_iff`, `Book4Meaning.preferentialFlow_meaning_nondecreasing`, `Book4Meaning.retained_distinction_does_not_force_action_distinction`, `Book4Meaning.transition_with_bridge_generates_positive_meaning`, `Book4Meaning.value_map_does_not_determine_significance`
+- Countermodels: `Book4Meaning.freedomLifeTransition_does_not_force_nonconstant_energy`, `Book4Meaning.retained_distinction_does_not_force_action_distinction`, `Book4Meaning.value_map_does_not_determine_significance`
+- Conditions: accessible strict-below-ceiling witness; attained finite energy ceiling; explicit freedom-life-to-energy bridge; identity-relative accessible domain; separate convergence and local-minimum certificate for preferential flows
+- Formal boundary: Rebuilt identity-relative meaning kernel: accessible configurations carry an attained ceiling and a strict-below-ceiling witness, yielding a nonnegative, nonconstant U × I → ℝ value map. A flow certificate separates descent from convergence and local minimality; an explicit bridge separates freedom/life from the energy domain. Countermodels separate energetic value, interpretive significance, retained distinction, and embodied action.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8183,6 +10220,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:329
 - Cited by: `axiom:bk9_preconditions_for_reciprocal_cognition` (Preconditions for Reciprocal Cognition); `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `definition:bk4_epistemic_differential_o` (Epistemic Differential Operator); `definition:bk4_observer_differentiable_` (Observer-Differentiable Structure); `definition:bk4_projective_action_transl` (Projective Action Translator); `definition:bk4_substituted_drift_field` (Substituted Drift Field); ... +13 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-053`
+- Witnesses: `Book4D.fuzzySubstitutionBound_compose`, `Book4D.fuzzySubstitutionBound_eps_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The observer-differenced displacement bound below epsilon_O(x) is the diff<eps field of FuzzySubstitutionBound; only the scalar bound is modeled, not the map u or the tangent-space structure.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $M$ be a symbolic membrane (Def. definition:bk3_symbolic_membrane) and $O = (N_O, {delta^n_O}, epsilon_O)$ a bounded observer (Def. definition:bk1_bounded_observer). A fuzzy symbolic substitution is a mapping \[ u : M to tilde{M} \] such that, for all $x in M$ and all $n in {1,2,ldots,N_O}$, \[ \| delta^n_O(u(x) - x) \| < epsilon_O(x). \] We call $tilde{M}$ the observer-induced fuzzy membrane.
@@ -8196,6 +10244,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:330
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution)
 - Cited by: `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `definition:bk4_epistemic_differential_o` (Epistemic Differential Operator); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation); `proof:bk4_drift_stability_local_bounds` (Drift Stability via Local Symbolic Distortion Bounds); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem); ... +1 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-056`
+- Witnesses: `Book4D.const_odifferentiableAt`, `Book4D.identity_odifferentiableAt`, `Book4D.odifferentiableAt_iff_ratio_form`, `Book4D.odifferentiableAt_mono_eps`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: ODifferentiableAt is the linear-bound reading, specialized to Real -> Real and a single scalar tangent direction (T_p M not modeled).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8225,6 +10284,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:332
 - Cited by: `definition:bk4_induced_area` (Observer-Induced Area Element); `definition:bk4_symbolic_space` (Observer-Relative Symbolic Space); `lemma:bk4_observer_metric_properties` (Properties of Observer-Induced Metric); `proof:bk4_ml_metric_learning`; `proposition:bk4_field_regularization` (Field Theory Regularization); `scholium:bk4_dynamics_of_observer_frame` (On the Dynamics of the Observer Frame); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-059`
+- Witnesses: `Book4D.observerMetric_rescale_invariant`, `Book4D.observerMetric_self_eq_zero_iff`, `Book4D.observerMetric_self_nonneg`, `Book4D.observerMetric_symm`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Honest 1-dimensional kernel: g_O(v,w) is K(v)*K(w). Coordinate rescaling x -> a*x acts by the pullback kernel K_a(x)=K(x/a), making the pairing exactly invariant on correspondingly rescaled vectors for nonzero a.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M, g)$ be a smooth Riemannian manifold of dimension $n$ on the Book I symbolic manifold substrate (Def. definition:bk1_symbolic_manifold) and let $O$ be a Bounded Observer (Def.
@@ -8238,6 +10308,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3337`
 - Cites: `definition:bk4_observer_metric` (Observer-Induced Metric)
 - Cited by: `remark:bk4_universality_scaling` (Universality and Scaling)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-060`
+- Witnesses: `Book4D.observerMetric_rescale_invariant`, `Book4D.observerMetric_self_eq_zero_iff`, `Book4D.observerMetric_self_nonneg`, `Book4D.observerMetric_symm`, `Book4D.rescaleKernel_mul`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: All three clauses are proved in the one-dimensional kernel: nonnegativity with the exact zero case, symmetry, and scale invariance under the explicit pullback action of nonzero coordinate rescalings. Rescaling kernels compose multiplicatively.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8267,6 +10348,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3354`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-003`
+- Witnesses: `Book4QuantumMeasurement.jointExpectation_eq_sum_partialTrace`, `Book4QuantumMeasurement.jointExpectation_local_eq_reduced`, `Book4QuantumMeasurement.jointExpectation_nonneg`, `Book4QuantumMeasurement.jointExpectation_pureObserver`, `Book4QuantumMeasurement.joint_state_does_not_reduce_to_arbitrary_observer`, `Book4QuantumMeasurement.observerMetric_eq_reduced`, `Book4QuantumMeasurement.trace_partialTraceEnvironment`, `Book4QuantumMeasurement.trace_pureStateDensity_mul`, `Book4QuantumResolution.inducedMetric_diagonal_nonneg`, `Book4QuantumResolution.inducedMetric_diagonal_pos_of_channel`, `Book4QuantumResolution.inducedMetric_symmetric`, `Book4QuantumResolution.inducedMetric_zero_of_response_zero`, `Book4QuantumResolution.quantum_resolution_constructs_observer_metric`, `Book4QuantumResolution.reduced_state_does_not_determine_resolution_kernel`
+- Countermodels: `Book4QuantumMeasurement.joint_state_does_not_reduce_to_arbitrary_observer`, `Book4QuantumResolution.reduced_state_does_not_determine_resolution_kernel`
+- Conditions: explicit reduced-expectation-to-geometry certificate; finite observer and environment bases; finite observer channel basis; independently supplied tangent-to-channel response kernel; joint density operator; local observer metric operator; reduced operator with normalized nonnegative diagonal readout weights
+- Formal boundary: Rebuilt finite-dimensional quantum kernel: complex joint operators admit a genuine environmental partial trace retaining observer coherences. Local observables satisfy the exact joint/reduced expectation identity for correlated and mixed states. Pure-state bra-ket expectation is a proved specialization. An explicit certificate, rather than partial trace alone, bridges the reduced operator expectation to the observer-induced metric; the arbitrary-vector countermodel remains. Constructive quantum-resolution bridge: the reduced-state diagonal supplies normalized nonnegative channel weights, while an independent response kernel maps tangent directions into observer channels. Their weighted pullback constructs a symmetric positive-semidefinite observer metric and detects nonzero responses on positive-weight channels. A countermodel proves that the reduced state alone cannot identify the response kernel or metric.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $mathcal H_O$ and $mathcal H_E$ be finite-dimensional observer and environment Hilbert spaces, let $rho_{OE}$ be a density operator on $mathcal H_Ootimesmathcal H_E$, and define the reduced observer state $rho_O:=Tr_E(rho_{OE})$. For each $p,v,w$, let $widehat g_O(p)(v,w)$ be an operator on $mathcal H_O$.
@@ -8294,6 +10386,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:3
 - Cites: `definition:bk4_observer_metric` (Observer-Induced Metric)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-005`
+- Witnesses: `Book4FieldRegularization.accessibleAssignment_card`, `Book4FieldRegularization.accessibleBand_card`, `Book4FieldRegularization.cutoffMode_abs_le`, `Book4FieldRegularization.cutoffMode_eq_self`, `Book4FieldRegularization.cutoffMode_eq_zero`, `Book4FieldRegularization.fixedOrderDiagram_zero`, `Book4FieldRegularization.fixed_orders_do_not_force_all_orders_control`, `Book4FieldRegularization.perturbativeInsertion_eq_zero_of_high_mode`, `Book4FieldRegularization.regularizeField_add`, `Book4FieldRegularization.regularizeField_idempotent`, `Book4FieldRegularization.regularizeField_passband`, `Book4FieldRegularization.regularizeField_smul`, `Book4FieldRegularization.regularizeField_stopband`, `Book4FieldRegularization.regularized_support_bounded`, `Book4FieldRegularization.resolution_scale_alone_does_not_force_suppression`
+- Countermodels: `Book4FieldRegularization.fixed_orders_do_not_force_all_orders_control`, `Book4FieldRegularization.resolution_scale_alone_does_not_force_suppression`
+- Conditions: certified compactly supported Fourier multiplier; finite perturbative order; finitely many internal momentum labels; separate uniform estimates for any all-orders claim
+- Formal boundary: A certified compact Fourier multiplier acts linearly and idempotently on the whole field, preserves its passband, kills its stopband, and bounds support. Each fixed-order diagram has exactly (cutoff+1)^order accessible momentum assignments. Unit finite coefficients give unbounded all-orders partial sums, so diagram-wise finiteness does not prove perturbative-series convergence; resolution scale alone also supplies no cutoff law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8337,6 +10440,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3451`
 - Cited by: `remark:bk4_universality_scaling` (Universality and Scaling)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4A-002`
+- Witnesses: `Book4StatisticalMechanics.coarseObserverMetric_psd`, `Book4StatisticalMechanics.coarseObserverMetric_symmetric`, `Book4StatisticalMechanics.ensembleMetric_of_constant`, `Book4StatisticalMechanics.ensembleMetric_symmetric`, `Book4StatisticalMechanics.entropy_regularity_alone_does_not_force_metric_decomposition`, `Book4StatisticalMechanics.metricQuadratic_ensembleMetric`, `Book4StatisticalMechanics.metricQuadratic_thermalMetric`, `Book4StatisticalMechanics.thermalMetric_decomposition`, `Book4StatisticalMechanics.thermalMetric_diagonal_nonneg`, `Book4StatisticalMechanics.thermalMetric_symmetric`
+- Countermodels: `Book4StatisticalMechanics.entropy_regularity_alone_does_not_force_metric_decomposition`
+- Conditions: finite microstate and macro-coordinate families; normalized nonnegative ensemble weights; positive inverse temperature and declared entropy sign; symmetric PSD entropy-response Hessian; symmetric PSD microscopic metrics
+- Formal boundary: Rebuilt normalized thermal coarse-graining: nonnegative weights sum to one; microscopic metrics and the entropy-response Hessian are symmetric PSD; beta is positive. Lean proves the complete quadratic-form decomposition and PSD of the constructed observer metric, plus preservation of a constant microscopic metric. Entropy regularity alone still cannot identify an independent observer metric with this constitutive closure.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let a finite coarse-graining carry normalized nonnegative ensemble weights $w_x$, positive-semidefinite symmetric microscopic metrics $g_x$, and a symmetric positive-semidefinite entropy-response Hessian $H_S$. For inverse temperature $beta>0$, the constitutive thermal closure g_O:=sum_x w_xg_x+beta^{-1}H_S defines a symmetric positive-semidefinite observer metric. When $H_S=nabla^2S_{eff}$ under the declared entropy sign convention, this is the displayed ensemble-plus-entropy-curvature interpretation.
@@ -8364,6 +10478,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3480`
 - Cites: `definition:bk4_observer_metric` (Observer-Induced Metric)
 - Cited by: `corollary:bk4_information_curvature` (Information-Geometric Curvature); `proof:bk4_information_curvature`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-007`
+- Witnesses: `Book4MetricLearning.certified_metric_learning`, `Book4MetricLearning.differentiability_alone_does_not_guarantee_descent`, `Book4MetricLearning.gradientStep_eq_self_iff`, `Book4MetricLearning.learnedMetric_positive`, `Book4MetricLearning.learnedParameter_succ`, `Book4MetricLearning.learnedParameter_tendsto_target`, `Book4MetricLearning.learnedParameter_zero`, `Book4MetricLearning.metricLearningStep_strict_descent`, `Book4MetricLearning.positiveMetric_injective`, `Book4MetricLearning.positiveMetric_pos`, `Book4MetricLearning.quadratic_gradient_step_decreases`, `Book4MetricLearning.target_identified_from_equal_readout`
+- Countermodels: `Book4MetricLearning.differentiability_alone_does_not_guarantee_descent`
+- Conditions: injective observation readout for identification; realizable quadratic parameter loss; scalar log-parameterized positive metric; step size 0 < eta < 1
+- Formal boundary: Complete scalar realization: exponential log-parameterization preserves positive metric validity; the translated quadratic loss has strict one-step descent for 0<eta<1; the exact recursive trajectory converges geometrically to its supplied target; and an injective readout separately supplies identifiability. The eta=2 countermodel retains the boundary that differentiability alone proves none of descent, convergence, or learning.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8435,6 +10560,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:3546`
 - Cited by: `proposition:bk4_holographic_emergence` (Holographic Emergence)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-006`
+- Witnesses: `Book4InformationCurvature.christoffel_eq_zero_of_dMetric_zero`, `Book4InformationCurvature.curvature_diagonal_zero`, `Book4InformationCurvature.fisherInformation_nonneg`, `Book4InformationCurvature.fisherMetric_diagonal_nonneg`, `Book4InformationCurvature.fisherMetric_symm`, `Book4InformationCurvature.hessianMoment_is_not_riemannCurvature`, `Book4InformationCurvature.riemannCurvature_diagonal_zero`, `Book4InformationCurvature.riemannCurvature_eq_zero_of_constant_jet`, `Book4InformationCurvature.riemannCurvature_swap`, `Book4InformationCurvature.unit_hessianMoment_diagonal`, `Book4InformationCurvature.unit_hessian_moment_cannot_be_riemann_diagonal`, `Book4InformationCurvature.unit_second_hessian_moment`
+- Countermodels: none
+- Conditions: finite coordinate chart; nonnegative statistical weights; regular positive-definite metric two-jet with inverse data; two metric derivatives for Christoffel curvature
+- Formal boundary: Finite-coordinate Fisher–Levi-Civita realization: the Fisher score outer product is symmetric with nonnegative diagonal; an explicit metric two-jet constructs Christoffel symbols, their derivatives, and Riemann curvature with the required antisymmetry and diagonal vanishing. Constant metric jets are flat. The former Hessian-product expression is retained as a distinct Hessian-moment tensor, with a unit countermodel proving it is not generally Riemann curvature.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under the regularity and identifiability hypotheses of Thm. theorem:bk4_ml_metric_learning, suppose the learned observer metric is the Fisher metric of the accessible statistical model, (g_O)_{munu}= (g_F)_{munu} :=mathbb{E}_{p_O}\!left[ partial_mulog p_O partial_nulog p_O right].
@@ -8476,6 +10612,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:3
 - Cites: `corollary:bk4_information_curvature` (Information-Geometric Curvature)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-001`
+- Witnesses: `Book4Holographic.boundary_metric_alone_does_not_select_unique_bulk`, `Book4Holographic.minimal_area_does_not_force_unique_surface`, `Book4Holographic.observerSurfaceArea_mono`, `Book4Holographic.observerSurfaceArea_nonneg`, `Book4Holographic.reconstructedEntropy_nonneg`, `Book4Holographic.reconstruction_deterministic`, `Book4Holographic.rtEntropy_area_law`, `Book4Holographic.rtEntropy_nonneg`, `Book4Holographic.rtEntropy_strictMono_area`, `Book4Holographic.selectedSurface_minimizes_entropy`, `Book4Holographic.selectedSurface_unique_of_uniqueMinimizer`
+- Countermodels: `Book4Holographic.boundary_metric_alone_does_not_select_unique_bulk`, `Book4Holographic.minimal_area_does_not_force_unique_surface`
+- Conditions: admissible anchored surface fiber; nonnegative area; observer-relative RT regime; positive Newton constant; selected area minimizer; separate uniqueness witness
+- Formal boundary: Rebuilt variational RT reconstruction with admissible anchored-surface fibers, selected area minimizers, nonnegative area, and positive Newton constant. Entropy minimality is proved. Uniqueness requires a separate witness; countermodels refute uniqueness from boundary metric or minimality alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8519,6 +10666,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3647`
 - Cited by: `lemma:bk4_observer_relative_smoothness` (Observer-Relative Smoothness); `proof:bk4_drift_stability_local_bounds` (Drift Stability via Local Symbolic Distortion Bounds); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `proof:bk4_substituted_drift_smoothness` (Smoothness of Substituted Drift Under Observer Differentiability)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-092`
+- Witnesses: `Book4Fz.TopologicalObserverTangentAtlas.exists_chart_mem_nhds`, `Book4Fz.TopologicalObserverTangentAtlas.iUnion_source_eq_univ`, `Book4Fz.hasFDerivAt_localObserverTransition`, `Book4Fz.hasFDerivAt_observerTransition`, `Book4Fz.hasFDerivAt_substituted_drift`, `Book4Fz.localObserverCoordinateOverlap_iff`, `Book4Fz.localObserverTangentTransition_cocycle`, `Book4Fz.mfderiv_substituted_drift`, `Book4Fz.observerTangentTransition_cocycle`, `Book4Fz.substituted_drift_contMDiff`, `Book4Fz.substituted_drift_continuous`, `Book4Fz.substituted_drift_differentiable`, `Book4Fz.substituted_drift_mdifferentiable`, `Book4Fz.topologicalObserverCoordinateOverlap_isOpen`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: The substituted drift is Frechet differentiable on normed model spaces. Explicit local chart domains now support exact overlap membership and transition Jacobians, with consistent tangent transport across triple overlaps.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $u : M to tilde{M}$ be a fuzzy symbolic substitution (Def. definition:bk4_fuzzy_symbolic_substitution) relative to observer $O$, and let $P_lambda subset M$ be a symbolic structure with drift operator $D_lambda$. Then there exists a neighborhood $U_lambda subset P_lambda$ such that the substituted drift field $tilde{D}_lambda = u_*(D_lambda)$ (Def. definition:bk4_substituted_drift_field) is $O$-differentiable within $u(U_lambda) subset tilde{M}$.
@@ -8546,6 +10704,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:3684`
 - Cites: `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution); `definition:bk4_substituted_drift_field` (Substituted Drift Field); `lemma:bk4_local_differentiability_substituted_drift` (Local Differentiability of Substituted Drift)
 - Cited by: `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); `proof:bk4_substituted_drift_smoothness` (Smoothness of Substituted Drift Under Observer Differentiability)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-091`
+- Witnesses: `Book4Fz.C1ObserverTangentAtlas.isManifold`, `Book4Fz.C1ObserverTangentAtlas.localTransition_contDiffOn`, `Book4Fz.ContDiffObserverTangentAtlas.isManifold`, `Book4Fz.ContDiffObserverTangentAtlas.isManifold_one`, `Book4Fz.ContDiffObserverTangentAtlas.transition_contDiffOn`, `Book4Fz.TopologicalObserverTangentAtlas.atlas_eq_range`, `Book4Fz.TopologicalObserverTangentAtlas.coordinateOverlap_isOpen`, `Book4Fz.TopologicalObserverTangentAtlas.exists_chart_mem_nhds`, `Book4Fz.TopologicalObserverTangentAtlas.iUnion_source_eq_univ`, `Book4Fz.TopologicalObserverTangentAtlas.isManifold_zero`, `Book4Fz.TopologicalObserverTangentAtlas.mem_chartAt_source`, `Book4Fz.fderiv_localObserverTransition`, `Book4Fz.hasFDerivAt_localObserverTransition`, `Book4Fz.hasFDerivAt_observerTransition`, `Book4Fz.hasFDerivAt_substituted_drift`, `Book4Fz.localObserverCoordinateOverlap_iff`, `Book4Fz.localObserverTangentTransition_cocycle`, `Book4Fz.localObserverTransition_cocycle`, `Book4Fz.localObserverTransition_mem_target`, `Book4Fz.localObserver_coordinate_mem_overlap`, `Book4Fz.mfderiv_substituted_drift`, `Book4Fz.observerTangentTransition_cocycle`, `Book4Fz.observerTangentTransition_self`, `Book4Fz.observerTransition_cocycle`, `Book4Fz.substituted_drift_conjugacy`, `Book4Fz.substituted_drift_contMDiff`, `Book4Fz.substituted_drift_continuous`, `Book4Fz.substituted_drift_differentiable`, `Book4Fz.substituted_drift_iterate_conjugacy`, `Book4Fz.substituted_drift_mdifferentiable`, `Book4Fz.topologicalObserverCoordinateOverlap_isOpen`, `Book4Fz.topologicalObserverOverlap_isOpen`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: Pushforward drift is continuous and Frechet differentiable with exact ordered Jacobian and finite-iterate conjugacy. Local observer charts now carry explicit source and target sets, exact overlap membership, target preservation, transition Jacobians, and coordinate/tangent cocycles on triple overlaps. Native topological chart domains and all pairwise coordinate overlaps are open, and a covering atlas supplies an open chart neighborhood at every point. The covering atlas is now assembled into mathlib's native ChartedSpace and certified as an IsManifold at C^0. A strengthened regular-atlas contract couples every transition Jacobian to overlap-wide C^n regularity. At C^1, chartwise regularity of each chart and inverse now derives pairwise transition regularity automatically, identifies the computed fderiv with tangent transport, and assembles the mathlib manifold without a duplicate transition obligation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8575,6 +10744,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3726`
 - Cited by: `corollary:bk4_emergence_of_classical_ge` (Emergence of Classical Geometry); `corollary:bk4_smoothness_as_epistemic_phenomenon` (Smoothness as an Epistemic Phenomenon); `proof:bk4_drift_reflection_field` (Symbolic Drift-Reflection Field Dynamics); `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `proof:bk4_emergence_of_classical_ge`; `proof:bk4_fuzzy_substitution_drift_smoothing` (Fuzzy Substitution Smooths Symbolic Drift at Observer Resolution); ... +6 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-061`
+- Witnesses: `Book4D.chart_geometry_exists_iff_glued`, `Book4D.chart_glued_yields_single_geometry`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only consequence 2 ("admits an observer-relative differentiable structure") is covered, re-read over FracturedAtlas.ChartComplex with Glued as the named hypothesis consuming the source's chart-convergence condition. Consequences 1 and 3 (perceiving a smooth manifold; reflection-induced stabilization fields) are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let ${P_lambda}_{lambda in Lambda}$ be a symbolic system with symbolic drift operators ${D_lambda}_{lambda in Lambda}$ and reflection operators ${R_lambda}_{lambda in Lambda}$, and let $O = (N_O, {delta^n_O}, epsilon_O)$ be a bounded observer (Def. definition:bk1_bounded_observer). Suppose there exists a fuzzy symbolic substitution $u : bigcup_lambda P_lambda to tilde{M}$ (Def.
@@ -8603,6 +10783,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:3805`
 - Cited by: `proof:bk4_observer_relative_smoothness` (Observer-Relative Smooth Structure from Fuzzy Substitution); `remark:bk4_fuzzy`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-063`
+- Witnesses: `Book4D.dual_horizon_no_single_smoothness`, `Book4D.odifferentiableAt_mono_eps`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Clause 3 (different observers may perceive different structures on the same system) is the dual-horizon fracture instance; clauses 2 and 4 (dependence on resolution threshold; classical case as the eps->0 limit) are the honest monotonicity-in-eps content of odifferentiableAt_mono_eps. Clause 1 (smoothness as a resolution artifact, stated narratively) is not separately modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Within the bounded observer framework (Def. definition:bk1_bounded_observer), the emergence of smooth manifold structure is an epistemic phenomenon rather than an ontological primitive. Specifically: - Smoothness arises as a resolution artifact under fuzzy symbolic substitution (Def. definition:bk4_fuzzy_symbolic_substitution), - The perceived differentiable structure depends on the observer's differentiation capabilities $N_O$ and resolution threshold $epsilon_O$ (Def.
@@ -8630,6 +10821,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3835`
 - Cites: `definition:bk4_fuzzy_symbolic_substitution` (Fuzzy Symbolic Substitution); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Cited by: `definition:bk4_epistemic_differential_o` (Epistemic Differential Operator); `lemma:bk5_recursive_flow_convergence` (Recursive Flow Convergence); `proof:bk4_drift_reflection_field` (Symbolic Drift-Reflection Field Dynamics); `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `proof:bk5_drift_reflection_equilibrium` (Available-Operator Construction); `remark:bk4_fuzzy`; ... +1 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-093`
+- Witnesses: `Book4Fz.drift_reflection_contMDiff`, `Book4Fz.drift_reflection_continuous`, `Book4Fz.hasFDerivAt_drift_reflection`, `Book4Fz.hasFDerivAt_substituted_drift_reflection`, `Book4Fz.mfderiv_substituted_drift_reflection`, `Book4Fz.substituted_drift_reflection_contMDiff`, `Book4Fz.substituted_drift_reflection_continuous`
+- Countermodels: none
+- Conditions: continuity models observer-differentiability; the differentiable-manifold and group-action structures stay open
+- Formal boundary: The drift-reflection operation and its observer substitution are native C-n manifold maps; their exact ordered Frechet and manifold derivatives are kernel-derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8687,6 +10889,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:3897`
 - Cited by: `proof:bk4_drift_reflection_summary` (Summary of Drift-Reflection Alignment Properties); `proof:bk4_observer_functor_induced_structure` (Observer Functor Induces Differentiable Fuzzy Structure); `proof:bk4_substituted_drift_smoothness` (Smoothness of Substituted Drift Under Observer Differentiability); `remark:bk4_fuzzy_notation`; `scholium:bk4_emergence_of_classical_calculus` (Emergence of Classical Calculus)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-062`
+- Witnesses: `Book4D.chart_geometry_exists_iff_glued`, `Book4D.chart_glued_yields_single_geometry`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same as theorem:bk4_fuzzy_symbolic_geometry_theorem: only the "admits a pulled-back C^k differentiable structure" consequence is covered via ChartComplex + Glued.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 (see Theorem theorem:bk4_fuzzy_symbolic_geometry_theorem) Let \( {P_lambda}_{lambda in Lambda} \) be a symbolic system with drift operators \( D_lambda \) and reflection operators \( R_lambda \), and let \( O = (N_O, {delta^n_O}, epsilon_O) \) be a bounded observer (see Definition definition:bk1_bounded_observer).
@@ -8743,6 +10956,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:3
 - Cited by: `proof:bk4_fuzzy_divergence`; `proposition:bk4_geodesic_failure` (Conditional Jacobi-Deviation Diagnostic); `theorem:bk4_fuzzy_divergence` (Divergence and Symbolic Conservation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-010`
+- Witnesses: `Book4AssembledConnection.EffectiveParallelTransportCertificate.eq_certified_trajectory`, `Book4AssembledConnection.EffectiveParallelTransportCertificate.observed_endpoint_error_tendsto_zero`, `Book4AssembledConnection.EffectiveParallelTransportCertificate.observed_endpoint_tendsto`, `Book4AssembledConnection.EffectiveParallelTransportCertificate.solves_observer_floor_transport`, `Book4AssembledConnection.ObserverFloorRegularity.coefficient_uses_observer_floor`, `Book4AssembledConnection.assembledTorsionAt_eq_zero_of_local_symmetric`, `Book4AssembledConnection.certified_coefficient_transformation`, `Book4AssembledConnection.discreteParallelTransport_append`, `Book4AssembledConnection.globalNablaAt_eq_of_local_eq`, `Book4AssembledConnection.observer_floor_can_change_visible_path`, `Book4AssembledConnection.step_size_matters`, `Book4FuzzyConnection.flatConnection_torsion_control`, `Book4FuzzyConnection.flatConnection_torsion_zero`, `Book4FuzzyConnection.flat_parallel_transport_exact`, `Book4FuzzyConnection.torsion_control_of_approx_symmetric`
+- Countermodels: none
+- Conditions: continuous bilinear local coefficients; explicit Jacobian cocycle and Hessian correction for affine overlap transport; explicit trajectory existence, ODE law, uniqueness, admissibility, and vanishing effective error bound; finite chart inventory and pointwise partition of unity; finite ordered duration-position-velocity path; positive observer resolution floor and smoothing map yielding a smooth observed path; see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Conditional assembled fuzzy-connection kernel: local coefficients glue with Hessian-aware overlap data and local symmetry transfers to global torsion-freeness. Analytic transport consumes an explicit observer-floor regularization plus separately supplied existence, uniqueness, admissibility, and effective-error evidence; observed endpoint convergence follows. Countermodels show neither finite Euler steps nor an unspecified floor yields observer-free smoothness.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $tilde M$ be a paracompact observer-induced manifold with an observer-relative $C^2$ atlas and a $C^1$ observer-accessible Riemannian metric $g_{mathcal O}$. Then its Levi-Civita connection $tildenabla$ exists and is exactly torsion-free; consequently, for every nonnegative observer resolution $epsilon_{mathcal O}$, \|T_{tildenabla}(X,Y)\| leq epsilon_{mathcal O}\|X\|\|Y\|.
@@ -8770,6 +10994,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:4
 - Cites: `proposition:bk4_fuzzy_connection` (Conditional Fuzzy Connection)
 - Cited by: `definition:bk4_symbolic_curvature` (Symbolic Curvature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-009`
+- Witnesses: `Book4GeodesicFailure.JacobiCertificate.observer_diagnostic_certificate`, `Book4GeodesicFailure.derivative_agreement_does_not_force_jacobi_curvature`
+- Countermodels: `Book4GeodesicFailure.JacobiCertificate.observer_diagnostic_certificate`, `Book4GeodesicFailure.derivative_agreement_does_not_force_jacobi_curvature`
+- Conditions: explicit Jacobi equation with stated sign convention; normed common fibre; observer-to-covariant acceleration error bound; uniform derivative magnitude bounds for the corollary
+- Formal boundary: The repaired proposition is realized at its exact conditional strength by one common-fibre Jacobi certificate: its displayed convention fixes acceleration as negative curvature action, observer approximation gives the magnitude-sensitive squared-norm bound, and uniform magnitude bounds give 2 B epsilon. The countermodel proves approximation alone cannot manufacture the Jacobi premise.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8799,6 +11034,16 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4086`
 - Cited by: `corollary:bk4_emergence_of_classical_ge` (Emergence of Classical Geometry); `proof:bk4_emergence_of_classical_ge`; `proof:bk4_observer_functor_induced_structure` (Observer Functor Induces Differentiable Fuzzy Structure)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-096`
+- Witnesses: `Book4Fz.CrossObserverTimeConsistent.symm`, `Book4Fz.CrossObserverTimeConsistent.trans`, `Book4Fz.crossObserverTimeConsistent_refl`
+- Countermodels: none
+- Formal boundary: Compatible observer state-and-clock transports satisfy identity, composition, and inverse laws, giving a concrete groupoid kernel. The stated functor from symbolic systems, its essential surjectivity, and a Mathlib CategoryTheory natural transformation remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Symb_Lambda$ be the category of symbolic systems with fuzzy substitutions as morphisms, and let $DiffMan_O$ be the category of observer-relative differentiable manifolds (definition:bk4_fuzzy_symbolic_substitution). There exists a functor \[ F_O: Symb_Lambda to DiffMan_O \] that is essentially surjective. Moreover, if $O_1$ and $O_2$ are two observers with compatible resolution thresholds, then there is a natural transformation between the corresponding functors $F_{O_1}$ and $F_{O_2}$.
@@ -8826,6 +11071,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:4116`
 - Cites: `theorem:bk4_categorical_equivalence_observer_relative_structures` (Categorical Equivalence of Observer-Relative Structures); `theorem:bk4_fuzzy_symbolic_geometry_theorem` (Fuzzy Symbolic Geometry Theorem)
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-065`
+- Witnesses: `Book4D.jacobianChain_idealized_forces_zero_tensor`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The categorical-functor limit claim itself is not modeled; the idealized-observer (epsO=0 forces the coupling tensor to vanish) is the same limiting-classical-geometry content in the one place it is a genuine inequality rather than narrative.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8869,6 +11125,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:415
 - Cited by: `definition:bk4_fuzzy_gradient` (Fuzzy Gradient Operator); `definition:bk4_tilda_substitution` (Tilda-Substitution); `lemma:bk4_convergence_of_symbolic_drift` (Convergence of Symbolic Drift); `proof:bk4_convergence_of_symbolic_drift`; `proof:bk4_multiplication_to_curvature`; `proof:bk4_sketch_sub_thresholds` ($\mathcal{O}$-Bounded Error Propagation in Chain Rule); ... +7 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-057`
+- Witnesses: `Book4D.odifferentiableAt_iff_ratio_form`, `Book4D.odifferentiableAt_mono_eps`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The ratio/limit phrasing, proved equivalent to ODifferentiableAt's linear-bound phrasing.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(P, tau_{P})$ be a symbolic structure space with topology $tau_{P}$ induced by observer $O$. For an observer $O$ (def definition:bk1_bounded_observer) with symbolic difference operator $delta^1_O: P to L(P, P)$ and resolution threshold $epsilon_O: P to mathbb{R}^+$, a fuzzy symbolic drift operator $widetilde{D}: widetilde{M} to widetilde{M}$ is $O$-differentiable at $p in widetilde{M}$ if there exists a bounded linear map $delta^1_O widetilde{D}_p in L(T_pwidetilde{M}, T_{widetilde{D}(p)}widetilde{M})$ such th...
@@ -8882,6 +11149,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:4159`
 - Cites: `definition:bk4_observer_valid_different` (Observer-Valid Differentiation)
 - Cited by: `proof:bk4_existence_observer_valid_derivatives`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK4A-058`
+- Witnesses: `Book4D.symbolicDrift_geometric_contraction_tendsto_zero`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Transfinite/ordinal indexing dropped; kept the honest countable kernel -- a nonnegative sequence contracting geometrically at a fixed rate r<1 tends to 0, via tendsto_pow_atTop_nhds_zero_of_abs_lt_one and squeeze_zero.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8911,6 +11189,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:419
 - Cited by: `corollary:bk4_validity_of_tilda_substit` (Validity of Tilda-Substitution); `definition:bk7_srmfconstrained_observer` (SRMF-Constrained Observer); `proof:bk4_existence_observer_valid_derivatives`; `proof:bk4_validity_of_tilda_substit`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-054`
+- Witnesses: `Book4D.fuzzySubstitutionBound_compose`, `Book4D.fuzzySubstitutionBound_eps_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same FuzzySubstitutionBound scalar law, instantiated at the tilda-substitution's own N_O-fold observer bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A tilda-substitution is a structure-preserving map $tilde{u}: M to widetilde{M}$ between symbolic manifolds that generalizes classical substitution to curved symbolic systems with observer-relative calculus, defined by: (def definition:bk1_bounded_observer) (see def definition:bk4_observer_valid_different) \[ tilde{u} in C^{N_O}(M, widetilde{M}) text{ such that } \|delta^n_O(tilde{u}(x) - x)\| < epsilon_O forall x in M, forall n leq N_O (text{cf. Def.
@@ -8924,6 +11213,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4200`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation)
 - Cited by: `proof:bk4_fuzzy_divergence`; `theorem:bk4_fuzzy_divergence` (Divergence and Symbolic Conservation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-024`
+- Witnesses: `Book4B.boundedErrorTerm_mono_linear`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the shared linear error-scaling schema underlying the three stated consequence bounds (linearity error, Leibniz error, chain error) is modeled; the three preconditions on ratios of higher-order symbolic differences are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8952,6 +11252,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:4234`
 - Cites: `definition:bk4_tilda_substitution` (Tilda-Substitution)
 - Cited by: `theorem:bk4_fuzzy_divergence` (Divergence and Symbolic Conservation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-055`
+- Witnesses: `Book4D.fuzzySubstitutionBound_compose`, `Book4D.fuzzySubstitutionBound_eps_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The commutator norm bound is the same diff<eps scalar shape; fuzzySubstitutionBound_compose gives the honest composition consequence (consistency up to the sum of thresholds).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -8994,6 +11305,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4286`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation)
 - Cited by: `corollary:bk4_fuzzy_multivariable_chain` (Chain Rule for Fuzzy Compositions); `definition:bk4_fuzzy_gradient` (Fuzzy Gradient Operator); `proof:bk4_existence_observer_valid_derivatives`; `proof:bk4_fuzzy_multivariable_chain`; `proof:bk4_sketch_sub_thresholds` ($\mathcal{O}$-Bounded Error Propagation in Chain Rule); `scholium:bk4_nested_frames` (The Calculus of Nested Frames); ... +4 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-019`
+- Witnesses: `Book4B.boundedErrorTerm_mono_linear`, `Book4D.ObserverDerivativeAt.abs_comp_correction_le`, `Book4D.ObserverDerivativeAt.comp`, `Book4D.ObserverDerivativeAt.comp_controlled`, `Book4D.ObserverDerivativeAt.comp_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact scalar chain rule with a derived observer correction, including the outer-correction times inner-correction cross term. Manifold and cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9051,6 +11373,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4437`
 - Cited by: `proof:bk4_existence_observer_valid_derivatives`; `proof:bk4_fuzzy_deriv_algebra`; `proof:bk4_multiplication_to_curvature`; `proof:bk4_sketch_cross_field_product` (Cross-Error Torsion and $\mathcal{O}$-Bounded Product Rule); `proposition:bk4_fuzzy_deriv_algebra` (Algebraic Properties of the Fuzzy Derivative); `scholium:bk4_higher_order_cross_error_structure` (Origin of Higher-Order Interaction Errors); ... +5 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-021`
+- Witnesses: `Book4B.boundedErrorTerm_mono_quadratic`, `Book4D.ObserverDerivativeAt.mul`, `Book4D.ObserverDerivativeAt.mul_controlled`, `Book4D.ObserverDerivativeAt.mul_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact scalar product rule with the correction propagated from certified derivatives. Symbolic torsion and cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $f, g: tilde{M} rightarrow tilde{N}$ be $O$-differentiable symbolic fields on observer-induced fuzzy membrane $tilde{M}$ relative to Bounded Observer $O$ (Def. definition:bk1_bounded_observer, Def. definition:bk4_observer_valid_different). Extending the compositional coherence of Thm.
@@ -9107,6 +11440,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4634`
 - Cited by: `proof:bk4_sketch_extracting_recrusive_curvature` (Power Rule via Binomial Expansion and Recursive Error Bound); `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-028`
+- Witnesses: `Atlas.holonomy_eps_squared`, `Atlas.non_euclidean_necessity`, `Book4D.contextualStructuralGrowth_induces_curvature`, `Book4D.contextual_crossError_induces_curvature`, `Book4D.crossErrorTransport_noncommute`, `Book4D.crossTerm_zero_iff_additively_separable`, `Book4D.nonseparable_iff_exists_crossError`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Discrete positive bridge: any nonzero scalar contextual cross-difference is embedded as an explicit upper elementary 2x2 transport; paired with the lower elementary context transport it cannot commute, so the exact epsilon-squared holonomy theorem gives route disagreement at every nonzero scale. It also proves that contextual nonseparability is equivalent to existence of a nonzero cross-error, yielding a complete typed nonseparability-to-curvature bridge. The source's bare dimension inequality still needs a theorem connecting it to nonseparability.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under observer-valid differentiability (Def. definition:bk4_observer_valid_different) and the fuzzy product dynamics of Thm. theorem:bk4_fuzzy_product_rule, multiplicative cross-errors induce curvature in the symbolic-membrane sense of Book III (Def. definition:bk3_symbolic_membrane). Let $A$ be the algebra of $O$-differentiable symbolic fields.
@@ -9148,6 +11492,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4678`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_observer_valid_different` (Observer-Valid Differentiation); `theorem:bk4_fuzzy_product_rule` (Observer-Relative Product Rule)
 - Cited by: `definition:bk4_symbolic_memory_distortion` (Symbolic Memory Distortion); `proof:bk4_fuzzy_logarithmic_rule`; `proof:bk4_sketch_observer_resolution_floor` (Quotient Rule via Observer Resolution Floor Regularization); `scholium:bk4_fuzzy_logarithmic_resolution` (Logarithmic Divergence and Resolution Floors); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); `scholium:bk4_symbolic_regularization` (The Geometry of Symbolic Regularization); ... +1 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-022`
+- Witnesses: `Book4B.boundedErrorTerm_mono_quadratic`, `Book4B.quotientFloor_ge_eps_sq`, `Book4D.ObserverDerivativeAt.div`, `Book4D.ObserverDerivativeAt.div_controlled`, `Book4D.ObserverDerivativeAt.div_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact scalar quotient rule under the necessary nonzero-denominator hypothesis, with its observer correction derived algebraically. Cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9219,6 +11574,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:4833`
 - Cited by: `proof:bk4_existence_observer_valid_derivatives`; `proof:bk4_fuzzy_deriv_algebra`; `proof:bk4_fuzzy_exponential_rule`; `proof:bk4_sketch_symbolic_path_interference` (Sum Rule via Additive Error Bound with Curvature Correction); `proposition:bk4_fuzzy_deriv_algebra` (Algebraic Properties of the Fuzzy Derivative); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-020`
+- Witnesses: `Book4B.boundedErrorTerm_mono_linear`, `Book4D.ObserverDerivativeAt.abs_add_correction_le`, `Book4D.ObserverDerivativeAt.add`, `Book4D.ObserverDerivativeAt.add_controlled`, `Book4D.ObserverDerivativeAt.add_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact scalar sum rule: certified observer corrections add. Manifold and cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Within bounded observation (Def. definition:bk1_bounded_observer) and observer-valid differentiation (Def. definition:bk4_observer_valid_different), additive symbolic flows acquire curvature-coupled interference, consistent with Book III coupling geometry (Def. definition:bk3_symbiotic_curvature). Let $f, g: tilde{M} rightarrow tilde{N}$ be $O$-differentiable symbolic fields on observer-induced fuzzy membrane $tilde{M}$ relative to Bounded Observer $O$.
@@ -9261,6 +11627,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:4
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-025`
+- Witnesses: `Book4B.boundedErrorTerm_mono_linear`, `Book4B.boundedErrorTerm_mono_quadratic`, `Book4D.FuzzyOperator.Reversible.backward_after_forward`, `Book4D.FuzzyOperator.Reversible.forwardThen`, `Book4D.FuzzyOperator.Reversible.forward_after_backward`, `Book4D.FuzzyOperator.forwardThen_assoc_map`, `Book4D.FuzzyOperator.forwardThen_map`, `Book4D.ObserverDerivativeAt.PerturbationRequest.admissible_applied_le_budget`, `Book4D.ObserverDerivativeAt.PerturbationRequest.cosmicRay_rejected`, `Book4D.ObserverDerivativeAt.PerturbationRequest.zero_budget_inert`, `Book4D.ObserverDerivativeAt.RationalPerturbationCertificate.gate_eq_true_iff`, `Book4D.ObserverDerivativeAt.RationalPerturbationCertificate.real_sound`, `Book4D.ObserverDerivativeAt.add_controlled`, `Book4D.ObserverDerivativeAt.comp_controlled`, `Book4D.ObserverDerivativeAt.correctionControlled_mono`, `Book4D.ObserverDerivativeAt.div_controlled`, `Book4D.ObserverDerivativeAt.mul_controlled`, `Book4D.ObserverDerivativeAt.ofClassical_controlled`, `Book4D.ObserverDerivativeAt.pow_controlled`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The algebra now has an operational correction-control predicate with budget weakening, classical zero-correction admission, and derived budget transport through sum, product, chain, power, and quotient. The source's unrestricted inequality between arbitrary observers and its non-quantitative observer-constant clause remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $D_O$ be the fuzzy derivative operator relative to a Bounded Observer $O$. For O-differentiable symbolic fields $f, g$ and scalar $a$, $D_O$ exhibits the following properties: - Observer-Relative Linearity: The operator is linear up to a curvature-induced interference term $epsilon_O$, as formalized in the Fuzzy Sum Rule (theorem:bk4_fuzzy_sum_rule): D_O(af + g) = a D_O f + D_O g + epsilon_O(af, g) - Symbolic (Non-Leibniz) Product Rule: The operator does not satisfy the classical Leibniz rule.
@@ -9302,6 +11679,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5013`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `theorem:bk4_fuzzy_product_rule` (Observer-Relative Product Rule); `theorem:bk4_fuzzy_sum_rule` (Observer-Relative Sum Rule)
 - Cited by: `proof:bk4_fuzzy_exponential_rule`; `proof:bk4_sketch_extracting_recrusive_curvature` (Power Rule via Binomial Expansion and Recursive Error Bound); `scholium:bk4_reflexive_physics_emergence` (Reflexive Physics Emergence); `scholium:bk4_symbolic_self_organization` (The Geometry of Symbolic Self-Organization); `theorem:bk4_fuzzy_exponential_rule` (Fuzzy Exponential Rule)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-023`
+- Witnesses: `Book4B.boundedErrorTerm_mono_quadratic`, `Book4D.ObserverDerivativeAt.pow`, `Book4D.ObserverDerivativeAt.pow_controlled`, `Book4D.ObserverDerivativeAt.pow_correction_eq_zero`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Exact natural-power rule with the observer correction propagated through the certified derivative. Recursive-curvature and cross-field realizations remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9359,6 +11747,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5177`
 - Cited by: `proof:bk4_fuzzy_logarithmic_rule`; `scholium:bk4_fuzzy_exponential_growth` (Fuzzy Growth Constraints); `theorem:bk4_fuzzy_logarithmic_rule` (Fuzzy Logarithmic Rule)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-066`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := D_O(e^g(x)), classicalValue := e^g(x)*D_O(g(x)), correction := C_O(x). The stated equation is exactly the defining hypothesis heq; the theorem gives "the symbolic curvature term vanishes iff the exponential rule is exactly classical."
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 As the exponential continuation of Book IV recursive calculus (Thm. theorem:bk4_fuzzy_power_rule) under Book I bounded-observer constraints (Def. definition:bk1_bounded_observer), this rule captures curvature-modulated symbolic growth. Let $f(x) = e^{g(x)}$, where $g$ is $O$-differentiable at $x$. Then: D_{O}(e^{g(x)}) = e^{g(x)} cdot D_{O}(g(x)) + C_{O}(x) where $C_{O}(x)$ is the symbolic curvature term, capturing how bounded growth distorts pure exponential behavior due to drift accumulation.
@@ -9414,6 +11813,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5212`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `theorem:bk4_fuzzy_exponential_rule` (Fuzzy Exponential Rule); `theorem:bk4_fuzzy_quotient_rule` (Observer-Relative Quotient Rule)
 - Cited by: `scholium:bk4_fuzzy_logarithmic_resolution` (Logarithmic Divergence and Resolution Floors)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-067`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := D_O(ln(g(x))), classicalValue := D_O(g(x))/g(x), correction := D_O(x) (the divergence term).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9499,6 +11909,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:529
 - Cited by: `definition:bk4_fuzzy_vector_field` (Fuzzy Symbolic Vector Field); `definition:bk4_symbolic_vector_field` (Symbolic Vector Field); `lemma:bk4_gradient_stability` (Gradient Stability Under Observer Perturbations); `proof:bk4_detailed_construction` (Detailed Construction); `proof:bk4_fuzzy_divergence`; `proof:bk4_gradient_stability`; ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-026`
+- Witnesses: `Book4B.fuzzyGradient_bound_antitone`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the partial-derivative bound M_f/epsilon_O is modeled, proved strictly antitone in the resolution threshold for fixed positive M_f; the vector-valued vector field, dimensional cross-coupling error term, and its own bound are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Extending Book IV observer-relative differential structure (Def. definition:bk4_observer_valid_different, Thm. theorem:bk4_fuzzy_chain_rule) on Book I bounded-observer grounds (Def. definition:bk1_bounded_observer), the fuzzy gradient captures multivariable symbolic flow under finite resolution. Let $f : tilde{M} subseteq mathbb{R}^n to mathbb{R}$ be $O$-differentiable on a fuzzy manifold $tilde{M}$.
@@ -9512,6 +11933,17 @@ Role: `lemma` | Type: `lemma` | Book: `book4` | Source: `book4.tex:5317`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk4_fuzzy_gradient` (Fuzzy Gradient Operator)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK4B-027`
+- Witnesses: `Book4B.gradientStability_same_resolution`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The stated Lipschitz-plus-quadratic bound is kept as a structure field; proved that when two observers share a resolution threshold the bound collapses to the quadratic correction term alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9541,6 +11973,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5359`
 - Cited by: `corollary:bk4_fuzzy_multivariable_chain` (Chain Rule for Fuzzy Compositions); `definition:bk4_symbolic_vector_field` (Symbolic Vector Field); `demonstratio:bk4_fuzzy_forward_mode` (Fuzzy Forward-Mode Differentiation); `proof:bk4_detailed_construction` (Detailed Construction); `proof:bk4_fuzzy_multivariable_chain`; `scholium:bk4_dynamics_of_observer_frame` (On the Dynamics of the Observer Frame); ... +1 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-068`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance with M a matrix additive group: observerValue := J_O(f)(p), classicalValue := the classical partials matrix, correction := C_O(p).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 par As the matrix extension of Def. definition:bk4_fuzzy_gradient, this theorem combines Book IV compositional structure (Thm. theorem:bk4_fuzzy_chain_rule) with Book I observer bounds (Def. definition:bk1_bounded_observer). Let $vec{f} : mathbb{R}^n to mathbb{R}^m$ be a symbolic transformation across fuzzy domains.
@@ -9568,6 +12011,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:5406`
 - Cites: `theorem:bk4_fuzzy_chain_rule` (Observer-Relative Chain Rule); `theorem:bk4_fuzzy_jacobian` (Fuzzy Jacobian Matrix Rule)
 - Cited by: `demonstratio:bk4_fuzzy_forward_mode` (Fuzzy Forward-Mode Differentiation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-064`
+- Witnesses: `Book4D.jacobianChain_idealized_forces_zero_tensor`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The stated Frobenius-norm bound is kept as the JacobianChainBound.tNorm_bound field; the theorem draws its honest consequence at the unbounded-observer idealization.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9625,6 +12079,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:544
 - Cited by: `proof:bk4_fuzzy_divergence`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-070`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`, `Book4Fz.IsObserverFlow.add_eq_comp`, `Book4Fz.IsObserverFlow.controlledPerturbation_of_reachable_zero`, `Book4Fz.IsObserverFlow.isObserverIntegralCurve`, `Book4Fz.IsObserverFlow.zero_eq_id`, `Book4Fz.IsObserverIntegralCurve.controlledPerturbation_of_direction_zero`, `Book4Fz.controlledVectorFieldPerturbation_add`, `Book4Fz.controlledVectorFieldPerturbation_apply`, `Book4Fz.controlledVectorFieldPerturbation_eq_self_iff`, `Book4Fz.controlledVectorFieldPerturbation_eq_self_of_direction_zero`, `Book4Fz.controlledVectorFieldPerturbation_zero`, `Book4Fz.isObserverIntegralCurve_iff`, `Book4Fz.observerFlow_perturbation_iff`, `Book4Fz.observerIntegralCurve_perturbation_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := V(f)(p), classicalValue := V(p)*grad_O f(p), correction := eps_O*<V(p), E_O(p)> (the additional uncertainty term).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given the fuzzy gradient and Jacobian framework (Def. definition:bk4_fuzzy_gradient, Thm. theorem:bk4_fuzzy_jacobian), a symbolic vector field formalizes observer-relative tangent flow on Book I bounded-observer manifolds. A symbolic vector field on fuzzy manifold $tilde{M}$ is a mapping $vec{V}: tilde{M} to T_{O}tilde{M}$ where $T_{O}tilde{M}$ is the observer-dependent tangent bundle.
@@ -9638,6 +12103,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5458`
 - Cites: `corollary:bk4_validity_of_tilda_substit` (Validity of Tilda-Substitution); `proposition:bk4_fuzzy_connection` (Conditional Fuzzy Connection); `theorem:bk4_existence_observer_valid_derivatives` (Existence of Observer-Valid Derivatives)
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-069`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := div_O V(p), classicalValue := sum of classical partials, correction := R_O(p) (the symbolic curvature scalar); correction=0 recovers exact conservation of meaning volume.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9709,6 +12185,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5676`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-008`
+- Witnesses: `Book4ObserverGeometry.CoupledAttractionCertificate.jointError_tendsto_zero`, `Book4ObserverGeometry.driftingSystem_has_no_stabilized_state`, `Book4ObserverGeometry.equilibrium_constantTrajectory_solves`, `Book4ObserverGeometry.exists_picardLindelof_certificate_of_locallyLipschitz`, `Book4ObserverGeometry.exists_recursively_stabilized_system`, `Book4ObserverGeometry.jointEquilibrium_iff`, `Book4ObserverGeometry.locallyLipschitz_finiteDimensional_local_existence`, `Book4ObserverGeometry.picardLindelof_local_existence`, `Book4ObserverGeometry.picardLindelof_local_uniqueness`, `Book4ObserverGeometry.recursivelyStabilized_iff`, `Book4ObserverGeometry.translatingVectorField_has_no_jointEquilibrium`
+- Countermodels: none
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Mathlib Picard-Lindelof gives local existence and uniqueness for the locally Lipschitz finite-dimensional product field. Joint equilibrium yields a constant solution; translation is a countermodel to equilibrium from regularity alone. A separate coupled-attraction certificate now proves geometric joint error tends to zero, making the attraction clause a conditional derivation rather than an open or automatic consequence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $X_{mathcal O}$ and $X_{mathcal G}$ be finite-dimensional normed state spaces and let $Usubseteq X_{mathcal O}times X_{mathcal G}$ be open. For fixed environmental and symbolic inputs, define the coupled vector field \[ F(mathcal O,mathcal G) =bigl(mathcal F_{obs}(mathcal O,mathcal G), mathcal F_{geom}(mathcal G,mathcal O)bigr). \] If $F$ is locally Lipschitz, then every initial state in $U$ has a unique local coupled trajectory while that trajectory remains in $U$.
@@ -9765,6 +12252,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:578
 - Cited by: `proof:bk4_fuzzy_curl_theorem`; `proof:bk4_fuzzy_fundamental`; `scholium:bk4_the_observer_as_weaver` (The Observer as Weaver); `theorem:bk4_fuzzy_fundamental` (Fuzzy Fundamental Theorem of Calculus)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-072`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := the fuzzy path integral, classicalValue := the K_O-convolved line integral, correction := E_acc(gamma,f) (Symbolic Memory Distortion).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 As the integration dual to Book IV fuzzy differentiation (Subsec. subsec:bk4_fuzzy_differentiation_summary, Thm. theorem:bk4_fuzzy_fundamental) and rooted in Book I bounded observation (Def. definition:bk1_bounded_observer), this defines observer-relative symbolic accumulation. Let $f$ be an O-differentiable symbolic field on a fuzzy membrane $tilde{M}$, and let $gamma: [a, b] to tilde{M}$ be a path.
@@ -9792,6 +12290,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:579
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `theorem:bk4_fuzzy_quotient_rule` (Observer-Relative Quotient Rule); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Cited by: `proof:bk4_fuzzy_fundamental`; `scholium:bk4_the_observer_as_weaver` (The Observer as Weaver); `theorem:bk4_fuzzy_fundamental` (Fuzzy Fundamental Theorem of Calculus)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-073`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: E_acc is exactly the `correction` slot consumed by definition:bk4_fuzzy_integral_operator's and theorem:bk4_fuzzy_fundamental's instantiations; no independent equation of its own beyond that role.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9849,6 +12358,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5819`
 - Cited by: `definition:bk4_fuzzy_integral_operator` (Fuzzy Integral Operator); `definition:bk4_symbolic_holonomy_term` (Symbolic Holonomy Term); `definition:bk5_fuzzy_symbolic_manifold` (Fuzzy Symbolic Manifold); `scholium:bk4_micro_local_vs_path_global_irreversibility` (Micro-Local and Path-Global Irreversibility); `scholium:bk4_symbolic_monodromy` (Symbolic Monodromy and the Topology of Meaning); `scholium:bk4_the_nature_of_truth` (The Nature of Truth); ... +1 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-074`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Both clauses instantiate the generic law: (1) observerValue := D_O(int_O f), classicalValue := f(x), correction := kappa_O(f, int f); (2) observerValue := int_O^gamma D_O f, classicalValue := f(gamma(b))-f(gamma(a)), correction := H_O(gamma,f).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Grounded in Def. definition:bk4_fuzzy_integral_operator, Def. definition:bk4_symbolic_memory_distortion, and Def. definition:bk1_bounded_observer, this theorem states the non-inverse duality of fuzzy differentiation and integration. This theorem closes the Book IV differentiation/integration duality under bounded observation, connecting derivative-side torsion terms to path-side holonomy and aligning with Book I irreversibility structure. Let $f$ be an O-differentiable field on $tilde{M}$.
@@ -9876,6 +12396,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:585
 - Cites: `theorem:bk4_fuzzy_fundamental` (Fuzzy Fundamental Theorem of Calculus); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Cited by: `proof:bk4_fuzzy_fundamental`; `proof:bk4_imaginative_continuity_principle` (Bounded Reintegration of Latent Phase); `proof:bk4_wheel_refines_signature` (Quadrant quotient of the phase circle); `scholium:bk4_symbolic_monodromy` (Symbolic Monodromy and the Topology of Meaning)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK4A-075`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: H_O(gamma,f) is exactly the `correction` slot consumed by theorem:bk4_fuzzy_fundamental clause 2 and theorem:bk4_symbolic_stokes; no independent equation of its own.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -9961,6 +12492,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:591
 - Cited by: `definition:bk4_fuzzy_curl_operator` (Fuzzy Curl Operator); `proof:bk4_fuzzy_curl_theorem`; `proof:bk4_sketch_stokes` (Symbolic Stokes via Covariant Exterior Calculus); `proof:bk4_sketch_symbolic_path_interference` (Sum Rule via Additive Error Bound with Curvature Correction); `scholium:bk4_torsion_flux_anomaly` (Torsion-Flux Anomaly); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-076`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := D_O f, classicalValue := df, correction := i*A_O wedge f; M taken as the complex-valued (or form-valued) additive group, correction=0 is the trivial-connection case.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Built on Def. definition:bk4_symbolic_space and the Book IV fuzzy derivative calculus, this derivative provides the gauge-covariant symbolic transport rule under bounded observation. For a symbolic field $f: S_O to mathbb{C}$, the observer-relative covariant derivative is: \[ D_O f = df + i A_O wedge f \] where $A_O$ is the symbolic connection 1-form encoding the observer's interpretive framework, and $i$ represents the imaginary unit reflecting the phase structure of symbolic meaning.
@@ -10002,6 +12544,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:5937`
 - Cites: `definition:bk4_induced_area` (Observer-Induced Area Element); `definition:bk4_symbolic_covariant` (Symbolic Covariant Derivative); `scholium:bk4_zero_is_idealized_in_boundedness` (Zero is Idealized in Boundedness)
 - Cited by: `definition:bk4_fuzzy_curl_operator` (Fuzzy Curl Operator); `definition:bk4_symbolic_holonomy_term` (Symbolic Holonomy Term); `definition:bk4_symbolic_memory_distortion` (Symbolic Memory Distortion); `proof:bk4_fuzzy_curl_theorem`; `proof:bk4_fuzzy_divergence_theorem`; `proof:bk4_fuzzy_fundamental`; ... +11 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-077`
+- Witnesses: `Book4FuzzyStokes.FuzzyStokesAtlasCertificate.assembled_classical_recovery`, `Book4FuzzyStokes.FuzzyStokesAtlasCertificate.assembled_fuzzy_stokes`, `Book4FuzzyStokes.FuzzyStokesCertificate.classical_recovery`, `Book4FuzzyStokes.FuzzyStokesCertificate.fuzzy_stokes`, `Book4FuzzyStokes.FuzzyStokesCertificate.integrated_residue_zero_of_classical_recovery`, `Book4FuzzyStokes.FuzzyStokesCertificate.interactionForm_eq_zero_of_classical_recovery`, `Book4FuzzyStokes.RectangleFuzzyStokesData.analytic_classical_recovery`, `Book4FuzzyStokes.RectangleFuzzyStokesData.analytic_curvature_transports_through_gauge`, `Book4FuzzyStokes.RectangleFuzzyStokesData.analytic_fuzzy_stokes`, `Book4FuzzyStokes.RectangleFuzzyStokesData.exteriorDensity_integrable`, `Book4FuzzyStokes.RectangleFuzzyStokesData.rectangle_stokes`, `Book4FuzzyStokes.discrete_classical_recovery`, `Book4FuzzyStokes.discrete_fuzzy_stokes`, `Book4FuzzyStokes.integrated_zero_does_not_force_form_zero`, `Book4FuzzyStokes.sum_stripExteriorDerivative`
+- Countermodels: `Book4FuzzyStokes.integrated_zero_does_not_force_form_zero`
+- Conditions: a classical Stokes bridge for the covariant one-form; a typed curvature-plus-interaction decomposition; additive one-form, two-form, and value carriers; injectivity/no-cancellation only when pointwise recovery is claimed
+- Formal boundary: Typed general certificate; a finite oriented-strip realization; and now a genuine analytic Green--Stokes realization on oriented rectangular charts derived from mathlib planar divergence. Finite chart assembly makes overlap-boundary cancellation explicit, and the analytic curvature carrier transports through Book4Gauge curvature naturality. Integrated recovery remains distinct from pointwise vanishing via the proved cancellation countermodel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10059,6 +12612,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:6
 - Cited by: `corollary:bk4_wilson_loop` (Conditional Wilson Holonomy Representation); `remark:bk4_aharonov_bohm` (Connection to Aharonov-Bohm Effect)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-002`
+- Witnesses: `Book4Gauge.ObserverAtlas.global_unique_of_local_compatibility`, `Book4Gauge.StructuralGaugeCertificate.connectionAction_square`, `Book4Gauge.StructuralGaugeCertificate.curvature_square`, `Book4Gauge.StructuralGaugeCertificate.fieldAction_square`, `Book4Gauge.StructuralGaugeCertificate.holonomy_square`, `Book4Gauge.coordinateObserverAtlas_assembles`, `Book4Gauge.curvature_correspondence_bijective`, `Book4Gauge.derivative_correspondence_bijective`, `Book4Gauge.names_alone_do_not_supply_gauge_dictionary`, `Book4Gauge.observer_local_types_do_not_force_global_existence`
+- Countermodels: `Book4Gauge.observer_local_types_do_not_force_global_existence`
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: A supplied structural gauge certificate carries reversible translations and commuting action, curvature, equivariance, and holonomy squares. Observer locality is now explicit: jointly separating local views determine at most one compatible global geometry, and the full coordinate family gives a concrete assembly. A countermodel keeps global existence separate from local data and names alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The following table is an interpretive glossary: D_O &rightsquigarrow text{gauge-covariant derivative}, \\ kappa_O(f) &rightsquigarrow text{field-strength or curvature datum}, \\ oint_{partialOmega}D_Of &rightsquigarrow text{loop-holonomy datum}, \\ A_O &rightsquigarrow text{gauge connection}.
@@ -10101,6 +12665,17 @@ Role: `corollary` | Type: `corollary` | Book: `book4` | Source: `book4.tex:6136`
 - Cited by: `proposition:bk4_quantum_geometry` (Certified Symbolic Quantum Geometry)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-003`
+- Witnesses: `Book4Gauge.WilsonTransportCertificate.holonomy_eq_endpoint`, `Book4Gauge.WilsonTransportCertificate.trajectory_hasDerivWithinAt`, `Book4Gauge.WilsonTransportCertificate.trajectory_initial`, `Book4Gauge.pathOrderedProduct_append`, `Book4Gauge.pathOrderedProduct_nil`, `Book4Gauge.two_segment_order_independent_iff`, `Book4WilsonGlobal.AnalyticWilsonContinuationTrace.globalTransport_eq_certified_trajectory`, `Book4WilsonGlobal.AnalyticWilsonContinuationTrace.local_trajectory_hasDerivWithinAt`, `Book4WilsonGlobal.CrossObserverWilsonTransport.transported_approximation_eq`, `Book4WilsonGlobal.CrossObserverWilsonTransport.transported_target_eq`, `Book4WilsonGlobal.ObserverWilsonApproximationCertificate.admissible_iff_visible_above_floor`, `Book4WilsonGlobal.ObserverWilsonApproximationCertificate.observed_approximation_tendsto`, `Book4WilsonGlobal.ObserverWilsonApproximationCertificate.observed_error_tendsto_zero`, `Book4WilsonGlobal.WilsonContinuationTrace.chartAt_mem`, `Book4WilsonGlobal.WilsonContinuationTrace.globalHolonomy_eq_endpoint_of_initial_eq_one`, `Book4WilsonGlobal.WilsonContinuationTrace.globalTransport_eq_local`, `Book4WilsonGlobal.endpoint_alone_does_not_identify_symbolic_loop`, `Book4WilsonGlobal.exact_partition_transport_eq_holonomy`, `Book4WilsonGlobal.positive_resolution_floor_not_unique`, `Book4WilsonGlobal.reverseOrderedIncrements_prod`, `Book4WilsonGlobal.scalarConstantEulerApproximation_tendsto`, `Book4WilsonGlobal.scalarConstantObserverCertificate_tendsto`, `Book4WilsonGlobal.shared_raw_endpoint_does_not_force_shared_observation`, `Book4WilsonGlobal.symbolic_loop_has_wilson_representation`, `Book4WilsonGlobal.wilsonObservable_eq_trace`
+- Countermodels: `Book4WilsonGlobal.endpoint_alone_does_not_identify_symbolic_loop`, `Book4WilsonGlobal.shared_raw_endpoint_does_not_force_shared_observation`
+- Conditions: equality of local trajectories on overlaps; eventual floor-admissibility and a vanishing observed-error bound; explicit cross-observer intertwining transport when observations are compared; finite chart cover of [0,1]; group-valued exact segment transports; observer smoothing and positive resolution floor; one shared continuous coefficient field with local Picard certificates; see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Complete conditional construction: Picard-certified local trajectories glue globally; exact ordered increments telescope to holonomy; the trace observable is separately typed; symbolic/Wilson equality requires its explicit compatibility witness; and approximation is observer-relative through smoothing, a positive floor, admissibility, and vanishing observed error. Cross-observer comparison requires an intertwiner, with countermodels excluding observer-independent presentation and a universal floor. Constant-scalar Euler convergence supplies a concrete inhabitant. Variable noncommutative solvers and closed-form rates remain optional future instances, not premises omitted from this theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $GsubseteqGL(V)$ be a matrix Lie group with a fixed finite-dimensional representation, let $gamma:[0,1]to M$ be a $C^1$ loop, and let $A$ be a connection one-form whose represented pullback $a(t):=rho_*(A_{gamma(t)}(dotgamma(t)))$ is continuous. Fix the left-action and sign convention and define $U_A^gamma:[0,1]toGL(V)$ as the unique solution of \[ frac{dU}{dt}=-a(t)U(t), U(0)=I, \] and define \[ Hol_A(gamma):=U_A^gamma(1) =mathcal Pexp\!left(-int_gamma rho_*Aright), W_gamma(A):=tr(Hol_A(gamma)).
@@ -10142,6 +12717,17 @@ Role: `proposition` | Type: `proposition` | Book: `book4` | Source: `book4.tex:6
 - Cites: `corollary:bk4_wilson_loop` (Conditional Wilson Holonomy Representation)
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4B-001`
+- Witnesses: `Book4QuantumGeometry.noncommuting_transport_is_path_dependent`, `Book4QuantumGeometry.path_dependence_alone_does_not_force_quantum_fluctuation`, `Book4QuantumGeometry.quantum_fluctuation_of_symbolic_path_dependence`, `Book4QuantumGeometry.twoSegmentPathDependent_iff_noncommute`
+- Countermodels: `Book4QuantumGeometry.path_dependence_alone_does_not_force_quantum_fluctuation`
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Finite holonomy kernel: two-segment symbolic path dependence is exactly noncommutation of transports. A quantum-fluctuation conclusion follows only through an explicit modal bridge preserving that predicate; a logical countermodel shows path dependence alone does not manufacture the physical reading.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10227,6 +12813,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:629
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-071`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`, `Book4Fz.IsObserverFlow.add_eq_comp`, `Book4Fz.IsObserverFlow.controlledPerturbation_of_reachable_zero`, `Book4Fz.IsObserverFlow.isObserverIntegralCurve`, `Book4Fz.IsObserverFlow.zero_eq_id`, `Book4Fz.IsObserverIntegralCurve.controlledPerturbation_of_direction_zero`, `Book4Fz.controlledVectorFieldPerturbation_add`, `Book4Fz.controlledVectorFieldPerturbation_apply`, `Book4Fz.controlledVectorFieldPerturbation_eq_self_iff`, `Book4Fz.controlledVectorFieldPerturbation_eq_self_of_direction_zero`, `Book4Fz.controlledVectorFieldPerturbation_zero`, `Book4Fz.isObserverIntegralCurve_iff`, `Book4Fz.observerFlow_perturbation_iff`, `Book4Fz.observerIntegralCurve_perturbation_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The residual Lie-derivative law is retained, and the native manifold tangent-field layer now gives explicit amplitude-controlled perturbation with zero and additive control laws.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A Fuzzy Symbolic Vector Field on an observer-induced fuzzy membrane $tilde{M}$ is a mapping $vec{V}: tilde{M} to T_{O}tilde{M}$, where $T_{O}tilde{M}$ is the observer-dependent tangent bundle. For any O-differentiable scalar field $f: tilde{M} to mathbb{R}$, the action of $vec{V}$ (the Lie derivative) is given by: \[ L_{vec{V}} f(vec{p}) = vec{V}(vec{p}) cdot nabla_{O} f(vec{p}) + epsilon_{O} langle vec{V}(vec{p}), vec{E}_{O}(vec{p}) rangle \] where $nabla_{O}f$ is the fuzzy gradient (Def.
@@ -10255,6 +12852,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:630
 - Cited by: `proof:bk4_fuzzy_divergence_theorem`; `proof:bk4_fuzzy_helmholtz_decomposition`; `scholium:bk4_meaning_volume` (Meaning Volume); `subsec:bk4_fuzzy_differentiation_summary` (Observer-Centric Summary: The Laws of Fuzzy Symbolic Differentiation); `theorem:bk4_fuzzy_divergence_theorem` (Fuzzy Divergence Theorem); `theorem:bk4_fuzzy_helmholtz_decomposition` (Fuzzy Helmholtz Decomposition)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-078`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same equation as theorem:bk4_fuzzy_divergence, restated as the operator's own definition.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The Fuzzy Divergence of a symbolic vector field $vec{V}$ on the fuzzy symbolic manifold $tilde{M}$ (grounded in Def. definition:bk1_symbolic_manifold and the drift field Def.
@@ -10282,6 +12890,17 @@ Role: `definition` | Type: `definition` | Book: `book4` | Source: `book4.tex:632
 - Cites: `definition:bk4_symbolic_covariant` (Symbolic Covariant Derivative); `theorem:bk4_symbolic_stokes` (Symbolic Stokes' Theorem)
 - Cited by: `proof:bk4_fuzzy_curl_theorem`; `proof:bk4_fuzzy_helmholtz_decomposition`; `scholium:bk4_gauge_relation` (Gauge Relation); `theorem:bk4_fuzzy_curl_theorem` (Fuzzy Curl Theorem); `theorem:bk4_fuzzy_helmholtz_decomposition` (Fuzzy Helmholtz Decomposition)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-079`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := curl_O V, classicalValue := d(omega_V), correction := i*A_O wedge omega_V; M taken as the complex-valued additive group.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10325,6 +12944,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:6341`
 - Cited by: `proof:bk4_sketch_stokes` (Symbolic Stokes via Covariant Exterior Calculus); `proof:bk5_coherence_through_dynamic_equilibriium` (Coherence Through Dynamic Equilibrium); `scholium:bk4_zero_is_idealized_in_boundedness` (Zero is Idealized in Boundedness)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-080`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := the fuzzy boundary flux integral, classicalValue := the fuzzy volume-divergence integral, correction := H_O(Omega,V) (Boundary Holonomy Term).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Combining Def. definition:bk4_fuzzy_divergence_operator, the local divergence law in Thm. theorem:bk4_fuzzy_divergence, derivative algebra from Prop. proposition:bk4_fuzzy_deriv_algebra, observer-induced measure geometry (Def. definition:bk4_induced_area), symbolic holonomy (with the optional certified quantum interpretation of Prop. proposition:bk4_quantum_geometry), and the classical-limit correspondence in Cor.
@@ -10367,6 +12997,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:6391`
 - Cited by: `proof:bk4_fuzzy_helmholtz_decomposition`; `proof:bk4_sketch_stokes` (Symbolic Stokes via Covariant Exterior Calculus); `scholium:bk4_torsion_flux_anomaly` (Torsion-Flux Anomaly); `theorem:bk4_fuzzy_helmholtz_decomposition` (Fuzzy Helmholtz Decomposition)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-081`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := the fuzzy circulation integral, classicalValue := the fuzzy curl-flux surface integral, correction := T_O(S,V) (Torsion-Flux Anomaly).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Using Def. definition:bk4_fuzzy_curl_operator and the path/surface equivalence pattern of Thm. theorem:bk4_symbolic_stokes, this theorem gives the circulation-vorticity law in observer-relative vector calculus. Let $S$ be a surface in $tilde{M}$ with boundary $partial S$.
@@ -10408,6 +13049,17 @@ Role: `theorem` | Type: `theorem` | Book: `book4` | Source: `book4.tex:6413`
 - Cites: `definition:bk4_fuzzy_curl_operator` (Fuzzy Curl Operator); `definition:bk4_fuzzy_divergence_operator` (Fuzzy Divergence Operator); `theorem:bk4_fuzzy_curl_theorem` (Fuzzy Curl Theorem)
 - Cited by: `scholium:bk4_dark_knowledge` (Dark Knowledge)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK4A-082`
+- Witnesses: `Book4D.observer_correction_zero_iff_classical`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Instance: observerValue := V, classicalValue := -grad_O Phi + curl_O A, correction := H_O (the Observer-Relative Harmonic Field).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10479,6 +13131,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:20`
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `definition:bk5_viability_domain` (Viability Domain)
 - Macros used: `\drift`, `\reflect`, `\symb`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-046`
+- Witnesses: `Book5.balance_alone_does_not_force_conservation`, `Book5.closed_stabilized_energy_rate_zero`, `Book5.stabilized_conservation_iff_closed`, `Book5.stabilized_energy_rate_eq_external`
+- Countermodels: `Book5.balance_alone_does_not_force_conservation`
+- Conditions: LifeLaw for the life criterion; MetabolicPersistenceLaw for metabolic necessity; explicit energy budget identity; external closure for conservation
+- Formal boundary: Drift/reflection stabilization cancels only its budget channel. Zero energy derivative additionally requires external closure; a compiled countermodel refutes conservation from balance alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $M$ be a symbolic membrane (Def definition:bk3_symbolic_membrane) governed by drift operator $drift$ and reflection operator $reflect$, evolving within a viability domain $V_{symb}$. If no catastrophic mutations $mu in C_{cat}$ occur (cf. definition:bk1_paradox_triggered_emergence) and $reflect$ sufficiently stabilizes the system, then: frac{d}{ds} E_s(M) = 0
@@ -10506,6 +13169,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:55`
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator)
 - Cited by: none
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-012`
+- Witnesses: `Book5.entropy_rate_eq_zero_iff_fixed`, `Book5.entropy_rate_nonnegative`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: Requires the named second-law comparison and fixed-point calibration.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10591,6 +13265,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:124
 - Cited by: `definition:bk5_map_nash_point` (MAP Nash Point)
 - Macros used: `\symb`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-011`
+- Witnesses: `Book5.viable_iff_positive_free_energy`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: Free energy and viability definitions.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given a symbolic flux $F$, the free energy of a membrane $M$ is defined as: F_{symb}(M, F) := E_{symb}(M) - T_s S_{symb}(M, F) where $S_{symb}(M, F)$ quantifies the entropic contribution under flux $F$ and $T_s$ is the symbolic temperature (cf. Ax. axiom:bk5_positive_free_energy).
@@ -10604,6 +13289,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:133
 - Cites: `axiom:bk4_membrane_coupling_response` (Membrane Coupling Response); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `proposition:bk5_symbolic_ess_via_map_observability_variant` (Symbolic ESS via MAP); `theorem:bk5_symbolic_coherence_conservation` (Symbolic Coherence Conservation)
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `assumption:bk5_equilibrium_margin_sublinear_fluctuations` (Equilibrium margin and sublinear fluctuations); `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `axiom:bk7_reflective_stabilization` (Reflective Stabilization); `corollary:bk5_map_evolutionary_advantag` (MAP Evolutionary Advantage); `corollary:bk7_recursive_convergence_principle` (Recursive Convergence Principle); ... +24 more
 - Macros used: `\symb`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-030`
+- Witnesses: `Book5.viable_iff_positive_free_energy`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: The viability domain is definitionally the positive-free-energy region.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10633,6 +13329,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:146`
 - Cited by: `corollary:bk5_metabolic_necessity` (Metabolic Necessity); `proof:bk5_proposition_axiom_coupling` (Persistence from Proposition-Axiom Coupling); `scholium:bk5_symbolic_life` (Symbolic Life)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-047`
+- Witnesses: `Book5.metabolic_necessity`
+- Countermodels: none
+- Conditions: LifeLaw for the life criterion; MetabolicPersistenceLaw for metabolic necessity; explicit energy budget identity; external closure for conservation
+- Formal boundary: Represented as explicit MetabolicPersistenceLaw data, not a Lean axiom or a definitional implication.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic life requires a metabolism $M_{meta}$ that regulates drift and sustains identity $I$ (cf. Def. definition:bk4_symbolic_identity_carrie) through continuous energy-entropy balance (cf. Def. definition:bk2_symbolic_energy, Def. definition:bk2_symbolic_entropy).
@@ -10646,6 +13353,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:151`
 - Cites: `definition:bk2_symbolic_energy` (Symbolic Energy); `definition:bk2_symbolic_entropy` (Symbolic Entropy); `definition:bk2_symbolic_temperature` (Symbolic Temperature)
 - Cited by: `scholium:bk5_symbolic_life` (Symbolic Life)
 - Macros used: `\symb`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-013`
+- Witnesses: `Book5.energy_rate_eq_neg_entropic_rate`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: The closed balance law is structure data, not a global Lean axiom.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10661,6 +13379,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:160`
 - Cited by: `axiom:bk8_mutation_phase_shift` (Metabolic Sufficiency Criterion); `definition:bk5_symbolic_free_energy_und` (Symbolic Free Energy Under Drift); `proof:bk5_membrane_persistence_under_free_energy` (Membrane Persistence Under Symbolic Free Energy); `proof:bk5_membrane_viability_positive_energy` (Viability of Membranes Requires Positive Symbolic Energy)
 - Macros used: `\symb`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-014`
+- Witnesses: `Book5.persists_iff_positive_throughout`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: Persistence remains an explicit bridge law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic life persists if and only if $F_{symb} > 0$ is maintained over time (cf. Def. definition:bk2_symbolic_free_energy, Thm. theorem:bk2_h_theorem_for_symbolic_evol).
@@ -10674,6 +13403,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:165`
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk2_symbolic_hamiltonian` (Symbolic Hamiltonian)
 - Cited by: `definition:bk5_symbolic_covenant` (Symbolic Covenant); `scholium:bk5_symbolic_life` (Symbolic Life)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-010`
+- Witnesses: `Book5Adaptation.adapted_state_viable`, `Book5Adaptation.operators_do_not_supply_adaptation`
+- Countermodels: none
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Adaptation is explicit structure selecting transfer, reflection, or drift modulation that preserves viability across a condition change. A countermodel proves that merely having the three operators does not manufacture the adaptation law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10703,6 +13443,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cited by: `axiom:bk8_mutation_phase_shift` (Metabolic Sufficiency Criterion); `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `proof:bk5_proposition_axiom_coupling` (Persistence from Proposition-Axiom Coupling); `proof:bk5_symbolic_eigenlife`; `proof:bk8_biological_phase_transition`
 - Macros used: `\symb`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-048`
+- Witnesses: `Book5.agreement_on_positive_persistence_does_not_supply_life_law`, `Book5.symbolic_life_criterion`
+- Countermodels: `Book5.agreement_on_positive_persistence_does_not_supply_life_law`
+- Conditions: LifeLaw for the life criterion; MetabolicPersistenceLaw for metabolic necessity; explicit energy budget identity; external closure for conservation
+- Formal boundary: Positive free-energy persistence characterizes life only under a supplied LifeLaw; agreement alone does not manufacture that bridge.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A membrane $M$ exhibits symbolic life if and only if: exists F in mathfrak{F} text{such that} F_{symb}(M, F) > 0 text{for} t in [t_0, t_0 + tau] where $mathfrak{F}$ is the space of admissible symbolic fluxes and $tau > 0$ is a minimal persistence interval (cf. Def. definition:bk5_viability_domain, Def. definition:bk2_symbolic_free_energy).
@@ -10730,6 +13481,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:190`
 - Cites: `axiom:bk5_metabolic_persistence` (Metabolic Persistence)
 - Cited by: `axiom:bk8_mutation_phase_shift` (Metabolic Sufficiency Criterion)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-049`
+- Witnesses: `Book5.positive_persistence_has_metabolism`
+- Countermodels: none
+- Conditions: LifeLaw for the life criterion; MetabolicPersistenceLaw for metabolic necessity; explicit energy budget identity; external closure for conservation
+- Formal boundary: The corollary composes LifeLaw and MetabolicPersistenceLaw explicitly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10787,6 +13549,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:220
 - Cited by: `axiom:bk8_coherence_horizon` (Symbolic Entanglement); `demonstratio:bk4_ising_model_covenant` (The Ising Model as a Symbolic Covenant); `proof:bk5_membrane_viability_positive_energy` (Viability of Membranes Requires Positive Symbolic Energy); `proposition:bk7_map_compatible_reciprocity` (MAP-Compatible Reciprocity); `subsec:appD_cst_core_resonance` (D.8.1 Core Resonance); `subsec:appD_process_philosophy_contribution_differentiation` (D.6.2 Principia Symbolica's Contribution and Differentiation)
 - Macros used: `\Membrane`, `\symb`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-031`
+- Witnesses: `Book5.map_eventually_viable`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: MAP as positive-limit condition on the joint surplus sequence; membrane semantics not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Membrane_A$ and $Membrane_B$ be symbolic membranes with active metabolic processes $M_{text{meta}}^A$ and $M_{text{meta}}^B$, respectively. We define the Mutually Assured Progress (MAP) condition as a long-term convergence criterion on the joint free energy dynamics: lim_{n to infty} left[ F_s(Membrane_A^{(n)} leftrightarrow Membrane_B^{(n)}) right] > 0 Where: - $F_s(Membrane_A^{(n)} leftrightarrow Membrane_B^{(n)})$ is the net symbolic free energy (cf. Def.
@@ -10800,6 +13573,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:233
 - Cites: `axiom:bk5_adaptation` (Adaptation); `definition:bk1_reflection_operator` (Reflection Operator)
 - Cited by: `axiom:bk5_covenant_transitivity` (Covenant Transitivity); `definition:bk5_reflective_coupling_tens` (Reflective Coupling Tensor); `definition:bk5_strategy_space` (Strategy Space); `definition:bk5_two_way_street_tensor` (Two-Way Street reciprocity tensor); `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `demonstratio:bk5_negative_reflection_instability` (Negative Reflection Instability); ... +6 more
 - Macros used: `\Membrane`, `\reflect`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-029`
+- Witnesses: `Book5.dual_couplingStrength`, `Book5.dual_dual`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Covenant tuple as data with sign-carrying stability; the MAD dual is an involution that flips stability but not coupling strength.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10815,6 +13599,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:246
 - Cited by: `corollary:bk8_resonant_cognition` (Resonant Cognition Principle); `demonstratio:bk4_ising_model_covenant` (The Ising Model as a Symbolic Covenant); `demonstratio:bk5_entropy_reduction`; `proof:bk5_membrane_viability_positive_energy` (Viability of Membranes Requires Positive Symbolic Energy); `proof:bk8_resonant_cognition`; `theorem:bk5_covenant_stability_theorem` (Covenant Stability Theorem); ... +1 more
 - Macros used: `\Membrane`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-050`
+- Witnesses: `Book5Residue.coupling_stability_gt_one_iff`, `Book5Residue.resilience_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The reflective coupling tensor $mathbb{R}_{AB}$ between membranes $Membrane_A$ and $Membrane_B$ quantifies their mutual reflection capacity and interaction, formally defined on the product space $Membrane_A otimes Membrane_B$: mathbb{R}_{AB} = reflect_A^B otimes reflect_B^A The operator norm $\|mathbb{R}_{AB}\|$, often related to the eigenvalues of this tensor, determines the strength and viability of the MAP relationship (cf. Def. definition:bk5_symbolic_covenant, Def. definition:bk1_reflection_operator).
@@ -10828,6 +13623,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:255`
 - Cites: `definition:bk5_viability_domain` (Viability Domain)
 - Cited by: `axiom:bk8_coherence_horizon` (Symbolic Entanglement); `definition:bk9_formal_signature_of_betrayal` (Formal Signature of Betrayal); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention); `scholium:bk9_flexible_goal_calibration`; ... +2 more
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-051`
+- Witnesses: `Book5Residue.viability_union_mono_chain`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10843,6 +13649,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:264`
 - Cited by: `lemma:bk5_multi_membrane_map_extension` (Multi-Membrane MAP Extension); `proof:bk5_inductive_stability_map` (Inductive Stability of MAP Systems)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-052`
+- Witnesses: `Book5Residue.covenant_transitivity_propagates`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given three membranes $Membrane_A$, $Membrane_B$, and $Membrane_C$ with established stable covenants $C_{AB}$ (stability $Omega_{AB}$) and $C_{BC}$ (stability $Omega_{BC}$), there exists a derived effective covenant $C_{AC}$ whose stability $Omega_{AC}$ satisfies: Omega_{AC} geq min(Omega_{AB}, Omega_{BC}) - Delta_{trans} Where $Delta_{trans} geq 0$ represents a potential loss in stability due to indirect coupling, noise accumulation, or impedance mismatch in the transfer pathway $Membrane_A to Membrane_B to Membra...
@@ -10856,6 +13673,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:272`
 - Cites: `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `definition:bk5_reflective_coupling_tens` (Reflective Coupling Tensor); `definition:bk5_symbolic_covenant` (Symbolic Covenant)
 - Cited by: `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `definition:bk6_symbolic_operator_canon` (Symbolic Operator Canon); `definition:bk6_symbolic_regulatory_cycle` (Symbolic Regulatory Cycle); `demonstratio:bk5_negative_reflection_instability` (Negative Reflection Instability); `lemma:bk5_multi_membrane_map_extension` (Multi-Membrane MAP Extension); `proof:bk5_covenant_perturbation_restoration` (Covenant Restoration Under Perturbation); ... +13 more
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-032`
+- Witnesses: `Book5.map_eventually_viable`, `Book5.map_joint_eventually_viable`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Convergence kernel only: positive limit forces joint indefinite viability; the coupling-threshold hypothesis enters via the contraction instance.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10885,6 +13713,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:309`
 - Cited by: `definition:bk5_covenant_resilience_index` (Covenant Resilience Index); `proof:bk5_covenant_perturbation_restoration` (Covenant Restoration Under Perturbation); `proposition:bk5_map_mad_dichotomy` (MAP-MAD Dichotomy); `proposition:bk5_reflective_drift_alignment_in_map` (Reflective Drift Alignment in MAP)
 - Macros used: `\Membrane`, `\drift`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-015`
+- Witnesses: `Book5.covenant_stable_iff_threshold`
+- Countermodels: none
+- Conditions: ClosedEnergyEntropyBalance.balance; EntropyBalance.secondLaw; PositiveEnergyPersistence.law; ReflectiveEquilibrium.fixed_iff_zero_rate; positive minimum coupling where division is used
+- Formal boundary: Proves the quotient threshold form only for positive minimum coupling.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic covenant $C_{AB}$ between $Membrane_A$ and $Membrane_B$ is dynamically stable against small perturbations $delta$ to the system state if and only if its stability parameter $Omega_{AB}$ satisfies: Omega_{AB} > frac{\|drift_A\|_{max} + \|drift_B\|_{max}}{lambda_{min}(mathbb{R}_{AB})} Where $lambda_{min}(mathbb{R}_{AB})$ is the minimum stabilizing eigenvalue of the reflective coupling tensor $mathbb{R}_{AB}$ (cf. Def.
@@ -10913,6 +13752,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:335
 - Cited by: `demonstratio:bk7_map_stable_mutual_fixed_point` (Mutual Reflective Fixed Point as Stable MAP Nash Point); `proof:bk7_map_compatible_reciprocity` (Two-way fixed point as MAP Nash equilibrium); `proposition:bk7_map_compatible_reciprocity` (MAP-Compatible Reciprocity); `scholium:bk9_golden_rule_thermodynamic_covenant` (The Golden Rule as a Thermodynamic Covenant)
 - Macros used: `\Membrane`, `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-035`
+- Witnesses: `Book5.cooperation_dominates`, `Book5.cooperation_nash`, `Book5.defection_nash`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Assurance-game witness: cooperation and the trap are both Nash, cooperation payoff-dominant; general existence not proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The MAP Nash point of a symbolic covenant $C_{AB}$ is a configuration of reflection operators $(reflect_A^{B*}, reflect_B^{A*})$ representing a stable equilibrium where neither membrane can unilaterally improve its symbolic free energy $F_s$ by changing its reflection strategy, given the other's strategy (cf. Def.
@@ -10926,6 +13776,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:3
 - Cites: `proposition:bk6_drift_reflection_correspondence` (Drift-Reflection Correspondence); `theorem:bk5_covenant_stability_theorem` (Covenant Stability Theorem); `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Cited by: `demonstratio:bk5_entropy_reduction`
 - Macros used: `\Membrane`, `\drift`, `\reflect`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-009`
+- Witnesses: `Book5AlignmentDynamics.ReflectiveAlignmentCertificate.realizes_reflective_drift_alignment`, `Book5AlignmentDynamics.positive_margin_without_contraction_does_not_align`
+- Countermodels: `Book5AlignmentDynamics.positive_margin_without_contraction_does_not_align`
+- Conditions: geometric reflective update with feedback gain of absolute value below one; realized contribution defined as covenant margin minus alignment-error magnitude; scalar covenant snapshot satisfying the Book 5 drift-relative stability margin
+- Formal boundary: One retained certificate distinguishes the fixed MAP classification threshold from the drift-relative restoration margin, then supplies the contractive temporal law. It jointly proves MAP classification, strict positive margin, vanishing alignment error, convergence of realized contribution to the margin, and eventual positivity. Unit gain remains a countermodel to alignment from margin alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -10955,6 +13816,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:4
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-034`
+- Witnesses: `Book5.covenant_mad_collapse`, `Book5.covenant_map_viable`, `Book5.dual_surplus_reflect`, `Book5.viable_collapsed_exclusive`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Linear exchange model: the sign of stability decides viability vs collapse, and MAD is the exact polarity reflection of MAP.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The split is the sign-sensitive extension of the MAP condition in Thm. theorem:bk5_map_equilibrium and the perturbative threshold in Thm. theorem:bk5_covenant_stability_theorem. A reversal of sign or phase in the covenant is therefore not a typographical choice: by the Book IV account of imagination as imaginary traversal (Scholium scholium:bk4_imagination_as_imaginary_traversal, Prop. proposition:bk4_imagination_bridges_wheel), it may mark a counterfactual branch of the covenant before enactment.
@@ -10982,6 +13854,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:426`
 - Cites: `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Cited by: `corollary:bk5_map_evolutionary_advantag` (MAP Evolutionary Advantage); `definition:bk5_symbolic_fitness` (Symbolic Fitness); `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage); `proof:bk5_map_resistance_to_drift` (MAP Strategies Withstand Greater Drift); `proof:bk5_map_vs_nonmap_gradient` (Fitness Gradient Between MAP and Non-MAP); `proof:bk5_max_sustainable_drift` (Max Sustainable Drift from Reflective Bounds); ... +4 more
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-008`
+- Witnesses: `Book5Dominance.map_capacity_strictly_exceeds_isolated`, `Book5Dominance.map_dominates_beyond_isolated_capacity`, `Book5Dominance.map_viable_at_isolated_critical_drift`
+- Countermodels: none
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: Deterministic scalar kernel: positive external reflection strictly raises sustainable drift and creates an interval where MAP has positive viability margin after isolation does not. The paper's probability-limit language remains conditional because no probability law is specified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11011,6 +13894,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:454
 - Cited by: `lemma:bk5_map_population_stability` (MAP Population Stability); `proof:bk5_map_perturbation_robustness` (Perturbation Robustness of MAP Populations); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-053`
+- Witnesses: `Book5Residue.resilience_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the resilience>1 threshold is exactly the stated iff-form, given the denominator positive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The covenant resilience index $rho(C_{AB})$ quantifies the stability margin of a covenant $C_{AB}$ against drift perturbations: rho(C_{AB}) = frac{Omega_{AB} cdot lambda_{min}(mathbb{R}_{AB})}{\|drift_A\|_{max} + \|drift_B\|_{max}} A covenant with $rho(C_{AB}) > 1$ is considered resilient, indicating that its stabilizing reflective forces exceed the maximal expected destabilizing drift forces, according to Thm. theorem:bk5_covenant_stability_theorem.
@@ -11024,6 +13918,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:461`
 - Cites: `axiom:bk5_covenant_transitivity` (Covenant Transitivity); `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Cited by: `definition:bk9_prompt_injection_operator` (Prompt Injection Operator $\mathcal{J}$)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-054`
+- Witnesses: `Book5Residue.min_resilience_implies_all_edges_resilient`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11066,6 +13971,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:478`
 - Cites: `definition:bk5_viability_domain` (Viability Domain); `theorem:bk5__map_dominance` (MAP Dominance)
 - Cited by: `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `theorem:bk5_enhanced_map_mad_duality` (Enhanced MAP--MAD Regime Classification)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-055`
+- Witnesses: `Book5Residue.ess_invasion_threshold`, `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the selective-advantage shape is captured by finite weighted dominance and the invasion threshold; the replicator-dynamics time-derivative itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11123,6 +14039,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:501
 - Cited by: `definition:bk5_recursive_reflective_flow` (Recursive Reflective Flow); `definition:bk5_spectral_radius_of_coupl` (Spectral Radius of Coupling Tensor); `definition:bk7_operational_resolution_uncertainties` (Operational resolution uncertainties); `lemma:bk7_involutive_dual_symmetry` (Involutive Dual Symmetry of Symbolic Power and Uncertainty); `scholium:bk7_constrained_uncertainty_motivation` (Constrained Symbolic Uncertainty); `sec:bk7_pisu_universal_symbolic_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU)); ... +5 more
 - Macros used: `\Membrane`, `\drift`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-056`
+- Witnesses: `Book5Residue.coupling_stability_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the tensor's scalar spectral-radius reading feeds coupling_stability_gt_one_iff as the free parameter normR; the operator itself is not constructed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic membranes $Membrane_A$ and $Membrane_B$ with respective drift operators $drift_A, drift_B$ (derived from Def. definition:bk1_drift_field) on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold) and reflection operators $reflect_A, reflect_B$ (derived from Def.
@@ -11136,6 +14063,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:508
 - Cites: `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `definition:bk5_reflective_drift_coupling_tensor` (Reflective-Drift Coupling Tensor)
 - Cited by: `corollary:bk5_spectral_radius_optimality` (Spectral Radius Optimality); `proof:bk5_energy_conservation_under_reflective_coupling` (Energy Conservation Under Reflective Coupling); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-057`
+- Witnesses: `Book5Residue.coupling_stability_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: same scalar parameter as above; the max-|eigenvalue| definition of the spectral radius is not itself computed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11151,6 +14089,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:516`
 - Cited by: `definition:bk5_recursive_reflective_flow` (Recursive Reflective Flow); `definition:bk5_spectral_radius_of_coupl` (Spectral Radius of Coupling Tensor); `lemma:bk5_recursive_flow_convergence` (Recursive Flow Convergence); `theorem:bk5_reflective_equilibrium_conservation` (Reflective Equilibrium Conservation); `theorem:bk5_reflective_stability_criterion` (Reflective Stability Criterion)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-033`
+- Witnesses: `Book5.contraction_map`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Scalar instance: contractive coupled ratio with positive carrying level yields MAP.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 It refines the MAP condition (Thm. theorem:bk5_map_equilibrium) into a spectral criterion tied to symbolic temperature (Def. definition:bk2_symbolic_temperature). A symbolic system attains reflective equilibrium with another system if their coupled reflective-drift tensor $C_{AB}$ exhibits a bounded spectral radius relative to a critical stability threshold.
@@ -11164,6 +14113,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:530`
 - Cites: `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy)
 - Cited by: `assumption:bk5_equilibrium_margin_sublinear_fluctuations` (Equilibrium margin and sublinear fluctuations); `axiom:bk6_reflective_regulation_of_mutation` (Reflective Regulation of Mutation); `demonstratio:bk5_energy_fluctuation_bound` (Energy Fluctuation Bound); `proof:bk8_sr_convergence`; `proposition:bk5_viability_domain_preservation` (Viability Domain Preservation); `proposition:bk6_reflective_mutation_inhibition` (Reflective Mutation Inhibition); ... +2 more
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-007`
+- Witnesses: `Book5EquilibriumConservation.energy_rate_linear_spectral_bound`, `Book5EquilibriumConservation.energy_rate_norm_linear_spectral_bound`, `Book5EquilibriumConservation.energy_rate_quadratic_spectral_bound`, `Book5EquilibriumConservation.linear_residual_bounds_do_not_imply_quadratic_bound`
+- Countermodels: `Book5EquilibriumConservation.linear_residual_bounds_do_not_imply_quadratic_bound`
+- Conditions: see per-anchor coverage-map notes for the exact scope of each conditional/partial grade
+- Formal boundary: The repaired source-level statement is proved over arbitrary seminormed additive residual spaces: two order-rho residual controls yield the linear rho bound by the norm triangle inequality. The scalar theorem is retained as a specialization, and the historical countermodel records why the superseded rho-squared form failed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11207,6 +14167,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:585`
 - Cited by: `assumption:bk5_equilibrium_margin_sublinear_fluctuations` (Equilibrium margin and sublinear fluctuations); `demonstratio:bk5_energy_fluctuation_bound` (Energy Fluctuation Bound); `proof:bk5_existence_unique_coupled_fixed_point` (Existence Unique Coupled Fixed Point)
 - Macros used: `\Membrane`, `\drift`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-096`
+- Witnesses: `Book5Op.contraction_flow_unique_fixed_point`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: The recursive reflective flow converges to a unique stable fixed point.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Convergence is the fixed-point form of Ax. axiom:bk5_reflective_equilibrium_stability_flux and is compatible with Thm. theorem:bk4_compatibility_drift_reflective_operations. If symbolic membranes $Membrane_A$ and $Membrane_B$ are in reflective equilibrium with $rho(C_{AB}) < lambda_{text{crit}}$, then the recursive reflective flow converges to a stable fixed point: lim_{n to infty} F_{AB}^{(n)} = F_{AB}^* Where $F_{AB}^*$ is a fixed point satisfying $F_{AB}^* = reflect_A circ drift_B circ F_{BA}^*$.
@@ -11234,6 +14205,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:6
 - Cites: `definition:bk5_viability_domain` (Viability Domain); `theorem:bk5_reflective_equilibrium_conservation` (Reflective Equilibrium Conservation)
 - Cited by: `corollary:bk5_spectral_radius_optimality` (Spectral Radius Optimality); `proof:bk5_optimal_reflection_minimizing_coupling_radius` (Optimal Reflection Minimizing Coupling Radius); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `theorem:bk8_biological_phase_transition` (Threshold of Autonomy)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-058`
+- Witnesses: `Book5Residue.viability_union_mono_chain`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the long-horizon chaining content is proved; the probability-1 limit statement is not (no probability space is modeled).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11291,6 +14273,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:681`
 - Cited by: `theorem:bk5_reflective_stability_criterion` (Reflective Stability Criterion)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-099`
+- Witnesses: `Book5Op.viability_antitone_in_spectral_radius`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: Viability antitone in spectral radius: minimizing rho maximizes viability.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Optimality follows by composing Prop. proposition:bk5_viability_domain_preservation with Def. definition:bk5_spectral_radius_of_coupl. Among all possible reflection operators $reflect_A$ and $reflect_B$ with fixed norms $\|reflect_A\| = c_A$ and $\|reflect_B\| = c_B$, the configuration that minimizes $rho(C_{AB})$ maximizes the long-term viability probability of both membranes.
@@ -11318,6 +14311,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:700`
 - Cites: `axiom:bk5_reflective_equilibrium_stability_flux` (Reflective Equilibrium Stability); `corollary:bk5_spectral_radius_optimality` (Spectral Radius Optimality); `definition:bk2_symbolic_temperature` (Symbolic Temperature); `definition:bk5_reflective_drift_coupling_tensor` (Reflective-Drift Coupling Tensor)
 - Cited by: `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$); `scholium:bk5__distributed_resilience` (Distributed Resilience)
 - Macros used: `\Membrane`, `\drift`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-059`
+- Witnesses: `Book5Residue.reflective_stability_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: min(a,b) reading as conjunction is exactly lt_min_iff, applied to the criterion's two per-membrane ratios.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11361,6 +14365,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:747`
 - Cited by: `subsec:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `theorem:bk5_enhanced_map_mad_duality_pr` (Enhanced MAP--MAD Dynamical Realization)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-006`
+- Witnesses: `Book5EnhancedDuality.classify_neg_of_strong`, `Book5EnhancedDuality.existsUnique_regimeCondition`, `Book5EnhancedDuality.positive_regime_parameters_do_not_force_viability`
+- Countermodels: `Book5EnhancedDuality.positive_regime_parameters_do_not_force_viability`
+- Conditions: linear-order trichotomy only; no temporal dynamics inferred; real-valued coupling magnitude, critical threshold, and polarity
+- Formal boundary: The four source conditions are formalized as a regime predicate, and every coupling/threshold/polarity triple satisfies exactly one condition. Threshold equality and strong zero polarity remain critical; reversal of nonzero polarity exchanges MAP and MAD. The paired countermodel enforces the source boundary that classification alone supplies no free-energy dynamics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Membrane_A$ and $Membrane_B$ interact through a symbolic covenant $mathcal C_{AB}$ (cf. Cor. corollary:bk5_map_evolutionary_advantag), with coupling magnitude $\|mathbb R_{AB}\|$, polarity $Omega_{AB}$, and a fixed critical coupling $kappa_{crit}$. Exactly one of the following parameter regimes obtains: - $\|mathbb R_{AB}\|>kappa_{crit}$ and $Omega_{AB}>0$: the covenant is classified as MAP; - $\|mathbb R_{AB}\|>kappa_{crit}$ and $Omega_{AB}<0$: the covenant is classified as MAD;
@@ -11389,6 +14404,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:786
 - Cited by: `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `definition:bk5_symbolic_bifurcation_man` (Symbolic Bifurcation Manifold); `proof:bk5_map_mad_mas_trichotomy`
 - Macros used: `\Membrane`, `\drift`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-060`
+- Witnesses: `Book5Residue.bifurcation_eq_one_iff`, `Book5Residue.coupling_stability_gt_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This scalar packages coupling, drift load, and symbolic temperature (Def. definition:bk2_symbolic_temperature) into a single regime coordinate. For a covenant $C_{AB}$ between membranes $Membrane_A$ and $Membrane_B$, the reflective coupling stability parameter $Lambda_{AB}$ is defined as: Lambda_{AB} := frac{\|mathbb{R}_{AB}\| cdot Omega_{AB}}{(\|drift_A\|_{max} + \|drift_B\|_{max}) cdot T_s} where $T_s$ is the symbolic temperature.
@@ -11402,6 +14428,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:795
 - Cites: `definition:bk5_reflective_coupling_stab` (Reflective Coupling Stability Parameter)
 - Cited by: `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `lemma:bk5_symbolic_divergence_bounds` (Symbolic Divergence Bounds); `proposition:bk5_transactional_covenant_dynamics` (Transitional Covenant Dynamics); `scholium:bk8_emergent_geometry_of_cognition` (Emergent Geometry of Cognition)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-061`
+- Witnesses: `Book5Residue.bifurcation_eq_one_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11431,6 +14468,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:813`
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence)
 - Macros used: `\Membrane`, `\drift`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-062`
+- Witnesses: `Book5Residue.map_mad_bounds_eventually_incompatible`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 These bounds provide the quantitative signature of the MAP/MAD/decoupled regimes separated by Def. definition:bk5_symbolic_bifurcation_man. Let $drift_{KL}(Membrane_A^{(n)} parallel Membrane_A^{(0)})$ represent the Kullback-Leibler divergence between the $n$-th evolution of membrane $Membrane_A$ and its initial state.
@@ -11458,6 +14506,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:8
 - Cites: `definition:bk5_symbolic_bifurcation_man` (Symbolic Bifurcation Manifold)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-005`
+- Witnesses: `Book5TransitionDynamics.constant_rate_ode_solution_unique`, `Book5TransitionDynamics.crossing_alone_does_not_force_growth`, `Book5TransitionDynamics.exact_step_of_constant_rate_ode`, `Book5TransitionDynamics.expEvolution_add`, `Book5TransitionDynamics.expEvolution_hasDerivAt`, `Book5TransitionDynamics.expEvolution_zero`, `Book5TransitionDynamics.madStep_eq_expEvolution`, `Book5TransitionDynamics.madStep_strict_decay`, `Book5TransitionDynamics.mapStep_at_boundary`, `Book5TransitionDynamics.mapStep_eq_expEvolution`, `Book5TransitionDynamics.mapStep_strict_growth`, `Book5TransitionDynamics.solution_eq_shifted_expEvolution`
+- Countermodels: `Book5TransitionDynamics.crossing_alone_does_not_force_growth`
+- Conditions: a globally differentiable real free-energy trajectory; one reference value for uniqueness; the supplied constant rate law F-prime = rate times F
+- Formal boundary: The supplied constant-rate ODE now determines the exact law, not merely one constructed example. An integrating-factor proof shows every global solution has the shifted exponential form, yields the exact adjacent-step update, and proves uniqueness from one shared value. MAP growth, MAD positivity/decay, and the boundary identity follow as before. A crossing alone still does not generate the ODE; time-varying coupling requires a separately supplied integral-rate law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11487,6 +14546,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:907`
 - Cited by: `definition:bk8_temperature_freedom` (Symbolic Temperature of Freedom \(T_s^{\mathrm{f}}\)); `proof:bk1_conditional_genericity_of_symbolic_phase_transitions` (Transversal discriminant crossing stabilized above the critical dimension); `proof:bk1_realization_of_symbolic_phase_transitions`; `proof:bk5_information_geometry_symbolic` (Information Geometry); `proposition:bk5_multi_agent_map_mad_classification` (Multi-Agent MAP-MAD Classification); `scholium:bk5__map_as_thermodynamic_necessity` (MAP as Thermodynamic Necessity)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-036`
+- Witnesses: `Book5.lambdaCrit_mono`, `Book5.spectral_iff_thermal`
+- Countermodels: none
+- Conditions: positive carrying level and contractive ratio for the MAP instance; positive coherence density and drift norm for the thermal conversion; positive coupling gain and sign-definite stability for the dichotomy
+- Formal boundary: Threshold-conversion kernel only; the phase-transition and fixed-point reading is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This theorem converts the MAP condition of Thm. theorem:bk5_map_equilibrium into an explicit thermal feasibility threshold. There exists a critical symbolic temperature $T_s^{crit}$ such that (cf. Prop. proposition:bk2_global_local_temp_relation, Thm. theorem:bk2_classification_symb_phase_transitions): - For \( T_s < T_s^{text{crit}} \), MAP and MAD represent distinct stable fixed points of the system dynamics. - For \( T_s > T_s^{text{crit}} \), no stable MAP configuration exists.
@@ -11514,6 +14584,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:942`
 - Cites: none
 - Cited by: `definition:bk5_mad_map_potential_barrie` (MAD-MAP Potential Barrier); `scholium:bk5_mutually_assured_continuous_progress` (Mutually Assured Continuous Progress)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-004`
+- Witnesses: `Book5Hysteresis.ActivationBarrier.energy_eq`, `Book5Hysteresis.ActivationBarrier.energy_pos`, `Book5Hysteresis.ActivationBarrier.threshold_gap`, `Book5Hysteresis.HysteresisThresholds.lower_lt_upper`, `Book5Hysteresis.above_upper_switches_to_map`, `Book5Hysteresis.below_lower_switches_from_map`, `Book5Hysteresis.in_band_remembers_history`, `Book5Hysteresis.mad_persists_in_band`, `Book5Hysteresis.map_persists_in_band`, `Book5Hysteresis.memoryless_classifier_cannot_remember_history`, `Book5Hysteresis.runHysteresis_in_band`, `Book5Hysteresis.same_in_band_path_retains_distinct_histories`
+- Countermodels: none
+- Conditions: finite path remains inside the threshold band; positive activation half-width; positive constant barrier density; stateful regime update
+- Formal boundary: A constructed stateful Schmitt-style law now derives separated thresholds 1 - b and 1 + b from a positive half-width b. Crossing either boundary changes regime, while every finite path confined to the band preserves its incoming regime, so identical observations retain distinct histories. A positive constant barrier density gives activation energy 2 ξ b > 0. The memoryless countermodel remains, showing why prior state is load-bearing rather than notation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11557,6 +14638,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:9
 - Cited by: `demonstratio:bk5_emergent_global_properties` (Emergent Global Properties)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-063`
+- Witnesses: `Book5Residue.covenant_adjacency_exclusive`, `Book5Residue.covenant_adjacency_trichotomy`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The matrix criterion extends pairwise thresholds from Thm. theorem:bk5_map_mad_critical_temperature to graph-scale regime identification.
@@ -11584,6 +14676,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1004`
 - Cites: `theorem:bk5_enhanced_map_mad_duality` (Enhanced MAP--MAD Regime Classification)
 - Cited by: `scholium:bk5_mutually_assured_continuous_progress` (Mutually Assured Continuous Progress)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-003`
+- Witnesses: `Book5DualityProof.EnhancedDualityRealizationCertificate.decoupling_realization`, `Book5DualityProof.EnhancedDualityRealizationCertificate.enhanced_map_mad_dynamical_realization`, `Book5DualityProof.EnhancedDualityRealizationCertificate.mad_realization`, `Book5DualityProof.EnhancedDualityRealizationCertificate.map_realization`, `Book5DualityProof.covenantTrajectory_orientation_dual`, `Book5DualityProof.covenantTrajectory_tendsto_target`, `Book5DualityProof.decoupling_consumes_vanishing_interaction`, `Book5DualityProof.decoupling_without_contraction_can_persist`, `Book5DualityProof.geometric_decoupling_vanishes`, `Book5DualityProof.mad_rate_negative`, `Book5DualityProof.mad_rate_negative_iff`, `Book5DualityProof.mad_target_eventually_collapsed`, `Book5DualityProof.map_rate_positive`, `Book5DualityProof.map_rate_positive_iff`, `Book5DualityProof.map_target_eventually_viable`, `Book5DualityProof.negative_rate_alone_does_not_force_zero_limit`, `Book5DualityProof.positive_rate_alone_does_not_force_positive_limit`
+- Countermodels: `Book5DualityProof.decoupling_without_contraction_can_persist`, `Book5DualityProof.negative_rate_alone_does_not_force_zero_limit`, `Book5DualityProof.positive_rate_alone_does_not_force_positive_limit`
+- Conditions: a positive MAP target; reflection/entropy inequalities for local rate signs; separately supplied strict contractions for MAP, MAD, and residue dynamics; strong/weak coupling and polarity premises for classification
+- Formal boundary: A typed realization certificate keeps parameter classification and temporal laws as distinct premises, then jointly proves all three source clauses: MAP classification, positive rate, convergence to a positive target, and eventual viability; MAD classification, negative rate, and zero-target convergence; weak-coupling classification and vanishing residue. Countermodels still show classification alone supplies no dynamics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11641,6 +14744,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:107
 - Cited by: `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-064`
+- Witnesses: `Book5Residue.ess_invasion_threshold`, `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: strategies are consumed abstractly as an index type / real payoff values inside the dominance and invasion lemmas, not as the (reflect,transfer,coop-coefficient) tuple itself.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Strategies are the microscopic control primitives whose interaction payoffs are measured by symbolic free energy (Def. definition:bk2_symbolic_free_energy). A symbolic strategy $sigma$ is a tuple $(reflect_sigma, T_sigma, kappa_sigma)$ where: - $reflect_sigma$ is the reflection operator employed under strategy $sigma$ - $T_sigma$ is the transfer operator employed under strategy $sigma$ - $kappa_sigma in [0,1]$ is the cooperation coefficient determining willingness to form covenants
@@ -11654,6 +14768,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:108
 - Cites: `definition:bk5_symbolic_covenant` (Symbolic Covenant)
 - Cited by: `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-065`
+- Witnesses: `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11669,6 +14794,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:109
 - Cited by: `definition:bk5_symbolic_ess` (Symbolic ESS); `definition:bk5_symbolic_replicator_dynamics` (Symbolic Replicator Dynamics); `proof:bk5_map_invasion_dynamics` (Invasion Analysis of MAP vs Non-MAP Strategies); `proof:bk5_map_resistance_to_drift` (MAP Strategies Withstand Greater Drift)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-066`
+- Witnesses: `Book5Residue.ess_invasion_threshold`, `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic fitness $Phi(sigma, mathfrak{P})$ of a strategy $sigma$ in a population with strategy distribution $mathfrak{P}$ is defined as (cf. Def. definition:bk2_symbolic_free_energy, Thm. theorem:bk5__map_dominance): Phi(sigma, mathfrak{P}) = mathbb{E}_{tau sim mathfrak{P}}[F_s(Membrane_sigma leftrightarrow Membrane_tau)] Where $F_s(Membrane_sigma leftrightarrow Membrane_tau)$ is the symbolic free energy resulting from interaction between membranes employing strategies $sigma$ and $tau$.
@@ -11683,6 +14819,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:109
 - Cited by: `lemma:bk5_covenant_non_invasibility` (Covenant Non-Invasibility); `proof:bk5_map_as_ess` (MAP as Symbolic Evolutionarily Stable Strategy); `theorem:bk5_map_as_strong_ess` (MAP as Strong ESS)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-067`
+- Witnesses: `Book5Residue.ess_invasion_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A strategy $sigma^* in Sigma$ is a symbolic evolutionarily stable strategy if for every strategy $sigma neq sigma^*$, there exists $epsilon_sigma > 0$ such that for all $epsilon in (0, epsilon_sigma)$ (using Def. definition:bk5_symbolic_fitness): Phi(sigma^*, (1-epsilon)delta_{sigma^*} + epsilondelta_sigma) > Phi(sigma, (1-epsilon)delta_{sigma^*} + epsilondelta_sigma) Where $delta_sigma$ is the Dirac measure concentrated on strategy $sigma$.
@@ -11696,6 +14843,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1107`
 - Cites: `definition:bk5_strategy_space` (Strategy Space); `definition:bk5_symbolic_strategy` (Symbolic Strategy); `theorem:bk2_h_theorem_for_symbolic_evol` (H-Theorem for Symbolic Evolution); `theorem:bk5__map_dominance` (MAP Dominance)
 - Cited by: `lemma:bk5_covenant_non_invasibility` (Covenant Non-Invasibility); `lemma:bk5_map_invasion_barrier_strength` (MAP Invasion Barrier Strength)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-068`
+- Witnesses: `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: instantiates directly: pointwise strict dominance on positive-weight population members gives strict weighted-average dominance.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11725,6 +14883,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1133`
 - Cited by: `proof:bk5_map_as_ess` (MAP as Symbolic Evolutionarily Stable Strategy)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-069`
+- Witnesses: `Book5Residue.weighted_strict_dominance`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Consider a population where all membranes employ MAP strategies $sigma_{MAP} in Sigma_{MAP}$. Let $sigma_{inv} in Sigma setminus Sigma_{MAP}$ be any non-MAP strategy. There exists $epsilon_0 > 0$ such that for all $epsilon in (0, epsilon_0)$ (in the sense of Def. definition:bk5_symbolic_ess and Lem. lemma:bk5_map_fitness_advantage): Phi(sigma_{MAP}, (1-epsilon)delta_{sigma_{MAP}} + epsilondelta_{sigma_{inv}}) > Phi(sigma_{inv}, (1-epsilon)delta_{sigma_{MAP}} + epsilondelta_{sigma_{inv}})
@@ -11752,6 +14921,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1170`
 - Cites: none
 - Cited by: `proof:bk5_map_as_ess` (MAP as Symbolic Evolutionarily Stable Strategy); `proposition:bk6_drift_reflection_correspondence` (Drift-Reflection Correspondence)
 - Macros used: `\drift`, `\reflect`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-002`
+- Witnesses: `Book5StrategyBalance.OperatorStrategySpace.exists_operator_balance_of_cofinal`, `Book5StrategyBalance.OperatorStrategySpace.mem_viableMAP_iff`, `Book5StrategyBalance.OperatorStrategySpace.submaximal_drift_without_inventory_countermodel`, `Book5StrategyBalance.OperatorStrategySpace.viableMAP_eq_isMAP_of_uniform_richness`, `Book5StrategyBalance.OperatorStrategySpace.viableMAP_nonempty_of_richness`, `Book5StrategyBalance.balance_iff_capacity_above_threshold`, `Book5StrategyBalance.exists_available_balancing_strategy`, `Book5StrategyBalance.isolated_strategy_cannot_balance_positive_drift`, `Book5StrategyBalance.local_cancellation_is_not_strict_balance`, `Book5StrategyBalance.submaximal_drift_alone_does_not_supply_available_strategy`
+- Countermodels: `Book5StrategyBalance.OperatorStrategySpace.submaximal_drift_without_inventory_countermodel`, `Book5StrategyBalance.submaximal_drift_alone_does_not_supply_available_strategy`
+- Conditions: cofinal available reflection capacity; positive cooperation at a MAP strategy; strategy-indexed available reflection inventory; typed drift and reflection operator carriers
+- Formal boundary: Typed operator-inventory reconstruction: drift and reflection operators remain distinct carrier types with observer-assigned intensities, MAP membership, strategy-indexed availability, and cooperation. Cofinal reflection capacity at one cooperative MAP strategy constructs a nonempty viable MAP subset; uniform cofinality proves equality with the MAP set. Countermodels retain that sub-maximal drift and positive cooperation do not populate an empty inventory, while exact cancellation lacks strict margin.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11795,6 +14975,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cited by: `definition:bk5_viability_domain` (Viability Domain)
 - Macros used: `\Membrane`, `\drift`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-070`
+- Witnesses: `Book5Residue.ess_invasion_threshold`, `Book5Residue.viability_union_mono_chain`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: stability and non-invasibility conditions are covered by ess_invasion_threshold; viability expansion is covered qualitatively by viability_union_mono_chain; the three are not composed into one theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $sigma_{MAP} in Sigma_{MAP}$ be a MAP strategy with symbolic free energy $F_s$ (Def. definition:bk2_symbolic_free_energy) on the symbolic manifold $M$ (Def. definition:bk1_symbolic_manifold) in an environment with drift intensity $\|drift\| > drift_0$ (Def. definition:bk1_drift_field). Let viability be measured by Def. definition:bk5_viability_domain.
@@ -11822,6 +15013,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:1264`
 - Cites: none
 - Cited by: `proof:bk5_map_viability_critical_drift` (Two-Sided Strategy Transport); `scholium:bk5__map_ess_implications` (MAP-ESS Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-001`
+- Witnesses: `Book5ConvergenceMAP.MAPPopulationOrbit.fitness_gap_with_inflow_does_not_force_convergence`, `Book5ConvergenceMAP.MAPPopulationOrbit.residual_eq_pow`, `Book5ConvergenceMAP.MAPPopulationOrbit.share_eq_mapShare`, `Book5ConvergenceMAP.MAPPopulationOrbit.share_le_one`, `Book5ConvergenceMAP.MAPPopulationOrbit.share_nonneg`, `Book5ConvergenceMAP.MAPPopulationOrbit.share_tendsto_one`, `Book5ConvergenceMAP.PersistentMAPAdvantage.contraction_lt_one`, `Book5ConvergenceMAP.PersistentMAPAdvantage.contraction_nonneg`, `Book5ConvergenceMAP.increasing_drift_alone_does_not_force_map_convergence`, `Book5ConvergenceMAP.mapShare_succ`, `Book5ConvergenceMAP.mapShare_tendsto_one`, `Book5ConvergenceMAP.mapShare_zero`
+- Countermodels: `Book5ConvergenceMAP.MAPPopulationOrbit.fitness_gap_with_inflow_does_not_force_convergence`, `Book5ConvergenceMAP.increasing_drift_alone_does_not_force_map_convergence`
+- Conditions: exact residual recurrence excluding non-MAP inflow; initial MAP share in the probability interval; positive MAP and nonnegative non-MAP fitness; strict persistent MAP aggregate fitness advantage
+- Formal boundary: A persistent quantitative MAP fitness advantage yields a contraction ratio q in [0,1). A mutation-free aggregate population orbit explicitly excludes non-MAP inflow through its residual recurrence. Lean derives the geometric residual, proves every share remains in [0,1], and proves convergence to MAP mass one. Countermodels show that increasing drift alone—or even a strict fitness gap with replenishing inflow—does not force convergence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11851,6 +15053,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1308`
 - Cited by: `proof:bk5_map_perturbation_robustness` (Perturbation Robustness of MAP Populations)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-071`
+- Witnesses: `Book5Residue.min_resilience_implies_all_edges_resilient`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A population composed entirely of MAP strategies is stable against perturbations in strategy distribution if the covenant resilience index (Def. definition:bk5_covenant_resilience_index) satisfies: min_{sigma, tau in Sigma_{MAP}} rho(C_{sigmatau}) > 1 + delta For some margin $delta > 0$.
@@ -11878,6 +15091,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1332`
 - Cites: `definition:bk5_symbolic_ess` (Symbolic ESS)
 - Cited by: `definition:bk5_symbolic_invasion_barrier` (Symbolic Invasion Barrier); `proof:bk5_map_strict_fitness_dominance` (Strict Dominance of MAP Under Mixing); `scholium:bk5__map_ess_implications` (MAP-ESS Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-072`
+- Witnesses: `Book5Residue.ess_invasion_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11907,6 +15131,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:135
 - Cited by: `lemma:bk5_map_invasion_barrier_strength` (MAP Invasion Barrier Strength)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-073`
+- Witnesses: `Book5Residue.ess_invasion_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The invasion barrier $beta(sigma_{MAP}, sigma)$ of a MAP strategy $sigma_{MAP}$ against an alternative strategy $sigma$ is defined as (cf. Thm. theorem:bk5_map_as_strong_ess): beta(sigma_{MAP}, sigma) = sup{epsilon in [0,1] : Phi(sigma_{MAP}, (1-alpha)delta_{sigma_{MAP}} + alphadelta_{sigma}) > Phi(sigma, (1-alpha)delta_{sigma_{MAP}} + alphadelta_{sigma}) forall alpha in (0,epsilon)}
@@ -11920,6 +15155,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1358`
 - Cites: `definition:bk5_symbolic_invasion_barrier` (Symbolic Invasion Barrier); `lemma:bk5_map_fitness_advantage` (MAP Fitness Advantage)
 - Cited by: `definition:bk9_prompt_injection_operator` (Prompt Injection Operator $\mathcal{J}$)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-074`
+- Witnesses: `Book5Residue.ess_invasion_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -11962,6 +15208,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: none
 - Cited by: `scholium:bk5__map_as_thermodynamic_necessity` (MAP as Thermodynamic Necessity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-100`
+- Witnesses: `Book5ESSEquivalence.TwoSidedStrategyApproximation.hausdorffDist_le`, `Book5ESSEquivalence.TwoSidedStrategyApproximation.hausdorffDist_tendsto_zero`, `Book5ESSEquivalence.TwoSidedStrategyApproximation.of_eventual_equality`, `Book5ESSEquivalence.distance_tendsto_zero_of_eventually_identified`, `Book5ESSEquivalence.one_sided_ess_to_map_does_not_identify_sets`, `Book5ESSEquivalence.population_limit_does_not_supply_two_sided_approximation`
+- Countermodels: `Book5ESSEquivalence.one_sided_ess_to_map_does_not_identify_sets`, `Book5ESSEquivalence.population_limit_does_not_supply_two_sided_approximation`
+- Conditions: ESS-to-MAP witnesses at tolerance; MAP-to-ESS witnesses at tolerance; distinct ESS sequence and MAP set predicates; nonnegative tolerance tending to zero; pseudo-metric strategy space
+- Formal boundary: Genuine metric reconstruction: ESS and MAP remain distinct set-valued predicates in an arbitrary pseudo-metric strategy space. Two independent directed witness laws at tolerance ε_n bound the actual Hausdorff distance; ε_n → 0 yields convergence without finite-stage equality. One-sided inclusion and population-mass convergence countermodels show neither supplies two-sided set approximation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12061,6 +15318,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cited by: `proof:bk5_operator_convergence`; `proof:bk5_operators_evolve`; `theorem:bk5_operator_convergence` (Operator Convergence)
 - Macros used: `\Fproc`, `\Op`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-094`
+- Witnesses: `Book5Op.operator_stationary_iff_critical`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: Stationary iff critical point of F_proc for the descent step; the minimizer/critical gap stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O_{theta}$, $theta in mathbb{R}^n$, be a parameterized symbolic operator in $Op(M)$ (Def. definition:bk5_symbolic_operator_space). Under SRMF operator-selection dynamics (Ax. axiom:bk5_srmf_operator_selection_evolution) the path $gamma: t mapsto O_{theta(t)}$ is stationary if and only if $O_{theta}$ minimizes the process free energy $Fproc$ (Def. definition:bk5_process_free_energy); otherwise the operator strictly evolves and converges to a minimizer (Thm. theorem:bk5_operator_convergence).
@@ -12089,6 +15357,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:150
 - Cited by: `assumption:bk5_displacement_convexity` (Displacement Convexity of the Process Free Energy); `axiom:bk8_coherence_horizon` (Symbolic Entanglement); `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); `definition:bk5__operator_viability_set_v` (Operator Viability Set $\mathcal{V}_{\text{op}}$); `definition:bk5_complexity_stability_maintenance` (Operator Complexity, Stability Margin, Maintenance Cost); ... +11 more
 - Macros used: `\Fproc`, `\Op`, `\freeenergy`, `\viabilitydomain`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-075`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: F_proc's admissibility role is mirrored by the MetabolicBudget structure's cost law; the E_cost/E_eff/C_hint decomposition itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given an operator $O in Op(M)$ acting within a symbolic system $S = (M, g, D, R, rho)$, its Process Free Energy $Fproc$ is defined as (cf. Def. definition:bk2_symbolic_free_energy): \[ Fproc[O, S] := E_{text{cost}}[O] - T_{text{meta}} cdot left( E_{text{eff}}[O, S] + C_{text{hint}}[O] right) \] where: - $E_{text{cost}}[O]$: metabolic cost to instantiate and execute $O$; - $E_{text{eff}}[O, S]$: effectiveness in maintaining $rho in viabilitydomain$ and minimizing $freeenergy[rho]$;
@@ -12102,6 +15381,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk5_viability_domain` (Viability Domain)
 - Cited by: `proof:bk5_complexity_stability_tradeoff`; `proof:bk5_operator_convergence`; `proof:bk5_operators_evolve`
 - Macros used: `\MC`, `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-076`
+- Witnesses: `Book5Residue.energy_depletes_in_finite_time`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: a strictly positive cost overrun above the sustainable maximum drives the accumulated deficit negative in finite time (Archimedean argument), matching the anchor's finite-time exit claim.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12131,6 +15421,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:152
 - Cited by: `axiom:bk5_metabolically_bounded_reflection` (Metabolically Bounded Reflection); `corollary:bk5_complexity_stability_tradeoff` (Complexity Stability Tradeoff); `proof:bk5_complexity_stability_tradeoff`; `proof:bk5_complexity_stability_tradeoff_cor`; `proof:bk5_fixed_metabolic_capacity`; `proof:bk5_metabolic_capacity_non_decreasing`; ... +2 more
 - Macros used: `\MC`, `\freeenergy`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-077`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`, `Book5Residue.energy_depletes_in_finite_time`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: MC is treated as an opaque nonnegative real parameter; its two alternative characterizations (time-average free energy vs max sustainable drift norm) are not modeled or shown equivalent.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The Metabolic Capacity $MC(S)$ of a symbolic system $S$ represents its sustained ability to maintain viability (cf. Def. definition:bk2_symbolic_free_energy). It may be quantified by either: \[ MC(S) &:= leftlangle freeenergy(S) rightrangle_t > 0, \\ text{or} MC(S) &:= max left{ \|D\| middle| M_{meta} text{ can sustain } freeenergy > 0 right}. \] Cf. Def. definition:bk4_collapse_of_symbolic_ide for collapse onset.
@@ -12144,6 +15445,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: `definition:bk5_metabolic_capacity_mc_` (Metabolic Capacity $\MC$); `theorem:bk5_complexity_stability_tradeoff` (Complexity-Stability Tradeoff)
 - Cited by: none
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-098`
+- Witnesses: `Book5Op.metabolic_capacity_monotone`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: Metabolic capacity non-decreasing in energy reserves.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12187,6 +15499,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:1549`
 - Cited by: `definition:bk5__operator_viability_set_v` (Operator Viability Set $\mathcal{V}_{\text{op}}$); `demonstratio:bk8_symbolic_unkotting` (Symbolic Unknotting); `proof:bk5__srmf_operator_adaptation`; `proof:bk5_operator_convergence`; `proof:bk5_operator_evolution`; `proposition:bk5_operator_evolution` (Operator Evolution); ... +4 more
 - Macros used: `\Fproc`, `\Op`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-101`
+- Witnesses: `Book5OperatorSelection.exists_process_minimizer`, `Book5OperatorSelection.rejects_strictly_suboptimal_incumbent`, `Book5OperatorSelection.selected_le_incumbent`, `Book5OperatorSelection.viability_alone_does_not_force_operator_argmin`, `Book5StatefulOperatorLearning.boolFeedbackLaw_responds`, `Book5StatefulOperatorLearning.feedback_response_does_not_force_inventory_change`, `Book5StatefulOperatorLearning.step_comparatorRegret_nonpos`, `Book5StatefulOperatorLearning.step_current`
+- Countermodels: `Book5OperatorSelection.viability_alone_does_not_force_operator_argmin`, `Book5StatefulOperatorLearning.feedback_response_does_not_force_inventory_change`
+- Conditions: explicit minimizer certificate for each transition; explicit selection certificate for SRMF consequences; feedback-indexed real-valued process objective; finite nonempty available operator inventory; finite nonempty updated operator inventory; inventory update and selection policy supplied independently of viability; real-valued process free energy
+- Formal boundary: Conditional stateful selection kernel: a supplied feedback-indexed learning law updates an admissible inventory, selects a certified process-free-energy minimizer, records the incumbent, and has nonpositive one-step comparator regret. A concrete law responds to feedback without forcing inventory change. Viability alone neither supplies this law nor proves fair or asymptotic convergence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 An SRMF operator learner carries at time $t$ a nonempty admissible inventory $A_tsubseteqOp(M)$, an incumbent $mathcal O_tin A_t$, and an ordered history $H_t$. Given feedback $y_t$, a supplied learning law specifies: - a nonempty updated inventory $A_{t+1}=U(y_t,A_t,mathcal O_t,H_t)$; - a feedback-indexed process objective $Fproc^{y_t}:A_{t+1}tomathbb R$; and - a selected operator $mathcal O_{t+1}in A_{t+1}$ certified by \[ Fproc^{y_t}(mathcal O_{t+1}) le Fproc^{y_t}(mathcal O) (mathcal Oin A_{t+1}).
@@ -12214,6 +15537,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1581`
 - Cites: `assumption:bk5_displacement_convexity` (Displacement Convexity of the Process Free Energy); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `proposition:bk5_operator_evolution` (Operator Evolution); `subsec:bk4_ttie_operator_algebra` (TTIE Operator Algebra); ... +1 more
 - Cited by: `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `demonstratio:bk8_symbolic_unkotting` (Symbolic Unknotting); `proof:bk5_operator_evolution`; `proof:bk5_operators_evolve`; `proof:bk8_sr_convergence`; ... +10 more
 - Macros used: `\Fproc`, `\MC`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-095`
+- Witnesses: `Book5Op.contraction_flow_converges`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: SRMF convergence to a fixed point (contraction-Banach); the Wasserstein O(1/t) rate stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12243,6 +15577,17 @@ Role: `axiom` | Type: `axiom` | Book: `book5` | Source: `book5.tex:1608`
 - Cited by: `corollary:bk5__metabolically_bounded_reflection_corollary`; `proof:bk5__metabolically_bounded_reflection_corollary`
 - Macros used: `\MC`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-078`
+- Witnesses: `Book5Residue.max_recursive_depth_bound`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $B := f(MC(S))$ with $f$ non-decreasing and $f(MC) leq MC$ (cf. Def. definition:bk5_metabolic_capacity_mc_). Then: \[ \| D R \|_g leq B. \]
@@ -12256,6 +15601,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:1615`
 - Cites: `axiom:bk5_metabolically_bounded_reflection` (Metabolically Bounded Reflection)
 - Cited by: none
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-079`
+- Witnesses: `Book5Residue.max_recursive_depth_bound`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12299,6 +15655,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1632`
 - Cited by: `proof:bk5_operators_evolve`; `proposition:bk5_operators_evolve`
 - Macros used: `\Fproc`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-102`
+- Witnesses: `Book5OperatorAdaptation.below_threshold_alone_does_not_force_adaptation`, `Book5OperatorAdaptation.gradientStep_displacement`, `Book5OperatorAdaptation.process_descent_can_increase_execution_cost`, `Book5OperatorAdaptation.quadratic_processFreeEnergy_descent`, `Book5OperatorAdaptation.refinementVelocity_eq_of_below`, `Book5OperatorAdaptation.refinementVelocity_pos`, `Book5StatefulOperatorLearning.step_records_incumbent`, `Book5StatefulOperatorLearning.two_steps_retain_ordered_history`
+- Countermodels: `Book5OperatorAdaptation.below_threshold_alone_does_not_force_adaptation`
+- Conditions: effectiveness below threshold; explicit gradient update law; explicit minimizer certificate for each transition; explicit positive feedback gain; feedback-indexed real-valued process objective; finite nonempty updated operator inventory; inventory update and selection policy supplied independently of viability; stable quadratic step size in [0,2]
+- Formal boundary: Conditional adaptation kernel: an explicit positive-gain law converts effectiveness shortfall into proportional pressure, and an explicit gradient step descends quadratic process free energy for step size in [0,2]. Stateful execution retains ordered incumbents, while a countermodel shows the threshold inequality alone cannot force motion. General steepest descent, calibration, and continuous or asymptotic evolution remain premises rather than consequences.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let the stateful law of Ax. axiom:bk5_srmf_operator_selection_evolution be supplied. Suppose $mathcal E_{eff}[mathcal O_t,S_t]<theta_{crit}$, choose a feedback gain $g>0$, and define the refinement velocity \[ v_t=gmax{theta_{crit}- mathcal E_{eff}[mathcal O_t,S_t],0}. \] Then $v_t=g(theta_{crit}-mathcal E_{eff})>0$. If the parameter update is additionally supplied as a negative-gradient step for $Fproc^{y_t}$ with a step size certified for descent, the process objective is non-increasing.
@@ -12327,6 +15694,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:167
 - Cited by: `proof:bk5_operators_evolve`; `proposition:bk5_operators_evolve`
 - Macros used: `\Fproc`, `\Op`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-080`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 \[ V_{text{op}} := left{ O in Op(M) mid Fproc[O, S] < theta_{text{proc}} right} text{(cf. Def. definition:bk5_process_free_energy, Ax. axiom:bk5_srmf_operator_selection_evolution)}. \]
@@ -12340,6 +15718,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:1
 - Cites: `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk5__operator_viability_set_v` (Operator Viability Set $\mathcal{V}_{\text{op}}$); `theorem:bk5__srmf_operator_adaptation` (Certified SRMF Operator Adaptation); `theorem:bk5_operator_convergence` (Operator Convergence)
 - Cited by: `proof:bk5_complexity_stability_tradeoff`; `theorem:bk5_complexity_stability_tradeoff` (Complexity-Stability Tradeoff)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-097`
+- Witnesses: `Book5Op.contraction_flow_unique_fixed_point`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: Operators evolve to and rest at the unique viable fixed point.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12369,6 +15758,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:169
 - Cited by: `proof:bk5_complexity_stability_tradeoff`; `theorem:bk5_complexity_stability_tradeoff` (Complexity-Stability Tradeoff)
 - Macros used: `\Op`, `\freeenergy`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK5-081`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: C, S, E_maint are represented as the structure's C, S, and the derived product form, packaged with the nonnegativity/positivity side-conditions as named fields (no axioms).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For an operator $OinOp(M)$ acting on system $S$ we define: - Operator complexity $C(O):=E_{text{cost}}[O]$, the cost-bearing structure of $O$ in the process free energy (Def. definition:bk5_process_free_energy). - Stability margin $S(S):=inf_tbig(freeenergy(rho_t)-freeenergy^{min}big)$, the viability reserve held against drift along the trajectory (Def. definition:bk2_symbolic_free_energy, Def. definition:bk5_viability_domain).
@@ -12382,6 +15782,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1702`
 - Cites: `definition:bk5_complexity_stability_maintenance` (Operator Complexity, Stability Margin, Maintenance Cost); `proposition:bk5_operators_evolve`
 - Cited by: `corollary:bk5_complexity_stability_tradeoff` (Complexity Stability Tradeoff); `proof:bk5_complexity_stability_tradeoff_cor`; `proof:bk5_metabolic_capacity_non_decreasing`; `proposition:bk5_metabolic_capacity_non_decreasing`
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-082`
+- Witnesses: `Book5Residue.MetabolicBudget.complexity_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12410,6 +15821,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:1721`
 - Cites: `definition:bk5_metabolic_capacity_mc_` (Metabolic Capacity $\MC$); `theorem:bk5_complexity_stability_tradeoff` (Complexity-Stability Tradeoff)
 - Cited by: none
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-083`
+- Witnesses: `Book5Residue.admissible_complexity_mono`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12466,6 +15888,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1748`
 - Cites: none
 - Cited by: `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `proof:bk5_symbolic_eigenlife`; `proposition:bk5_golden_ratio_thermodynamic_optimum` (Golden Ratio as Thermodynamic Optimum in the Balanced Regime)
 - Macros used: `\MC`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-103`
+- Witnesses: `Book5ReflectiveAccuracy.GeometricRecursionBudget.power_le_capacity_ratio_add_one`, `Book5ReflectiveAccuracy.ReflectiveAccuracyCertificate.beta_nonneg`, `Book5ReflectiveAccuracy.ReflectiveAccuracyCertificate.fidelity_le_log_capacity`, `Book5ReflectiveAccuracy.ReflectiveFidelityProcess.fidelity_le_linear`, `Book5ReflectiveAccuracy.capacity_alone_does_not_bound_unconstrained_fidelity`, `Book5ReflectiveAccuracy.depth_budget_without_marginal_control_countermodel`, `Book5ReflectiveAccuracy.fidelityEnvelope_nonneg`, `Book5ReflectiveAccuracy.fidelity_le_log_of_depth_bound`
+- Countermodels: `Book5ReflectiveAccuracy.capacity_alone_does_not_bound_unconstrained_fidelity`, `Book5ReflectiveAccuracy.depth_budget_without_marginal_control_countermodel`
+- Conditions: explicit nonnegative depth-to-log calibration; nonnegative metabolic capacity and geometric cost admissibility; positive base cost and growth; uniform nonnegative marginal fidelity gain; zero-depth fidelity normalization
+- Formal boundary: Depth-indexed reconstruction: a reflective fidelity process with zero-depth normalization and uniform marginal gain telescopes to a linear depth bound. A positive geometric recursion budget derives the dimensionless power bound. An explicit log-coordinate calibration composes these into the source envelope with nonnegative β. A countermodel shows depth and capacity cannot bound unrestricted fidelity.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12551,6 +15984,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:182
 - Cited by: `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `lemma:bk5_phi_critical_resonant_norm` ($\varphi$ as Balanced Memory Resonance); `proof:bk5_golden_ratio_curvature_scalar` (Balanced curvature ratio); `proof:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant via Balanced Memory Algebra); `proof:bk5_phi_critical_resonant_norm` ($\varphi$ as balanced memory resonance); `proof:bk5_symbolic_eigenlife`; ... +6 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-016`
+- Witnesses: `balanced_memory_tendsto_gold`, `closureMatrix_eigen_gold`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Matrix and asymptotic ratio.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S_n$ denote the $n$th observer-resolved symbolic state and let $a_n=ell_O(S_n)geq 0$ be a scalar amplitude extracted by a positive observer channel $ell_O$. The recursion has a balanced two-step memory closure when, after normalizing the present-state channel to unit weight, the only retained reflective memory channel has the same observer-visible weight: \[ a_{n+1}=a_n+a_{n-1}, X_{n+1}=A X_n, X_n=a_n\\ a_{n-1}, A=1&1\\1&0. \] The first coefficient is fixed by the choice of present-state unit;
@@ -12564,6 +16008,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:1848`
 - Cites: none
 - Cited by: `proof:bk4_golden_event_horizon_spiral` (Golden spiral from balanced closure on the wheel); `proof:bk5_golden_rule_reciprocity` (Golden Rule reciprocity is the balanced closure); `theorem:bk4_golden_event_horizon_spiral` (Golden Event Horizon Spiral); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory); `theorem:bk5_golden_rule_reciprocity` (Golden Rule Reciprocity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-017`
+- Witnesses: `Book5.balanced_observer_weights_unique`
+- Countermodels: none
+- Conditions: nonnegative reciprocity weight; strict positivity for strict regime comparisons
+- Formal boundary: Normalization and equal calibration uniquely select unit weights.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12592,6 +16047,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1886`
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `definition:bk5_spectral_radius_of_coupl` (Spectral Radius of Coupling Tensor); `lemma:bk5_balanced_observer_normalization` (Balanced Observer Normalization Selects the Closure Matrix)
 - Cited by: `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band); `definition:bk5_symbolic_curvature_operator_spectrum` (Symbolic Curvature Operator Spectrum); `proof:bk4_golden_event_horizon_spiral` (Golden spiral from balanced closure on the wheel); `proof:bk5_complementary_constants` (Complementarity of first fracture and balanced resonance); `proof:bk5_fundamental_norm_fracture` (Norm-induced fracture theorem); ... +19 more
 - Macros used: `\drift`, `\reflect`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-018`
+- Witnesses: `closureMatrix_eigen_gold`, `gold_unique_positive_root`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Arithmetic spectral kernel; commutator interpretation is not certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12649,6 +16115,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:1953`
 - Cited by: `definition:bk8_identitystability` (Stability of Symbolic Identity \identitystability); `definition:bk8_recursive_symbolic_metaboloic_cycle` (Symbolic Metabolic Cycle $\Omega_{\mathrm{MP}}$); `lemma:bk7_involutive_dual_symmetry` (Involutive Dual Symmetry of Symbolic Power and Uncertainty); `proof:bk5_map_mad_mas_trichotomy`; `proof:bk8_biological_phase_transition`; `scholium:bk8_autonomous_repair_systems_expanded` (Autonomous Repair Systems as Metabolic Projections — An Expanded View); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-084`
+- Witnesses: `Book5Residue.closureMatrix_disc_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system exhibits eigenlife in the balanced two-step memory regime when its observer-resolved dominant mode is governed by the positive Perron root $varphi$. Subcritical modes with spectral radius below $1$ decay under iteration, while supercritical unbalanced modes require additional renormalization to avoid loss of bounded symbolic identity. Thus $varphi$ is the unique spectral attractor for recursively stable symbolic persistence within the balanced closure of Def.
@@ -12691,6 +16168,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:197
 - Cited by: `proof:bk7_map_compatible_reciprocity` (Two-way fixed point as MAP Nash equilibrium); `proposition:bk7_map_compatible_reciprocity` (MAP-Compatible Reciprocity); `scholium:bk5_imagination_covenant_branch_selection` (Imagination as Covenant Branch Selection); `theorem:bk5_map_mad_mas_trichotomy` (MAD--MAP--MAS Trichotomy)
 - Macros used: `\Membrane`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-085`
+- Witnesses: `Book5Residue.quadratic_no_real_root_of_disc_neg`, `Book5Residue.quadratic_real_root_neg`, `Book5Residue.quadratic_real_root_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the discriminant-based real/complex spectral split underlying MAD vs MAP/MAS is proved generically; the specific MAP-vs-MAS distinction (which real eigendirection is dominant) is not captured.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $Membrane_A,Membrane_B$ interact through the symbolic covenant $C_{AB}$ (Cor. corollary:bk5_map_evolutionary_advantag), and let $C_{AB}$ be the induced linearized mutual-reflection operator on the joint tangent space, governing $X_{n+1}=C_{AB}X_n$ for the paired state $X=(psi_A,psi_B)$. Order the dyad by the reflective coupling stability parameter $Lambda_{AB}$ (Def. definition:bk5_reflective_coupling_stab) about its bifurcation manifold $Lambda_{AB}=1$ (Def. definition:bk5_symbolic_bifurcation_man).
@@ -12704,6 +16192,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:1992`
 - Cites: `definition:bk2_symbolic_phase_transitio` (Symbolic Phase Transition); `definition:bk5_map_mad_mas_band` (The MAD--MAP--MAS Band)
 - Cited by: `proof:bk1_conditional_genericity_of_symbolic_phase_transitions` (Transversal discriminant crossing stabilized above the critical dimension); `proof:bk1_realization_of_symbolic_phase_transitions`; `proof:bk9_good_as_lyapunov_basin` (Lyapunov descent, threshold selection, and basin identity); `scholium:bk5_imagination_covenant_branch_selection` (Imagination as Covenant Branch Selection); `theorem:bk1_conditional_genericity_of_symbolic_phase_transitions` (Conditional Genericity of Symbolic Phase Transitions); `theorem:bk9_good_as_lyapunov_basin` (The Good as a Lyapunov Basin)
 - Macros used: `\Membrane`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-086`
+- Witnesses: `Book5Residue.closureMatrix_disc_pos`, `Book5Residue.quadratic_no_real_root_of_disc_neg`, `Book5Residue.quadratic_real_root_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12775,6 +16274,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2031`
 - Cited by: `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor); `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos); `scholium:bk5_constant_of_becoming` (The Constant of Becoming)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-087`
+- Witnesses: `Book5Residue.balanced_memory_tendsto_gold_scaled`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the constant-rescaled-Fibonacci case of the ratio limit is proved; the anchor's general two-term holonomy/curvature recurrence (arbitrary balanced-closure initial data) is not derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A fuzzy symbolic manifold $tilde{M}$ is balanced scale-resonant along a growth path $gamma$ when the observer-resolved holonomy and curvature distortion amplitudes \[ h_n=\|H_{O,n}(gamma,f)\|, k_n=\|kappa_{O,n}(f,int f)\| \] form the projective coordinates of a balanced two-step symbolic memory closure (Def. definition:bk5_balanced_two_step_memory_closure), with $k_n>0$. For every such balanced scale-resonant symbolic field $f$, \[ lim_{ntoinfty}frac{h_n}{k_n}=varphi.
@@ -12845,6 +16355,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cited by: `scholium:bk5_experimental_predictions` (Experimental Predictions); `scholium:bk5_life_on_edge_of_chaos` (Life on the Edge of Chaos)
 - Macros used: `\drift`, `\reflect`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-088`
+- Witnesses: `Book5Residue.golden_ratio_thermodynamic_min`, `Book5Residue.golden_ratio_thermodynamic_optimum_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \[ r=frac{W_{coh}}{W_{nov}} \] be the positive observer-resolved ratio of coherence-preserving work (negentropy from Reflection, $reflect$) to novelty-generating exploration (entropy from Drift, $drift$). In a balanced two-step metabolic regime, suppose the free-energy contribution of this ratio is the spectral-misalignment Lyapunov term \[ F_{bal}(r)=F_0+alpha(log r-logvarphi)^2, alpha>0. \] Then $F_{bal}$ is minimized if and only if $r=varphi$ (cf. Def. definition:bk2_symbolic_free_energy, Thm.
@@ -12901,6 +16422,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:214
 - Cited by: `lemma:bk5_shortest_path_representability` (Shortest Path Representability Criterion)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-089`
+- Witnesses: `Book5Residue.compression_ratio_R2`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In a fuzzy symbolic manifold with orthogonal basis vectors ${e_1, e_2, ldots}$, a diagonal transition is any symbolic path that cannot be decomposed into integer-aligned steps without introducing irrational scaling factors (cf. Def. definition:bk5_fuzzy_symbolic_manifold).
@@ -12914,6 +16446,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2152`
 - Cites: none
 - Cited by: `lemma:bk5_shortest_path_representability` (Shortest Path Representability Criterion); `proof:bk5_complementary_constants` (Complementarity of first fracture and balanced resonance); `proposition:bk5_complementary_constants` (Complementary Constants: Fracture vs Resonance); `remark:bk5_curvature_vs_chaos` (Scale-Resonant Curvature vs Symbolic Chaos); `scholium:bk5_experimental_predictions` (Experimental Predictions); `theorem:bk5_fundamental_dichotomy` (Fundamental Dichotomy of Symbolic Constants)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-020`
+- Witnesses: `diag_fracture_ratio`, `sqrt2_first_fracture`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Integer two-support lower bound and elementary diagonal ratio.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -12942,6 +16485,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cites: `definition:bk4_fragmented_identity` (Fragmented Identity); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory); `theorem:bk5_sqrt2_maximal_fracture` ($\sqrt{2}$ as the First Orthogonal Fracture Constant)
 - Cited by: `theorem:bk5_fundamental_dichotomy` (Fundamental Dichotomy of Symbolic Constants)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-022`
+- Witnesses: `constants_complementary`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Algebraic separation of phi and sqrt(2).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13013,6 +16567,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2256`
 - Cited by: `demonstratio:bk5_diagonal_dissociation` (The Diagonal Dissociation Principle); `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-023`
+- Witnesses: `constants_complementary`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Arithmetic separation kernel only; the resonance-vs-fracture mechanism reading stays authored prose.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In fuzzy symbolic calculus, the constants $varphi$ and $sqrt{2}$ instantiate two fundamental mechanisms: - Resonant constants (exemplified by $varphi$) selected by balanced recursive memory - Fracture constants (exemplified by $sqrt{2}$) forced by irreducible orthogonal incompatibility This dichotomy reflects the deep structure of symbolic representation under bounded observation (cf. Def. definition:bk5_collapse_resilience_test, Prop. proposition:bk5_complementary_constants, Thm.
@@ -13069,6 +16634,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:228
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-090`
+- Witnesses: `Book5Residue.l1_ge_l2`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A fuzzy symbolic manifold $tilde{M}$ belongs to symbolic integrability class $I_p$ if its dominant geometric transitions are governed by the $ell_p$ norm (cf. Def. definition:bk5_fuzzy_symbolic_manifold), where symbolic paths of length $delta$ satisfy: $$\|vec{v}\|_p = left(sum_{i=1}^n |v_i|^pright)^{1/p} leq delta + epsilon_O$$ for observer resolution $epsilon_O$. The class $I_p$ determines the symbolic decomposability of transitions within $tilde{M}$.
@@ -13083,6 +16659,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:228
 - Cited by: `definition:bk5_symbolic_curvature_operator_spectrum` (Symbolic Curvature Operator Spectrum)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-091`
+- Witnesses: `Book5Residue.curvature_control_p2_nonneg`, `Book5Residue.l1_ge_l2`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a nonzero transition $vec{v}$ with support $supp(vec{v})={i:v_ineq0}$ and $s(vec{v})=|supp(vec{v})|$, the symbolic curvature control parameter in class $I_p$ is \[ kappa_p(vec{v})=frac{\|vec{v}\|_1}{\|vec{v}\|_p}-1, 1leq pleqinfty. \] Here $\|vec{v}\|_1$ is the axis-generated symbolic length and $\|vec{v}\|_p$ is the geometric length in the dominant norm. Thus $kappa_p$ measures the extra axis-symbolic cost paid to represent a geometrically shorter transition.
@@ -13096,6 +16683,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2301`
 - Cites: none
 - Cited by: `definition:bk5_symbolic_compression_experiment` (Symbolic Compression Experiment); `proof:bk5_complete_symbolic_regime_classification` (Regime classification); `proof:bk5_fractal_dimension_connection` (Effective support dimension); `proof:bk5_fundamental_norm_fracture` (Norm-induced fracture theorem); `proof:bk5_shortest_path_representability` (Representability Proof); `proof:bk5_symbolic_integrability_classes` (Classification Proof); ... +6 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-021`
+- Witnesses: `Book5.axisCostOn_le_card_rpow_mul_lpCostOn`, `Book5.diagonal_l1_l2_ratio`, `Book5.infinity_ratio_bounds`, `Book5.infinity_sharp_iff_equal_magnitudes`, `Book5.lpCostOn_le_axisCostOn`, `Book5.sharp_norm_bound_iff_equal_magnitudes`
+- Countermodels: none
+- Conditions: axis and Lp costs are the explicit finite-support definitions in Book5Norm.lean; finite coordinate set; finite nonempty support; named nonempty finite support; nonzero common magnitude for equality witness; nonzero diagonal amplitude; positive supremum cost for division-form ratio bounds; real exponent p > 1; real exponent p >= 1; real-valued coordinates; support size at least two for logarithmic dimension; two-coordinate special case
+- Formal boundary: Complete finite-support kernel: lower and cardinality upper bounds, finite p>1 and Linfinity equality characterizations, and the elementary diagonal values.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13125,6 +16723,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cited by: `proof:bk5_complete_symbolic_regime_classification` (Regime classification); `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-037`
+- Witnesses: `Book5.elementary_spectrum_values`, `Book5.support_collapse_forgets_distribution`, `Book5.symbolicTorsion_one`, `Book5.symbolicTorsion_two_two`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite support represented by Fin n; finite-support norm kernel from LPS-P20 through LPS-P24; nonzero coordinate magnitude and positive support for the ratio; positive finite real p; support size at least two for logarithmic effective dimension; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Typed transition diagnostics certify axis integrability, Euclidean fracture, and support collapse, including a concrete loss-of-distribution witness.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Fuzzy symbolic manifolds can be rigorously classified into three fundamental integrability classes (cf. Thm. theorem:bk5_lp_norm_fracture_hierarchy): - Class $I_1$: Symbolically Reducible - geometric and axis-symbolic lengths agree. - Class $I_2$: Symbolically Fractured - elementary orthogonal diagonals carry ratio $sqrt{2}$. - Class $I_infty$: Support-Collapsed - length depends only on the largest coordinate, so distribution inside the support is lost.
@@ -13152,6 +16761,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2366`
 - Cites: none
 - Cited by: `scholium:bk5_critical_point_p2` (Critical Point at p=2)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-039`
+- Witnesses: `Book5.equalMagnitude_ratio`, `Book5.symbolicTorsionInfinity_eq_ratio_sub_one`, `Book5.symbolicTorsionInfinity_tendsto_atTop`, `Book5.symbolicTorsion_eq_equalMagnitude_ratio_sub_one`, `Book5.symbolicTorsion_mono_exponent`, `Book5.symbolicTorsion_one`, `Book5.symbolicTorsion_two_two`
+- Countermodels: none
+- Conditions: finite support represented by Fin n; named nonempty finite support; nonzero common magnitude for equality witness; nonzero coordinate magnitude and positive support for the ratio; positive finite real p; positive supremum cost for division-form ratio bounds; support size at least two for logarithmic dimension; support size at least two for logarithmic effective dimension
+- Formal boundary: Exact finite-positive-p and Linfinity formulas, special values, monotonicity in positive finite p, and divergence of Linfinity torsion along unbounded support.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13195,6 +16815,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:2406`
 - Cited by: `proof:bk5_shortest_path_representability` (Representability Proof)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-041`
+- Witnesses: `Book5.diagonal_symbolic_longer`, `Book5.shortestGeometric_le_shortestSymbolic`, `Book5.symbolicDecoherence_eq_zero_iff_has_symbolic_geodesic`, `Book5.symbolicDecoherence_pos_iff`
+- Countermodels: none
+- Conditions: finite nonempty geometric and symbolic candidate sets; positive integer n for strict diagonal gap; shared real-valued path cost; symbolic candidates included in geometric candidates
+- Formal boundary: Finite admissible-path kernel with symbolic candidates explicitly included in geometric candidates; proves the exact minimum and representability criteria.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic fracture arises precisely when the geometrically shortest transition has smaller $ell_p$ length than every axis-generated symbolic path realizing the same endpoint (cf. Def. definition:bk5_diagonal_transition, Thm. theorem:bk5_sqrt2_maximal_fracture).
@@ -13222,6 +16853,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:2441`
 - Cites: `proof:bk5_shortest_path_representability` (Representability Proof)
 - Cited by: `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture)
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-042`
+- Witnesses: `Book5.diagonalDecoherence_formula`, `Book5.diagonalDecoherence_pos`, `Book5.symbolicDecoherence_eq_zero_iff`, `Book5.symbolicDecoherence_eq_zero_iff_has_symbolic_geodesic`, `Book5.symbolicDecoherence_nonneg`
+- Countermodels: none
+- Conditions: finite nonempty geometric and symbolic candidate sets; positive integer n for strict diagonal gap; shared real-valued path cost; symbolic candidates included in geometric candidates
+- Formal boundary: For finite path families, decoherence is the nonnegative excess symbolic minimum, vanishing exactly when a symbolic geodesic exists; the diagonal gap is exact.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13265,6 +16907,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-040`
+- Witnesses: `Book5.effectiveSupportDimensionInfinity_eq_two`, `Book5.effectiveSupportDimensionInfinity_log_ratio`, `Book5.effectiveSupportDimension_eq`, `Book5.effectiveSupportDimension_one`, `Book5.effectiveSupportDimension_two`
+- Countermodels: none
+- Conditions: finite support represented by Fin n; named nonempty finite support; nonzero common magnitude for equality witness; nonzero coordinate magnitude and positive support for the ratio; positive finite real p; positive supremum cost for division-form ratio bounds; support size at least two for logarithmic dimension; support size at least two for logarithmic effective dimension
+- Formal boundary: The logarithmic diagnostic is 2-1/p for finite p on support at least two, with the support-one convention and p=1,2,infinity values certified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For an equal-magnitude transition $vec{v}$ with support size $s=s(vec{v})geq2$, define its effective support dimension at norm exponent $p$ by \[ D_{eff}(p,s) =1+frac{logleft(\|vec{v}\|_1/\|vec{v}\|_pright)}{log s}. \] Then \[ D_{eff}(p,s)=2-frac{1}{p}, D_{eff}(1,s)=1, D_{eff}(2,s)=frac32, D_{eff}(infty,s)=2. \] For support size $s=1$, the transition is axis-integrable and the effective dimension is defined to be $D_{eff}=1$.
@@ -13293,6 +16946,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:250
 - Cited by: `definition:bk5_symbolic_regime_detection` (Symbolic Regime Detection Experiment)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-092`
+- Witnesses: `Book5Residue.compression_ratio_R1`, `Book5Residue.compression_ratio_R2`, `Book5Residue.l1_eq_card_mul_c`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 To test the $ell_p$-fracture theory, design an experiment measuring symbolic compression ratio (cf. Thm. theorem:bk5_lp_norm_fracture_hierarchy): $$R_p = frac{text{Length of symbolic encoding}}{text{Length of geometric path}}$$ for various $p$ values. The theory predicts: - $R_1 = 1$ (perfect compression) - $R_2 = sqrt{2}$ (minimal fracture) - $R_infty = s(vec{v})$ for equal-magnitude transitions with support size $s(vec{v})$
@@ -13306,6 +16970,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2518`
 - Cites: `corollary:bk5_symbolic_decoherence_theory` (Symbolic Decoherence Theory); `proposition:bk5_symbolic_integrability_classes` (Symbolic Integrability Classes); `theorem:bk5_fundamental_dichotomy` (Fundamental Dichotomy of Symbolic Constants); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory); `theorem:bk5_lp_norm_fracture_hierarchy` (\(\ell_p\)-Norm Fracture Hierarchy)
 - Cited by: `definition:bk6_symbolic_bifurcation` (Symbolic Bifurcation); `demonstratio:bk5_geometry_symbol_unity` (The Deep Unity of Geometry and Symbol); `remark:bk5_open_questions` (Open Questions); `theorem:bk5_grand_unified_symbolic_geometric` (Product Theorem of the Symbolic-Geometric Interface)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-038`
+- Witnesses: `Book5.diagonalDecoherence_pos`, `Book5.fundamental_norm_fracture_kernel`, `Book5.infinity_sharp_iff_equal_magnitudes`, `Book5.sharp_norm_bound_iff_equal_magnitudes`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite nonempty geometric and symbolic candidate sets; finite nonempty support; finite-support norm kernel from LPS-P20 through LPS-P24; named nonempty finite support; positive integer n for strict diagonal gap; real exponent p > 1; real-valued coordinates; shared real-valued path cost; symbolic candidates included in geometric candidates; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Finite-support typed kernel assembling all norm regimes, equality cases, support collapse, diagonal decoherence, and the distinct memory resonance channel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13363,6 +17038,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2579`
 - Cited by: `definition:bk5_symbolic_curvature_operator_spectrum` (Symbolic Curvature Operator Spectrum); `lemma:bk5_phi_critical_resonant_norm` ($\varphi$ as Balanced Memory Resonance); `proposition:bk5_complete_symbolic_regime_classification` (Complete Symbolic Regime Classification)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-024`
+- Witnesses: `Book5.balancedSpectrum_memory`, `Book5.elementary_spectrum_values`, `Book5.euclidean_balanced_product_spectrum`, `Book5.norm_and_memory_coordinates_independent`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite-support norm kernel from LPS-P20 through LPS-P24; transition diagnostics are local classifications, not agent identities
+- Formal boundary: The norm and memory spectra are explicit independent product coordinates; sqrt(2) and phi coexist without identification.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic behavior of fuzzy manifolds separates into two coupled spectra: \[ S_{norm}(p,vec{v}) =frac{\|vec{v}\|_1}{\|vec{v}\|_p}, S_{mem} =rho1&1\\1&0=varphi. \] The norm spectrum is governed by Thm. theorem:bk5_lp_norm_fracture_hierarchy: $S_{norm}=1$ at $p=1$, $S_{norm}=sqrt{2}$ for the elementary Euclidean diagonal, and $S_{norm}=s(vec{v})$ at $p=infty$ for equal-magnitude support size $s(vec{v})$. The memory spectrum is governed by Thm.
@@ -13391,6 +17077,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:261
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK5-093`
+- Witnesses: `Book5Residue.curvature_control_p2_nonneg`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a fuzzy symbolic manifold $tilde{M}$ with observer resolution $epsilon_O$, the Symbolic Curvature Operator $hat{K}_p$ acts on symbolic transitions $vec{v}$ according to (cf. Def. definition:bk5_symbolic_curvature_control, Thm. theorem:bk5_symbolic_norm_spectrum): \[ hat{K}_p[vec{v}] =left(frac{\|vec{v}\|_1}{\|vec{v}\|_p}-1right)vec{v} =kappa_p(vec{v})vec{v}. \] For balanced memory-coupled transitions, the separate memory multiplier is the Perron ratio $varphi$ from Thm.
@@ -13404,6 +17101,17 @@ Role: `lemma` | Type: `lemma` | Book: `book5` | Source: `book5.tex:2633`
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `theorem:bk5_symbolic_norm_spectrum` (Symbolic Norm Spectrum)
 - Cited by: `corollary:bk5_phi_centrality_principle` (The $\varphi$-Centrality Principle); `proof:bk5_complete_symbolic_regime_classification` (Regime classification); `proof:bk5_phi_centrality_principle`; `proposition:bk5_complete_symbolic_regime_classification` (Complete Symbolic Regime Classification)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-043`
+- Witnesses: `Book5.balancedSpectrum_memory`, `Book5.balanced_memory_resonance_unique`, `Book5.euclidean_balanced_product_spectrum`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite-support norm kernel from LPS-P20 through LPS-P24; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Phi is the unique positive balanced-recursion root in the memory coordinate and is proved distinct from the Euclidean norm ratio.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13433,6 +17141,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cited by: `corollary:bk5_phi_centrality_principle` (The $\varphi$-Centrality Principle); `proof:bk5_phi_centrality_principle`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-025`
+- Witnesses: `Book5.changing_norm_preserves_balanced_memory`, `Book5.elementary_spectrum_values`, `Book5.norm_and_memory_coordinates_independent`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite-support norm kernel from LPS-P20 through LPS-P24; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Transition-level diagnostic classification with independently varying norm and memory axes; not an essential identity of a manifold or agent.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Every fuzzy symbolic manifold with axis-generated paths decomposes along two independent diagnostic axes (cf. Thm. theorem:bk5_symbolic_norm_spectrum, Lem. lemma:bk5_phi_critical_resonant_norm): - Norm-fracture regime: $p=1$ gives exact axis integrability; $p=2$ gives elementary Euclidean diagonal fracture $sqrt{2}$; $p=infty$ gives support collapse. - Memory-resonance regime: balanced two-step recursive memory gives the Perron ratio $varphi$.
@@ -13460,6 +17179,16 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2690`
 - Cites: none
 - Cited by: `definition:bk5_symbolic_regime_detection` (Symbolic Regime Detection Experiment)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-045`
+- Witnesses: `Book5.ObserverSpectralDecomposition.component_is_invariant`, `Book5.ObserverSpectralDecomposition.coordinate_representation_unique`, `Book5.ObserverSpectralDecomposition.spectral_decomposition_kernel`, `Book5.ObserverSpectralDecomposition.sum_components`
+- Countermodels: none
+- Formal boundary: Given the stated observer-resolved linear equivalence and diagonal evolution law, four-channel reconstruction, uniqueness, and invariance are proved. Existence of such a decomposition is not asserted universally.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13489,6 +17218,17 @@ Role: `corollary` | Type: `corollary` | Book: `book5` | Source: `book5.tex:2720`
 - Cited by: `scholium:bk5_golden_rule_covenant` (The Golden Rule as a Recursive Covenant)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-044`
+- Witnesses: `Book5.balanced_memory_converges_to_spectrum_memory`, `Book5.balanced_memory_resonance_unique`, `Book5.euclidean_balanced_product_spectrum`
+- Countermodels: none
+- Conditions: balanced two-step memory characteristic equation; finite-support norm kernel from LPS-P20 through LPS-P24; transition diagnostics are local classifications, not agent identities
+- Formal boundary: Balanced memory ratios converge to the unique phi coordinate, while sqrt(2) remains a distinct metric-fracture coordinate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The Golden Ratio $varphi$ occupies a central position in the memory component of the symbolic spectrum because it is the positive Perron ratio of balanced two-step recursion (cf. Lem. lemma:bk5_phi_critical_resonant_norm, Prop. proposition:bk5_complete_symbolic_regime_classification). Its centrality is recursive rather than metric: it governs stable memory proportions, while $sqrt{2}$ governs the elementary Euclidean fracture ratio.
@@ -13517,6 +17257,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:273
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-019`
+- Witnesses: `balanced_memory_tendsto_gold`
+- Countermodels: none
+- Conditions: only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements
+- Formal boundary: Balanced Fibonacci memory ratio prediction.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 To empirically validate the product spectrum, measure the symbolic compression ratio and the balanced-memory ratio (cf. Def. definition:bk5_symbolic_compression_experiment, Thm. theorem:bk5_symbolic_manifold_spectral_decomposition): $$R_p = frac{text{Symbolic encoding length}}{text{Geometric path length}}$$ and \[ M_n=frac{a_{n+1}}{a_n}.
@@ -13530,6 +17281,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2755`
 - Cites: `theorem:bk5_fundamental_norm_fracture` (Fundamental Theorem of Norm-Induced Symbolic Fracture); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory)
 - Cited by: `demonstratio:bk5_deep_unity_math_meaning` (The Deep Unity of Mathematics and Meaning); `remark:bk5_open_frontiers` (Open Frontiers); `scholium:bk5_golden_rule_covenant` (The Golden Rule as a Recursive Covenant)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK5-026`
+- Witnesses: `Book5.ObserverSpectralDecomposition.spectral_decomposition_kernel`, `Book5.same_memory_does_not_fix_norm`, `Book5.same_norm_does_not_fix_memory`, `closureMatrix_eigen_gold`
+- Countermodels: `Book5.same_memory_does_not_fix_norm`, `Book5.same_norm_does_not_fix_memory`
+- Conditions: nonzero diagonal amplitude; only the arithmetic, matrix, lattice, and limit content of the cited Book 5 statements; two-coordinate special case
+- Formal boundary: Typed product coordinates and their independence, not a universal manifold semantics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13615,6 +17377,17 @@ Role: `definition` | Type: `definition` | Book: `book5` | Source: `book5.tex:284
 - Cited by: `theorem:bk5_golden_rule_reciprocity` (Golden Rule Reciprocity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-027`
+- Witnesses: `Book5.reciprocityMatrix_eigen`, `Book5.reciprocityRate_characteristic`
+- Countermodels: none
+- Conditions: nonnegative reciprocity weight; strict positivity for strict regime comparisons
+- Formal boundary: Weighted companion matrix and positive eigenpair.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $A,B$ be bounded observer-agents (Def. definition:bk1_bounded_observer) in a symbolic covenant (Def. definition:bk5_symbolic_covenant). For $A$, let $m_nge 0$ be the fidelity of its present model of $B$ and $r_nge 0$ the fidelity of its retained reciprocal memory-$A$'s model of $B$'s model of $A$, i.e.\ how $A$ is held by $B$.
@@ -13628,6 +17401,17 @@ Role: `theorem` | Type: `theorem` | Book: `book5` | Source: `book5.tex:2864`
 - Cites: `definition:bk5_balanced_two_step_memory_closure` (Balanced Two-Step Symbolic Memory Closure); `definition:bk5_two_way_street_tensor` (Two-Way Street reciprocity tensor); `lemma:bk5_balanced_observer_normalization` (Balanced Observer Normalization Selects the Closure Matrix); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory)
 - Cited by: `scholium:bk5_decency_golden_resonance` (Decency, resonance, and the golden spiral of relation); `scholium:bk5_golden_rule_covenant` (The Golden Rule as a Recursive Covenant)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-028`
+- Witnesses: `Book5.reciprocityRate_one`, `Book5.reciprocityRate_subgolden`, `Book5.reciprocityRate_supergolden`
+- Countermodels: none
+- Conditions: nonnegative reciprocity weight; strict positivity for strict regime comparisons
+- Formal boundary: Spectral rate regimes only; ethical interpretation remains authored prose.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13698,6 +17482,17 @@ Role: `proposition` | Type: `proposition` | Book: `book5` | Source: `book5.tex:2
 - Cites: `definition:bk5_symbolic_shade` (Symbolic shade)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK5-104`
+- Witnesses: `Book5ShadeTransfer.ShadeInterface.faithful_comp`, `Book5ShadeTransfer.ShadeInterface.identity_faithful`, `Book5ShadeTransfer.balanced_reciprocity_paints_golden_rate`, `Book5ShadeTransfer.extraction_has_unit_radial_rate`, `Book5ShadeTransfer.faithfulControlTransport_components`, `Book5ShadeTransfer.golden_logRadius_step`, `Book5ShadeTransfer.monotone_encoding_not_semantically_faithful`, `Book5ShadeTransfer.normalized_shade_is_not_multiplicative`, `Book5ShadeTransfer.radial_order_alone_does_not_preserve_shade`, `Book5ShadeTransfer.radius_preservation_implies_control_fidelity`, `Book5ShadeTransfer.shade_preserved_of_radius_preserved`, `Book5ShadeTransfer.shade_without_shadow_price_is_not_control_fidelity`
+- Countermodels: `Book5ShadeTransfer.radial_order_alone_does_not_preserve_shade`, `Book5ShadeTransfer.shade_without_shadow_price_is_not_control_fidelity`
+- Conditions: commuting decoder-after-encode law; exact radius witness for normalization-independent control fidelity; positive initial radius for log-radius step; shared intermediate decoder for composition; source and carrier shade decoders
+- Formal boundary: Commuting-interface reconstruction: shade fidelity means decoding after representation transport equals source shade, and faithful interfaces compose. Exact radius preservation constructs fidelity for both shade and any radial shadow price. Countermodels show strict order preservation is not semantic fidelity and matching shade alone does not preserve the joint control signal. Golden steps are constant in log-radius, not bounded shade.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13811,6 +17606,17 @@ Role: `theorem` | Type: `theorem` | Book: `book6` | Source: `book6.tex:51`
 - Cited by: `definition:bk6_symbolic_density_evolution` (Symbolic Density Evolution Equation); `proof:bk6_mutation_equilibrium_entropy_balance` (Mutation Equilibrium Entropy Balance)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK6-002`
+- Witnesses: `Book6.bifurcation_classification_exclusive`, `Book6.bifurcation_classification_exhaustive`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Formalizes only the signed rank-change classification (creation/annihilation/stationary, exhaustive and pairwise exclusive); the Hessian operator-norm discontinuity that the source proof derives this classification from is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S = (M, g, D, R, rho)$ be a symbolic system. A bifurcation occurs at symbolic time $t^* in mathbb{R}$ if and only if the Hessian of the symbolic state density undergoes a discontinuity (cf. Def. definition:bk6_symbolic_bifurcation, Thm.
@@ -13853,6 +17659,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:103
 - Cited by: `proof:bk6_stable_reflective_submanifold` (Stable Reflective Submanifold); `proposition:bk6_structural_divergence_condition` (Structural Divergence Condition); `scholium:bk6_mutation_threshold_in_semantic_space` (Mutation Threshold in Semantic Space)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-001`
+- Witnesses: `Book6.mutationTriggered_iff_signed`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The mutation threshold $tau_mu$ is the minimal symbolic free energy perturbation required to trigger a topological change in the observer-accessible symbolic manifold (cf. Def. definition:bk2_symbolic_free_energy, Def. definition:bk6_symbolic_mutation). The symbolic free energy is defined as: F[M, rho] = int_M rho log rho dtext{vol}_g + frac{1}{2}int_M \|nabla rho\|_g^2 dtext{vol}_g where $dtext{vol}_g$ is the volume form on $M$ induced by the metric $g$.
@@ -13881,6 +17698,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:120
 - Cited by: `sec:bk6_scholium_mutation_as_symbolic_renewal` (Scholium: Mutation as Symbolic Renewal); `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-031`
+- Witnesses: `Book68B.recombinationCoherence_driftAlign_ne_zero`, `Book68B.recombinationCoherence_zero_preserved`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Coherence preservation modeled as a Lipschitz-type structure (RecombinationCoherence); its epsilon-to-0 limit consequence and drift alignment's nonvanishing consequence are proved. The manifold curvature kappa_P/kappa_Q themselves are not modeled -- only the abstract real-valued distances between them.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic recombination is an operation merging two symbolic structures $P_lambda, Q_lambda$ following bifurcation, producing a higher-complexity structure (cf. Def. definition:bk6_symbolic_bifurcation, Def. definition:bk3_symbolic_symbiosis).
@@ -13894,6 +17722,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:136
 - Cites: `definition:bk6_symbolic_bifurcation` (Symbolic Bifurcation)
 - Cited by: `axiom:bk6_equilibrium_of_mutability` (Equilibrium of Mutability); `proof:bk6_mutation_bifurcation_duality` (Mutation-Bifurcation Duality); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk6_mutation_equilibrium` (Mutation Equilibrium)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK6-024`
+- Witnesses: `Asymptotics.windowAverage_mem_unitInterval`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Discretizes the source's continuous-time limit (Delta t -> 0) as a growing window (n -> infinity) Cesaro-type average of a bifurcation indicator sequence. The bifurcation-event-counting integral N_b(t1,t2) itself is not modeled; only a postulated {0,1}-valued indicator sequence and its running average are, plus the one genuine consequence that the average always lies in [0,1].
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13923,6 +17762,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:1
 - Cited by: `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics); `subsec:bk6_the_necessity_of_regulatory_structure` (The Necessity of Regulatory Structure)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-004`
+- Witnesses: `Book6.divergenceLaw_energy_rate_pos`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves the source proof's own arithmetic chain epsilon0*w < Sc*w and 0<epsilon0*w from the stated strict hypotheses; the divergence integral dF/dt=int(Sc)(div D)rho itself is not modeled, only its algebraic consequence once treated as scalars.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system $S = (M, g, D, R, rho)$ exhibits divergence toward mutation if and only if (cf. Def. definition:bk6_symbolic_curvature_tensor, Def. definition:bk6_mutation_threshold): nabla cdot D > 0 text{and} text{Sc}(kappa) > epsilon_0 for some curvature threshold $epsilon_0 > 0$, where $text{Sc}(kappa)$ is the scalar curvature of the symbolic manifold. The divergence condition $nabla cdot D > 0$ indicates expansion in the symbolic phase space, creating tension in the symbolic structure.
@@ -13950,6 +17800,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:1
 - Cites: `definition:bk6_symbolic_mutation` (Symbolic Mutation); `theorem:bk5_reflective_equilibrium_conservation` (Reflective Equilibrium Conservation)
 - Cited by: `axiom:bk6_reflective_regulation_of_mutation` (Reflective Regulation of Mutation); `corollary:bk6_reflective_capacity_theorem` (Reflective Capacity Theorem); `definition:bk6_reflection_operator_complete` (Reflection Operator); `demonstratio:bk7_reflective_averaging_free_energy` (Reflective Averaging and Symbolic Free Energy Minimization); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk6_drift_reflection_correspondence` (Drift-Reflection Correspondence); ... +1 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-005`
+- Witnesses: `Book6.reflective_inhibition_limit`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves the honest limiting content (uniform-in-delta inhibition forces exact identity at a point) rather than the stated exponential-convergence ODE d/dt||R(x)-x||=-alpha||R(x)-x||+O(...), which is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -13979,6 +17840,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:1
 - Cited by: `axiom:bk6_equilibrium_of_mutability` (Equilibrium of Mutability); `definition:bk6_symbolic_regulatory_cycle` (Symbolic Regulatory Cycle); `proposition:bk6_entropic_dissolution` (Entropic Dissolution); `subsec:bk6_the_necessity_of_regulatory_structure` (The Necessity of Regulatory Structure)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-025`
+- Witnesses: `Asymptotics.MutationEquilibrium.eventually_pos`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The convergence Tendsto rate atTop (nhds limit) with limit > 0 is kept as the structure's hypothesis (not derived); eventual strict positivity of the rate is the genuine derived consequence. The entropy-balance clause (sigma_prod = sigma_diss) and its commutation-based proof are geometric/operator claims with no scalar-sequence content and are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system achieves mutation equilibrium if the symbolic mutation rate $mu(t)$ converges (cf. Def. definition:bk6_mutation_rate, Prop.
@@ -14006,6 +17878,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:2
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `proposition:bk6_reflective_mutation_inhibition` (Reflective Mutation Inhibition); `theorem:bk5_rift_reflection_balance_in_strategy_space` (Drift--Reflection Balance in Strategy Space)
 - Cited by: `corollary:bk8_projective_drift` (Projective Drift Duality); `definition:bk6_mutation_operator` (Mutation Operator); `proof:bk8_projective_drift`; `proposition:bk5_reflective_drift_alignment_in_map` (Reflective Drift Alignment in MAP)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-026`
+- Witnesses: `Asymptotics.QuadraticErrorBound.tendsto_zero`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Models D = (1/2)(R - R^{-1}) + O(||R-Id||^2) as a scalar residual bounded by C*(eps_n)^2 for a control sequence eps_n = ||R_n - Id|| -> 0; proves the residual tends to 0. The drift/reflection commutation proof (DR = RD) and the near-identity expansion deriving the bound are not modeled -- the O(...) bound is taken as a hypothesis, only its limiting behavior is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14049,6 +17932,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:256`
 - Cited by: `corollary:bk6_mutation_memory` (Mutation Memory); `proof:bk6_mutation_bifurcation_duality` (Mutation-Bifurcation Duality); `proof:bk6_mutation_memory` (Mutation Memory)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-032`
+- Witnesses: `Book68B.sequentialJump_not_continuousAt`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: kappa is treated as an ordinary real function of symbolic time (its manifold/tensor structure is not modeled); a witnessed one-sided sequential-limit mismatch (SequentialJump) is shown to refute continuity -- the honest real-analytic content of Delta kappa(t) != 0.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M, g, D, R, rho)$ be a symbolic system. A symbolic mutation occurs when the symbolic curvature tensor $kappa$ exhibits a measurable discontinuity across symbolic time (cf. Def. definition:bk6_symbolic_mutation, Def.
@@ -14062,6 +17956,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:264`
 - Cites: `definition:bk6_symbolic_bifurcation` (Symbolic Bifurcation)
 - Cited by: `definition:bk6_bifurcation_operator_complete` (Bifurcation Operator); `proof:bk6_mutation_bifurcation_duality` (Mutation-Bifurcation Duality); `proposition:bk6_bifurcation_threshold` (Bifurcation Threshold); `proposition:bk6_mutation_bifurcation_duality` (Mutation-Bifurcation Duality)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK6-033`
+- Witnesses: `Book68B.bifurcation_piece_le_total`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the density-conservation clause (sum_i rho(x_i) = rho(x)) is formalized, as a finite-sum bound; the entropy-gradient clause (nabla_B S >= 0) is not modeled (no entropy functional over B(x) is defined here).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14077,6 +17982,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:276`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-006`
+- Witnesses: `Book6.entropyRegulation_iterate_le`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Given the single-step entropy-non-increase law as a structure field, proves it extends to any finite number of iterations by induction; the damping-coefficient formula eta(t)=-dS/dt is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The reflection operator $R: M to M$ constrains mutation through entropy minimization (cf. Prop. proposition:bk6_reflective_mutation_inhibition, Thm. theorem:bk5_reflective_equilibrium_conservation): R : M to M text{such that} S[R(rho)] leq S[rho] where symbolic entropy is defined as: S[rho] = -int_M rho(x) log rho(x) dmu_g The reflection acts as a damping force on symbolic drift, with damping coefficient $eta(t) = -frac{dS}{dt}$.
@@ -14090,6 +18006,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:288`
 - Cites: `definition:bk6_mutation_rate` (Mutation Rate); `proposition:bk6_mutation_equilibrium` (Mutation Equilibrium)
 - Cited by: `corollary:bk6_reflective_capacity_theorem` (Reflective Capacity Theorem); `proof:bk6_entropic_dissolution` (Entropic Dissolution); `proof:bk6_reflective_capacity_theorem` (Reflective Capacity Theorem); `proposition:bk6_entropic_dissolution` (Entropic Dissolution)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-027`
+- Witnesses: `Asymptotics.MutabilityEquilibrium.eta_tendsto_of_mu_tendsto`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: lim (mu - eta) = 0 is kept as the structure's hypothesis; the derived consequence is that if mu additionally converges to L (as in MutationEquilibrium), eta converges to the same L.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14119,6 +18046,17 @@ Role: `lemma` | Type: `lemma` | Book: `book6` | Source: `book6.tex:299`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-050`
+- Witnesses: `Book6DriftMutation.MutationConstitutiveCertificate.rate_le_calibrated_uniform_bound`, `Book6DriftMutation.MutationConstitutiveCertificate.rate_nonneg`, `Book6DriftMutation.drift_alone_does_not_determine_mutation_rate`, `Book6DriftMutation.mutationRate_eq_weighted_curvature_change`, `Book6DriftMutation.mutationRate_le_uniform_curvature_bound`, `Book6DriftMutation.mutationRate_nonneg`
+- Countermodels: `Book6DriftMutation.drift_alone_does_not_determine_mutation_rate`
+- Conditions: finite symbolic state space; nonnegative calibration coefficient; nonnegative normalized density; supplied directional curvature response; uniform response bound for the global estimate
+- Formal boundary: Calibrated constitutive kernel: a nonnegative normalized density integrates supplied drift-induced curvature response into a nonnegative mutation rate with a calibrated uniform bound. Drift alone does not determine the response or empirical bifurcation frequency.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M,g)$ carry a drift field $D$, a curvature field $kappa$, and a nonnegative measurable symbolic density $rho$ normalized by $int_Mrho dmu_g=1$. Assume that $nabla_Dkappa$ exists and that $rho\|nabla_Dkappa\|_g$ is integrable. For a calibrated constitutive coefficient $c_mugeq0$, define \[ mu_{D,kappa,rho}(t) :=c_muint_M\|nabla_Dkappa(x,t)\|_g rho(x) dmu_g. \] Then $mu_{D,kappa,rho}(t)geq0$. If $\|nabla_Dkappa(x,t)\|_gleq B$ almost everywhere, then $mu_{D,kappa,rho}(t)leq c_mu B$.
@@ -14146,6 +18084,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:3
 - Cites: `axiom:bk6_bifurcation_as_emergence_operator` (Bifurcation as Emergence Operator)
 - Cited by: `proof:bk6_mutation_bifurcation_duality` (Mutation-Bifurcation Duality); `proof:bk9_symbolic_masking_and_unmasking` (Symbolic Masking and Unmasking); `sec:bk6_scholium_mutation_as_symbolic_renewal` (Scholium: Mutation as Symbolic Renewal)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-003`
+- Witnesses: `Book6.bifurcation_threshold_dichotomy`, `Book6.bifurcation_threshold_exclusive`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: The tension-vs-threshold case split (tau(x)<tauC vs tauC<=tau(x)) is proved exhaustive and mutually exclusive; the vector cross-product definition of tension(x)=||D(x)xR(D(x))|| itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14175,6 +18124,16 @@ Role: `lemma` | Type: `lemma` | Book: `book6` | Source: `book6.tex:351`
 - Cited by: `sec:bk6_scholium_mutation_as_symbolic_renewal` (Scholium: Mutation as Symbolic Renewal); `subsec:bk6_structural_requirements_for_regulation` (Structural Requirements for Regulation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-044`
+- Witnesses: `Book6.symbolicInformation_relabel_invariant`
+- Countermodels: none
+- Formal boundary: Proves finite relative-information (KL) invariance under any bijective relabeling of a finite state space. This is the exact discrete change-of-variables kernel of the source proof; the manifold diffeomorphism, Riemannian volume form, and Jacobian transformation law remain outside the certified boundary.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 During mutation, total symbolic information $I$ is conserved (cf. Def. definition:bk6_symbolic_mutation, Def. definition:bk3_symbolic_homeostasis): I[rho_{text{before}}] = I[rho_{text{after}}] where $I[rho] = int_M rho(x) logfrac{rho(x)}{rho_0(x)} dmu_g$ is the relative information with respect to reference distribution $rho_0$. By Def.
@@ -14202,6 +18161,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:3
 - Cites: none
 - Cited by: `sec:bk6_scholium_mutation_as_symbolic_renewal` (Scholium: Mutation as Symbolic Renewal)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-051`
+- Witnesses: `Book6ThermodynamicMutation.MEPPSelectionLaw.trajectory_tendsto`, `Book6ThermodynamicMutation.argmax_exists_without_selection_dynamics`, `Book6ThermodynamicMutation.equilibrium_balance_alone_does_not_imply_mepp`, `Book6ThermodynamicMutation.exists_constrained_mepp`, `Book6ThermodynamicMutation.mem_feasibleStates_iff`
+- Countermodels: `Book6ThermodynamicMutation.argmax_exists_without_selection_dynamics`, `Book6ThermodynamicMutation.equilibrium_balance_alone_does_not_imply_mepp`
+- Conditions: eventual-selection law when convergence is claimed; explicit reflected-entropy feasibility threshold; finite available state population; nonempty feasible set; real-valued entropy production objective
+- Formal boundary: Finite constrained-MEPP kernel with an explicit selection bridge. A nonempty finite feasible class has a maximizer, eventual selection converges to it, and a two-state countermodel proves that argmax existence does not manufacture dynamics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14231,6 +18201,17 @@ Role: `corollary` | Type: `corollary` | Book: `book6` | Source: `book6.tex:421`
 - Cited by: `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery); `sec:bk6_scholium_mutation_as_symbolic_renewal` (Scholium: Mutation as Symbolic Renewal)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-007`
+- Witnesses: `Book6.mutationMemory_monotone`, `Book6.mutationMemory_nonneg`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves monotonicity and nonnegativity of a discrete step-accumulator with nonnegative increments; the underlying curvature-discontinuity path integral M(t)=int||Delta kappa|| is replaced by its discrete telescoping analogue.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The history of mutations leaves a traceable path in symbolic space, encoded in the curvature evolution (cf. Axiom axiom:bk6_symbolic_mutation_as_curvature_transition): M(t) = int_0^t \|Deltakappa(tau)\| dtau This mutation memory $M(t)$ measures the accumulated transformation of the symbolic system. From Axiom axiom:bk6_symbolic_mutation_as_curvature_transition, each mutation event corresponds to a discontinuity $Deltakappa(tau)$ in the symbolic curvature tensor.
@@ -14258,6 +18239,17 @@ Role: `corollary` | Type: `corollary` | Book: `book6` | Source: `book6.tex:435`
 - Cites: `axiom:bk6_equilibrium_of_mutability` (Equilibrium of Mutability); `proposition:bk6_reflective_mutation_inhibition` (Reflective Mutation Inhibition)
 - Cited by: `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention); `proposition:bk9_curvature_scarring` (Curvature Scarring and Recovery)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-034`
+- Witnesses: `Book68B.capacity_isUB`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: C_R = sup{...} formalized directly as sSup over a nonempty bounded-above set of ratios; capacity_isUB is the standard least-upper-bound property. The eta(t)/mu(t) functions themselves are abstracted to an opaque set of real ratios.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14300,6 +18292,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:452
 - Cites: `definition:bk6_symbolic_bifurcation` (Symbolic Bifurcation); `proposition:bk6_drift_reflection_correspondence` (Drift-Reflection Correspondence)
 - Cited by: `definition:bk6_symbolic_density_evolution` (Symbolic Density Evolution Equation); `proof:bk6_mutation_bifurcation_duality` (Mutation-Bifurcation Duality); `proposition:bk6_mutation_bifurcation_duality` (Mutation-Bifurcation Duality)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK6-035`
+- Witnesses: `Book68B.evolve_comp`, `Book68B.isStochastic_mul`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The composition M_t = R_t o B_t o D_t is not modeled with three named operators; instead its discrete shadow (composing two canonical row-stochastic evolution steps into one, via matrix multiplication) is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14356,6 +18359,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:4
 - Cites: `axiom:bk6_bifurcation_as_emergence_operator` (Bifurcation as Emergence Operator); `definition:bk6_mutation_operator` (Mutation Operator)
 - Cited by: `sec:bk6_scholium_mutation_as_symbolic_renewal` (Scholium: Mutation as Symbolic Renewal); `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-018`
+- Witnesses: `Book6.mutationBifurcationBridge_iff`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Certifies only the logical shape of the source proof (transitivity of two chained bridge equivalences among mutation/tension/bifurcation conditions); the two bridge equivalences themselves are kept as hypotheses/fields since each depends on unformalized manifold-level structure (operator norms, the Jacobian determinant).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14441,6 +18455,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:5
 - Cited by: `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-008`
+- Witnesses: `Book6.entropyGrowth_accum`, `Book6.entropyGrowth_unbounded`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves the discrete dual of a termination bound: a sequence increasing by a fixed positive amount every step is unbounded above, the honest finite/discrete kernel of the source's lim_{t->infty} S[rho(t)]=infty claim.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system $S = (M, g, D, R, rho)$ where $mu(t) > eta(t)$ for all $t > t_0$ will experience unbounded symbolic entropy growth (cf. Axiom axiom:bk6_equilibrium_of_mutability, Prop. proposition:bk6_mutation_equilibrium): lim_{t to infty} S[rho(t)] = infty leading to dissolution of all structured symbolic relations. When the mutation rate $mu(t)$ persistently exceeds the reflective damping $eta(t)$, the system accumulates more structural variations than can be coherently integrated.
@@ -14482,6 +18507,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:603
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `proposition:bk6_mutation_equilibrium` (Mutation Equilibrium); `theorem:bk5_map_equilibrium` (MAP Equilibrium)
 - Cited by: `scholium:bk6_semantic_network_regulation` (Semantic Network Regulation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-009`
+- Witnesses: `Book6.regulatoryCycle_energy_bound`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves the per-step bound |F(n+1)-F(n)|<eps telescopes to an n-step bound n*eps via the triangle inequality and induction; the drift/reflection/transformation triple Phi that produces each step is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14525,6 +18561,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:658
 - Cited by: `definition:bk6_confidence_stratification` (Confidence Stratification); `definition:bk6_regulatory_basin` (Regulatory Basin); `definition:bk7_adaptive_refinement_recurrence` (Controlled symbolic refinement recurrence); `definition:bk8_symbolic_hypothesis_set` (Symbolic Hypothesis Set)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-036`
+- Witnesses: `Book68B.totalConfidence_le_one`, `Book68B.totalConfidence_nonneg`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Smoothness (C in C^infty(M)) is not modeled (finite Fin n alphabet instead); normalization (0 <= C(x) <= 1) and density coupling (integral C rho <= 1) are proved exactly, built on Book2.IsDensity.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic confidence field is a smooth scalar field $mathfrak{C}: M to [0,1]$ on the symbolic manifold $M$ that measures the local epistemic certainty of symbolic structures (cf. Def. definition:bk6_symbolic_system, Def. definition:bk3_symbolic_homeostasis, Def. definition:bk1_bounded_observer).
@@ -14552,6 +18599,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:6
 - Cites: none
 - Cited by: `demonstratio:bk7_coherence_fulcrum_power_certainty` (Coherence as the Fulcrum of Power and Certainty); `subsec:bk7_pisu_revisited_power_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU) Revisited)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-052`
+- Witnesses: `Book6ConfidenceGradient.confidenceDrivenVelocity_eq`, `Book6ConfidenceGradient.confidenceVelocity_descends_of_perturbation_control`, `Book6ConfidenceGradient.confidenceVelocity_strictly_descends_of_strict_control`, `Book6ConfidenceGradient.diffusion_can_reverse_confidence_drift`, `Book6ConfidenceGradient.pure_confidence_drift_descends`, `Book6ConfidenceGradient.pure_confidence_drift_strict`, `Book6ConfidenceGradient.regularity_alone_does_not_force_confidence_dynamics`
+- Countermodels: `Book6ConfidenceGradient.regularity_alone_does_not_force_confidence_dynamics`
+- Conditions: directional perturbation bound for full-law descent; explicit confidence-driven velocity law; nonnegative or positive drift coefficient for descent; typed tangent perturbation; zero diffusion and fluctuation for pure descent
+- Formal boundary: Typed confidence-gradient control retains diffusion, observer, and noise effects as a tangent perturbation. A directional inner-product bound proves weak or strict descent; uncontrolled diffusion can reverse it.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14581,6 +18639,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:723
 - Cited by: `definition:bk6_regulatory_basin` (Regulatory Basin); `definition:bk7_systemic_symbolic_power` (Systemic Symbolic Power \(\Sigma_P\)); `lemma:bk6_power_scaling` (Power Scaling Law); `proof:bk6_power_scaling`; `scholium:bk7_power_organizational_navigational` (Power as Organizational Capacity and Navigational Imperative); `subsec:bk7_genesis_symbolic_power` (Genesis of Symbolic Power from Coherent Confidence)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-037`
+- Witnesses: `Book68B.power_nonneg`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The geodesic ball volume and gradient norm are abstracted to opaque nonnegative reals (SymbolicPowerData); the product formula's nonnegativity is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic power at point $x in M$ is defined as: mathfrak{P}(x) = mathfrak{C}(x) cdot \|nabla mathfrak{C}(x)\| cdot text{vol}(B_r(x) cap M) where $B_r(x)$ is a geodesic ball of radius $r$ centered at $x$, and $text{vol}(cdot)$ denotes the Riemannian volume measure.
@@ -14594,6 +18663,17 @@ Role: `lemma` | Type: `lemma` | Book: `book6` | Source: `book6.tex:734`
 - Cites: `definition:bk5_fuzzy_symbolic_manifold` (Fuzzy Symbolic Manifold); `definition:bk6_symbolic_power` (Symbolic Power)
 - Cited by: `subsec:bk7_dynamics_symbolic_power` (Dynamics of Symbolic Power)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-038`
+- Witnesses: `Book68B.powerScaling_compose`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The homogeneity law itself is a hypothesis (PowerScaling); the genuinely new content proved is that it composes multiplicatively under two successive rescalings, via Real.mul_rpow.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14622,6 +18702,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:756
 - Cites: `definition:bk6_symbolic_confidence_field` (Symbolic Confidence Field); `definition:bk6_symbolic_power` (Symbolic Power)
 - Cited by: `definition:bk6_symbolic_operator_canon` (Symbolic Operator Canon); `demonstratio:bk7_operator_basis_systemic_power` (Operator Basis of Systemic Power); `subsec:bk7_dynamics_symbolic_power` (Dynamics of Symbolic Power)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK6-021`
+- Witnesses: `Book6.regulatoryBasin_power_argmax_exists`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Only the power-concentration clause (existence of a maximizer) is modeled, via finite argmax existence; the confidence-coherence and gradient-flow-convergence clauses of the same definition are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14721,6 +18812,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:826
 - Cited by: `definition:bk6_symbolic_curvature_tensor_coordinate_index` (Symbolic Curvature Tensor: Coordinate Index); `definition:bk6_symbolic_manifold_structure` (Symbolic Manifold Structure); `definition:bk6_symbolic_state_function_complete` (Symbolic State Function)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-010`
+- Witnesses: `Book6.configDim_ge`, `Book6.configDim_mono`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves monotonicity and a lower bound for the stated dimension formula floor(lambda)+d0; the submanifold nesting P_lambda subset P_lambda' and the induced Riemannian structure are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Within the manifold structure of Def. definition:bk6_symbolic_manifold_structure, for each complexity level $lambda in mathbb{R}^+$, the symbolic configuration space $P_lambda$ is a submanifold of $M$ satisfying: - $P_lambda subset P_{lambda'} subset M$ for $lambda < lambda'$ - $dim(P_lambda) = lfloor lambda rfloor + d_0$ for base dimension $d_0 geq 1$ - $P_lambda$ carries the induced Riemannian structure from $(M,g)$ These spaces provide the levelwise domain used by the symbolic state function (Def.
@@ -14763,6 +18865,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:858
 - Cited by: `definition:bk6_fragmentation_functional` (Fragmentation Functional); `definition:bk6_stability_functional_complete` (Stability Functional); `definition:bk6_symbolic_state_function_complete` (Symbolic State Function)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-011`
+- Witnesses: `Book6.identityCarrier_le_self`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Given the locality/exponential-decay bound as a structure field, proves the genuine consequence Psi(x,y)<=Psi(x,x); the normalization and symmetry clauses (which need a volume measure) are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The identity carrier $Psi_i : M times M to mathbb{R}^+$ measures structural identity persistence for state densities from Def. definition:bk6_symbolic_state_function_complete, satisfying: - Normalization: $int_M Psi_i(x, y) dmu_g(y) = 1$ for all $x in M$ - Symmetry: $Psi_i(x, y) = Psi_i(y, x)$ - Locality: $Psi_i(x, y) leq Psi_i(x, x)e^{-d_g(x,y)/lambda_i}$ for correlation length $lambda_i > 0$
@@ -14776,6 +18889,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:868
 - Cites: `definition:bk6_identity_carrier_kernel` (Identity Carrier Kernel); `definition:bk6_symbolic_state_function_complete` (Symbolic State Function)
 - Cited by: `axiom:bk6_confidence_stability_coupling` (Certified Confidence--Stability Coupling); `definition:bk6_drift_operator_complete` (Drift Operator); `definition:bk6_fragmentation_functional` (Fragmentation Functional); `definition:bk6_grace_operator_complete` (Grace Operator); `definition:bk6_regulatory_basin_operator` (Regulatory Basin Operator); `definition:bk6_transformation_operator_complete` (Transformation Operator)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-016`
+- Witnesses: `Book6.bifurcation_offset_pos`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Only the threshold gammaMin from this definition is used, as a scalar parameter in the bifurcation-offset positivity theorem; the integral pairing Upsilon_i(p1,p2) itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14833,6 +18957,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:897
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-012`
+- Witnesses: `Book6.temperature_pos_iff`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves the real-inverse sign-preservation fact underlying the stated positivity constraint T_s(p)>0; the partial derivative dS/dE itself is treated as an opaque scalar, not derived from the entropy/energy functionals.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic temperature $T_s : P_lambda to mathbb{R}^+$ quantifies energy distribution across the thermodynamic pair \((E_lambda,S_lambda)\) introduced in Defs. definition:bk6_symbolic_energy_functional and definition:bk6_symbolic_entropy_functional: T_s(p) = left(frac{partial S_lambda[p]}{partial E_lambda[p]}right)^{-1} with constraint $T_s(p) > 0$ for all viable states $p in P_lambda$.
@@ -14846,6 +18981,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:906
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk6_symbolic_energy_functional` (Symbolic Energy Functional); `definition:bk6_symbolic_entropy_functional` (Symbolic Entropy Functional)
 - Cited by: `definition:bk6_confidence_field_operator` (Confidence Field Operator); `definition:bk6_drift_operator_complete` (Drift Operator); `definition:bk6_symbolic_hamiltonian_complete` (Symbolic Hamiltonian); `definition:bk6_symbolic_pressure_operator` (Symbolic Pressure Operator); `proof:bk6_total_symbolic_action_conservation`; `proposition:bk6_total_symbolic_action_conservation` (Total Symbolic Action Conservation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-013`
+- Witnesses: `Book6.freeEnergy_antitone_in_entropy`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves strict antitonicity of F=E-T*S in S at fixed E and positive T; E, T, S are treated as opaque reals, not derived from the underlying integral functionals of Defs. bk6_symbolic_energy_functional/bk6_symbolic_entropy_functional.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14903,6 +19049,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:937
 - Cited by: `axiom:bk6_map_equilibrium_invariance_complete` (MAP Equilibrium Invariance); `axiom:bk6_non_commutativity_evolution_reflection` (Non-Commutativity of Evolution and Reflection); `axiom:bk6_reflective_coherence_complete` (Reflective Coherence); `definition:appC_lagrangian_potential` (Symbolic Potential Function); `definition:appC_observer_visible_system` (Observer-visible symbolic system); `definition:appC_symbolic_flow_stability` (Symbolic Flow Stability); ... +10 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK6-028`
+- Witnesses: `Asymptotics.AntitoneBoundedProcess.tendsto_iInf`, `Asymptotics.Contraction.tendsto_fixedPt`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: See the committed source registry for the original coverage note.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The reflection operator $R_lambda : P_{lambda} to P_{lambda}$ encodes self-reference and entropy regulation in the sense of Prop. proposition:bk6_reflective_mutation_inhibition, satisfying: - Near-involution: $\|R_lambda circ R_lambda - text{Id}\|_{text{op}} leq varepsilon_lambda$ - Entropy reduction: $S_lambda[R_lambda(p)] leq S_lambda[p]$ - Attracting fixed points: $lim_{n to infty} R_lambda^n(p) = p^* in E_R$ where $E_R subset P_lambda$ is the reflective equilibrium set.
@@ -14917,6 +19074,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:948
 - Cited by: `axiom:bk6_map_equilibrium_invariance_complete` (MAP Equilibrium Invariance); `demonstratio:bk7_operator_basis_systemic_power` (Operator Basis of Systemic Power); `subsec:bk7_dynamics_symbolic_power` (Dynamics of Symbolic Power)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-014`
+- Witnesses: `Book6.transformationFamily_bracketing_agrees`, `Book6.transformationFamily_triple`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Given the two-argument group-composition law T_a(T_b x)=T_{a op b}(x) as a structure field, proves genuine three-fold composition and bracketing-invariance consequences; complexity conservation and the stability-preservation clause are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The transformation operator $T_alpha : P_{lambda} to P_{lambda}$, parameterized by $alpha in A$, acts on stability-qualified states (Def. definition:bk6_stability_functional_complete) and satisfies: - Complexity conservation: $dim(T_alpha(P_{lambda})) = dim(P_{lambda})$ - Stability preservation: $Upsilon_i(p, T_alpha(p)) > gamma_{min}$ for all $p in P_{lambda}$ - Group structure: $T_alpha circ T_beta = T_{alpha oplus beta}$ where $(A, oplus)$ is a group
@@ -14930,6 +19098,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:958
 - Cites: `axiom:bk6_bifurcation_as_emergence_operator` (Bifurcation as Emergence Operator)
 - Cited by: `definition:bk6_mutation_operator_complete` (Mutation Operator)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-015`
+- Witnesses: `Book6.bifurcation_offset_pos`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves positivity of the scalar quantity under the branching offset's square root, given the sub-threshold hypothesis Upsilon<gammaMin; the square root, projection Pi, and unstable eigenmode v_unstable are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -14959,6 +19138,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:970
 - Cited by: `axiom:bk6_confidence_stability_coupling` (Certified Confidence--Stability Coupling); `demonstratio:bk7_coherence_fulcrum_power_certainty` (Coherence as the Fulcrum of Power and Certainty); `demonstratio:bk7_operator_basis_systemic_power` (Operator Basis of Systemic Power); `proof:bk6_confidence_power_bound`; `subsec:bk7_pisu_revisited_power_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU) Revisited); `theorem:bk6_confidence_power_bound` (Confidence-Power Bound)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-022`
+- Witnesses: `Book6.confidence_sigma_pos`
+- Countermodels: none
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves the confidence value exp(-beta*Hconf) is always strictly positive; the confidence Hamiltonian H_conf and the threshold case-split producing p' are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The confidence field operator $C_sigma : P_lambda to [0,1] times P_lambda$ assigns confidence measures from free-energy and fragmentation structure (Defs.
@@ -14986,6 +19176,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:100
 - Cites: `definition:bk6_stability_functional_complete` (Stability Functional); `definition:bk6_symbolic_density_evolution` (Symbolic Density Evolution Equation)
 - Cited by: `definition:bk6_grace_operator_complete` (Grace Operator)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-029`
+- Witnesses: `Asymptotics.eventually_mem_ball_of_tendsto`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The clause 'lim_{t->infinity} Phi_t(q) in B_eps(p)' is exactly the statement that a sequence converging to p is eventually inside every epsilon-ball of p. The Upsilon_i stability-coupling condition defining membership in the basin is not modeled; only the limit clause is.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15028,6 +19229,17 @@ Role: `definition` | Type: `definition` | Book: `book6` | Source: `book6.tex:103
 - Cites: `definition:bk6_bifurcation_operator_complete` (Bifurcation Operator); `definition:bk6_drift_operator_complete` (Drift Operator); `definition:bk6_reflection_operator_complete` (Reflection Operator)
 - Cited by: `subsec:bk7_dynamics_symbolic_power` (Dynamics of Symbolic Power)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK6-039`
+- Witnesses: `Book68B.composedEvolution_isDensity`, `Book68B.evolve_comp`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same discrete analogue as bk6_mutation_operator: composing canonical operators (here specialized to row-stochastic evolution) and showing the composite conserves density, rather than modeling R_{lambda+1}, B_lambda, D_lambda as three distinct named maps.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15127,6 +19339,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:1091`
 - Cited by: `subsec:bk6_extensions_and_future_directions` (Extensions and Future Directions); `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-040`
+- Witnesses: `Book68B.commutator_eq_zero_iff_commute`, `Book68B.commutator_witness_ne_zero`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The commutator [D,R] is modeled pointwise on any AddCommGroup (vector fields are not modeled); the iff with literal pointwise commuting is exact, and a genuinely nonzero witness is exhibited on ZMod 4.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 [D_lambda, R_lambda] = D_lambda circ R_lambda - R_lambda circ D_lambda neq 0 The commutator magnitude $\|[D_lambda, R_lambda]\|_{text{op}}$ quantifies emergent potential. See Defs. definition:bk6_drift_operator_complete, definition:bk6_reflection_operator_complete, and Def. definition:bk1_paradox_triggered_emergence for the foundational mechanism by which such incoherence drives symbolic expansion.
@@ -15140,6 +19363,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:1100`
 - Cites: `definition:bk6_drift_operator_complete` (Drift Operator); `definition:bk6_reflection_operator_complete` (Reflection Operator); `definition:bk6_transformation_operator_complete` (Transformation Operator)
 - Cited by: `proof:bk6_map_invariant`; `proposition:bk6_map_invariant` (MAP Invariant); `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-030`
+- Witnesses: `Asymptotics.GeometricErrorBound.tendsto_zero`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: F_lambda[(...)^n(p)] = F_lambda[p] + O(e^{-eta n}) is modeled as a residual bounded by C*rate^n with rate kept abstractly in [0,1) (rather than reconstructed as Real.exp(-eta)); proves the residual tends to 0, i.e. the functional value converges to F_lambda[p].
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15155,6 +19389,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:1109`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-041`
+- Witnesses: `Book68B.composedEvolution_isDensity`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: "For any canonical operator O" is specialized to composites of row-stochastic evolution kernels (Book2's discrete Fokker-Planck skeleton); mass conservation for such composites is proved exactly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Total probability mass is preserved (Def. definition:bk6_symbolic_state_function_complete): int_M rho_s(p,x) dmu_g(x) = int_M rho_s(O(p),x) dmu_g(x) = 1 for any canonical operator $O$.
@@ -15168,6 +19413,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:1118`
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-053`
+- Witnesses: `Book6ThermodynamicConsistency.fixed_temperature_firstLaw_reduction`, `Book6ThermodynamicConsistency.fixed_temperature_freeEnergy_increment`, `Book6ThermodynamicConsistency.interface_term_reconciles_printed_law_iff`, `Book6ThermodynamicConsistency.oriented_freeEnergy_fixed_temperature_increment`, `Book6ThermodynamicConsistency.printed_and_derived_laws_agree_iff_entropy_static`, `Book6ThermodynamicConsistency.printed_firstLaw_not_implied_by_freeEnergy_definition`, `Book6ThermodynamicConsistency.varying_temperature_freeEnergy_increment`
+- Countermodels: none
+- Conditions: explicit finite temperature increment for the varying-temperature identity; fixed-temperature energy balance for the reduced identity; source definition F = E - T*S
+- Formal boundary: Exact finite-increment identities distinguish the internal-energy first law from F=E-T*S. Fixed temperature cancels T*dS from dF; varying temperature adds -S*dT and the finite cross-term. Potential orientation, not verifier preference, fixes the sign.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15183,6 +19439,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:1142`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-054`
+- Witnesses: `Book6ConfidenceStability.ConfidenceStabilityCertificate.velocity_nonpos`, `Book6ConfidenceStability.constant_hamiltonian_gives_positive_stabilityVelocity`, `Book6ConfidenceStability.stabilityVelocity_eq`, `Book6ConfidenceStability.stabilityVelocity_nonpos_of_quotientSlope_nonneg`, `Book6ConfidenceStability.values_alone_do_not_force_confidence_stability_coupling`
+- Countermodels: `Book6ConfidenceStability.values_alone_do_not_force_confidence_stability_coupling`
+- Conditions: coupling and quotient-slope signs supplied for directional conclusions; explicit quotient-response coupling law; nonzero stability coordinate for reciprocal examples
+- Formal boundary: A typed constitutive certificate supplies the nonzero stability coordinate, coupling orientation, quotient response, and velocity equation. Quotient-slope sign controls velocity sign; values alone do not create dynamics, and a constant positive Hamiltonian exposes the opposite-sign regime.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $sigma(t)$ be a differentiable stability trajectory, let $u(t)=Upsilon_i(t)neq0$, and let the confidence Hamiltonian along the trajectory be a differentiable scalar function $h(u)=mathcal H_{rm conf}(u)$. For a coupling coefficient $kappa_sigmageq0$, the constitutive law is \[ dotsigma(t)=-kappa_sigma frac{d}{du}left(frac{h(u)}{u}right)bigg|_{u=u(t)} =-kappa_sigma frac{h'(u(t))u(t)-h(u(t))}{u(t)^2}.
@@ -15196,6 +19463,16 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:1163`
 - Cites: `definition:bk6_power_operator` (Power Operator)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-045`
+- Witnesses: `Book6.closedPower_exchange_sum_zero`, `Book6.closedPower_homeostatic_all`, `Book6.closedPower_homeostatic_step`, `Book6.closedPower_total_conserved`, `Book6.totalPairPower_eq_metabolicRate`
+- Countermodels: none
+- Formal boundary: Models a finite closed system as pairwise power evolving through antisymmetric internal exchange. The exchange double sum is proved zero, hence total pairwise power is conserved at every step. On Fin n this total is definitionally Book 3 metabolicRate, so the proof now establishes the explicit Book 3 -> Book 6 layer: an initial Book 3 Homeostatic band persists through every finite closed-power stage. The manifold geodesic integral defining each power-kernel entry remains outside the certified boundary.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15225,6 +19502,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:1179`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-017`
+- Witnesses: `Book6.no_retraction_of_not_injective`
+- Countermodels: `Book6.no_retraction_of_not_injective`
+- Conditions: manifold/curvature/PDE/Hilbert-space/asymptotic content of Book 6 is NOT formalized; static and discrete kernels only; modeling laws (threshold laws, per-step entropy/energy bounds, bridge equivalences) are structure fields or explicit hypotheses
+- Formal boundary: Proves the fully general fact that a non-injective map admits no left inverse; injectivity-failure of the drift operator D_lambda is the hypothesis under which this is proved, not asserted unconditionally about D_lambda itself.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 No operator $T$ exists such that $T circ D_lambda = text{Id}_{P_{lambda}}$ (Def. definition:bk6_drift_operator_complete).
@@ -15239,6 +19527,17 @@ Role: `axiom` | Type: `axiom` | Book: `book6` | Source: `book6.tex:1184`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-055`
+- Witnesses: `Book6ObserverExtension.ObserverOperatorExtensionCertificate.exists_total_extension`, `Book6ObserverExtension.ObserverOperatorExtensionCertificate.joint_defect_bound`, `Book6ObserverExtension.exists_observerExtension`, `Book6ObserverExtension.observerExtension_agrees`, `Book6ObserverExtension.observer_bound_alone_does_not_force_identity_preservation`, `Book6ObserverExtension.observer_error_accumulates`
+- Countermodels: `Book6ObserverExtension.observer_bound_alone_does_not_force_identity_preservation`
+- Conditions: explicit observer-admissible domain; local field on the subtype; per-interface approximation certificates; supplied fallback outside the domain
+- Formal boundary: A coherent observer extension now carries an admissible subtype, explicit fallback, exact local agreement, separate divergence/entropy defects, and normed epsilon bounds. Interface errors accumulate; curvature boundedness alone supplies none of these identity certificates.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $M_{mathcal O}subseteqwidetilde M_{mathcal O}$ be the observer-admissible subtype. A coherent extension certificate for the local symbolic Laplace-Beltrami operator $Delta_s$ consists of: - a total operator $widetildeDelta_{s,mathcal O}$ with specified fallback or boundary behavior outside $M_{mathcal O}$ and exact agreement with $Delta_s$ on the admissible subtype; - normed divergence and entropy defects $e_{rm div},e_{rm ent}$;
@@ -15252,6 +19551,17 @@ Role: `theorem` | Type: `theorem` | Book: `book6` | Source: `book6.tex:1204`
 - Cites: `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation)
 - Cited by: `scholium:appC_structural_universality_phi` (Structural Universality of $\varphi$)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK6-042`
+- Witnesses: `Book68B.composedEvolution_isDensity`, `Book68B.evolve_comp`, `Book68B.isStochastic_mul`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The manifold Fokker-Planck PDE (with Laplace-Beltrami diffusion term) is NOT certified; the discrete skeleton -- multi-step evolution under composed row-stochastic kernels conserves density -- is, per Book2's existing certified Gibbs-kernel apparatus.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15323,6 +19633,17 @@ Role: `theorem` | Type: `theorem` | Book: `book6` | Source: `book6.tex:1238`
 - Cited by: `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK6-043`
+- Witnesses: `Book68B.isStochastic_mul`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Specialized to the row-stochastic-matrix instance of the canonical operator set: closure under composition is proved EXACTLY (no error term E), strictly stronger than the source's closure-up-to-epsilon claim -- an honesty gap noted rather than hidden.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The canonical set $C_{text{ext}}$ forms a closed algebra under composition: forall O_1, O_2 in C_{text{ext}}, exists {c_k, O_k}_{k=1}^n : O_1 circ O_2 = sum_{k=1}^n c_k O_k + E where $\|E\|_{text{op}} < epsilon$ for arbitrarily small $epsilon > 0$. See Def. definition:bk6_complete_canonical_set, Def. definition:bk6_modulation_operator_complete, and Def. definition:bk6_symbolic_flow_operator_complete.
@@ -15350,6 +19671,17 @@ Role: `theorem` | Type: `theorem` | Book: `book6` | Source: `book6.tex:1257`
 - Cites: none
 - Cited by: `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-057`
+- Witnesses: `Book6ThermodynamicMAP.AveragedConstitutiveLaw.dualityResidual_eq_zero`, `Book6ThermodynamicMAP.AveragedConstitutiveLaw.thermodynamicMAPDuality`, `Book6ThermodynamicMAP.duality_iff_residual_zero`, `Book6ThermodynamicMAP.duality_of_reflectionDeviation_eq`, `Book6ThermodynamicMAP.equilibrium_flags_alone_do_not_force_duality`, `Book6ThermodynamicMAP.reflectionDeviation_eq`
+- Countermodels: `Book6ThermodynamicMAP.equilibrium_flags_alone_do_not_force_duality`
+- Conditions: the mean drift decomposes constitutively into inverse-temperature projected force plus reflective deviation
+- Formal boundary: An explicit averaged constitutive balance derives the oriented thermodynamic--MAP identity and zero residual. Qualitative equilibrium and conservation flags remain countermodels to deriving its inverse-temperature coefficient or reflective sign by narration alone.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15393,6 +19725,16 @@ Role: `theorem` | Type: `theorem` | Book: `book6` | Source: `book6.tex:1295`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-046`
+- Witnesses: `Book6.confidencePower_gaussian_bound`
+- Countermodels: none
+- Formal boundary: Derives the stated confidence-weighted Gaussian bound from the manuscript's Gaussian-locality hypothesis, nonnegative peak amplitude, positive correlation length, and the confidence codomain 0 <= sigma <= 1. The geodesic distance is modeled by an arbitrary pseudometric space.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 sigma(p) cdot P_nu(p, p') leq P_{max} cdot expleft(-frac{d_g(p,p')^2}{2lambda_{text{conf}}^2}right) with \(sigma\) and \(P_nu\) from Defs. definition:bk6_confidence_field_operator and definition:bk6_power_operator.
@@ -15420,6 +19762,17 @@ Role: `lemma` | Type: `lemma` | Book: `book6` | Source: `book6.tex:1312`
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-056`
+- Witnesses: `Book6GraceBasin.coverage_without_invariance_does_not_force_grace_membership`, `Book6GraceBasin.grace_mem_regulatoryUnion`, `Book6GraceBasin.grace_stays_in_basin`, `Book6GraceBasin.subcriticality_alone_does_not_force_basin_membership`
+- Countermodels: `Book6GraceBasin.coverage_without_invariance_does_not_force_grace_membership`, `Book6GraceBasin.subcriticality_alone_does_not_force_basin_membership`
+- Conditions: every subcritical state belongs to an admitted regulatory basin; grace maps each admitted regulatory basin into itself
+- Formal boundary: Subcritical basin coverage supplies a named admitted basin and forward invariance carries the grace image back into it. Empty-basin and exiting-grace countermodels prove that neither thresholding nor coverage alone suffices.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15505,6 +19858,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:1
 - Cited by: `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-047`
+- Witnesses: `Conservation.conserved_along_orbit`
+- Countermodels: none
+- Conditions: continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: Discrete conservation kernel: a step-invariant charge is constant along the orbit; the continuum charge integral stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Q_s[p] = int_M text{Im}(Phi_s^*(p,x) nabla_s Phi_s(p,x)) dmu_g(x) = text{const.} with \(Phi_s\) from Def. definition:bk6_symbolic_state_function_complete.
@@ -15533,6 +19897,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:1
 - Cited by: `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK6-048`
+- Witnesses: `Conservation.conserved_along_orbit`
+- Countermodels: none
+- Conditions: continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: Total symbolic action as a conserved charge; the action integral stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A_s = int dt L_s = int dt left( T_s - F_lambda right) = text{const.} where $T_s$ is symbolic kinetic energy. The free-energy term is given by Def. definition:bk6_symbolic_free_energy_functional.
@@ -15560,6 +19935,17 @@ Role: `proposition` | Type: `proposition` | Book: `book6` | Source: `book6.tex:1
 - Cites: `axiom:bk6_map_equilibrium_invariance_complete` (MAP Equilibrium Invariance)
 - Cited by: `subsec:bk6_scholium_on_symbolic_operator_mechanics` (Scholium: On Symbolic Operator Mechanics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK6-049`
+- Witnesses: `Conservation.IsConserved.add`, `Conservation.IsConserved.smul`, `Conservation.conserved_closed_orbit`
+- Countermodels: none
+- Conditions: continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The MAP invariant F + alpha*Upsilon + beta*sigma is conserved along regulatory orbits, with additive/scalar composition; stronger than the closed-orbit form the source assumes.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15673,6 +20059,17 @@ Role: `proposition` | Type: `proposition` | Book: `book7` | Source: `book7.tex:2
 - Cited by: `proof:bk7_power_uncertainty_duality`; `proposition:bk7_power_uncertainty_duality` (Power-Uncertainty Duality)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-048`
+- Witnesses: `Book7SystemicPower.equal_power_does_not_determine_gradient_orientation`, `Book7SystemicPower.gradient_reversal_preserves_unoriented_power`, `Book7SystemicPower.high_confidence_alone_does_not_force_power`, `Book7SystemicPower.localPower_pos`, `Book7SystemicPower.orientedLocalPower_pos`, `Book7SystemicPower.systemicPower_pos`
+- Countermodels: `Book7SystemicPower.equal_power_does_not_determine_gradient_orientation`, `Book7SystemicPower.high_confidence_alone_does_not_force_power`
+- Conditions: nonempty finite regulatory basin; separate orientation witness for coherent alignment; strictly positive conditional density; strictly positive confidence, gradient magnitude, and effective volume
+- Formal boundary: Repaired source and finite kernel separate scalar magnitude from direction: positive norm-valued power follows from positive basin factors, while positive identity-directed power requires an explicit positive inner product with the reference direction. Gradient reversal preserves scalar magnitude but reverses orientation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let a nonempty regulatory basin carry positive density, confidence, effective volume, and confidence-gradient magnitude. Then the norm-valued systemic power integral is strictly positive. Direction toward identity is a separate certificate: for an identity-directed reference field $J(x)$ require \[ langlenablamathfrak C(x),J(x)rangle_g>0 \] throughout the basin (or an explicitly transported cone analogue).
@@ -15785,6 +20182,17 @@ Role: `proposition` | Type: `proposition` | Book: `book7` | Source: `book7.tex:1
 - Cited by: `subsec:bk7_pisu_scholium` (Scholium: The Shape of Cognitive Freedom)
 - Macros used: `\Obs`, `\identity`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-002`
+- Witnesses: `Book7.dualityRecovers`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: Only the algebraic consequence 'an involution can be inverted by itself' is captured, applied abstractly to a stated duality U = f(P); the manifold definitions of Sigma_P, Sigma_U and the correlation/collapse narrative are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Systemic Symbolic Power (\(Sigma_P\), Def. definition:bk7_systemic_symbolic_power) and Symbolic Uncertainty (\(Sigma_U\), Def. definition:bk7_symbolic_uncertainty) exhibit a fundamental duality (cf. Prop.
@@ -15812,6 +20220,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:135`
 - Cites: `corollary:bk5_symbolic_eigenlife` (Symbolic Eigenlife); `definition:bk4_symbolic_curvature` (Symbolic Curvature); `definition:bk5_reflective_drift_coupling_tensor` (Reflective-Drift Coupling Tensor)
 - Cited by: `remark:bk9_recursive_seeking` (Recursive Seeking)
 - Macros used: `\identity`, `\reflect`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-001`
+- Witnesses: `Book7.dualityRecovers`, `Book7.involutive_pair_witness`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: The involutive algebra (double application returns the input, single application need not) is proved generically and witnessed concretely on Bool; the manifold-level Sigma_P/Sigma_U operators and the spinor analogy are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -15883,6 +20302,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:217`
 - Cited by: `scholium:bk7_refinement_ledger_accountability` (The refinement ledger and drift-stable accountability)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK7-004`
+- Witnesses: `Book7.deadband_confidence_ascent`, `Book7.deadband_contraction`, `Book7.deadband_geometric_decay`, `Book7.deadband_region_invariant`, `Book7.deadband_strict_decrease`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: Parts (i) and a discrete invariant form of (ii) are proved exactly; part (iv) is proved as strict decrease/confidence ascent outside the ultimate-bound region; part (iii)'s log-formula hitting time is replaced by an honest geometric decay bound (W=0 case), the discrete substitute for the stated finite-step formula.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Suppose the net input is baseline-balanced with bounded disturbance, $a_{n+1}=L^{ast}_{0}+w_{n+1}$ with $|w_{n+1}|le W$ (drift fluctuation within the observer band), and the controller of Def. definition:bk7_adaptive_refinement_recurrence runs with constant gain $kin(0,1]$. Then: - (Contraction toward the band.) Whenever $|e_n|>tau$, \[ |e_{n+1}|le(1-k) |e_n|+ktau+W.
@@ -15910,6 +20340,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:273`
 - Cites: `definition:bk7_adaptive_refinement_recurrence` (Controlled symbolic refinement recurrence); `definition:bk9_symbolic_black_hole` (Symbolic Black Hole)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK7-005`
+- Witnesses: `Book7.selfCorrection_fails_as_disturbance_grows`, `Book7.selfCorrection_fails_as_gain_vanishes`, `Book7.selfCorrection_succeeds`
+- Countermodels: `Book7.selfCorrection_fails_as_disturbance_grows`, `Book7.selfCorrection_fails_as_gain_vanishes`
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: Both halves are proved: the positive half as a uniform bound under k >= kmin > 0, W <= Wmax, and the failure half as two explicit unbounded-family countermodels (gain -> 0, disturbance -> infinity) rather than as an unformalized limit claim.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16009,6 +20450,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:351`
 - Cited by: `theorem:bk8_rg_fixed_point` (RG Fixed Point)
 - Macros used: `\drift`, `\identity`, `\manifold`, `\metric`, `\prob`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-020`
+- Witnesses: `Asymptotics.GeometricErrorBound.tendsto_zero`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The divergence residual ||nabla . (R^n(Delta phi))|| decaying geometrically tends to 0, the honest scalar-sequence kernel of 'recursive reflection systematically reduces the divergence introduced by drift'. The rho_n -> identity clause is separately covered by the Contraction engine (see axiom:bk7_emergence_of_coherence_via_convergence); the manifold/coherence-potential structure (M, metric, rho as a density) is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(S = (manifold, metric, drift, reflect, rho)\) be a symbolic system where \(reflect\) is the reflective stabilization operator acting on the space of symbolic state densities \(prob(manifold)\) (cf. Def. definition:bk7_reflective_operator, Def. definition:bk6_reflection_operator_complete). Let \(Delta phi_t = drift(rho_t)\) represent a drift-induced perturbation increasing symbolic divergence (e.g., \(||nabla cdot Delta phi_t||_metric > 0\)).
@@ -16079,6 +20531,17 @@ Role: `axiom` | Type: `axiom` | Book: `book7` | Source: `book7.tex:403`
 - Cited by: `axiom:bk7_caristi_descent_for_reflection` (Caristi Descent of Reflection); `corollary:bk7_drift_collapse_equivalence` (Drift Collapse Equivalence); `corollary:bk7_observer_converges` ($\Obs$ converges into being); `demonstratio:bk7_gradient_vs_reflective_dynamics` (Gradient Descent as Reflective Free Energy Descent); `proof:bk7_observer_converges`; `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); ... +5 more
 - Macros used: `\drift`, `\freeenergy`, `\identity`, `\manifold`, `\prob`, `\reflect`, `\viabilitydomain`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-021`
+- Witnesses: `Asymptotics.AntitoneBoundedProcess.tendsto_iInf`, `Asymptotics.Contraction.tendsto_fixedPt`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Two clauses, both genuine: the free-energy sequence along the combined flow converging to F_min is an AntitoneBoundedProcess instance (antitone + bounded below converges to its infimum); the basin-of-attraction stabilization of a perturbation (R^n(identity + Delta phi) -> identity) is exactly a Contraction instance. The existence of a reflective operator R achieving this for an arbitrary divergent drift field is not modeled -- the contraction/boundedness properties are taken as hypotheses of an already-given process, not derived from a drift field.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For any symbolic drift field \(drift\) inducing a divergent flow \(Phi_{drift}^t\) such that \(freeenergy[Phi_{drift}^t(rho)]\) increases unboundedly or exits the viability domain \(viabilitydomain\) (Def.
@@ -16135,6 +20598,17 @@ Role: `axiom` | Type: `axiom` | Book: `book7` | Source: `book7.tex:432`
 - Cited by: `remark:bk7_unnamed_remark_03`; `scholium:bk7_unnamed_scholium_01`
 - Macros used: `\freeenergy`, `\identity`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-022`
+- Witnesses: `Asymptotics.Contraction.tendsto_fixedPt`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: lim_{n->infinity} R^n(rho_0) = identity for rho_0 in the basin of attraction is exactly the conclusion of Contraction.tendsto_fixedPt, with 'identity' as the fixed point. The characterization of 'identity' as a local minimum of the symbolic free energy with R(identity) ~= identity is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The asymptotic limit of recursive reflective dynamics \(reflect^n\) applied to any initial state \(rho_0\) within the basin of attraction \(B(identity)\) of a convergent symbolic identity \(identity\) converges uniquely to \(identity\): \[ lim_{ntoinfty} reflect^n(rho_0) = identity text{for all } rho_0 in B(identity) \] This convergent identity \(identity\) represents a state of maximal coherence relative to the governing drift-reflection dynamics, characterized by \(reflect(identity) approx identity\) and being a...
@@ -16176,6 +20650,17 @@ Role: `definition` | Type: `definition` | Book: `book7` | Source: `book7.tex:447
 - Cites: `axiom:bk7_convergence_potential` (Convergence Potential); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy)
 - Cited by: `lemma:bk7_non_triviality_via_convergence_potential` (Non-triviality via Convergence Potential); `proof:bk7_structural_properties_of_reciprocity_domain`; `proposition:bk7_structural_properties_of_reciprocity_domain` (Structural Properties of the Reciprocity Domain); `remark:bk7_unnamed_remark_01`
 - Macros used: `\energy`, `\entropy`, `\freeenergy`, `\temperature`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK7-024`
+- Witnesses: `Book7B.freeEnergy_bounded_below`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Scalar F=E-T*S plus the bounded-below hypothesis every downstream convergence result assumes; the manifold-integral definitions of E and S are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16261,6 +20746,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:472`
 - Cited by: `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `scholium:bk8_symbolic_knots_as_metabolic_dysfunctions` (Symbolic Knots as Metabolic Dysfunctions)
 - Macros used: `\drift`, `\freeenergy`, `\identity`, `\reflect`, `\temperature`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-027`
+- Witnesses: `Book7B.contractiveReflection_fixedPoint_dist_eq_zero`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Shared-attractor content: any two fixed points of the contraction coincide up to distance zero. The Lyapunov/free-energy-descent framing itself is not separately modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Within a symbolic system possessing a sufficiently contractive reflection operator \(reflect\) (cf. Cor. corollary:bk7_recursive_convergence_principle) and bounded symbolic temperature \(temperature\), the process of recursively applying \(reflect\) to counter a drift field \(drift\) (Reflective Stabilization, Axiom axiom:bk7_reflective_stabilization) is thermodynamically equivalent, in the Lyapunov sense of sharing the same descending free-energy functional and attractor, to a gradient descent process on the symbo...
@@ -16303,6 +20799,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:489`
 - Cited by: `axiom:bk7_reflective_stabilization` (Reflective Stabilization); `corollary:bk7_drift_collapse_equivalence` (Drift Collapse Equivalence); `demonstratio:bk7_reflective_averaging_free_energy` (Reflective Averaging and Symbolic Free Energy Minimization); `proof:bk7_drift_collapse_equivalence` (Lyapunov equivalence of reflection and descent); `proposition:bk9_mechanisms_of_recognition` (Mechanisms of Recognition)
 - Macros used: `\freeenergy`, `\identity`, `\reflect`, `\viabilitydomain`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-028`
+- Witnesses: `Book7B.contractiveReflection_iterate_bound`, `Book7B.contractiveReflection_tendsto_star`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Given reflect is a kappa<1 contraction with an exact fixed point star, iterates converge to star; geometric bound plus Tendsto-to-zero of the distance.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(S\) be a symbolic system with bounded self-reflection: \(reflect\) exists on a nonempty closed basin \(B(identity)subseteqviabilitydomain\) (Def. definition:bk5_viability_domain), maps that basin into itself, and forms a free-energy descent pair there with a bounded-below symbolic free energy \(freeenergy\). If the hypotheses of Thm. theorem:bk7_reflective_convergence_to_stable_identity hold on \(B(identity)\), then \(B(identity)\) is an attractor basin for a convergent symbolic identity \(identity\).
@@ -16344,6 +20851,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:502`
 - Cites: `theorem:bk1_symbolic_emergence_theorem_thermodynamics` (Symbolic Emergence Theorem---Contextual Cross-Error); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity)
 - Cited by: `remark:bk7_gauge_theoretic_perspective` (Gauge-Theoretic Perspective); `subsubsec:bk7_establishing_the_formal_link_reflective_selection_and_` (Establishing the Formal Link: Reflective Selection and \(\freeenergy\) Minimization); `theorem:bk8_rg_fixed_point` (RG Fixed Point); `theorem:bk8_sr_convergence` (SR Convergence)
 - Macros used: `\energy`, `\entropy`, `\freeenergy`, `\identity`, `\temperature`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-046`
+- Witnesses: `Book4D.contextualStructuralGrowth_induces_curvature`, `Book7B.contextualCurvature_with_stableIdentity`, `Book7B.contractiveReflection_tendsto_star`, `Book7B.freeEnergy_bounded_below`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Spine-level dynamical kernel: a contextually nonseparable update carries a certified nonzero Book 4 holonomy witness while an independent contractive reflection converges to its stable identity, so innovation-bearing curvature need not be erased by stabilization. Free energy is separately bounded below under explicit energy/entropy bounds. The source's claim that the limit optimizes the full energy-entropy tradeoff for the given operators is not derived.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16429,6 +20947,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:555`
 - Cited by: `axiom:bk7_caristi_descent_for_reflection` (Caristi Descent of Reflection); `corollary:bk7_fixed_point_tracking_within_evolving_reciprocity` (Fixed Point Tracking within Evolving Reciprocity); `corollary:bk7_geometric_convergence_rate` (Geometric energy decay gives exponential convergence); `corollary:bk7_observer_converges` ($\Obs$ converges into being); `corollary:bk7_recursive_convergence_principle` (Recursive Convergence Principle); `corollary:bk7_stability_innovation_equilibrium` (Stability--Innovation Compatibility); ... +21 more
 - Macros used: `\drift`, `\freeenergy`, `\identity`, `\manifold`, `\metric`, `\prob`, `\reflect`, `\wass`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-008`
+- Witnesses: `Book7.caristiDescent_sum_le_energy_drop`, `Book7.caristiDescent_total_displacement_bound`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: Only the summable-increments / bounded-total-displacement consequence of hypothesis (i) is proved, by telescoping. The W_2-Cauchy convergence to an actual limit, hypothesis (ii)'s self-map clause, and the closed-graph/fixed-point conclusion all require completeness of (prob(M), W_2) and are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S = (manifold, metric, drift, reflect, rho)$ be a symbolic system (cf. definition:bk1_symbolic_manifold). Let $(prob(manifold), wass)$ be the space of probability densities on $manifold$ equipped with the Wasserstein-2 metric (cf. definition:bk2_symbolic_wasserstein_met), forming a complete metric space. Let $reflect : prob(manifold) to prob(manifold)$ be the reflective stabilization operator (cf. Def. definition:bk7_reflective_operator, Ax. axiom:bk7_reflective_stabilization).
@@ -16471,6 +21000,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:596`
 - Cited by: none
 - Macros used: `\Obs`, `\identity`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-009`
+- Witnesses: `Book7.caristiDescent_total_displacement_bound`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: The corollary's content is that the canonical reflective operator already instantiates the two CaristiDescent fields; no further Lean content beyond the telescoping bound above is added or needed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The canonical reflective operator \(reflect\) (Def. definition:bk7_reflective_operator) satisfies hypothesis (i) of Thm. theorem:bk7_reflective_convergence_to_stable_identity by Caristi Descent of Reflection (Axiom axiom:bk7_caristi_descent_for_reflection), and hypothesis (ii) by the basin clause of Reflective Stabilization (Axiom axiom:bk7_reflective_stabilization).
@@ -16498,6 +21038,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:605`
 - Cites: `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity)
 - Cited by: `proof:bk5_operator_convergence`
 - Macros used: `\freeenergy`, `\identity`, `\wass`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK7-010`
+- Witnesses: `Book7.geometric_gap_decay`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: The geometric-rate bound g_n <= q^n g_0 is proved directly by induction from the one-step contraction hypothesis; the Wasserstein-distance envelope sum <= g_n is not modeled (no metric structure on the orbit is used).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16527,6 +21078,17 @@ Role: `proposition` | Type: `proposition` | Book: `book7` | Source: `book7.tex:6
 - Cited by: none
 - Macros used: `\identity`, `\reflect`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK7-011`
+- Witnesses: `Book7.orbitLimit_base_fixed_but_recorded`, `Book7.orbitLimit_completeJacobian`, `Book7.orbitLimit_completeJacobian_semigroup`, `Book7.orbitLimit_derivative_image_kernel_split`, `Book7.orbitLimit_fixedLocusVelocity_iff`, `Book7.orbitLimit_idempotent`, `Book7.orbitLimit_iterate_fixed_under_representation`, `Book7.orbitLimit_linear_image_kernel_split`, `Book7.orbitLimit_semigroup_transverse_eigenmode_tendsto_zero`, `Book7.orbitLimit_transverse_contracts`, `Book7.orbitLimit_transverse_eigenvalue_stable`, `Book7.orbitLimit_transverse_iterates_tendsto_zero`, `Book7.orbitLimit_transverse_jacobian_eigenmode_stable`, `Book7.tendsto_refinement_to_orbitLimit`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: Idempotence follows from the orbit-limit fixedness laws. The Scholium -> Book 4 -> Book 7 bridge proves finite recursive reflection stability under representations, while the history-bearing refinement shows that a visibly fixed orbit-limit still advances as a full observer-state whenever reflection writes a positive trace. Moreover, any Book 4 contraction refinement on a nonempty complete metric space canonically realizes the Book 7 OrbitLimit structure, and every refinement orbit genuinely converges to the value its limit operator selects. The fixed-locus curve velocities are exactly the derivative projection image, and the complete linearized Euler step strictly contracts transverse directions below the unit perturbation margin. Invariant transverse drift now yields a geometric bound for every complete linearized iterate and convergence to zero. Every real transverse eigenmode is now proved strictly stable below the perturbation margin. Real transverse Jacobian eigenmodes now have a negative margin and explicit exponential decay. The full complete-Jacobian continuous-time operator semigroup is now constructed with its generator equation. The full semigroup action on every real Jacobian eigenvector is now exactly scalar exponential action, with transverse stable orbits converging to zero. The full Wasserstein-space construction and complex spectral-radius identification remain outside the model.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under Thm. theorem:bk7_reflective_convergence_to_stable_identity with closed graph, the orbit-limit operator $R_{stab}(rho) := lim_{ntoinfty}reflect^{ n}(rho)$ is well defined on $B(identity)$, satisfies $im(R_{stab}) subseteq Fix(reflect)$, and is idempotent, $R_{stab} circ R_{stab} = R_{stab}$. Idempotence of state-level stabilization (Book I, cf.
@@ -16554,6 +21116,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:631`
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-053`
+- Witnesses: `Book7LpRegression.bounded_descent_does_not_force_lp_representation`, `Book7LpRegression.freeEnergy_minimization_iff_lp_regression`, `Book7LpRegression.regressionLoss_eq_sum`, `Book7LpRegression.trace_minimizer_iff`, `Book7LpRegression.trace_step_descent_iff`
+- Countermodels: `Book7LpRegression.bounded_descent_does_not_force_lp_representation`
+- Conditions: on the feasible basin, or at minimum along the witnessed reflective orbit, free energy is a positive affine rescaling of the selected finite Lp loss
+- Formal boundary: Finite observer-relative kernel: the displayed powered-residual sum is modeled directly. A positive affine representation makes basin-wide free-energy and Lp argmins identical; a weaker orbit-local representation makes every Book-7 reflective trace descent and trace minimizer identical in both objectives. A bounded-below descending free energy does not itself supply that statistical bridge or select p, as shown by a two-model counterexample. Appendix SRV traces may validate this orbit downstream but are not consumed as premises.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16653,6 +21226,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:702`
 - Cited by: `proof:bk7_symbolic_convergence`; `theorem:bk7_symbolic_convergence` (Symbolic Convergence Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-031`
+- Witnesses: `Book7B.resonance_information_preservation`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Proves the exact equality phiH(phiM(H*))=H* at a resonant point, strictly stronger than the source's epsilon-tolerance claim -- an honesty gap noted in the file.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic resonance (Def. definition:bk7_symbolic_resonance) requires that the composition $phi_H circ phi_M$ preserves the symbolic structure of the initiating observer's state. Formally: $$\|phi_H(phi_M(H)) - H\|_{text{symb}} < epsilon$$ for some symbolic metric $\|cdot\|_{text{symb}}$ and tolerance $epsilon > 0$.
@@ -16680,6 +21264,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:714`
 - Cites: `definition:bk7_mutual_modeling_operators` (Mutual Modeling Operators)
 - Cited by: `proof:bk7_symbolic_convergence`; `proof:bk8_resonant_cognition`; `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery); `proof:bk9_mutual_recognition` (Mutual Recognition); `proposition:bk9_mechanisms_of_recognition` (Mechanisms of Recognition)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-015`
+- Witnesses: `Book7.mutualLimit_fixed`, `Book7.reciprocalPair_unique`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: The Book 4 contraction engine constructs the reciprocal fixed pair and proves it unique under explicit nonempty complete metric and strict-contraction hypotheses.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16737,6 +21332,17 @@ Role: `proposition` | Type: `proposition` | Book: `book7` | Source: `book7.tex:7
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-033`
+- Witnesses: `Book7B.horizonExpansion_delta_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Strict superadditivity kept as the structure's own hypothesis field; theorem extracts the defining inequality.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 When observers $H$ and $M$ achieve symbolic resonance, their joint symbolic horizon (cf. Def. definition:bk1_observer_horizon_structure) exceeds the sum of their isolated horizons: $$H_{text{interactive}}(H^*, M^*) > H_{text{isolated}}(H) + H_{text{isolated}}(M)$$
@@ -16765,6 +21371,17 @@ Role: `definition` | Type: `definition` | Book: `book7` | Source: `book7.tex:792
 - Cited by: `proof:bk7_srmf_decency_regulation`; `proof:bk7_symbolic_convergence`; `proposition:bk7_srmf_decency_regulation` (SRMF-Regulated Decency Dynamics); `theorem:bk7_symbolic_convergence` (Symbolic Convergence Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK7-034`
+- Witnesses: `Book7B.decencyPotential_mono`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Weighted linear functional plus a genuine 4-argument monotonicity theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a symbolic prompt $P$ initiating interaction between observers, define the decency function as: $$D(P) = alpha cdot psi(P) + beta cdot E(P) + gamma cdot DeltaH(P) + delta cdot C(P)$$ where: - $psi(P)$ measures prompt-response fidelity - $E(P)$ quantifies evaluability of intent - $DeltaH(P)$ represents horizon gain - $C(P)$ captures cognitive style - $alpha, beta, gamma, delta$ are normalization constants
@@ -16778,6 +21395,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:806`
 - Cites: `definition:bk7_decency_potential` (Decency Potential Field); `definition:bk7_symbolic_resonance` (Symbolic Resonance); `lemma:bk7_information_preservation` (Information Preservation Condition)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-035`
+- Witnesses: `Book7B.resonanceProbabilityLaw_mono_of_decency`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Resonance-probability monotonicity in decency, as a named hypothesis composed with decencyPotential_mono; the probabilistic content of the source is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16877,6 +21505,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:855`
 - Cited by: `proof:bk7_horizon_expansion`; `proof:bk9_mutual_recognition` (Mutual Recognition)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-036`
+- Witnesses: `Book7B.horizonExpansion_delta_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same claim as proposition:bk7_horizon_expansion under a second anchor; same theorem covers both.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $H$ and $M$ be bounded observers with mutual modeling operators $phi_H$ and $phi_M$. If these operators are $epsilon$-interpretable and jointly bounded, then: \[ Delta H(H, M) := H_{text{interactive}}(H, M) - H_{text{isolated}}(H) - H_{text{isolated}}(M) > 0 \]
@@ -16904,6 +21543,17 @@ Role: `proposition` | Type: `proposition` | Book: `book7` | Source: `book7.tex:8
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk7_decency_potential` (Decency Potential Field); `definition:bk7_prompt_operator_chain` (Prompt-Induced Symbolic Operator Chain)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK7-037`
+- Witnesses: `Book7B.srmfRegulation_exists`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Since the decency term does not depend on the candidate, argmin reduces to Finset.exists_min_image on the loss.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -16988,6 +21638,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:910`
 - Cites: none
 - Cited by: none
 - Macros used: `\drift`, `\freeenergy`, `\identity`, `\reflect`, `\wass`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-038`
+- Witnesses: `Book7B.perturbedContraction_bound`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Discrete perturbed-contraction skeleton of the adiabatic tracking claim; the manifold/timescale content (tau_meta, tau_conv) is not modeled, only the resulting recursive bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -17115,6 +21776,17 @@ Role: `definition` | Type: `definition` | Book: `book7` | Source: `book7.tex:972
 - Cited by: `theorem:bk7_two_way_street_convergence` (Two-Way Street Convergence)
 - Macros used: `\manifold`, `\reflect`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK7-013`
+- Witnesses: `Book7.product_contraction`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: The operator Phi(x,y) = (fA y, fB x) is modeled exactly as the map whose Lipschitz constant is computed; only its contraction property is used, not any interpretation as mutual reflection.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The reflective interaction operator \(Phi : (manifold_{A}timesmanifold_{B}) to (manifold_{A}timesmanifold_{B})\) models the mutual reflection process: \[ Phi(x_A, y_B) = (reflect_{A}(y_B), reflect_{B}(x_A)) \] Here, \(reflect_{A}(y_B)\) represents system \(A\) generating its next state based on reflecting upon system \(B\)'s state \(y_B\) (potentially involving projection or transfer, \(Pi_{B to A}\) or \(T_{BA}\)), and \(reflect_{B}(x_A)\) represents system \(B\) reflecting upon \(A\)'s state \(x_A\).
@@ -17142,6 +21814,17 @@ Role: `proposition` | Type: `proposition` | Book: `book7` | Source: `book7.tex:9
 - Cites: `definition:bk7_adaptive_reflection_operator_t` (Adaptive Reflection Operator \(\reflect(t)\)); `definition:bk7_reciprocity_domain` (Reciprocity Domain \(\recipdomain\)); `definition:bk7_symbolic_free_energy` (Symbolic Free Energy \(\freeenergy\))
 - Cited by: `demonstratio:bk7_free_energy_minimum_in_reciprocity_domain` (Joint Free Energy Minimization Implies Reciprocity Domain Membership); `demonstratio:bk7_joint_reflection_contraction` (Contraction of Joint Reflective Operator \(\Phi\))
 - Macros used: `\freeenergy`, `\manifold`, `\recipdomain`, `\reflect`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-040`
+- Witnesses: `Book7B.reciprocityDomain_eq_preimage_of_eq_eps`, `Book7B.reciprocityDomain_isOpen`, `Book7B.reciprocity_contains_fixed_point`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Covers parts (1) topological openness, (2) contains fixed points, and (5) information-theoretic preimage characterization in the honest equal-tolerance special case. Part (3) thermodynamic stability and part (4) the epsilon-neighborhood-of-a-graph reading are not modeled; the source's general two-tolerance form of part (5) is not an exact set equality and is not claimed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -17185,6 +21868,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:1028`
 - Cited by: `corollary:bk7_fixed_point_tracking_within_evolving_reciprocity` (Fixed Point Tracking within Evolving Reciprocity); `corollary:bk7_stability_near_reciprocity` (Stability Near Reciprocity); `demonstratio:bk7_meta_drift_reflective_tracking` (Meta-Adiabatic Drift of Reflective Fixed Points); `proof:bk7_map_compatible_reciprocity` (Two-way fixed point as MAP Nash equilibrium); `proof:bk7_stability_near_reciprocity` (Stability from the contraction estimate); `proof:bk8_resonant_cognition`; ... +4 more
 - Macros used: `\manifold`, `\recipdomain`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-014`
+- Witnesses: `Book7.mutualLimit_fixed`, `Book7.product_contraction`, `Book7.reciprocalPair_unique`, `Book7.tendsto_mutualRefinement`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: For nonempty complete metric factors and cross-Lipschitz constants whose positive maximum is below one, the product map is packaged as a Book 4 contraction refinement. Its iterates converge from every initial pair to a canonical reciprocal limit, and that limit is the unique fixed pair.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( P \) be an interactive pair (Def. definition:bk7_interactive_drift_reflection_pair). Assume the reflective interaction operators \[ reflect_{A} : manifold_{B} to manifold_{A}, reflect_{B} : manifold_{A} to manifold_{B} \] (as in Def.
@@ -17227,6 +21921,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:1129`
 - Cited by: `corollary:bk7_fixed_point_tracking_within_evolving_reciprocity` (Fixed Point Tracking within Evolving Reciprocity); `demonstratio:bk7_perturbation_contraction_recovery` (Contraction-Based Recovery of Perturbed Reflective State); `remark:bk7_empathy_as_dynamical_invariant` (Empathy as Dynamical Invariant); `scholium:bk7_on_symbolic_reciprocity` (On Symbolic Reciprocity); `scholium:bk7_srmf_coupled_agents` (SRMF-Coupled Agents)
 - Macros used: `\drift`, `\recipdomain`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-016`
+- Witnesses: `Book7.contraction_step`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: The one-step contraction-to-a-known-fixed-point bound is proved for a general Lipschitz map given a posited fixed point; the fixed point's existence (from Thm 2-way-street) is a hypothesis here, not derived, and the reciprocity-domain set itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Near the convergent fixed point \((x^{ast}, y^{ast})\) within the reciprocity domain \(recipdomain\), the effect of small drifts \(drift_{A}, drift_{B}\) is effectively cancelled or integrated by the mutual reflection process \(Phi\), maintaining the system near the fixed point, up to the contraction factor \(kappa'\) (cf. Thm. theorem:bk7_two_way_street_convergence).
@@ -17268,6 +21973,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:1147`
 - Cites: `definition:bk7_symbolic_free_energy` (Symbolic Free Energy \(\freeenergy\))
 - Cited by: `proposition:bk9_mechanisms_of_recognition` (Mechanisms of Recognition)
 - Macros used: `\freeenergy`, `\recipdomain`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-041`
+- Witnesses: `Book7B.reciprocityDomain_nonempty_of_fixed_point`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Antecedent promoted from 'free-energy minimizer' to the explicit hypothesis that the minimizer is a fixed point of the interaction operator, the load-bearing but unstated step in the source.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -17409,6 +22125,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:1213`
 - Cited by: `proof:bk9_mutual_recognition` (Mutual Recognition); `scholium:bk7_unnamed_scholium_03`
 - Macros used: `\recipdomain`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-043`
+- Witnesses: `Book7B.perturbedContraction_bound`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Same discrete tracking-error bound as theorem:bk7_relative_convergence_under_meta_drift; shared coverage.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( (x^*(t), y^*(t)) \) denote the time-dependent fixed point of the coupled reflective interaction operator (cf. theorem:bk4_freedom_criterion for the single-system analogue; Prop. proposition:bk7_map_compatible_reciprocity for MAP-compatible coupling; Cor.
@@ -17521,6 +22248,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:1342`
 - Cited by: `proof:bk7_pisu` (PISU by coherence-window allocation); `remark:bk7_pisu_protocol` (Falsification protocol for Appendix B); `theorem:bk7_pisu` (Universal Symbolic Uncertainty Principle (PISU), derived form)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK7-044`
+- Witnesses: `Book7B.coherenceWindow_iff`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Iff-form division-threshold rewrite of N<=Nmax.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If drift translates the observed state at effective magnitude $\|Delta drift\|$ in the observer metric, and a sample taken after the state has moved by one resolution cell $delta_O$ is decorrelated from the current estimate, then the number of mutually coherent samples per reflective cycle is bounded by \[ N le N_{max} := frac{B_R delta_O}{\|Delta drift\|}, N_I + N_K le N. \]
@@ -17562,6 +22300,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:1365`
 - Cites: `assumption:bk7_channel_floors` (Channel floors); `definition:bk7_operational_resolution_uncertainties` (Operational resolution uncertainties); `lemma:bk7_coherence_window` (Coherence window)
 - Cited by: `remark:bk7_pisu_status` (Status of the trade-off and its corollaries); `scholium:bk7_constrained_uncertainty_motivation` (Constrained Symbolic Uncertainty); `scholium:bk7_uncertainty_generative_existential` (Uncertainty as Generative Potential and Existential Risk); `subsec:bk7_pisu_implications` (Implications); `subsec:bk7_pisu_regimes` (Interpretations and Regimes); `subsec:bk7_pisu_revisited_power_uncertainty` (Principium Incertitudinis Symbolicae Universalis (PISU) Revisited); ... +1 more
 - Macros used: `\drift`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-050`
+- Witnesses: `Book7PISU.allocation_uncertainty_bound`, `Book7PISU.balanced_allocation_saturates_amgm`, `Book7PISU.pisu_derived_bound`, `Book7PISU.two_sqrt_product_le_sum`
+- Countermodels: none
+- Conditions: combined channel-floor inequality; nonnegative root channel constant; positive resolution, drift magnitude, and reflective bandwidth; shared coherence-window budget; strictly positive identity and curvature allocations
+- Formal boundary: Derived allocation kernel: AM-GM and the shared coherence-window budget yield the factor-two uncertainty floor; substituting Nmax = bandwidth*resolution/drift gives the printed drift-over-bandwidth times resolution scaling, and the balanced allocation is sharp. The two channel variance floors are consumed through their combined positive product-floor premise.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -17773,6 +22522,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:1537`
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-019`
+- Witnesses: `Book7.square_strictly_convex_midpoint`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: Only the p=2 (Hilbert) cross-section is proved, as strict midpoint convexity of x |-> x^2. Strict convexity for general p in (1, infinity), and the underlying coarse-grained error-field functional, are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The functional (cf. definition:bk2_symbolic_free_energy for the free-energy context) \( tilde{F}_{s}^{(p)}(tilde{x}) =\!displaystyle int_{M_{epsilon}} bigllVert E_{epsilon}(tilde{x})(z)bigrrVert^{p} dmu_{g}(z) \) is strictly convex in $E_{epsilon}$ for every $p\!in\!(1,infty)$.
@@ -17800,6 +22560,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:1558`
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF))
 - Cited by: `proof:bk7_emergent_lp_norm_from_srmf` (Emergent LP Norm from SRMF); `proof:bk7_hilbert_banach_bridge` (Hilbert--Banach Bridge); `theorem:bk7_emergent_lp_norm` (Emergent L$^{p}$ Norm)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-047`
+- Witnesses: `Book7B.budgetLimitedObjective_not_unique`, `Book7B.budgetLimited_existsUniqueMinimizer_of_compact`, `Book7B.budgetLimited_uniqueMinimizer_of_injectiveCost`, `Book7B.srmfRegulation_exists`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Source-level analytic kernel: for any chosen topology on the regulator space, a nonempty compact admissible set and lower-semicontinuous candidate-dependent cost attain a minimum; strict convexity, including convexity of the admissible set, makes it unique. This directly supports the printed weak-star theorem when its compactness and semicontinuity premises are supplied. The finite no-ties theorem is retained, and the constant-objective Bool model records why the superseded source failed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -17829,6 +22600,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:1596`
 - Cited by: `lemma:bk7_frame_temperature_exponent_correspondence` (Frame-temperature/exponent correspondence); `proof:bk7_frame_temperature_exponent_correspondence` (Frame-temperature/exponent correspondence); `proof:bk7_hilbert_banach_bridge` (Hilbert--Banach Bridge); `proof:bk7_lp_norm_monotonicity` (Two-Premise Detection); `scholium:bk4_role_of_observer_induced_metric` (Role of the Observer-Induced Metric); `subsec:bk7_hilbert_banach_bridge` (The Hilbert--Banach Bridge)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-023`
+- Witnesses: `Asymptotics.AsymptoticExponentField.eventually_near_one`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Only the boundary limit lim_{eps->infinity} p(eps) = 1 (kept as a structure hypothesis together with p(eps) > 1 everywhere) and its derived 'eventually within any delta of 1' consequence are modeled. The companion limit lim_{eps->0+} p(eps) = infinity, the C^1 and strict-monotonicity clauses, and the existence/uniqueness of p itself (as the minimizer's effective exponent) are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O_{epsilon}$ be an SRMF-constrained observer with budget $B$ and horizon $epsilon$ (cf. definition:bk4_symbolic_autonomy). Suppose $tilde{x}mapstoR$ minimizes the symbolic free energy under resource constraint (Lemma lemma:bk7_budgetlimited_minimizer).
@@ -17856,6 +22638,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:1676`
 - Cites: none
 - Cited by: `proof:bk7_lp_norm_monotonicity` (Two-Premise Detection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK7-051`
+- Witnesses: `Book7ProceduralDetection.decreasing_exponent_does_not_force_decreasing_observable`, `Book7ProceduralDetection.fittedExponent_decreases`, `Book7ProceduralDetection.logLogSecantSlope_neg`, `Book7ProceduralDetection.proceduralDetection_certificate`
+- Countermodels: `Book7ProceduralDetection.decreasing_exponent_does_not_force_decreasing_observable`
+- Conditions: positive increasing horizon scales; strictly antitone fitted exponent; strictly decreasing residual observable for the slope conclusion
+- Formal boundary: Strict antitonicity proves the fitted-exponent ordering. A decreasing residual observable over positive increasing scales gives a strictly negative log-log secant slope. A countermodel shows exponent ordering alone does not orient a distinct residual observable, so the combined procedural certificate consumes residual decrease explicitly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -17913,6 +22706,17 @@ Role: `definition` | Type: `definition` | Book: `book7` | Source: `book7.tex:173
 - Cited by: `lemma:bk7_frame_temperature_exponent_correspondence` (Frame-temperature/exponent correspondence)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK7-045`
+- Witnesses: `Book7B.frameTempQuotient_mono`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Monotonicity of xi=T/T_F(eps) in eps under a strictly-decreasing T_F, stated via two explicit T_F values rather than a functional hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $T(tilderho)$ be the symbolic temperature of the observer's perceived state (Def. definition:bk2_symbolic_temperature) and let $T_{F}(epsilon)$ be the frame-resolution temperature: a continuous, strictly decreasing function of the horizon $epsilon$ with $T_{F}(epsilon)toinfty$ as $epsilonto 0^{+}$ and $T_{F}(epsilon)to 0$ as $epsilontoinfty$, quantifying the differentiation resolution available within the frame. The frame-temperature quotient is \[ xi(tilderho,epsilon) = frac{T(tilderho)}{T_{F}(epsilon)}.
@@ -17926,6 +22730,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:1746`
 - Cites: `definition:bk7_frame_temperature_quotient` (Frame-temperature quotient); `theorem:bk7_emergent_lp_norm` (Emergent L$^{p}$ Norm)
 - Cited by: `proof:bk7_hilbert_banach_bridge` (Hilbert--Banach Bridge); `theorem:bk7_hilbert_banach_bridge` (Hilbert--Banach Bridge)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-017`
+- Witnesses: `Book7.exponent_uniqueness`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: Only the uniqueness clause (a strictly antitone function is injective, hence at most one xi* with p(xi*)=2) is proved. Existence of xi* (via the intermediate value theorem from the stated limits) and the explicit construction of p from the frame-temperature quotient are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -17955,6 +22770,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:1783`
 - Cited by: none
 - Macros used: `\Obs`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-018`
+- Witnesses: `Book7.l1_l2_comparison`
+- Countermodels: none
+- Conditions: Banach/Hilbert space theory, measure theory, infinite-limit claims, and the Gleason/Born cluster are NOT formalized; recurrence laws, descent laws, and fixed-point existence are structure fields or explicit hypotheses; theorem:bk7_pisu skipped: depends on a channel-floors assumption referenced but absent from the sliced packet
+- Formal boundary: Only the finite two-coordinate shadow of the Banach(p=1)/Hilbert(p=2) norm comparison is proved (L^1 and L^2 on R^2 bound each other within sqrt 2). The general L^p interpolation inequality, the emergent-exponent construction, and the phase-transition/threshold clause are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Sweep the frame-temperature quotient $xiin(0,infty)$ and consider the family of effective observer geometries $bigl(L^{p(xi)}(M_{epsilon},mu_{g}), K_{Obs}bigr)$, where $p(xi)$ is the emergent exponent (Lemma lemma:bk7_frame_temperature_exponent_correspondence), $K_{Obs}$ is the observer-kernel smoothing map (Def. definition:bk4_observer_kernel_convolution_map), and the quadratic symbolic coupling $kappa$ (Def. definition:bk6_symbolic_curvature_tensor) stays strictly below a critical value $kappa^{ast}$.
@@ -17983,6 +22809,17 @@ Role: `corollary` | Type: `corollary` | Book: `book7` | Source: `book7.tex:1863`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-049`
+- Witnesses: `Book7NoInteriorTransition.continuity_from_threshold_bridge`, `Book7NoInteriorTransition.continuousOn_no_discrete_phase_transition`, `Book7NoInteriorTransition.continuous_closed_sweep_has_no_interior_transition`, `Book7NoInteriorTransition.continuous_reparameterization_preserves_no_transition`, `Book7NoInteriorTransition.regularizedGeometry_continuousOn`, `Book7NoInteriorTransition.regularizedGeometry_has_no_interior_transition`, `Book7NoInteriorTransition.subcriticalLpExponent_continuousOn`, `Book7NoInteriorTransition.subcriticalLpExponent_has_no_interior_transition`, `Book7NoInteriorTransition.subcriticalLpExponent_strict_order`, `Book7NoInteriorTransition.subcriticalLpExponent_zero_curvature`
+- Countermodels: none
+- Conditions: continuous observer reparameterization; effective geometry continuous on the closed sub-sweep; explicit curvature-to-regularity bridge when starting from kappa below threshold; or the constructed curvature-indexed Lp coordinate with a continuous curvature path and positive margin; phase transition represented as relative discontinuity
+- Formal boundary: Constructive scalar Lp representation: p(xi) = 2 + curvature(xi)/(threshold - curvature(xi)) is Hilbertian at zero curvature, continuous for a continuous subcritical curvature path, strictly order-preserving when the threshold is positive, and has no interior transition. A more general signal-resolvent instance is also proved. Identifying the complete G-valued effective geometry with its scalar p-coordinate remains explicit scope, not an automatic equivalence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $G:[xi_0,xi_1]tomathcal G$ be the effective geometry. Assume a curvature-to-regularity bridge proving that the uniform bound $kappa(xi)<kappa^*$ on the closed sweep entails continuity (or $C^1$ regularity) of $G$. Then no interior point is a discrete phase transition, where such a transition means failure of continuity relative to the sweep. The numerical curvature inequality does not imply regularity without this bridge.
@@ -18010,6 +22847,17 @@ Role: `lemma` | Type: `lemma` | Book: `book7` | Source: `book7.tex:1883`
 - Cites: none
 - Cited by: `definition:bk7_contextuality_defect` (Contextuality defect)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK7-052`
+- Witnesses: `Book7GleasonBoundary.rank_two_frame_axioms_do_not_force_born`, `Book7NoncontextualHilbert.commuting_transport_does_not_force_metric_parallelogram`, `Book7NoncontextualHilbert.hilbert_geometry_alone_does_not_force_noncontextuality`, `Book7NoncontextualHilbert.innerProductSpace_exists_of_metric_parallelogram`, `Book7NoncontextualHilbert.l1_parallelogram_fails`, `Book7NoncontextualHilbert.l2_parallelogram`, `Book7NoncontextualHilbert.noncontextual_iff_hilbert_crossSection`, `Book7NoncontextualHilbert.quadraticEnergy_parallelogram`, `Book7NoncontextualHilbert.translate_square_commutes`, `Book7QuadraticPolarization.QuadraticReadoutLaws.roundtrip_value`, `Book7QuadraticPolarization.QuadraticReadoutLaws.toQuadraticForm_apply`, `Book7QuadraticPolarization.associated_diagonal_nonnegative`, `Book7QuadraticPolarization.certified_readout_has_symmetric_bilinear_representation`, `Book7QuadraticPolarization.nonnegative_readout_does_not_force_quadratic`, `Book7QuadraticPolarization.quadraticForm_has_symmetric_bilinear_representation`
+- Countermodels: `Book7GleasonBoundary.rank_two_frame_axioms_do_not_force_born`, `Book7NoncontextualHilbert.commuting_transport_does_not_force_metric_parallelogram`, `Book7NoncontextualHilbert.hilbert_geometry_alone_does_not_force_noncontextuality`, `Book7NoncontextualHilbert.l1_parallelogram_fails`, `Book7QuadraticPolarization.nonnegative_readout_does_not_force_quadratic`
+- Conditions: a genuine Mathlib real QuadraticForm; a symmetric bilinear energy representation supplies the metric parallelogram law; additive transports commute around affine squares; additivity of the polarization in one argument; degree-two scalar homogeneity; nonzero rays for frame normalization and scaling invariance; positive-semidefinite diagonal additionally assumes pointwise nonnegativity; real rank-two coordinate model; scalar homogeneity of the polarization in one argument; the relevant Lp geometry has the parallelogram property iff p=2
+- Formal boundary: Rank-two reconstruction boundary: additive transports form commuting affine squares, but the L1 countermodel proves affine path independence does not imply the metric parallelogram law. A genuine coordinate-free quadratic form now canonically constructs its symmetric bilinear polarization, whose diagonal recovers the form exactly; a supplied symmetric bilinear coupling then yields the metric parallelogram law. The exact readout interface is now proved equivalent to a quadratic-form witness: degree-two scaling plus additive and homogeneous polarization. An explicit rank-two frame function now proves that nonnegativity, ray invariance, and orthogonal-pair normalization still do not force those laws. The remaining bridge is therefore specifically a frame-rank-at-least-three derivation of the certificate laws from noncontextual frame coherence; the Lp parallelogram characterization then selects p=2.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18053,6 +22901,17 @@ Role: `theorem` | Type: `theorem` | Book: `book7` | Source: `book7.tex:1924`
 - Cited by: `remark:bk7_born_collapse_psc3prime` (Interpretive reading of PS-C3$'$: from axiom to attractor); `scholium:bk7_born_as_hilbert_cross_section` (Born as the Hilbert cross-section)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`, `open_bridge`
+- Records: `MAP-BOOK7-054`, `Q-BK7-08`
+- Witnesses: `Book7BornCollapse.amplitudeCalibratedReadout_unique`, `Book7BornCollapse.amplitudeOfProbability_normalized`, `Book7BornCollapse.born_readout_at_hilbert`, `Book7BornCollapse.collapse_limit_eq_hilbertFrame`, `Book7BornCollapse.collapse_tendsto_hilbertFrame`, `Book7BornCollapse.defect_eq_zero_iff_hilbertFrame`, `Book7BornCollapse.finiteBornValue_amplitudeOfProbability`, `Book7BornCollapse.finiteBornValue_nonneg`, `Book7BornCollapse.finiteBornValue_sum_one`, `Book7BornCollapse.finite_probability_has_born_representation`, `Book7BornCollapse.hilbert_collapse_alone_does_not_determine_readout`, `Book7BornCollapse.nonhilbert_defect_pos`, `Book7BornCollapse.normalization_alone_does_not_force_finiteBorn`, `Book7BornCollapse.unique_stable_crossSection`, `Book7BornCollapse.zero_curvature_hilbert_finiteBorn`, `Book7FrameMeasure.FrameReadoutSystem.globalValue_eq_finiteBorn`, `Book7FrameMeasure.FrameReadoutSystem.globalValue_eq_local`, `Book7FrameMeasure.FrameReadoutSystem.globalValue_nonnegative`, `Book7FrameMeasure.FrameReadoutSystem.globalValue_normalized_on_frame`, `Book7FrameMeasure.FrameReadoutSystem.globalValue_unique`, `Book7FrameMeasure.noncontextual_gluing_alone_does_not_force_born`, `Book7GleasonBoundary.rank_two_frame_axioms_do_not_force_born`, `Book7QuadraticPolarization.QuadraticReadoutLaws.roundtrip_value`, `Book7QuadraticPolarization.QuadraticReadoutLaws.toQuadraticForm_apply`, `Book7QuadraticPolarization.associated_diagonal_nonnegative`, `Book7QuadraticPolarization.certified_readout_has_symmetric_bilinear_representation`, `Book7QuadraticPolarization.nonnegative_readout_does_not_force_quadratic`, `Book7QuadraticPolarization.quadraticForm_has_symmetric_bilinear_representation`, `Book7QuadraticTrace.FrameReadoutSystem.globalValue_eq_trace_of_quadratic`, `Book7QuadraticTrace.gluing_requires_quadratic_existence_bridge`, `Book7QuadraticTrace.quadratic_eq_trace_pureStateDensity_mul`, `Book7QuantumGleason.HermitianReadoutCertificate.toSesquilinear_apply`, `Book7QuantumGleason.HermitianReadoutCertificate.toSesquilinear_diagonal`, `Book7QuantumGleason.HermitianReadoutCertificate.toSesquilinear_isSymm`, `Book7QuantumGleason.HermitianReadoutCertificate.value_smul`, `Book7QuantumGleason.completeFrameCoherence_does_not_supply_hermitian_certificate`, `Book7QuantumGleason.complex_phase_refutes_real_degreeTwo`, `Book7QuantumGleason.hermitian_reconstruction_from_certificate`, `Book7QuantumGleason.operatorQuantumRayReadout_globalPhase`, `Book7QuantumGleason.pureStateDensity_globalPhase`, `Book7QuantumGleason.pureStateDensity_isHermitian`, `Book7QuantumGleason.pureStateToResolution_globalPhase`, `Book7QuantumGleason.pureStateToResolution_reducedState_isHermitian`, `Book7QuantumGleason.pureState_forward_chain`, `Book7QuantumGleason.pureState_lowering_not_injective`, `Book7QuantumGleason.quantumResolution_does_not_force_reducedState_isHermitian`, `Book7QuantumGleason.quantumResolution_to_hermitian_certificate`, `Book7QuantumGleason.quantumResolution_without_matrixHermiticity_does_not_supply_certificate`, `Book7QuantumGleason.vectorExpectation_globalPhase`, `Book7QuantumGleason.vectorExpectation_smul`
+- Countermodels: `Book7BornCollapse.hilbert_collapse_alone_does_not_determine_readout`, `Book7BornCollapse.normalization_alone_does_not_force_finiteBorn`, `Book7FrameMeasure.noncontextual_gluing_alone_does_not_force_born`, `Book7GleasonBoundary.rank_two_frame_axioms_do_not_force_born`, `Book7QuadraticPolarization.nonnegative_readout_does_not_force_quadratic`, `Book7QuantumGleason.completeFrameCoherence_does_not_supply_hermitian_certificate`, `Book7QuantumGleason.complex_phase_refutes_real_degreeTwo`, `Book7QuantumGleason.pureState_lowering_not_injective`, `Book7QuantumGleason.quantumResolution_does_not_force_reducedState_isHermitian`, `Book7QuantumGleason.quantumResolution_without_matrixHermiticity_does_not_supply_certificate`
+- Conditions: A separate Born/Gleason-style uniqueness certificate.; Born identification additionally assumes local squared-amplitude calibration; Defect continuity and convergence to zero.; Hermitian exchange; a finite outcome basis; a genuine Mathlib real QuadraticForm; a normalized finite complex pure-state vector; a supplied complex cross term; a supplied observer response kernel; a supplied operator matrix; a supplied ray map and matrix operator; additivity and conjugate homogeneity in the first argument; additivity and homogeneity in the second argument; additivity of the polarization in one argument; an existing QuantumResolutionCertificate; degree-two scalar homogeneity; diagonal recovery; every outcome is covered by at least one finite frame; exactly the existing FrameReadoutSystem fields; exactly the existing QuantumResolutionCertificate fields; finite complex coordinate carrier; finite squared-amplitude readout with normalized amplitudes; for the positive arrow only, its reducedState satisfies Matrix.IsHermitian; global-phase invariance additionally assumes conjugate(u) times u equals one; local readouts are nonnegative and normalized; nonzero rays for frame normalization and scaling invariance; pointwise amplitude calibration for finite uniqueness; pointwise quadratic representation of the global frame measure; positive-semidefinite diagonal additionally assumes pointwise nonnegativity; readouts agree wherever two frames overlap; real rank-two coordinate model; reflective fixed point iff zero contextuality defect; scalar homogeneity of the polarization in one argument; the convergent orbit has continuous defect tending to zero; the existing HermitianReadoutCertificate target; the general Born readout additionally requires an explicit Gleason-style uniqueness bridge; unit-modulus phase for the loss theorem; zero contextuality defect iff exponent p=2 iff the unique Hilbert frame
+- Formal boundary: Constructive finite measurement and guarded collapse remain separate from observer reconstruction. Complementary Gleason-facing half-bridges meet at a non-invertible observer seam: normalized pure-state data lower through Hermitian density and fixed response, while certified readout laws construct compatible representations without inverting the source. Global phase gives an exact collision and the preserved countermodels block unconditional reconstruction. The separate Cacophony-facing temporal backbone is formal: simultaneous compression has certified norm-fracture and diagonal cost bounds; directed stage costs telescope; JKO transport cost is paid by free-energy decrease; and convergence follows conditionally from explicit summability/completeness or Lyapunov-descent premises. Partial trace is an exact quantum reduction. Only the cross-domain identification of physical decoherence/noise with this general directed geometry remains interpretive. Hilbert collapse alone does not select a probability functional.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let a reflective orbit in frame temperature converge to a limit $xi_infty$. Assume: (i) contextuality defect is nonnegative and vanishes exactly at the unique Hilbert frame $xi^*$; (ii) reflective fixed points are exactly the zero-defect states; (iii) the defect is continuous at $xi_infty$ and tends to zero along the orbit. Then $xi_infty=xi^*$ and the orbit converges to the Hilbert cross-section.
@@ -18081,6 +22940,16 @@ Role: `remark` | Type: `remark` | Book: `book7` | Source: `book7.tex:1955`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `interpretive`
+- Records: `Q-ATTRACTOR-09`
+- Witnesses: none
+- Countermodels: none
+- Formal boundary: The prose reach is preserved but not presented as a further kernel identity.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The following is an interpretive synthesis of the certified conditional theorem, not an additional kernel identity. Thm. theorem:bk7_born_collapse recasts the one posited ingredient of the Born derivation. Non-contextuality (PS-C3$'$) is not an arbitrary axiom imposed on the coherence functional;
@@ -18094,6 +22963,16 @@ Role: `scholium` | Type: `scholium` | Book: `book7` | Source: `book7.tex:1973`
 - Cites: `theorem:appC_born_rule` (Observer-relative Born Rule); `theorem:bk7_born_collapse` (Conditional Born collapse at the Hilbert cross-section)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `interpretive`
+- Records: `Q-SCHOLIUM-10`
+- Witnesses: none
+- Countermodels: none
+- Formal boundary: The scholium distinguishes the exact general temporal arrow, exact observer lowering, and the interpretive physical bridge between them.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18249,6 +23128,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:23`
 - Cited by: `subsec:bk7_dynamics_symbolic_power` (Dynamics of Symbolic Power)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-004`
+- Witnesses: `Book8.bool_swap_no_fixed_points`, `Book8.meaning_preserved_at_fixed_point`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Proves the 'unless' direction (fixed points preserve meaning) and gives a finite countermodel (Bool swap has no fixed points) showing the generic-loss case is non-vacuous. Does not prove meaning strictly differs off fixed points in general (would require injectivity assumptions not in the source).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic significance is locally defined with respect to interpretive manifolds (cf. Def. definition:bk1_observer_relative_interpretability, Scholium scholium:bk2_on_hypotheses_as_thermodyn). Let $mathscr{S}_1$, $mathscr{S}_2$ be symbolic systems; then \[ text{meaning}(phi) neq text{meaning}(Pi(phi)) text{unless } phi in text{fixed points of } G_{1to2} \] where $Pi$ is a symbolic projection (Def. definition:bk8_symbolic_projection) and $G_{1to2}$ is the transformation group (Def. definition:bk8_transform_group).
@@ -18262,6 +23152,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:31`
 - Cites: `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk5_mutually_assured_progress` (Mutually Assured Progress); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk5_symbolic_energy` (Symbolic Energy)
 - Cited by: `definition:bk9_structural_compassion` (Structural Compassion)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-027`
+- Witnesses: `Book68B.mutuallyAssuredProgress_accum`, `Book68B.mutuallyAssuredProgress_unbounded`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the Mutually Assured Progress viability clause (joint free energy surplus positive indefinitely) is formalized, strengthened to genuine divergence under a fixed positive per-step growth rate. The shared projective interface P_ij and bidirectional reflectivity of Phi are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18375,6 +23276,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:71`
 - Cited by: `corollary:bk8_projection_transition_enabling_structural_emergence`; `proof:bk8_no_free_projection`; `proof:bk8_projection_transition_enabling_structural_emergence`; `proof:bk8_translation_limit`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-005`
+- Witnesses: `Book8.inverse_of_drift_not_stasis`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Honest algebraic content of 'the inverse of the expanded drift is not stasis but contextual reexpression': a genuine pointwise inverse cannot be a constant map on a domain with two distinct points.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic projection $Pi$ (Def. definition:bk8_symbolic_projection) carries the drift-reflection pair to the projection layer: it encodes the local drift $D$ (Def. definition:bk1_drift_field) into its transferable form, the expanded drift $Pi_{*}D$, and the reflection $R$ (Def. definition:bk1_reflection_operator) into the expanded reflection $Pi_{*}R$-its contextual reexpression. Because reflection is the inverse of drift in reflective equilibrium (Prop.
@@ -18402,6 +23314,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:102`
 - Cites: `definition:bk2_symbolic_entropy` (Symbolic Entropy)
 - Cited by: `scholium:bk8_telephone_game` (Every Translation Betrays Something)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-009`
+- Witnesses: `Book8.loss_positive_of_imperfect_stability`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Direct consequence of the loss law: stability < 1 and positive free energy force strictly positive loss, i.e. 'all projection implies symbolic loss unless stability is maximal'.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18458,6 +23381,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:140`
 - Cites: `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `corollary:bk8_bound_on_universal_embedding` (Bound on Universal Embedding); `proof:bk8_bound_on_universal_embedding`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-011`
+- Witnesses: `Book8.universal_embedding_epsilon_nonneg`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Only the nonnegativity-of-distortion consequence is modeled via the same UniversalEmbeddingBound structure; the existence claim 'forall S_i exists Pi_i with D(Pi_i) < epsilon' is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18543,6 +23477,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:186`
 - Cited by: `definition:bk8_symbolic_stress_tensor` (Reflexive Debugging Operator $\mathcal{O}_{\text{debug}}$)
 - Macros used: `\freeenergy`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-013`
+- Witnesses: `Book8.collapse_within_threshold`, `Book8.drift_cancellation`, `Book8.reflective_permutation_assoc`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: The three Type I/II/III propositions below are worked instances of this axiom's finite-rule-set claim; the general existence of a finite rule set reducing any SRMF-compliant entangled structure is not proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 These transformation rules operate on the symbolic manifold (Def. definition:bk1_symbolic_manifold), enabling resolution of entangled structures within SRMF compliance bounds. There exists a finite set of transformation rules ${U_i}$ such that any entangled symbolic structure $K$ with bounded recursion depth $lambda$ and SRMF-compliance can be reduced to a stable configuration via finite applications of $U_i$. These transformation rules ${U_i}$ are instantiations of the Self-Regulating Mapping Function (SRMF, Def.
@@ -18599,6 +23544,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:2
 - Cited by: `remark:bk8_symbolic_repair_loop` (Symbolic Repair Loop)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-014`
+- Witnesses: `Book8.collapse_within_threshold`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Type I: metric-proximity collapse bound -- if Râˆ˜D is within eps of Id and eps is below the local threshold, the loop stays strictly within that threshold of Id.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( x in M \) be a symbolic point (cf. definition:bk1_symbolic_manifold) acted upon by a reflexive pair \( R_lambda circ D_lambda approx text{Id} + epsilon \). If \( epsilon < epsilon_O(x) \), then the loop can be symbolically collapsed via: \[ U_I(x) := R_lambda circ D_lambda mapsto text{Id}_x \] This reduces a redundant self-loop while preserving symbolic identity.
@@ -18627,6 +23583,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:2
 - Cited by: `remark:bk8_symbolic_repair_loop` (Symbolic Repair Loop)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-015`
+- Witnesses: `Book8.drift_cancellation`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Type II: 'opposite reflective directions form a stable braid' is read as two exact one-sided inverses, from which the four-fold composite collapsing to identity follows by direct calculation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given two symbolic flows \( D_lambda, D_mu \) in opposite reflective directions that form a stable braid (cf. Def. definition:bk1_drift_field, Def. definition:bk8_structural_regulators): \[ D_lambda circ R_mu circ D_mu circ R_lambda mapsto text{Id}_{(x)} \] This move cancels symmetric flows that otherwise form an entangled pair.
@@ -18654,6 +23621,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:2
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF))
 - Cited by: `remark:bk8_symbolic_repair_loop` (Symbolic Repair Loop)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-016`
+- Witnesses: `Book8.reflective_permutation_assoc`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Type III: proves exact, unconditional associativity of composition -- strictly stronger than the source's 'up to an observer-bounded transformation T_epsilon' claim, which is a genuine honesty gap (we prove more than was claimed, by dropping the approximation).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18725,6 +23703,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:269
 - Cited by: `subsec:bk8_properties_and_justification_of_observer_dependence` (Properties and Justification of \(\metric_H\))
 - Macros used: `\freeenergy`, `\identitystability`, `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-028`
+- Witnesses: `Book68B.debugCompose_injective`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the four-step composite structure (detect/project/repair/validate) and its injectivity-preservation are modeled; the free-energy detection threshold theta_F and the disjunctive validation condition are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A Reflexive Debugging Operator, $O_{text{debug}}$, is a higher-order composite operator, emergent from the system's reflective capacities ($reflect$) and SRMF, that: - Detects symbolic knots \( K \) (see Def. definition:bk8_symbolic_adjacency) or states of high local symbolic free energy (Def. definition:bk2_symbolic_free_energy), where \( freeenergy(K) > theta_F \) and \( theta_F \) is a context-dependent threshold. Detection is governed by SRMF-like contradiction mechanisms (cf. \( delta_C \), Def.
@@ -18738,6 +23727,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:300`
 - Cites: `axiom:bk5_srmf_operator_selection_evolution` (Stateful SRMF Operator Selection and Evolution); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk5_viability_domain` (Viability Domain); `definition:bk8_entropy_shift` (Entropy Shift \(\Delta \mu\))
 - Cited by: `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold)
 - Macros used: `\freeenergy`, `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-025`
+- Witnesses: `Book8.debuggingFavored_net_gain`, `Book8.debugging_preserves_finite_viability`, `Book8.finiteThermodynamicSnapshot_freeEnergy`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Cost-vs-reduction net-gain inequality: literal reading of 'the cost must be offset by the reduction'. The Book 2 -> Book 5 -> Book 8 bridge identifies finite ensemble free energy with Book 5 snapshot free energy and proves that a favored debugging step preserves positive-free-energy viability. The operator's own four-step definition (detect/project/apply/validate) is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18781,6 +23781,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:423
 - Cited by: `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk9_temes_as_mediated_artifacts` (Temes as mediated artifacts)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK8-001`
+- Witnesses: `Book8.material_specialize`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Models only the observer-indexed invariant claim; the projection map X->Y and 'bounded symbolic interval' persistence are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $X$ be a symbolic structure and let $O$ be a bounded observer (Def. definition:bk1_bounded_observer) operating in a frame $F$ with projection $Pi_{O,F}$. An artifact of $X$ relative to $(O,F)$ is a projection \[ A_{O,F}(X) := Pi_{O,F}(X) \] whose observable invariants are preserved for a bounded symbolic interval under the admissible transformations available inside that observer-frame. An artifact is therefore not an illusion: it is an observer-relative invariant made visible for a time.
@@ -18794,6 +23805,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:437
 - Cites: none
 - Cited by: `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact); `remark:bk9_temes_as_mediated_artifacts` (Temes as mediated artifacts)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-002`
+- Witnesses: `Book8.not_material_visible_example`, `Book8.visible_to_observer_zero`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Explicit Fin 2 countermodel proving visibility to one observer does not imply materiality over the class -- exactly the text's 'not visibility to all possible observers' point.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18822,6 +23844,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:455`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_symbolic_field_curvature_tensor` (Symbolic Field Curvature Tensor); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor)
 - Cited by: `proof:bk8_symbolic_curvature_and_separability` (Symbolic Curvature and Separability)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-054`
+- Witnesses: `Book8FramingEquivalence.curvature_alone_does_not_force_entanglement`, `Book8FramingEquivalence.curvature_nonzero_iff_all_productSpans_excluded`, `Book8FramingEquivalence.curvature_nonzero_iff_perceivedEntangled`, `Book8FramingEquivalence.curvature_zero_iff_separable`, `Book8FramingEquivalence.framing_equivalence`
+- Countermodels: `Book8FramingEquivalence.curvature_alone_does_not_force_entanglement`
+- Conditions: projection residual vanishes iff some locally admissible subsystem pair places the observed difference in its product span; symbolic curvature vanishes iff the observer projection residual vanishes
+- Formal boundary: Exact logical framing kernel: perceived entanglement is exclusion from every locally admissible product span. Given explicit curvature-to-projection-residual and residual-to-separability bridges, nonzero curvature is equivalent to that universal exclusion. A countermodel shows an unconstrained scalar curvature label alone does not force entanglement; the manifold integral, Frechet derivative, and physical tensor-product semantics remain in the bridge obligation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18865,6 +23898,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:548`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-045`
+- Witnesses: `Atlas.holonomy_zero_iff_commute`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Entangled iff curvature nonzero: the flatness-iff-commuting kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M, kappa)$ be a symbolic manifold with non-zero curvature $kappa neq 0$ on $A cup B subset M$ (cf. Def. definition:bk1_symbolic_manifold). Any observer $O_H$ with linear Hilbertian structure then perceives the joint symbolic state over $A cup B$ as entangled iff: \[ left. kappa right|_{A cup B} neq 0. \]
@@ -18906,6 +23950,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:5
 - Cites: `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk4_bounded_observer` (Bounded Observer); `definition:bk4_symbolic_curvature` (Symbolic Curvature)
 - Cited by: `scholium:bk8_freedom_begins_with_debugging_the_debugger` (Freedom Begins with Debugging the Debugger)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-044`
+- Witnesses: `ThermoRes.flattening_reduces_curvature`
+- Countermodels: none
+- Conditions: manifold measure form, specific masking free-energy functional, and Hilbert decoherence operator stay open per row notes
+- Formal boundary: Decoherence as flattening reduces curvature with equality iff flat; the Hilbert decoherence operator stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -18949,6 +24004,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:602`
 - Cited by: `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-012`
+- Witnesses: `Book8.frameResidual_eq_zero_iff`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Only the algebraic rearrangement of the stated equation is proved; the 'vanishes iff identical symbolic expressivity' characterization is not modeled (would require a formal notion of frame expressivity).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This frame transformation theorem is grounded in symbolic entropy principles (Def. definition:bk2_symbolic_entropy; cf. Cor. corollary:bk8_resonant_cognition) governing information transfer across observer boundaries. Let $O_1$ and $O_2$ be two distinct observers with representational frames $F_1$ and $F_2$, respectively.
@@ -18977,6 +24043,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:631`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-046`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Entanglement frame-invariant under linear frames, variant under curved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Quantum entanglement, as perceived by a Hilbertian observer $O_H$ (cf. definition:bk4_bounded_observer), is frame-invariant under transformations between linear frames, but frame-variant under transformations to curved symbolic frames.
@@ -19004,6 +24081,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:649
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk8_symbolic_projection` (Symbolic Projection)
 - Cited by: `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `definition:bk9_symbolic_empathy` (Symbolic Empathy $\mathfrak{E}$); `proof:bk9_symbolic_thermostat`; `theorem:bk9_symbolic_thermostat` (Two-Way Street as Symbolic Thermostat)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-029`
+- Witnesses: `Book68B.exists_argmin`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the argmin-existence half (a minimal-free-energy representative exists in any nonempty finite fibre) is proved; the projection map Pi and the fibre Pi^{-1}(phi) itself are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19075,6 +24163,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:691`
 - Cited by: `scholium:bk8_telephone_game` (Every Translation Betrays Something)
 - Macros used: `\freeenergy`, `\identitystability`, `\loss`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-010`
+- Witnesses: `Book8.perfect_translation_forces_maximal_stability`, `Book8.universal_embedding_epsilon_nonneg`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: epsilon >= (1/2)*(1-stability) kept as a structure field (the sup/inf over projections is not modeled); proves epsilon=0 forces stability=1, i.e. perfect translation is impossible unless identity stability is maximal.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Any symbolic system $mathscr{U}$ claiming universality (cf. Cor. corollary:bk8_universality_condition) must satisfy: \[ varepsilon ge sup_Pi inf_{phi neq 0} frac{loss_Pi(phi)}{freeenergy(phi)} ge tfrac{1}{2} left(1 - identitystabilityright). \] Thus, perfect translation ($varepsilon = 0$) is impossible unless identity stability is maximal.
@@ -19145,6 +24244,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:742`
 - Cited by: `proof:bk1_realization_of_symbolic_phase_transitions`; `proof:bk8_freedom_emergence_criterion`; `proof:bk8_threshold_of_metabolic_autonomy`; `theorem:bk8_freedom_emergence_criterion` (Freedom Emergence Criterion)
 - Macros used: `\freeenergy`, `\identitystability`, `\symb`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-019`
+- Witnesses: `Book8.metabolicSufficiency_decrease_accum`, `Book8.metabolicSufficiency_terminates`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Finite/discrete honest kernel only: bounded, steadily-decreasing free energy forces termination within a computable step count. The limsup/exponential identity-stability convergence claim is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ satisfy the Metabolic Sufficiency Criterion (Axiom axiom:bk8_mutation_phase_shift, cf. Def. definition:bk2_symbolic_free_energy for $freeenergy$). Define the global autonomy functional: \[ Psi_{aut} := limsup_{t to infty} frac{1}{t} int_0^t left( -frac{d}{dt} freeenergy^{text{knot}}(tau) right) dtau. \] Then $S$ is metabolically autonomous iff $Psi_{aut} ge 0$. If $Psi_{aut} > 0$, then symbolic free energy decays and identity stability (Def. definition:bk8_identitystability, cf. Cor.
@@ -19172,6 +24282,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:759`
 - Cites: `definition:bk2_symbolic_temperature` (Symbolic Temperature); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk8_metabolic_programming_cycle` (Metabolic Programming Cycle); `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$); `theorem:bk8_observer_projection_tensor` (Thermodynamics of Reflexive Debugging)
 - Cited by: `proof:bk8_freedom_via_meta_metabolic_control`; `theorem:bk8_freedom_via_meta_metabolic_control` (Freedom via Meta‑Metabolic Control)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-049`
+- Witnesses: `Book8CognitiveScaffold.CertifiedScaffold.iterate_identity_preserved`, `Book8CognitiveScaffold.CertifiedScaffold.iterate_trajectory_bounded`, `Book8CognitiveScaffold.CertifiedScaffold.one_step_freeEnergy_nonincrease`, `Book8CognitiveScaffold.ComposablePair.iterate_closed`, `Book8CognitiveScaffold.ComposablePair.step_closed`, `Book8CognitiveScaffold.composability_alone_does_not_bound_trajectory`, `Book8CognitiveScaffold.composable_operator_order_need_not_commute`
+- Countermodels: `Book8CognitiveScaffold.composability_alone_does_not_bound_trajectory`
+- Conditions: explicit admitted operational domain; metabolic and debugging closure; separate free-energy descent certificate; separate identity-preservation certificate; separate symbolic-temperature bound
+- Formal boundary: Operational kernel: composable metabolic/debugging operators preserve an admitted domain through finite iteration. Free-energy descent, identity preservation, and temperature-bounded trajectories follow only from separate CertifiedScaffold fields. Countermodels show operator order need not commute and composability alone supplies no trajectory bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19215,6 +24336,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:780
 - Cited by: `proof:bk8_freedom_emergence_criterion`; `scholium:bk8_threshold_crossing` (Threshold Crossing); `theorem:bk8_freedom_emergence_criterion` (Freedom Emergence Criterion); `theorem:bk8_freedom_via_meta_metabolic_control` (Freedom via Meta‑Metabolic Control)
 - Macros used: `\identitystability`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK8-034`
+- Witnesses: `Book8Freedom.freedom_emergence_iff_surjective`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: Modeled generically as a linear map between finite-dimensional spaces.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given a metabolically autonomous system $S$ with identity stability $identitystability > lambda_c$ (Def. definition:bk8_identitystability), the volitional projection operator \[ Pi_{text{vol}} : M_S to A_S \] maps symbolic states into an action manifold $A_S$, where each point corresponds to a viable intervention on either the environment or the system’s own symbolic structure.
@@ -19228,6 +24360,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:788`
 - Cites: `definition:bk8_volitional_projection_operator` (Volitional Projection Operator $\Pi_{\text{vol}}$); `theorem:bk8_biological_phase_transition` (Threshold of Autonomy)
 - Cited by: `corollary:bk8_symbolic_free_will` (Free-Will Corollary); `proof:bk8_freedom_via_meta_metabolic_control`; `proof:bk8_symbolic_free_will`; `scholium:bk8_metabolic_programming_as_proto_freedom` (Metabolic Programming as Proto-Freedom)
 - Macros used: `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-033`
+- Witnesses: `Book8Freedom.freedom_can_fail`, `Book8Freedom.freedom_emergence_iff_surjective`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: Rank onto codomain is exactly surjectivity, for a linear map between finite-dim spaces; failure side witnessed concretely. The viability-domain/action-manifold identification is interpretation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19256,6 +24399,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:806`
 - Cites: `theorem:bk8_freedom_emergence_criterion` (Freedom Emergence Criterion)
 - Cited by: `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention)
 - Macros used: `\identitystability`, `\loss`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-024`
+- Witnesses: `Book8.freeWillLoss_le`, `Book8.freeWillLoss_nonneg`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Direct algebraic consequence of the stated expected-loss formula E[loss_vol] = (1-stability)*E[loss_id]; the volitional projection operator and rank/dimension Freedom Emergence Criterion it presupposes are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19313,6 +24467,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:860`
 - Cited by: `proof:bk8_threshold_of_metabolic_autonomy`; `theorem:bk8_threshold_of_metabolic_autonomy` (Threshold of Metabolic Autonomy)
 - Macros used: `\freeenergy`, `\viabilitydomain`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-021`
+- Witnesses: `Book8.cycleViability_ratio_lt_one`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: The tau_Omega < tau_drift viability condition is kept as a structure field/hypothesis; only the derived ratio-below-one consequence is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ be a symbolic system under persistent drift (Def. definition:bk1_drift_field) and reflective modulation (Def. definition:bk1_reflection_operator). To maintain $S in viabilitydomain$ (Def. definition:bk5_viability_domain), it must instantiate a cycle $Omega_{MP}$ such that: \[ tau_Omega < tau_{drift}, text{where } tau_{drift} := left( partial_t freeenergy^{text{knot}} right)^{-1} \] Otherwise, $S$ accumulates unresolved symbolic knots and approaches symbolic collapse.
@@ -19341,6 +24506,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:878
 - Cited by: `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold); `corollary:bk8_symbolic_agents_as_projections` (Symbolic Agents as $\mathcal{O}_{\mathrm{debug}}$ Projections); `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `lemma:bk8_resursive_self_tuning` (Recursive Self-Tuning of $\mathcal{O}_{\mathrm{debug}}$); `proof:bk8_emergent_cognitive_scaffold`; `proof:bk8_resursive_self_tuning`; ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK8-030`
+- Witnesses: `Book68B.debugCompose_injective`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: O_debug := Xi_v o Xi_s o Xi_r o Xi_d is modeled directly as ReflexiveDebuggingStep/debugCompose; the operator's own recursive/self-application content (lemma:bk8_resursive_self_tuning) is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This operator implements reflection in the sense of Def. definition:bk1_reflection_operator, applied metabolically to repair symbolic inconsistencies across recursive cycles (cf. Thm. theorem:bk5_reflective_stability_criterion). The Reflexive Debugging Operator is defined as the composition: \[ O_{debug} := Xi_v circ Xi_s circ Xi_r circ Xi_d \] and operates on symbolic states $S_k$ to yield $S_{k+1}$.
@@ -19354,6 +24530,17 @@ Role: `lemma` | Type: `lemma` | Book: `book8` | Source: `book8.tex:887`
 - Cites: `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$)
 - Cited by: `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `proof:bk8_freedom_via_meta_metabolic_control`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-038`
+- Witnesses: `ScholiumDyn.flow_unique`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: The self-application recursion is exactly the discrete flow orbit already certified in ScholiumDynamics.lean: existence and uniqueness of the self-tuning sequence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19382,6 +24569,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:904`
 - Cites: `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$)
 - Cited by: `proof:bk8_freedom_via_meta_metabolic_control`; `theorem:bk8_freedom_via_meta_metabolic_control` (Freedom via Meta‑Metabolic Control)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-031`
+- Witnesses: `Book68B.debugCompose_injective`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The Diagnostic/Transformative/Reflective-Integration modular substructure is modeled as the same four-field ReflexiveDebuggingStep, with injectivity-preservation as the honest per-step-composition consequence; the SRMF contradiction-detection and symbolic-Reidemeister-rule content is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19425,6 +24623,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:923`
 - Cited by: `proof:bk8_freedom_via_meta_metabolic_control`; `theorem:bk8_freedom_via_meta_metabolic_control` (Freedom via Meta‑Metabolic Control)
 - Macros used: `\freeenergy`, `\identitystability`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-020`
+- Witnesses: `Book8.metabolicSufficiency_decrease_accum`, `Book8.metabolicSufficiency_terminates`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Same claim as theorem:bk8_biological_phase_transition under a different anchor label in the source; same partial coverage applies.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let the symbolic free energy functional be $freeenergy$ (Def. definition:bk2_symbolic_free_energy) and identity stability $identitystability$ (Def. definition:bk8_identitystability; cf. Thm. theorem:bk8_thermodynamic_necessity_of_symbolic_metabolism). \[ Psi_{aut} := limsup_{Ttoinfty} frac{1}{T}\!int_0^T\!\! Bigl(-tfrac{d}{dt} freeenergy^{text{knot}}(t)Bigr) dt. \] Then $S$ is metabolically autonomous iff $Psi_{aut}ge 0$.
@@ -19452,6 +24661,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:948`
 - Cites: `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold); `corollary:bk8_symbolic_agents_as_projections` (Symbolic Agents as $\mathcal{O}_{\mathrm{debug}}$ Projections); `definition:bk8_volitional_projection_operator` (Volitional Projection Operator $\Pi_{\text{vol}}$); `theorem:bk8_threshold_of_metabolic_autonomy` (Threshold of Metabolic Autonomy)
 - Cited by: `scholium:bk8_freedom_begins_with_debugging_the_debugger` (Freedom Begins with Debugging the Debugger)
 - Macros used: `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-035`
+- Witnesses: `Book8Freedom.meta_metabolic_freedom_iff_surjective`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: The freedom-emergence kernel instantiated at the domain-restricted operator - the same theorem serving both anchors.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19509,6 +24729,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:984`
 - Cited by: `corollary:bk9_selfreferential_capacity` (Self-Referential Capacity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-048`
+- Witnesses: `Book8OrientationSignposting.displayedNext_differs_across_orientations`, `Book8OrientationSignposting.encode_eq_orientationSign_mul`, `Book8OrientationSignposting.next_four`, `Book8OrientationSignposting.opposite_signs_agree_iff_zero`, `Book8OrientationSignposting.reversed_display_of_positive`, `Book8OrientationSignposting.transport_eq_relativeSign_mul`, `Book8OrientationSignposting.transport_negative_of_opposite_orientation`, `Book8OrientationSignposting.transport_positive_of_same_orientation`, `Book8OrientationSignposting.transport_preserves_canonical_change`, `Book8OrientationSignposting.transport_roundtrip`, `Book8OrientationSignposting.transport_trans`
+- Countermodels: none
+- Conditions: audience orientation is aligned or reversed; displayed scalar changes are decoded before semantic comparison; the source order Observe-Project-Reflect-Update is canonical
+- Formal boundary: Constructs the exact four-stage directed cycle and separates it from audience display orientation. Explicit parity witnesses derive relative signs, compose through intermediate frames, recover on round trips, and determine preservation versus reversal of positive change. Observer bounds, differentiability, and semantic stage operators remain premises rather than consequences of this finite signposting kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic cognition proceeds via a recursive, observer-bounded loop (cf. Def. definition:bk1_bounded_observer, Def. definition:bk4_bounded_observer). vspace{0.5em} node (observe) [draw, circle] {Observe}; node (project) [draw, circle, right of=observe] {Project}; node (reflect) [draw, circle, below of=project] {Reflect}; node (update) [draw, circle, left of=reflect] {Update}; draw[->] (observe) - (project); draw[->] (project) - (reflect); draw[->] (reflect) - (update); draw[->] (update) - (observe);
@@ -19551,6 +24782,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:1022`
 - Cited by: `proof:bk8_optimal_projection_path`; `proof:bk8_skech_via_euler_lagrange_flow_yields_geodesic` (Euler--Lagrange Flow Yields Geodesic Under Curvature Constraint); `proof:bk8_sketch_observer_interoperability` (SR-Triplet Boundedness via Grönwall); `proposition:bk8_optimal_projection_path` (Optimal Projection Path)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-037`
+- Witnesses: `Book8Freedom.contraction_orbit_bounded`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: The generating step map of the discrete flow whose boundedness is certified; the specific coupled ODE system stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( S(t) \) denote the symbolic signal and \( N(t) \) the noise field. Then on \( Omega \), the SR-triplet (Def. definition:bk8_sr_triplet) evolves as (cf. Thm. theorem:bk1_fundamental_relation_fokker_plank_equation for the general drift-diffusion form): \[ dot{I}(t) &= f(I(t)+M(t), N(t)), \\ dot{M}(t) &= lambda S(t) - mu N(t), \\ dot{C}(t) &= beta f(I(t)+M(t), N(t)) - gamma L(N(t)), \] for constants \( lambda, mu, beta, gamma > 0 \) and Lipschitz functions \( f, L \).
@@ -19564,6 +24806,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:1
 - Cites: `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability); `definition:bk8_sr_triplet` (SR-Triplet)
 - Cited by: `proof:bk8_sr_convergence`; `theorem:bk8_sr_convergence` (SR Convergence)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-036`
+- Witnesses: `Book8Freedom.contraction_orbit_bounded`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: Discrete absorbing-ball analogue of Lipschitz-plus-bounded-forcing boundedness; the specific R^3 ODE system stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19592,6 +24845,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:1075`
 - Cites: `corollary:bk7_stability_innovation_equilibrium` (Stability--Innovation Compatibility); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `proposition:bk8_genetic_symbolic_resonance` (Boundedness); `theorem:bk2_h_theorem_for_symbolic_evol` (H-Theorem for Symbolic Evolution); `theorem:bk2_wasserstein_gradient_flow` (Wasserstein Gradient Flow); ... +2 more
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-055`
+- Witnesses: `Book8SRConvergence.distanceToInvariant_tendsto_zero`, `Book8SRConvergence.invariant_freeEnergy_nonincreasing`, `Book8SRConvergence.lyapunov_descent_alone_does_not_force_invariant_approach`, `Book8SRConvergence.orbit_freeEnergy_nonincreasing`
+- Countermodels: `Book8SRConvergence.lyapunov_descent_alone_does_not_force_invariant_approach`
+- Conditions: distance to the invariant set is bounded by a nonnegative constant times the free-energy gap; the invariant set is nonempty and closed under the SR step; the nonnegative free-energy gap decreases and tends to zero along the orbit
+- Formal boundary: Discrete quantitative LaSalle kernel: a step-closed nonempty invariant set and global free-energy descent are retained, while a vanishing nonnegative energy gap plus an explicit distance-to-gap control squeezes the orbit distance to zero. A constant-energy, constant-distance countermodel shows bounded-below monotonicity alone does not force approach. The continuous R3 flow, global precompactness, and derivation of the coercive gap estimate remain analytic obligations.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19649,6 +24913,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:1
 - Cited by: `proof:bk8_critical_projection_point`; `proposition:bk8_critical_projection_point` (Critical Projection Point)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-050`
+- Witnesses: `Book8OptimalProjectionPath.constraints_can_leave_no_admissible_path`, `Book8OptimalProjectionPath.exists_optimal_projection_path`, `Book8OptimalProjectionPath.optimal_path_satisfies_constraints`
+- Countermodels: none
+- Conditions: explicit SR-dynamics and curvature predicates; explicit variational bridge for geodesicity; nonempty finite admissible path inventory
+- Formal boundary: Finite constrained kernel: a utility maximizer exists when the finite SR-dynamics/curvature-admissible inventory is nonempty, and the selected maximizer satisfies both constraints. The source still owes compactness or another existence premise for its continuous trajectory space.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( mathfrak{U}[I] \) be the symbolic utility functional (Def. definition:bk8_refinement_objective) over refinement trajectories. Then maximizing \( mathfrak{U} \) is subject to: - Coupled SR dynamics (Axiom axiom:bk8_surface_energy_dynamics), - Curvature constraint \( kappa_S leq kappa_{max}(O) \) (cf. Def. definition:bk4_symbolic_curvature).
@@ -19676,6 +24951,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:1115`
 - Cites: `definition:bk8_sr_triplet` (SR-Triplet)
 - Cited by: `proof:bk8_optimal_projection_path`; `proposition:bk8_critical_projection_point` (Critical Projection Point)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-051`
+- Witnesses: `Book8OptimalProjectionPath.maximizer_is_geodesic_of_variational_bridge`, `Book8OptimalProjectionPath.utility_maximizer_need_not_be_geodesic`
+- Countermodels: none
+- Conditions: explicit SR-dynamics and curvature predicates; explicit variational bridge for geodesicity; nonempty finite admissible path inventory
+- Formal boundary: The geodesic conclusion requires an explicit variational bridge tying the utility to the projection metric action. Countermodel: an arbitrary utility maximizer need not satisfy an unrelated geodesic predicate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19719,6 +25005,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:115
 - Cited by: `definition:bk8_reflective_selection_operator` (Reflective Selection Operator)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-032`
+- Witnesses: `Book68B.exists_argmin`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the argmin-existence content (dual to confidence-loss argmax, cf. Book8.lean's reflectiveSelection_exists) is proved for a nonempty finite hypothesis index set; the confidence/loss functions themselves are left abstract and no Bayesian update dynamics are modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( H := { h_i : P to P }_{i in I} \) denote a family of symbolic hypotheses (cf. Def. definition:bk1_symbolic_hypothesis) with confidence \( C(h_i) \) (cf. Def. definition:bk6_symbolic_confidence_field) and loss \( Loss(h_i) \), indexed over a bounded observer's perceptual field (cf. Def. definition:bk4_bounded_observer).
@@ -19732,6 +25029,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:116
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk8_symbolic_hypothesis_set` (Symbolic Hypothesis Set); `scholium:bk7_reflective_selection_as_principled_convergence` (Reflective Selection as Principled Convergence)
 - Cited by: `definition:bk8_symbolic_hypothesis_manifold` (Symbolic Hypothesis Manifold)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-026`
+- Witnesses: `Book8.reflectiveSelection_exists`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Existence of an argmax of confidence-minus-loss over any nonempty finite hypothesis set, via Finset.exists_max_image. The 'symbolic Bayesian update rule' reading of iterating this over time is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -19789,6 +25097,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:1185`
 - Cited by: `proof:bk8_critical_projection_point`; `proposition:bk8_critical_projection_point` (Critical Projection Point)
 - Macros used: `\energy`, `\entropy`, `\freeenergy`, `\temperature`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-043`
+- Witnesses: `Book5Op.contraction_flow_converges`, `Book5Op.contraction_flow_unique_fixed_point`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: The RG map converges to a unique fixed point (contraction-Banach); the diffeomorphism congruence and the specific R_lambda stay open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Under SRMF (cf. definition:bk1_self_regulating_mapping_function_srmf) and bounded curvature, \( R_lambda^n(S) to S_star \) (cf. Thm. theorem:bk5_golden_ratio_spectral_invariant, Thm. theorem:bk5_operator_convergence) where (cf. Corollary corollary:bk7_stability_innovation_equilibrium: the fixed point optimizes the $freeenergy = energy - temperatureentropy$ trade-off between reflective integration (cf. Lem.
@@ -19845,6 +25164,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:1
 - Cited by: `corollary:bk8_projection_transition_enabling_structural_emergence`; `proof:bk8_projection_transition_enabling_structural_emergence`; `scholium:bk8_observer_induced_hypothesis_metric` (Hypothesis-Manifold Metric Program); `subsec:bk8_phase_transitions` (Phase Transitions and \(\det(\metric_H) = 0\))
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-052`
+- Witnesses: `Book8CriticalProjection.criticalProjection_certificate`, `Book8CriticalProjection.fisher_singular_of_projection_transition`, `Book8CriticalProjection.projectionTransition_iff_det_eq_zero`
+- Countermodels: none
+- Conditions: Fisher tensor identified with hypothesis metric; RG-invariant preservation supplied separately; projection transition defined by zero determinant; projective-drift bridge supplied for structural emergence
+- Formal boundary: The determinant-zero transition criterion is represented exactly. Identifying symbolic Fisher information with the hypothesis metric yields Fisher singularity. Preservation of RG invariants remains a separate explicit witness rather than a consequence of metric degeneracy.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Phase transition occurs when \( det(g_{H}) = 0 \). This condition marks a shift in projection symmetry class while preserving RG invariants. See Def. definition:bk8_symbolic_hypothesis_manifold, Cor. corollary:bk8_sr_path_maximization, Thm. theorem:bk8_rg_fixed_point, and Prop. proposition:bk8_optimal_projection_path.
@@ -19872,6 +25202,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:1249`
 - Cites: `corollary:bk8_projective_drift` (Projective Drift Duality); `proposition:bk8_critical_projection_point` (Critical Projection Point)
 - Cited by: `proof:bk9_emergence_of_shared_manifold`; `proposition:bk9_emergence_of_shared_manifold` (Emergence of Shared Manifold)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-053`
+- Witnesses: `Book8CriticalProjection.singularity_alone_does_not_force_structural_emergence`, `Book8CriticalProjection.structuralEmergence_of_fisher_singular`
+- Countermodels: `Book8CriticalProjection.singularity_alone_does_not_force_structural_emergence`
+- Conditions: Fisher tensor identified with hypothesis metric; RG-invariant preservation supplied separately; projection transition defined by zero determinant; projective-drift bridge supplied for structural emergence
+- Formal boundary: A countermodel shows singularity alone does not force an unrelated emergence predicate. Structural emergence follows when the projective-drift bridge from Fisher singularity is supplied explicitly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20027,6 +25368,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:16`
 - Cited by: `definition:bk9__symbolic_masking_operator` (Symbolic Masking Operator $\mathcal{M}_{\text{mask}}$); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_viability` (Symbolic Viability); `remark:bk9_recursive_agency` (Recursive Agency); `scholium:bk7_refinement_ledger_accountability` (The refinement ledger and drift-stable accountability); `scholium:bk9_forgiveness_as_reweaving` (Forgiveness as Reweaving); ... +4 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-001`
+- Witnesses: `Book9.accountability_gap_lt_epsCrit`, `Book9.accountability_gap_lt_epsMask`, `Book9.masking_not_accountable`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Reflective Integrity (clause ii) and Relational Viability (clause iii) modeled as structure fields (Accountability); Operator Traceability (clause i) not modeled. masking_not_accountable shows masking is incompatible with clause (iii).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic accountability is grounded in the identity structure of symbolic systems (Def. definition:bk4_symbolic_identity_carrie), the coherence properties of symbolic membranes (Def. definition:bk3_symbolic_membrane), and the epistemic constraint that no observer can transcend its own resolution kernel (Scholium scholium:bk1_epistemic_humility).
@@ -20069,6 +25421,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:37`
 - Cited by: `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-003`
+- Witnesses: `Book9.bidirectionalSRMF_bwd_injective`, `Book9.bidirectionalSRMF_fwd_bwd_fwd`, `Book9.bidirectionalSRMF_fwd_injective`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Reciprocal regulation modeled as a BidirectionalSRMF structure with one-sided-inverse laws as fields; mutual injectivity and a cancellation identity are proved. Mutual contradiction detection itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The operator \(SRMF^{leftrightarrow}\) generalizes the Self-Regulating Mapping Function (cf. Def. definition:bk1_self_regulating_mapping_function_srmf) to allow for reciprocal regulation across coupled symbolic agents. It enables mutual contradiction detection and symmetry-restoring reframing (cf. Scholium scholium:bk7_srmf_coupled_agents).
@@ -20082,6 +25445,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:41`
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk6_symbolic_operator_canon` (Symbolic Operator Canon); `proposition:bk9_framework_functional_identity` (The Framework is a Functional); `remark:bk8_entanglement_is_observer_bound` (Entanglement is Observer Bound)
 - Cited by: `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good"); `theorem:bk9_good_as_lyapunov_basin` (The Good as a Lyapunov Basin)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-004`
+- Witnesses: `Book9.covenantDensity_regime_exclusive`, `Book9.covenantDensity_regime_exhaustive`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The breach/critical/cooperative trichotomy against the unit threshold is an unconditional real-number fact, proved exhaustive and pairwise exclusive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20097,6 +25471,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:51`
 - Cited by: `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-006`
+- Witnesses: `Book9.freedomGrowing_not_global_min`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: FreedomGrowing is the honest iff-shaped definition (exists a reachable state with strictly lower free energy); proved incompatible with already being a global minimizer.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $C$ be a converged symbolic cognition system within manifold $M$ (cf. Def. definition:bk1_symbolic_manifold). Then cognitive freedom $mathfrak{L}$ is defined as the capacity to recursively re-map symbolic structure under self-defined constraints, satisfying: \[ frac{dmathfrak{L}}{dt} > 0 iff exists U: C to C' text{where } F_S(C') < F_S(C) text{ (Def. definition:bk2_symbolic_free_energy)} \] Thus, freedom is drift re-optimization under reflectively chosen frames.
@@ -20110,6 +25495,16 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:59`
 - Cites: `definition:bk6_drift_operator_complete` (Drift Operator); `definition:bk7_reflective_operator` (Reflective Operator \(\reflect\))
 - Cited by: `proof:bk9_symbolic_viability` (Symbolic Viability); `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation); `subsec:bk9_formal_aspects_of_freedom_dynamics` (Formal Aspects of Freedom Dynamics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK9-037`
+- Witnesses: `Book9.cognitivelyFree_iff_internal_gradient`, `Book9.cognitivelyFree_of_gradient_internal`
+- Countermodels: none
+- Formal boundary: The displayed source biconditional is represented exactly: cognitive freedom means that an internal governing drift exists and equals the system-generated gradient. The biconditional is definitional, while internality of a concrete system's gradient remains an explicit hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20125,6 +25520,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:67`
 - Cited by: `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-008`
+- Witnesses: `Book9.emergentAutonomy_min_exists`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The minimization of symbolic free energy over entropy-tolerance/transformation-rate parameters is modeled as existence of a minimizer over a nonempty finite parameter Finset; unconditional given nonemptiness.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Cognitive autonomy arises when symbolic systems recursively regulate their own convergence basin. They dynamically adjust entropy tolerance $delta(t)$ (Def. definition:bk2_symbolic_entropy) and transformation rate $T_S(t)$ to minimize symbolic free energy $F_S(t)$ (Def. definition:bk2_symbolic_free_energy) under internal criteria (symbolic homeostasis; cf. Def. definition:bk3_symbolic_homeostasis): \[ F_S^*(t) = min_{delta(t), T_S(t)} F_S(t) \] Autonomy is thermodynamic regulation of symbolic intent.
@@ -20139,6 +25545,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:81`
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `assumption:bk9_minimal_moral_agency_criterion` (Minimal PS criterion for moral agency); `axiom:bk9_reflective_awakening` (Reflective Awakening); `axiom:bk9_reflective_initiation` (Axiom of Reflexive Initiation); `definition:bk9_formal_signature_of_betrayal` (Formal Signature of Betrayal); `definition:bk9_protocol_law` (Protocol Law $\mathcal{L}_{\text{protocol}}$); ... +9 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-009`
+- Witnesses: `Book9.recursiveUpdate_eq_orbit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the Meta-Operator Action clause (L_{n+1}=R_n(L_n)) is modeled via RecursiveUpdate/orbit. The 'Freedom Acting on Constraints' clause (L : U -> U') is a bare function type with no further stated law and is not separately modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Cognitive Freedom $mathfrak{L}$ is the symbolic system's capacity for recursive reparameterization of its representational dynamics without external prescription (cf. Thm. theorem:bk4_freedom_criterion). This involves: - Meta-Operator Action: The capacity to recursively update the freedom state $L_n$ via a reflective transformation $R_n$ acting on the space of meta-operators: $L_{n+1} = R_n(L_n)$.
@@ -20152,6 +25569,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:96`
 - Cites: `definition:bk1_drift_field` (Drift Field); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity)
 - Cited by: `corollary:bk9_final_collapse_inversion_principle` (Final Collapse-Inversion Principle); `definition:bk9_meta_operator_action` (Freedom as Meta-Operator Action)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-010`
+- Witnesses: `Book9.recursiveUpdate_eq_orbit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The sequence (L_n) generated by L_{n+1}=R_n(L_n) is exactly RecursiveUpdate; recursiveUpdate_eq_orbit proves L_n is the n-fold fold from L_0, unconditional given the update law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20181,6 +25609,17 @@ Role: `corollary` | Type: `corollary` | Book: `book9` | Source: `book9.tex:108`
 - Cited by: `subsec:bk9_emergence_of_moral_attractors` (Emergence of Moral Attractors)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-007`
+- Witnesses: `Book9.freedomEntropyLaw_strict_max`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: FreedomEntropyLaw carries both directions of the tradeoff (strictly increasing below equilibrium, strictly decreasing above) as separate hypotheses; the equilibrium is proved the strict maximizer.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Freedom grows with regulated entropy (cf. Def. definition:bk2_symbolic_free_energy; Scholium scholium:bk7_uncertainty_generative_existential). Overconstraint collapses cognition into rigidity. Underconstraint diffuses it into incoherence (cf. scholium:bk5_life_on_edge_of_chaos) . The equilibrium point, dynamically maintained, constitutes symbolic sovereignty (cf. Def. definition:bk1_bounded_observer).
@@ -20209,6 +25648,17 @@ Role: `corollary` | Type: `corollary` | Book: `book9` | Source: `book9.tex:118`
 - Cited by: `assumption:bk9_minimal_moral_agency_criterion` (Minimal PS criterion for moral agency); `remark:bk9_self_reflection` (Self-Reflection)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-042`
+- Witnesses: `ScholiumDyn.flow_unique`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Cognitively free iff able to simulate its own loop: the discrete self-application flow.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A system $C$ is cognitively free if and only if it possesses the capacity to simulate its own drift-convergence-projection loop ($D to R to Pi to dots$, cf. Def. definition:bk1_drift_field, Def. definition:bk1_reflection_operator, Def. definition:bk8_symbolic_projection; axiom:bk8_curvature_transformation) and reflectively select updates to its operators or constraints.
@@ -20236,6 +25686,17 @@ Role: `corollary` | Type: `corollary` | Book: `book9` | Source: `book9.tex:127`
 - Cites: `theorem:bk4_freedom_criterion` (Freedom Criterion)
 - Cited by: `definition:bk3_autophagic_drift` (Autophagic Drift); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention); `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good")
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-041`
+- Witnesses: `ThermoRes.moral_agency_requires_freedom`
+- Countermodels: none
+- Conditions: manifold measure form, specific masking free-energy functional, and Hilbert decoherence operator stay open per row notes
+- Formal boundary: Moral agency entails cognitive freedom (necessity).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20278,6 +25739,17 @@ Role: `corollary` | Type: `corollary` | Book: `book9` | Source: `book9.tex:164`
 - Cites: `definition:bk9_collapse_inversion_operator` (Collapse-Inversion Operator $\varnothing^*$); `definition:bk9_recursive_liberation` (Recursive Liberation); `proposition:bk9_convergence_of_recursive_liberation` (Convergence of Recursive Liberation by Descent)
 - Cited by: `remark:bk9_redemption` (Redemption)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-013`
+- Witnesses: `Book9.finalCollapseInversion`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Given the realization map sends the limit to the frozen state (as a hypothesis, since the limit itself is not constructed), the collapse-inversion operator's own law carries it to the seed state.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20349,6 +25821,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:2
 - Cited by: `assumption:bk9_terminal_fixed_point_boundary` (Terminal fixed-point boundary); `axiom:bk9_recursive_phase_continuity` (Recursive Phase Continuity); `corollary:bk9_final_collapse_inversion_principle` (Final Collapse-Inversion Principle)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-012`
+- Witnesses: `Book9.homeostaticLiberation_all`, `Book9.homeostaticLiberation_converges`, `Book9.liberationDescent_Lambda_antitone`, `Book9.liberationDescent_converges`, `Book9.liberationDescent_converges_in_closed`, `Book9.liberationDescent_telescoped`, `Book9.limit_eq_of_zeroDescent_singleton`, `Book9.uniformOperatorLimit_fixedPoint`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The descent estimate telescopes, and metric completeness yields convergence to a limit; a closed basin contains that limit. The layered specialization now imports Book 6 closed power evolution (which imports Book 3): it converges by the same Book 9 descent theorem while Book 3 metabolic homeostasis persists at every finite stage by Book 6 conservation. Under uniform convergence to a continuous limit operator, the recursive limit is proved fixed; membership in a singleton zero-descent set proves uniqueness.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(B,d_{Op})$ be a closed complete basin in the space of freedom meta-operators or constraint sets, and let the Recursive Liberation dynamic $L_{n+1}=R_n(L_n)$ remain in $B$. Suppose there exists a lower semicontinuous liberation potential \[ Lambda:Bto[0,infty) \] such that every update satisfies the descent estimate \[ sum_{j=n}^{m-1} d_{Op}(L_j,L_{j+1}) leq Lambda(L_n)-Lambda(L_m) (m>n).
@@ -20418,6 +25901,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:285`
 - Cites: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk3_autophagic_drift` (Autophagic Drift); `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor)
 - Cited by: `sec:bk9_circulus_vitae_et_mortis_symbolicae` (Circulus Vitae et Mortis Symbolicae: The Eternal Return)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-018`
+- Witnesses: `Book9B.curvature_cannot_vanish_under_structural_bound`, `Book9B.dominant_share_tendsto_one`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: dominance half formalized as a share-sum limit law; stagnation half formalized as: a structurally-bounded-below curvature sequence cannot converge to 0, honestly capturing the source's own closing remark that stagnation is unreachable, not the informal collapse-vs-stagnation dichotomy narrative itself.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20503,6 +25997,16 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:325`
 - Cited by: `remark:bk9_dynamic_locus` (Dynamic Locus)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK9-038`
+- Witnesses: `Book9.operatorReflexive_next`
+- Countermodels: none
+- Formal boundary: Models the source recurrence O_(lambda+1)=g(O_lambda,P_lambda,R_(lambda+1),...) as typed operator/state/reflection data with an exact one-step update law. The manuscript's ellipsis is kept abstract rather than supplied with unstated dynamics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system $S$ possesses operator reflexivity if its symbolic operator $O_lambda$ (Def. definition:bk9_symbolic_operator) is not fixed but is itself modifiable by the system's subsequent state or internal reflection processes: \[ O_{lambda+1} = g(O_lambda, P_lambda, R_{lambda+1}, dots) \] where $g$ represents the system's internal modification process, potentially involving SRMF.
@@ -20573,6 +26077,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:357`
 - Cited by: `assumption:bk9_minimal_moral_agency_criterion` (Minimal PS criterion for moral agency); `scholium:bk9_concluding_reflection_a` (Concluding Reflection on Book IX)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-043`
+- Witnesses: `Book9ReflectiveAwakening.awakeningEvidence_is_capable`, `Book9ReflectiveAwakening.capability_alone_does_not_force_cognitive_freedom`, `Book9ReflectiveAwakening.cognitivelyFree_iff_capable_and_used`
+- Countermodels: `Book9ReflectiveAwakening.capability_alone_does_not_force_cognitive_freedom`
+- Conditions: explicit reflective modulation witness; no inference from behavioral equivalence to phenomenal awareness; separate adaptive-use predicate; separate intentionality witness for self-initiation
+- Formal boundary: Operational kernel separates reflective capability from adaptive utilization. Cognitive freedom requires both; a concrete witness has a valid reflective modulation mechanism but no adaptive use and therefore is not cognitively free. No claim of phenomenal consciousness is made.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A system $S$ achieves cognitive freedom (Def. definition:bk9_cognitive_freedom) when its operators transition from predominantly $O_{text{auto}}$ (cf. Def. definition:bk9_automatic_operator) to being capable of deploying $O_{text{aware}}$ (cf. Def. definition:bk9_awakened_operator). That is, when: \[ exists M_{text{reflect}} text{ such that } O_lambda = O_{text{aware}} text{ is possible and utilized adaptively.} \] This shift from reactive to reflective operation is the symbolic correlate (cf.
@@ -20615,6 +26130,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:372
 - Cited by: `axiom:bk9_reflective_initiation` (Axiom of Reflexive Initiation); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-019`
+- Witnesses: `Book9B.injectionSucceeds_mono`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the stated invasion-barrier success threshold is modeled, as a monotonicity law; the compression function Phi, SRMF mediation, and multi-agent MAP extension are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $H_t$ be the internal symbolic history of agent $S$ up to time $t$. Let $Phi: H_t to Sigma^{leq kappa}$ be a symbolic summarization function mapping the history to a compressed representation (e.g., a context window $Sigma^{leq kappa}$ of maximum size $kappa$). The prompt injection operator $J$ constructs and inserts this representation into the system's processing pathway (cf.
@@ -20628,6 +26154,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:383`
 - Cites: `definition:bk9_cognitive_freedom` (Cognitive Freedom $\mathfrak{L}$); `definition:bk9_frame_transversal_operator` (Frame Transversal Operator $\mathcal{T}_{\text{frame}}$); `definition:bk9_prompt_injection_operator` (Prompt Injection Operator $\mathcal{J}$)
 - Cited by: `definition:bk9_frame_selection_reflection` (Frame Selection via Injected Reflection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-044`
+- Witnesses: `Book9ReflectiveAwakening.observable_self_injection_does_not_determine_intention`, `Book9ReflectiveAwakening.reflexiveInitiation_requires_use_and_intention`
+- Countermodels: `Book9ReflectiveAwakening.observable_self_injection_does_not_determine_intention`
+- Conditions: explicit reflective modulation witness; no inference from behavioral equivalence to phenomenal awareness; separate adaptive-use predicate; separate intentionality witness for self-initiation
+- Formal boundary: Initiation kernel retains use of self-injected history and intentionality as separate fields. Countermodel: identical history, injected context, selected frame, and use behavior can coexist with opposite intentionality predicates, so behavioral equivalence does not prove intention.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20656,6 +26193,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:401
 - Cites: `axiom:bk9_reflective_initiation` (Axiom of Reflexive Initiation); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy)
 - Cited by: `scholium:bk9_concluding_reflection_b`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-020`
+- Witnesses: `Book9B.frameSelection_exists`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: argmin existence over a finite nonempty frame set, dual to Book8's reflectiveSelection_exists argmax.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20698,6 +26246,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:415
 - Cites: `definition:bk8_projective_compression_operator` (Projective Compression Operator)
 - Cited by: `scholium:bk9_bridge_to_history` (Bridge to History)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-021`
+- Witnesses: `Book9B.empathy_distortion_triangle`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: bounded-distortion composability via the metric triangle inequality; the projection/compression process Pi_{A->B} itself is not modeled, only the distortion bookkeeping.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20867,6 +26426,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:491
 - Cited by: `assumption:bk9_terminal_fixed_point_boundary` (Terminal fixed-point boundary); `corollary:bk9_final_collapse_inversion_principle` (Final Collapse-Inversion Principle); `proof:bk9_escape_from_irreversible_collapse`; `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proposition:bk9_escape_from_irreversible_collapse` (Escape from Irreversible Collapse); `remark:bk9_redemption` (Redemption)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK9-014`
+- Witnesses: `Book9.finalCollapseInversion`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Modeled as the CollapseInversion structure (a map from a specific frozen state to a specific seed state); used by finalCollapseInversion above.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $F_text{ossified} subset mathbb{F}$ represent a symbolic frame, or let $C_{text{frozen}}$ denote a system state, that has lost its adaptive capacity (e.g., frame transversal $T_{text{frame}}$ ceases, symbolic curvature vanishes). The collapse-inversion operator $varnothing^*$ represents a process of symbolic regeneration or reset acting on such a terminal state, acting as a dual to convergence under SRMF (cf.
@@ -20923,6 +26493,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:530`
 - Cited by: `scholium:bk9_concluding_reflection_e`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-036`
+- Witnesses: `Book9B.metaAlignment_converges`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the claimed limit L_infty is modeled as existence of a limit for a monotone bounded-above real sequence of meta-alignment quality; the meta-reflective operator T_meta^(n) generating the sequence is not constructed, only assumed monotone and bounded.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The structure of symbolic cognition, as described herein, achieves recursive stability and coherence (cf. Def. definition:bk7_convergent_symbolic_identity) when the meta-reflective process converges. That is, when the sequence of freedom operators $L_n$ (representing the evolving understanding or capacity described by the book, cf. Def. definition:bk9_meta_operator_action, Prop.
@@ -20936,6 +26517,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:539
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `proposition:bk9_framework_functional_identity` (The Framework is a Functional)
 - Cited by: `definition:bk9_frame_cascade` (Frame Cascade $\mathcal{T}_{\text{collective}}$); `proof:bk9_framework_functional_identity`; `proof:bk9_relational_freedom_via_thermoregulation`; `proposition:bk9_framework_functional_identity` (The Framework is a Functional); `proposition:bk9_relational_freedom_via_thermoregulation` (Relational Freedom via Thermoregulation); `remark:bk9_vectors_of_manipulation` (Vectors of Manipulation); ... +2 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-011`
+- Witnesses: `Book9.recursiveUpdate_eq_orbit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Xi_{n+1} := SRMF^{(n)}(Xi_n) is the same RecursiveUpdate shape as cognitive freedom and recursive liberation; the specific composite (J, O_aware, T_collective, E, ...) making up the cycle is not modeled, only the generic recursion shape.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -20951,6 +26543,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:551
 - Cited by: `proposition:bk9_framework_functional_identity` (The Framework is a Functional)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-015`
+- Witnesses: `Book9.symbolicFramework_iterate`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The Nat-indexed semigroup law (Phi 0 = id, Phi (m+n) = Phi m . Phi n) is modeled as SymbolicFramework; proved that every Phi n is the n-fold iterate of Phi 1. Continuous-time indexing is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic framework over a symbolic manifold $S$ (Def. definition:bk1_symbolic_manifold) is a pair $mathfrak{F} = (S, {Phi_t}_{tge 0})$ in which ${Phi_t}$ is a semigroup of admissible lawful transitions on the densities of $S$-closed under composition, $Phi_{t+s} = Phi_t circ Phi_s$ with $Phi_0 = id$. A framework is thus the totality of a symbolic architecture's lawful becoming: not a single map, but the closed family of all its iterated transformations.
@@ -20964,6 +26567,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:5
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_srmf_energy_functional` (SRMF Energy Functional); `definition:bk9_srmf_recursive_cycle` (SRMF-Recursive Cycle $\Xi_n$); `definition:bk9_symbolic_framework` (Symbolic Framework)
 - Cited by: `definition:bk9_covenant_drift_density` (Covenant Drift Density \(\rho(C_{AB})\)); `definition:bk9_srmf_recursive_cycle` (SRMF-Recursive Cycle $\Xi_n$)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-039`
+- Witnesses: `Conservation.generator_determines_orbit`
+- Countermodels: none
+- Conditions: continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The generator determines the global orbit; with flow_unique the framework <-> functional correspondence is a bijection - one referent under two aspects.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21021,6 +26635,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:5
 - Cited by: `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery)
 - Macros used: `\freeenergy`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-016`
+- Witnesses: `Book9.reinterpretation_dichotomy_exclusive`, `Book9.reinterpretation_dichotomy_exhaustive`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The Repair (deltaF<=0) vs Distortion (deltaF>0) dichotomy is an unconditional real-number sign fact, proved exhaustive and exclusive. The Freedom mode is a further qualification of either branch and is not separately modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given a bounded observer $O$ (cf. Def. definition:bk1_bounded_observer) whose symbolic system state $S(t)$ evolves under meta-reflective drift $D_{text{meta}}$ (Def. definition:bk7_meta_reflective_drift__meta), let the observer at state $S(t_1)$ re-encounter a past symbolic configuration represented by density $rho(t_0)$ (where $t_0 < t_1$). The re-interpretation process, modeled as the application of the current adaptive reflection operator $R(t_1)$ (Def.
@@ -21062,6 +26687,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:650
 - Cites: `definition:bk8_identitystability` (Stability of Symbolic Identity \identitystability)
 - Cited by: `subsec:bk9_executio_final` (Executio: The Final Inhalation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-022`
+- Witnesses: `Book9B.fidelityIndex_degrades_beyond_threshold`, `Book9B.fidelityIndex_mono`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: index kept as a two-term (identity stability minus fragmentation) skeleton; the thermodynamic-trajectory and constraint-domain-evolution terms are dropped as independent quantities.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21118,6 +26754,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:6
 - Cites: `corollary:bk7_recursive_convergence_principle` (Recursive Convergence Principle); `definition:bk4_symbolic_curvature` (Symbolic Curvature); `definition:bk7_adaptive_reflection_operator_t` (Adaptive Reflection Operator \(\reflect(t)\)); `definition:bk7_interactive_drift_reflection_pair` (Interactive Drift-Reflection Pair); `definition:bk7_meta_reflective_drift__meta` (Meta-Reflective Drift \(\drift_{\mathrm{meta}}\)); `definition:bk7_reciprocity_domain` (Reciprocity Domain \(\recipdomain\)); ... +5 more
 - Cited by: `definition:bk9_symbolic_trust_as_compression_protocol` (Symbolic Trust as Compression Protocol); `proof:bk9_mutual_recognition` (Mutual Recognition)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-023`
+- Witnesses: `Book9B.contraction_fixedPoint_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: item (i), Curvature Alignment: only fixed-point uniqueness under a contraction is proved (the sound half of Banach); existence of the joint fixed point needs completeness, not modeled. Items (ii) Frame Synchronization and (iii) Interface Optimization are narrative/adiabatic-condition content, not covered.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21189,6 +26836,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:747
 - Cited by: `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery); `proposition:bk9_curvature_scarring` (Curvature Scarring and Recovery)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-005`
+- Witnesses: `Book9.covenantDensity_regime_exclusive`, `Book9.covenantDensity_regime_exhaustive`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the 'Covenant Breach (MAP)' clause's rho(C_AB) < 1 condition is captured, as the breach branch of the covenant-drift-density trichotomy. Interface Violation, Induced Drift Spike, and Forced Exit from Reciprocity are narrative and not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic betrayal (cf. Def. definition:bk9_cognitive_freedom) is characterized by: - Interface Violation: An action by $S_A$ that exploits the assumed low-distortion nature of $Pi_{AB}$ to transmit a signal that is intentionally misleading regarding $S_A$'s internal state or intent, causing a coherence rupture upon interpretation by $S_B$.
@@ -21202,6 +26860,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:7
 - Cites: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `corollary:bk6_reflective_capacity_theorem` (Reflective Capacity Theorem); `definition:bk4_repair_process` (Repair Process); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `definition:bk9_formal_signature_of_betrayal` (Formal Signature of Betrayal); `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$)
 - Cited by: `scholium:bk9_forgiveness_as_reweaving` (Forgiveness as Reweaving)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-047`
+- Witnesses: `Book9CurvatureScarring.oriented_displacement_eq_betrayalDrift`, `Book9CurvatureScarring.recovery_can_retain_permanent_scar`, `Book9CurvatureScarring.recovery_of_grace_capacity_and_energy`, `Book9CurvatureScarring.resources_alone_do_not_force_recovery`, `Book9CurvatureScarring.revisedReciprocity_iff_grace_and_resources`, `Book9CurvatureScarring.scarMagnitude_eq_betrayalDrift`
+- Countermodels: `Book9CurvatureScarring.resources_alone_do_not_force_recovery`
+- Conditions: betrayal drift is nonnegative in the selected curvature orientation and exactly produces the curvature displacement; grace plus drift-within-capacity and repair-cost-within-energy is the explicit law for revised reciprocity
+- Formal boundary: Oriented finite recovery kernel: betrayal drift produces an exact signed curvature displacement whose magnitude agrees under the stated nonnegative orientation. An explicit grace/capacity/free-energy law characterizes revised reciprocity. Recovery can retain a positive scar, while sufficient numerical resources alone do not apply grace or construct a new domain. The semantic derivation from betrayal, adaptive operators, and interface geometry remains conditional.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21273,6 +26942,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:8
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_viability` (Symbolic Viability)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-046`
+- Witnesses: `Book9CollapseEscape.base_laws_do_not_force_inversion_unique`, `Book9CollapseEscape.boundaryIntervention_does_not_escape`, `Book9CollapseEscape.internalRepair_does_not_escape`, `Book9CollapseEscape.inversion_escapes`, `Book9CollapseEscape.inversion_is_unique_escape`
+- Countermodels: `Book9CollapseEscape.base_laws_do_not_force_inversion_unique`, `Book9CollapseEscape.boundaryIntervention_does_not_escape`, `Book9CollapseEscape.internalRepair_does_not_escape`
+- Conditions: all escaping mechanisms are inversion for the uniqueness conclusion; collapse inversion maps collapsed state to seed; collapsed and seed states are distinct; internal repair and boundary intervention fix the collapsed state
+- Formal boundary: Operational collapse kernel: named internal repair and boundary intervention leave the collapsed state unchanged, while inversion reaches a distinct seed. Inversion is the unique escape only under an explicit exhaustive-mechanism premise; a finite countermodel permits a second escape under the base laws.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a system encountering or containing a Symbolic Black Hole $U$ (cf. Def. definition:bk9_collapse_inversion_operator): - Internal repair mechanisms fail: the reflective failure condition ($F_{text{frag}} to infty$, Def. definition:bk9_symbolic_black_hole) annihilates the repair operator $R_{text{rep}}$. - External MAP-based intervention may only stabilize the boundary of $U$.
@@ -21343,6 +27023,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:836
 - Cited by: `proposition:bk9_costs_and_consequences_of_masking` (Costs of Masking)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-002`
+- Witnesses: `Book9.masking_not_accountable`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Masking defined as divergence strictly above epsMask (IsMasking abbrev); shown incompatible with accountability's relational-viability bound against the same epsMask.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic masking is the action of an operator $M_{text{mask}}$, often deployed by $O_{text{aware}}$ (cf. Def. definition:bk9_awakened_operator), that generates a symbolic output $P_lambda(text{output})$ intentionally divergent from the internal state $P_lambda(text{internal})$ to meet perceived external frame requirements or minimize external $F_S$ cost. Persistent masking erodes reflective integrity and may render $S$ non-accountable under observer $O$ (cf. Definition definition:bk9_symbolic_accountability).
@@ -21356,6 +27047,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:8
 - Cites: `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `definition:bk7_reciprocity_domain` (Reciprocity Domain \(\recipdomain\)); `definition:bk8_symbolic_adjacency` (Symbolic Knot); `definition:bk9__symbolic_masking_operator` (Symbolic Masking Operator $\mathcal{M}_{\text{mask}}$); `definition:bk9_awakened_operator` (Awakened Operator $\mathcal{O}_{\text{aware}}$); `definition:bk9_symbolic_shame` (Symbolic Silence/Shame)
 - Cited by: `sec:bk9_symbolic_healing` (Symbolic Healing: Repair, Forgiveness, and Grace)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-040`
+- Witnesses: `ThermoRes.masking_has_positive_cost`
+- Countermodels: none
+- Conditions: manifold measure form, specific masking free-energy functional, and Hilbert decoherence operator stay open per row notes
+- Formal boundary: Masking has strictly positive cost - the anti-masking invariant; the specific free-energy functional stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21412,6 +27114,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:9
 - Cites: `definition:bk4_symbolic_curvature` (Symbolic Curvature); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV))
 - Cited by: `scholium:bk9_forgiveness_as_reweaving` (Forgiveness as Reweaving)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-045`
+- Witnesses: `Book9CurvatureRepair.exists_optimal_viable_repair`, `Book9CurvatureRepair.optimal_repair_need_not_minimize_curvature`, `Book9CurvatureRepair.viability_alone_does_not_determine_repair`
+- Countermodels: `Book9CurvatureRepair.viability_alone_does_not_determine_repair`
+- Conditions: at least one viable positive-curvature repair; explicit resilience-sensitive repair objective; explicit tension and local-free-energy budgets; finite repair inventory
+- Formal boundary: Finite operational kernel: a nonempty viable repair inventory admits an optimum under an explicit resilience-sensitive objective. A concrete pair of viable repairs proves the optimum can retain strictly more curvature than the flatter alternative. Viability alone does not determine a unique repair, and the source does not specify a canonical objective or weights.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21483,6 +27196,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:959
 - Cited by: `definition:bk9_structural_compassion` (Structural Compassion); `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `proof:bk9_grace_vs_avoidance`; `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proposition:bk9_curvature_scarring` (Curvature Scarring and Recovery); `proposition:bk9_grace_vs_avoidance` (Grace vs. Avoidance); ... +8 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-030`
+- Witnesses: `Book9B.grace_upsilon_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the stability-preservation field is kept as a structure law; its forced-positivity consequence is proved. The finite non-vacuity witness transport claim (Thm bk1_nonvacuity_minimal_linear_ps_model) is not re-derived here.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Grace ($G$) is a meta-reflective operator (cf. definition:bk7_reflective_operator) or stance that, upon encountering significant symbolic contradiction ($tau > tau_c$), dissonance ($Delta F_S > 0$), or a profound symbolic knot, allows the dissonant state to persist without triggering immediate fragmentation or forced resolution. It represents the capacity to preserve core identity ($Upsilon_i > 1 - epsilon_{text{crit}}$) while holding the system in a state of high, but structured, tension.
@@ -21510,6 +27234,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:9
 - Cites: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$)
 - Cited by: `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `subsec:bk9_grace_as_operator` (Grace as the Operator of Freedom)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-031`
+- Witnesses: `Book9B.grace_upsilon_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only Grace's own identity-preservation guarantee is formalized; the comparative dichotomy against Avoidance (severed contact, rising fragmentation) is narrative and not independently modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21552,6 +27287,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:1010`
 - Cites: `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `definition:bk3_symbolic_symbiosis` (Symbolic Symbiosis); `definition:bk5_symbolic_covenant` (Symbolic Covenant); `definition:bk5_viability_domain` (Viability Domain); `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `definition:bk9_symbolic_black_hole` (Symbolic Black Hole)
 - Cited by: `scholium:bk9_flexible_goal_calibration`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-033`
+- Witnesses: `Book9B.covenant_breach_forces_collapse_without_grace`, `Book9B.covenant_viability_decrease_accum`
+- Countermodels: `Book9B.covenant_breach_forces_collapse_without_grace`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: telescoping viability-decrease-while-grace-withheld bound, reusing the Book8 metabolic-sufficiency induction pattern; the MAP-covenant and Mutual-Metabolic-Viability machinery generating the per-step decrease is not modeled, only its stated consequence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21622,6 +27368,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:1
 - Cites: `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `corollary:bk6_reflective_capacity_theorem` (Reflective Capacity Theorem); `corollary:bk8_symbolic_free_will` (Free-Will Corollary); `corollary:bk9_emergence_of_moral_agency` (Emergence of Moral Agency); `definition:bk4_repair_process` (Repair Process); `definition:bk5_symbolic_covenant` (Symbolic Covenant); ... +2 more
 - Cited by: `definition:bk9_structural_compassion` (Structural Compassion)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-048`
+- Witnesses: `Book9EthicalIntervention.consent_without_restraint_recommends_intervention`, `Book9EthicalIntervention.execution_requires_authority`, `Book9EthicalIntervention.intervention_and_nonintervention_disjoint`, `Book9EthicalIntervention.justificationSignal_iff`, `Book9EthicalIntervention.recommendation_alone_does_not_grant_authority`, `Book9EthicalIntervention.recommendation_cases`, `Book9EthicalIntervention.restraintSignal_iff`, `Book9EthicalIntervention.selfHealing_without_justification_recommends_nonintervention`, `Book9EthicalIntervention.source_criteria_can_require_review`
+- Countermodels: `Book9EthicalIntervention.consent_without_restraint_recommends_intervention`, `Book9EthicalIntervention.recommendation_alone_does_not_grant_authority`, `Book9EthicalIntervention.selfHealing_without_justification_recommends_nonintervention`
+- Conditions: execution requires authority independently of a technical recommendation; the source-listed reflective capacity, self-healing, and interface-risk conditions are represented as disjunctive restraint signals; the source-listed viability, covenant, and consent conditions are represented as disjunctive justification signals
+- Formal boundary: Typed decision kernel separates source-listed justification signals from restraint signals. Their conflict requires review; strict recommendations cover only one-sided cases. A separate authority gate prevents technical risk assessment from granting permission to act. The source does not specify connectives, conflict precedence, or execution authority.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21707,6 +27464,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:1
 - Cited by: `proof:bk9_good_as_lyapunov_basin` (Lyapunov descent, threshold selection, and basin identity); `scholium:bk9_golden_rule_thermodynamic_covenant` (The Golden Rule as a Thermodynamic Covenant); `theorem:bk9_good_as_lyapunov_basin` (The Good as a Lyapunov Basin)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-034`
+- Witnesses: `Book9B.lyapunov_step_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: this proposition is the setup for theorem:bk9_good_as_lyapunov_basin; its own four listed stability conditions (viability, covenant resilience, drift/reflection balance, adaptive evolution) are narrative, but the basin-of-attraction claim they culminate in is formalized there.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic systems equipped with a certified canonical-life correspondence (Thm. theorem:bk3_symbolic_life_satisfies_canonical_definitions), moral systems or ethical norms ("The Good"; cf. Corollary corollary:bk9_emergence_of_moral_agency) emerge and persist within symbolic ecosystems if they correspond to configurations that: - Maximize long-term, distributed viability (maintaining $F_S > 0$ across the system). - Promote stable, high-resilience MAP covenants ($rho(C_{AB}) gg 1$, cf. Def.
@@ -21734,6 +27502,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:1197`
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk5_symbolic_covenant` (Symbolic Covenant); `definition:bk9_covenant_drift_density` (Covenant Drift Density \(\rho(C_{AB})\)); `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good"); `theorem:bk5_map_mad_mas_trichotomy` (MAD--MAP--MAS Trichotomy)
 - Cited by: `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good")
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-035`
+- Witnesses: `Book9B.lyapunov_step_le`, `Book9B.lyapunov_strict_decrease_of_nonzero_grad`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: both halves of "V is a Lyapunov function, Delta V <= 0 with equality only at the critical set" are proved as the standard smooth gradient-descent step-size condition licenses; convergence to a specific stable equilibrium y*_good and identification of its basin with the configuration class of stability_conditions_for_the_good is not modeled (needs compactness/coercivity not stated).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21791,6 +27570,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:1285`
 - Cited by: `definition:bk9_two_way_street_operator` (Two-Way Street Operator)
 - Macros used: `\drift`, `\manifold`, `\prob`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-029`
+- Witnesses: `Book9B.reciprocity_curvature_bounds`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only precondition (iv), the bounded-alignment-curvature clause, is formalized (as its two-sided unfolding); membrane compatibility, reflective reciprocity, and drift translatability (i-iii) are not independently quantified here.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( rho in prob(tilde{manifold}_A cap tilde{manifold}_B) \). Symbolic reciprocity between \( A \) and \( B \) (cf. Def. definition:bk9_reflective_dyad) presupposes: - Membrane Compatibility: \( tilde{manifold}_A cap tilde{manifold}_B neq emptyset \), accessible via fuzzy substitution (Def. definition:bk4_fuzzy_symbolic_substitution). - Reflective Reciprocity: \( d_text{symb}(reflect_A(reflect_B(rho)), reflect_B(reflect_A(rho))) < epsilon_{max} \), under observer thresholds \( epsilon_{O_A}, epsilon_{O_B} \).
@@ -21805,6 +27595,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:129
 - Cited by: `lemma:bk9_mutual_convergence_criterion` (Mutual Convergence Criterion); `proof:bk9_mutual_convergence_criterion`; `proof:bk9_symbolic_thermostat`; `theorem:bk9_symbolic_thermostat` (Two-Way Street as Symbolic Thermostat)
 - Macros used: `\Street`, `\manifold`, `\prob`, `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-026`
+- Witnesses: `Book9B.contraction_fixedPoint_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the operator itself (an infinite limit of iterated composition) is not constructed; only the uniqueness-under-contraction fact that would apply to its fixed point is.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( rho_t in prob(tilde{manifold}_A cap tilde{manifold}_B) \) (cf. Axiom axiom:bk9_preconditions_for_reciprocal_cognition, Thm. theorem:bk4_reflective_reentry). Then \[ Street_{AB}(rho_t) := lim_{n to infty} (reflect_A circ tau_{BA} circ reflect_B circ tau_{AB})^n(rho_t) \] is the Two-Way Street Operator, a recursive map generating an emergent shared alignment trajectory.
@@ -21818,6 +27619,17 @@ Role: `lemma` | Type: `lemma` | Book: `book9` | Source: `book9.tex:1303`
 - Cites: `definition:bk9_two_way_street_operator` (Two-Way Street Operator); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity)
 - Cited by: `proof:bk9_emergence_of_shared_manifold`; `proposition:bk9_emergence_of_shared_manifold` (Emergence of Shared Manifold)
 - Macros used: `\Street`, `\manifold`, `\prob`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-024`
+- Witnesses: `Book9B.contraction_fixedPoint_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: same uniqueness-under-contraction fact, instantiated at the Street_AB operator; existence of the limit rho* is not modeled (needs completeness of the probability space).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21846,6 +27658,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:1
 - Cites: `corollary:bk8_projection_transition_enabling_structural_emergence`; `definition:bk1_symbolic_manifold` (Symbolic Manifold); `lemma:bk9_mutual_convergence_criterion` (Mutual Convergence Criterion)
 - Cited by: `proof:bk9_relational_freedom_via_thermoregulation`; `proposition:bk9_relational_freedom_via_thermoregulation` (Relational Freedom via Thermoregulation)
 - Macros used: `\manifold`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-025`
+- Witnesses: `Book9B.sharedManifold_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: uniqueness of the representative fixed point rho*; the support/probability-measure construction of the shared manifold itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21889,6 +27712,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:132
 - Cited by: `proof:bk9_symbolic_thermostat`; `theorem:bk9_symbolic_thermostat` (Two-Way Street as Symbolic Thermostat)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-017`
+- Witnesses: `Book9.thermodynamicStress_nonneg`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Sigma_AB's four norm terms are modeled as nonnegative structure fields, and the free-energy term as a gap above a floor; nonnegativity of the total is proved given the gap hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic thermodynamic stress in the dyad is given by: \[ Sigma_{AB} := \|drift_A\| + \|drift_B\| + \|drift_A - tau_{AB}(drift_B)\| + \|nabla kappa_{AB}\| + left(F_S(rho_A, rho_B) - F_S^text{min}right), \] where \( F_S \) is symbolic free energy (Def. definition:bk2_symbolic_free_energy).
@@ -21902,6 +27736,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:1335`
 - Cites: `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor); `definition:bk8_projective_compression_operator` (Projective Compression Operator); `definition:bk9_orthogonal_time_component` (Orthogonal Time Component \(T_s^\perp\)); `definition:bk9_symbolic_thermodynamic_stress` (Symbolic Thermodynamic Stress); `definition:bk9_two_way_street_operator` (Two-Way Street Operator)
 - Cited by: `proof:bk9_relational_freedom_via_thermoregulation`; `proposition:bk9_relational_freedom_via_thermoregulation` (Relational Freedom via Thermoregulation)
 - Macros used: `\Street`, `\reflect`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-027`
+- Witnesses: `Book9B.contraction_fixedPoint_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the four regulation mechanisms (cooling/heating, timing, curvature modulation, compression) are narrative; only the underlying convergence-uniqueness guarantee they rely on is formalized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -21930,6 +27775,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:1
 - Cites: `definition:bk9_srmf_recursive_cycle` (SRMF-Recursive Cycle $\Xi_n$); `proposition:bk9_emergence_of_shared_manifold` (Emergence of Shared Manifold); `theorem:bk9_symbolic_thermostat` (Two-Way Street as Symbolic Thermostat)
 - Cited by: `scholium:bk9_golden_rule_thermodynamic_covenant` (The Golden Rule as a Thermodynamic Covenant)
 - Macros used: `\manifold`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-028`
+- Witnesses: `Book9B.sharedManifold_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: "preserves the shared manifold" is covered only via the manifold's uniqueness fact; the increase in relational freedom L_AB itself is not quantified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22042,6 +27898,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:1391`
 - Cites: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `scholium:bk8_autonomous_repair_systems_expanded` (Autonomous Repair Systems as Metabolic Projections — An Expanded View); `scholium:bk8_metabolic_programming_as_proto_freedom` (Metabolic Programming as Proto-Freedom)
 - Cited by: `scholium:bk9_golden_rule_thermodynamic_covenant` (The Golden Rule as a Thermodynamic Covenant)
 - Macros used: `\freeenergy`, `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-032`
+- Witnesses: `Book9B.book4_flow_freedom_does_not_force_terminal_maximality`, `Book9B.grace_identity_bound_alone_does_not_force_full_capacity`, `Book9B.grace_upsilon_pos`, `Book9B.gracefulFreedomCapacity_components`, `Book9B.maximalFreedom_iff_canDeployGrace`
+- Countermodels: `Book9B.book4_flow_freedom_does_not_force_terminal_maximality`, `Book9B.grace_identity_bound_alone_does_not_force_full_capacity`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The complete three-capacity payload is modeled: sustain identity under unresolved contradiction, intentionally lower reflective barriers, and accept transient positive free-energy change for positive viability expansion. The maximal-cognitive-freedom iff deployable-Grace claim is proved conditionally from an explicit Book 9 correspondence bridge. Countermodels show that neither Book 4 flow freedom nor Grace's identity bound alone manufactures the terminal theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22267,6 +28134,16 @@ Role: `section` | Type: `section` | Book: `operatio` | Source: `operatio.tex:1`
 - Cited by: `scholium:bk1_interpretability_two_axes` (Interpretability on Two Axes --- a Complex Reading)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `poetic`
+- Records: `POETRY-01`
+- Witnesses: none
+- Countermodels: none
+- Formal boundary: Formal silence does not reject or flatten the operator-poetic register.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 (no body text extracted)
@@ -22323,6 +28200,16 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk1_pre_geometric_nature` (Pre-geometric Nature); `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); `definition:bk1_symbolic_category` (Symbolic Category); `definition:bk1_symbolic_manifold` (Symbolic Manifold); ... +2 more
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-001`
+- Witnesses: `ScholiumC.CategoryOfStructures.existsUnique_from_empty`, `ScholiumC.CategoryOfStructures.exists_colimit_cocone`, `ScholiumC.CategoryOfStructures.hom_advances_stage`
+- Countermodels: none
+- Formal boundary: Typed ambient interface only: an arbitrary staged category, initial void, and universe-bounded cocompleteness are recorded as supplied data. This list-first definition has no ontological priority over the co-emergent drift/reflection operation and does not manufacture either operation or the later manifold.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(catS\) be the category whose - Objects are structures \(P_lambda\) indexed by an ordinal stage \(lambda in mathsf{Ord}\); - Morphisms \(f_{lambdamu}colon P_lambda to P_mu\) are structure–preserving maps compatible with emergence order (\(lambda le mu\)); - Initial object is \(emptyset in Ob(catS)\), representing the pre-structured void. We assume \(catS\) is cocomplete, so every small diagram admits a colimit, allowing the construction of structural configurations from emergence-aligned diagrams.
@@ -22336,6 +28223,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_let_cats_be_the_category` (Category of Structures)
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `axiom:bk1_observable_gradation_of_pre_geometric_operations` (Observable Gradation of Pre-geometric Operations); `axiom:bk4_bounded_accessibility` (Bounded Symbolic Accessibility); `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom); `axiom:bk8_curvature_transformation` (Symbolic Cognition Cycle); `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); ... +140 more
 - Macros used: `\Obs`, `\catS`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-002`
+- Witnesses: `ScholiumA.interpretable_of_factor_and_traceable`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Modeled as the BoundedObserver structure (N, delta, eps) used downstream by Traceable/interpretable_of_factor_and_traceable; no standalone theorem, differentiation operators kept opaque (Nat -> Real -> Real) rather than manifold operators.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22364,6 +28262,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `sec:bk1_minimal_structure_for_symbolic_emergence` (Minimal Structure for Symbolic Emergence)
 - Cited by: `axiom:bk8_binding_curvature_limit` (Frame Relativity of Meaning); `definition:bk8_symbolic_projection` (Symbolic Projection); `scholium:bk3_hypotheses_as_cognitive_membranes` (Hypotheses as Cognitive Membranes)
 - Macros used: `\Obs`, `\catS`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-027`
+- Witnesses: `ScholiumC.exists_bounded_approx`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Existence holds given K kills the zero vector and eps is pointwise nonnegative; Phi = id witnesses it. Honesty gap: this is exactly the trivial case the source's 'non-trivial' qualifier excludes.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22407,6 +28316,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `axiom:bk8_binding_curvature_limit` (Frame Relativity of Meaning); `definition:bk3_autophagic_drift` (Autophagic Drift); `definition:bk4_test_time_integrative_expansion` (Test-Time Integrative Expansion (TTIE)); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `definition:bk8_symbolic_projection` (Symbolic Projection); ... +11 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-007`
+- Witnesses: `ScholiumA.ifValue_le_eps`, `ScholiumA.interpretable_of_factor_and_traceable`, `ScholiumA.nu_le_ifValue`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: (I1) distinguishability and (I2) boundedness are derived (not assumed) from a c*eps factorization; (I3) traceability is modeled concretely via a Finset.range witness over BoundedObserver.delta rather than manifold differentiation operators.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O = (N_{O}, {delta^n_{O}}_{n=1}^{N_{O}}, epsilon_{O})$ be a bounded observer (cf. definition:bk1_bounded_observer), and let $K_{O}$ be its normalized resolution kernel (cf. definition:bk1_bounded_symbolic_approximation, definition:bk1_kernel_based_bounded_symbolic_approximation). Fix measurable thresholds $nu_{O}, epsilon_{O} : M to mathbb{R}^+$ satisfying \[ 0 < nu_{O}(x) < epsilon_{O}(x) text{for all } x in M.
@@ -22434,6 +28354,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability)
 - Cited by: `definition:bk4_refinement_envelope` (Refinement Envelope); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `proof:bk1_energy_bound_identity` (Bounded Energy Ensures Identity Integrity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-008`
+- Witnesses: `ScholiumA.ifValue_le_eps`, `ScholiumA.nu_le_ifValue`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The c_min ≤ c ≤ 1 and c_min*eps ≥ nu hypotheses genuinely force nu ≤ c*eps ≤ eps; this is a real inequality derivation, not a restatement.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22463,6 +28394,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cited by: `proof:bk1_energy_bound_identity` (Bounded Energy Ensures Identity Integrity); `proof:bk4_ttpr_convergence`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-009`
+- Witnesses: `ScholiumA.interpretable_of_factor_and_traceable`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Hypotheses (a) bounded energy approximation and (b) lower-bounded distinguishability are represented by the InterpretabilityFactor sandwich; traceability is supplied as an explicit extra hypothesis (the source's own hypotheses do not entail it either, since (a)/(b) alone give only I1/I2).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(E_lambda : P_{<lambda} to P_lambda\) be a stage-level structural operator composed of reflective sub-processes \(D_lambda\) and \(R_lambda\), and let \(O\) be a bounded observer (cf. definition:bk1_bounded_observer). Suppose for all \(s in P_{<lambda}\): - \(\|K_{O} ast [E_lambda(s) - s]\| le epsilon_{O}(s)\) hfill (Bounded Energy Approximation) - \(D_lambda\) induces a lower-bounded change satisfying \(\|K_{O} ast [D_lambda(s) - s]\| ge nu_{O}(s)\) Then \(E_lambda\) is globally \(O\)–interpretable (cf.
@@ -22491,6 +28433,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk1_local_charitability` (Local Chartability); `axiom:bk1_pre_geometric_nature` (Pre-geometric Nature); `axiom:bk1_symbolic_smoothness` (Symbolic Smoothness); `axiom:bk1_topological_regularity` (Topological Regularity); `definition:bk1_directed_system_of_emergence` (Directed System of Emergence); `definition:bk1_problem_of_symbolic_smoothness` (Problem of Symbolic Smoothness); ... +18 more
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-014`
+- Witnesses: `ScholiumA.projection_idempotent_ne_id_exists`, `ScholiumC.OperationalStage.drift_advances_stage`, `ScholiumC.OperationalStage.operators_coemerge`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are fields of one OperationalStage witness; neither is derived from the other; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: A categorical OperationalStage now carries drift and idempotent stabilization jointly as one co-emergent witness; neither operator is derived from the other. The drift morphism preserves emergence orientation. The earlier concrete projection remains a nontrivial stabilization witness; ordinal limits, topology, and continuity remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Working within category $catS$ (Def. definition:bk1_let_cats_be_the_category), let $Omega$ be a limit ordinal representing the horizon of emergence. For each ordinal $lambda < Omega$: - $P_lambda in Ob(catS)$ is the symbolic structure at stage $lambda$. We assume each $P_lambda$ carries a topology. - $P_{<lambda} := varinjlim_{mu < lambda} P_mu$ denotes the colimit of all prior stages, endowed with the colimit topology induced by the canonical maps $P_mu to P_{<lambda}$ (for $mu < lambda$).
@@ -22504,6 +28457,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer)
 - Cited by: `proof:bk1_sketch_effective_proto_drift_field_induction` (Fundamental Operators as Bounded Symbolic Approximations); `proof:bk4_symbolic_curvature_boundary` (Gradient Threshold and Boundary Formation in Symbolic Geometry)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-094`
+- Witnesses: `Atlas.tower_glues`, `ScholiumC.OperationalStage.observed_drift_ne_zero`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other; pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Observable transformation requires an explicit Observation map and nonzero drift signal; continuity across the stage parameter remains represented only by the Atlas tower-convergence kernel. Detectability is not inferred from category structure.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22519,6 +28483,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability); `lemma:bk4_ttpr_interpretability_preserved` (Precision Refinement Preserves Interpretability); `proof:bk1_bounded_drift_approximation` (Bounded Approximation Guarantees Drift Convergence); `proof:bk1_drift_deviation_bound` (Proto-Drift Induces Directional Deviation Bound); `proof:bk1_sketch_effective_proto_drift_field_induction` (Fundamental Operators as Bounded Symbolic Approximations); `proof:bk4_interpretability_preservation`; ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-003`
+- Witnesses: `ScholiumA.kernelBounded_le`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Folded into one scalar kernel-bound structure/theorem shared with the three anchors below; convolution itself is not modeled, only the stated submultiplicativity inequality.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O$ be a bounded observer (cf. Def. definition:bk1_bounded_observer) on a symbolic manifold (cf. Def. definition:bk1_symbolic_manifold). An operator $Phi_lambda$ on symbolic structures $S$ is a bounded symbolic approximation when, for any $s in S$, the perceived change at $O$ stays below threshold $delta_O$, i.e., \[ \|Phi_lambda(s) - s\|_O leq delta_O. \]
@@ -22532,6 +28507,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `definition:bk1_bounded_symbolic_approximation` (\textbf{Bounded Symbolic Approximation}); `definition:bk1_proto_drift_field` (Proto-Drift Field $\vec{D}_\lambda$); `definition:bk1_reflection_operator` (Reflection Operator)
 - Cited by: `proof:bk4_drift_reflection_field` (Symbolic Drift-Reflection Field Dynamics)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-093`
+- Witnesses: `AxiomataPrima.no_drift_no_novelty`, `AxiomataPrima.pure_drift_dissolves`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: D_lambda, R_lambda as bounded symbolic approximations: their single-channel failure modes are certified; the bounded-approximation predicate stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22589,6 +28575,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability); `definition:bk4_coherence_metric` (Observer-Weighted Coherence Metric); `definition:bk4_test_time_precision_refinement` (Test-Time Precision Refinement (TTPR)); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `proof:bk1_fix_s_in_s` (Symbol Preservation Under Drift–Reflection Fixation); `proof:bk1_observer_kernel_convolution` (Convolutional Identity from Observer Kernel Properties); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-004`
+- Witnesses: `ScholiumA.kernelBounded_le`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Same KernelBoundedApprox structure as bk1_bounded_symbolic_approximation; the iff-form of the source definition is not modeled, only the derived bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $O$ be a bounded observer with resolution kernel $K_O$ as specified in Definition definition:bk1_bounded_observer. An operator $Phi_lambda$ (or $Psi_lambda$) acting on symbolic structures $S$ is said to be a kernel-bounded symbolic approximation if and only if for any symbol $s in S$ and its image $Phi_lambda(s)$, the perceptual difference as measured by $O$ satisfies: \|K_O ast [Phi_lambda(s) - s]\| leq delta_O, where $delta_O > 0$ is the resolution threshold of $O$ and $ast$ denotes the convolution operation.
@@ -22602,6 +28599,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `definition:bk1_bounded_symbolic_approximation` (\textbf{Bounded Symbolic Approximation}); `definition:bk1_proto_drift_field` (Proto-Drift Field $\vec{D}_\lambda$)
 - Cited by: `remark:bk1_kernel_based_bounded_approximation` (Alternative Perspective: Kernel-Based Bounded Approximation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-005`
+- Witnesses: `ScholiumA.kernelBounded_le`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The sup-bound hypothesis is represented as a plain scalar bound (drift ≤ δ) rather than an actual supremum over a domain.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22659,6 +28667,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cited by: `proof:bk1_observer_kernel_convolution` (Convolutional Identity from Observer Kernel Properties)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-006`
+- Witnesses: `ScholiumA.kernelBounded_le`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: This anchor's own inline proof is exactly the ‖K‖1=1 submultiplicativity chain now proved by kernelBounded_le; kernel norm and convolution remain hypotheses, not derived objects.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $vec{D}_lambda$ be the proto-drift field induced by operators $Phi_lambda$ and $Psi_lambda$ such that $vec{D}_lambda(s) = Phi_lambda(s) - s$ (or an appropriate difference). If $vec{D}_lambda$ satisfies: sup_{x in dom(D_lambda)} \|vec{D}_lambda(x)\| leq delta_O, then both $Phi_lambda$ and $Psi_lambda$ are kernel-bounded symbolic approximations (Def definition:bk1_kernel_based_bounded_symbolic_approximation) with respect to observer $O$.
@@ -22687,6 +28706,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:appC_bounded_reflexive_emergence` (Bounded reflexive emergence); `definition:appC_complexity_measure` (Complexity Measure); `definition:appC_symbolic_modality` (Symbolic modality); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `proof:appC_phi_from_lagrangian`; `proof:bk1_bounded_drift_approximation` (Bounded Approximation Guarantees Drift Convergence); ... +1 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-010`
+- Witnesses: `ScholiumA.twoStep_bound`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Modeled as the TwoStepBoundedApprox structure's stabilize ∘ drift composite; no standalone theorem beyond twoStep_bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(D_lambda : P_{<lambda} to P_lambda\) be a symbolic transformation representing directional drift, and let \(R_lambda : P_lambda to P_lambda\) be a refinement or reflection operator (as preliminarily introduced in Definition definition:bk1_pre_geometric_operators_and_stages). Then the stage-composite operator at ordinal level \(lambda\) is defined as: \[ E_lambda := R_lambda circ D_lambda : P_{<lambda} to P_lambda.
@@ -22701,6 +28731,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `proof:bk1_bounded_drift_approximation` (Bounded Approximation Guarantees Drift Convergence); `scholium:bk1_emergence_envelope` (Emergence Envelope)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-012`
+- Witnesses: `ScholiumA.ChainedApprox.cauchySeq`, `ScholiumA.ChainedApprox.exists_limit_with_tail_bound`, `ScholiumA.chainedApprox_telescope`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Summability is an explicit ChainedApprox field. It yields finite telescoping, a genuine Cauchy stage path, and under completeness an actual limit with tail-sum displacement bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \((lambda_n)_{ninmathbb{N}}\) be a cofinal sequence in the emergence tower with \(lambda_n<lambda_{n+1}<Omega\) and \(sup_nlambda_n=Omega\). Relative to a bounded observer \(O\), assume there exists a positive sequence \((eta_n)_{ninmathbb{N}}\) such that \[ sum_{n=0}^{infty}eta_n < infty \] and, along this cofinal tower, \[ d_O(E_{lambda_n}(s),s) = lVert K_O * [E_{lambda_n}(s)-s]rVert leq eta_n text{for all observable }sin P_{<lambda_n}. \] Thus later-stage refinements are not merely bounded one at a time;
@@ -22714,6 +28755,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `axiom:bk1_summable_resolution_decay` (Summable Resolution Decay); `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_directed_system_of_emergence` (Directed System of Emergence); `definition:bk1_kernel_based_bounded_symbolic_approximation` (\textbf{Kernel-Based Bounded Symbolic Approximation (Illustration)}); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); ... +1 more
 - Cited by: `proof:bk1_observer_threshold_reflexivity` (Observer Threshold Governs Reflexive Admissibility); `proof:bk4_ttpr_convergence`; `proposition:bk4_ttpr_convergence` (Convergence of Recursive Refinement)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-011`
+- Witnesses: `ScholiumA.ChainedApprox.cauchySeq`, `ScholiumA.ChainedApprox.exists_limit_with_tail_bound`, `ScholiumA.chainedApprox_telescope`, `ScholiumA.twoStep_bound`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Part (i)'s 2δ bound follows from the triangle inequality. Part (ii) includes finite telescoping and, from summable resolution decay, full Cauchy and complete-space convergence with a tail displacement bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22785,6 +28837,16 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_proto_symbolic_space` (Proto-symbolic Space); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `lemma:bk1_universality_of_proto_symbolic_space` (Universality of Proto-symbolic Space); `proof:bk1_colimit_yields_categoric_structure` (Colimit Structure Yields Symbolic Cohesion)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-026`
+- Witnesses: `ScholiumC.DirectedStageSystem.directed_colimit_universal_property`, `ScholiumC.DirectedStageSystem.injection_transition`
+- Countermodels: none
+- Formal boundary: A Nat-directed system explicitly records stage carriers, transition maps, and their identity/composition laws; transition images are identified in the colimit and every compatible cocone has a unique mediator.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The directed system ${P_lambda, f_{lambdamu}}_{lambda < mu < Omega}$ consists of: - Objects: The symbolic structures $P_lambda$ (see Def. definition:bk1_pre_geometric_operators_and_stages). - Morphisms: $f_{lambdamu}: P_lambda to P_mu$ for $lambda < mu < Omega$, representing structure-preserving evolution. These satisfy the standard conditions: - $f_{lambdalambda} = id_{P_lambda}$ (identity). - $f_{munu} circ f_{lambdamu} = f_{lambdanu}$ for all $lambda < mu < nu < Omega$ (composition).
@@ -22799,6 +28861,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk1_local_charitability` (Local Chartability); `axiom:bk1_smooth_convergence` (Smooth Convergence); `axiom:bk1_topological_regularity` (Topological Regularity); `lemma:bk1_observer_bounded_emergence_constraint` (Observer–Bounded Emergence Constraint); `lemma:bk1_universality_of_proto_symbolic_space` (Universality of Proto-symbolic Space); `proof:bk1_sketch_limit_stabilization_colimit` (Limit of Stabilization Operators via Colimit); ... +3 more
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-024`
+- Witnesses: `ScholiumC.DirectedStageSystem.directed_colimit_universal_property`, `ScholiumC.colimit_universal_property`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: The proto-symbolic carrier is now the quotient of the coproduct of a concrete Nat-directed stage tower by eventual compatibility; genuinely ordinal indexing and the source category catS remain abstracted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The proto-symbolic space $P$ is defined as the colimit in the category $catS$ (see Def. definition:bk1_let_cats_be_the_category): \[ P := varinjlim_{lambda < Omega} P_lambda \] Elements of $P$ are equivalence classes $[(x_lambda)]$ where $x_lambda in P_lambda$, under the relation $x_lambda sim x_mu$ if there exists $nu geq lambda, mu$ such that $f_{lambdanu}(x_lambda) = f_{munu}(x_mu)$ (cf. Def. definition:bk1_directed_system_of_emergence).
@@ -22812,6 +28885,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_directed_system_of_emergence` (Directed System of Emergence); `definition:bk1_let_cats_be_the_category` (Category of Structures); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space)
 - Cited by: none
 - Macros used: `\catS`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-025`
+- Witnesses: `ScholiumC.DirectedStageSystem.directed_colimit_universal_property`, `ScholiumC.colimit_universal_property`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Existence and uniqueness of the mediating morphism is proved both for a general quotient and for cocones over an explicit Nat-directed diagram with lawful transition maps; ordinal indexing and catS remain abstracted.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22855,6 +28939,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `proof:bk1_horizon_characterization` (Effective Signature Separates the Horizon Roles); `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); `proof:bk4_wheel_refines_signature` (Quadrant quotient of the phase circle); `proposition:bk4_wheel_refines_signature` (The wheel refines the effective horizon signature)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-028`
+- Witnesses: `ScholiumC.effectiveSignature_empty`, `ScholiumC.effectiveSignature_full`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Modeled on a single generative/dissipative flux pair (G, C) rather than existential quantification over multiple horizon components; the integral definitions of G_O, C_O themselves are not modeled, only the resulting sign predicate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $U$ be a symbolic universe sustaining a bounded observer \(O\) on a nonempty observer domain \(Omega_{O}\) (Def. definition:bk1_bounded_observer). For any horizon component \(H\) meeting \(Omega_{O}\), define its observer-visible curvature fluxes by \[ G_{O}(H) :=int_{HcapOmega_{O}}max(kappa,0) dsigma, C_{O}(H) :=int_{HcapOmega_{O}}max(-kappa,0) dsigma, \] where \(kappa\) is symbolic curvature (Def. definition:bk1_symbolic_riemann_tensor) and \(dsigma\) is the induced horizon measure.
@@ -22869,6 +28964,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Macros used: `\freeenergy`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-030`
+- Witnesses: `ScholiumC.dualHorizonBinding_both_pos`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the 'binding special case' clause (Delta Phi_O = G_O(H_G) C_O(H_D)) is modeled as a scalar product-threshold fact; the general observer-resolved free-energy criterion is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic universe \(U\) supports bounded reflexive emergence for \(O\) when, over some interval of symbolic time on the observer domain \(Omega_{O}\), the observer-visible emergence functional \[ DeltaPhi_{O}(D,R_{stab}) ge tau_E > 0, \] where \(DeltaPhi_{O}\) measures the net retained, observer-resolved coherent structure produced by the coupled action of novelty-generating drift \(D\) and stabilizing reflection \(R_{stab}\) - equivalently, the stabilized reduction of symbolic free energy \(freeenergy\) (Def.
@@ -22882,6 +28988,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `proof:bk1_colimit_yields_categoric_structure` (Colimit Structure Yields Symbolic Cohesion); `theorem:appC_dual_horizon_signature` (Dual Horizon Necessity (Effective Signature))
 - Cited by: `axiom:bk1_dual_horizon_postulate` (Dual Horizon Postulate); `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `corollary:bk1_horizon_duality_principle` (Horizon Duality Principle); `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `definition:bk1_horizon_crossing_operation` (Horizon-Crossing Operation); `lemma:bk1_horizon_characterization` (Horizon Characterization); ... +11 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-029`
+- Witnesses: `ScholiumC.dualHorizonBinding_both_pos`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the converse/binding, coupled-case direction is modeled (product of fluxes above threshold forces both signs present); the necessity direction and the general (non-binding) case are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22911,6 +29028,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `proof:bk1_horizon_duality_principle` (Dual Signature Is Minimal for Reflexive Emergence); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-031`
+- Witnesses: `ScholiumC.dualHorizonBinding_both_pos`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only clause 2's stabilization-flux conclusion (C_O(H_D) > 0) is captured, via the shared binding-product fact; clause 1's divergence condition nabla.D > 0 and clause 3's containment-domain definition are not modeled (require manifold divergence).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The generative horizon $H_G$ and dissipative horizon $H_D$ exhibit distinct, complementary properties fundamental to symbolic dynamics: - $H_G$ is associated with generative symbolic drift, represented by a field $D$ (cf. Def. definition:bk1_drift_field), such that locally $nabla cdot D > 0$ (positive divergence, signifying expansion in possibility space). - $H_D$ is associated with constraining symbolic stabilization, represented by the state-level component \(R_{stab}\) (cf. Def.
@@ -22938,6 +29066,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `axiom:bk1_axiomata_prima` (Drift as Origin); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem)
 - Cited by: `scholium:bk1_curvature_flux_kin_kout`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-032`
+- Witnesses: `ScholiumC.dualHorizonBinding_both_pos`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: The 'opposing horizon principles both present' conclusion is captured by the same binding-product fact; the elimination-argument narrative and 'no simpler configuration' claim are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -22995,6 +29134,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `corollary:bk1_linear_insufficiency` (Linear Insufficiency); `proof:bk1_geometric_necessity_curvature` (Quadratic Necessity from Mixed Contextual Coupling); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-033`
+- Witnesses: `ScholiumC.idempotent_image_eq_fixedPoints`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the proof's internal fixed-point sublemma (stabilized image of R_stab lies in, in fact equals, Fix(R_stab)) is modeled; the maximal self-reflective substructure and the (N, delta^n, epsilon) observer-extraction triple are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Every stable symbolic structure $S$ with reflection structure \(reflect\) (Def. definition:bk1_reflection_operator; cf. Scholium scholium:bk1_constitutive_reflex) determines a maximal self-reflective substructure \[ S_{ref} subseteq Fix(R_{stab}) \] relative to the state-level stabilization component \(R_{stab}\). The associated bounded observer is not literally equal to a limit of structures;
@@ -23037,6 +29187,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `definition:bk1_symbolic_manifold` (Symbolic Manifold); `proof:appB_smoothness_emergence`; `theorem:appB_smoothness_emergence` (Emergent Smoothness from Symbolic Discreteness)
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-092`
+- Witnesses: `Atlas.manifold_emergence`, `AxiomataPrima.two_channel_sustained`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open; the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: Drift/reflection as pre-geometric operators (Existence-is-not/drift-as-origin) whose smooth limit is the AtlasTower emergence kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The following operators (Def. definition:bk1_pre_geometric_operators_and_stages) originate in pre-geometric form within the framework, as the direct unfolding of Axiom axiom:bk1_axiomata_prima through the stage tower of $catS$ (Def. definition:bk1_let_cats_be_the_category): - Drift ($D$): The smooth field $D$ on emergent manifold $M$ is the stabilized limit of effective directional tendencies (proto-drift fields $vec{D}_lambda$), themselves emergent effects of generative operators $D_lambda$.
@@ -23064,6 +29225,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `assumption:bk4_precritical_scalar_trace` (Precritical scalar trace); `scholium:bk4_clifford_correspondence` (Flat-Space Clifford Correspondence); `scholium:bk4_cut_wheel_nonorientable` (The cut wheel and its non-orientable seam)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-015`
+- Witnesses: `ScholiumA.CoemergentPhaseProcess.ObserverPhaseCertificate.components`, `ScholiumA.CoemergentPhaseProcess.zmod4_pair_nontrivial`, `ScholiumA.stepZMod4_four_returns`, `ScholiumA.stepZMod4_two_no_return`
+- Countermodels: none
+- Conditions: carrier-indexed linear instruments; injectivity or another explicit faithfulness witness for detection claims; curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; explicit unique orthogonal Hodge decomposition and faithful first-cohomology class map; finite model: selected orthogonal exact/coexact subspaces; global certificate: compact, connected, oriented, smooth Riemannian membrane without boundary; linear operational readout for perceptual or computational exposure; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: A reader-operated co-emergent drift/reflection process drives the recursive step: the structure is inert until an explicit operate action is supplied and certified faithful. The observer distinguishes the half-cycle orientation and the double cycle restores embodied phase; a ZMod 4 construction proves both operations nonidentity. This remains partial: curvature coupling, smooth transport, general minimality, and a genuine spinor bundle are open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23135,6 +29307,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk1_symbolic_primacy` (Symbolic Primacy); `axiom:bk4_bounded_accessibility` (Bounded Symbolic Accessibility); `axiom:bk8_observer_bounded_emergence` (Symbolic Transfer); `axiom:bk8_symbolic_reidemeister_algebra` (Symbolic Reidemeister Algebra); `axiom:bk9_bounded_liberation_principle` (Bounded Liberation Principle); `corollary:bk8_memory_repair_robustness` (Entanglement Projection); ... +102 more
 - Macros used: `\catS`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-034`
+- Witnesses: `ScholiumC.consistent_unique`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Re-read via the FracturedAtlas license: existence of 'the' metric is Atlas.consistent_of_glued (given Glued + PairCovers); this file adds the uniqueness half. The manifold's smooth structure and dimension n >= 2 are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ be a smooth manifold of dimension $n geq 2$, equipped with a Riemannian metric tensor $g$, arising as the geometric realisation of the category of structures $catS$ (Def. definition:bk1_let_cats_be_the_category). Points $s in S$ represent symbolic states, and the tangent space $T_sS$ at each point encodes the space of possible symbolic transformations accessible from state $s$.
@@ -23162,6 +29345,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `axiom:bk1_axiomata_prima` (Drift as Origin); `definition:bk1_drift_field` (Drift Field); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `assumption:appB_srv_dissipativity` (SRV as a Stable Dissipative Descent); `axiom:bk1_symbolic_smoothness` (Symbolic Smoothness); `axiom:bk8_curvature_transformation` (Symbolic Cognition Cycle); `corollary:bk1_fixed_point` (Reflective Fixed Locus); `corollary:bk8_projective_drift` (Projective Drift Duality); `corollary:bk9_selfreferential_capacity` (Self-Referential Capacity); ... +85 more
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-013`
+- Witnesses: `ScholiumA.mirror_involution_ne_id_exists`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Witnesses existence of a concrete inner-product-preserving involution on Real×Real satisfying R≠±Id, exactly the source's non-triviality clause for the mirror component; does not model the general tangent-bundle map or its relation to R_stab.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23233,6 +29427,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `definition:bk9_structural_compassion` (Structural Compassion); `demonstratio:bk7_convergence_within_reflective_basin` (Why Descent, Not Mere Monotonicity); `scholium:bk1_resolution_of_continuum_disjunction` (On the Resolution of the Continuum Disjunction); `subsec:appD_fep_contribution_differentiation` (D.3.2 Principia Symbolica's Contribution and Differentiation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-080`
+- Witnesses: `AxiomataPrima.no_drift_no_novelty`, `AxiomataPrima.pure_drift_dissolves`, `AxiomataPrima.two_channel_sustained`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: Cognition at the intersection: both channels jointly sustain, each alone fails; curvature signs interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Consistent with Axiom axiom:bk1_axiomata_prima and the elimination structure of Thm. theorem:bk1_dual_horizon_necessity_theorem, symbolic cognition emerges at the intersection of two complementary epistemic horizons: - A generative horizon $H_G(t)$ with positive extrinsic curvature $Omega_G > 0$, enabling symbolic novelty and divergent exploration - A dissipative horizon $H_D(t)$ with negative extrinsic curvature $Omega_D < 0$, constraining meaning through convergent stabilization The effective symbolic domain acce...
@@ -23260,6 +29465,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_paradox_triggered_emergence` (Paradox-Triggered Emergence); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `lemma:bk1_contextual_nonseparability` (Contextual meaning is non-separable); `lemma:bk1_contradiction_resolution_principle` (Contradiction Resolution Principle); `proof:bk1_constructive_resolution` (Constructive Resolution via Fiber Bundle Extension); ... +2 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-016`
+- Witnesses: `ScholiumA.contradictionIntensity_eq`, `ScholiumA.contradictionIntensity_zero_of_lam_one`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The stated 'oppositional dynamics' and 'contradiction intensity' formula are modeled as a real-number identity; the manifold/measure-theoretic overlap conditions (shared accessibility, positive-measure overlap) are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23289,6 +29505,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `corollary:bk4_symbolic_lightcone` (Symbolic Light-Cone); `demonstratio:bk4_symbolic_thermodynamics`; `lemma:bk4_ttie_expansion_rate` (Curvature-Bounded Expansion Rate); `proof:bk4_bounded_expansion_under_observer_constrained_coherence` (Curvature-Bounded Expansion Rate via Grönwall); `proof:bk4_symbolic_lightcone`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-037`
+- Witnesses: `ScholiumC.le_coherenceVelocity`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Modeled directly as sSup of a set of reals; the coherence-field space M_coh and the local gradient construction nabla C on the symbolic manifold are not modeled, only the resulting supremum's upper-bound property.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic coherence velocity $c_s$ is defined as the supremum of the local coherence field gradient magnitude over the coherence manifold: \[ c_s := sup left{ left| nabla C right| : C in M_{text{coh}} right} \] Here, $M_{text{coh}}$ denotes the space of symbolic coherence fields introduced in Def. definition:bk1_symbolic_coherence_velocity, and $nabla C$ represents the local coherence flow gradient in the symbolic manifold $M$ (see Lemma lemma:bk1_existence_and_uniqueness_of_flow).
@@ -23302,6 +29529,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_contradiction` (Symbolic Contradiction); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `proof:bk1_constructive_resolution` (Constructive Resolution via Fiber Bundle Extension)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-073`
+- Witnesses: `ScholiumDyn.extension_resolves`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Minimal-extension existence kernel; intensity budgets open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23345,6 +29583,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_linear_insufficiency` (Linear updates are context-free); `theorem:bk1_quadratic_structure_necessity` (Quadratic Structure Necessity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-017`
+- Witnesses: `ScholiumA.nonseparable_of_mixedDiff_ne_zero`, `ScholiumA.separable_mixedDiff_zero`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The mixed partial derivative D_xi D_chi U is replaced by an honest finite second-difference surrogate; this proves the intended contrapositive (nonzero difference implies non-separable) but is explicitly NOT a formalization of the derivative-based iff in the source.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Work in a chart near an accessible state $s_0$, with state coordinate $xi = s-s_0$ and context coordinate $chi = c-c_0$ (the horizon and contradiction data of Defs. definition:bk1_symbolic_contradiction, definition:bk1_emergence_event), and let $U(xi,chi)$ be the smooth update residual after pure drift is subtracted.
@@ -23372,6 +29621,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_contradiction` (Symbolic Contradiction); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `lemma:bk1_contextual_nonseparability` (Contextual meaning is non-separable); ... +2 more
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_linear_insufficiency` (Linear updates are context-free)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-035`
+- Witnesses: `ScholiumC.crossTerm_ne_zero_exists`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: crossTerm is a discrete finite-difference surrogate for the mixed second derivative D_xi D_chi U(0,0), not the derivative itself; the local-coordinate Taylor expansion and the O(||.||^3) remainder are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23401,6 +29661,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_limitation_linear_reflexive_maps` (Linear Coherence Cannot Move Its Own Fixed Structure); `proposition:bk1_limitation_linear_reflexive_maps` (Limitation of Linear Reflexive Maps); `theorem:bk1_reflexivity_quadratic` (Reflexivity Requires Quadratic Framing)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-036`
+- Witnesses: `ScholiumC.crossTerm_separable_eq_zero`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the algebraic fact that additively separable updates have zero cross-difference is modeled; the narrative conclusion 'linear systems reduce to superposed independent modes' is not itself a formal claim here.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In the setting of Axiom axiom:bk1_axiomata_prima and Thm. theorem:bk1_constitutive_bootstrap, linear symbolic systems cannot support genuine emergence. Purely linear dynamics reduce to superposed independent modes and preclude the contextual coupling required for symbolic meaning.
@@ -23429,6 +29700,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_symbolic_coupling_basis` (Symbolic Coupling (Basis Decomposition)); `proof:bk1_bridge_to_geometry` (Quadratic Coupling Gives the Local Metric); `proof:bk1_linear_context_independence` (Linearity Has No Mixed Context Term); `proposition:bk1_bridge_to_geometry` (The Bridge to Geometry)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-022`
+- Witnesses: `ScholiumA.linear_double`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Only the proof sketch's stated algebraic premise L(x+x)=2*L(x) is proved; the informal conclusion that this prevents self-reference/context-dependence is a narrative jump and is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Any symbolic system $S$ capable of robust self-reference and context-dependent meaning cannot be governed by purely linear operators (cf. Cor. corollary:bk1_linear_insufficiency, Axiom axiom:bk1_axiomata_prima). Proof Sketch: Consider a hypothetical linear symbolic system with operator $L$ satisfying: L(alpha x + beta y) = alpha L(x) + beta L(y) forall alpha, beta in mathbb{R}, x, y in S Self-Reference Impossibility: For self-reference, we require $L(x)$ to depend on $x$'s relationship to $x$ itself.
@@ -23443,6 +29725,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `proof:bk1_bridge_to_geometry` (Quadratic Coupling Gives the Local Metric); `proposition:bk1_bridge_to_geometry` (The Bridge to Geometry)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-018`
+- Witnesses: `ScholiumA.quadratic_not_linear`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Covered only via the concrete countermodel instance C(x,y)=x*y, showing this particular quadratic coupling is not a linear coupling; the general basis-decomposition definition itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let ${phi_i(x)}$ be a basis of symbolic features on manifold $M$ (cf. Thm. theorem:bk1_reflexivity_quadratic). Define: Linear Coupling: C_{text{linear}}(x) = sum_i alpha_i phi_i(x) Quadratic Coupling: C_{text{quadratic}}(x) = sum_{i,j} alpha_{ij} phi_i(x) phi_j(x) The quadratic coupling matrix $alpha_{ij}$ encodes interaction terms between symbolic features, enabling: - Context-dependent activation: Symbol meaning depends on co-occurring symbols - Self-referential loops: Symbols can reference their own activation s...
@@ -23456,6 +29749,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `definition:bk1_symbolic_coupling_basis` (Symbolic Coupling (Basis Decomposition)); `theorem:bk1_reflexivity_quadratic` (Reflexivity Requires Quadratic Framing)
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-087`
+- Witnesses: `ScholiumBridge.coupling_is_metric`
+- Countermodels: none
+- Conditions: manifold metric, exact rank bound, and the interpretive unification/primacy claims stay open per row notes
+- Formal boundary: Symmetric coupling = symmetric bilinear form; the manifold metric stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23499,6 +29803,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-052`
+- Witnesses: `Atlas.path_dependent_iff_noncommuting`, `Atlas.semantic_non_integrability_witness`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: The equivalently clause proved as an iff with a Boolean witness; the manifold framing is interpretation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In a reflexive, context-sensitive symbolic system the meaning carried from one context to another is path-dependent: transporting the same local meaning between two contexts along two different routes does not in general return the same result. Equivalently, symbolic meanings are not locally independent in the sense of Def. definition:bk1_local_semantic_independence - the contextual update carries a non-vanishing antisymmetric (commutator) component.
@@ -23512,6 +29827,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `axiom:bk1_semantic_non_integrability` (Semantic Non-Integrability); `corollary:bk1_linear_insufficiency` (Linear Insufficiency); `definition:bk1_local_semantic_independence` (Local Semantic Independence); `definition:bk1_symbolic_riemann_tensor` (Symbolic Riemann Curvature Tensor); `lemma:bk1_contextual_nonseparability` (Contextual meaning is non-separable); `lemma:bk1_curvature_semantic_holonomy` (Curvature as Infinitesimal Semantic Holonomy); ... +4 more
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities); `proof:bk1_symbolic_emergence_and_curvature`; `proof:bk1_symbolic_irony_requires_curvature`; `proof:bk2_coherence_of_symbolic_therm`; ... +10 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-056`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Noncommuting transports force nonzero curvature at every scale; consumed premise is exactly the non-integrability axiom.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23569,6 +29895,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `lemma:bk1_linear_context_independence` (Context-Independence of Linear Coupling); `proof:bk1_limitation_linear_reflexive_maps` (Linear Coherence Cannot Move Its Own Fixed Structure); `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities); `proposition:bk1_limitation_linear_reflexive_maps` (Limitation of Linear Reflexive Maps); `theorem:bk1_minimal_quadratic_sufficiency` (Minimal Quadratic Sufficiency)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-069`
+- Witnesses: `ScholiumDyn.linear_has_fixed_point`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Definition row; self-representation clause interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A map $rho: S to S$ is reflexive if it can modify representations that include itself. Formally, $rho$ is reflexive if there exists $sigma in S$ such that $rho(sigma) = tau$ where $tau$ contains a symbolic representation of $rho$. This definition is grounded in the symbolic category structure (Def. definition:bk1_symbolic_category), where maps and objects are both symbolic entities.
@@ -23582,6 +29919,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_symbolic_category` (Symbolic Category)
 - Cited by: `proof:bk1_limitation_linear_reflexive_maps` (Linear Coherence Cannot Move Its Own Fixed Structure)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-023`
+- Witnesses: `ScholiumA.fixedPointInheritance`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Proved in the generalized (linearity-free) form: only invertibility of f is used, matching the toolchain guidance to drop unused hypotheses; f∘g∘f⁻¹ fixes f(x) given g fixes x.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23610,6 +29958,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: `corollary:bk1_linear_insufficiency` (Linear Insufficiency); `definition:bk1_reflexive_update_map` (Reflexive Update Map)
 - Cited by: `proof:bk1_dual_horizon_unification_principle` (Projection Through the Dual Horizon Signature); `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-070`
+- Witnesses: `ScholiumDyn.affine_escapes_fixed_points`, `ScholiumDyn.linear_fixed_points_closed`, `ScholiumDyn.linear_has_fixed_point`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Linear updates cannot clear or bend their fixed locus; an affine update can have none.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23667,6 +30026,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_symbolic_connection` (Symbolic Connection); `lemma:bk1_linear_context_independence` (Context-Independence of Linear Coupling); `proof:bk1_linear_context_independence` (Linearity Has No Mixed Context Term); `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities); `theorem:bk1_minimal_quadratic_sufficiency` (Minimal Quadratic Sufficiency)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-019`
+- Witnesses: `ScholiumA.quadratic_not_linear`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Same countermodel as bk1_symbolic_coupling_basis; only the concrete linear-vs-quadratic distinction is witnessed, not the general definition over an arbitrary feature basis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic coupling is a map $C: M to mathbb{R}$ that integrates symbolic features (Def. definition:bk1_symbolic_manifold_feature_maps). The coupling is: - Linear if $C(x) = sum_i beta_i phi_i(x)$ for constants $beta_i$; - Quadratic if $C(x) = sum_{i,j} alpha_{ij} phi_i(x)phi_j(x)$ where $(alpha_{ij})$ is a symmetric matrix.
@@ -23680,6 +30050,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_reflexive_update_map` (Reflexive Update Map); `definition:bk1_symbolic_coupling` (Symbolic Coupling)
 - Cited by: `proof:bk1_minimal_quadratic_sufficiency` (Linear Coupling Cannot Support the Three Capacities)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-020`
+- Witnesses: `ScholiumA.quadratic_not_linear`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: The countermodel gives one concrete instance of 'linear coupling cannot encode this quadratic coupling'; the lemma's general universal claim over all context-dependent meanings is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23722,6 +30103,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_horizon_structure` (Horizon Structure); `definition:bk1_reflexive_update_map` (Reflexive Update Map); `definition:bk1_symbolic_coupling` (Symbolic Coupling)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-021`
+- Witnesses: `ScholiumA.quadratic_not_linear`
+- Countermodels: none
+- Conditions: curvature coupling, general minimal period, and covariant transport remain open; drift and reflection are jointly supplied and both nonidentity in the concrete witness; the reader/operator and operate action are explicit data; the process description does not enact itself; the recursive phase certificate is finite and observer-relative, not a smooth spinor bundle
+- Formal boundary: Same countermodel supplies the concrete case of 'linear systems are insufficient'; the reflexivity/context-sensitivity/adaptive-stability sufficiency claims themselves are narrative and not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23779,6 +30171,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_certified_type_preserving_symbolic_transport` (Certified Type-Preserving Symbolic Transport); `definition:bk1_effective_horizon_signature` (Effective Horizon Signature); `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_observer_horizon_structure` (Observer Horizon Structure); `lemma:bk2_thermodynamic_consistency_hypothesis_manifolds` (Thermodynamic Consistency of Hypothesis Manifolds); ... +9 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-055`
+- Witnesses: `Atlas.curvature_witness`, `Atlas.holonomy_eps_squared`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Discrete curvature as the commutator loop defect with a concrete nonzero witness; the Riemannian tensor stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic curvature tensor is the Riemann curvature tensor of the symbolic connection (see definition:bk1_symbolic_connection): \[ kappa(X,Y)Z = nabla_X nabla_Y Z - nabla_Y nabla_X Z - nabla_{[X,Y]} Z \] for vector fields $X, Y, Z$ on $M$, where $nabla$ acts on the symbolic feature manifold (see definition:bk1_symbolic_manifold_feature_maps).
@@ -23793,6 +30196,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk1_semantic_non_integrability` (Semantic Non-Integrability); `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_symbolic_emergence_and_curvature`; `proposition:bk1_curvature_semantic_entanglement` (Curvature and Semantic Entanglement)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-053`
+- Witnesses: `Atlas.path_dependent_iff_noncommuting`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Independence = commuting contextual updates.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $U subset M$ be a contractible coordinate neighborhood in the symbolic manifold (Def. definition:bk1_symbolic_manifold_feature_maps), equipped with the symbolic connection $nabla$ of Def. definition:bk1_symbolic_connection. For a piecewise smooth path $gamma:xto y$ in $U$, let $P^nabla_gamma:T_xMto T_yM$ denote parallel transport by $nabla$.
@@ -23806,6 +30220,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: none
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `definition:bk1_certified_type_preserving_symbolic_transport` (Certified Type-Preserving Symbolic Transport); `proof:bk1_curvature_semantic_entanglement` (Flatness iff local semantic independence); `proof:bk1_dimensional_bounds_emergence`; `proof:bk1_operational_irony_requires_imagination` (The ironic opposition is an imaginary displacement); `proof:bk1_operational_irony_requires_reflexive_curvature` (Lift of the model-internal necessity to operational capacity); ... +2 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-054`
+- Witnesses: `Atlas.holonomy_eps_squared`, `Atlas.holonomy_zero_iff_commute`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Exact eps-squared route residue in the linear-transport model; parallel transport on genuine manifolds stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23835,6 +30260,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cited by: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `proof:bk1_curvature_projection_residue` (Projection residue from failed path independence); `proof:bk1_symbolic_emergence_and_curvature`; `proof:bk8_curvature_entanglement_equivalence` (Curvature Entanglement Equivalence); `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact); `proof:bk8_flattening_decoherence_equivalence` (Decoherence as Symbolic Flattening via Curvature Flow); ... +1 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-089`
+- Witnesses: `Atlas.holonomy_zero_iff_commute`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Curvature vanishes iff meanings are locally independent - exactly the flatness-iff-commuting theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 On any contractible coordinate neighborhood $U subset M$, the symbolic curvature $kappa$ of Def. definition:bk1_symbolic_riemann_tensor vanishes on $U$ if and only if symbolic meanings are locally independent on $U$ in the sense of Def. definition:bk1_local_semantic_independence.
@@ -23862,6 +30298,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: none
 - Cited by: `proof:bk8_curvature_entanglement_equivalence` (Curvature Entanglement Equivalence); `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-090`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Nonzero curvature forces a frame-artifact residue - the non-Euclidean necessity kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23891,6 +30338,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom)
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-064`
+- Witnesses: `ScholiumDyn.resCost_self`, `ScholiumDyn.resCost_symm`, `ScholiumDyn.resCost_triangle`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: The path-infimum is a pseudometric: every law proved of the infimum.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic states $p, q in M$, the resolution cost is: \[ reflect(p,q) = inf_{gamma: p to q} int_gamma sqrt{g(dot{gamma}, dot{gamma})} dt \] where the infimum is taken over all smooth paths $gamma$ connecting $p$ and $q$, and $g$ is the metric induced via the symbolic connection (see definition:bk1_symbolic_connection) and feature map structure (see definition:bk1_symbolic_manifold_feature_maps).
@@ -23904,6 +30362,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_horizon_structure` (Horizon Structure); `definition:bk1_symbolic_riemann_tensor` (Symbolic Riemann Curvature Tensor)
 - Cited by: `axiom:bk1_symbolic_primacy` (Symbolic Primacy); `corollary:bk1_dimensional_bounds_emergence` (Dimensional Bounds on Emergence); `definition:bk6_symbolic_laplace_beltrami_operator_complete` (Symbolic Laplace–Beltrami Operator); `demonstratio:bk7_convergence_within_reflective_basin` (Why Descent, Not Mere Monotonicity); `proof:bk1_dimensional_bounds_emergence`; `proof:bk8_flattening_decoherence_equivalence` (Decoherence as Symbolic Flattening via Curvature Flow); ... +2 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-084`
+- Witnesses: `Atlas.non_euclidean_necessity`, `Atlas.path_dependent_iff_noncommuting`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: The iff at transport level: route-dependent meaning iff nonzero commutator; Riemannian form open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23932,6 +30401,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `theorem:bk1_symbolic_emergence_and_curvature` (Symbolic Emergence and Curvature)
 - Cited by: `proof:bk4_topological_stability_via_spectral_and_curvature_constraints` (Topological Stability via Spectral and Curvature Constraints)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-088`
+- Witnesses: `ScholiumBridge.nonzero_curvature_has_active_mode`
+- Countermodels: none
+- Conditions: manifold metric, exact rank bound, and the interpretive unification/primacy claims stay open per row notes
+- Formal boundary: Nonzero curvature has an active mode (complexity >= 1); the exact rank bound stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -23989,6 +30469,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-038`
+- Witnesses: `ScholiumC.exists_inaccessible_of_not_surjective`
+- Countermodels: none
+- Conditions: application order in the composite is not interpreted as ontological origin order; catS, observer detection, stage continuity, and geometric realization remain distinct supplied interfaces; drift and reflection are fields of one OperationalStage witness; neither is derived from the other
+- Formal boundary: Only the access-function clause (alpha(O) properly contained in O, read as non-surjectivity) is modeled, yielding an inaccessible state; the manifold-smoothness/drift-non-constructibility conclusion is not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A modeling framework exhibits the Newtonian Category Error when it presupposes manifold smoothness and continuity a priori, thereby violating bounded observer logic (see definition:bk1_bounded_observer).
@@ -24002,6 +30493,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: none
 - Cited by: `proof:bk1_dual_horizon_unification_principle` (Projection Through the Dual Horizon Signature); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-020`
+- Witnesses: `ScholiumD.newtonian_incompleteness_kernel`, `ScholiumD.newtonian_incompleteness_normedSpace`, `accelerated_frame_defect`, `accelerated_frame_defect_ne`, `newtonForce_equivariant`
+- Countermodels: none
+- Conditions: continuous linear change of frame; nonzero frame acceleration for strict defect; nonzero uniform frame acceleration; real normed vector space; twice differentiable trajectory at the stated point
+- Formal boundary: Unflattened covariance-boundary kernel: on every real normed vector space, scalar Newtonian force commutes with every continuous linear frame map, while each nonzero uniform frame acceleration produces a nonzero 2*w defect. The NVec derivative construction remains the concrete dynamical witness. Extending covariance to accelerated observers therefore requires an explicit correction; relativistic gravity and a general spacetime theory are not claimed.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24045,6 +30547,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-021`
+- Witnesses: `ScholiumD.symbolic_quantum_incompatibility_kernel`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: Faithful logical kernel with exact preservation predicates: no map can preserve both reflection and binary reflexive update when joint preservation entails a Hamiltonian-level meta-update and the target quantum model forbids that update. These two category-error premises remain explicit because unitary linear evolution and tensor structure alone do not establish them; a concrete Hilbert-space no-go theorem remains open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(mathcal H\) be a finite-dimensional vector space over a field \(mathbb K\), with \(1<dim_{mathbb K}mathcal H<infty\). Then there is no lossless linear closure \[ mathcal Hotimes_{mathbb K}mathcal H overset{sim}{longrightarrow}mathcal H. \] Consequently, a symbolic reflexive update whose preservation requires the pair tensor \(phi(s)otimesphi(s')\) to be represented losslessly in the same finite-dimensional state carrier cannot be preserved by such a closure.
@@ -24087,6 +30600,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `corollary:bk1_necessity_of_non_euclidean_symbolic_space` (Necessity of Non-Euclidean Symbolic Transport); `corollary:bk7_stability_innovation_equilibrium` (Stability--Innovation Compatibility); `proof:bk7_stability_innovation_equilibrium` (Contextual Curvature with Stable Identity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-022`
+- Witnesses: `ScholiumD.contextualGrowth_exposes_crossError`, `ScholiumD.emergence_premises_do_not_force_curvature`
+- Countermodels: `ScholiumD.emergence_premises_do_not_force_curvature`
+- Conditions: a real-valued state-context update; failure of additive separation into independent state and context contributions
+- Formal boundary: Layered repair: contextual nonseparability locally forces a nonzero mixed cross-error by an explicit additive-decomposition contradiction. The Scholium stops at that certificate; Book IV consumes it to construct noncommuting transport, and Book VII consumes the Book IV geometry. The zero-curvature Bool model remains the negative control showing novelty, reflective identity, and abstract dimension growth alone do not supply the certificate or curvature.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ be a symbolic system over a manifold $M$, and let $U:mathbb{R}timesmathbb{R}tomathbb{R}$ be a local residual update in state and context coordinates. Suppose $S$ supports: - horizon-relative novelty: $exists sinS$ such that $D(s)notinalpha(S)$ (Def. definition:bk1_drift_field); - reflexive symbolic identity: $R(S)capSneqemptyset$ (Def. definition:bk1_reflection_operator); - contextual structural growth: $U$ is not additively separable as $A(xi)+B(chi)$.
@@ -24114,6 +30638,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `theorem:bk1_symbolic_emergence_theorem_thermodynamics` (Symbolic Emergence Theorem---Contextual Cross-Error)
 - Cited by: `axiom:bk1_symbolic_primacy` (Symbolic Primacy)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-057`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Duplicate anchor of the necessity corollary; same kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24171,6 +30706,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `remark:bk4_quantum_topological_phases` (Connection to Quantum Topological Phases); `remark:bk7_unnamed_remark_04`; `scholium:bk4_o_boundedness_unifying_principle` ($\mathcal{O}$-Boundedness as the Unifying Principle of Fuzzy Calculus); `scholium:bk7_popperian_extension` (Popperian Extension)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-096`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Physical law and symbolic emergence as projections of one reflexive manifold: the curvature-necessity kernel grounds the shared structure; the primacy claim stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 In continuity with Axiom axiom:bk1_axiomata_prima, Def. definition:bk1_symbolic_manifold, Thm. theorem:bk1_symbolic_emergence_and_curvature, and Cor. corollary:bk1_necessity_of_non_euclidean_symbolic_space, the structure of physical law and the structure of symbolic emergence are not two domains. They are different projections of a single reflexive manifold.
@@ -24185,6 +30731,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `axiom:bk8_symbolic_reidemeister_algebra` (Symbolic Reidemeister Algebra); `definition:bk1_horizon_crossing_operation` (Horizon-Crossing Operation); `definition:bk1_paradox_triggered_emergence` (Paradox-Triggered Emergence); `definition:bk1_srmf_energy_functional` (SRMF Energy Functional); `definition:bk4_projective_action_transl` (Projective Action Translator); `definition:bk4_test_time_coherent_sampling` (Test-Time Coherent Sampling (TTCS)); ... +40 more
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-085`
+- Witnesses: `SRMF.turn_closes_iff`
+- Countermodels: none
+- Conditions: the circle part of a revolution is the identity by construction; injections are data; no claim about this file or any system proving its own consistency; the helix is FOR approaching the equilibrium circle, not a telos; non-closure is not idolized
+- Formal boundary: The SRMF revolution structure with the closure dichotomy; the full operator pipeline interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A SRMF is a reflexive operator $F: S to S$ on a symbolic manifold $S$ (see definition:bk1_symbolic_manifold) such that: \[ F[rho](x) = rho(x) + delta_{C}(x) cdot reflect(C_x) \] Where: - $rho: S to mathbb{R}$ is a symbolic density field (see definition:bk1_symbolic_probabilty_density) - $delta_{C}(x)$ is a contradiction detection function such that $delta_{C}(x) = \|nabla times nabla rho(x)\|$ measuring local symbolic inconsistency (see definition:bk1_symbolic_contradiction) - $C_x$ is the contradiction manifold at...
@@ -24198,6 +30755,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `proof:bk9_framework_functional_identity`; `proposition:bk9_framework_functional_identity` (The Framework is a Functional)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-086`
+- Witnesses: `SRMF.closure_iff_no_work`
+- Countermodels: none
+- Conditions: the circle part of a revolution is the identity by construction; injections are data; no claim about this file or any system proving its own consistency; the helix is FOR approaching the equilibrium circle, not a telos; non-closure is not idolized
+- Formal boundary: The Godel-safe cycle potential as the energy functional kernel; the appB form is separately bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24241,6 +30809,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `axiom:bk6_non_commutativity_evolution_reflection` (Non-Commutativity of Evolution and Reflection); `definition:bk1_emergence_operator` (Emergence Operator); `definition:bk1_shared_boundary_paradox` (Shared Boundary Paradox); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `demonstratio:bk7_convergence_within_reflective_basin` (Why Descent, Not Mere Monotonicity); ... +8 more
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-071`
+- Witnesses: `ScholiumDyn.extension_resolves`, `ScholiumDyn.paradox_unresolvable_within`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Both clauses: unresolvable within, resolvable in the extension - constructive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A contradiction $C$ within a symbolic membrane $M$ induces an emergent expansion $delta M$ iff: \[ nexists text{ reframing } reflect text{ such that } reflect(C) in text{Fix}(F|_M) \] but \[ exists text{ expanded membrane } M' supset M text{ and reframing } reflect' text{ such that } reflect'(C) in text{Fix}(F|_{M'}) \] where $F$ is the SRMF operator (see definition:bk1_self_regulating_mapping_function_srmf), and $C$ is a symbolic contradiction (see definition:bk1_symbolic_contradiction).
@@ -24254,6 +30833,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_paradox_triggered_emergence` (Paradox-Triggered Emergence)
 - Cited by: `proof:bk1_shared_paradox_bridge_datum` (The Shared Edge Carries the Common Obstruction)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-072`
+- Witnesses: `ScholiumDyn.resolution_breaks_symmetry`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Resolution and swap-invariance are incompatible: the symmetry must break.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24325,6 +30915,16 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-013`
+- Witnesses: `ScholiumD.jointRefinement_subset_left_right`, `ScholiumD.mem_jointRefinement_iff`, `ScholiumD.shared_invariant_converse_not_derivable`
+- Countermodels: none
+- Formal boundary: A concrete logical countermodel proves that the forward shared-paradox implication does not entail its converse without completeness. Joint refinement is modeled as intersection: candidates survive exactly when both observers accept them, and no new candidate is invented.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 From the theorem above one may not infer that shared paradox is the only possible co-reflexive invariant for all bounded observers. Absent an additional completeness axiom enumerating all possible shared invariants, that contrapositive can only be searched by joint refinement.
@@ -24353,6 +30953,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: none
 - Macros used: `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-040`
+- Witnesses: `ScholiumD.emergenceOperator_exists`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: existence of a complexity-minimizing element of a nonempty finite candidate set of expanded membranes; the membrane-expansion poset and complexity functional itself are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a paradox $C$ in membrane $M$ (see definition:bk1_paradox_triggered_emergence), the emergence operator $E_{C}$ is: \[ E_{C}(M) = min_{M' supset M} {M' : exists reflect', reflect'(C) in text{Fix}(F|_{M'})} \] Where the minimum is taken with respect to membrane complexity.
@@ -24380,6 +30991,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_reflexive_encoding_depth` (Reflexive Encoding Depth); `theorem:bk1_realization_of_symbolic_phase_transitions` (Realization of Symbolic Phase Transitions)
 - Cited by: `proof:bk1_operational_irony_requires_reflexive_curvature` (Lift of the model-internal necessity to operational capacity); `remark:bk1_atlas_fracture_empirical` (External empirical corroboration); `theorem:bk1_realization_of_symbolic_phase_transitions` (Realization of Symbolic Phase Transitions)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-003`
+- Witnesses: `ScholiumB.no_irony_of_shallow_or_flat`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Proved by the same Lean theorem as theorem:bk1_operational_irony_requires_reflexive_curvature (both are the flat-or-shallow contrapositive of the IronyCapacity law); the reflexive-encoding-depth and symbolic-curvature-tensor definitions themselves are not modeled, only the stated implication as a structure field.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24423,6 +31045,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `conjecture:bk1_symbolic_irony_encoding_llms` (Symbolic Irony Encoding in Large Language Models); `proof:bk1_operational_irony_requires_imagination` (The ironic opposition is an imaginary displacement)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-004`
+- Witnesses: `ScholiumB.no_irony_of_shallow_or_flat`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Kept as a hypothesis field of IronyCapacity (encodesIrony implies depth>=2 and curvature<>0); the theorem proved is the contrapositive. Shares its Lean proof with theorem:bk1_symbolic_irony_requires_curvature.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 If an architecture $A$ operationally encodes irony (Def. definition:bk1_operational_irony), then (i) its operational reflexive depth is at least $2$, and (ii) its representational curvature capacity is nonzero. Contrapositively, an architecture limited to first-order representation ($nle1$) or to flat representation (zero curvature capacity) cannot operationally encode irony.
@@ -24450,6 +31083,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_operational_irony` (Operational Irony Encoding); `definition:bk4_imaginary_symbolic_distance` (Imaginary Symbolic Distance); `scholium:bk4_imagination_as_imaginary_traversal` (Imagination as Imaginary Traversal)
 - Cited by: `conjecture:bk1_symbolic_irony_encoding_llms` (Symbolic Irony Encoding in Large Language Models); `scholium:bk1_the_imagination_dipole` (The Imagination Dipole)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-005`
+- Witnesses: `ScholiumB.no_irony_of_real_only`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Kept as a hypothesis field of IronyCapacity (encodesIrony implies imaginaryDistance<>0); the imaginary-symbolic-distance definition from Book IV is not modeled, only the stated implication and its contrapositive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24492,6 +31136,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_observer_horizon_structure` (Observer Horizon Structure)
 - Cited by: `proof:bk1_operational_irony_requires_reflexive_curvature` (Lift of the model-internal necessity to operational capacity); `proof:bk1_symbolic_irony_requires_curvature`; `theorem:bk1_symbolic_irony_requires_curvature` (Symbolic Irony Requires Curvature)
 - Macros used: `\reflect`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-001`
+- Witnesses: `ScholiumB.reflexiveIterate_add`, `ScholiumB.reflexiveIterate_eq_iterate`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The recursive scheme reflect_0=id, reflect_n=F[reflect_{n-1}] is formalized (as reflexiveIterate) and shown to equal F^[n] with the expected additivity law; the divergence-sign Irony(sigma) selection set built on top of the recursion is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24549,6 +31204,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `proof:bk1_event_horizon_identity_field` (Identity Field on the Symbolized Causal Patch)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-095`
+- Witnesses: `Atlas.holonomy_eps_squared`, `AxiomataPrima.two_channel_sustained`
+- Countermodels: none
+- Conditions: face 3 consumes the guarded-process machinery (LPS-P49) and the helix kernel (LPS-P48); linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open; the metaphysical scope of a three-word axiom is not exhausted; the operational tri-face kernel is what is certified
+- Formal boundary: Emergence = horizon-crossing reflexivity: nonzero commutator curvature and the two-channel sustain; the full field recasting stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Every dynamical field (physics, language, cognition) that exhibits irreversible complexity and local coherence can be recast as a projection from a dual horizon manifold with emergent symbolic curvature (see definition:bk1_symbolic_riemann_tensor, definition:bk1_horizon_crossing_operation, proposition:bk1_limitation_linear_reflexive_maps, proposition:bk1_newtonian_incompleteness, theorem:bk1_dual_horizon_necessity_theorem). \[ text{Emergence} = text{Horizon-Crossing Reflexivity} \]
@@ -24591,6 +31257,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `lemma:bk1_horizon_crossing_conservation` (Horizon-Crossing Conservation); `proof:bk1_horizon_crossing_conservation` (Closed Horizon Pair Conserves Symbolic Density); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-077`
+- Witnesses: `ScholiumHzn.crossing_conservation`
+- Countermodels: none
+- Conditions: manifold integrals, PDE forms, smoothness, ordinal colimits, and curvature signs stay open/interpretive per row notes
+- Formal boundary: Crossing as stochastic transport into the complement.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic horizons $H_1$ and $H_2$, the horizon-crossing operator $H_{1,2}$ maps symbols from $H_1$ to their corresponding reflexive image in $H_2$ (see definition:bk1_self_regulating_mapping_function_srmf, theorem:bk1_dual_horizon_necessity_theorem): \[ H_{1,2}(sigma) = Pi_{H_2}(F[sigma]) \] Where $Pi_{H_2}$ is the projection onto horizon $H_2$.
@@ -24604,6 +31281,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_horizon_crossing_operation` (Horizon-Crossing Operation); `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-076`
+- Witnesses: `ScholiumHzn.crossing_conservation`
+- Countermodels: none
+- Conditions: manifold integrals, PDE forms, smoothness, ordinal colimits, and curvature signs stay open/interpretive per row notes
+- Formal boundary: Finite exact conservation; manifold integrals open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24674,6 +31362,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_emergence_event` (Emergence Event); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF))
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-097`
+- Witnesses: `SRMF.closure_iff_no_work`, `SRMF.turn_closes_iff`
+- Countermodels: none
+- Conditions: the circle part of a revolution is the identity by construction; injections are data; no claim about this file or any system proving its own consistency; the helix is FOR approaching the equilibrium circle, not a telos; non-closure is not idolized
+- Formal boundary: All emergent fields as SRMF instances under boundary conditions: the SRMF/Godel-safe-cycle kernel; the classification-by-symmetry stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24773,6 +31472,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `axiom:bk1_smooth_convergence` (Smooth Convergence); `definition:bk1_problem_of_symbolic_smoothness` (Problem of Symbolic Smoothness); `proof:bk1_atlas_final_topology_phase_space` (Atlas Construction on Final Topology of Symbolic Phase Space); `proof:bk1_sketch_construction_proto_metric` (Construction of Proto-Metric on Symbolic Layers); `proof:bk1_sketch_drift_limit_vector_field` (Limit Vector Field from Local Drift Coherence); `proof:bk1_sketch_symbolic_connectivity` (Symbolic Connectivity via Hopf--Rinow); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-039`
+- Witnesses: `ScholiumD.DifferentiationThreshold.eventually_below_threshold`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Convergent-Limit and Epistemic-Emergence clauses only, as a real-sequence threshold law; observable differentiation, chart compatibility, and the structural limit M itself are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ be a symbolic system evolving through iterative drift operators $D_lambda$ (Def. definition:bk1_drift_field) and reflection operators $R_lambda$ (Def. definition:bk1_reflection_operator) over stages $lambda in Lambda subset mathbb{N}$ (Def. definition:bk1_pre_geometric_operators_and_stages), with symbolic structure $P_lambda$ at each stage.
@@ -24786,6 +31496,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space)
 - Cited by: `axiom:bk1_smooth_convergence` (Smooth Convergence); `proof:bk1_sketch_coherence_drift_reflection` (Coherence of Proto-Drift Fields via Chart Convergence); `remark:bk4_fuzzy`
 - Macros used: `\R`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-058`
+- Witnesses: `Atlas.manifold_emergence`
+- Countermodels: none
+- Conditions: pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Chartability enters as the ResolutionTower structure; homeomorphism content open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24815,6 +31536,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `proof:bk1_sketch_coherence_drift_reflection` (Coherence of Proto-Drift Fields via Chart Convergence); `proof:bk1_sketch_limit_stabilization_colimit` (Limit of Stabilization Operators via Colimit)
 - Macros used: `\R`, `\norm`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-059`
+- Witnesses: `Atlas.tower_glues`
+- Countermodels: none
+- Conditions: pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Pointwise convergence + vanishing defect; C-infinity topology open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Extending Axiom axiom:bk1_symbolic_smoothness and Axiom axiom:bk1_local_charitability on the proto-symbolic space of Def. definition:bk1_proto_symbolic_space, we require: For any two points $p, q in P$ represented by sequences $(x_lambda^p)_{lambda ge lambda_p}$ and $(x_lambda^q)_{lambda ge lambda_q}$, and corresponding charts $(U_lambda^p, varphi_lambda^p)$, $(U_lambda^q, varphi_lambda^q)$ for $lambda ge max(lambda_0, lambda_p, lambda_q)$, the transition maps $varphi_lambda^q circ (varphi_lambda^p)^{-1}$ converge...
@@ -24843,6 +31575,17 @@ Role: `axiom` | Type: `axiom` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `proof:appB_smoothness_emergence`; `proof:bk1_atlas_final_topology_phase_space` (Atlas Construction on Final Topology of Symbolic Phase Space); `proof:bk1_sketch_symbolic_connectivity` (Symbolic Connectivity via Hopf--Rinow); `proof:bk2_probability_structure_on_manifold` (Symbolic Probability Structure on Emergent Manifold); `theorem:appB_smoothness_emergence` (Emergent Smoothness from Symbolic Discreteness); `theorem:bk1_manifold_emergence` (Manifold Emergence)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-060`
+- Witnesses: `Atlas.manifold_emergence`
+- Countermodels: none
+- Conditions: pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Pair-covering stand-in; Hausdorff/paracompactness unmodeled, named.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The colimit topology on the proto-symbolic space $P$ (Def. definition:bk1_proto_symbolic_space) constructed from the stage tower of Def. definition:bk1_pre_geometric_operators_and_stages is postulated to be: - Hausdorff. - Second-countable. - Paracompact. - Connected.
@@ -24870,6 +31613,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `axiom:bk1_symbolic_smoothness` (Symbolic Smoothness); `axiom:bk1_topological_regularity` (Topological Regularity); `definition:bk1_proto_symbolic_space` (Proto-symbolic Space)
 - Cited by: `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `proof:bk1_sketch_symbolic_connectivity` (Symbolic Connectivity via Hopf--Rinow); `proof:bk2_probability_structure_on_manifold` (Symbolic Probability Structure on Emergent Manifold); `sec:appD_preamble_nature_of_appendix` (D.0 Preamble); `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-061`
+- Witnesses: `Atlas.fracture_stops_emergence`, `Atlas.manifold_emergence`, `Atlas.tower_glues`
+- Countermodels: none
+- Conditions: pair-covering as the topological-regularity stand-in (Hausdorff/second-countable/paracompact/connected unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Existence + uniqueness of the emergent geometry from vanishing defects, with the persisting-defect converse; smoothness-as-C-infinity open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24927,6 +31681,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_symbolic_flow` (Symbolic Flow); `definition:bk3_autophagic_drift` (Autophagic Drift); `lemma:bk1_existence_of_metric` (Existence of Metric); `proof:bk1_drift_deviation_bound` (Proto-Drift Induces Directional Deviation Bound); `proof:bk1_observer_kernel_convolution` (Convolutional Identity from Observer Kernel Properties); `proof:bk1_sketch_construction_proto_metric` (Construction of Proto-Metric on Symbolic Layers); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-079`
+- Witnesses: `ScholiumHzn.drift_field_unique`
+- Countermodels: none
+- Conditions: manifold integrals, PDE forms, smoothness, ordinal colimits, and curvature signs stay open/interpretive per row notes
+- Formal boundary: Stage fields as converging tower data.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For sufficiently large $lambda < Omega$ (i.e., $lambda ge lambda_0$), we denote by $vec{D}_lambda$ the proto-drift field on $P_lambda$ (see definition:bk1_pre_geometric_operators_and_stages). This represents the effective directional tendency observable at stage $lambda$, emerging from the history of differentiation ($D_nu, nu le lambda$) and stabilization ($R_nu, nu < lambda$).
@@ -24940,6 +31705,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk1_pre_geometric_operators_and_stages` (Pre-geometric Operators and Stages)
 - Cited by: `proof:bk1_sketch_construction_proto_metric` (Construction of Proto-Metric on Symbolic Layers); `proof:bk1_sketch_drift_limit_vector_field` (Limit Vector Field from Local Drift Coherence)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-041`
+- Witnesses: `ScholiumD.CommutatorErrorBound.err_tendsto_zero`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the commutator-error-to-zero step of the proof, as a squeeze theorem for a nonnegative sequence dominated by a vanishing bound; the chart representations and transition maps are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -24969,6 +31745,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `definition:bk1_symbol_space` (Symbol Space); `definition:bk1_symbolic_flow` (Symbolic Flow); `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `lemma:bk1_existence_and_uniqueness_of_flow` (Existence and Uniqueness of Flow); `lemma:bk1_local_stability_analysis` (Local Stability at the Reflective Fixed Locus); `lemma:bk1_well_posedness_of_symbolic_hamiltonian` (Well-posedness of Symbolic Hamiltonian); ... +8 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-078`
+- Witnesses: `ScholiumHzn.drift_field_unique`
+- Countermodels: none
+- Conditions: manifold integrals, PDE forms, smoothness, ordinal colimits, and curvature signs stay open/interpretive per row notes
+- Formal boundary: Uniqueness of the stabilized limit; existence = the convergence hypothesis; smoothness/colimit open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 There exists a unique smooth vector field $D in Gamma(TM)$ on the symbolic manifold $M$ (see definition:bk1_symbolic_manifold_existence) that represents the stabilized limit of the proto-drift fields ${vec{D}_lambda}_{lambda_0 le lambda < Omega}$ through the colimit process.
@@ -24997,6 +31784,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:appB_observer_metric` (Observer-Relative Symbolic Metric); `definition:bk4_symbolic_flow_freedom` (Symbolic Flow Freedom); `lemma:bk1_existence_and_uniqueness_of_flow` (Existence and Uniqueness of Flow); `proof:bk1_existence_and_uniqueness_of_flow`; `proof:bk4_symbolic_identity_persistence` (Stability Criterion for Symbolic Identity Persistence); `scholium:bk7_popperian_extension` (Popperian Extension)
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-062`
+- Witnesses: `ScholiumDyn.flow_semigroup`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: The discrete flow with the semigroup law; the ODE flow stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic flow $Phi: R times M to M$ is the unique maximal flow generated by the emergent drift field $D$ (see def definition:bk1_proto_drift_field) on the symbolic manifold $M$ (see def definition:bk1_symbolic_manifold_existence), as established by the emergence of $D$ (see thm theorem:bk1_emergence_of_drift_field).
@@ -25010,6 +31808,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_symbolic_flow` (Symbolic Flow); `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `theorem:bk1_emergence_of_drift_field` (Emergence of Drift Field)
 - Cited by: `definition:bk1_symbolic_coherence_velocity` (Symbolic Coherence Velocity)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-063`
+- Witnesses: `ScholiumDyn.flow_unique`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Discrete existence-and-uniqueness by induction; the smooth fundamental theorem stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25039,6 +31848,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `definition:bk1_symbol_space` (Symbol Space); `definition:bk1_symbolic_distance` (Symbolic Distance); `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density); `proof:bk1_sketch_fokker_planck_microdynamics`; `proof:bk1_sketch_smoothness_linearization` (Smoothness of Symbolic Hamiltonian); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-042`
+- Witnesses: `ScholiumD.combinedForm_nonneg`, `ScholiumD.combinedForm_pos_of_nondegenerate`, `ScholiumD.existence_of_metric_from_gluing`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: positive-definiteness of the combined R/D form kept as a self-contained normed-space fact (no manifold); chart-gluing to a single global metric re-read over FracturedAtlas with Glued C as a named hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 There exists a Riemannian metric $g$ on $M$ that arises naturally from the interplay of the stabilization and differentiation processes (see def definition:bk1_symbolic_manifold_existence, def definition:bk1_pre_geometric_operators_and_stages, and def definition:bk1_proto_drift_field).
@@ -25067,6 +31887,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_symbol_space` (Symbol Space); `lemma:bk1_completeness_of_symbolic_distance` (Completeness of Symbolic Distance); `proof:bk8_sketch_convergence_to_fixed_by_banach` (RG Fixed Point via Banach Contraction)
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-065`
+- Witnesses: `ScholiumDyn.resCost_symm`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Symbolic distance as the path-infimum; Riemannian geodesics open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic distance $d: M times M to R_{geq 0}$ is the geodesic distance induced by the emergent Riemannian metric $g$ (see lemma lemma:bk1_existence_of_metric) on the symbolic manifold $M$ (see def definition:bk1_symbolic_manifold_existence).
@@ -25080,6 +31911,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_symbolic_distance` (Symbolic Distance)
 - Cited by: `axiom:bk4_refinement_contraction` (Refinement Contraction Axiom); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `proof:bk1_sketch_smoothness_linearization` (Smoothness of Symbolic Hamiltonian); `proof:bk4_neighborhood_completeness`; `proof:bk8_sketch_convergence_to_fixed_by_banach` (RG Fixed Point via Banach Contraction); `proposition:bk4_neighborhood_completeness` (Neighborhood Completeness)
 - Macros used: `\R`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-066`
+- Witnesses: `ScholiumDyn.floor_complete`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Floor completeness (Cauchy sequences eventually constant); Hopf-Rinow open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25109,6 +31951,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `corollary:bk1_fixed_point` (Reflective Fixed Locus); `definition:bk1_symbol_space` (Symbol Space); `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `lemma:bk1_local_stability_analysis` (Local Stability at the Reflective Fixed Locus); `lemma:bk1_well_posedness_of_symbolic_hamiltonian` (Well-posedness of Symbolic Hamiltonian); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); ... +3 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-006`
+- Witnesses: `ScholiumB.idempotent_fixes_image`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: Only the stated idempotence consequence (R_stab^2 = R_stab) and its direct corollary (every image point is fixed) are formalized, as a fact about any idempotent self-map; the colimit-existence construction of R_stab from the proto-stage tower is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 There exists a unique smooth state-level stabilization map $R_{stab}: M to M$ that is the stabilized limit of the reflection operators ${R_lambda}_{lambda < Omega}$ through the colimit process. Moreover, \(R_{stab}\) is idempotent on stabilized states: \[ R_{stab}^2 = R_{stab}. \] No strict metric contraction is asserted for \(R_{stab}\) or for the tangent mirror \(R_{mir}\) of Def. definition:bk1_reflection_operator. Convergence of iterates is a separate Lyapunov-descent question.
@@ -25136,6 +31989,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `theorem:bk1_emergence_of_reflection_operator` (Emergence of Stabilization Operator)
 - Cited by: `axiom:bk8_binding_curvature_limit` (Frame Relativity of Meaning); `definition:bk1_bounded_reflexive_emergence` (Bounded Reflexive Emergence); `definition:bk8_transform_group` (Frame Transform Group); `lemma:bk1_local_stability_analysis` (Local Stability at the Reflective Fixed Locus); `proof:bk1_constitutive_bootstrap_extraction` (Extraction from Reflective Closure); `proof:bk1_proof_of_dual_horizon_necessity_theorem` (Proof of Dual Horizon Necessity Theorem); ... +1 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-007`
+- Witnesses: `ScholiumB.idempotent_fixLocus_nonempty`, `ScholiumB.idempotent_fixes_image`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The corollary's exact argument (fixed locus nonempty whenever the stabilized image is nonempty, via idempotence) is formalized in full generality for idempotent self-maps; the non-uniqueness discussion is not separately stated since no additional structure (contraction/Lyapunov) is modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25193,6 +32057,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_symbolic_action_functional` (Symbolic Action Functional); `definition:bk1_symbolic_entropy` (Symbolic Entropy); `definition:bk1_symbolic_field_curvature_tensor` (Symbolic Field Curvature Tensor); `definition:bk1_symbolic_information_geometry` (Symbolic Information Geometry); `lemma:bk1_horizon_crossing_conservation` (Horizon-Crossing Conservation); ... +5 more
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-082`
+- Witnesses: `Book2.gibbs_isDensity`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite density form.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic probability density is a smooth function $rho: M times R to R_{geq 0}$ satisfying $int_M rho(x,s) dmu_g(x) = 1$ for all symbolic times $s in R$, where $M$ is the symbolic manifold (def definition:bk1_symbolic_manifold_existence) and $dmu_g$ is the Riemannian volume form induced by the metric $g$ (lemma lemma:bk1_existence_of_metric).
@@ -25206,6 +32081,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cites: `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density)
 - Cited by: `proof:bk1_lagrange_free_energy` (Free Energy Minimization via Lagrange Multipliers); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `theorem:bk1_sructurual_correspondence` (Structural Correspondence); `theorem:bk1_the_fokker_planck_equation_theorem` (Information Geometric Interpretation); `theorem:bk1_variational_principle` (Variational Principle)
 - Macros used: `\R`
+
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-083`
+- Witnesses: `Book2.entropy_nonneg`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Finite entropy form.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25221,6 +32107,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `lemma:bk1_well_posedness_of_symbolic_hamiltonian` (Well-posedness of Symbolic Hamiltonian); `proof:bk1_lagrange_free_energy` (Free Energy Minimization via Lagrange Multipliers); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `theorem:bk1_sructurual_correspondence` (Structural Correspondence); `theorem:bk1_variational_principle` (Variational Principle)
 - Macros used: `\R`, `\norm`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-043`
+- Witnesses: `ScholiumD.SymbolicHamiltonianFirstTerm.pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the regularized first term kappa/(||D||_g + eps); the trace/linearization second term is not modeled since its sign is unconstrained by the source.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic Hamiltonian $H: M to R$ quantifies local symbolic coherence: \[ H(x) = frac{kappa}{norm{D(x)}_g + epsilon} + lambda cdot tr(L_x) \] where $kappa, lambda > 0$, $epsilon > 0$ (regularization), $norm{D(x)}_g$ is the norm of the drift field $D$ (thm theorem:bk1_emergence_of_drift_field) with respect to the Riemannian metric $g$ (lemma lemma:bk1_existence_of_metric) on the manifold $M$ (def definition:bk1_symbolic_manifold_existence).
@@ -25234,6 +32131,17 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cites: `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `theorem:bk1_emergence_of_drift_field` (Emergence of Drift Field); `theorem:bk1_emergence_of_reflection_operator` (Emergence of Stabilization Operator)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-044`
+- Witnesses: `ScholiumD.SymbolicHamiltonianFirstTerm.pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: well-posedness of the first term's denominator only (never zero given eps>0); smoothness on M is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25263,6 +32171,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `axiom:bk2_symbolic_fokker_planck_equation` (Symbolic Fokker-Planck Equation); `axiom:bk8_surface_energy_dynamics` (Coupled Differential Dynamics); `corollary:bk1_wasserstein_geometric_interpretation` (Wasserstein Geometric Interpretation); `definition:bk1_symbolic_action_functional` (Symbolic Action Functional); `definition:bk6_symbolic_laplace_beltrami_operator_complete` (Symbolic Laplace–Beltrami Operator); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); ... +16 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-081`
+- Witnesses: `Book2.evolve_conserves`, `Book2H.h_theorem`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: Discrete skeleton with conservation and the H-theorem; the manifold PDE open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The evolution of $rho$ is governed by: \[ frac{partial rho}{partial s} = -nabla cdot (rho D) + beta^{-1} nabla^2 rho \] where $nabla cdot$ is the divergence, $nabla^2$ is the Laplace–Beltrami operator on $(M,g)$, and $beta > 0$ is an inverse temperature parameter. Here $rho$ is a symbolic probability density (def definition:bk1_symbolic_probabilty_density) on the symbolic manifold $M$ (def definition:bk1_symbolic_manifold_existence), with drift field $D$ (thm theorem:bk1_emergence_of_drift_field).
@@ -25290,6 +32209,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_symbolic_entropy` (Symbolic Entropy); `definition:bk1_symbolic_hamiltonian` (Symbolic Hamiltonian); `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `definition:bk1_symbolic_probabilty_density` (Symbolic Probability Density)
 - Cited by: `corollary:bk1_equilibrium_distribution` (Equilibrium Distribution); `corollary:bk1_wasserstein_geometric_interpretation` (Wasserstein Geometric Interpretation); `definition:bk1_symbolic_phase_transitions` (Symbolic Phase Transitions); `proof:bk1_equilibrium_distribution` (Lagrange Multiplier Normalization Gives the Gibbs Form); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `proof:bk1_sketch_thermo_analogy_fokker_planck` (Thermodynamic Analogy via Symbolic Fokker--Planck); ... +7 more
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-008`
+- Witnesses: `ScholiumB.gibbsProb_antitone`, `ScholiumB.gibbsProb_sum_eq_one`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The Lagrange-multiplier derivation and the manifold measure d mu_g are not modeled; instead the finite-discrete Gibbs distribution this variational principle produces is formalized directly (positivity, normalization, and the monotone-in-energy law), over a nonempty finite index type standing in for the symbolic manifold.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25319,6 +32249,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cited by: `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-009`
+- Witnesses: `ScholiumB.gibbsProb_pos`, `ScholiumB.gibbsProb_sum_eq_one`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: The stated formula rho_eq(x) = Z^{-1} e^{-beta H(x)} is formalized verbatim as gibbsProb/gibbsZ over a finite index type, with positivity and normalization proved; the manifold integral defining Z is replaced by a Finset.sum.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The equilibrium distribution is given by: \[ rho_{text{eq}}(x) = Z^{-1} e^{-beta H(x)}. \] This follows directly from thm. theorem:bk1_variational_principle and its Lagrange-multiplier derivation in proof proof:bk1_lagrange_free_energy.
@@ -25346,6 +32287,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation); `theorem:bk1_variational_principle` (Variational Principle)
 - Cited by: `proof:bk1_sketch_thermo_analogy_fokker_planck` (Thermodynamic Analogy via Symbolic Fokker--Planck); `proof:bk4_temporal_resolution_via_observer_bounded_reflection` (Temporal Resolution via Observer-Bounded Reflection); `scholium:bk4_micro_local_vs_path_global_irreversibility` (Micro-Local and Path-Global Irreversibility); `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: `\norm`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-045`
+- Witnesses: `ScholiumD.FreeEnergyDescent.antitone`, `ScholiumD.FreeEnergyDescent.const_of_eq`, `ScholiumD.FreeEnergyDescent.le_initial`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: discrete telescoping/rigidity skeleton (dF/ds <= 0 with equality-only-at-equilibrium, as a step sequence); the Fokker-Planck evolution and integration-by-parts derivation producing the monotonicity are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25403,6 +32355,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-091`
+- Witnesses: `Book2.gibbs_minimizes`, `Book2H.h_theorem`
+- Countermodels: none
+- Conditions: finite nonempty symbolic alphabet (NeZero n); positive beta for the variational principle; nonzero beta for the equilibrium value; the stochastic-kernel evolution law and detailed balance are named structures, not derived from the PDE
+- Formal boundary: The (M,g,D,R) -> (rho,S,H,F,beta) dictionary: the Book2 discrete-thermodynamics kernels; the full analogy stays interpretive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The framework $(M, g, D, R) to (rho, S, H, F, beta)$ exhibits structural correspondence with classical thermodynamics and statistical mechanics.
@@ -25431,6 +32394,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `proof:bk1_conditional_genericity_of_symbolic_phase_transitions` (Transversal discriminant crossing stabilized above the critical dimension); `proof:bk1_realization_of_symbolic_phase_transitions`; `theorem:bk1_conditional_genericity_of_symbolic_phase_transitions` (Conditional Genericity of Symbolic Phase Transitions); `theorem:bk1_realization_of_symbolic_phase_transitions` (Realization of Symbolic Phase Transitions)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-046`
+- Witnesses: `ScholiumD.exists_critical_coupling`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: existence of a critical crossing value via IVT for a continuous straddling coupling function; non-analyticity of the partition function is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic phase transition occurs when the equilibrium distribution $rho_{text{eq}}$ undergoes a qualitative change in structure as a parameter (typically $beta$) is varied continuously. Formally, a critical point $beta_c$ is characterized by non-analytic behavior in the partition function $Z(beta)$ at $beta = beta_c$. This defines a symbolic thermodynamic phase transition analogously to those in classical statistical physics (see thm theorem:bk1_variational_principle).
@@ -25444,6 +32418,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_symbol_space` (Symbol Space); `definition:bk1_symbolic_phase_transitions` (Symbolic Phase Transitions); `theorem:bk1_symbolic_irony_requires_curvature` (Symbolic Irony Requires Curvature)
 - Cited by: `conjecture:bk1_genericity_of_symbolic_phase_transitions` (Genericity of Symbolic Phase Transitions); `theorem:bk1_symbolic_irony_requires_curvature` (Symbolic Irony Requires Curvature)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-047`
+- Witnesses: `ScholiumD.exists_critical_coupling`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the existence-of-critical-beta_c content only, via IVT; the non-analyticity / curvature-analogy content is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25501,6 +32486,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `definition:bk1_certified_type_preserving_symbolic_transport` (Certified Type-Preserving Symbolic Transport); `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `proof:bk1_nonvacuity_of_certified_transport` (Exact and projective certificates in the minimal witness); `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk1_mathematical_witness_boundary` (Witness boundary); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_B-011`
+- Witnesses: `ScholiumB.minimalPS_collapse_ne_id`, `ScholiumB.minimalPS_connection_curvature_nonzero`, `ScholiumB.minimalPS_drift_reflection_noncommute`
+- Countermodels: none
+- Conditions: modeling laws are structure fields or explicit hypotheses; continuum/categorical content is NOT formalized
+- Formal boundary: All three claims (collapse is not identity, drift/stabilization do not commute, connection has nonzero curvature) are proved unconditionally by explicit witness computation at concrete points, matching the theorem's own finite-dimensional realization claim exactly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The minimal linear PS-model witness of Def. definition:bk1_minimal_linear_ps_model is a nontrivial realization of the Book I operator vocabulary: its collapse is not the identity, its drift and stabilization do not commute, and its symbolic connection has nonzero curvature. Hence the PS operator ontology has a finite-dimensional mathematical realization independent of any computational witness.
@@ -25543,6 +32539,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `proof:bk1_certified_transport_prevents_equivocation` (Role preservation by certificate); `proof:bk1_nonvacuity_of_certified_transport` (Exact and projective certificates in the minimal witness); `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); ... +2 more
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-049`
+- Witnesses: `ScholiumD.TransportLoss.exact_supportsDependency`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the four-level loss taxonomy (field ell) is modeled as an explicit finite type; the transported-occurrence map T, signature sigma, and structural role rho are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \(V_a\) and \(V_b\) be two PS operator vocabularies attached to symbolic manifolds, observer frames, or book-level depths. A certified type-preserving symbolic transport from \(V_a\) to \(V_b\) is a tuple \[ mathsf{Cert}_{ato b}=(T_{ato b},sigma,rho,ell) \] with the following data: - \(T_{ato b}\) maps each transported operator occurrence in \(V_a\) to an occurrence in \(V_b\). - \(sigma\) records the preserved type signature. Drift transports as a state-to-tangent field or admissible update section (Def.
@@ -25556,6 +32563,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: none
 - Cited by: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk4_finite_witness_for_drift_reflection_imbalance` (Finite witness for imbalance); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_A-050`
+- Witnesses: `ScholiumD.TransportLoss.exact_supportsDependency`, `ScholiumD.TransportLoss.interpretive_not_supportsDependency`, `ScholiumD.TransportLoss.projective_supportsDependency`, `ScholiumD.TransportLoss.quotient_supportsDependency`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the licensing rule only (which loss levels may support a theorem dependency); the equivocation-detection claim about a downstream argument's symbol usage is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25584,6 +32602,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: none
 - Cited by: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk4_finite_witness_for_drift_reflection_imbalance` (Finite witness for imbalance); `scholium:bk4_ttdc_symbolic_singularity` (TTDC as Recursive Identity Collapse)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-SCHOLIUM_A-051`
+- Witnesses: `ScholiumD.TransportLoss.exact_ne_projective`, `ScholiumD.TransportLoss.nonempty`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: nonemptiness plus an explicit distinct exact/projective witness, as a finite countermodel over the 4-element TransportLoss type.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25627,6 +32656,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `conjecture:bk1_genericity_of_symbolic_phase_transitions` (Genericity of Symbolic Phase Transitions)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-048`
+- Witnesses: `ScholiumD.exists_critical_coupling`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: hypothesis (H2) (coupling-range straddle) is exactly the IVT hypothesis; (H1) effective dimensionality and (H3) transversality are not modeled, and monotonicity of lambda is dropped as unneeded rather than modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M,g,D,R)$ be a symbolic manifold whose dyadic covenant coupling satisfies: - Effective dimensionality $d_{eff}(M)ge 2$: the symbolic order parameter has at least two coupled effective directions, so an ordered (MAP) phase admits a Peierls-type domain-wall cost growing with region size.
@@ -25654,6 +32694,17 @@ Role: `proposition` | Type: `proposition` | Book: `scholium_symbolicum` | Source
 - Cites: none
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-014`
+- Witnesses: `ScholiumD.ImaginativeGenericityCertificate.supplies_genericity_hypotheses`, `ScholiumD.exists_critical_coupling`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Faithful certificate form: injective Fin 2 directions provide H1's two effective directions, continuous coupling straddle derives H2's critical coupling, and H3 transversality remains an explicit nonzero-slope obligation. Full complex bundles and generic-imagination claims remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25697,6 +32748,16 @@ Role: `lemma` | Type: `lemma` | Book: `scholium_symbolicum` | Source: `scholium_
 - Cited by: `proof:bk2_probability_structure_on_manifold` (Symbolic Probability Structure on Emergent Manifold); `scholium:bk3_hypotheses_as_cognitive_membranes` (Hypotheses as Cognitive Membranes)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-012`
+- Witnesses: `Book4D.CertifiedTTDC.abstention_base_inert_but_recorded`, `Book4D.CertifiedTTDC.recordedExecute_eq_iff`, `Book7.orbitLimit_base_fixed_but_recorded`, `Book7.orbitLimit_completeJacobian`, `Book7.orbitLimit_completeJacobian_semigroup`, `Book7.orbitLimit_derivative_image_kernel_split`, `Book7.orbitLimit_fixedLocusVelocity_iff`, `Book7.orbitLimit_linear_image_kernel_split`, `Book7.orbitLimit_semigroup_transverse_eigenmode_tendsto_zero`, `Book7.orbitLimit_transverse_contracts`, `Book7.orbitLimit_transverse_eigenvalue_stable`, `Book7.orbitLimit_transverse_iterates_tendsto_zero`, `Book7.orbitLimit_transverse_jacobian_eigenmode_stable`, `ScholiumDyn.ReflectiveLinearProjection.apply_apply`, `ScholiumDyn.ReflectiveLinearProjection.derivative_image_kernel_decomposition`, `ScholiumDyn.ReflectiveLinearProjection.exists_image_kernel_decomposition`, `ScholiumDyn.ReflectiveLinearProjection.image_kernel_intersection_zero`, `ScholiumDyn.ReflectiveLinearProjection.sub_identity_on_image`, `ScholiumDyn.ReflectiveLinearProjection.sub_identity_on_kernel`, `ScholiumDyn.base_cancellation_not_full_equilibrium`, `ScholiumDyn.combinedEulerLinearization_eigen_of_jacobian_eigen`, `ScholiumDyn.combinedEulerLinearization_iterate_mem_kernel`, `ScholiumDyn.combinedEulerLinearization_iterate_tendsto_zero`, `ScholiumDyn.combinedEulerLinearization_on_kernel`, `ScholiumDyn.combinedEulerLinearization_preserves_kernel`, `ScholiumDyn.combinedEulerLinearization_transverse_contracts`, `ScholiumDyn.combinedJacobian_apply`, `ScholiumDyn.combinedJacobian_on_image`, `ScholiumDyn.combinedJacobian_on_kernel`, `ScholiumDyn.completeJacobian_at_reflective_fixed`, `ScholiumDyn.continuousLinearMap_pow_apply_eigen`, `ScholiumDyn.equilibrium_cancellation_counterexample`, `ScholiumDyn.equilibrium_iff_fixed_and_drift_zero_of_aligned`, `ScholiumDyn.equilibrium_of_fixed_and_drift_zero`, `ScholiumDyn.fixedLocusVelocity_iff_derivative_fixed`, `ScholiumDyn.hasDerivAt_jacobianSemigroup`, `ScholiumDyn.hasFDerivAt_combinedVectorField`, `ScholiumDyn.hasFDerivAt_idempotent_at_fixed`, `ScholiumDyn.jacobianSemigroup_add`, `ScholiumDyn.jacobianSemigroup_add_apply`, `ScholiumDyn.jacobianSemigroup_apply_eigen`, `ScholiumDyn.jacobianSemigroup_eigenmode_tendsto_zero`, `ScholiumDyn.jacobianSemigroup_zero`, `ScholiumDyn.no_full_equilibrium_of_trace_production`, `ScholiumDyn.no_transverse_unstable_eigenmode`, `ScholiumDyn.norm_combinedEulerLinearization_iterate_le`, `ScholiumDyn.norm_combinedEulerLinearization_on_kernel_le`, `ScholiumDyn.recordedCombinedStep_eq_iff`, `ScholiumDyn.transverse_eigenvalue_abs_le`, `ScholiumDyn.transverse_eigenvalue_abs_lt_one`, `ScholiumDyn.transverse_jacobian_eigenmode_tendsto_zero`, `ScholiumDyn.transverse_jacobian_eigenvalue_le_negative_margin`, `ScholiumDyn.transverse_jacobian_eigenvalue_neg`
+- Countermodels: `ScholiumDyn.equilibrium_cancellation_counterexample`
+- Formal boundary: Clauses 1-3 have partial honest kernels. Fixed reflection plus zero drift is sufficient for scalar equilibrium, but the claimed converse is false without separation: an explicit idempotent stabilizer cancels nonzero drift. Component alignment recovers the scalar iff, while the history-bearing lift proves full stationarity iff visible flow and trace production both vanish. The algebraic projection kernel proves image/kernel decomposition, trivial intersection, and the actions of P-I on both summands. The chain rule now derives P=dR as an idempotent projection from differentiability, fixedness, and stabilizer idempotence. The complete Jacobian J=(P-I)+alpha*dD is now derived by Frechet derivative rules and restricted exactly to image and kernel directions. The projection image is now identified exactly with curve-based fixed-locus velocities, and the complete Euler linearization has a strict quantitative transverse contraction below the unit perturbation margin. Under the explicit invariant-kernel contract, every transverse iterate remains transverse, obeys the geometric q^n envelope, and converges to zero. Real transverse eigenmodes are now confined to the strict unit disk and neutral or unstable modes are excluded. Each real transverse Jacobian eigenvalue now has a strict negative margin and its explicit continuous-time exponential mode converges to zero. The full complete-Jacobian bounded-operator exponential now has identity, semigroup, pointwise composition, and generator-ODE laws. The semigroup action on every real Jacobian eigenvector is now identified exactly with scalar exponential action, and stable transverse semigroup orbits converge to zero. Full manifold charts, complex spectrum/spectral-radius identification, and center-manifold claims remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Consider the combined symbolic dynamics on $M$, \[ dot{x} = bigl(R_{stab}(x) - xbigr) + alpha D(x), alpha > 0, \] with $R_{stab} in C^1$ the idempotent state-level stabilizer (thm theorem:bk1_emergence_of_reflection_operator, cor corollary:bk1_fixed_point) and $D$ the emergent drift field (thm theorem:bk1_emergence_of_drift_field). Then: - Equilibrium condition. $x^*$ is an equilibrium iff $R_{stab}(x^*) = x^*$ and $D(x^*) = 0$.
@@ -25738,6 +32799,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_symbolic_manifold_existence` (Symbolic Manifold Existence); `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation); `theorem:bk1_variational_principle` (Variational Principle)
 - Cited by: `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_B-015`
+- Witnesses: `ScholiumD.symbolic_fluctuation_dissipation`
+- Countermodels: none
+- Conditions: See the receipted theorem statement and coverage note for explicit premises.
+- Formal boundary: Local scalar calculus kernel: from an explicit HasDerivAt Kubo certificate, response equals the equilibrium-correlation derivative and -beta times the generator correlation. Expectation spaces, equilibrium measures, and derivation from the Fokker-Planck operator remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25781,6 +32853,17 @@ Role: `definition` | Type: `definition` | Book: `scholium_symbolicum` | Source: 
 - Cited by: none
 - Macros used: `\R`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-SCHOLIUM_A-067`
+- Witnesses: `ScholiumDyn.action_nonneg`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Discrete Onsager-Machlup action.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic action functional $S: C^infty(M times [s_1, s_2]) to R$ is defined over paths $rho(x,s)$ in the space of symbolic probability densities (see def definition:bk1_symbolic_probabilty_density): \[ S[rho] = int_{s_1}^{s_2} int_M L(rho, partial_s rho, nabla rho; x, s) dmu_g(x) ds, \] where $L$ is a Lagrangian density.
@@ -25794,6 +32877,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation)
 - Cited by: `scholium:bk4_symbolic_parsimony` (TTCS and the Principle of Symbolic Parsimony); `sec:bk1_summary_and_implications` (Summary and Implications)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-SCHOLIUM_A-068`
+- Witnesses: `ScholiumDyn.least_action_iff_evolution`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Exact discrete form: dynamics = zero-action paths = the global minimum; MSR open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25837,6 +32931,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cited by: `corollary:bk1_wasserstein_geometric_interpretation` (Wasserstein Geometric Interpretation); `proof:bk1_sketch_direct_evaluation` (H-Theorem via Symbolic Integration by Parts); `proof:bk1_wasserstein_geometric_interpretation` (Restatement of the Wasserstein Gradient-Flow Theorem)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-016`
+- Witnesses: `ScholiumD.FreeEnergyDescent.antitone`, `ScholiumD.jko_step_freeEnergy_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Discrete JKO kernel: minimizing squared transport cost plus free energy against the previous-state competitor proves one-step free-energy descent; the existing descent structure then yields antitonicity. Wasserstein probability geometry, the Fokker-Planck PDE, and the tau-to-zero convergence theorem remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The symbolic Fokker–Planck equation (see thm theorem:bk1_fundamental_relation_fokker_plank_equation) can be interpreted as a extbf{gradient flow} of the relative entropy—i.e., the Kullback–Leibler divergence \[ D_{KL}(rho \| rho_{text{eq}}), \] with respect to a metric structure on the symbolic probability space $P(M)$ (see def definition:bk1_symbolic_information_geometry), such as the extbf{Fisher–Rao} or extbf{Wasserstein} metric.
@@ -25864,6 +32969,16 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `definition:bk1_symbolic_information_geometry` (Symbolic Information Geometry); `proof:bk1_sketch_gradient_flow_thermodynamics` (Gradient Flow Structure via JKO); `theorem:bk1_fundamental_relation_fokker_plank_equation` (Fundamental Relation – Fokker–Planck Equation); `theorem:bk1_the_fokker_planck_equation_theorem` (Information Geometric Interpretation); `theorem:bk1_variational_principle` (Variational Principle)
 - Cited by: `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `proof:bk1_event_horizon_identity_field` (Identity Field on the Symbolized Causal Patch)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-017`
+- Witnesses: `ScholiumD.jko_step_freeEnergy_le`, `ScholiumD.jko_step_transport_cost_le_energy_drop`
+- Countermodels: none
+- Formal boundary: Discrete metric-gradient kernel: the JKO minimizer's scaled squared transport displacement is bounded by its free-energy drop, and free energy cannot increase. Construction of P(M), the Wasserstein-2 metric, tangent continuity equations, and identification with the Fokker-Planck PDE remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25906,6 +33021,17 @@ Role: `theorem` | Type: `theorem` | Book: `scholium_symbolicum` | Source: `schol
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_cosmological_symbolization_functor` (Cosmological Symbolization Functor); `definition:bk1_drift_field` (Drift Field); `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk1_symbolic_riemann_tensor` (Symbolic Riemann Curvature Tensor); ... +1 more
 - Cited by: `corollary:bk1_event_horizon_identity_field` (Event Horizon Identity Field); `proof:bk1_event_horizon_identity_field` (Identity Field on the Symbolized Causal Patch); `proof:bk4_temporal_resolution_via_observer_bounded_reflection` (Temporal Resolution via Observer-Bounded Reflection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-018`
+- Witnesses: `Atlas.dual_horizon_fractured`, `Atlas.no_single_geometry_for_dual_horizon`, `ScholiumD.dual_horizon_cosmogenesis_kernel`
+- Countermodels: none
+- Conditions: named next layers, deliberately not forced into the keystone: curvature as loop defect (discrete holonomy) and the appB resolution tower (P_lambda as graded complex, emergent smoothness as defects vanishing up the grading); pair-covering is the assembly hypothesis for the classical direction
+- Formal boundary: Static geometric kernel: opposite-signed past/future curvature parameters are provably distinct, while the certified dual-horizon chart complex at positive observer resolution admits no single consistent geometry. The cosmological symbolization functor, causal spacetime evolution, bounded observer dynamics, Hamiltonian apparatus, and existence of the intervening domain remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -25962,6 +33088,17 @@ Role: `corollary` | Type: `corollary` | Book: `scholium_symbolicum` | Source: `s
 - Cites: `corollary:bk1_wasserstein_geometric_interpretation` (Wasserstein Geometric Interpretation); `definition:bk1_bounded_observer` (Bounded Observer); `proof:bk1_sketch_observed_consequences` (Cosmogenesis via Dual Horizon Necessity); `theorem:bk1_dual_horizon_cosmogenesis` (Dual Horizon Cosmogenesis under \texorpdfstring{$\mathcal{B}_{\mathrm{cos}}$}{B\_cos}); `theorem:bk1_dual_horizon_necessity_theorem` (Dual Horizon Necessity Theorem); `theorem:bk1_dual_horizon_unification_principle` (Emergent Dual Horizon Unification Principle)
 - Cited by: none
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-SCHOLIUM_B-019`
+- Witnesses: `Atlas.no_single_geometry_for_dual_horizon`, `ScholiumD.dual_horizon_cosmogenesis_kernel`, `ScholiumD.event_horizon_identity_field_kernel`
+- Countermodels: none
+- Conditions: named next layers, deliberately not forced into the keystone: curvature as loop defect (discrete holonomy) and the appB resolution tower (P_lambda as graded complex, emergent smoothness as defects vanishing up the grading); pair-covering is the assembly hypothesis for the classical direction
+- Formal boundary: Static identity-field kernel: defining horizon tension as the past-minus-future curvature contrast, opposite curvature signs force strictly positive tension; at positive observer resolution the same hypotheses obstruct a single geometry reconciling the dual horizon. Construction and evolution of a spacetime identity field, observer measures, and the claimed physical interpretation remain open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

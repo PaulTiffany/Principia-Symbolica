@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - book9
 
 Nodes in this source group: 150
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -65,6 +71,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:16`
 - Cites: `definition:bk3_symbolic_membrane` (Symbolic Membrane); `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `definition:bk5_symbolic_covenant` (Symbolic Covenant); `definition:bk6_symbolic_operator_canon` (Symbolic Operator Canon); `definition:bk8_projective_compression_operator` (Projective Compression Operator); `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$); `definition:bk8_symbolic_interface` (Symbolic Interface); `lemma:bk8_resursive_self_tuning` (Recursive Self-Tuning of $\mathcal{O}_{\mathrm{debug}}$); `scholium:bk1_epistemic_humility` (Epistemic Humility); `scholium:bk8_freedom_begins_with_debugging_the_debugger` (Freedom Begins with Debugging the Debugger)
 - Cited by: `definition:bk9__symbolic_masking_operator` (Symbolic Masking Operator $\mathcal{M}_{\text{mask}}$); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_viability` (Symbolic Viability); `remark:bk9_recursive_agency` (Recursive Agency); `scholium:bk7_refinement_ledger_accountability` (The refinement ledger and drift-stable accountability); `scholium:bk9_forgiveness_as_reweaving` (Forgiveness as Reweaving); `scholium:bk9_grace`; `subsec:bk7_adaptive_refinement_deadband` (Adaptive Refinement and Deadband Self-Correction); `subsec:bk9_betrayal_as_reflective_fracture` (Betrayal as Reflective Fracture); `subsec:bk9_emergence_of_moral_attractors` (Emergence of Moral Attractors)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-001`
+- Witnesses: `Book9.accountability_gap_lt_epsCrit`, `Book9.accountability_gap_lt_epsMask`, `Book9.masking_not_accountable`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Reflective Integrity (clause ii) and Relational Viability (clause iii) modeled as structure fields (Accountability); Operator Traceability (clause i) not modeled. masking_not_accountable shows masking is incompatible with clause (iii).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -155,6 +172,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:37`
 - Cited by: `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-003`
+- Witnesses: `Book9.bidirectionalSRMF_bwd_injective`, `Book9.bidirectionalSRMF_fwd_bwd_fwd`, `Book9.bidirectionalSRMF_fwd_injective`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Reciprocal regulation modeled as a BidirectionalSRMF structure with one-sided-inverse laws as fields; mutual injectivity and a cancellation identity are proved. Mutual contradiction detection itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The operator \(SRMF^{leftrightarrow}\) generalizes the Self-Regulating Mapping Function (cf. Def. definition:bk1_self_regulating_mapping_function_srmf) to allow for reciprocal regulation across coupled symbolic agents. It enables mutual contradiction detection and symmetry-restoring reframing (cf. Scholium scholium:bk7_srmf_coupled_agents).
@@ -178,6 +206,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:41`
 - Cited by: `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good"); `theorem:bk9_good_as_lyapunov_basin` (The Good as a Lyapunov Basin)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-004`
+- Witnesses: `Book9.covenantDensity_regime_exclusive`, `Book9.covenantDensity_regime_exhaustive`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The breach/critical/cooperative trichotomy against the unit threshold is an unconditional real-number fact, proved exhaustive and pairwise exclusive.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The function \(rho(C_{AB})\) denotes the symbolic density of reflective-resilient coupling between agents \(A\) and \(B\), under a shared symbolic covenant \(C_{AB}\). It is used to measure symbolic entanglement strength and joint stability (cf. remark:bk8_entanglement_is_observer_bound).
@@ -200,6 +239,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:51`
 - Cites: `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy)
 - Cited by: `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-006`
+- Witnesses: `Book9.freedomGrowing_not_global_min`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: FreedomGrowing is the honest iff-shaped definition (exists a reachable state with strictly lower free energy); proved incompatible with already being a global minimizer.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -232,6 +282,16 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:59`
 - Cited by: `proof:bk9_symbolic_viability` (Symbolic Viability); `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation); `subsec:bk9_formal_aspects_of_freedom_dynamics` (Formal Aspects of Freedom Dynamics)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK9-037`
+- Witnesses: `Book9.cognitivelyFree_iff_internal_gradient`, `Book9.cognitivelyFree_of_gradient_internal`
+- Countermodels: none
+- Formal boundary: The displayed source biconditional is represented exactly: cognitive freedom means that an internal governing drift exists and equals the system-generated gradient. The biconditional is definitional, while internality of a concrete system's gradient remains an explicit hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system $C$ is cognitively free when its governing drift dynamics $D$ (Def. definition:bk6_drift_operator_complete) are internally generated and reflectively bound (cf. Def. definition:bk7_reflective_operator):
@@ -262,6 +322,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:67`
 - Cites: `definition:bk2_symbolic_entropy` (Symbolic Entropy); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk3_symbolic_homeostasis` (Symbolic Homeostasis)
 - Cited by: `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-008`
+- Witnesses: `Book9.emergentAutonomy_min_exists`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The minimization of symbolic free energy over entropy-tolerance/transformation-rate parameters is modeled as existence of a minimizer over a nonempty finite parameter Finset; unconditional given nonemptiness.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -305,6 +376,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:81`
 - Cites: `definition:bk6_symbolic_operator_canon` (Symbolic Operator Canon); `theorem:bk4_freedom_criterion` (Freedom Criterion)
 - Cited by: `abs:press` (Press Abstract (Non-specialist science readers)); `assumption:bk9_minimal_moral_agency_criterion` (Minimal PS criterion for moral agency); `axiom:bk9_reflective_awakening` (Reflective Awakening); `axiom:bk9_reflective_initiation` (Axiom of Reflexive Initiation); `definition:bk9_formal_signature_of_betrayal` (Formal Signature of Betrayal); `definition:bk9_protocol_law` (Protocol Law $\mathcal{L}_{\text{protocol}}$); `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration); `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_selfreferential_capacity`; `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk9_modes_of_re_interpretation` (Modes of Re-Interpretation); `scholium:bk9_concluding_reflection_d` (Libertas est Connexio); `sec:bk9_relational_dynamics_and_symbolic_thermoregulation` (Relational Dynamics and Symbolic Thermoregulation)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-009`
+- Witnesses: `Book9.recursiveUpdate_eq_orbit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the Meta-Operator Action clause (L_{n+1}=R_n(L_n)) is modeled via RecursiveUpdate/orbit. The 'Freedom Acting on Constraints' clause (L : U -> U') is a bare function type with no further stated law and is not separately modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -352,6 +434,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:96`
 - Cites: `definition:bk1_drift_field` (Drift Field); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity)
 - Cited by: `corollary:bk9_final_collapse_inversion_principle` (Final Collapse-Inversion Principle); `definition:bk9_meta_operator_action` (Freedom as Meta-Operator Action)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-010`
+- Witnesses: `Book9.recursiveUpdate_eq_orbit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The sequence (L_n) generated by L_{n+1}=R_n(L_n) is exactly RecursiveUpdate; recursiveUpdate_eq_orbit proves L_n is the n-fold fold from L_0, unconditional given the update law.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -408,6 +501,17 @@ Role: `corollary` | Type: `corollary` | Book: `book9` | Source: `book9.tex:108`
 - Cited by: `subsec:bk9_emergence_of_moral_attractors` (Emergence of Moral Attractors)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-007`
+- Witnesses: `Book9.freedomEntropyLaw_strict_max`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: FreedomEntropyLaw carries both directions of the tradeoff (strictly increasing below equilibrium, strictly decreasing above) as separate hypotheses; the equilibrium is proved the strict maximizer.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Freedom grows with regulated entropy (cf. Def. definition:bk2_symbolic_free_energy; Scholium scholium:bk7_uncertainty_generative_existential). Overconstraint collapses cognition into rigidity. Underconstraint diffuses it into incoherence (cf. scholium:bk5_life_on_edge_of_chaos)
@@ -457,6 +561,17 @@ Role: `corollary` | Type: `corollary` | Book: `book9` | Source: `book9.tex:118`
 - Cited by: `assumption:bk9_minimal_moral_agency_criterion` (Minimal PS criterion for moral agency); `remark:bk9_self_reflection` (Self-Reflection)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-042`
+- Witnesses: `ScholiumDyn.flow_unique`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: Cognitively free iff able to simulate its own loop: the discrete self-application flow.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A system $C$ is cognitively free if and only if it possesses the capacity to simulate its own drift-convergence-projection loop ($D to R to Pi to dots$, cf. Def. definition:bk1_drift_field, Def. definition:bk1_reflection_operator, Def. definition:bk8_symbolic_projection; axiom:bk8_curvature_transformation) and reflectively select updates to its operators or constraints.
@@ -503,6 +618,17 @@ Role: `corollary` | Type: `corollary` | Book: `book9` | Source: `book9.tex:127`
 - Cites: `theorem:bk4_freedom_criterion` (Freedom Criterion)
 - Cited by: `definition:bk3_autophagic_drift` (Autophagic Drift); `proof:bk9_stability_conditions_for_the_good` (Viability, reciprocity, and adaptive non-collapse); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention); `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good")
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-041`
+- Witnesses: `ThermoRes.moral_agency_requires_freedom`
+- Countermodels: none
+- Conditions: manifold measure form, specific masking free-energy functional, and Hilbert decoherence operator stay open per row notes
+- Formal boundary: Moral agency entails cognitive freedom (necessity).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -625,6 +751,17 @@ Role: `corollary` | Type: `corollary` | Book: `book9` | Source: `book9.tex:164`
 - Cites: `definition:bk9_collapse_inversion_operator` (Collapse-Inversion Operator $\varnothing^*$); `definition:bk9_recursive_liberation` (Recursive Liberation); `proposition:bk9_convergence_of_recursive_liberation` (Convergence of Recursive Liberation by Descent)
 - Cited by: `remark:bk9_redemption` (Redemption)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-013`
+- Witnesses: `Book9.finalCollapseInversion`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Given the realization map sends the limit to the frozen state (as a hypothesis, since the limit itself is not constructed), the collapse-inversion operator's own law carries it to the seed state.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -801,6 +938,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:2
 - Cites: none
 - Cited by: `assumption:bk9_terminal_fixed_point_boundary` (Terminal fixed-point boundary); `axiom:bk9_recursive_phase_continuity` (Recursive Phase Continuity); `corollary:bk9_final_collapse_inversion_principle` (Final Collapse-Inversion Principle)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-012`
+- Witnesses: `Book9.homeostaticLiberation_all`, `Book9.homeostaticLiberation_converges`, `Book9.liberationDescent_Lambda_antitone`, `Book9.liberationDescent_converges`, `Book9.liberationDescent_converges_in_closed`, `Book9.liberationDescent_telescoped`, `Book9.limit_eq_of_zeroDescent_singleton`, `Book9.uniformOperatorLimit_fixedPoint`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The descent estimate telescopes, and metric completeness yields convergence to a limit; a closed basin contains that limit. The layered specialization now imports Book 6 closed power evolution (which imports Book 3): it converges by the same Book 9 descent theorem while Book 3 metabolic homeostasis persists at every finite stage by Book 6 conservation. Under uniform convergence to a continuous limit operator, the recursive limit is proved fixed; membership in a singleton zero-descent set proves uniqueness.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1010,6 +1158,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:285`
 - Cited by: `sec:bk9_circulus_vitae_et_mortis_symbolicae` (Circulus Vitae et Mortis Symbolicae: The Eternal Return)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-018`
+- Witnesses: `Book9B.curvature_cannot_vanish_under_structural_bound`, `Book9B.dominant_share_tendsto_one`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: dominance half formalized as a share-sum limit law; stagnation half formalized as: a structurally-bounded-below curvature sequence cannot converge to 0, honestly capturing the source's own closing remark that stagnation is unreachable, not the informal collapse-vs-stagnation dichotomy narrative itself.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ be a symbolic system with a set of operational modes (frames) $mathbb{F}$. If a single mode $F_i in mathbb{F}$ becomes overwhelmingly dominant such that the influence of all other modes $F_j$ ($j ne i$) approaches zero, then $S$ exhibits symbolic dissociation. This is characterized by a divergence between the symbolic gradient generated within the dominant mode and the potential gradients from other modes:
@@ -1166,6 +1325,16 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:325`
 - Cited by: `remark:bk9_dynamic_locus` (Dynamic Locus)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK9-038`
+- Witnesses: `Book9.operatorReflexive_next`
+- Countermodels: none
+- Formal boundary: Models the source recurrence O_(lambda+1)=g(O_lambda,P_lambda,R_(lambda+1),...) as typed operator/state/reflection data with an exact one-step update law. The manuscript's ellipsis is kept abstract rather than supplied with unstated dynamics.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic system $S$ possesses operator reflexivity if its symbolic operator $O_lambda$ (Def. definition:bk9_symbolic_operator) is not fixed but is itself modifiable by the system's subsequent state or internal reflection processes:
@@ -1298,6 +1467,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:357`
 - Cited by: `assumption:bk9_minimal_moral_agency_criterion` (Minimal PS criterion for moral agency); `scholium:bk9_concluding_reflection_a` (Concluding Reflection on Book IX)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-043`
+- Witnesses: `Book9ReflectiveAwakening.awakeningEvidence_is_capable`, `Book9ReflectiveAwakening.capability_alone_does_not_force_cognitive_freedom`, `Book9ReflectiveAwakening.cognitivelyFree_iff_capable_and_used`
+- Countermodels: `Book9ReflectiveAwakening.capability_alone_does_not_force_cognitive_freedom`
+- Conditions: explicit reflective modulation witness; no inference from behavioral equivalence to phenomenal awareness; separate adaptive-use predicate; separate intentionality witness for self-initiation
+- Formal boundary: Operational kernel separates reflective capability from adaptive utilization. Cognitive freedom requires both; a concrete witness has a valid reflective modulation mechanism but no adaptive use and therefore is not cognitively free. No claim of phenomenal consciousness is made.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A system $S$ achieves cognitive freedom (Def. definition:bk9_cognitive_freedom) when its operators transition from predominantly $O_{text{auto}}$ (cf. Def. definition:bk9_automatic_operator) to being capable of deploying $O_{text{aware}}$ (cf. Def. definition:bk9_awakened_operator). That is, when:
@@ -1366,6 +1546,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:372
 - Cited by: `axiom:bk9_reflective_initiation` (Axiom of Reflexive Initiation); `proof:bk9_meta_reflective_memory_integration` (Meta-Reflective Memory Integration)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-019`
+- Witnesses: `Book9B.injectionSucceeds_mono`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only the stated invasion-barrier success threshold is modeled, as a monotonicity law; the compression function Phi, SRMF mediation, and multi-agent MAP extension are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $H_t$ be the internal symbolic history of agent $S$ up to time $t$. Let $Phi: H_t to Sigma^{leq kappa}$ be a symbolic summarization function mapping the history to a compressed representation (e.g., a context window $Sigma^{leq kappa}$ of maximum size $kappa$). The prompt injection operator $J$ constructs and inserts this representation into the system's processing pathway (cf. definition:bk7_prompt_operator_chain):
@@ -1402,6 +1593,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:383`
 - Cites: `definition:bk9_cognitive_freedom` (Cognitive Freedom $\mathfrak{L}$); `definition:bk9_frame_transversal_operator` (Frame Transversal Operator $\mathcal{T}_{\text{frame}}$); `definition:bk9_prompt_injection_operator` (Prompt Injection Operator $\mathcal{J}$)
 - Cited by: `definition:bk9_frame_selection_reflection` (Frame Selection via Injected Reflection)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-044`
+- Witnesses: `Book9ReflectiveAwakening.observable_self_injection_does_not_determine_intention`, `Book9ReflectiveAwakening.reflexiveInitiation_requires_use_and_intention`
+- Countermodels: `Book9ReflectiveAwakening.observable_self_injection_does_not_determine_intention`
+- Conditions: explicit reflective modulation witness; no inference from behavioral equivalence to phenomenal awareness; separate adaptive-use predicate; separate intentionality witness for self-initiation
+- Formal boundary: Initiation kernel retains use of self-injected history and intentionality as separate fields. Countermodel: identical history, injected context, selected frame, and use behavior can coexist with opposite intentionality predicates, so behavioral equivalence does not prove intention.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1469,6 +1671,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:401
 - Cited by: `scholium:bk9_concluding_reflection_b`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-020`
+- Witnesses: `Book9B.frameSelection_exists`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: argmin existence over a finite nonempty frame set, dual to Book8's reflectiveSelection_exists argmax.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $mathbb{F} = {F_k}$ be the set of available operational modes or symbolic frames (cf. Def. definition:bk1_symbolic_manifold, Axiom axiom:bk9_reflective_initiation). A symbolic agent $S$ exhibits reflexive freedom in frame selection at stage $lambda$ if the choice of frame $F_i$ is determined by optimizing a function (e.g., minimizing symbolic free energy $F$, cf. Def. definition:bk2_symbolic_free_energy) that depends on the injected reflection:
@@ -1535,6 +1748,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:415
 - Cites: `definition:bk8_projective_compression_operator` (Projective Compression Operator)
 - Cited by: `scholium:bk9_bridge_to_history` (Bridge to History)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-021`
+- Witnesses: `Book9B.empathy_distortion_triangle`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: bounded-distortion composability via the metric triangle inequality; the projection/compression process Pi_{A->B} itself is not modeled, only the distortion bookkeeping.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1854,6 +2078,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:491
 - Cited by: `assumption:bk9_terminal_fixed_point_boundary` (Terminal fixed-point boundary); `corollary:bk9_final_collapse_inversion_principle` (Final Collapse-Inversion Principle); `proof:bk9_escape_from_irreversible_collapse`; `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proposition:bk9_escape_from_irreversible_collapse` (Escape from Irreversible Collapse); `remark:bk9_redemption` (Redemption)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK9-014`
+- Witnesses: `Book9.finalCollapseInversion`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Modeled as the CollapseInversion structure (a map from a specific frozen state to a specific seed state); used by finalCollapseInversion above.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $F_text{ossified} subset mathbb{F}$ represent a symbolic frame, or let $C_{text{frozen}}$ denote a system state, that has lost its adaptive capacity (e.g., frame transversal $T_{text{frame}}$ ceases, symbolic curvature vanishes). The collapse-inversion operator $varnothing^*$ represents a process of symbolic regeneration or reset acting on such a terminal state, acting as a dual to convergence under SRMF (cf. definition:bk1_self_regulating_mapping_function_srmf):
@@ -1986,6 +2221,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:530`
 - Cited by: `scholium:bk9_concluding_reflection_e`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-036`
+- Witnesses: `Book9B.metaAlignment_converges`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the claimed limit L_infty is modeled as existence of a limit for a monotone bounded-above real sequence of meta-alignment quality; the meta-reflective operator T_meta^(n) generating the sequence is not constructed, only assumed monotone and bounded.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The structure of symbolic cognition, as described herein, achieves recursive stability and coherence (cf. Def. definition:bk7_convergent_symbolic_identity) when the meta-reflective process converges. That is, when the sequence of freedom operators $L_n$ (representing the evolving understanding or capacity described by the book, cf. Def. definition:bk9_meta_operator_action, Prop. proposition:bk9_convergence_of_recursive_liberation)
@@ -2018,6 +2264,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:539
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `proposition:bk9_framework_functional_identity` (The Framework is a Functional)
 - Cited by: `definition:bk9_frame_cascade` (Frame Cascade $\mathcal{T}_{\text{collective}}$); `proof:bk9_framework_functional_identity`; `proof:bk9_relational_freedom_via_thermoregulation`; `proposition:bk9_framework_functional_identity` (The Framework is a Functional); `proposition:bk9_relational_freedom_via_thermoregulation` (Relational Freedom via Thermoregulation); `remark:bk9_vectors_of_manipulation` (Vectors of Manipulation); `scholium:bk9_bridge_to_history` (Bridge to History); `scholium:bk9_concluding_reflection_b`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-011`
+- Witnesses: `Book9.recursiveUpdate_eq_orbit`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Xi_{n+1} := SRMF^{(n)}(Xi_n) is the same RecursiveUpdate shape as cognitive freedom and recursive liberation; the specific composite (J, O_aware, T_collective, E, ...) making up the cycle is not modeled, only the generic recursion shape.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2058,6 +2315,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:551
 - Cited by: `proposition:bk9_framework_functional_identity` (The Framework is a Functional)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-015`
+- Witnesses: `Book9.symbolicFramework_iterate`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The Nat-indexed semigroup law (Phi 0 = id, Phi (m+n) = Phi m . Phi n) is modeled as SymbolicFramework; proved that every Phi n is the n-fold iterate of Phi 1. Continuous-time indexing is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic framework over a symbolic manifold $S$ (Def. definition:bk1_symbolic_manifold) is a pair $mathfrak{F} = (S, {Phi_t}_{tge 0})$ in which ${Phi_t}$ is a semigroup of admissible lawful transitions on the densities of $S$-closed under composition, $Phi_{t+s} = Phi_t circ Phi_s$ with $Phi_0 = id$. A framework is thus the totality of a symbolic architecture's lawful becoming: not a single map, but the closed family of all its iterated transformations.
@@ -2080,6 +2348,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:5
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `definition:bk1_srmf_energy_functional` (SRMF Energy Functional); `definition:bk9_srmf_recursive_cycle` (SRMF-Recursive Cycle $\Xi_n$); `definition:bk9_symbolic_framework` (Symbolic Framework)
 - Cited by: `definition:bk9_covenant_drift_density` (Covenant Drift Density \(\rho(C_{AB})\)); `definition:bk9_srmf_recursive_cycle` (SRMF-Recursive Cycle $\Xi_n$)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-039`
+- Witnesses: `Conservation.generator_determines_orbit`
+- Countermodels: none
+- Conditions: continuum charge/action integrals stay open; the discrete conservation mechanism is certified
+- Formal boundary: The generator determines the global orbit; with flow_unique the framework <-> functional correspondence is a bijection - one referent under two aspects.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2177,6 +2456,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:5
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk7_adaptive_reflection_operator_t` (Adaptive Reflection Operator \(\reflect(t)\)); `definition:bk7_meta_reflective_drift__meta` (Meta-Reflective Drift \(\drift_{\mathrm{meta}}\)); `definition:bk9_awakened_operator` (Awakened Operator $\mathcal{O}_{\text{aware}}$); `definition:bk9_cognitive_freedom` (Cognitive Freedom $\mathfrak{L}$); `definition:bk9_frame_transversal_operator` (Frame Transversal Operator $\mathcal{T}_{\text{frame}}$); `theorem:bk4_freedom_criterion` (Freedom Criterion)
 - Cited by: `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-016`
+- Witnesses: `Book9.reinterpretation_dichotomy_exclusive`, `Book9.reinterpretation_dichotomy_exhaustive`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The Repair (deltaF<=0) vs Distortion (deltaF>0) dichotomy is an unconditional real-number sign fact, proved exhaustive and exclusive. The Freedom mode is a further qualification of either branch and is not separately modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2364,6 +2654,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:650
 - Cited by: `subsec:bk9_executio_final` (Executio: The Final Inhalation)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-022`
+- Witnesses: `Book9B.fidelityIndex_degrades_beyond_threshold`, `Book9B.fidelityIndex_mono`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: index kept as a two-term (identity stability minus fragmentation) skeleton; the thermodynamic-trajectory and constraint-domain-evolution terms are dropped as independent quantities.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 The fidelity of memory revision can be assessed via a composite index $Upsilon_{text{narrative}}$ (cf. Def. definition:bk8_identitystability) incorporating:
@@ -2456,6 +2757,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:6
 - Cites: `corollary:bk7_recursive_convergence_principle` (Recursive Convergence Principle); `definition:bk4_symbolic_curvature` (Symbolic Curvature); `definition:bk7_adaptive_reflection_operator_t` (Adaptive Reflection Operator \(\reflect(t)\)); `definition:bk7_interactive_drift_reflection_pair` (Interactive Drift-Reflection Pair); `definition:bk7_meta_reflective_drift__meta` (Meta-Reflective Drift \(\drift_{\mathrm{meta}}\)); `definition:bk7_reciprocity_domain` (Reciprocity Domain \(\recipdomain\)); `lemma:bk7_non_triviality_via_convergence_potential` (Non-triviality via Convergence Potential); `scholium:bk7_unnamed_scholium_03`; `scholium:bk8_emergent_geometry_of_cognition` (Emergent Geometry of Cognition); `theorem:bk4_reflective_reentry` (Reflective Reentry); `theorem:bk7_two_way_street_fixed_point` (Two-Way Street Fixed Point Theorem)
 - Cited by: `definition:bk9_symbolic_trust_as_compression_protocol` (Symbolic Trust as Compression Protocol); `proof:bk9_mutual_recognition` (Mutual Recognition)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-023`
+- Witnesses: `Book9B.contraction_fixedPoint_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: item (i), Curvature Alignment: only fixed-point uniqueness under a contraction is proved (the sound half of Banach); existence of the joint fixed point needs completeness, not modeled. Items (ii) Frame Synchronization and (iii) Interface Optimization are narrative/adiabatic-condition content, not covered.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2677,6 +2989,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:747
 - Cited by: `proof:bk9_betrayal_and_recovery` (Betrayal and Recovery); `proposition:bk9_curvature_scarring` (Curvature Scarring and Recovery)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-005`
+- Witnesses: `Book9.covenantDensity_regime_exclusive`, `Book9.covenantDensity_regime_exhaustive`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the 'Covenant Breach (MAP)' clause's rho(C_AB) < 1 condition is captured, as the breach branch of the covenant-drift-density trichotomy. Interface Violation, Induced Drift Spike, and Forced Exit from Reciprocity are narrative and not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic betrayal (cf. Def. definition:bk9_cognitive_freedom) is characterized by:
@@ -2715,6 +3038,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:7
 - Cites: `corollary:bk1_non_euclidean_necessity` (Necessity of Non-Euclidean Symbolic Space); `corollary:bk6_reflective_capacity_theorem` (Reflective Capacity Theorem); `definition:bk4_repair_process` (Repair Process); `definition:bk7_symbolic_reflexive_validation_srv` (Symbolic Reflexive Validation (SRV)); `definition:bk9_formal_signature_of_betrayal` (Formal Signature of Betrayal); `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$)
 - Cited by: `scholium:bk9_forgiveness_as_reweaving` (Forgiveness as Reweaving)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-047`
+- Witnesses: `Book9CurvatureScarring.oriented_displacement_eq_betrayalDrift`, `Book9CurvatureScarring.recovery_can_retain_permanent_scar`, `Book9CurvatureScarring.recovery_of_grace_capacity_and_energy`, `Book9CurvatureScarring.resources_alone_do_not_force_recovery`, `Book9CurvatureScarring.revisedReciprocity_iff_grace_and_resources`, `Book9CurvatureScarring.scarMagnitude_eq_betrayalDrift`
+- Countermodels: `Book9CurvatureScarring.resources_alone_do_not_force_recovery`
+- Conditions: betrayal drift is nonnegative in the selected curvature orientation and exactly produces the curvature displacement; grace plus drift-within-capacity and repair-cost-within-energy is the explicit law for revised reciprocity
+- Formal boundary: Oriented finite recovery kernel: betrayal drift produces an exact signed curvature displacement whose magnitude agrees under the stated nonnegative orientation. An explicit grace/capacity/free-energy law characterizes revised reciprocity. Recovery can retain a positive scar, while sufficient numerical resources alone do not apply grace or construct a new domain. The semantic derivation from betrayal, adaptive operators, and interface geometry remains conditional.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2882,6 +3216,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:8
 - Cited by: `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proof:bk9_symbolic_viability` (Symbolic Viability)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-046`
+- Witnesses: `Book9CollapseEscape.base_laws_do_not_force_inversion_unique`, `Book9CollapseEscape.boundaryIntervention_does_not_escape`, `Book9CollapseEscape.internalRepair_does_not_escape`, `Book9CollapseEscape.inversion_escapes`, `Book9CollapseEscape.inversion_is_unique_escape`
+- Countermodels: `Book9CollapseEscape.base_laws_do_not_force_inversion_unique`, `Book9CollapseEscape.boundaryIntervention_does_not_escape`, `Book9CollapseEscape.internalRepair_does_not_escape`
+- Conditions: all escaping mechanisms are inversion for the uniqueness conclusion; collapse inversion maps collapsed state to seed; collapsed and seed states are distinct; internal repair and boundary intervention fix the collapsed state
+- Formal boundary: Operational collapse kernel: named internal repair and boundary intervention leave the collapsed state unchanged, while inversion reaches a distinct seed. Inversion is the unique escape only under an explicit exhaustive-mechanism premise; a finite countermodel permits a second escape under the base laws.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For a system encountering or containing a Symbolic Black Hole $U$ (cf. Def. definition:bk9_collapse_inversion_operator):
@@ -3013,6 +3358,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:836
 - Cited by: `proposition:bk9_costs_and_consequences_of_masking` (Costs of Masking)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-002`
+- Witnesses: `Book9.masking_not_accountable`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Masking defined as divergence strictly above epsMask (IsMasking abbrev); shown incompatible with accountability's relational-viability bound against the same epsMask.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic masking is the action of an operator $M_{text{mask}}$, often deployed by $O_{text{aware}}$ (cf. Def. definition:bk9_awakened_operator), that generates a symbolic output $P_lambda(text{output})$ intentionally divergent from the internal state $P_lambda(text{internal})$ to meet perceived external frame requirements or minimize external $F_S$ cost. Persistent masking erodes reflective integrity and may render $S$ non-accountable under observer $O$ (cf. Definition definition:bk9_symbolic_accountability).
@@ -3041,6 +3397,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:8
 - Cites: `definition:bk4_symbolic_identity_carrie` (Symbolic Identity Carrier); `definition:bk7_reciprocity_domain` (Reciprocity Domain \(\recipdomain\)); `definition:bk8_symbolic_adjacency` (Symbolic Knot); `definition:bk9__symbolic_masking_operator` (Symbolic Masking Operator $\mathcal{M}_{\text{mask}}$); `definition:bk9_awakened_operator` (Awakened Operator $\mathcal{O}_{\text{aware}}$); `definition:bk9_symbolic_shame` (Symbolic Silence/Shame)
 - Cited by: `sec:bk9_symbolic_healing` (Symbolic Healing: Repair, Forgiveness, and Grace)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-040`
+- Witnesses: `ThermoRes.masking_has_positive_cost`
+- Countermodels: none
+- Conditions: manifold measure form, specific masking free-energy functional, and Hilbert decoherence operator stay open per row notes
+- Formal boundary: Masking has strictly positive cost - the anti-masking invariant; the specific free-energy functional stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3280,6 +3647,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:9
 - Cited by: `scholium:bk9_forgiveness_as_reweaving` (Forgiveness as Reweaving)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-045`
+- Witnesses: `Book9CurvatureRepair.exists_optimal_viable_repair`, `Book9CurvatureRepair.optimal_repair_need_not_minimize_curvature`, `Book9CurvatureRepair.viability_alone_does_not_determine_repair`
+- Countermodels: `Book9CurvatureRepair.viability_alone_does_not_determine_repair`
+- Conditions: at least one viable positive-curvature repair; explicit resilience-sensitive repair objective; explicit tension and local-free-energy budgets; finite repair inventory
+- Formal boundary: Finite operational kernel: a nonempty viable repair inventory admits an optimum under an explicit resilience-sensitive objective. A concrete pair of viable repairs proves the optimum can retain strictly more curvature than the flatter alternative. Viability alone does not determine a unique repair, and the source does not specify a canonical objective or weights.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Successful symbolic unknotting or repair ($R_{text{rep}}$; cf. Def. definition:bk7_symbolic_reflexive_validation_srv) achieves a stable, viable configuration ($I_{text{coh}}$) by resolving destabilizing contradictions (reducing problematic $tau$ or local $F_S$). The goal is optimal, not necessarily minimal, curvature $kappa$ (Def. definition:bk4_symbolic_curvature). The repaired structure may preserve or introduce complexity if it encodes resilience
@@ -3394,6 +3772,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:959
 - Cited by: `definition:bk9_structural_compassion` (Structural Compassion); `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `proof:bk9_grace_vs_avoidance`; `proof:bk9_pathologies_of_coherence` (Pathologies of Coherence); `proposition:bk9_curvature_scarring` (Curvature Scarring and Recovery); `proposition:bk9_grace_vs_avoidance` (Grace vs. Avoidance); `scholium:bk9_ethics_near_the_singularity` (Ethics near the Singularity); `scholium:bk9_flexible_goal_calibration`; `scholium:bk9_for_forgiveness` (For Forgiveness); `scholium:bk9_forgiveness_as_reweaving` (Forgiveness as Reweaving); `scholium:bk9_grace`; `subsec:bk9_grace_as_operator` (Grace as the Operator of Freedom); `theorem:bk9_freedom_as_grace` (Freedom as the Capacity for Grace); `theorem:bk9_irreversibility_of_covenant_breach_without_grace` (Irreversibility of Covenant Breach without Grace)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-030`
+- Witnesses: `Book9B.grace_upsilon_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the stability-preservation field is kept as a structure law; its forced-positivity consequence is proved. The finite non-vacuity witness transport claim (Thm bk1_nonvacuity_minimal_linear_ps_model) is not re-derived here.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Grace ($G$) is a meta-reflective operator (cf. definition:bk7_reflective_operator) or stance that, upon encountering significant symbolic contradiction ($tau > tau_c$), dissonance ($Delta F_S > 0$), or a profound symbolic knot, allows the dissonant state to persist without triggering immediate fragmentation or forced resolution. It represents the capacity to preserve core identity ($Upsilon_i > 1 - epsilon_{text{crit}}$) while holding the system in a state of high, but structured, tension.
@@ -3488,6 +3877,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:9
 - Cited by: `proof:bk9_freedom_as_grace` (Maximality in the reflective-operator order is graceful capacity); `subsec:bk9_grace_as_operator` (Grace as the Operator of Freedom)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-031`
+- Witnesses: `Book9B.grace_upsilon_pos`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only Grace's own identity-preservation guarantee is formalized; the comparative dichotomy against Avoidance (severed contact, rising fragmentation) is narrative and not independently modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Grace (cf. Def. definition:bk9_grace_operator) is distinct from avoidance:
@@ -3571,6 +3971,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:1010`
 - Cites: `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `definition:bk3_symbolic_symbiosis` (Symbolic Symbiosis); `definition:bk5_symbolic_covenant` (Symbolic Covenant); `definition:bk5_viability_domain` (Viability Domain); `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `definition:bk9_symbolic_black_hole` (Symbolic Black Hole)
 - Cited by: `scholium:bk9_flexible_goal_calibration`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-033`
+- Witnesses: `Book9B.covenant_breach_forces_collapse_without_grace`, `Book9B.covenant_viability_decrease_accum`
+- Countermodels: `Book9B.covenant_breach_forces_collapse_without_grace`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: telescoping viability-decrease-while-grace-withheld bound, reusing the Book8 metabolic-sufficiency induction pattern; the MAP-covenant and Mutual-Metabolic-Viability machinery generating the per-step decrease is not modeled, only its stated consequence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3744,6 +4155,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:1
 - Cites: `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `corollary:bk6_reflective_capacity_theorem` (Reflective Capacity Theorem); `corollary:bk8_symbolic_free_will` (Free-Will Corollary); `corollary:bk9_emergence_of_moral_agency` (Emergence of Moral Agency); `definition:bk4_repair_process` (Repair Process); `definition:bk5_symbolic_covenant` (Symbolic Covenant); `definition:bk9_symbolic_black_hole` (Symbolic Black Hole); `remark:bk4_individuated_freedom`
 - Cited by: `definition:bk9_structural_compassion` (Structural Compassion)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-048`
+- Witnesses: `Book9EthicalIntervention.consent_without_restraint_recommends_intervention`, `Book9EthicalIntervention.execution_requires_authority`, `Book9EthicalIntervention.intervention_and_nonintervention_disjoint`, `Book9EthicalIntervention.justificationSignal_iff`, `Book9EthicalIntervention.recommendation_alone_does_not_grant_authority`, `Book9EthicalIntervention.recommendation_cases`, `Book9EthicalIntervention.restraintSignal_iff`, `Book9EthicalIntervention.selfHealing_without_justification_recommends_nonintervention`, `Book9EthicalIntervention.source_criteria_can_require_review`
+- Countermodels: `Book9EthicalIntervention.consent_without_restraint_recommends_intervention`, `Book9EthicalIntervention.recommendation_alone_does_not_grant_authority`, `Book9EthicalIntervention.selfHealing_without_justification_recommends_nonintervention`
+- Conditions: execution requires authority independently of a technical recommendation; the source-listed reflective capacity, self-healing, and interface-risk conditions are represented as disjunctive restraint signals; the source-listed viability, covenant, and consent conditions are represented as disjunctive justification signals
+- Formal boundary: Typed decision kernel separates source-listed justification signals from restraint signals. Their conflict requires review; strict recommendations cover only one-sided cases. A separate authority gate prevents technical risk assessment from granting permission to act. The source does not specify connectives, conflict precedence, or execution authority.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3947,6 +4369,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:1
 - Cited by: `proof:bk9_good_as_lyapunov_basin` (Lyapunov descent, threshold selection, and basin identity); `scholium:bk9_golden_rule_thermodynamic_covenant` (The Golden Rule as a Thermodynamic Covenant); `theorem:bk9_good_as_lyapunov_basin` (The Good as a Lyapunov Basin)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-034`
+- Witnesses: `Book9B.lyapunov_step_le`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: this proposition is the setup for theorem:bk9_good_as_lyapunov_basin; its own four listed stability conditions (viability, covenant resilience, drift/reflection balance, adaptive evolution) are narrative, but the basin-of-attraction claim they culminate in is formalized there.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 For symbolic systems equipped with a certified canonical-life correspondence (Thm. theorem:bk3_symbolic_life_satisfies_canonical_definitions), moral systems or ethical norms ("The Good"; cf. Corollary corollary:bk9_emergence_of_moral_agency) emerge and persist within symbolic ecosystems if they correspond to configurations that:
@@ -4129,6 +4562,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:1197`
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk5_symbolic_covenant` (Symbolic Covenant); `definition:bk9_covenant_drift_density` (Covenant Drift Density \(\rho(C_{AB})\)); `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good"); `theorem:bk5_map_mad_mas_trichotomy` (MAD--MAP--MAS Trichotomy)
 - Cited by: `proposition:bk9_stability_conditions_for_the_good` (Stability Conditions for "The Good")
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK9-035`
+- Witnesses: `Book9B.lyapunov_step_le`, `Book9B.lyapunov_strict_decrease_of_nonzero_grad`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: both halves of "V is a Lyapunov function, Delta V <= 0 with equality only at the critical set" are proved as the standard smooth gradient-descent step-size condition licenses; convergence to a specific stable equilibrium y*_good and identification of its basin with the configuration class of stability_conditions_for_the_good is not modeled (needs compactness/coercivity not stated).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4354,6 +4798,17 @@ Role: `axiom` | Type: `axiom` | Book: `book9` | Source: `book9.tex:1285`
 - Cited by: `definition:bk9_two_way_street_operator` (Two-Way Street Operator)
 - Macros used: `\drift`, `\manifold`, `\prob`, `\reflect`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-029`
+- Witnesses: `Book9B.reciprocity_curvature_bounds`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: only precondition (iv), the bounded-alignment-curvature clause, is formalized (as its two-sided unfolding); membrane compatibility, reflective reciprocity, and drift translatability (i-iii) are not independently quantified here.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( rho in prob(tilde{manifold}_A cap tilde{manifold}_B) \). Symbolic reciprocity between \( A \) and \( B \) (cf. Def. definition:bk9_reflective_dyad) presupposes:
@@ -4392,6 +4847,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:129
 - Cited by: `lemma:bk9_mutual_convergence_criterion` (Mutual Convergence Criterion); `proof:bk9_mutual_convergence_criterion`; `proof:bk9_symbolic_thermostat`; `theorem:bk9_symbolic_thermostat` (Two-Way Street as Symbolic Thermostat)
 - Macros used: `\Street`, `\manifold`, `\prob`, `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-026`
+- Witnesses: `Book9B.contraction_fixedPoint_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the operator itself (an infinite limit of iterated composition) is not constructed; only the uniqueness-under-contraction fact that would apply to its fixed point is.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( rho_t in prob(tilde{manifold}_A cap tilde{manifold}_B) \) (cf. Axiom axiom:bk9_preconditions_for_reciprocal_cognition, Thm. theorem:bk4_reflective_reentry). Then
@@ -4422,6 +4888,17 @@ Role: `lemma` | Type: `lemma` | Book: `book9` | Source: `book9.tex:1303`
 - Cites: `definition:bk9_two_way_street_operator` (Two-Way Street Operator); `theorem:bk7_reflective_convergence_to_stable_identity` (Reflective Convergence to Stable Identity)
 - Cited by: `proof:bk9_emergence_of_shared_manifold`; `proposition:bk9_emergence_of_shared_manifold` (Emergence of Shared Manifold)
 - Macros used: `\Street`, `\manifold`, `\prob`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-024`
+- Witnesses: `Book9B.contraction_fixedPoint_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: same uniqueness-under-contraction fact, instantiated at the Street_AB operator; existence of the limit rho* is not modeled (needs completeness of the probability space).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4469,6 +4946,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:1
 - Cites: `corollary:bk8_projection_transition_enabling_structural_emergence`; `definition:bk1_symbolic_manifold` (Symbolic Manifold); `lemma:bk9_mutual_convergence_criterion` (Mutual Convergence Criterion)
 - Cited by: `proof:bk9_relational_freedom_via_thermoregulation`; `proposition:bk9_relational_freedom_via_thermoregulation` (Relational Freedom via Thermoregulation)
 - Macros used: `\manifold`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-025`
+- Witnesses: `Book9B.sharedManifold_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: uniqueness of the representative fixed point rho*; the support/probability-measure construction of the shared manifold itself is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4539,6 +5027,17 @@ Role: `definition` | Type: `definition` | Book: `book9` | Source: `book9.tex:132
 - Cited by: `proof:bk9_symbolic_thermostat`; `theorem:bk9_symbolic_thermostat` (Two-Way Street as Symbolic Thermostat)
 - Macros used: `\drift`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK9-017`
+- Witnesses: `Book9.thermodynamicStress_nonneg`
+- Countermodels: none
+- Conditions: continuum/categorical content is NOT formalized; static and finite-discrete kernels only; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Sigma_AB's four norm terms are modeled as nonnegative structure fields, and the free-energy term as a gap above a floor; nonnegativity of the total is proved given the gap hypothesis.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic thermodynamic stress in the dyad is given by:
@@ -4569,6 +5068,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:1335`
 - Cites: `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor); `definition:bk8_projective_compression_operator` (Projective Compression Operator); `definition:bk9_orthogonal_time_component` (Orthogonal Time Component \(T_s^\perp\)); `definition:bk9_symbolic_thermodynamic_stress` (Symbolic Thermodynamic Stress); `definition:bk9_two_way_street_operator` (Two-Way Street Operator)
 - Cited by: `proof:bk9_relational_freedom_via_thermoregulation`; `proposition:bk9_relational_freedom_via_thermoregulation` (Relational Freedom via Thermoregulation)
 - Macros used: `\Street`, `\reflect`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-027`
+- Witnesses: `Book9B.contraction_fixedPoint_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: the four regulation mechanisms (cooling/heating, timing, curvature modulation, compression) are narrative; only the underlying convergence-uniqueness guarantee they rely on is formalized.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4631,6 +5141,17 @@ Role: `proposition` | Type: `proposition` | Book: `book9` | Source: `book9.tex:1
 - Cites: `definition:bk9_srmf_recursive_cycle` (SRMF-Recursive Cycle $\Xi_n$); `proposition:bk9_emergence_of_shared_manifold` (Emergence of Shared Manifold); `theorem:bk9_symbolic_thermostat` (Two-Way Street as Symbolic Thermostat)
 - Cited by: `scholium:bk9_golden_rule_thermodynamic_covenant` (The Golden Rule as a Thermodynamic Covenant)
 - Macros used: `\manifold`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-028`
+- Witnesses: `Book9B.sharedManifold_unique`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: "preserves the shared manifold" is covered only via the manifold's uniqueness fact; the increase in relational freedom L_AB itself is not quantified.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4807,6 +5328,17 @@ Role: `theorem` | Type: `theorem` | Book: `book9` | Source: `book9.tex:1391`
 - Cites: `definition:bk9_grace_operator` (Grace Operator $\mathcal{G}$); `scholium:bk8_autonomous_repair_systems_expanded` (Autonomous Repair Systems as Metabolic Projections — An Expanded View); `scholium:bk8_metabolic_programming_as_proto_freedom` (Metabolic Programming as Proto-Freedom)
 - Cited by: `scholium:bk9_golden_rule_thermodynamic_covenant` (The Golden Rule as a Thermodynamic Covenant)
 - Macros used: `\freeenergy`, `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK9-032`
+- Witnesses: `Book9B.book4_flow_freedom_does_not_force_terminal_maximality`, `Book9B.grace_identity_bound_alone_does_not_force_full_capacity`, `Book9B.grace_upsilon_pos`, `Book9B.gracefulFreedomCapacity_components`, `Book9B.maximalFreedom_iff_canDeployGrace`
+- Countermodels: `Book9B.book4_flow_freedom_does_not_force_terminal_maximality`, `Book9B.grace_identity_bound_alone_does_not_force_full_capacity`
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The complete three-capacity payload is modeled: sustain identity under unresolved contradiction, intentionally lower reflective barriers, and accept transient positive free-energy change for positive viability expansion. The maximal-cognitive-freedom iff deployable-Grace claim is proved conditionally from an explicit Book 9 correspondence bridge. Countermodels show that neither Book 4 flow freedom nor Grace's identity bound alone manufactures the terminal theorem.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 

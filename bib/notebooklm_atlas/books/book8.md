@@ -1,6 +1,12 @@
 # Principia Symbolica NotebookLM Atlas - book8
 
 Nodes in this source group: 130
+- Lean program commit: `edc148696a740d319732fedd3da8e207c93ad5c3`
+- Receipted Lean declarations: 1737
+- Checked bindings: 1295
+- Mapped Atlas nodes: 651
+- Lean status counts: conditional=295, constructed=49, exact=184, interpretive=6, open_bridge=128, poetic=1, refuted=2
+- `proof_status` is manuscript-local; `lean_alignment.statuses` is independent kernel correspondence.
 
 Each card preserves label, role, source location, proof status, complete supports, complete uses, macros, and full cleaned body text.
 When enabled, verbatim LaTeX appears after the readable body for exact-source recovery.
@@ -120,6 +126,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:23`
 - Cited by: `subsec:bk7_dynamics_symbolic_power` (Dynamics of Symbolic Power)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-004`
+- Witnesses: `Book8.bool_swap_no_fixed_points`, `Book8.meaning_preserved_at_fixed_point`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Proves the 'unless' direction (fixed points preserve meaning) and gives a finite countermodel (Bool swap has no fixed points) showing the generic-loss case is non-vacuous. Does not prove meaning strictly differs off fixed points in general (would require injectivity assumptions not in the source).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic significance is locally defined with respect to interpretive manifolds (cf. Def. definition:bk1_observer_relative_interpretability, Scholium scholium:bk2_on_hypotheses_as_thermodyn). Let $mathscr{S}_1$, $mathscr{S}_2$ be symbolic systems; then
@@ -150,6 +167,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:31`
 - Cites: `axiom:bk5_mutual_metabolit_viability` (Mutual Metabolic Viability); `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk5_mutually_assured_progress` (Mutually Assured Progress); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk5_symbolic_energy` (Symbolic Energy)
 - Cited by: `definition:bk9_structural_compassion` (Structural Compassion)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-027`
+- Witnesses: `Book68B.mutuallyAssuredProgress_accum`, `Book68B.mutuallyAssuredProgress_unbounded`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the Mutually Assured Progress viability clause (joint free energy surplus positive indefinitely) is formalized, strengthened to genuine divergence under a fixed positive per-step growth rate. The shared projective interface P_ij and bidirectional reflectivity of Phi are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -330,6 +358,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:71`
 - Cited by: `corollary:bk8_projection_transition_enabling_structural_emergence`; `proof:bk8_no_free_projection`; `proof:bk8_projection_transition_enabling_structural_emergence`; `proof:bk8_translation_limit`
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-005`
+- Witnesses: `Book8.inverse_of_drift_not_stasis`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Honest algebraic content of 'the inverse of the expanded drift is not stasis but contextual reexpression': a genuine pointwise inverse cannot be a constant map on a domain with two distinct points.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A symbolic projection $Pi$ (Def. definition:bk8_symbolic_projection) carries the
@@ -419,6 +458,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:102`
 - Cites: `definition:bk2_symbolic_entropy` (Symbolic Entropy)
 - Cited by: `scholium:bk8_telephone_game` (Every Translation Betrays Something)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-009`
+- Witnesses: `Book8.loss_positive_of_imperfect_stability`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Direct consequence of the loss law: stability < 1 and positive free energy force strictly positive loss, i.e. 'all projection implies symbolic loss unless stability is maximal'.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -552,6 +602,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:140`
 - Cites: `definition:bk1_symbolic_manifold` (Symbolic Manifold)
 - Cited by: `corollary:bk8_bound_on_universal_embedding` (Bound on Universal Embedding); `proof:bk8_bound_on_universal_embedding`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-011`
+- Witnesses: `Book8.universal_embedding_epsilon_nonneg`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Only the nonnegativity-of-distortion consequence is modeled via the same UniversalEmbeddingBound structure; the existence claim 'forall S_i exists Pi_i with D(Pi_i) < epsilon' is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -691,6 +752,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:186`
 - Cited by: `definition:bk8_symbolic_stress_tensor` (Reflexive Debugging Operator $\mathcal{O}_{\text{debug}}$)
 - Macros used: `\freeenergy`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-013`
+- Witnesses: `Book8.collapse_within_threshold`, `Book8.drift_cancellation`, `Book8.reflective_permutation_assoc`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: The three Type I/II/III propositions below are worked instances of this axiom's finite-rule-set claim; the general existence of a finite rule set reducing any SRMF-compliant entangled structure is not proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 These transformation rules operate on the symbolic manifold (Def. definition:bk1_symbolic_manifold), enabling resolution of entangled structures within SRMF compliance bounds.
@@ -778,6 +850,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:2
 - Cited by: `remark:bk8_symbolic_repair_loop` (Symbolic Repair Loop)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-014`
+- Witnesses: `Book8.collapse_within_threshold`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Type I: metric-proximity collapse bound -- if Râˆ˜D is within eps of Id and eps is below the local threshold, the loop stays strictly within that threshold of Id.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( x in M \) be a symbolic point (cf. definition:bk1_symbolic_manifold) acted upon by a reflexive pair \( R_lambda circ D_lambda approx text{Id} + epsilon \). If \( epsilon < epsilon_O(x) \), then the loop can be symbolically collapsed via:
@@ -832,6 +915,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:2
 - Cites: `definition:bk1_drift_field` (Drift Field); `definition:bk8_structural_regulators` (Directional Drift Operators \(D_1, D_2\))
 - Cited by: `remark:bk8_symbolic_repair_loop` (Symbolic Repair Loop)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-015`
+- Witnesses: `Book8.drift_cancellation`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Type II: 'opposite reflective directions form a stable braid' is read as two exact one-sided inverses, from which the four-fold composite collapsing to identity follows by direct calculation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -901,6 +995,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:2
 - Cites: `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF))
 - Cited by: `remark:bk8_symbolic_repair_loop` (Symbolic Repair Loop)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-016`
+- Witnesses: `Book8.reflective_permutation_assoc`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Type III: proves exact, unconditional associativity of composition -- strictly stronger than the source's 'up to an observer-bounded transformation T_epsilon' claim, which is a genuine honesty gap (we prove more than was claimed, by dropping the approximation).
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1010,6 +1115,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:269
 - Cited by: `subsec:bk8_properties_and_justification_of_observer_dependence` (Properties and Justification of \(\metric_H\))
 - Macros used: `\freeenergy`, `\identitystability`, `\reflect`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-028`
+- Witnesses: `Book68B.debugCompose_injective`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the four-step composite structure (detect/project/repair/validate) and its injectivity-preservation are modeled; the free-energy detection threshold theta_F and the disjunctive validation condition are not.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 A Reflexive Debugging Operator, $O_{text{debug}}$, is a higher-order composite operator, emergent from the system's reflective capacities ($reflect$) and SRMF, that:
@@ -1090,6 +1206,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:300`
 - Cites: `axiom:bk5_srmf_operator_selection_evolution` (Stateful SRMF Operator Selection and Evolution); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk5_viability_domain` (Viability Domain); `definition:bk8_entropy_shift` (Entropy Shift \(\Delta \mu\))
 - Cited by: `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold)
 - Macros used: `\freeenergy`, `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-025`
+- Witnesses: `Book8.debuggingFavored_net_gain`, `Book8.debugging_preserves_finite_viability`, `Book8.finiteThermodynamicSnapshot_freeEnergy`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Cost-vs-reduction net-gain inequality: literal reading of 'the cost must be offset by the reduction'. The Book 2 -> Book 5 -> Book 8 bridge identifies finite ensemble free energy with Book 5 snapshot free energy and proves that a favored debugging step preserves positive-free-energy viability. The operator's own four-step definition (detect/project/apply/validate) is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1401,6 +1528,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:423
 - Cited by: `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact); `remark:appD_llm_tuple_anchors` (Anchoring the LLM tuple in PS); `remark:bk9_temes_as_mediated_artifacts` (Temes as mediated artifacts)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK8-001`
+- Witnesses: `Book8.material_specialize`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Models only the observer-indexed invariant claim; the projection map X->Y and 'bounded symbolic interval' persistence are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $X$ be a symbolic structure and let $O$ be a bounded observer
@@ -1443,6 +1581,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:437
 - Cites: none
 - Cited by: `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact); `remark:bk9_temes_as_mediated_artifacts` (Temes as mediated artifacts)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-002`
+- Witnesses: `Book8.not_material_visible_example`, `Book8.visible_to_observer_zero`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Explicit Fin 2 countermodel proving visibility to one observer does not imply materiality over the class -- exactly the text's 'not visibility to all possible observers' point.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1503,6 +1652,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:455`
 - Cites: `definition:bk1_bounded_observer` (Bounded Observer); `definition:bk1_symbolic_field_curvature_tensor` (Symbolic Field Curvature Tensor); `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk6_symbolic_curvature_tensor` (Symbolic Curvature Tensor)
 - Cited by: `proof:bk8_symbolic_curvature_and_separability` (Symbolic Curvature and Separability)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-054`
+- Witnesses: `Book8FramingEquivalence.curvature_alone_does_not_force_entanglement`, `Book8FramingEquivalence.curvature_nonzero_iff_all_productSpans_excluded`, `Book8FramingEquivalence.curvature_nonzero_iff_perceivedEntangled`, `Book8FramingEquivalence.curvature_zero_iff_separable`, `Book8FramingEquivalence.framing_equivalence`
+- Countermodels: `Book8FramingEquivalence.curvature_alone_does_not_force_entanglement`
+- Conditions: projection residual vanishes iff some locally admissible subsystem pair places the observed difference in its product span; symbolic curvature vanishes iff the observer projection residual vanishes
+- Formal boundary: Exact logical framing kernel: perceived entanglement is exclusion from every locally admissible product span. Given explicit curvature-to-projection-residual and residual-to-separability bridges, nonzero curvature is equivalent to that universal exclusion. A countermodel shows an unconstrained scalar curvature label alone does not force entanglement; the manifold integral, Frechet derivative, and physical tensor-product semantics remain in the bridge obligation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1716,6 +1876,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:548`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-045`
+- Witnesses: `Atlas.holonomy_zero_iff_commute`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Entangled iff curvature nonzero: the flatness-iff-commuting kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $(M, kappa)$ be a symbolic manifold with non-zero curvature
@@ -1806,6 +1977,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:5
 - Cites: `definition:bk1_symbolic_manifold` (Symbolic Manifold); `definition:bk4_bounded_observer` (Bounded Observer); `definition:bk4_symbolic_curvature` (Symbolic Curvature)
 - Cited by: `scholium:bk8_freedom_begins_with_debugging_the_debugger` (Freedom Begins with Debugging the Debugger)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-044`
+- Witnesses: `ThermoRes.flattening_reduces_curvature`
+- Countermodels: none
+- Conditions: manifold measure form, specific masking free-energy functional, and Hilbert decoherence operator stay open per row notes
+- Formal boundary: Decoherence as flattening reduces curvature with equality iff flat; the Hilbert decoherence operator stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -1910,6 +2092,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:602`
 - Cited by: `proof:bk8_entanglement_as_frame_artifact` (Entanglement and Frame Artifact)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-012`
+- Witnesses: `Book8.frameResidual_eq_zero_iff`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Only the algebraic rearrangement of the stated equation is proved; the 'vanishes iff identical symbolic expressivity' characterization is not modeled (would require a formal notion of frame expressivity).
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This frame transformation theorem is grounded in symbolic entropy principles (Def. definition:bk2_symbolic_entropy; cf. Cor. corollary:bk8_resonant_cognition) governing information transfer across observer boundaries.
@@ -1996,6 +2189,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:631`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-046`
+- Witnesses: `Atlas.non_euclidean_necessity`
+- Countermodels: none
+- Conditions: linear-transport model for holonomy (Christoffel/vector-field forms stay open); pair-covering as the topological-regularity stand-in (point-set topology unmodeled, named); smoothness-as-C-infinity stays open
+- Formal boundary: Entanglement frame-invariant under linear frames, variant under curved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Quantum entanglement, as perceived by a Hilbertian observer $O_H$ (cf. definition:bk4_bounded_observer), is frame-invariant under transformations between linear frames, but frame-variant under transformations to curved symbolic frames.
@@ -2055,6 +2259,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:649
 - Cites: `definition:bk2_symbolic_free_energy` (Symbolic Free Energy); `definition:bk8_symbolic_projection` (Symbolic Projection)
 - Cited by: `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `definition:bk9_symbolic_empathy` (Symbolic Empathy $\mathfrak{E}$); `proof:bk9_symbolic_thermostat`; `theorem:bk9_symbolic_thermostat` (Two-Way Street as Symbolic Thermostat)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-029`
+- Witnesses: `Book68B.exists_argmin`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the argmin-existence half (a minimal-free-energy representative exists in any nonempty finite fibre) is proved; the projection map Pi and the fibre Pi^{-1}(phi) itself are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2213,6 +2428,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:691`
 - Cites: `corollary:bk8_universality_condition` (Universality Condition)
 - Cited by: `scholium:bk8_telephone_game` (Every Translation Betrays Something)
 - Macros used: `\freeenergy`, `\identitystability`, `\loss`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-010`
+- Witnesses: `Book8.perfect_translation_forces_maximal_stability`, `Book8.universal_embedding_epsilon_nonneg`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: epsilon >= (1/2)*(1-stability) kept as a structure field (the sup/inf over projections is not modeled); proves epsilon=0 forces stability=1, i.e. perfect translation is impossible unless identity stability is maximal.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2390,6 +2616,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:742`
 - Cited by: `proof:bk1_realization_of_symbolic_phase_transitions`; `proof:bk8_freedom_emergence_criterion`; `proof:bk8_threshold_of_metabolic_autonomy`; `theorem:bk8_freedom_emergence_criterion` (Freedom Emergence Criterion)
 - Macros used: `\freeenergy`, `\identitystability`, `\symb`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-019`
+- Witnesses: `Book8.metabolicSufficiency_decrease_accum`, `Book8.metabolicSufficiency_terminates`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Finite/discrete honest kernel only: bounded, steadily-decreasing free energy forces termination within a computable step count. The limsup/exponential identity-stability convergence claim is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ satisfy the Metabolic Sufficiency Criterion (Axiom axiom:bk8_mutation_phase_shift, cf. Def. definition:bk2_symbolic_free_energy for $freeenergy$). Define the global autonomy functional:
@@ -2452,6 +2689,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:759`
 - Cites: `definition:bk2_symbolic_temperature` (Symbolic Temperature); `definition:bk5_process_free_energy` (Process Free Energy $\Fproc$); `definition:bk8_metabolic_programming_cycle` (Metabolic Programming Cycle); `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$); `theorem:bk8_observer_projection_tensor` (Thermodynamics of Reflexive Debugging)
 - Cited by: `proof:bk8_freedom_via_meta_metabolic_control`; `theorem:bk8_freedom_via_meta_metabolic_control` (Freedom via Meta‑Metabolic Control)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-049`
+- Witnesses: `Book8CognitiveScaffold.CertifiedScaffold.iterate_identity_preserved`, `Book8CognitiveScaffold.CertifiedScaffold.iterate_trajectory_bounded`, `Book8CognitiveScaffold.CertifiedScaffold.one_step_freeEnergy_nonincrease`, `Book8CognitiveScaffold.ComposablePair.iterate_closed`, `Book8CognitiveScaffold.ComposablePair.step_closed`, `Book8CognitiveScaffold.composability_alone_does_not_bound_trajectory`, `Book8CognitiveScaffold.composable_operator_order_need_not_commute`
+- Countermodels: `Book8CognitiveScaffold.composability_alone_does_not_bound_trajectory`
+- Conditions: explicit admitted operational domain; metabolic and debugging closure; separate free-energy descent certificate; separate identity-preservation certificate; separate symbolic-temperature bound
+- Formal boundary: Operational kernel: composable metabolic/debugging operators preserve an admitted domain through finite iteration. Free-energy descent, identity preservation, and temperature-bounded trajectories follow only from separate CertifiedScaffold fields. Countermodels show operator order need not commute and composability alone supplies no trajectory bound.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2535,6 +2783,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:780
 - Cited by: `proof:bk8_freedom_emergence_criterion`; `scholium:bk8_threshold_crossing` (Threshold Crossing); `theorem:bk8_freedom_emergence_criterion` (Freedom Emergence Criterion); `theorem:bk8_freedom_via_meta_metabolic_control` (Freedom via Meta‑Metabolic Control)
 - Macros used: `\identitystability`
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK8-034`
+- Witnesses: `Book8Freedom.freedom_emergence_iff_surjective`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: Modeled generically as a linear map between finite-dimensional spaces.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Given a metabolically autonomous system $S$ with identity stability $identitystability > lambda_c$ (Def. definition:bk8_identitystability), the volitional projection operator
@@ -2565,6 +2824,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:788`
 - Cites: `definition:bk8_volitional_projection_operator` (Volitional Projection Operator $\Pi_{\text{vol}}$); `theorem:bk8_biological_phase_transition` (Threshold of Autonomy)
 - Cited by: `corollary:bk8_symbolic_free_will` (Free-Will Corollary); `proof:bk8_freedom_via_meta_metabolic_control`; `proof:bk8_symbolic_free_will`; `scholium:bk8_metabolic_programming_as_proto_freedom` (Metabolic Programming as Proto-Freedom)
 - Macros used: `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-033`
+- Witnesses: `Book8Freedom.freedom_can_fail`, `Book8Freedom.freedom_emergence_iff_surjective`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: Rank onto codomain is exactly surjectivity, for a linear map between finite-dim spaces; failure side witnessed concretely. The viability-domain/action-manifold identification is interpretation.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2629,6 +2899,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:806`
 - Cites: `theorem:bk8_freedom_emergence_criterion` (Freedom Emergence Criterion)
 - Cited by: `proof:bk9_symbolic_viability` (Symbolic Viability); `proposition:bk9_criteria_for_ethical_intervention` (Criteria for Ethical Intervention)
 - Macros used: `\identitystability`, `\loss`
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-024`
+- Witnesses: `Book8.freeWillLoss_le`, `Book8.freeWillLoss_nonneg`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Direct algebraic consequence of the stated expected-loss formula E[loss_vol] = (1-stability)*E[loss_id]; the volitional projection operator and rank/dimension Freedom Emergence Criterion it presupposes are not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2785,6 +3066,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:860`
 - Cited by: `proof:bk8_threshold_of_metabolic_autonomy`; `theorem:bk8_threshold_of_metabolic_autonomy` (Threshold of Metabolic Autonomy)
 - Macros used: `\freeenergy`, `\viabilitydomain`
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-021`
+- Witnesses: `Book8.cycleViability_ratio_lt_one`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: The tau_Omega < tau_drift viability condition is kept as a structure field/hypothesis; only the derived ratio-below-one consequence is proved.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let $S$ be a symbolic system under persistent drift
@@ -2850,6 +3142,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:878
 - Cited by: `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold); `corollary:bk8_symbolic_agents_as_projections` (Symbolic Agents as $\mathcal{O}_{\mathrm{debug}}$ Projections); `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `lemma:bk8_resursive_self_tuning` (Recursive Self-Tuning of $\mathcal{O}_{\mathrm{debug}}$); `proof:bk8_emergent_cognitive_scaffold`; `proof:bk8_resursive_self_tuning`; `proof:bk8_symbolic_agents_as_projections`; `scholium:bk8_autonomous_repair_systems_expanded` (Autonomous Repair Systems as Metabolic Projections — An Expanded View); `scholium:bk8_freedom_begins_with_debugging_the_debugger` (Freedom Begins with Debugging the Debugger)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `constructed`
+- Records: `MAP-BOOK8-030`
+- Witnesses: `Book68B.debugCompose_injective`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: O_debug := Xi_v o Xi_s o Xi_r o Xi_d is modeled directly as ReflexiveDebuggingStep/debugCompose; the operator's own recursive/self-application content (lemma:bk8_resursive_self_tuning) is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 This operator implements reflection in the sense of Def. definition:bk1_reflection_operator, applied metabolically to repair symbolic inconsistencies across recursive cycles (cf. Thm. theorem:bk5_reflective_stability_criterion).
@@ -2882,6 +3185,17 @@ Role: `lemma` | Type: `lemma` | Book: `book8` | Source: `book8.tex:887`
 - Cites: `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$)
 - Cited by: `definition:bk9_symbolic_accountability` (Symbolic Accountability $\mathcal{A}$); `proof:bk8_freedom_via_meta_metabolic_control`
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-038`
+- Witnesses: `ScholiumDyn.flow_unique`
+- Countermodels: none
+- Conditions: discrete kernels only: ODE flows, Riemannian geodesics, Hopf-Rinow, and the MSR path integral stay open; the self-representation clause of reflexive maps is interpretive
+- Formal boundary: The self-application recursion is exactly the discrete flow orbit already certified in ScholiumDynamics.lean: existence and uniqueness of the self-tuning sequence.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -2945,6 +3259,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:904`
 - Cites: `definition:bk8_reflexive_debugging_operator` (Reflexive Debugging Operator $\mathcal{O}_{\mathrm{debug}}$)
 - Cited by: `proof:bk8_freedom_via_meta_metabolic_control`; `theorem:bk8_freedom_via_meta_metabolic_control` (Freedom via Meta‑Metabolic Control)
 - Macros used: `\freeenergy`
+
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-031`
+- Witnesses: `Book68B.debugCompose_injective`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: The Diagnostic/Transformative/Reflective-Integration modular substructure is modeled as the same four-field ReflexiveDebuggingStep, with injectivity-preservation as the honest per-step-composition consequence; the SRMF contradiction-detection and symbolic-Reidemeister-rule content is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3031,6 +3356,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:923`
 - Cited by: `proof:bk8_freedom_via_meta_metabolic_control`; `theorem:bk8_freedom_via_meta_metabolic_control` (Freedom via Meta‑Metabolic Control)
 - Macros used: `\freeenergy`, `\identitystability`
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-020`
+- Witnesses: `Book8.metabolicSufficiency_decrease_accum`, `Book8.metabolicSufficiency_terminates`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Same claim as theorem:bk8_biological_phase_transition under a different anchor label in the source; same partial coverage applies.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let the symbolic free energy functional be $freeenergy$ (Def. definition:bk2_symbolic_free_energy) and identity stability $identitystability$ (Def. definition:bk8_identitystability; cf. Thm. theorem:bk8_thermodynamic_necessity_of_symbolic_metabolism).
@@ -3109,6 +3445,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:948`
 - Cites: `corollary:bk8_emergent_cognitive_scaffold` (Emergent Cognitive Scaffold); `corollary:bk8_symbolic_agents_as_projections` (Symbolic Agents as $\mathcal{O}_{\mathrm{debug}}$ Projections); `definition:bk8_volitional_projection_operator` (Volitional Projection Operator $\Pi_{\text{vol}}$); `theorem:bk8_threshold_of_metabolic_autonomy` (Threshold of Metabolic Autonomy)
 - Cited by: `scholium:bk8_freedom_begins_with_debugging_the_debugger` (Freedom Begins with Debugging the Debugger)
 - Macros used: `\viabilitydomain`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-035`
+- Witnesses: `Book8Freedom.meta_metabolic_freedom_iff_surjective`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: The freedom-emergence kernel instantiated at the domain-restricted operator - the same theorem serving both anchors.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3230,6 +3577,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:984`
 - Cited by: `corollary:bk9_selfreferential_capacity` (Self-Referential Capacity)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-048`
+- Witnesses: `Book8OrientationSignposting.displayedNext_differs_across_orientations`, `Book8OrientationSignposting.encode_eq_orientationSign_mul`, `Book8OrientationSignposting.next_four`, `Book8OrientationSignposting.opposite_signs_agree_iff_zero`, `Book8OrientationSignposting.reversed_display_of_positive`, `Book8OrientationSignposting.transport_eq_relativeSign_mul`, `Book8OrientationSignposting.transport_negative_of_opposite_orientation`, `Book8OrientationSignposting.transport_positive_of_same_orientation`, `Book8OrientationSignposting.transport_preserves_canonical_change`, `Book8OrientationSignposting.transport_roundtrip`, `Book8OrientationSignposting.transport_trans`
+- Countermodels: none
+- Conditions: audience orientation is aligned or reversed; displayed scalar changes are decoded before semantic comparison; the source order Observe-Project-Reflect-Update is canonical
+- Formal boundary: Constructs the exact four-stage directed cycle and separates it from audience display orientation. Explicit parity witnesses derive relative signs, compose through intermediate frames, recover on round trips, and determine preservation versus reversal of positive change. Observer bounds, differentiability, and semantic stage operators remain premises rather than consequences of this finite signposting kernel.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Symbolic cognition proceeds via a recursive, observer-bounded loop (cf. Def. definition:bk1_bounded_observer, Def. definition:bk4_bounded_observer).
@@ -3347,6 +3705,17 @@ Role: `axiom` | Type: `axiom` | Book: `book8` | Source: `book8.tex:1022`
 - Cited by: `proof:bk8_optimal_projection_path`; `proof:bk8_skech_via_euler_lagrange_flow_yields_geodesic` (Euler--Lagrange Flow Yields Geodesic Under Curvature Constraint); `proof:bk8_sketch_observer_interoperability` (SR-Triplet Boundedness via Grönwall); `proposition:bk8_optimal_projection_path` (Optimal Projection Path)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-037`
+- Witnesses: `Book8Freedom.contraction_orbit_bounded`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: The generating step map of the discrete flow whose boundedness is certified; the specific coupled ODE system stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( S(t) \) denote the symbolic signal and \( N(t) \) the noise field. Then on \( Omega \), the SR-triplet (Def. definition:bk8_sr_triplet) evolves as (cf. Thm. theorem:bk1_fundamental_relation_fokker_plank_equation for the general drift-diffusion form):
@@ -3385,6 +3754,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:1
 - Cites: `definition:bk1_observer_relative_interpretability` (Observer–Relative Interpretability); `definition:bk8_sr_triplet` (SR-Triplet)
 - Cited by: `proof:bk8_sr_convergence`; `theorem:bk8_sr_convergence` (SR Convergence)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-036`
+- Witnesses: `Book8Freedom.contraction_orbit_bounded`
+- Countermodels: none
+- Conditions: the continuous R^3 SR-triplet ODE system stays open; the contraction estimate is the modeling step standing in for Lipschitz-plus-bounded-forcing; the cross-referenced rows bind to kernels already certified elsewhere (ScholiumDynamics, ForcingKernel/Witness) rather than new proofs; the viability-domain/action-manifold identification for the freedom criterion is interpretation
+- Formal boundary: Discrete absorbing-ball analogue of Lipschitz-plus-bounded-forcing boundedness; the specific R^3 ODE system stays open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3496,6 +3876,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:1075`
 - Cited by: none
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-055`
+- Witnesses: `Book8SRConvergence.distanceToInvariant_tendsto_zero`, `Book8SRConvergence.invariant_freeEnergy_nonincreasing`, `Book8SRConvergence.lyapunov_descent_alone_does_not_force_invariant_approach`, `Book8SRConvergence.orbit_freeEnergy_nonincreasing`
+- Countermodels: `Book8SRConvergence.lyapunov_descent_alone_does_not_force_invariant_approach`
+- Conditions: distance to the invariant set is bounded by a nonnegative constant times the free-energy gap; the invariant set is nonempty and closed under the SR step; the nonnegative free-energy gap decreases and tends to zero along the orbit
+- Formal boundary: Discrete quantitative LaSalle kernel: a step-closed nonempty invariant set and global free-energy descent are retained, while a vanishing nonnegative energy gap plus an explicit distance-to-gap control squeezes the orbit distance to zero. A constant-energy, constant-distance countermodel shows bounded-below monotonicity alone does not force approach. The continuous R3 flow, global precompactness, and derivation of the coercive gap estimate remain analytic obligations.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Convergence to the invariant manifold proceeds under SRMF conditions (Def. definition:bk1_self_regulating_mapping_function_srmf), with symbolic free energy (Def. definition:bk2_symbolic_free_energy) serving as the Lyapunov functional (cf. Prop. proposition:bk8_genetic_symbolic_resonance, Thm. theorem:bk2_h_theorem_for_symbolic_evol, Thm. theorem:bk2_wasserstein_gradient_flow, Thm. theorem:bk5_operator_convergence).
@@ -3598,6 +3989,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:1
 - Cited by: `proof:bk8_critical_projection_point`; `proposition:bk8_critical_projection_point` (Critical Projection Point)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-050`
+- Witnesses: `Book8OptimalProjectionPath.constraints_can_leave_no_admissible_path`, `Book8OptimalProjectionPath.exists_optimal_projection_path`, `Book8OptimalProjectionPath.optimal_path_satisfies_constraints`
+- Countermodels: none
+- Conditions: explicit SR-dynamics and curvature predicates; explicit variational bridge for geodesicity; nonempty finite admissible path inventory
+- Formal boundary: Finite constrained kernel: a utility maximizer exists when the finite SR-dynamics/curvature-admissible inventory is nonempty, and the selected maximizer satisfies both constraints. The source still owes compactness or another existence premise for its continuous trajectory space.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( mathfrak{U}[I] \) be the symbolic utility functional
@@ -3658,6 +4060,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:1115`
 - Cites: `definition:bk8_sr_triplet` (SR-Triplet)
 - Cited by: `proof:bk8_optimal_projection_path`; `proposition:bk8_critical_projection_point` (Critical Projection Point)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-051`
+- Witnesses: `Book8OptimalProjectionPath.maximizer_is_geodesic_of_variational_bridge`, `Book8OptimalProjectionPath.utility_maximizer_need_not_be_geodesic`
+- Countermodels: none
+- Conditions: explicit SR-dynamics and curvature predicates; explicit variational bridge for geodesicity; nonempty finite admissible path inventory
+- Formal boundary: The geodesic conclusion requires an explicit variational bridge tying the utility to the projection metric action. Countermodel: an arbitrary utility maximizer need not satisfy an unrelated geodesic predicate.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3783,6 +4196,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:115
 - Cited by: `definition:bk8_reflective_selection_operator` (Reflective Selection Operator)
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `open_bridge`
+- Records: `MAP-BOOK8-032`
+- Witnesses: `Book68B.exists_argmin`
+- Countermodels: none
+- Conditions: continuum/Hilbert/PDE-on-manifold content stays open; chart-complex restatements carry Glued as a named hypothesis where the source consumes compatibility; modeling laws are structure fields or explicit hypotheses
+- Formal boundary: Only the argmin-existence content (dual to confidence-loss argmax, cf. Book8.lean's reflectiveSelection_exists) is proved for a nonempty finite hypothesis index set; the confidence/loss functions themselves are left abstract and no Bayesian update dynamics are modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Let \( H := { h_i : P to P }_{i in I} \) denote a family of symbolic hypotheses (cf. Def. definition:bk1_symbolic_hypothesis) with confidence \( C(h_i) \) (cf. Def. definition:bk6_symbolic_confidence_field) and loss \( Loss(h_i) \), indexed over a bounded observer's perceptual field (cf. Def. definition:bk4_bounded_observer).
@@ -3805,6 +4229,17 @@ Role: `definition` | Type: `definition` | Book: `book8` | Source: `book8.tex:116
 - Cites: `definition:bk1_reflection_operator` (Reflection Operator); `definition:bk8_symbolic_hypothesis_set` (Symbolic Hypothesis Set); `scholium:bk7_reflective_selection_as_principled_convergence` (Reflective Selection as Principled Convergence)
 - Cited by: `definition:bk8_symbolic_hypothesis_manifold` (Symbolic Hypothesis Manifold)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `exact`
+- Records: `MAP-BOOK8-026`
+- Witnesses: `Book8.reflectiveSelection_exists`
+- Countermodels: none
+- Conditions: manifold/Hilbert-space/ODE content of Book 8 is NOT formalized; static and finite kernels only; modeling laws (loss bounds, viability timing, expected-loss formula) are structure fields
+- Formal boundary: Existence of an argmax of confidence-minus-loss over any nonempty finite hypothesis set, via Finset.exists_max_image. The 'symbolic Bayesian update rule' reading of iterating this over time is not modeled.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -3906,6 +4341,17 @@ Role: `theorem` | Type: `theorem` | Book: `book8` | Source: `book8.tex:1185`
 - Cites: `corollary:bk7_stability_innovation_equilibrium` (Stability--Innovation Compatibility); `definition:bk1_self_regulating_mapping_function_srmf` (Self-Regulating Mapping Function (SRMF)); `lemma:bk7_reflective_integration_lemma___formalized` (Reflective Integration Lemma - Formalized); `theorem:bk5_golden_ratio_spectral_invariant` (Golden Ratio as Spectral Invariant of Balanced Recursive Memory); `theorem:bk5_operator_convergence` (Operator Convergence)
 - Cited by: `proof:bk8_critical_projection_point`; `proposition:bk8_critical_projection_point` (Critical Projection Point)
 - Macros used: `\energy`, `\entropy`, `\freeenergy`, `\temperature`
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-043`
+- Witnesses: `Book5Op.contraction_flow_converges`, `Book5Op.contraction_flow_unique_fixed_point`
+- Countermodels: none
+- Conditions: contraction constant is the modeling hypothesis for convergence; the Wasserstein O(1/t) rate, operator-space structure, and diffeomorphism congruence stay open; the minimizer/critical-point gap under non-convexity is the honest remainder of the stationary-iff clause
+- Formal boundary: The RG map converges to a unique fixed point (contraction-Banach); the diffeomorphism congruence and the specific R_lambda stay open.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
@@ -4069,6 +4515,17 @@ Role: `proposition` | Type: `proposition` | Book: `book8` | Source: `book8.tex:1
 - Cited by: `corollary:bk8_projection_transition_enabling_structural_emergence`; `proof:bk8_projection_transition_enabling_structural_emergence`; `scholium:bk8_observer_induced_hypothesis_metric` (Hypothesis-Manifold Metric Program); `subsec:bk8_phase_transitions` (Phase Transitions and \(\det(\metric_H) = 0\))
 - Macros used: none
 
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-052`
+- Witnesses: `Book8CriticalProjection.criticalProjection_certificate`, `Book8CriticalProjection.fisher_singular_of_projection_transition`, `Book8CriticalProjection.projectionTransition_iff_det_eq_zero`
+- Countermodels: none
+- Conditions: Fisher tensor identified with hypothesis metric; RG-invariant preservation supplied separately; projection transition defined by zero determinant; projective-drift bridge supplied for structural emergence
+- Formal boundary: The determinant-zero transition criterion is represented exactly. Identifying symbolic Fisher information with the hypothesis metric yields Fisher singularity. Preservation of RG invariants remains a separate explicit witness rather than a consequence of metric degeneracy.
+
+Manuscript `proof_status` and Lean correspondence are independent.
+
 **Statement / Body**
 
 Phase transition occurs when \( det(g_{H}) = 0 \).
@@ -4119,6 +4576,17 @@ Role: `corollary` | Type: `corollary` | Book: `book8` | Source: `book8.tex:1249`
 - Cites: `corollary:bk8_projective_drift` (Projective Drift Duality); `proposition:bk8_critical_projection_point` (Critical Projection Point)
 - Cited by: `proof:bk9_emergence_of_shared_manifold`; `proposition:bk9_emergence_of_shared_manifold` (Emergence of Shared Manifold)
 - Macros used: none
+
+### Lean correspondence
+
+- Status: `conditional`
+- Records: `MAP-BOOK8-053`
+- Witnesses: `Book8CriticalProjection.singularity_alone_does_not_force_structural_emergence`, `Book8CriticalProjection.structuralEmergence_of_fisher_singular`
+- Countermodels: `Book8CriticalProjection.singularity_alone_does_not_force_structural_emergence`
+- Conditions: Fisher tensor identified with hypothesis metric; RG-invariant preservation supplied separately; projection transition defined by zero determinant; projective-drift bridge supplied for structural emergence
+- Formal boundary: A countermodel shows singularity alone does not force an unrelated emergence predicate. Structural emergence follows when the projective-drift bridge from Fisher singularity is supplied explicitly.
+
+Manuscript `proof_status` and Lean correspondence are independent.
 
 **Statement / Body**
 
