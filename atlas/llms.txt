@@ -1,0 +1,32 @@
+# Principia Symbolica Atlas — HTML projection
+
+> Crawlable HTML pages generated from the canonical atlas in the publication order declared by src/main.tex.
+
+## Canonical fallbacks
+
+- [Canonical JSON atlas](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json)
+- [Indexable text mirror](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.txt)
+- [Book doorway](https://paultiffany.github.io/Principia-Symbolica/)
+
+## HTML units
+
+- [Operatio](https://paultiffany.github.io/Principia-Symbolica/atlas/operatio/): 3 records across 1 pages.
+- [Book I — De Origine Driftus](https://paultiffany.github.io/Principia-Symbolica/atlas/book-i-de-origine-driftus/): 2 records across 1 pages.
+- [Scholium Symbolicum](https://paultiffany.github.io/Principia-Symbolica/atlas/scholium-symbolicum/): 264 records across 6 pages.
+- [Book II — De Thermodynamica Symbolica](https://paultiffany.github.io/Principia-Symbolica/atlas/book-ii-de-thermodynamica-symbolica/): 55 records across 2 pages.
+- [Book III — De Symbiosi Symbolica](https://paultiffany.github.io/Principia-Symbolica/atlas/book-iii-de-symbiosi-symbolica/): 76 records across 2 pages.
+- [Book IV — De Identitate Symbolica et Emergentia](https://paultiffany.github.io/Principia-Symbolica/atlas/book-iv-de-identitate-symbolica-et-emergentia/): 389 records across 9 pages.
+- [Integratio](https://paultiffany.github.io/Principia-Symbolica/atlas/integratio/): 1 records across 1 pages.
+- [Book V — De Vita Symbolica](https://paultiffany.github.io/Principia-Symbolica/atlas/book-v-de-vita-symbolica/): 235 records across 6 pages.
+- [Temperatio](https://paultiffany.github.io/Principia-Symbolica/atlas/temperatio/): 1 records across 1 pages.
+- [Book VI — De Mutatione Symbolica](https://paultiffany.github.io/Principia-Symbolica/atlas/book-vi-de-mutatione-symbolica/): 134 records across 3 pages.
+- [Book VII — De Convergentia Symbolica](https://paultiffany.github.io/Principia-Symbolica/atlas/book-vii-de-convergentia-symbolica/): 183 records across 5 pages.
+- [Book VIII — De Projectione Symbolica](https://paultiffany.github.io/Principia-Symbolica/atlas/book-viii-de-projectione-symbolica/): 130 records across 3 pages.
+- [Book IX — De Libertate Cognitiva](https://paultiffany.github.io/Principia-Symbolica/atlas/book-ix-de-libertate-cognitiva/): 150 records across 4 pages.
+- [Executio](https://paultiffany.github.io/Principia-Symbolica/atlas/executio/): 1 records across 1 pages.
+- [Symbol Dictionary](https://paultiffany.github.io/Principia-Symbolica/atlas/symbol-dictionary/): 1 records across 1 pages.
+- [Symbolic Reflexive Validation of Symbolic Dynamics](https://paultiffany.github.io/Principia-Symbolica/atlas/symbolic-reflexive-validation-of-symbolic-dynamics/): 94 records across 3 pages.
+- [Dual Horizon – A Formal Proof by Elimination](https://paultiffany.github.io/Principia-Symbolica/atlas/dual-horizon-a-formal-proof-by-elimination/): 123 records across 3 pages.
+- [Principia Symbolica in Dialogue – A Reflexive Cartography of Contemporary Symbolic Frameworks](https://paultiffany.github.io/Principia-Symbolica/atlas/principia-symbolica-in-dialogue-a-reflexive-cartography-of-contemporary-symbolic-frameworks/): 55 records across 2 pages.
+- [Directed Abstracts: Interpretive Onboarding by Discipline](https://paultiffany.github.io/Principia-Symbolica/atlas/directed-abstracts-interpretive-onboarding-by-discipline/): 7 records across 1 pages.
+- [Supporting Atlas Material](https://paultiffany.github.io/Principia-Symbolica/atlas/supporting-material/): 10 records across 1 pages.
