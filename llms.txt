@@ -8,7 +8,8 @@ Principia Symbolica has separate human-readable and machine-readable editions. M
 
 - [Searchable HTML atlas](https://paultiffany.github.io/Principia-Symbolica/atlas/): Crawlable HTML projection of all 1,914 atlas records, chunked in the publication order declared by `src/main.tex`. Use this for search-engine discovery, browsing, and ordinary web retrieval.
 - [Canonical machine-readable atlas](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json): Authoritative structured edition. Preserves addressable nodes, LaTeX bodies, macros, references, dependency edges, proof labels, and proof status.
-- [Indexable text mirror](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.txt): Byte-identical fallback for tools that can retrieve plain text but not JSON. Treat the JSON URL above as canonical.
+- [Indexable text mirror](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.txt): Byte-identical fallback for tools that can retrieve plain text but not JSON. Treat the Pages JSON URL above as canonical.
+- [GitHub raw JSON fallback](https://raw.githubusercontent.com/PaulTiffany/Principia-Symbolica/main/principia_atlas.json): Secondary transport mirror for tools that can retrieve `raw.githubusercontent.com` more reliably than GitHub Pages. It is not the canonical URL.
 - [HTML-atlas machine guide](https://paultiffany.github.io/Principia-Symbolica/atlas/llms.txt): Ordered inventory of the generated HTML units.
 - [LLM guide](https://github.com/PaulTiffany/Principia-Symbolica/blob/main/AGENTS.md): Reading and editing contract for AI systems.
 
