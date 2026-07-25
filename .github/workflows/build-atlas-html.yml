@@ -1,0 +1,78 @@
+name: Build searchable HTML atlas
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "principia_atlas.json"
+      - "principia_atlas.txt"
+      - "src/main.tex"
+      - "src/**/*.tex"
+      - "scripts/build_atlas_html.py"
+      - ".github/workflows/build-atlas-html.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-searchable-html-atlas
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: ${{ !contains(github.event.head_commit.message, '[skip atlas]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate atlas HTML
+        run: python scripts/build_atlas_html.py
+
+      - name: Validate generated surface
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          root = Path('.')
+          manifest = json.loads((root / 'atlas' / 'build-manifest.json').read_text())
+          source = (root / 'principia_atlas.json').read_bytes()
+          mirror = (root / 'principia_atlas.txt').read_bytes()
+
+          assert source == mirror, 'JSON and TXT atlas mirrors differ'
+          assert manifest['records'] > 0, 'No atlas records generated'
+          assert manifest['content_pages'] > 0, 'No HTML content pages generated'
+          assert manifest['largest_html_bytes'] < 1_500_000, 'Generated page exceeds crawler safety limit'
+          assert manifest['canonical_json_sha256'] == hashlib.sha256(source).hexdigest()
+          assert manifest['text_mirror_sha256'] == hashlib.sha256(mirror).hexdigest()
+
+          html_pages = list((root / 'atlas').rglob('index.html'))
+          assert html_pages, 'No HTML pages found'
+          for page in html_pages:
+              text = page.read_text(encoding='utf-8')
+              assert 'principia_atlas.json' in text, f'Canonical fallback missing from {page}'
+              assert 'principia_atlas.txt' in text, f'Text fallback missing from {page}'
+          print(json.dumps(manifest, indent=2))
+          PY
+
+      - name: Commit generated discovery surface
+        run: |
+          if git diff --quiet -- atlas sitemap.xml principia_atlas.txt; then
+            echo "Generated discovery surface is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add atlas sitemap.xml principia_atlas.txt
+          git commit -m "Generate searchable HTML atlas [skip atlas]"
+          git push
