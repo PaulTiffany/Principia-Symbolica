@@ -9,6 +9,7 @@ on:
       - "src/main.tex"
       - "src/**/*.tex"
       - "scripts/build_atlas_html.py"
+      - "scripts/add_raw_atlas_fallback.py"
       - ".github/workflows/build-atlas-html.yml"
   workflow_dispatch:
 
@@ -37,6 +38,9 @@ jobs:
       - name: Generate atlas HTML
         run: python scripts/build_atlas_html.py
 
+      - name: Add GitHub raw fallback
+        run: python scripts/add_raw_atlas_fallback.py
+
       - name: Validate generated surface
         run: |
           python - <<'PY'
@@ -48,6 +52,7 @@ jobs:
           manifest = json.loads((root / 'atlas' / 'build-manifest.json').read_text())
           source = (root / 'principia_atlas.json').read_bytes()
           mirror = (root / 'principia_atlas.txt').read_bytes()
+          raw_url = 'https://raw.githubusercontent.com/PaulTiffany/Principia-Symbolica/main/principia_atlas.json'
 
           assert source == mirror, 'JSON and TXT atlas mirrors differ'
           assert manifest['records'] > 0, 'No atlas records generated'
@@ -55,6 +60,7 @@ jobs:
           assert manifest['largest_html_bytes'] < 1_500_000, 'Generated page exceeds crawler safety limit'
           assert manifest['canonical_json_sha256'] == hashlib.sha256(source).hexdigest()
           assert manifest['text_mirror_sha256'] == hashlib.sha256(mirror).hexdigest()
+          assert manifest['raw_transport_fallback_url'] == raw_url
 
           html_pages = list((root / 'atlas').rglob('index.html'))
           assert html_pages, 'No HTML pages found'
@@ -62,6 +68,8 @@ jobs:
               text = page.read_text(encoding='utf-8')
               assert 'principia_atlas.json' in text, f'Canonical fallback missing from {page}'
               assert 'principia_atlas.txt' in text, f'Text fallback missing from {page}'
+              assert raw_url in text, f'Raw fallback missing from {page}'
+          assert raw_url in (root / 'atlas' / 'llms.txt').read_text(encoding='utf-8')
           print(json.dumps(manifest, indent=2))
           PY
 
