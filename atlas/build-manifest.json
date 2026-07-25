@@ -1,11 +1,14 @@
 {
   "canonical_json_sha256": "8ddd57368d27883b6230d690fe9aca72a19792c1083307576908c627ce7f4344",
+  "canonical_json_url": "https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json",
   "content_pages": 56,
   "largest_html_bytes": 523174,
+  "raw_transport_fallback_url": "https://raw.githubusercontent.com/PaulTiffany/Principia-Symbolica/main/principia_atlas.json",
   "records": 1914,
   "schema": "principia-atlas-html/1.0",
   "source_generated_at": "2026-07-21T18:54:28Z",
   "source_schema": "principia-atlas/1.1",
+  "text_fallback_url": "https://paultiffany.github.io/Principia-Symbolica/principia_atlas.txt",
   "text_mirror_sha256": "8ddd57368d27883b6230d690fe9aca72a19792c1083307576908c627ce7f4344",
   "units": 20
 }

@@ -6,6 +6,7 @@
 
 - [Canonical JSON atlas](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json)
 - [Indexable text mirror](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.txt)
+- [GitHub raw JSON fallback](https://raw.githubusercontent.com/PaulTiffany/Principia-Symbolica/main/principia_atlas.json): Secondary transport mirror; the GitHub Pages JSON remains canonical.
 - [Book doorway](https://paultiffany.github.io/Principia-Symbolica/)
 
 ## HTML units
