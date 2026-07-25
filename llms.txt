@@ -6,7 +6,8 @@ Principia Symbolica has separate human-readable and machine-readable editions. M
 
 ## Primary machine entry
 
-- [Machine-readable atlas](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json): Canonical structured edition. Preserves addressable nodes, LaTeX bodies, macros, references, dependency edges, proof labels, and proof status.
+- [Canonical machine-readable atlas](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json): Canonical structured edition. Preserves addressable nodes, LaTeX bodies, macros, references, dependency edges, proof labels, and proof status.
+- [Indexable text mirror](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.txt): Byte-identical mirror of the canonical JSON atlas, exposed as `text/plain` for search-engine and AI-tool discovery. Treat the JSON URL above as canonical.
 - [LLM guide](https://github.com/PaulTiffany/Principia-Symbolica/blob/main/AGENTS.md): Reading and editing contract for AI systems.
 
 ## Human entry
