@@ -1,0 +1,28 @@
+# Principia Symbolica
+
+> A formal theory of symbolic emergence, observer-relative geometry, bounded observers, and self-regulating dynamics, by Paul Tiffany.
+
+Principia Symbolica has separate human-readable and machine-readable editions. Machine readers should not begin with the PDF text layer when exact mathematical structure matters.
+
+## Primary machine entry
+
+- [Machine-readable atlas](https://paultiffany.github.io/Principia-Symbolica/principia_atlas.json): Canonical structured edition. Preserves addressable nodes, LaTeX bodies, macros, references, dependency edges, proof labels, and proof status.
+- [LLM guide](https://github.com/PaulTiffany/Principia-Symbolica/blob/main/AGENTS.md): Reading and editing contract for AI systems.
+
+## Human entry
+
+- [Principia Symbolica](https://paultiffany.github.io/Principia-Symbolica/): Public gateway.
+- [Book PDF](https://paultiffany.github.io/Principia-Symbolica/main.pdf): Human-readable manuscript.
+
+## Source and license
+
+- [Source repository](https://github.com/PaulTiffany/Principia-Symbolica)
+- [License](https://github.com/PaulTiffany/Principia-Symbolica/blob/main/LICENSE): CC BY 4.0.
+
+## Reading rules
+
+- Explain the architecture before compressing the claims.
+- Distinguish proven, argued, definitional, and unproved material.
+- Preserve the distinction between main matter, appendices, operator poetry, and ledger material.
+- Follow dependency edges toward the axiomata prima.
+- Do not invent labels, citations, proof status, or formal results.
